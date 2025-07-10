@@ -1,0 +1,2182 @@
+# Context file generated on: Saturday, July 5, 2025 at 7:50:19 PM GMT+5:30
+---
+
+# Project File Layout
+
+.
+
+├── .gitignore
+├── .npmrc
+├── .prettierignore
+├── .prettierrc
+├── eslint.config.js
+├── package-lock.json
+├── package.json
+├── README.md
+├── scripts
+│   └── generate-context.mjs
+├── src
+│   ├── app.css
+│   ├── app.d.ts
+│   ├── app.html
+│   ├── lib
+│   │   ├── components
+│   │   │   ├── blog
+│   │   │   │   ├── Counter.svelte
+│   │   │   │   ├── PostGallery.svelte
+│   │   │   │   └── TextToSpeech.svelte
+│   │   │   ├── D3
+│   │   │   │   └── D3Circle.svelte
+│   │   │   ├── GoldLine.svelte
+│   │   │   ├── layout
+│   │   │   │   ├── Aside.svelte
+│   │   │   │   ├── BlogLayout.svelte
+│   │   │   │   ├── DefaultLayout.svelte
+│   │   │   │   ├── DrillDown.svelte
+│   │   │   │   ├── Footer.svelte
+│   │   │   │   └── Header.svelte
+│   │   │   ├── OnThisPage.svelte
+│   │   │   ├── P5
+│   │   │   │   └── P5AbstractArt.svelte
+│   │   │   ├── plantuml
+│   │   │   │   ├── PlantUML.svelte
+│   │   │   │   └── plantuml.ts
+│   │   │   └── ThreeJS
+│   │   │       └── ThreeJSScene.svelte
+│   │   ├── data
+│   │   │   └── posts.ts
+│   │   ├── index.ts
+│   │   └── posts
+│   │       ├── d3-integration.md
+│   │       ├── p5js-abstract-art.md
+│   │       ├── plantuml-sequence-diagram.md
+│   │       ├── svelte-introduction.md
+│   │       ├── sveltes-runes.md
+│   │       ├── text-to-speech-feature.md
+│   │       └── threejs-integration.md
+│   ├── routes
+│   │   ├── +layout.server.ts
+│   │   ├── +layout.svelte
+│   │   ├── +page.svelte
+│   │   └── blog
+│   │       ├── +page.server.ts
+│   │       ├── +page.svelte
+│   │       └── [slug]
+│   │           ├── +layout.svelte
+│   │           ├── +page.svelte
+│   │           └── +page.ts
+│   └── types
+│       └── mdsvex.d.ts
+├── static
+│   ├── favicon.png
+│   └── images
+│       └── placeholders
+│           ├── d3-placeholder.jpeg
+│           ├── p5js-placeholder.jpeg
+│           ├── plantuml-placeholder.jpeg
+│           ├── svelte-intro-thumbnail.png
+│           ├── svelte-runes-thumbnail.jpeg
+│           ├── threejs-placeholder.jpeg
+│           └── tts-placeholder.jpeg
+├── svelte.config.js
+├── tailwind.config.cjs
+├── TheApp.txt
+├── tsconfig.json
+└── vite.config.ts
+
+---
+# File Contents
+---
+
+# File: package.json
+
+{
+	"name": "suvroghosh-blog",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"format": "prettier --write .",
+		"lint": "prettier --check . && eslint .",
+		"context": "node scripts/generate-context.mjs"
+	},
+	"devDependencies": {
+		"@eslint/compat": "^1.2.5",
+		"@eslint/js": "^9.18.0",
+		"@sveltejs/adapter-vercel": "^5.6.3",
+		"@sveltejs/kit": "^2.16.0",
+		"@sveltejs/vite-plugin-svelte": "^5.0.0",
+		"@tailwindcss/forms": "^0.5.10",
+		"@tailwindcss/typography": "^0.5.16",
+		"@tailwindcss/vite": "^4.1.10",
+		"@types/d3": "^7.4.3",
+		"@types/hast": "^3.0.4",
+		"@types/p5": "^1.7.6",
+		"@types/three": "^0.165.0",
+		"@types/unist": "^3.0.3",
+		"@types/vfile": "^3.0.2",
+		"eslint": "^9.18.0",
+		"eslint-config-prettier": "^10.0.1",
+		"eslint-plugin-svelte": "^3.0.0",
+		"globals": "^16.0.0",
+		"mdsvex": "^0.12.6",
+		"prettier": "^3.4.2",
+		"prettier-plugin-svelte": "^3.3.3",
+		"prettier-plugin-tailwindcss": "^0.6.11",
+		"rehype-slug": "^6.0.0",
+		"shiki": "^3.6.0",
+		"svelte": "^5.0.0",
+		"svelte-check": "^4.0.0",
+		"tailwindcss": "^4.1.10",
+		"typescript": "^5.0.0",
+		"typescript-eslint": "^8.20.0",
+		"vite": "^6.2.6",
+		"vite-plugin-devtools-json": "^0.2.0",
+		"@types/pako": "^2.0.3",
+		"pako": "^2.1.0"
+	},
+	"dependencies": {
+		"d3": "^7.9.0",
+		"p5": "^2.0.3",
+		"rehype-autolink-headings": "^7.1.0",
+		"remark-frontmatter": "^5.0.0",
+		"remark-gfm": "^4.0.1",
+		"three": "^0.165.0"
+	}
+}
+
+
+# File: svelte.config.js
+
+// File: svelte.config.js
+
+import adapter from '@sveltejs/adapter-vercel';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import { mdsvex } from 'mdsvex';
+import remarkGfm from 'remark-gfm';
+import remarkFrontmatter from 'remark-frontmatter';
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import { codeToHtml } from 'shiki';
+import { join } from 'path';
+
+/**
+ * Custom highlighter function using Shiki.
+ * This version escapes special characters to prevent parsing issues during SSR.
+ * @param {string} code The code to highlight.
+ * @param {string | undefined} lang The language of the code.
+ * @returns {Promise<string>} The highlighted and escaped HTML.
+ */
+const highlighter = async (code, lang = 'text') => {
+	const html = await codeToHtml(code, {
+		lang,
+		themes: {
+			light: 'github-light',
+			dark: 'github-dark'
+		}
+	});
+
+	// Escape Svelte template syntax and backticks
+	return html
+		.replace(/{/g, '&#123;')
+		.replace(/}/g, '&#125;')
+		.replace(/`/g, '&#96;');
+};
+
+
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+	extensions: ['.svelte', '.md', '.svx'],
+
+	preprocess: [
+		vitePreprocess(),
+		mdsvex({
+			extensions: ['.md', '.svx'],
+			layout: {
+				blog: join(process.cwd(), 'src/lib/components/layout/BlogLayout.svelte'),
+				_: join(process.cwd(), 'src/lib/components/layout/DefaultLayout.svelte')
+			},
+			remarkPlugins: [
+				remarkGfm,
+				[remarkFrontmatter, ['yaml', 'toml']]
+			],
+			rehypePlugins: [
+				rehypeSlug,
+				[rehypeAutolinkHeadings, { behavior: 'wrap' }]
+			],
+			smartypants: {
+				quotes: true,
+				ellipses: true,
+				backticks: false,
+				dashes: 'oldschool'
+			},
+			highlight: {
+				highlighter
+			}
+		})
+	],
+
+	kit: {
+		adapter: adapter()
+	}
+};
+
+export default config;
+
+# File: vite.config.ts
+
+import tailwindcss from '@tailwindcss/vite';
+import devtoolsJson from 'vite-plugin-devtools-json';
+import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+	plugins: [tailwindcss(), sveltekit(), devtoolsJson()]
+});
+
+
+# File: tailwind.config.cjs
+
+import typography from '@tailwindcss/typography';
+
+/** @type {import('tailwindcss').Config} */
+export default {
+	darkMode: 'class',
+	content: ['./src/**/*.{html,js,svelte,ts,md}'],
+	theme: {
+		extend: {
+			colors: {
+				// Add the custom gold color
+				gold: '#D4AF47'
+			},
+			fontFamily: {
+				sans: ['"Source Sans Pro"', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
+				serif: ['Merriweather', 'ui-serif', 'Georgia', 'serif'],
+				mono: ['"Fira Code"', 'ui-monospace', 'monospace']
+			}
+		}
+	},
+	plugins: [typography()]
+};
+
+# File: tsconfig.json
+
+{
+	"extends": "./.svelte-kit/tsconfig.json",
+	"compilerOptions": {
+		"allowJs": true,
+		"checkJs": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"strict": true,
+		"moduleResolution": "bundler"
+	}
+	// Path aliases are handled by https://svelte.dev/docs/kit/configuration#alias
+	// except $lib which is handled by https://svelte.dev/docs/kit/configuration#files
+	//
+	// If you want to overwrite includes/excludes, make sure to copy over the relevant includes/excludes
+	// from the referenced tsconfig.json - TypeScript does not merge them in
+}
+
+
+# File: src/app.css
+
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+body {
+	@apply bg-neutral-200 dark:bg-neutral-900;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote {
+	@apply prose prose-neutral my-4 leading-none tracking-tight text-neutral-900 subpixel-antialiased md:tracking-wide dark:text-neutral-100;
+}
+
+h1 {
+	@apply text-5xl md:text-6xl;
+} /* Adjusted for better post titles */
+h2 {
+	@apply text-4xl md:text-5xl;
+}
+h3 {
+	@apply text-3xl md:text-4xl;
+}
+h4 {
+	@apply text-2xl md:text-3xl;
+}
+h5 {
+	@apply text-xl md:text-2xl;
+}
+h6 {
+	@apply text-lg md:text-xl;
+}
+
+p {
+	@apply text-justify text-base leading-relaxed text-neutral-800 subpixel-antialiased dark:text-neutral-300; /* Increased leading for readability */
+}
+
+/* Base structural elements styling */
+footer,
+article,
+section,
+header,
+nav {
+	@apply m-0 bg-neutral-100 p-0 dark:bg-neutral-900;
+}
+
+/* Main layout container classes */
+.main-layout {
+	@apply flex h-screen;
+}
+.main-content {
+	@apply flex-1 flex flex-col overflow-hidden;
+}
+.scrollable-main {
+	@apply flex-1 overflow-y-auto;
+}
+.container {
+	@apply container mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Header styles */
+header {
+	@apply border-b border-neutral-300 dark:border-neutral-700;
+}
+header nav {
+	@apply flex items-center justify-between p-4;
+}
+.site-title {
+	@apply text-2xl text-neutral-900 subpixel-antialiased dark:text-neutral-100 font-bold font-sans;
+}
+
+/* Aside (Sidebar) styles */
+aside {
+	@apply w-64 flex-shrink-0 bg-neutral-100 p-4 dark:bg-neutral-900 border-r border-neutral-300 dark:border-neutral-700 overflow-y-auto;
+}
+.sidebar-group:not(:last-child) {
+	@apply mb-6;
+}
+.sidebar-topic {
+	@apply mb-2 text-sm font-semibold text-neutral-600 dark:text-neutral-400 uppercase tracking-wider;
+	word-break: break-word;
+}
+.sidebar-link {
+	@apply block rounded p-2 text-neutral-700 hover:bg-neutral-200 dark:text-neutral-300 dark:hover:bg-neutral-800 transition-colors duration-150 text-sm leading-normal;
+}
+.sidebar-link-active {
+	@apply bg-neutral-300 dark:bg-neutral-700 font-bold text-neutral-900 dark:text-neutral-100;
+}
+
+/* Footer styles */
+footer {
+	@apply flex flex-col items-center justify-center p-4 border-t border-neutral-300 dark:border-neutral-700;
+}
+
+/* NEW STYLES FOR BLOG */
+
+/* Blog post list */
+.post-list-container {
+	@apply grid gap-8 mt-8;
+}
+.post-card {
+	@apply block p-6 bg-neutral-50 dark:bg-neutral-800/50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border border-neutral-200 dark:border-neutral-700;
+}
+.post-card-title {
+	@apply text-2xl font-bold text-neutral-800 dark:text-neutral-200;
+}
+.post-card-date {
+	@apply mt-1 text-xs text-neutral-500 dark:text-neutral-400;
+}
+.post-card-description {
+	@apply mt-3 text-base text-neutral-700 dark:text-neutral-300;
+}
+
+/* Individual post layout */
+.post-layout {
+	@apply grid lg:grid-cols-[1fr_auto] gap-12 items-start;
+}
+.post-divider {
+	@apply my-6 border-neutral-300 dark:border-neutral-700;
+}
+
+/* "On this page" component */
+.on-this-page-container {
+	@apply sticky top-8 w-56 hidden lg:block; /* Hides on small screens */
+}
+.on-this-page-title {
+	@apply font-semibold text-neutral-700 dark:text-neutral-300 mb-2;
+}
+.on-this-page-link {
+	@apply block text-sm py-1 text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100;
+}
+.on-this-page-h3 {
+	@apply pl-4; /* Indent H3 links */
+}
+/* Add these new styles for Shiki code blocks */
+pre.shiki {
+	@apply p-4 rounded-lg overflow-x-auto;
+}
+
+/* === ADDED STYLES START === */
+/* Styles for interactive components embedded in posts */
+.interactive-component-wrapper {
+	@apply my-6 p-6 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-neutral-100 dark:bg-neutral-800/50;
+}
+
+button {
+    @apply mt-4 rounded-lg bg-neutral-600 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-neutral-700 focus:outline-none focus:ring-4 focus:ring-neutral-300 dark:bg-neutral-500 dark:hover:bg-neutral-600 dark:focus:ring-neutral-800;
+		
+}
+
+/* The .interactive-component-button class has been removed. Styles are now applied directly in Counter.svelte */
+/* === GALLERY STYLES START === */
+
+.post-gallery-grid {
+	@apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8;
+}
+
+.gallery-pin {
+	@apply block relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 ease-in-out border border-neutral-200 dark:border-neutral-800;
+	break-inside: avoid;
+}
+
+.gallery-pin .image-wrapper {
+	@apply overflow-hidden aspect-[2/3]; /* Aspect ratio for a pinterest-like feel */
+}
+
+.gallery-pin .gallery-image {
+	@apply w-full h-full object-cover group-hover:scale-105 transition-transform duration-300;
+}
+
+.gallery-pin .gallery-title {
+	@apply absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/70 to-transparent;
+	@apply text-white text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300;
+	@apply pointer-events-none;
+}
+
+/* === GALLERY STYLES END === */
+
+
+# File: src/app.d.ts
+
+// See https://svelte.dev/docs/kit/types#app.d.ts
+// for information about these interfaces
+declare global {
+	namespace App {
+		// interface Error {}
+		// interface Locals {}
+		// interface PageData {}
+		// interface PageState {}
+		// interface Platform {}
+	}
+}
+
+export {};
+
+
+# File: src/app.html
+
+<!doctype html>
+<html lang="en" class="dark">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover"  >
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>
+
+
+# File: src/lib/components/blog/Counter.svelte
+
+<script lang="ts">
+	// Using Svelte 5 runes for reactivity
+	let count = $state(0);
+
+	function increment() {
+		count += 1;
+	}
+</script>
+
+<div class="interactive-component-wrapper">
+	<p>
+		I'm an interactive Svelte component! Current count: <span class="font-bold">{count}</span>
+	</p>
+	<button
+        
+		onclick={increment}
+	>
+		Click me!
+	</button>
+</div>
+
+
+# File: src/lib/components/blog/PostGallery.svelte
+
+<script lang="ts">
+	type Post = {
+		slug: string;
+		title: string;
+		thumbnail?: string;
+	};
+
+	let { posts = [] }: { posts: Post[] } = $props();
+</script>
+
+<div class="post-gallery-grid">
+	{#each posts as post (post.slug)}
+		{@const href = `/blog/${post.slug}`}
+		<a {href} class="gallery-pin">
+			<div class="image-wrapper">
+				<img src={post.thumbnail} alt={post.title} class="gallery-image" />
+			</div>
+			<h3 class="gallery-title">{post.title}</h3>
+		</a>
+	{/each}
+</div>
+
+# File: src/lib/components/blog/TextToSpeech.svelte
+
+<!-- src/lib/components/blog/TextToSpeech.svelte -->
+<script lang="ts">
+	import { onMount } from 'svelte';
+
+	// Props
+	let { contentSelector = '' }: { contentSelector?: string } = $props();
+
+	// State management with Svelte 5 Runes
+	let isSupported = $state(false);
+	let isSpeaking = $state(false); // True if utterance is in flight (speaking or paused)
+	let isPaused = $state(false); // True if user explicitly paused
+	let textToRead = $state('');
+
+	// State for rate control
+	let rate = $state(1);
+	const supportedRates = [0.75, 1, 1.25, 1.5, 2];
+	let rateChangedDuringPause = $state(false);
+	let lastBoundaryCharIndex = $state(0); // Tracks progress within the text
+
+	// Effect to extract text content when the component mounts and is visible
+	$effect(() => {
+		if (typeof window !== 'undefined' && contentSelector) {
+			const element = document.querySelector(contentSelector);
+			if (element) {
+				textToRead = (element as HTMLElement).innerText;
+			}
+		}
+	});
+
+	onMount(() => {
+		if ('speechSynthesis' in window) {
+			isSupported = true;
+		}
+
+		// Cleanup function to stop speech when navigating away
+		return () => {
+			if (isSupported) {
+				window.speechSynthesis.cancel();
+			}
+		};
+	});
+
+	function speak(text: string, options: { rate: number; startFrom: number }) {
+		if (!isSupported) return;
+
+		window.speechSynthesis.cancel(); // Clear queue
+
+		const utterance = new SpeechSynthesisUtterance(text.substring(options.startFrom));
+		utterance.rate = options.rate;
+
+		utterance.onstart = () => {
+			isSpeaking = true;
+			isPaused = false;
+		};
+
+		utterance.onboundary = (event) => {
+			// event.charIndex is relative to the text of the *current* utterance
+			lastBoundaryCharIndex = options.startFrom + event.charIndex;
+		};
+
+		utterance.onend = () => {
+			isSpeaking = false;
+			isPaused = false;
+			lastBoundaryCharIndex = 0; // Reset progress
+		};
+
+		utterance.onerror = (event) => {
+			console.error('SpeechSynthesisUtterance.onerror', event);
+			isSpeaking = false;
+			isPaused = false;
+			lastBoundaryCharIndex = 0;
+		};
+
+		window.speechSynthesis.speak(utterance);
+	}
+
+	function handlePlayPause() {
+		if (!isSupported || !textToRead) return;
+
+		// If it's currently speaking and not paused, we want to pause it.
+		if (isSpeaking && !isPaused) {
+			window.speechSynthesis.pause();
+			isPaused = true;
+		} else {
+			// If paused, and the rate hasn't changed, just resume.
+			if (isPaused && !rateChangedDuringPause) {
+				window.speechSynthesis.resume();
+				isPaused = false;
+			} else {
+				// Otherwise (if idle, or if paused and rate changed), start speaking.
+				speak(textToRead, { rate, startFrom: lastBoundaryCharIndex });
+				rateChangedDuringPause = false; // Reset flag
+			}
+		}
+	}
+
+	function handleStop() {
+		if (!isSupported) return;
+		window.speechSynthesis.cancel();
+		isSpeaking = false;
+		isPaused = false;
+		lastBoundaryCharIndex = 0; // Reset progress on stop
+	}
+
+	function changeRate(direction: 'up' | 'down') {
+		const currentIndex = supportedRates.indexOf(rate);
+		const nextIndex = currentIndex + (direction === 'up' ? 1 : -1);
+
+		if (nextIndex >= 0 && nextIndex < supportedRates.length) {
+			const newRate = supportedRates[nextIndex];
+			if (rate === newRate) return;
+
+			rate = newRate;
+			if (isPaused) {
+				rateChangedDuringPause = true;
+			}
+
+			// If speaking (and not paused), restart speech to apply the new rate
+			if (isSpeaking && !isPaused) {
+				speak(textToRead, { rate, startFrom: lastBoundaryCharIndex });
+			}
+		}
+	}
+</script>
+
+{#if isSupported}
+	<div class="interactive-component-wrapper not-prose">
+		<p class="text-sm text-neutral-600 dark:text-neutral-400 mb-2">Listen to this post:</p>
+		<div class="flex items-center gap-2">
+			<!-- Play/Pause Button -->
+			<button
+				onclick={handlePlayPause}
+				disabled={!textToRead}
+				aria-label={isSpeaking && !isPaused ? 'Pause' : 'Play/Resume'}
+			>
+				{#if isSpeaking && !isPaused}
+					<!-- Pause Icon -->
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="20"
+						height="20"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						><rect x="6" y="4" width="4" height="16"></rect><rect
+							x="14"
+							y="4"
+							width="4"
+							height="16"
+						></rect></svg
+					>
+				{:else}
+					<!-- Play Icon -->
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="20"
+						height="20"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						><polygon points="5 3 19 12 5 21 5 3"></polygon></svg
+					>
+				{/if}
+			</button>
+			<!-- Stop Button -->
+			<button onclick={handleStop} disabled={!isSpeaking} aria-label="Stop">
+				<!-- Stop Icon -->
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="20"
+					height="20"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect></svg
+				>
+			</button>
+
+			<!-- Rate Controls -->
+			<div class="flex items-center gap-1 ml-4">
+				<button
+					onclick={() => changeRate('down')}
+					disabled={rate === supportedRates[0]}
+					aria-label="Decrease speed"
+					class="p-1"
+				>
+					<!-- Rewind Icon -->
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="16"
+						height="16"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						><polygon points="11 19 2 12 11 5 11 19"></polygon><polygon
+							points="22 19 13 12 22 5 22 19"
+						></polygon></svg
+					>
+				</button>
+				<span class="text-sm font-mono w-12 text-center text-neutral-600 dark:text-neutral-400"
+					>{rate.toFixed(2)}x</span
+				>
+				<button
+					onclick={() => changeRate('up')}
+					disabled={rate === supportedRates[supportedRates.length - 1]}
+					aria-label="Increase speed"
+					class="p-1"
+				>
+					<!-- Fast Forward Icon -->
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="16"
+						height="16"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						><polygon points="13 19 22 12 13 5 13 19"></polygon><polygon
+							points="2 19 11 12 2 5 2 19"
+						></polygon></svg
+					>
+				</button>
+			</div>
+		</div>
+	</div>
+{:else}
+	<div class="interactive-component-wrapper not-prose">
+		<p class="text-sm text-red-600 dark:text-red-400">
+			Text-to-speech is not supported by your browser.
+		</p>
+	</div>
+{/if}
+
+<style>
+	/* Add some specific styles for the rate control buttons to make them smaller */
+	.p-1 {
+		padding: 0.25rem;
+	}
+</style>
+
+
+# File: src/lib/components/D3/D3Circle.svelte
+
+<script lang="ts">
+	import { select } from 'd3-selection';
+
+	// D3's transition is a side-effect import
+	import 'd3-transition';
+
+	// bind:this needs an initial undefined value
+	let svgEl: SVGElement | undefined = $state();
+	
+	// Reactive state for circle properties
+	let cx = $state(50);
+	let fill = $state('#D4AF47'); // Gold color from theme
+
+	$effect(() => {
+		if (svgEl) {
+			const svg = select(svgEl);
+
+			// --- FIX STARTS HERE ---
+			
+			// Use the .join() method for a cleaner enter/update pattern.
+			// It handles creating the element on first run and selecting it on subsequent runs.
+			const circle = svg
+				.selectAll('circle')
+				.data([null]) // Data array with one item for our single circle
+				.join('circle') // .join() handles enter and update
+					.attr('r', 20)
+					.attr('cy', 50);
+
+			// Apply the transition to the selection returned by .join()
+			circle
+				.transition()
+				.duration(750)
+				.attr('cx', cx)
+				.attr('fill', fill);
+
+			// --- FIX ENDS HERE ---
+		}
+	});
+
+	function moveCircle() {
+		// Update state to trigger the effect
+		cx = cx === 50 ? 150 : 50;
+		fill = fill === '#D4AF47' ? '#374151' : '#D4AF47'; // Using neutral-700 from your theme
+	}
+</script>
+
+<div class="interactive-component-wrapper">
+	<p>This is a simple D3.js visualization rendered inside a Svelte component. Click the button to move the circle.</p>
+	<svg bind:this={svgEl} width="200" height="100" class="bg-neutral-200 dark:bg-neutral-800 rounded-md mt-4"></svg>
+	<button onclick={moveCircle}>
+		Animate Circle
+	</button>
+</div>
+
+# File: src/lib/components/GoldLine.svelte
+
+<div>
+	<svg width="100%" height="2" xmlns="http://www.w3.org/2000/svg">
+		<line x1="0" y1="50%" x2="100%" y2="50%" stroke="#D4AF47" stroke-width="2" />
+	</svg>
+</div>
+
+# File: src/lib/components/layout/Aside.svelte
+
+<script lang="ts">
+	import { page } from '$app/state';
+	import type { Topic } from '$lib/data/posts';
+
+	let { topics = [] }: { topics: Topic[] } = $props();
+</script>
+
+<aside>
+	<nav>
+		{#each topics as topic (topic.topic)}
+			<h3 class="sidebar-topic">{topic.topic}</h3>
+			<ul>
+				{#each topic.articles as article (article.slug)}
+					{@const href = `/blog/${article.slug}`}
+					<li>
+						<a {href} class:sidebar-link={true} class:sidebar-link-active={page.url.pathname === href}>
+							{article.title}
+						</a>
+					</li>
+				{/each}
+			</ul>
+		{/each}
+	</nav>
+</aside>
+
+
+# File: src/lib/components/layout/BlogLayout.svelte
+
+<script lang="ts">
+  // Using $props() for Svelte 5 Runes mode and providing explicit types
+  let { 
+    title = '', 
+    description = '', 
+    date = '', 
+    tags = [] as string[],
+    children 
+  } = $props<{
+    title?: string;
+    description?: string;
+    date?: string;
+    tags?: string[];
+    children: any; // Using `any` for generic child content for now
+  }>();
+</script>
+
+<article class="prose prose-lg dark:prose-invert mx-auto px-4 py-8">
+  {#if title}
+    <h1 class="text-4xl font-bold mb-2">{title}</h1>
+  {/if}
+
+  {#if description}
+    <p class="text-gray-600 dark:text-gray-400 italic mb-2">{description}</p>
+  {/if}
+
+  {#if date}
+    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">{new Date(date).toLocaleDateString()}</p>
+  {/if}
+
+  {#if tags.length > 0}
+    <div class="flex flex-wrap gap-2 mb-6">
+      {#each tags as tag}
+        <span class="bg-gray-200 dark:bg-gray-700 text-xs font-medium px-2 py-1 rounded">{tag}</span>
+      {/each}
+    </div>
+  {/if}
+
+  {@render children()}
+</article>
+
+# File: src/lib/components/layout/DefaultLayout.svelte
+
+<script lang="ts">
+  let { 
+    title = '', 
+    description = '', 
+    date = '', 
+    tags = [] as string[], 
+    children 
+  } = $props<{
+    title?: string;
+    description?: string;
+    date?: string;
+    tags?: string[];
+    children: any;
+  }>();
+</script>
+
+<article class="prose prose-lg dark:prose-invert mx-auto px-4 py-8">
+  {#if title}
+    <h1 class="text-4xl font-bold mb-2">{title}</h1>
+  {/if}
+
+  {#if description}
+    <p class="text-gray-600 dark:text-gray-400 italic mb-2">{description}</p>
+  {/if}
+
+  {#if date}
+    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">{new Date(date).toLocaleDateString()}</p>
+  {/if}
+
+  {#if tags.length}
+    <div class="flex flex-wrap gap-2 mb-6">
+      {#each tags as tag}
+        <span class="bg-gray-200 dark:bg-gray-700 text-xs font-medium px-2 py-1 rounded">{tag}</span>
+      {/each}
+    </div>
+  {/if}
+
+  {@render children()}
+</article>
+
+# File: src/lib/components/layout/DrillDown.svelte
+
+<!-- src/lib/components/layout/ObsidianDrillDown.svelte -->
+<script lang="ts">
+	import { page } from '$app/state';
+	import type { Topic } from '../../../routes/+layout.server';
+
+	// Define the props for the component using Svelte 5 syntax
+	let { topics = [] }: { topics: Topic[] } = $props();
+	type Heading = { level: number; id: string; text: string };
+
+	// Derive headings from the global page store.
+	// This makes the component context-aware.
+	let headings = $derived((page.data.headings as Heading[]) || []);
+	
+	// NEW: Determine if the current page is a blog post.
+	const isBlogPost = $derived(page.url.pathname.startsWith('/blog/'));
+
+	// Use $state for reactive state management of open/closed topics
+	let openTopics = $state<Record<string, boolean>>({});
+
+	// Function to toggle the visibility of articles under a topic
+	function toggleTopic(topicName: string) {
+		openTopics[topicName] = !openTopics[topicName];
+	}
+
+	// Initialize topics to be open if they contain the currently active page
+	$effect(() => {
+		// This logic should only run when we are displaying topics, not page headings.
+		if (headings.length > 0) return;
+
+		const newOpenTopics: Record<string, boolean> = {};
+		for (const topic of topics) {
+			if (topic.articles.some((article) => page.url.pathname === `/blog/${article.slug}`)) {
+				newOpenTopics[topic.topic] = true;
+			}
+		}
+		// Only update if there's a change to avoid infinite loops
+		if (JSON.stringify(openTopics) !== JSON.stringify(newOpenTopics)) {
+			// Merge with existing state to preserve user's manual toggles
+			Object.assign(openTopics, newOpenTopics);
+		}
+	});
+</script>
+
+<!-- NEW: The entire component is now wrapped in a conditional block -->
+{#if isBlogPost && headings.length > 0}
+	<aside class="w-64 flex-shrink-0 lg:block hidden sticky top-8 self-start">
+		<h3
+			class="mb-2 text-sm font-semibold text-neutral-600 dark:text-neutral-400 uppercase tracking-wider"
+		>
+			On This Page
+		</h3>
+		<nav>
+			<ul>
+				{#each headings as heading (heading.id)}
+					<li class:pl-4={heading.level === 3}>
+						<a
+							href="#{heading.id}"
+							class="block py-1 text-sm text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+						>
+							{heading.text}
+						</a>
+					</li>
+				{/each}
+			</ul>
+		</nav>
+	</aside>
+{/if}
+
+
+# File: src/lib/components/layout/Footer.svelte
+
+<!-- File: src/lib/components/layout/Footer.svelte -->
+<script lang="ts">
+	const currentYear = new Date().getFullYear();
+</script>
+
+<footer>
+	<p>&copy; {currentYear} Suvro Ghosh. All rights reserved.</p>
+	<!-- Social media links can be added here later -->
+</footer>
+
+
+# File: src/lib/components/layout/Header.svelte
+
+<!-- File: src/lib/components/layout/Header.svelte -->
+<script lang="ts">
+	// Hamburger menu state and logic will be added later.
+	let isMenuOpen = $state(false);
+</script>
+
+<header>
+	<div class="container">
+		<nav>
+			<a href="/" class="site-title">
+                SuvroGhosh.Blog
+            </a>
+			<!-- Placeholder for desktop nav items -->
+			<div class="hidden md:flex items-center space-x-4">
+				<a href="/blog" class="sidebar-link">Blog</a>
+				<a href="/about" class="sidebar-link">About</a>
+				<a href="/contact" class="sidebar-link">Contact</a>
+			</div>
+			<!-- Hamburger Button -->
+			<button class="hamburger md:hidden" onclick={() => isMenuOpen = !isMenuOpen}>
+				<span class="sr-only">Open main menu</span>
+				<!-- SVG icon for hamburger -->
+				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+			</button>
+		</nav>
+	</div>
+	<!-- Mobile Menu (logic to show/hide will be implemented) -->
+	{#if isMenuOpen}
+		<div class="md:hidden">
+			<!-- mobile nav links here -->
+		</div>
+	{/if}
+</header>
+
+
+# File: src/lib/components/OnThisPage.svelte
+
+<!-- File: src/lib/components/OnThisPage.svelte -->
+<script lang="ts">
+	type Heading = { level: number; id: string; text: string };
+	let { headings = [] }: { headings: Heading[] } = $props();
+</script>
+
+{#if headings.length > 0}
+	<aside class="on-this-page-container">
+		<h3 class="on-this-page-title">On this page</h3>
+		<nav>
+			<ul>
+				{#each headings as heading (heading.id)}
+					<li class:on-this-page-h3={heading.level === 3}>
+						<a href="#{heading.id}" class="on-this-page-link">
+							{heading.text}
+						</a>
+					</li>
+				{/each}
+			</ul>
+		</nav>
+	</aside>
+{/if}
+
+
+# File: src/lib/components/P5/P5AbstractArt.svelte
+
+<script lang="ts">
+	import { onMount } from 'svelte';
+	// For type annotations only. This is erased from the final JS bundle.
+	import type p5 from 'p5';
+
+	// 1. Particle class is at the top-level scope, resolving the performance warning.
+	class Particle {
+		p: p5;
+		pos: p5.Vector;
+		vel: p5.Vector;
+		acc: p5.Vector;
+		lifespan: number;
+		color: p5.Color;
+
+		// 2. The constructor now accepts the main p5 constructor as a dependency.
+		//    We use 'any' here for simplicity, as the type is complex (typeof p5).
+		constructor(p: p5, p5Constructor: any, x: number, y: number) {
+			this.p = p;
+			this.pos = this.p.createVector(x, y);
+			// 3. The static 'Vector' property is now accessed from the injected constructor.
+			this.vel = p5Constructor.Vector.random2D().mult(this.p.random(1, 3));
+			this.acc = this.p.createVector(0, 0);
+			this.lifespan = 255;
+			this.color = this.p.color('#D4AF47');
+		}
+
+		update() {
+			this.vel.add(this.acc);
+			this.pos.add(this.vel);
+			this.lifespan -= 1.5;
+			this.acc.mult(0);
+		}
+
+		show() {
+			this.p.noStroke();
+			this.color.setAlpha(this.lifespan);
+			this.p.fill(this.color);
+			this.p.ellipse(this.pos.x, this.pos.y, 8);
+		}
+
+		isFinished() {
+			return this.lifespan < 0;
+		}
+	}
+
+	let container: HTMLDivElement;
+	let p5Instance: p5 | undefined;
+
+	onMount(() => {
+		const initSketch = async () => {
+			const p5Constructor = (await import('p5')).default;
+
+			const sketch = (p: p5) => {
+				const particles: Particle[] = [];
+
+				p.setup = () => {
+					p.createCanvas(p.windowWidth > 768 ? 600 : 300, 400).parent(container);
+					p.background(p.color('#171717'));
+				};
+
+				p.draw = () => {
+					p.background(23, 23, 23, 40);
+					// 4. Inject both the instance 'p' and the 'p5Constructor' when creating a particle.
+					particles.push(new Particle(p, p5Constructor, p.width / 2, p.height / 2));
+
+					for (let i = particles.length - 1; i >= 0; i--) {
+						particles[i].update();
+						particles[i].show();
+						if (particles[i].isFinished()) {
+							particles.splice(i, 1);
+						}
+					}
+				};
+			};
+
+			p5Instance = new p5Constructor(sketch, container);
+		};
+
+		initSketch();
+
+		return () => {
+			p5Instance?.remove();
+		};
+	});
+</script>
+
+<div class="interactive-component-wrapper">
+	<p>
+		This is a dynamic abstract art piece generated with p5.js inside a Svelte component. The sketch
+		continuously generates and animates particles from the center.
+	</p>
+	<div
+		bind:this={container}
+		class="mt-4 flex justify-center rounded-lg border border-neutral-300 dark:border-neutral-700 bg-neutral-900 overflow-hidden"
+	>
+		</div>
+</div>
+
+# File: src/lib/components/plantuml/PlantUML.svelte
+
+<script lang="ts">
+	import { encodePlantUML } from './plantuml';
+
+	// Props using Svelte 5 syntax
+	let {
+		source,
+		alt = 'PlantUML Diagram'
+	}: {
+		source: string;
+		alt?: string;
+	} = $props();
+
+	// Reactive state for the image URL
+	let imageUrl = $state('');
+
+	// Effect to update the image URL whenever the source prop changes
+	$effect(() => {
+		if (source) {
+			const encoded = encodePlantUML(source);
+			// FIX: Prepend '~1' to the encoded data to conform to the updated PlantUML server API for DEFLATE compression.
+			imageUrl = `https://www.plantuml.com/plantuml/svg/~1${encoded}`;
+		}
+	});
+</script>
+
+<div
+	class="plantuml-container my-6 flex items-center justify-center rounded-lg border border-neutral-300 bg-neutral-100 p-4 dark:border-neutral-700 dark:bg-neutral-800/50"
+>
+	{#if imageUrl}
+		<img src={imageUrl} {alt} class="h-auto max-w-full" />
+	{:else}
+		<p class="text-neutral-500 dark:text-neutral-400">Generating diagram...</p>
+	{/if}
+</div>
+
+# File: src/lib/components/plantuml/plantuml.ts
+
+import pako from 'pako';
+
+/**
+ * Encodes a PlantUML diagram string into the format required for URL generation.
+ * This is a specific encoding using Deflate compression and a custom Base64 mapping.
+ *
+ * @param {string} text - The PlantUML diagram definition text.
+ * @returns {string} The encoded string.
+ */
+function encode64(data: Uint8Array): string {
+    let r = '';
+    for (let i = 0; i < data.length; i += 3) {
+        if (i + 2 == data.length) {
+            r += append3bytes(data[i], data[i + 1], 0);
+        } else if (i + 1 == data.length) {
+            r += append3bytes(data[i], 0, 0);
+        } else {
+            r += append3bytes(data[i], data[i + 1], data[i + 2]);
+        }
+    }
+    return r;
+}
+
+/**
+ * Appends 3 bytes for the Base64 encoding process.
+ * @param {number} b1 - First byte.
+ * @param {number} b2 - Second byte.
+ * @param {number} b3 - Third byte.
+ * @returns {string} The encoded 4-character string.
+ */
+function append3bytes(b1: number, b2: number, b3: number): string {
+    const c1 = b1 >> 2;
+    const c2 = ((b1 & 3) << 4) | (b2 >> 4);
+    const c3 = ((b2 & 15) << 2) | (b3 >> 6);
+    const c4 = b3 & 63;
+    return encode6bit(c1 & 63) + encode6bit(c2 & 63) + encode6bit(c3 & 63) + encode6bit(c4 & 63);
+}
+
+/**
+ * Encodes a 6-bit integer into a PlantUML-specific Base64 character.
+ * @param {number} b - The 6-bit integer.
+ * @returns {string} The corresponding Base64 character.
+ */
+function encode6bit(b: number): string {
+    if (b < 10) return String.fromCharCode(48 + b);
+    b -= 10;
+    if (b < 26) return String.fromCharCode(65 + b);
+    b -= 26;
+    if (b < 26) return String.fromCharCode(97 + b);
+    b -= 26;
+    if (b == 0) return '-';
+    if (b == 1) return '_';
+    return '?';
+}
+
+/**
+ * Takes a PlantUML string, compresses it, and encodes it for use in a URL.
+ * @param {string} text - The raw PlantUML diagram text.
+ * @returns {string} The final encoded string for the URL.
+ */
+export function encodePlantUML(text: string): string {
+    const data = new TextEncoder().encode(text);
+    // pako.deflate returns a Uint8Array, which is what encode64 expects.
+    // The `to: 'string'` option was incorrect and has been removed.
+    const compressed = pako.deflate(data, { level: 9 });
+    // The conversion loop is no longer necessary as `compressed` is already a Uint8Array.
+    return encode64(compressed);
+}
+
+
+# File: src/lib/components/ThreeJS/ThreeJSScene.svelte
+
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import * as THREE from 'three';
+	import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+
+	// Use Svelte's bind:this to get a reference to the canvas element
+	let canvas: HTMLCanvasElement | undefined = $state();
+
+	onMount(() => {
+		// Ensure the canvas element is available
+		if (!canvas) return;
+
+		// Scene setup
+		const scene = new THREE.Scene();
+
+		// Camera setup
+		const camera = new THREE.PerspectiveCamera(75, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
+		camera.position.z = 5;
+
+		// Renderer setup
+		const renderer = new THREE.WebGLRenderer({
+			canvas: canvas,
+			antialias: true,
+			alpha: true // Make canvas background transparent
+		});
+		renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+		renderer.setPixelRatio(window.devicePixelRatio);
+
+		// Geometry and Material
+		const geometry = new THREE.TorusKnotGeometry(1.2, 0.35, 100, 16);
+		const material = new THREE.MeshStandardMaterial({
+			color: 0xd4af47, // Gold color from your theme
+			metalness: 0.7, // Slightly adjusted for better reflections
+			roughness: 0.3
+		});
+		const torusKnot = new THREE.Mesh(geometry, material);
+		scene.add(torusKnot);
+
+		// Lighting
+		const ambientLight = new THREE.AmbientLight(0xffffff, 1.5); // Increased intensity
+		scene.add(ambientLight);
+
+		const pointLight1 = new THREE.PointLight(0xffffff, 25); // Drastically increased intensity
+		pointLight1.position.set(5, 5, 5);
+		scene.add(pointLight1);
+		
+		const pointLight2 = new THREE.PointLight(0xffffff, 15); // Added a second light from another angle
+		pointLight2.position.set(-5, -5, -2);
+		scene.add(pointLight2);
+
+		// Orbit Controls for interaction
+		const controls = new OrbitControls(camera, renderer.domElement);
+		controls.enableDamping = true;
+		controls.autoRotate = true;
+		controls.autoRotateSpeed = 1.0;
+
+		// Handle window resizing
+		const onResize = () => {
+			if (!canvas) return;
+			const parent = canvas.parentElement;
+			if (parent) {
+				const width = parent.clientWidth;
+				const height = Math.min(width * 0.6, 500); // Maintain a reasonable aspect ratio
+				canvas.width = width;
+				canvas.height = height;
+
+				camera.aspect = width / height;
+				camera.updateProjectionMatrix();
+				renderer.setSize(width, height);
+			}
+		};
+
+		window.addEventListener('resize', onResize);
+		onResize(); // Initial resize
+
+		// Animation loop
+		const animate = () => {
+			if (!renderer) return; // Exit if cleaned up
+			requestAnimationFrame(animate);
+
+			torusKnot.rotation.x += 0.001;
+			torusKnot.rotation.y += 0.005;
+
+			controls.update();
+			renderer.render(scene, camera);
+		};
+
+		animate();
+
+		// Cleanup on component unmount
+		return () => {
+			window.removeEventListener('resize', onResize);
+			renderer.dispose();
+			geometry.dispose();
+			material.dispose();
+			// Stop the animation loop by breaking the chain
+			// No direct way to stop rAF, so we ensure renderer is gone
+			// and let the garbage collector handle it.
+		};
+	});
+</script>
+
+<div class="interactive-component-wrapper">
+	<p>
+		This interactive 3D scene is rendered using Three.js. You can drag to rotate the object, and use the mouse wheel to zoom.
+	</p>
+	<div class="mt-4 flex justify-center rounded-lg border border-neutral-300 dark:border-neutral-700 bg-neutral-900 overflow-hidden aspect-video max-h-[500px]">
+		<canvas bind:this={canvas} class="w-full h-full block"></canvas>
+	</div>
+</div>
+
+
+# File: src/lib/data/posts.ts
+
+// File: src/lib/data/posts.ts
+// Creating dummy data for the sidebar navigation.
+export type Article = {
+	title: string;
+	slug: string;
+};
+
+export type Topic = {
+	topic: string;
+	articles: Article[];
+};
+
+export const topics: Topic[] = [
+	{
+		topic: 'SvelteKit',
+		articles: [
+			{ title: 'Understanding Routing', slug: 'sveltekit-routing' },
+			{ title: 'Working with Data', slug: 'sveltekit-data' }
+		]
+	},
+	{
+		topic: '3D & WebGL',
+		articles: [
+			{ title: 'Three.js Basics', slug: 'threejs-basics' },
+			{ title: 'Shaders in Svelte', slug: 'shaders-in-svelte' }
+		]
+	},
+    {
+		topic: 'CSS & Design',
+		articles: [
+			{ title: 'Modern CSS Layouts', slug: 'css-layouts' },
+			{ title: 'Theming with Oklch', slug: 'theming-with-oklch' }
+		]
+	}
+];
+
+
+# File: src/lib/index.ts
+
+// place files you want to import through the `$lib` alias in this folder.
+
+
+# File: src/lib/posts/d3-integration.md
+
+---
+title: "Integrating D3.js with Svelte"
+date: "2025-06-22"
+description: "A practical guide to combining the power of D3.js for data visualization with the reactive and component-based architecture of Svelte 5."
+topic: "3D & WebGL"
+thumbnail: "/images/placeholders/d3-placeholder.jpeg"
+---
+
+<script>
+    import D3Circle from '$lib/components/D3/D3Circle.svelte';
+    import GoldLine from '$lib/components/GoldLine.svelte';
+</script>
+
+## Why D3.js with Svelte?
+
+[D3.js](https://d3js.org/) is an incredibly powerful library for creating data-driven documents. It gives you fine-grained control over the DOM, allowing you to create complex and beautiful data visualizations. Svelte, on the other hand, excels at managing the DOM and state in a highly efficient, reactive way.
+
+Combining them seems like a perfect match: Svelte manages the component's state and structure, while D3 handles the complex parts of the visualization that are data-dependent.
+
+<GoldLine />
+
+### A Simple Example
+
+Let's start with a basic example. We'll create a Svelte component that uses D3 to draw and animate a simple circle inside an SVG element. The component below is fully self-contained. It uses Svelte's `$state` for reactive properties and the `$effect` rune to interact with the DOM via D3 when those properties change.
+
+This approach lets Svelte handle when to re-run the D3 code, keeping our logic clean and declarative.
+
+<D3Circle />
+
+The code for the component above looks something like this:
+
+```typescript
+// src/lib/components/blog/D3Circle.svelte
+import { select } from 'd3-selection';
+import 'd3-transition';
+
+let svgEl: SVGElement | undefined = $state();
+
+let cx = $state(50);
+let fill = $state('#D4AF47');
+
+$effect(() => {
+    if (svgEl) {
+        const svg = select(svgEl);
+        const circle = svg.selectAll('circle').data([null]);
+        const circleEnter = circle.enter().append('circle')
+            .attr('r', 20)
+            .attr('cy', 50);
+
+        circle.merge(circleEnter)
+            .transition()
+            .duration(750)
+            .attr('cx', cx)
+            .attr('fill', fill);
+    }
+});
+
+# File: src/lib/posts/p5js-abstract-art.md
+
+---
+title: "Generative Abstract Art with p5.js and Svelte"
+date: "2025-06-22"
+description: "Learn how to integrate the creative coding power of p5.js into a modern Svelte 5 application to create dynamic, interactive art for the web."
+topic: "3D & WebGL"
+thumbnail: "/images/placeholders/p5js-placeholder.jpeg"
+---
+
+<script>
+    import P5AbstractArt from '$lib/components/P5/P5AbstractArt.svelte';
+    import GoldLine from '$lib/components/GoldLine.svelte';
+</script>
+
+## Creative Coding Meets Component-Driven Development
+
+[p5.js](https://p5js.org/) is a fantastic JavaScript library for creative coding, making it accessible for artists, designers, and developers to create graphics and interactive experiences on the web. [cite_start]Svelte, with its component-based architecture and efficient reactivity, provides the perfect framework to structure and manage these creative sketches. 
+
+Combining these two technologies allows us to build encapsulated, reusable visual components that are both dynamic and easy to integrate into a larger application. Below is a live example of a p5.js sketch running within this blog post.
+
+<GoldLine />
+
+<P5AbstractArt />
+
+<GoldLine />
+
+### The Integration Strategy
+
+The key to making p5.js work seamlessly within a Svelte component is to use its "instance mode". This prevents p5.js from polluting the global namespace and allows us to attach a sketch to a specific DOM element.
+
+Here’s the approach used in the component above:
+
+1.  [cite_start]**Component Mounting**: We use Svelte's `onMount` lifecycle function to ensure our p5.js code runs only on the client-side, after the component's host element is available in the DOM. 
+2.  [cite_start]**DOM Binding**: A `<div>` element is bound to a variable using `bind:this`, giving us a direct reference to the container where the p5.js canvas will live. 
+3.  **Sketch Instantiation**: Inside `onMount`, we create a new `p5` instance, passing our sketch function and the container element.
+4.  [cite_start]**Cleanup**: The function returned from `onMount` is called when the component is destroyed.  We use this to call the `remove()` method on our p5 instance, which cleans up the canvas and its event listeners, preventing memory leaks during navigation.
+
+Here is a simplified look at the script portion of the Svelte component:
+
+```typescript
+import { onMount } from 'svelte';
+import p5 from 'p5';
+
+let container: HTMLDivElement;
+
+onMount(() => {
+    const sketch = (p: p5) => {
+        // p5 setup() and draw() functions go here
+        p.setup = () => {
+            p.createCanvas(600, 400).parent(container);
+        };
+
+        p.draw = () => {
+            p.background(0);
+            p.ellipse(p.width / 2, p.height / 2, 50, 50);
+        };
+    };
+
+    const p5Instance = new p5(sketch, container);
+
+    // Cleanup when component is unmounted
+    return () => {
+        p5Instance.remove();
+    };
+});
+
+# File: src/lib/posts/plantuml-sequence-diagram.md
+
+---
+title: "Visualizing Workflows with PlantUML Sequence Diagrams"
+date: "2025-06-24"
+description: "How to create and embed PlantUML sequence diagrams directly into a SvelteKit blog for clear, maintainable technical documentation."
+topic: "SvelteKit"
+layout: "blog"
+thumbnail: "/images/placeholders/plantuml-placeholder.jpeg"
+---
+
+<script lang="ts">
+	import PlantUML from '$lib/components/plantuml/PlantUML.svelte';
+	import GoldLine from '$lib/components/GoldLine.svelte';
+
+	// Define the PlantUML source code for the sequence diagram
+	const loginFlow = `
+@startuml
+actor User
+participant "Browser" as Web
+participant "SvelteKit Server" as Server
+database "Database" as DB
+
+User -> Web: Enters credentials & submits form
+Web -> Server: POST /login (email, password)
+Server -> DB: Find user by email
+DB --> Server: User record (with hashed password)
+Server -> Server: Verify password
+
+alt Credentials Correct
+    Server -> Web: Set session cookie & redirect
+    Web -> User: Show dashboard
+else Credentials Incorrect
+    Server --> Web: Return error message
+    Web -> User: Show login page with error
+end
+@enduml
+`;
+</script>
+
+## Visualizing Complex Processes
+
+[cite_start]One of the best ways to explain a technical process, like an authentication flow, is to visualize it. [cite_start]Text can be ambiguous, but a diagram provides a clear, step-by-step view of interactions between different parts of a system.
+
+[cite_start]PlantUML is a powerful tool that lets you create diagrams from plain text. [cite_start]This is fantastic for documentation because it means your diagrams can be version-controlled, diffed, and edited as easily as code.
+
+<GoldLine />
+
+### Authentication Flow Example
+
+[cite_start]Below is a sequence diagram illustrating a typical user login process in a SvelteKit application. [cite_start]It shows the journey from the user entering their credentials to the server validating them against a database. This diagram was generated by the `<PlantUML />` component we just built.
+
+<PlantUML source={loginFlow} alt="A sequence diagram outlining the user login flow." />
+
+<GoldLine />
+
+[cite_start]By creating a generic Svelte component, we can easily embed such diagrams anywhere in the blog. [cite_start]This keeps the technical content clear, and the implementation elegant and DRY.
+
+# File: src/lib/posts/svelte-introduction.md
+
+---
+title: "An Introduction to Svelte"
+date: "2025-07-05"
+description: "A personal take on why Svelte and SvelteKit offer a superior, more intuitive development experience."
+topic: "SvelteKit"
+thumbnail: "/images/placeholders/svelte-intro-thumbnail.png"
+---
+
+<script>
+    import TextToSpeech from '$lib/components/blog/TextToSpeech.svelte';
+</script>
+
+<TextToSpeech contentSelector="#post-content" />
+
+<div id="post-content">
+
+<div class="flex flex-col md:flex-row items-start gap-8 mb-8">
+    <div class="w-full md:w-2/3 flex-shrink-0">
+        <img src="/images/placeholders/svelte-intro-thumbnail.png" alt="An Introduction to Svelte" class="rounded-lg shadow-lg w-full object-cover">
+    </div>
+    <div class="w-full md:w-2/3">
+        I just want to write what I feel about Svelte and Sveltekit instead of being another pastiche copying their documentation. As you can see, Svelte is like the new slim, handsome, sophisticated young man on the block, as opposed to all the rest, who, by that comparison, all fall into the character of a fat fuck in his declining years strapped to a pension with an unsuitable and unsustainable ecosystem with religious views that, when compared to Svelte, are orthodox and ancient, pernicious even. With svelte you write less and achieve at or above par.
+    </div>
+</div>
+
+For me, what transcends everything is how straightforward it is for the svelte ecosystem to get a website up and running, that being the simplicity of the simplifications that they have managed and the meaningful industry collaborations. I'll try to go over the details with this very blog as an example so that you can relate to something that's living instead of contrived pretentious and unnatural scenarios.
+
+We all know that, if I use as a metaphor construction of a building (say your house) for example, we are tethered to three pieces of technology in web development: hypertext markup language (HTML), which is the brick and mortar; cascading style sheet (CSS), which is the paint, tiles and all the decorative paraphernalia; and java script (JS), which is the plumbing and electricity to make the metaphorical home livable with running water and lights to switch on. What Svelte does is make this tethering more visible, easier to understand, and knit together to create a website. Svelte is the frontend part of it—what you see on the browser as an user, client or customer, while Sveltekit is the backend—the server which deals with the questions related to dishing out the data that the client wants to consume; together, they're a full-stack (client-server) in one bundle. The word stack alludes to all the layers, the UI, web server, database, operating system and application server. For a developer, at least during the time he is programming an application he is both the "give" (running a development server) as well as the "take" (masquerading as the intended user), and this is just a temporary illusion, the final "give" is from a real server and "take" from the web application (client) running on some sort of browser (broadly user agent) used by people the developer might never meet. The word client is often used to mean the application running or the browser, the machine on which it is running and even sometimes the human sitting in front of the machine.
+
+If you want, think of this architecture as a give-and-take. The sveltekit is the give, and the svelte is the take, and it's a marvelous affair of give and take; it's really that buried under stiff terms and dozens of hard-to-remember acronyms and jargon.
+
+### Declarative(what) vs Imperative(how)
+
+---
+
+In this context, I want to talk a little about the what style (declarative) as opposed to the how style (imperative). Declarative style is empowering while imperative crippling.
+
+You know, when you're hungry, you just say, Mom, I want breakfast, and your mom gives you breakfast. This is declarative in that you declare and it is done. Your mom, of course, understands you and cooks the best breakfast for you. She is opinionated, but in the right way.
+
+As opposed to telling a new cook that you hired all the details of how to cook the eggs (I like medium-boiled) or how to butter your toast (soft fresh bread untoasted, sides cut, with a lot of butter), this is the how-style or imperative way.
+
+Svelte is like your mom; it takes care of unnecessary details. You just focus on designing the what-you-want part of your website. You let the Svelte compiler, like your mother, fetch the distilled know-how passed down by generations to do all the complex stuff that you don't need to worry about, like timing and setting the water temperature for the egg, taking the shell out, etcetera, etcetera.
+
+This makes life worth living, I think. If you had to reinvent the wheel every time, life grinds to a screeching and quite boring halt just for stuff that has already been perfected, and I feel this is a programming paradigm that really compels me to want to write better software by letting me focus on the stuff that matters to me or who I am writing the software for.
+
+PS: I use mom instead of a partner because, usually, in partnerships, there's not that spontaneous selflessness that a mother brings. I see this spontaneity in Rich Harris and the volunteers of the svelte open-source community. Cooking becomes a chore in a partnership, or it's an imposition, or barter, or some ulterior motive, which doesn't represent svelte. Anyway, I am divorced; this is really me in my example, and it's bona fide.
+
+</div>
+
+# File: src/lib/posts/sveltes-runes.md
+
+---
+title: "A First Look at Svelte's Runes"
+date: "2025-06-19"
+description: "Exploring the new reactivity model in Svelte 5 and how it changes the way we build apps."
+topic: "SvelteKit"
+thumbnail: "/images/placeholders/svelte-runes-thumbnail.jpeg"
+---
+
+<script>
+    // Import the component just like in a regular .svelte file
+    import Counter from '$lib/components/blog/Counter.svelte';
+    import GoldLine from '$lib/components/GoldLine.svelte';
+
+</script>
+
+## A Paradigm Shift
+
+Svelte 5 introduces a new reactivity model powered by **runes**. This is a fundamental change from the magic of `let` and `$:`. This post will explore what runes are and how to use them.
+
+### From Implicit to Explicit
+The core idea is to make reactivity more explicit. Instead of relying on the compiler to infer reactivity from assignments (`=`), we now use special functions called runes to declare reactive state.
+
+### The `$state` Rune
+The most basic rune is `$state()`. It creates a piece of state that, when its value changes, will trigger updates to the UI.
+
+Here's a simple example of a reactive counter. The script block looks like this:
+
+```javascript
+// Reactive state is now explicitly created with $state
+let count = $state(0);
+
+function increment() {
+	count += 1;
+}
+```
+
+And here is that counter component in action, embedded directly into this post:
+
+<Counter />
+
+This demonstrates how easy it is to mix interactive elements within your static Markdown content, thanks to `mdsvex`.
+
+<GoldLine />
+
+## Other Key Runes
+
+Besides `$state`, Svelte 5 provides other powerful runes for derived state and side effects.
+
+### `$derived` for Computed Values
+Use `$derived` for values that are calculated from other state. It's the replacement for reactive `$: doubled = count * 2` statements. Any time a dependency of the derived expression changes, the derived value will be automatically recalculated.
+
+### `$effect` for Side Effects
+Use `$effect` for running code in response to state changes, such as logging to the console, making API calls, or interacting with third-party libraries. This replaces reactive `$: { ... }` blocks used for side effects.
+
+
+# File: src/lib/posts/text-to-speech-feature.md
+
+---
+title: "New Feature: Listen to Posts"
+date: "2025-06-22"
+description: "Introducing an accessibility feature that uses the Web Speech API to read blog posts aloud, built with Svelte 5."
+topic: "SvelteKit"
+thumbnail: "/images/placeholders/tts-placeholder.png"
+---
+
+<script>
+    import TextToSpeech from '$lib/components/blog/TextToSpeech.svelte';
+</script>
+
+I'm excited to introduce a new accessibility feature to the blog: a text-to-speech player. Now, you can listen to articles directly in your browser. This functionality is built using the browser's native **Web Speech API** and is seamlessly integrated into the site with a reusable Svelte component.
+
+Below the player, you'll find the content that it will read. The component is designed to find and read the main content of the post, which is wrapped in a container with the ID `#post-content`.
+
+<!-- The TextToSpeech component is placed here -->
+<!-- It will look for the #post-content element below and read its text -->
+<TextToSpeech contentSelector="#post-content" />
+
+<div id="post-content">
+
+I just want to write what I feel about Svelte and Sveltekit instead of being another pastiche copying their documentation. As you can see, Svelte is like the new slim, handsome, sophisticated young man on the block, as opposed to all the rest, who, by that comparison, all fall into the character of a fat fuck in his declining years strapped to a pension with an unsuitable and unsustainable ecosystem with religious views that, when compared to Svelte, are orthodox and ancient, pernicious even. With svelte you write less and achieve at or above par.  
+  
+For me, what transcends everything is how straightforward it is for the svelte ecosystem to get a website up and running, that being the simplicity of the simplifications that they have managed and the meaningful industry collaborations. I'll try to go over the details with this very blog as an example so that you can relate to something that's living instead of contrived pretentious and unnatural scenarios.  
+  
+We all know that, if I use as a metaphor construction of a building (say your house) for example, we are tethered to three pieces of technology in web development: hypertext markup language (HTML), which is the brick and mortar; cascading style sheet (CSS), which is the paint, tiles and all the decorative paraphernalia; and java script (JS), which is the plumbing and electricity to make the metaphorical home livable with running water and lights to switch on. What Svelte does is make this tethering more visible, easier to understand, and knit together to create a website. Svelte is the frontend part of it—what you see on the browser as an user, client or customer, while Sveltekit is the backend—the server which deals with the questions related to dishing out the data that the client wants to consume; together, they're a full-stack (client-server) in one bundle. The word stack alludes to all the layers, the UI, web server, database, operating system and application server. For a developer, at least during the time he is programming an application he is both the "give" (running a development server) as well as the "take" (masquerading as the intended user), and this is just a temporary illusion, the final "give" is from a real server and "take" from the web application (client) running on some sort of browser (broadly user agent) used by people the developer might never meet. The word client is often used to mean the application running or the browser, the machine on which it is running and even sometimes the human sitting in front of the machine.  
+  
+If you want, think of this architecture as a give-and-take. The sveltekit is the give, and the svelte is the take, and it's a marvelous affair of give and take; it's really that buried under stiff terms and dozens of hard-to-remember acronyms and jargon.  
+  
+Declarative(what) vs Imperative(how)  
+
+---
+
+  
+In this context, I want to talk a little about the what style (declarative) as opposed to the how style (imperative). Declarative style is empowering while imperative crippling.  
+  
+You know, when you're hungry, you just say, Mom, I want breakfast, and your mom gives you breakfast. This is declarative in that you declare and it is done. Your mom, of course, understands you and cooks the best breakfast for you. She is opinionated, but in the right way.  
+  
+As opposed to telling a new cook that you hired all the details of how to cook the eggs (I like medium-boiled) or how to butter your toast (soft fresh bread untoasted, sides cut, with a lot of butter), this is the how-style or imperative way.  
+  
+Svelte is like your mom; it takes care of unnecessary details. You just focus on designing the what-you-want part of your website. You let the Svelte compiler, like your mother, fetch the distilled know-how passed down by generations to do all the complex stuff that you don't need to worry about, like timing and setting the water temperature for the egg, taking the shell out, etcetera, etcetera.  
+  
+This makes life worth living, I think. If you had to reinvent the wheel every time, life grinds to a screeching and quite boring halt just for stuff that has already been perfected, and I feel this is a programming paradigm that really compels me to want to write better software by letting me focus on the stuff that matters to me or who I am writing the software for.  
+  
+PS: I use mom instead of a partner because, usually, in partnerships, there's not that spontaneous selflessness that a mother brings. I see this spontaneity in Rich Harris and the volunteers of the svelte open-source community. Cooking becomes a chore in a partnership, or it's an imposition, or barter, or some ulterior motive, which doesn't represent svelte. Anyway, I am divorced; this is really me in my example, and it's bona fide.  
+
+</div>
+
+
+
+# File: src/lib/posts/threejs-integration.md
+
+---
+title: "Creating a 3D Scene with Three.js in Svelte"
+date: "2025-06-22"
+description: "A step-by-step guide to integrating the popular 3D library Three.js into a Svelte 5 component to create interactive WebGL scenes."
+topic: "3D & WebGL"
+thumbnail: "/images/placeholders/threejs-placeholder.jpeg"
+---
+
+<script>
+    import ThreeJSScene from '$lib/components/ThreeJS/ThreeJSScene.svelte';
+    import GoldLine from '$lib/components/GoldLine.svelte';
+</script>
+
+## Bringing 3D to the Web with Svelte
+
+[Three.js](https://threejs.org/) is the leading library for creating and displaying 3D computer graphics in a web browser. It simplifies the complexities of WebGL, providing a high-level API to build everything from simple geometric shapes to complex, photorealistic scenes. When paired with Svelte, it becomes a potent combination for building performant, interactive, and visually stunning web applications.
+
+Svelte's component-based nature and efficient reactivity model make it an ideal partner for managing the state and lifecycle of a 3D scene, while Three.js handles the heavy lifting of rendering.
+
+<GoldLine />
+
+### Live Demonstration
+
+Below is a live, interactive 3D scene rendered by a Svelte component using Three.js. You can use your mouse to rotate and zoom, exploring the object from all angles.
+
+<ThreeJSScene />
+
+<GoldLine />
+
+### The Integration Process
+
+Integrating Three.js into a Svelte component involves a few key steps, managed within Svelte's lifecycle functions.
+
+1.  **Setup in `onMount`**: All Three.js setup code must run on the client after the component's DOM elements are available. Svelte's `onMount` is the perfect place for this. It ensures that our code, which needs a `<canvas>` element to render on, executes at the right time.
+
+2.  **Canvas Binding**: We create a `<canvas>` element in our Svelte template and use `bind:this` to get a direct reference to it in our script. This reference is then passed to the Three.js renderer.
+
+    ```html
+    <canvas bind:this={canvas}></canvas>
+    ```
+
+3.  **Core Three.js Objects**: Inside `onMount`, we initialize the fundamental Three.js objects:
+    * `THREE.Scene`: The container for all objects, lights, and cameras.
+    * `THREE.Camera`: Defines the viewpoint. We use a `PerspectiveCamera` for a realistic 3D view.
+    * `THREE.WebGLRenderer`: Does the work of rendering the scene onto the canvas.
+
+4.  **Animation Loop**: A 3D scene is not static. We create an `animate` function that calls itself with `requestAnimationFrame`. Inside this loop, we update object rotations, handle controls, and call `renderer.render(scene, camera)` to draw the new frame.
+
+5.  **Cleanup**: It's crucial to clean up resources to prevent memory leaks when the component is unmounted. The function returned from `onMount` is where we call the `dispose()` method on the Three.js renderer, geometries, and materials.
+
+This structured approach encapsulates the 3D logic entirely within a Svelte component, making it reusable and easy to manage within your larger SvelteKit application.
+
+
+# File: src/routes/+layout.server.ts
+
+import type { LayoutServerLoad } from './$types';
+
+// Define clear "shapes" for our data
+interface Post {
+    slug: string;
+    title: string;
+    topic: string;
+}
+
+export interface Topic {
+    topic: string;
+    articles: Omit<Post, 'topic'>[];
+}
+
+export const load: LayoutServerLoad = async () => {
+    const postFiles = import.meta.glob('/src/lib/posts/*.md', { eager: true });
+
+    const posts = Object.entries(postFiles)
+        .map(([path, file]): Post | null => {
+            const slug = path.split('/').pop()?.replace('.md', '');
+            if (file && typeof file === 'object' && 'metadata' in file && slug) {
+                const metadata = file.metadata as Omit<Post, 'slug'>;
+                return { ...metadata, slug };
+            }
+            return null;
+        })
+        .filter((post): post is Post => post !== null);
+
+    // Group posts by topic
+    const topics = posts.reduce<Topic[]>((acc, post) => {
+        let topic = acc.find(t => t.topic === post.topic);
+        if (!topic) {
+            topic = { topic: post.topic, articles: [] };
+            acc.push(topic);
+        }
+        topic.articles.push({ slug: post.slug, title: post.title });
+        return acc;
+    }, []);
+
+    return { topics };
+};
+
+# File: src/routes/+layout.svelte
+
+<!-- src/routes/+layout.svelte -->
+<script lang="ts">
+	import '../app.css';
+	import Header from '$lib/components/layout/Header.svelte';
+	import Footer from '$lib/components/layout/Footer.svelte';
+	import Aside from '$lib/components/layout/Aside.svelte';
+	import ObsidianDrillDown from '$lib/components/layout/DrillDown.svelte';
+
+	let { data, children } = $props();
+</script>
+
+<div class="main-layout">
+	<Aside topics={data.topics} />
+
+	<div class="main-content">
+		<Header />
+
+		<main class="scrollable-main">
+			<!-- 
+        This new grid layout accommodates the main content and the new drill-down sidebar.
+        The grid layout is responsive, stacking on smaller screens.
+      -->
+			<div class="container grid lg:grid-cols-[minmax(0,1fr)_auto] gap-8 py-8">
+				<div>
+					{@render children()}
+				</div>
+				<ObsidianDrillDown topics={data.topics} />
+			</div>
+		</main>
+
+		<Footer />
+	</div>
+</div>
+
+
+# File: src/routes/+page.svelte
+
+<!-- File: src/routes/+page.svelte -->
+<svelte:head>
+	<title>Suvro Ghosh - Engineering Blog</title>
+	<meta name="description" content="Welcome to the blog." />
+</svelte:head>
+
+<section>
+	<h1>Welcome to the Blog</h1>
+	<p class="mt-4">
+		This is the home page. The main layout, including the header, footer, and sidebar, is now in place.
+		Select a topic from the sidebar to begin exploring the articles.
+	</p>
+</section>
+
+
+# File: src/routes/blog/+page.server.ts
+
+import { error } from '@sveltejs/kit';
+
+interface Post {
+	slug: string;
+	title: string;
+	date: string;
+	description: string;
+	thumbnail?: string; // Add the optional thumbnail property
+}
+
+/** @type {import('./$types').PageServerLoad} */
+export async function load() {
+	const postFiles = import.meta.glob('/src/lib/posts/*.md', { eager: true });
+	try {
+		const posts = Object.entries(postFiles)
+			.map(([path, file]): Post | null => {
+				const slug = path.split('/').pop()?.replace('.md', '');
+
+				if (file && typeof file === 'object' && 'metadata' in file && slug) {
+					const metadata = file.metadata as Omit<Post, 'slug'>;
+					// Provide a default thumbnail if one isn't specified
+					const post: Post = {
+						...metadata,
+						slug,
+						thumbnail: metadata.thumbnail || '/images/placeholders/default.png'
+					};
+					return post;
+				}
+				return null;
+			})
+			.filter((post): post is Post => post !== null);
+
+		posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+		return { posts };
+	} catch (e) {
+		console.error(e);
+		error(500, 'Could not load posts.');
+	}
+}
+
+# File: src/routes/blog/+page.svelte
+
+<script lang="ts">
+	import PostGallery from '$lib/components/blog/PostGallery.svelte';
+	let { data } = $props();
+</script>
+
+<svelte:head>
+	<title>Blog - SuvroGhosh.Blog</title>
+	<meta name="description" content="A collection of articles on web engineering." />
+</svelte:head>
+
+<section>
+	<h1>All Posts</h1>
+	<PostGallery posts={data.posts} />
+</section>
+
+# File: src/routes/blog/[slug]/+layout.svelte
+
+<!-- src/routes/blog/[slug]/+layout.svelte -->
+<!-- 
+  This layout is now simplified. 
+  The complex grid and the OnThisPage component have been removed,
+  as the root layout now handles the right-hand sidebar globally.
+-->
+<script lang="ts">
+	let { children } = $props();
+</script>
+
+{@render children()}
+
+
+# File: src/routes/blog/[slug]/+page.svelte
+
+<script lang="ts">
+	let { data } = $props();
+
+	// FIX: Use the $derived rune to make `Content` reactive.
+	// This ensures that when `data.content` changes on navigation,
+	// the `Content` variable is updated with the new component.
+	let Content = $derived(data.content);
+</script>
+
+<svelte:head>
+	<title>{data.title}</title>
+	<meta name="description" content={data.description} />
+</svelte:head>
+
+{#if Content}
+	<Content />
+{/if}
+
+# File: src/routes/blog/[slug]/+page.ts
+
+// File: src/routes/blog/[slug]/+page.ts
+import { error } from '@sveltejs/kit';
+import type { PageLoad } from './$types';
+
+type Heading = {
+	level: number;
+	id: string;
+	text: string;
+};
+
+// Helper function to generate GitHub-compatible slugs for headings
+function slugify(text: string): string {
+	return text
+		.toLowerCase()
+		.trim()
+		.replace(/[\s_]+/g, '-') // Replace spaces and underscores with -
+		.replace(/[^\w-]+/g, '') // Remove all non-word chars except -
+		.replace(/--+/g, '-') // Replace multiple - with single -
+		.replace(/^-+/, '') // Trim - from start of text
+		.replace(/-+$/, ''); // Trim - from end of text
+}
+
+export const load: PageLoad = async ({ params }) => {
+	try {
+		// Use Vite's features to dynamically import the component and the raw markdown
+		const postPromise = import(`../../../lib/posts/${params.slug}.md`);
+		const postsRaw = import.meta.glob('/src/lib/posts/*.md', { query: '?raw', eager: true, import: 'default' });
+		const postPath = `/src/lib/posts/${params.slug}.md`;
+		const rawContent = postsRaw[postPath];
+
+		// FIX: Add an explicit type check to ensure rawContent is a string.
+		// This acts as a type guard and satisfies TypeScript.
+		if (typeof rawContent !== 'string') {
+			error(404, { message: `Could not find markdown content for: ${params.slug}` });
+		}
+
+		const headings: Heading[] = [];
+		// Regex to find h2 and h3 markdown headings
+		const headingRegex = /^(##|###)\s+(.*)/gm;
+		let match;
+
+		while ((match = headingRegex.exec(rawContent)) !== null) {
+			const text = match[2].trim();
+			headings.push({
+				level: match[1].length,
+				id: slugify(text),
+				text: text
+			});
+		}
+
+		// Await the component import
+		const post = await postPromise;
+
+		return {
+			...post.metadata,
+			slug: params.slug,
+			content: post.default,
+			// Add the extracted headings to the page data
+			headings
+		};
+	} catch (e) {
+		console.error(e);
+		error(404, { message: `Could not find post: ${params.slug}` });
+	}
+};
+
+
+# File: src/types/mdsvex.d.ts
+
+declare module '*.md' {
+	import type { SvelteComponent } from 'svelte';
+
+	export default class Comp extends SvelteComponent {}
+
+	export const metadata: Record<string, unknown>;
+}
+declare module '*.svx' {
+	import type { SvelteComponent } from 'svelte';
+
+	export default class Comp extends SvelteComponent {}
+
+	export const metadata: Record<string, unknown>;
+}
