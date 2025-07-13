@@ -1,24 +1,26 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import type { Topic } from '$lib/data/posts';
+	import type { Topic } from '$lib/data/posts'; 
 
-	let { topics = [] }: { topics: Topic[] } = $props();
+	let { topics = [] }: { topics: Topic[] } = $props(); 
 </script>
 
-<aside>
+<aside class="hidden lg:block">
 	<nav>
 		{#each topics as topic (topic.topic)}
-			<h3 class="sidebar-topic">{topic.topic}</h3>
-			<ul>
-				{#each topic.articles as article (article.slug)}
-					{@const href = `/blog/${article.slug}`}
-					<li>
-						<a {href} class:sidebar-link={true} class:sidebar-link-active={page.url.pathname === href}>
-							{article.title}
-						</a>
-					</li>
-				{/each}
-			</ul>
+			<div class="sidebar-group">
+				<h3 class="sidebar-topic">{topic.topic}</h3>
+				<ul>
+					{#each topic.articles as article (article.slug)}
+						{@const href = `/blog/${article.slug}`}
+						<li>
+							<a {href} class:sidebar-link={true} class:sidebar-link-active={page.url.pathname === href}>
+								{article.title}
+							</a>
+						</li>
+					{/each}
+				</ul>
+			</div>
 		{/each}
 	</nav>
 </aside>

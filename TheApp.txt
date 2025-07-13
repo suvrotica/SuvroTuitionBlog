@@ -1,4 +1,4 @@
-# Context file generated on: Saturday, July 5, 2025 at 7:50:19 PM GMT+5:30
+# Context file generated on: Monday, July 14, 2025 at 3:40:34 AM GMT+5:30
 ---
 
 # Project File Layout
@@ -351,9 +351,11 @@ nav {
 	@apply flex-1 overflow-y-auto;
 }
 .container {
-	@apply container mx-auto px-4 sm:px-6 lg:px-8;
+	@apply mx-auto px-4 sm:px-6 lg:px-8 ;
 }
-
+.postMain {
+ @apply grid grid-cols-1 lg:grid-cols-[1fr,auto] gap-4;
+}
 /* Header styles */
 header {
 	@apply border-b border-neutral-300 dark:border-neutral-700;
@@ -1702,30 +1704,23 @@ thumbnail: "/images/placeholders/svelte-intro-thumbnail.png"
 
 <TextToSpeech contentSelector="#post-content" />
 
-<div id="post-content">
+<main class="postMain" id="post-content">
 
-<div class="flex flex-col md:flex-row items-start gap-8 mb-8">
-    <div class="w-full md:w-2/3 flex-shrink-0">
+
         <img src="/images/placeholders/svelte-intro-thumbnail.png" alt="An Introduction to Svelte" class="rounded-lg shadow-lg w-full object-cover">
-    </div>
-    <div class="w-full md:w-2/3">
         I just want to write what I feel about Svelte and Sveltekit instead of being another pastiche copying their documentation. As you can see, Svelte is like the new slim, handsome, sophisticated young man on the block, as opposed to all the rest, who, by that comparison, all fall into the character of a fat fuck in his declining years strapped to a pension with an unsuitable and unsustainable ecosystem with religious views that, when compared to Svelte, are orthodox and ancient, pernicious even. With svelte you write less and achieve at or above par.
-    </div>
-</div>
+   
+        For me, what transcends everything is how straightforward it is for the svelte ecosystem to get a website up and running, that being the simplicity of the simplifications that they have managed and the meaningful industry collaborations. I'll try to go over the details with this very blog as an example so that you can relate to something that's living instead of contrived pretentious and unnatural scenarios.
 
-For me, what transcends everything is how straightforward it is for the svelte ecosystem to get a website up and running, that being the simplicity of the simplifications that they have managed and the meaningful industry collaborations. I'll try to go over the details with this very blog as an example so that you can relate to something that's living instead of contrived pretentious and unnatural scenarios.
+        We all know that, if I use as a metaphor construction of a building (say your house) for example, we are tethered to three pieces of technology in web development: hypertext markup language (HTML), which is the brick and mortar; cascading style sheet (CSS), which is the paint, tiles and all the decorative paraphernalia; and java script (JS), which is the plumbing and electricity to make the metaphorical home livable with running water and lights to switch on. What Svelte does is make this tethering more visible, easier to understand, and knit together to create a website. Svelte is the frontend part of it—what you see on the browser as an user, client or customer, while Sveltekit is the backend—the server which deals with the questions related to dishing out the data that the client wants to consume; together, they're a full-stack (client-server) in one bundle. The word stack alludes to all the layers, the UI, web server, database, operating system and application server. For a developer, at least during the time he is programming an application he is both the "give" (running a development server) as well as the "take" (masquerading as the intended user), and this is just a temporary illusion, the final "give" is from a real server and "take" from the web application (client) running on some sort of browser (broadly user agent) used by people the developer might never meet. The word client is often used to mean the application running or the browser, the machine on which it is running and even sometimes the human sitting in front of the machine.
 
-We all know that, if I use as a metaphor construction of a building (say your house) for example, we are tethered to three pieces of technology in web development: hypertext markup language (HTML), which is the brick and mortar; cascading style sheet (CSS), which is the paint, tiles and all the decorative paraphernalia; and java script (JS), which is the plumbing and electricity to make the metaphorical home livable with running water and lights to switch on. What Svelte does is make this tethering more visible, easier to understand, and knit together to create a website. Svelte is the frontend part of it—what you see on the browser as an user, client or customer, while Sveltekit is the backend—the server which deals with the questions related to dishing out the data that the client wants to consume; together, they're a full-stack (client-server) in one bundle. The word stack alludes to all the layers, the UI, web server, database, operating system and application server. For a developer, at least during the time he is programming an application he is both the "give" (running a development server) as well as the "take" (masquerading as the intended user), and this is just a temporary illusion, the final "give" is from a real server and "take" from the web application (client) running on some sort of browser (broadly user agent) used by people the developer might never meet. The word client is often used to mean the application running or the browser, the machine on which it is running and even sometimes the human sitting in front of the machine.
+        If you want, think of this architecture as a give-and-take. The sveltekit is the give, and the svelte is the take, and it's a marvelous affair of give and take; it's really that buried under stiff terms and dozens of hard-to-remember acronyms and jargon. 
+        
+        In this context, I want to talk a little about the what style (declarative) as opposed to the how style (imperative). Declarative style is empowering while imperative crippling.
 
-If you want, think of this architecture as a give-and-take. The sveltekit is the give, and the svelte is the take, and it's a marvelous affair of give and take; it's really that buried under stiff terms and dozens of hard-to-remember acronyms and jargon.
+        ## Declarative 
 
-### Declarative(what) vs Imperative(how)
-
----
-
-In this context, I want to talk a little about the what style (declarative) as opposed to the how style (imperative). Declarative style is empowering while imperative crippling.
-
-You know, when you're hungry, you just say, Mom, I want breakfast, and your mom gives you breakfast. This is declarative in that you declare and it is done. Your mom, of course, understands you and cooks the best breakfast for you. She is opinionated, but in the right way.
+        You know, when you're hungry, you just say, Mom, I want breakfast, and your mom gives you breakfast. This is declarative in that you declare and it is done. Your mom, of course, understands you and cooks the best breakfast for you. She is opinionated, but in the right way.
 
 As opposed to telling a new cook that you hired all the details of how to cook the eggs (I like medium-boiled) or how to butter your toast (soft fresh bread untoasted, sides cut, with a lot of butter), this is the how-style or imperative way.
 
@@ -1735,7 +1730,8 @@ This makes life worth living, I think. If you had to reinvent the wheel every ti
 
 PS: I use mom instead of a partner because, usually, in partnerships, there's not that spontaneous selflessness that a mother brings. I see this spontaneity in Rich Harris and the volunteers of the svelte open-source community. Cooking becomes a chore in a partnership, or it's an imposition, or barter, or some ulterior motive, which doesn't represent svelte. Anyway, I am divorced; this is really me in my example, and it's bona fide.
 
-</div>
+
+</main>
 
 # File: src/lib/posts/sveltes-runes.md
 
@@ -1985,20 +1981,78 @@ export const load: LayoutServerLoad = async () => {
 
 # File: src/routes/+page.svelte
 
-<!-- File: src/routes/+page.svelte -->
 <svelte:head>
-	<title>Suvro Ghosh - Engineering Blog</title>
-	<meta name="description" content="Welcome to the blog." />
+	<title>Tutor Suvro - Home Tuition in Kolkata</title>
+	<meta
+		name="description"
+		content="Personalized home tuition for Math, Science, and Computer subjects for classes 6-12 (CBSE, ICSE, WB) by Suvro Ghosh."
+	/>
 </svelte:head>
 
-<section>
-	<h1>Welcome to the Blog</h1>
-	<p class="mt-4">
-		This is the home page. The main layout, including the header, footer, and sidebar, is now in place.
-		Select a topic from the sidebar to begin exploring the articles.
-	</p>
-</section>
+<script lang="ts">
+	const name = 'Suvro Ghosh';
+	const tutorAlias = 'Tutor Suvro';
+	const phone = '+91 ----------';
+	const address =
+		'Kolkata, West Bengal, 70050, India';
+</script>
 
+<div class="min-h-screen bg-gray-50 dark:bg-neutral-800 p-6">
+	<div
+		class="max-w-3xl mx-auto bg-white dark:bg-neutral-900 shadow-xl rounded-2xl p-8 text-neutral-800 dark:text-neutral-200"
+	>
+		<div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+			<div
+				class="w-32 h-32 bg-gray-200 dark:bg-neutral-700 rounded-full overflow-hidden flex-shrink-0"
+			>
+				<svg class="w-full h-full text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+					<path
+						d="M24 20.993V24H0v-2.993A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z"
+					/>
+				</svg>
+				</div>
+			<div class="text-center sm:text-left">
+				<h1 class="text-3xl font-bold text-neutral-900 dark:text-neutral-100">{tutorAlias}</h1>
+				<p class="text-lg mt-1">Home Tuition | Math · Science · Computer · AI</p>
+				<p class="text-md text-gray-600 dark:text-gray-400">
+					Classes 6–12 | Boards: CBSE, ICSE, WB | Entrance Coaching
+				</p>
+				<p class="text-sm text-gray-500 mt-2">{address}</p>
+			</div>
+		</div>
+
+		<div class="mt-8">
+			<a
+				href="/blog"
+				class="block w-full text-center mt-4 rounded-lg bg-gold px-5 py-3 text-lg font-medium text-white transition-colors hover:bg-yellow-600 focus:outline-none focus:ring-4 focus:ring-yellow-300 dark:focus:ring-yellow-800"
+			>
+				View My Engineering Blog
+			</a>
+		</div>
+
+		<div class="mt-8 space-y-4">
+			<h2 class="text-2xl font-semibold text-neutral-900 dark:text-neutral-100">
+				Why Learn With {tutorAlias}?
+			</h2>
+			<ul class="list-disc list-inside space-y-2 text-neutral-700 dark:text-neutral-300">
+				<li>Clear, concept-based explanations – no rote learning</li>
+				<li>Small focused batches (max 6 students)</li>
+				<li>One-on-one attention, personalized approach</li>
+				<li>Support for board exams & competitive entrances (JEE, WBJEE)</li>
+				<li>Special sessions for programming & AI foundations (optional)</li>
+			</ul>
+		</div>
+
+		<div class="mt-8 pt-6 border-t border-neutral-300 dark:border-neutral-700">
+			<h2 class="text-2xl font-semibold text-neutral-900 dark:text-neutral-100">Contact</h2>
+			<p class="mt-2">
+				Call/WhatsApp:
+				<a class="text-gold hover:underline" href="https://wa.me/----------">{phone}</a>
+			</p>
+			<p>Email: <span class="text-gray-500 italic">(Your email address here)</span></p>
+		</div>
+	</div>
+</div>
 
 # File: src/routes/blog/+page.server.ts
 
