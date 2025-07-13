@@ -7,7 +7,7 @@
 	<p class="mb-4">
 		I remember school through a veil of years of indifference to childhood memories, that grownups at a certain point must admit to—I do.
 		But mine was a complicated palimpsest of ambition, triumph, misadventures, romance, then—shame, regrets—most now like old luggage tags expired or useless.
-		I confess, as useless as perhaps the utility for or the importance of the places and characters and several linked trivia that I sometimes wake up, wade, and wallow in, now that I am fifty.
+		I confess, as useless as perhaps the utility for or the importance of the places and characters and several linked trivia that I sometimes wake up to, wade, and wallow in, now that I am fifty.
 	</p>
 
 	<p class="mb-8">
