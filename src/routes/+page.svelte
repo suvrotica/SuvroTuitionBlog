@@ -9,9 +9,9 @@
 <script lang="ts">
 	const name = 'Suvro Ghosh';
 	const tutorAlias = 'Tutor Suvro';
-	const phone = '+91 6290165490';
+	const phone = '+91 ----------';
 	const address =
-		'93, Srijoni, PS Thakurpukur, Ward 143, Kolkata, West Bengal, 700104, India';
+		'Kolkata, West Bengal, 70050, India';
 </script>
 
 <div class="min-h-screen bg-gray-50 dark:bg-neutral-800 p-6">
@@ -64,7 +64,7 @@
 			<h2 class="text-2xl font-semibold text-neutral-900 dark:text-neutral-100">Contact</h2>
 			<p class="mt-2">
 				Call/WhatsApp:
-				<a class="text-gold hover:underline" href="https://wa.me/916290165490">{phone}</a>
+				<a class="text-gold hover:underline" href="https://wa.me/----------">{phone}</a>
 			</p>
 			<p>Email: <span class="text-gray-500 italic">(Your email address here)</span></p>
 		</div>
