@@ -5,13 +5,13 @@
 	<h1 class="text-center mb-8">Reflections on a Schoolboy's Past</h1>
 
 	<p class="mb-4">
-		I remember school through a veil of years of indifference to childhood that grownups at a certain point must admit to—loudly.
-		But mine was a complicated palimpsest of shame, regrets most now expired or useless.
-		I confess, like perhaps the use for or the importance of the places and characters and several linked trivia that I now sometimes wake up and remember, now that I am fifty.
+		I remember school through a veil of years of indifference to childhood memories, that grownups at a certain point must admit to—I do.
+		But mine was a complicated palimpsest of ambition, triumph, misadventures, romance, then—shame, regrets—most now with like old luggage tags expired or useless.
+		I confess, as useless as perhaps the utility for or the importance of the places and characters and several linked trivia that I sometimes wake up, wade, and wallow in, now that I am fifty.
 	</p>
 
 	<p class="mb-8">
-		My past is ancient and present is past; I live now mostly to live, to remember and recollect the person I am, I was, I once wanted to be—inadvertently became, on the way to be—a litany of passages of a self that mostly started and remained unchanged when I became a schoolboy and started to think, first feel of course, and in my particular case overthink—cerebrally—the world through the senses, through the then immature prefrontal and amygdalian theaters of rehearsed endorsements.
+		My past is ancient and present is a mystery speeding past; I live now mostly to <em>live<em> really, to remember and recollect the person I am, I was, I once wanted to be—inadvertently became, on the way to be—a leery litany of matamorphosis of a self that mostly started and remained unchanged at the core—which was a fledgling when I became a schoolboy and started to think, first feel of course, and in my particular case overthink—cerebrally—the world through the senses, through the then immature prefrontal and amygdalian theaters of rehearsed endorsements.
 		It happened in a shocking span and a lifetime after I’m trying to reconstruct the person I had managed to bungle into being.
 	</p>
 
