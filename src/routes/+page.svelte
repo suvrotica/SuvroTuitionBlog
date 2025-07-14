@@ -23,6 +23,11 @@ I want to start with what ordinarily is the start, I have an embarrassing memory
 <p class="my-4">
 So that's what sort of started me startled with the disequilibrium with looks, size, shape, velocity and power in the gossipy, everyday, ordinary of this, what I eventually understood to be an extraordinary world, and this inconvenient discovery has stuck as I found out I am, in man's limited prowess over the middling distances, an extremely Lilliputian man in every way, shape, and form, and to this day—even as a bengali, that is where I am. It's neither an admission of guilt nor of defeat—there are no adversaries to speak of except man's own inhibition in most circumstances. But I like to recognize the parts for what they are, not for what I wish them to be—and therefore, in introspections, I've found the weaknesses in me are my strength, because that's what's authentic.
 </p>
+<p class="my-4">
+
+
+There was one more occasion when it could have ended well, except it didn't—that a city of joy rarely has its College Street English bookstores' makeshift shanty loos equipped to flush fresh fetid feces—aggravating a nervous and nerve-wrecked boy without a way to clean his gentle bottom. When I reported this inadequacy of the establishment to the ungrateful shop clerk, he demanded I lug a heavy leaky balti, descriptive of poverty, half across the street in my English medium school dress, so I fled as fast as I could. I went as a part of a group of kids who, although were all my age (section B), did not seem to have the same digestive or excretory system that from time to time in my case asserted that matter came in three states, and all the states were in fact coming out of some portion of my rear, all the time!
+ </p>
 	<div class="text-center mt-12">
 		<a href="/blog" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition-colors duration-200">
 			Visit the Engineering Blog
