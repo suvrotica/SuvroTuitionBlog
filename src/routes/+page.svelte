@@ -11,7 +11,7 @@
 	</p>
 
 	<p class="my-4">
-		My past is ancient and present is a mystery speeding past; I live now mostly to <em>live</em> really, to remember and recollect the person I am, I was, I once wanted to be—inadvertently became, on the way to be—a leery litany of matamorphosis of a self that mostly started and remained unchanged at the core—which was a fledgling when I became a schoolboy and started to think, first feel of course, and in my particular case overthink—cerebrally—the world through the senses, through the then immature prefrontal and amygdalian theaters of rehearsed endorsements.
+		My past is ancient and present is a mystery speeding past; I live now mostly to <em>live</em> really, to remember and recollect the person I am, I was, I once wanted to be—inadvertently became, on the way to be—a leery litany of matamorphosis of a self that mostly started and remained unchanged at the core—which was a fledgling when I became a schoolboy to begin with and started to think, first feel of course, and in my particular case overthink—cerebrally—the world through the senses, through the then immature prefrontal and amygdalian theaters of rehearsed endorsements.
 		It happened in a shocking span and a lifetime after I’m trying to reconstruct the person I had managed to bungle into being.
 
 </p>
