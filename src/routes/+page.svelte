@@ -1,8 +1,8 @@
 <script lang="ts">
 </script>
 
-<section class="container mx-auto px-4 py-8 max-w-4xl">
-	<h1 class="text-center mb-8">Reflections on a Schoolboy's Past</h1>
+<section class="container mx-auto py-8 max-w-4xl">
+	<h1 class=" mb-8">Reflections on a Schoolboy's Past</h1>
 
 	<p class="mb-4">
 		I remember school through a veil of years of indifference to childhood memories, that grownups at a certain point must admit to—I do.
