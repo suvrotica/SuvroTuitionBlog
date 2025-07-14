@@ -20,7 +20,9 @@ I want to start with what ordinarily is the start, I have an embarrassing memory
 
 	</p>
 
-
+<p class="my-4">
+So that's what sort of started me with the disequilibrium with looks, size, shape, and power in this world, and it has stuck as I found out I am, in man's limited prowess over the middling distances, an extremely Lilliputian man in every way, shape, and form, and to this day, that is where I am. It's neither an admission of guilt nor of defeat—there are no adversaries to speak of except man's own inhibition in most circumstances. But I like to recognize the parts for what they are, not for what I wish them to be—and therefore, in introspections, I've found the weaknesses in me are my strength, because that's what's authentic.
+</p>
 	<div class="text-center mt-12">
 		<a href="/blog" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition-colors duration-200">
 			Visit the Engineering Blog
