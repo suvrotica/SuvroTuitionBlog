@@ -44,7 +44,7 @@ Conversely, this doesn't imply the Occident is superior in any subject—it's no
 </p>
 <p class="my-4">
 So all the parochial supremacy of the Indian stock is false—anyone who puts in the hours can master a subject. I could too, and I did easily, and devoted most of the time daydreaming or fornicating with my hand and wondering if the ejaculated matter was an indication of cancer. Since all matter of excretion were bad, how could this feel so good, and why did it come about while cognitive diversions were guided carnally to the opposite side of the species? I couldn't figure this out, of course, till much later.
-I was after all at the age when you are desirous of base sixty mathematical systems, for the word—the first three alphabets in its name—engrave in your palpitating lover-boy heart.
+I was after all at the age when you are desirous of base sixty mathematical systems, for the illicit illegitimate love attraction to the word part formed by the first three alphabets in its name engraved in my palpitating lover-boy libidinous lust crazed heart.
 </p>
 <p class="my-4">
 
