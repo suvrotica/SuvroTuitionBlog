@@ -5,7 +5,7 @@ description: "A somewhat bewildered look into the strange world of monk fruit, a
 topic: "Food & Science"
 thumbnail: "/images/placeholders/monk-fruit.png"
 ---
-
+![An oil painting of a monk, evoking the history of monk fruit.](/images/placeholders/monk-fruit.png)
 ## A Curious Quest for Sweetness
 
 I have, at various points in my life, decided with the grim determination of a polar explorer that I will consume less sugar. These bouts of frantic, self-improving enthusiasm generally last until about teatime the following day, when I find myself staring at a biscuit with the intensity of a starving wolf. It’s not that I don’t want to be healthy; it’s just that my sweet tooth is a stubborn, belligerent tenant that refuses to be evicted.
