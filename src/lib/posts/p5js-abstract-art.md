@@ -13,7 +13,7 @@ thumbnail: "/images/placeholders/p5js-placeholder.jpeg"
 
 ## Creative Coding Meets Component-Driven Development
 
-[p5.js](https://p5js.org/) is a fantastic JavaScript library for creative coding, making it accessible for artists, designers, and developers to create graphics and interactive experiences on the web. [cite_start]Svelte, with its component-based architecture and efficient reactivity, provides the perfect framework to structure and manage these creative sketches. 
+[p5.js](https://p5js.org/) is a fantastic JavaScript library for creative coding, making it accessible for artists, designers, and developers to create graphics and interactive experiences on the web. Svelte, with its component-based architecture and efficient reactivity, provides the perfect framework to structure and manage these creative sketches.
 
 Combining these two technologies allows us to build encapsulated, reusable visual components that are both dynamic and easy to integrate into a larger application. Below is a live example of a p5.js sketch running within this blog post.
 
@@ -25,14 +25,12 @@ Combining these two technologies allows us to build encapsulated, reusable visua
 
 ### The Integration Strategy
 
-The key to making p5.js work seamlessly within a Svelte component is to use its "instance mode". This prevents p5.js from polluting the global namespace and allows us to attach a sketch to a specific DOM element.
+The key to making p5.js work seamlessly within a Svelte component is to use its "instance mode". This prevents p5.js from polluting the global namespace and allows us to attach a sketch to a specific DOM element. Here’s the approach used in the component above:
 
-Here’s the approach used in the component above:
-
-1.  [cite_start]**Component Mounting**: We use Svelte's `onMount` lifecycle function to ensure our p5.js code runs only on the client-side, after the component's host element is available in the DOM. 
-2.  [cite_start]**DOM Binding**: A `<div>` element is bound to a variable using `bind:this`, giving us a direct reference to the container where the p5.js canvas will live. 
+1.  **Component Mounting**: We use Svelte's `onMount` lifecycle function to ensure our p5.js code runs only on the client-side, after the component's host element is available in the DOM.
+2.  **DOM Binding**: A `<div>` element is bound to a variable using `bind:this`, giving us a direct reference to the container where the p5.js canvas will live.
 3.  **Sketch Instantiation**: Inside `onMount`, we create a new `p5` instance, passing our sketch function and the container element.
-4.  [cite_start]**Cleanup**: The function returned from `onMount` is called when the component is destroyed.  We use this to call the `remove()` method on our p5 instance, which cleans up the canvas and its event listeners, preventing memory leaks during navigation.
+4.  **Cleanup**: The function returned from `onMount` is called when the component is destroyed. We use this to call the `remove()` method on our p5 instance, which cleans up the canvas and its event listeners, preventing memory leaks during navigation.
 
 Here is a simplified look at the script portion of the Svelte component:
 
