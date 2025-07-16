@@ -1,121 +1,208 @@
 <script lang="ts">
-	import { onMount, tick } from 'svelte';
+	import { onMount } from 'svelte';
 
-	// PROPS: This component will get its text from the page element matching the selector.
-	export let contentSelector: string;
+	// PROPS
+	/**
+	 * A CSS selector for the element containing the text to be read.
+	 * e.g., "#post-content"
+	 */
+	export let contentSelector: string = '';
 
-	// --- State Variables (Svelte 4 Style) ---
+	// STATE
+	let text: string = 'Many people say they have no choice but to embrace the changes, even as they come to terms with the loss of freedom and spontaneity.'; // Default text
+	let isSupported = false;
+	let isSpeaking = false;
+	let isPaused = false;
 	let speed = 1;
-	let text = '';
 	let currentCharacter = 0;
+
+	// DOM-element bindings
+	let speedInput: HTMLInputElement;
+
+	// We create a single utterance instance and reuse it.
 	let utterance: SpeechSynthesisUtterance;
-	
-	// A reactive variable to track the synthesizer's status
-	let status: 'idle' | 'playing' | 'paused' = 'idle';
 
-	// This function will be called when the component is mounted
 	onMount(() => {
-		// Guard for SSR
-		if (typeof window === 'undefined' || !('speechSynthesis' in window)) return;
-		
-		// Set up the single utterance instance
-		utterance = new SpeechSynthesisUtterance();
+		if ('speechSynthesis' in window) {
+			isSupported = true;
+			utterance = new SpeechSynthesisUtterance();
 
-		// Add event listeners to keep our UI state in sync with the browser's speech engine
-		utterance.addEventListener('start', () => status = 'playing');
-		utterance.addEventListener('pause', () => status = 'paused');
-		utterance.addEventListener('resume', () => status = 'playing');
-		utterance.addEventListener('end', () => {
-			currentCharacter = 0;
-			status = 'idle';
-		});
-		utterance.addEventListener('boundary', e => {
-			// In the original example, utterance.text was changing. Here it won't, so we add the offset.
-			const offset = text.length - utterance.text.length;
-			currentCharacter = offset + e.charIndex;
-		});
+			// When speech ends, reset the state.
+			utterance.onend = () => {
+				isSpeaking = false;
+				isPaused = false;
+				currentCharacter = 0;
+			};
 
-		// Cleanup function
+			// Track progress to allow for resuming or changing speed mid-speech.
+			utterance.onboundary = (event) => {
+				currentCharacter = event.charIndex;
+			};
+		}
+
+		// If a content selector is provided, extract the text from the DOM.
+		if (contentSelector) {
+			const element = document.querySelector(contentSelector);
+			if (element) {
+				text = (element as HTMLElement).innerText;
+			}
+		}
+
+		// Cleanup: Ensure speech is stopped when the component is unmounted.
 		return () => {
-			if (speechSynthesis.speaking) {
-				speechSynthesis.cancel();
+			if (isSupported) {
+				window.speechSynthesis.cancel();
 			}
 		};
 	});
 
-	// --- Reactive statement to get content from the page ---
-	$: if (contentSelector && typeof document !== 'undefined') {
-		const element = document.querySelector(contentSelector);
-		if (element) {
-			text = (element as HTMLElement).innerText;
-		}
-	}
+	function playText() {
+		if (!isSupported || !text) return;
 
-	// --- Control Functions (from your working example) ---
-	function playText(textToSpeak: string) {
+		// If we are paused, just resume.
 		if (speechSynthesis.paused && speechSynthesis.speaking) {
+			isPaused = false;
 			return speechSynthesis.resume();
 		}
+
+		// If we are already speaking, do nothing.
 		if (speechSynthesis.speaking) return;
 
-		utterance.text = textToSpeak;
+		utterance.text = text;
 		utterance.rate = speed || 1;
 		speechSynthesis.speak(utterance);
+		isSpeaking = true;
+		isPaused = false;
 	}
 
-	function pause() {
-		if (speechSynthesis.speaking) speechSynthesis.pause();
-	}
-
-	function stop() {
+	function pauseText() {
 		if (speechSynthesis.speaking) {
-			// The resume() before cancel() is a known trick to fix issues on some browsers.
-			speechSynthesis.resume(); 
-			speechSynthesis.cancel();
+			speechSynthesis.pause();
+			isPaused = true;
 		}
 	}
 
-	function changeSpeed() {
-		// Stop the current speech, then synchronously restart with the remaining text.
-		// This preserves the user gesture chain, which is critical for mobile.
-		const wasSpeaking = speechSynthesis.speaking && !speechSynthesis.paused;
-		const remainingText = utterance.text.substring(currentCharacter);
+	function stopText() {
+		speechSynthesis.resume(); // Ensure it's not paused before cancelling.
+		speechSynthesis.cancel();
+		isSpeaking = false;
+		isPaused = false;
+		currentCharacter = 0;
+	}
 
-		stop();
-
-		if (wasSpeaking) {
-			playText(remainingText);
+	function handleSpeedChange() {
+		// If speaking, stop and restart from the current position to apply the new speed.
+		if (speechSynthesis.speaking) {
+			stopText();
+			// A brief delay to allow the cancel command to process fully.
+			setTimeout(() => {
+				const remainingText = text.substring(currentCharacter);
+				if (remainingText) {
+					utterance.text = remainingText;
+					utterance.rate = speed || 1;
+					speechSynthesis.speak(utterance);
+					isSpeaking = true;
+				}
+			}, 50);
 		}
 	}
 </script>
 
-<div class="tts-container not-prose">
-	<div class="tts-controls">
-		<div class="tts-actions">
-			{#if status === 'idle'}
-				<button on:click={() => playText(text)} disabled={!text}>Play</button>
-			{:else if status === 'paused'}
-				<button on:click={() => playText(text)}>Resume</button>
-			{:else}
-				<button on:click={pause}>Pause</button>
-			{/if}
-			
-			<button on:click={stop} disabled={status === 'idle'}>Stop</button>
-			
-			<label class="tts-speed-label">
-				Speed
+<div class="interactive-component-wrapper not-prose">
+	{#if isSupported}
+		<textarea
+			class="w-full h-48 p-3 rounded-md bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 focus:ring-2 focus:ring-gold dark:focus:ring-gold transition-all"
+			bind:value={text}
+			placeholder="Enter text to speak..."
+		></textarea>
+		<div class="flex items-center justify-between mt-4">
+			<div class="flex items-center gap-2">
+				<label for="speed" class="text-sm text-neutral-600 dark:text-neutral-400">Speed</label>
 				<input
-					type="range"
-					class="tts-speed-input"
+					type="number"
+					id="speed"
+					name="speed"
 					min="0.5"
 					max="2"
 					step="0.1"
+					class="w-20 rounded-md border-neutral-300 dark:border-neutral-700 bg-neutral-100 dark:bg-neutral-800 text-center"
 					bind:value={speed}
-					on:input={changeSpeed}
-					disabled={status === 'idle'}
+					onchange={handleSpeedChange}
+					bind:this={speedInput}
 				/>
-				<span class="font-mono text-xs">{speed.toFixed(1)}x</span>
-			</label>
+			</div>
+
+			<div class="flex items-center gap-2">
+				{#if isSpeaking && !isPaused}
+					<button onclick={pauseText} aria-label="Pause">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="20"
+							height="20"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="w-5 h-5"
+						>
+							<rect x="6" y="4" width="4" height="16" /><rect x="14" y="4" width="4" height="16" />
+						</svg>
+					</button>
+				{:else}
+					<button onclick={playText} aria-label="Play" disabled={!text}>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="20"
+							height="20"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="w-5 h-5"
+						>
+							<polygon points="5 3 19 12 5 21 5 3" />
+						</svg>
+					</button>
+				{/if}
+
+				<button onclick={stopText} disabled={!isSpeaking} aria-label="Stop">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="20"
+						height="20"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						class="w-5 h-5"
+					>
+						<rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+					</svg>
+				</button>
+			</div>
 		</div>
-	</div>
+	{:else}
+		<p class="text-sm text-red-600 dark:text-red-400">
+			We're sorry, but Text-to-Speech is not supported by your browser.
+		</p>
+	{/if}
 </div>
+
+<style>
+	/* Targeting the number input arrows for better dark mode visibility */
+	input[type='number']::-webkit-inner-spin-button,
+	input[type='number']::-webkit-outer-spin-button {
+		filter: invert(0.8);
+	}
+
+	:global(html.light) input[type='number']::-webkit-inner-spin-button,
+	:global(html.light) input[type='number']::-webkit-outer-spin-button {
+		filter: none;
+	}
+</style>
