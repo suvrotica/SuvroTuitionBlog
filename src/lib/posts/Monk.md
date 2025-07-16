@@ -3,7 +3,7 @@ title: "On Monks, Fruit, and Defying the Scale"
 date: "2025-07-17"
 description: "A somewhat bewildered look into the strange world of monk fruit, a sugar substitute that seems almost too good to be true."
 topic: "Food & Science"
-thumbnail: "/images/placeholders/monk-fruit.jpeg"
+thumbnail: "/images/placeholders/monk-fruit.png"
 ---
 
 ## A Curious Quest for Sweetness
