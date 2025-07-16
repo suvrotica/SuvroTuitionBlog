@@ -2,166 +2,139 @@
 	import { onMount, tick } from 'svelte';
 
 	// PROPS
-	let { contentSelector = '' }: { contentSelector?: string } = $props();
+	let {
+		contentSelector = '',
+		initialText = 'Many people say they have no choice but to embrace the changes, even as they come to terms with the loss of freedom and spontaneity.'
+	}: {
+		contentSelector?: string;
+		initialText?: string;
+	} = $props();
 
 	// STATE
-	let isSupported = $state(false);
-	let textToRead = $state('');
-	// Let Svelte's reactivity handle re-renders when the synthesis state changes.
-	let forceUpdate = $state(0);
-
-	// DERIVED STATE from the browser's own speech synthesis API
-	let isSpeaking = $derived(window.speechSynthesis?.speaking ?? false);
-	let isPaused = $derived(window.speechSynthesis?.paused ?? false);
-
-	// RATE CONTROL
-	let rate = $state(1);
-	const supportedRates = [0.75, 1, 1.25, 1.5, 2];
+	let textToRead = $state(initialText);
+	let speed = $state(1);
+	let lang = $state(true);
+	let status = $state<'idle' | 'playing' | 'paused'>('idle');
+	let currentCharacter = $state(0);
+	
+	// DERIVED STATE
+	let labels = $derived(lang ? {
+		speed: 'Speed', play: 'Play', pause: 'Pause', stop: 'Stop', resume: 'Resume'
+	} : {
+		speed: '速度', play: '播放', pause: '暫停', stop: '停止', resume: '恢復'
+	});
 
 	// --- Core Speech Functions ---
-	function speak() {
-		if (!isSupported || !textToRead) return;
+	function play(offset: number) {
+		if (speechSynthesis.speaking) return;
 
-		// If it's paused, just resume.
-		if (isPaused) {
-			window.speechSynthesis.resume();
-			return;
-		}
-
-		// If it's already speaking, cancel previous to start fresh with new settings.
-		if (isSpeaking) {
-			window.speechSynthesis.cancel();
-		}
-
-		const utterance = new SpeechSynthesisUtterance(textToRead);
-		utterance.rate = rate;
-
-		// Add event listeners to react to state changes.
+		const utterance = new SpeechSynthesisUtterance(textToRead.substring(offset));
+		
+		utterance.onstart = () => status = 'playing';
+		utterance.onpause = () => status = 'paused';
+		utterance.onresume = () => status = 'playing';
 		utterance.onend = () => {
-			forceUpdate++; // Trigger reactivity
+			currentCharacter = 0;
+			status = 'idle';
 		};
-		utterance.onpause = () => {
-			forceUpdate++;
+		utterance.onboundary = (e) => {
+			currentCharacter = offset + e.charIndex;
 		};
-		utterance.onresume = () => {
-			forceUpdate++;
-		};
-		utterance.onerror = (event) => {
-			console.error('An error occurred during speech synthesis:', event);
-			forceUpdate++;
+		utterance.onerror = (e) => {
+			console.error("Speech Synthesis Error", e);
+			status = 'idle';
 		};
 
-		window.speechSynthesis.speak(utterance);
+		utterance.rate = speed;
+		speechSynthesis.speak(utterance);
 	}
 
-	// --- Control Handlers ---
 	function handlePlayPause() {
-		forceUpdate++;
-		if (isSpeaking) {
-			if (isPaused) {
-				window.speechSynthesis.resume();
-			} else {
-				window.speechSynthesis.pause();
-			}
+		if (status === 'paused') {
+			speechSynthesis.resume();
+		} else if (status === 'playing') {
+			speechSynthesis.pause();
 		} else {
-			speak();
+			play(currentCharacter);
 		}
 	}
 
 	function handleStop() {
-		window.speechSynthesis.cancel();
-		forceUpdate++;
-	}
-
-	async function changeRate(newRate: number) {
-		rate = newRate;
-		// If speaking, we need to restart to apply the new rate.
-		if (isSpeaking) {
-			// Cancel and then speak again in the next tick to ensure state is updated.
-			window.speechSynthesis.cancel();
-			await tick();
-			speak();
+		if (speechSynthesis.speaking) {
+			speechSynthesis.cancel();
 		}
 	}
+	
+	async function handleSpeedChange() {
+		const wasPlaying = status === 'playing';
+		const lastPosition = currentCharacter;
 
-	// Setup and teardown
+		handleStop();
+		await tick();
+		
+		if (wasPlaying) {
+			play(lastPosition);
+		}
+	}
+	
 	onMount(() => {
-		// Use a reactive effect to extract text content when the selector is available.
 		$effect(() => {
 			if (contentSelector && typeof window !== 'undefined') {
 				const element = document.querySelector(contentSelector);
 				if (element) {
+					handleStop();
 					textToRead = (element as HTMLElement).innerText;
 				}
 			}
 		});
 
-		if ('speechSynthesis' in window) {
-			isSupported = true;
-			// Ensure any speech from a previous page is stopped on mount.
-			if (window.speechSynthesis.speaking) {
-				window.speechSynthesis.cancel();
-			}
-		}
-
-		// Cleanup function to run when the component is destroyed.
-		return () => {
-			if (isSupported && window.speechSynthesis.speaking) {
-				window.speechSynthesis.cancel();
-			}
-		};
+		return () => handleStop();
 	});
 </script>
 
-{#if isSupported}
-	<div class="interactive-component-wrapper not-prose" data-testid="tts-container">
-		{forceUpdate}
-
-		<p class="text-sm text-neutral-600 dark:text-neutral-400 mb-2">Listen to this post:</p>
-		<div class="flex items-center gap-2">
-			<button onclick={handlePlayPause} disabled={!textToRead} aria-label={isSpeaking && !isPaused ? 'Pause' : 'Play'}>
-				{#if isSpeaking && !isPaused}
-					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+<div class="tts-container not-prose">
+	<textarea class="tts-text" bind:value={textToRead} disabled={status !== 'idle'}></textarea>
+	
+	<div class="tts-controls">
+		<div class="tts-actions">
+			<button onclick={handlePlayPause}>
+				{#if status === 'playing'}
+					{labels.pause}
+				{:else if status === 'paused'}
+					{labels.resume}
 				{:else}
-					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+					{labels.play}
 				{/if}
 			</button>
-
-			<button onclick={handleStop} disabled={!isSpeaking} aria-label="Stop">
-				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect></svg>
-			</button>
-
-			<div class="flex items-center gap-1 ml-4">
-				<button
-					onclick={() => changeRate(supportedRates[supportedRates.indexOf(rate) - 1])}
-					disabled={rate === supportedRates[0]}
-					aria-label="Decrease speed"
-					class="p-1"
-				>
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 19 2 12 11 5 11 19"></polygon><polygon points="22 19 13 12 22 5 22 19"></polygon></svg>
-				</button>
-				<span class="text-sm font-mono w-12 text-center text-neutral-600 dark:text-neutral-400">{rate.toFixed(2)}x</span>
-				<button
-					onclick={() => changeRate(supportedRates[supportedRates.indexOf(rate) + 1])}
-					disabled={rate === supportedRates[supportedRates.length - 1]}
-					aria-label="Increase speed"
-					class="p-1"
-				>
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 19 22 12 13 5 13 19"></polygon><polygon points="2 19 11 12 2 5 2 19"></polygon></svg>
-				</button>
-			</div>
+			
+			<button onclick={handleStop} disabled={status === 'idle'}>{labels.stop}</button>
+			
+			<label class="tts-speed-label">
+				{labels.speed}
+				<input
+					type="range"
+					class="tts-speed-input"
+					min="0.5"
+					max="2"
+					step="0.1"
+					bind:value={speed}
+					oninput={handleSpeedChange}
+				/>
+				<span class="font-mono text-xs">{speed.toFixed(1)}x</span>
+			</label>
 		</div>
+		
+		<button
+			class="tts-lang-toggle"
+			onclick={() => lang = !lang}
+			title="Switch Labels Language"
+			aria-label="Switch Labels Language"
+		>
+			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<circle cx="12" cy="12" r="10" />
+				<line x1="2" y1="12" x2="22" y2="12" />
+				<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+			</svg>
+		</button>
 	</div>
-{:else}
-	<div class="interactive-component-wrapper not-prose">
-		<p class="text-sm text-red-600 dark:text-red-400">
-			Text-to-speech is not supported by your browser.
-		</p>
-	</div>
-{/if}
-
-<style>
-	.p-1 {
-		padding: 0.25rem;
-	}
-</style>
+</div>

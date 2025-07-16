@@ -1,3 +1,4 @@
+/* src/app.css */
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
@@ -6,195 +7,78 @@ body {
 	@apply bg-neutral-200 dark:bg-neutral-900;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-blockquote {
+h1, h2, h3, h4, h5, h6, blockquote {
 	@apply prose prose-neutral my-4 leading-none tracking-tight text-neutral-900 subpixel-antialiased md:tracking-wide dark:text-neutral-100;
 }
 
-h1 {
-	@apply text-5xl md:text-6xl;
-} /* Adjusted for better post titles */
-h2 {
-	@apply text-4xl md:text-5xl;
-}
-h3 {
-	@apply text-3xl md:text-4xl;
-}
-h4 {
-	@apply text-2xl md:text-3xl;
-}
-h5 {
-	@apply text-xl md:text-2xl;
-}
-h6 {
-	@apply text-lg md:text-xl;
-}
+h1 { @apply text-5xl md:text-6xl; }
+h2 { @apply text-4xl md:text-5xl; }
+h3 { @apply text-3xl md:text-4xl; }
+h4 { @apply text-2xl md:text-3xl; }
+h5 { @apply text-xl md:text-2xl; }
+h6 { @apply text-lg md:text-xl; }
 
 p {
-	@apply text-justify text-base leading-relaxed text-neutral-800 subpixel-antialiased dark:text-neutral-300; /* Increased leading for readability */
+	@apply text-justify text-base leading-relaxed text-neutral-800 subpixel-antialiased dark:text-neutral-300;
 }
 
-/* Base structural elements styling */
-footer,
-article,
-section,
-header,
-nav {
+footer, article, section, header, nav {
 	@apply m-0 bg-neutral-100 p-0 dark:bg-neutral-900;
 }
 
-/* Main layout container classes */
-.main-layout {
-	@apply flex h-screen;
+.main-layout { @apply flex h-screen; }
+.main-content { @apply flex-1 flex flex-col overflow-hidden; }
+.scrollable-main { @apply flex-1 overflow-y-auto; }
+.container { @apply mx-auto px-4 sm:px-6 lg:px-8; }
+.postMain { @apply grid grid-cols-1 lg:grid-cols-[1fr,auto] gap-4; }
+
+header { @apply border-b border-neutral-300 dark:border-neutral-700; }
+header nav { @apply flex items-center justify-between p-4; }
+.site-title { @apply text-2xl text-neutral-900 subpixel-antialiased dark:text-neutral-100 font-bold font-sans; }
+
+aside { @apply w-64 flex-shrink-0 bg-neutral-100 p-4 dark:bg-neutral-900 border-r border-neutral-300 dark:border-neutral-700 overflow-y-auto; }
+.sidebar-group:not(:last-child) { @apply mb-6; }
+.sidebar-topic { @apply mb-2 text-sm font-semibold text-neutral-600 dark:text-neutral-400 uppercase tracking-wider; word-break: break-word; }
+.sidebar-link { @apply block rounded p-2 text-neutral-700 hover:bg-neutral-200 dark:text-neutral-300 dark:hover:bg-neutral-800 transition-colors duration-150 text-sm leading-normal; }
+.sidebar-link-active { @apply bg-neutral-300 dark:bg-neutral-700 font-bold text-neutral-900 dark:text-neutral-100; }
+
+footer { @apply flex flex-col items-center justify-center p-4 border-t border-neutral-300 dark:border-neutral-700; }
+
+button { @apply rounded-lg bg-neutral-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-neutral-700 focus:outline-none focus:ring-4 focus:ring-neutral-300 dark:bg-neutral-500 dark:hover:bg-neutral-600 dark:focus:ring-neutral-800; }
+
+.interactive-component-wrapper { @apply my-6 p-6 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-neutral-100 dark:bg-neutral-800/50; }
+
+.post-gallery-grid { @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8; }
+.gallery-pin { @apply block relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 ease-in-out border border-neutral-200 dark:border-neutral-800; break-inside: avoid; }
+.gallery-pin .image-wrapper { @apply overflow-hidden aspect-[2/3]; }
+.gallery-pin .gallery-image { @apply w-full h-full object-cover group-hover:scale-105 transition-transform duration-300; }
+.gallery-pin .gallery-title { @apply absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/70 to-transparent text-white text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none; }
+
+.info-box-container { @apply my-6 rounded-lg border border-blue-200 bg-blue-50 p-4 dark:border-blue-800 dark:bg-blue-900/30; }
+.info-box-title { @apply mb-2 flex items-center text-lg font-bold text-blue-800 dark:text-blue-200; }
+.info-box-icon { @apply mr-2 text-xl; }
+.info-box-content > :global(p) { @apply text-blue-700 dark:text-blue-300; }
+
+pre.shiki { @apply p-4 rounded-lg overflow-x-auto; }
+
+/* === TEXT-TO-SPEECH COMPONENT STYLES START === */
+.tts-container { @apply my-6 p-6 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-neutral-100 dark:bg-neutral-800/50; }
+.tts-text { @apply w-full h-40 p-3 rounded-md border border-neutral-300 dark:border-neutral-600 bg-white dark:bg-neutral-900 text-neutral-800 dark:text-neutral-200 resize-none; }
+.tts-text:disabled { @apply bg-neutral-200 dark:bg-neutral-800/50 cursor-not-allowed; }
+.tts-controls { @apply flex justify-between items-center mt-4; }
+.tts-actions { @apply flex items-center gap-2; }
+.tts-speed-label { @apply flex items-center gap-2 text-sm text-neutral-700 dark:text-neutral-300; }
+.tts-speed-input { @apply w-24 h-2 bg-neutral-300 dark:bg-neutral-600 rounded-lg appearance-none cursor-pointer; }
+
+.tts-speed-input::-webkit-slider-thumb {
+	@apply w-4 h-4 rounded-full cursor-pointer appearance-none;
+	background-color: #D4AF47;
 }
-.main-content {
-	@apply flex-1 flex flex-col overflow-hidden;
-}
-.scrollable-main {
-	@apply flex-1 overflow-y-auto;
-}
-.container {
-	@apply mx-auto px-4 sm:px-6 lg:px-8 ;
-}
-.postMain {
- @apply grid grid-cols-1 lg:grid-cols-[1fr,auto] gap-4;
-}
-/* Header styles */
-header {
-	@apply border-b border-neutral-300 dark:border-neutral-700;
-}
-header nav {
-	@apply flex items-center justify-between p-4;
-}
-.site-title {
-	@apply text-2xl text-neutral-900 subpixel-antialiased dark:text-neutral-100 font-bold font-sans;
+.tts-speed-input::-moz-range-thumb {
+	@apply w-4 h-4 rounded-full cursor-pointer border-none;
+	background-color: #D4AF47;
 }
 
-/* Aside (Sidebar) styles */
-aside {
-	@apply w-64 flex-shrink-0 bg-neutral-100 p-4 dark:bg-neutral-900 border-r border-neutral-300 dark:border-neutral-700 overflow-y-auto;
-}
-.sidebar-group:not(:last-child) {
-	@apply mb-6;
-}
-.sidebar-topic {
-	@apply mb-2 text-sm font-semibold text-neutral-600 dark:text-neutral-400 uppercase tracking-wider;
-	word-break: break-word;
-}
-.sidebar-link {
-	@apply block rounded p-2 text-neutral-700 hover:bg-neutral-200 dark:text-neutral-300 dark:hover:bg-neutral-800 transition-colors duration-150 text-sm leading-normal;
-}
-.sidebar-link-active {
-	@apply bg-neutral-300 dark:bg-neutral-700 font-bold text-neutral-900 dark:text-neutral-100;
-}
-
-/* Footer styles */
-footer {
-	@apply flex flex-col items-center justify-center p-4 border-t border-neutral-300 dark:border-neutral-700;
-}
-
-/* NEW STYLES FOR BLOG */
-
-/* Blog post list */
-.post-list-container {
-	@apply grid gap-8 mt-8;
-}
-.post-card {
-	@apply block p-6 bg-neutral-50 dark:bg-neutral-800/50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border border-neutral-200 dark:border-neutral-700;
-}
-.post-card-title {
-	@apply text-2xl font-bold text-neutral-800 dark:text-neutral-200;
-}
-.post-card-date {
-	@apply mt-1 text-xs text-neutral-500 dark:text-neutral-400;
-}
-.post-card-description {
-	@apply mt-3 text-base text-neutral-700 dark:text-neutral-300;
-}
-
-/* Individual post layout */
-.post-layout {
-	@apply grid lg:grid-cols-[1fr_auto] gap-12 items-start;
-}
-.post-divider {
-	@apply my-6 border-neutral-300 dark:border-neutral-700;
-}
-
-/* "On this page" component */
-.on-this-page-container {
-	@apply sticky top-8 w-56 hidden lg:block; /* Hides on small screens */
-}
-.on-this-page-title {
-	@apply font-semibold text-neutral-700 dark:text-neutral-300 mb-2;
-}
-.on-this-page-link {
-	@apply block text-sm py-1 text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100;
-}
-.on-this-page-h3 {
-	@apply pl-4; /* Indent H3 links */
-}
-/* Add these new styles for Shiki code blocks */
-pre.shiki {
-	@apply p-4 rounded-lg overflow-x-auto;
-}
-
-/* === ADDED STYLES START === */
-/* Styles for interactive components embedded in posts */
-.interactive-component-wrapper {
-	@apply my-6 p-6 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-neutral-100 dark:bg-neutral-800/50;
-}
-
-button {
-    @apply mt-4 rounded-lg bg-neutral-600 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-neutral-700 focus:outline-none focus:ring-4 focus:ring-neutral-300 dark:bg-neutral-500 dark:hover:bg-neutral-600 dark:focus:ring-neutral-800;
-		
-}
-
-/* The .interactive-component-button class has been removed. Styles are now applied directly in Counter.svelte */
-/* === GALLERY STYLES START === */
-
-.post-gallery-grid {
-	@apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8;
-}
-
-.gallery-pin {
-	@apply block relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 ease-in-out border border-neutral-200 dark:border-neutral-800;
-	break-inside: avoid;
-}
-
-.gallery-pin .image-wrapper {
-	@apply overflow-hidden aspect-[2/3]; /* Aspect ratio for a pinterest-like feel */
-}
-
-.gallery-pin .gallery-image {
-	@apply w-full h-full object-cover group-hover:scale-105 transition-transform duration-300;
-}
-
-.gallery-pin .gallery-title {
-	@apply absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/70 to-transparent;
-	@apply text-white text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300;
-	@apply pointer-events-none;
-}
-
-/* === GALLERY STYLES END === */
-/* === INFO BOX COMPONENT STYLES START === */
-.info-box-container {
-	@apply my-6 rounded-lg border border-blue-200 bg-blue-50 p-4 dark:border-blue-800 dark:bg-blue-900/30;
-}
-
-.info-box-title {
-	@apply mb-2 flex items-center text-lg font-bold text-blue-800 dark:text-blue-200;
-}
-
-.info-box-icon {
-	@apply mr-2 text-xl;
-}
-
-.info-box-content > :global(p) {
-	@apply text-blue-700 dark:text-blue-300;
-}
-/* === INFO BOX COMPONENT STYLES END === */
+/* FIX: Removed hover:text-gold to prevent the build error */
+.tts-lang-toggle { @apply p-1 bg-transparent border-none text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors; }
+/* === TEXT-TO-SPEECH COMPONENT STYLES END === */
