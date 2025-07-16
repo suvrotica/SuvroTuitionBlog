@@ -59,6 +59,7 @@ The prevalence of mythology—emphasised and encouraged bias, or the absence of 
 </p>
 <p class="my-4"> 
 But really in the end, what I'm trying to say in a long, winding way is that I did a lot of reading—and still read, to my mother's chagrin—that no, none of the readings I did do me any good as far as the original intention. Meritocracy is like a hoax you force on blind and disabled elderly in a care home—they can't ask for a refund. But I read, and this blog is where I share it.
+And not just books—I’ve traveled, and worked, and want to share my life experiences and knowledge. And if my exposure can help another person like me—a boy or girl growing up without a compass—I’d feel I did something right, at least.
 
 </p>
 	<div class="text-center mt-12">
