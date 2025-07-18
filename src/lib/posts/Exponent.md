@@ -5,7 +5,9 @@ description: "A terrifying look at the population mathematically 500 years from 
 topic: "Food & Science"
 thumbnail: "/images/placeholders/IMG-20250718-WA0001.jpg"
 ---
+
 ![kolkata 500 years AI imagined](/images/placeholders/IMG-20250718-WA0001.jpg)
+
 ## The Personal Exponent of Calcutta
 
 Picture the scene. It’s 1975. The world—and a brand-new me—takes my first gulp of Calcutta air. What was that city like? It was a city of glorious, elegant decay and unstoppable life. The grand colonial buildings were shedding plaster like dandruff in the Marxist air, but the streets buzzed with an energy that could power a small nation. The air was a thick soup of diesel from the iconic yellow Ambassador taxis, the sweet tang of sugarcane juice from street-side presses, and the ever-present humidity that feels like a warm, wet hug.
@@ -34,7 +36,7 @@ My city’s growth has mirrored my life. Its doubling period—the time it takes
 So, what is Calcutta’s exponent? The most beautiful answer isn’t a tiny decimal point representing annual growth.
 
 It’s this:
-The Doubling Time (\$T\_{double}\$) ≈ 50 years
+The Doubling Time \$T\_{double}\$ ≈ 50 years
 The formula looks like this:
 $P(t) = P_0 \times 2^{(t/50)}$
 Where \$P\_0\$ is the population in 1975 (7.9 million), and \$t\$ is the number of years since 1975. This formula is a mathematical description of how my world has transformed around me.
@@ -57,7 +59,6 @@ This powerful idea of exponents didn’t just pop out of nowhere. I got curious 
 
 The person who really got the ball rolling on exponents was a 16th-century German monk and mathematician named Michael Stifel. He was a fascinating character who, in his 1544 book *Arithmetica integra*, systematically laid out the rules for powers and even used the word “exponent.” Ironically, he also famously used his math skills to predict that the world would end at 8 a.m. on October 19, 1533. When it didn’t, his followers were less than pleased. But his work on exponents (especially powers of 2!) survived his doomsday blunder and gave us the very language to describe this kind of growth.
 
-But who first took this mathematical tool and applied it to the alarming growth of human populations? For that, we turn to the English scholar Thomas Malthus. In 1798, he published his *Essay on the Principle of Population*. He was the one who famously pointed out that populations tend to grow exponentially (he called it “geometrically”), while our ability to produce food grows much slower (“arithmetically”).
+But who first took this mathematical tool and applied it to the alarming growth of human populations? For that, we turn to the English scholar Thomas Malthus. In 1798, he published his *Essay on the Principle of Population*. He was the one who famously pointed out that populations tend to grow exponentially, he called it “geometrically”, while our ability to produce food grows much slower—“arithmetically”.
 
 He predicted that this mismatch would inevitably lead to famine and misery—what’s now called a “Malthusian catastrophe.” He essentially gave a name to the very panic I feel when I calculate Kolkata having 16.2 billion residents. It seems I’m not the first person to use exponents to give myself a headache about overcrowding. Stifel gave us the “how,” and Malthus gave us the “Oh, dear.”
-
