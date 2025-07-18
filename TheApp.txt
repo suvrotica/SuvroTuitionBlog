@@ -1,4 +1,4 @@
-# Context file generated on: Wednesday, July 16, 2025 at 11:07:47 AM GMT+5:30
+# Context file generated on: Wednesday, July 16, 2025 at 11:45:56 AM GMT+5:30
 ---
 
 # Project File Layout
@@ -54,7 +54,8 @@
 │   │       ├── plantuml-sequence-diagram.md
 │   │       ├── svelte-introduction.md
 │   │       ├── sveltes-runes.md
-│   │       └── threejs-integration.md
+│   │       ├── threejs-integration.md
+│   │       └── tts-test.md
 │   ├── routes
 │   │   ├── +layout.server.ts
 │   │   ├── +layout.svelte
@@ -463,144 +464,210 @@ export {};
 	import { onMount } from 'svelte';
 
 	// PROPS
-	let {
-		contentSelector = '',
-		initialText = 'Many people say they have no choice but to embrace the changes, even as they come to terms with the loss of freedom and spontaneity.'
-	}: {
-		contentSelector?: string;
-		initialText?: string;
-	} = $props();
+	/**
+	 * A CSS selector for the element containing the text to be read.
+	 * e.g., "#post-content"
+	 */
+	export let contentSelector: string = '';
 
 	// STATE
-	let textToRead = $state(initialText);
-	let speed = $state(1);
-	let lang = $state(true);
-	let status = $state<'idle' | 'playing' | 'paused'>('idle');
-	let currentCharacter = $state(0);
-	
-	// DERIVED STATE for UI labels
-	let labels = $derived(lang ? {
-		speed: 'Speed', play: 'Play', pause: 'Pause', stop: 'Stop', resume: 'Resume'
-	} : {
-		speed: '速度', play: '播放', pause: '暫停', stop: '停止', resume: '恢復'
-	});
+	let text: string = 'Many people say they have no choice but to embrace the changes, even as they come to terms with the loss of freedom and spontaneity.'; // Default text
+	let isSupported = false;
+	let isSpeaking = false;
+	let isPaused = false;
+	let speed = 1;
+	let currentCharacter = 0;
 
-	// --- Synchronous Speech Functions ---
+	// DOM-element bindings
+	let speedInput: HTMLInputElement;
 
-	function play(offset: number) {
-		if (typeof window === 'undefined' || !window.speechSynthesis || speechSynthesis.speaking) return;
+	// We create a single utterance instance and reuse it.
+	let utterance: SpeechSynthesisUtterance;
 
-		const utterance = new SpeechSynthesisUtterance(textToRead.substring(offset));
-		
-		utterance.onstart = () => status = 'playing';
-		utterance.onpause = () => status = 'paused';
-		utterance.onresume = () => status = 'playing';
-		utterance.onend = () => {
-			currentCharacter = 0;
-			status = 'idle';
-		};
-		utterance.onboundary = (e) => {
-			currentCharacter = offset + e.charIndex;
-		};
-		utterance.onerror = (e) => {
-			console.error("Speech Synthesis Error", e);
-			status = 'idle';
-		};
-
-		utterance.rate = speed;
-		speechSynthesis.speak(utterance);
-	}
-
-	function handlePlayPause() {
-		if (status === 'paused') {
-			speechSynthesis.resume();
-		} else if (status === 'playing') {
-			speechSynthesis.pause();
-		} else {
-			play(currentCharacter);
-		}
-	}
-
-	function handleStop() {
-		if (typeof window !== 'undefined' && window.speechSynthesis && speechSynthesis.speaking) {
-			speechSynthesis.cancel(); // onend listener will reset state
-		}
-	}
-	
-	function handleSpeedChange() {
-		const wasPlaying = status === 'playing';
-		const lastPosition = currentCharacter;
-
-		handleStop();
-		
-		// This now happens synchronously
-		if (wasPlaying) {
-			play(lastPosition);
-		}
-	}
-	
 	onMount(() => {
-		$effect(() => {
-			if (contentSelector && typeof window !== 'undefined') {
-				const element = document.querySelector(contentSelector);
-				if (element) {
-					handleStop();
-					textToRead = (element as HTMLElement).innerText;
-				}
-			}
-		});
+		if ('speechSynthesis' in window) {
+			isSupported = true;
+			utterance = new SpeechSynthesisUtterance();
 
-		// Cleanup on component unmount
-		return () => handleStop();
+			// When speech ends, reset the state.
+			utterance.onend = () => {
+				isSpeaking = false;
+				isPaused = false;
+				currentCharacter = 0;
+			};
+
+			// Track progress to allow for resuming or changing speed mid-speech.
+			utterance.onboundary = (event) => {
+				currentCharacter = event.charIndex;
+			};
+		}
+
+		// If a content selector is provided, extract the text from the DOM.
+		if (contentSelector) {
+			const element = document.querySelector(contentSelector);
+			if (element) {
+				text = (element as HTMLElement).innerText;
+			}
+		}
+
+		// Cleanup: Ensure speech is stopped when the component is unmounted.
+		return () => {
+			if (isSupported) {
+				window.speechSynthesis.cancel();
+			}
+		};
 	});
+
+	function playText() {
+		if (!isSupported || !text) return;
+
+		// If we are paused, just resume.
+		if (speechSynthesis.paused && speechSynthesis.speaking) {
+			isPaused = false;
+			return speechSynthesis.resume();
+		}
+
+		// If we are already speaking, do nothing.
+		if (speechSynthesis.speaking) return;
+
+		utterance.text = text;
+		utterance.rate = speed || 1;
+		speechSynthesis.speak(utterance);
+		isSpeaking = true;
+		isPaused = false;
+	}
+
+	function pauseText() {
+		if (speechSynthesis.speaking) {
+			speechSynthesis.pause();
+			isPaused = true;
+		}
+	}
+
+	function stopText() {
+		speechSynthesis.resume(); // Ensure it's not paused before cancelling.
+		speechSynthesis.cancel();
+		isSpeaking = false;
+		isPaused = false;
+		currentCharacter = 0;
+	}
+
+	function handleSpeedChange() {
+		// If speaking, stop and restart from the current position to apply the new speed.
+		if (speechSynthesis.speaking) {
+			stopText();
+			// A brief delay to allow the cancel command to process fully.
+			setTimeout(() => {
+				const remainingText = text.substring(currentCharacter);
+				if (remainingText) {
+					utterance.text = remainingText;
+					utterance.rate = speed || 1;
+					speechSynthesis.speak(utterance);
+					isSpeaking = true;
+				}
+			}, 50);
+		}
+	}
 </script>
 
-<div class="tts-container not-prose">
-	<textarea class="tts-text" bind:value={textToRead} disabled={status !== 'idle'}></textarea>
-	
-	<div class="tts-controls">
-		<div class="tts-actions">
-			<button onclick={handlePlayPause} disabled={!textToRead}>
-				{#if status === 'playing'}
-					{labels.pause}
-				{:else if status === 'paused'}
-					{labels.resume}
-				{:else}
-					{labels.play}
-				{/if}
-			</button>
-			
-			<button onclick={handleStop} disabled={status === 'idle'}>{labels.stop}</button>
-			
-			<label class="tts-speed-label">
-				{labels.speed}
+<div class="interactive-component-wrapper not-prose">
+	{#if isSupported}
+		<textarea
+			class="w-full h-48 p-3 rounded-md bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 focus:ring-2 focus:ring-gold dark:focus:ring-gold transition-all"
+			bind:value={text}
+			placeholder="Enter text to speak..."
+		></textarea>
+		<div class="flex items-center justify-between mt-4">
+			<div class="flex items-center gap-2">
+				<label for="speed" class="text-sm text-neutral-600 dark:text-neutral-400">Speed</label>
 				<input
-					type="range"
-					class="tts-speed-input"
+					type="number"
+					id="speed"
+					name="speed"
 					min="0.5"
 					max="2"
 					step="0.1"
+					class="w-20 rounded-md border-neutral-300 dark:border-neutral-700 bg-neutral-100 dark:bg-neutral-800 text-center"
 					bind:value={speed}
-					oninput={handleSpeedChange}
+					onchange={handleSpeedChange}
+					bind:this={speedInput}
 				/>
-				<span class="font-mono text-xs">{speed.toFixed(1)}x</span>
-			</label>
+			</div>
+
+			<div class="flex items-center gap-2">
+				{#if isSpeaking && !isPaused}
+					<button onclick={pauseText} aria-label="Pause">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="20"
+							height="20"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="w-5 h-5"
+						>
+							<rect x="6" y="4" width="4" height="16" /><rect x="14" y="4" width="4" height="16" />
+						</svg>
+					</button>
+				{:else}
+					<button onclick={playText} aria-label="Play" disabled={!text}>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="20"
+							height="20"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="w-5 h-5"
+						>
+							<polygon points="5 3 19 12 5 21 5 3" />
+						</svg>
+					</button>
+				{/if}
+
+				<button onclick={stopText} disabled={!isSpeaking} aria-label="Stop">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="20"
+						height="20"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						class="w-5 h-5"
+					>
+						<rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+					</svg>
+				</button>
+			</div>
 		</div>
-		
-		<button
-			class="tts-lang-toggle"
-			onclick={() => lang = !lang}
-			title="Switch Labels Language"
-			aria-label="Switch Labels Language"
-		>
-			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-				<circle cx="12" cy="12" r="10" />
-				<line x1="2" y1="12" x2="22" y2="12" />
-				<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-			</svg>
-		</button>
-	</div>
+	{:else}
+		<p class="text-sm text-red-600 dark:text-red-400">
+			We're sorry, but Text-to-Speech is not supported by your browser.
+		</p>
+	{/if}
 </div>
+
+<style>
+	/* Targeting the number input arrows for better dark mode visibility */
+	input[type='number']::-webkit-inner-spin-button,
+	input[type='number']::-webkit-outer-spin-button {
+		filter: invert(0.8);
+	}
+
+	:global(html.light) input[type='number']::-webkit-inner-spin-button,
+	:global(html.light) input[type='number']::-webkit-outer-spin-button {
+		filter: none;
+	}
+</style>
 
 # File: src/lib/components/D3/D3Circle.svelte
 
@@ -1625,6 +1692,40 @@ Integrating Three.js into a Svelte component involves a few key steps, managed w
 
 This structured approach encapsulates the 3D logic entirely within a Svelte component, making it reusable and easy to manage within your larger SvelteKit application.
 
+
+# File: src/lib/posts/tts-test.md
+
+---
+title: "Testing the Text-to-Speech Component"
+date: "2025-07-16"
+description: "A demonstration of the integrated TTS component built with Svelte 4."
+topic: "SvelteKit"
+thumbnail: "/images/placeholders/tts-placeholder.jpeg"
+---
+
+<script>
+    import TTS from '$lib/components/blog/TextToSpeech.svelte';
+
+    import GoldLine from '$lib/components/GoldLine.svelte';
+</script>
+
+## Listen to this Post
+
+This entire post can be read aloud by the browser's speech synthesis engine. The component below is aware of the content within the `div` with the ID `post-content`.
+
+<TTS contentSelector="#post-content" />
+
+<GoldLine />
+
+<div id="post-content">
+
+### Introduction
+Svelte is a radical new approach to building user interfaces. Whereas traditional frameworks like React and Vue do the bulk of their work in the browser, Svelte shifts that work into a compile step that happens when you build your app.
+
+### Why it Matters
+Instead of using techniques like virtual DOM diffing, Svelte writes code that surgically updates the DOM when the state of your app changes. This allows for smaller application bundles and better performance.
+
+</div>
 
 # File: src/routes/+layout.server.ts
 
