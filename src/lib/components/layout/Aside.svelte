@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import type { Topic } from '$lib/data/posts'; 
 
-	let { topics = [] }: { topics: Topic[] } = $props(); 
+	// The topics data is now derived directly from the global page state.
+	// This makes the component self-sufficient with data it needs from the layout.
+	let topics = $derived(page.data.topics || []);
 </script>
 
 <aside class="hidden lg:block">

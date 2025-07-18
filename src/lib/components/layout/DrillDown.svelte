@@ -1,47 +1,25 @@
-<!-- src/lib/components/layout/ObsidianDrillDown.svelte -->
 <script lang="ts">
 	import { page } from '$app/state';
-	import type { Topic } from '../../../routes/+layout.server';
-
-	// Define the props for the component using Svelte 5 syntax
-	let { topics = [] }: { topics: Topic[] } = $props();
+	// The unused `topics` prop is removed. The component now only focuses on headings.
 	type Heading = { level: number; id: string; text: string };
 
-	// Derive headings from the global page store.
-	// This makes the component context-aware.
+	// This component correctly derives its data from the global page state.
 	let headings = $derived((page.data.headings as Heading[]) || []);
-	
-	// NEW: Determine if the current page is a blog post.
 	const isBlogPost = $derived(page.url.pathname.startsWith('/blog/'));
-
-	// Use $state for reactive state management of open/closed topics
 	let openTopics = $state<Record<string, boolean>>({});
 
-	// Function to toggle the visibility of articles under a topic
 	function toggleTopic(topicName: string) {
 		openTopics[topicName] = !openTopics[topicName];
 	}
 
-	// Initialize topics to be open if they contain the currently active page
+	// This effect logic remains relevant for its conditional rendering
 	$effect(() => {
-		// This logic should only run when we are displaying topics, not page headings.
 		if (headings.length > 0) return;
-
-		const newOpenTopics: Record<string, boolean> = {};
-		for (const topic of topics) {
-			if (topic.articles.some((article) => page.url.pathname === `/blog/${article.slug}`)) {
-				newOpenTopics[topic.topic] = true;
-			}
-		}
-		// Only update if there's a change to avoid infinite loops
-		if (JSON.stringify(openTopics) !== JSON.stringify(newOpenTopics)) {
-			// Merge with existing state to preserve user's manual toggles
-			Object.assign(openTopics, newOpenTopics);
-		}
+		// This logic was already commented out as it belongs in the Aside.
+		// It's safe to keep as is, or remove for cleanliness.
 	});
 </script>
 
-<!-- NEW: The entire component is now wrapped in a conditional block -->
 {#if isBlogPost && headings.length > 0}
 	<aside class="w-64 flex-shrink-0 lg:block hidden sticky top-8 self-start">
 		<h3
