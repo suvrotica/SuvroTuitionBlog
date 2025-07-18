@@ -8,10 +8,10 @@ description: "A terrifying look at the population of Calcutta mathematically pro
 
 topic: "Food & Science"
 
-thumbnail: "/images/placeholders/IMG-20250718-WA0001.jpg"
+thumbnail: "/images/placeholders/a5nWmIXQTneuGRFUT5fQvg.webp"
 
 ---
-![An AI-imagined vision of Kolkata 500 years in the future, showcasing extreme urban density.](/images/placeholders/IMG-20250718-WA0001.jpg)
+![An AI-imagined vision of Kolkata 500 years in the future, showcasing extreme urban density.](/images/placeholders/a5nWmIXQTneuGRFUT5fQvg.webp)
 Picture the scene. It’s 1975. The world—and a brand-new me—takes his first baby gulp of Calcutta's polluted air. It was a city of glorious, elegant decay and unstoppable life. The grand colonial buildings were shedding plaster like dandruff in the Marxist air, but the streets buzzed with an energy that could power a small nation. The air was a thick soup of diesel from the iconic yellow Ambassador taxis, the sweet tang of sugarcane juice, and the ever-present humidity that feels like a warm, wet hug. The soundtrack was a constant jangling of tram bells, the shouts of vendors, and the gentle creak of the hand-pulled rickshaws.
 
 On that day, I was one soul amongst many. To find Calcutta’s “exponent,” I became a data detective. In 1975, the year of my birth, the population of the Calcutta Urban Agglomeration was hovering around **7.9 million** people. Now, let’s fast forward through my entire life—all the way to today, July 18th, 2025. As of right now, the estimated population of the Kolkata Metropolitan Area is about **15.8 million** people.
