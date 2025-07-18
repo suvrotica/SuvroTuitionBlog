@@ -141,3 +141,8 @@ Starting with just yourself ($N_0 = 1$), the first generation of new cases would
 $$N_1 = 1 \times 20^1 = 20$$
 
 From a single person, 20 new branches of the infection tree are instantly created. Even if those 20 people then return to less crowded environments and spread the virus at the normal rate, the epidemic has already made a catastrophic leap forward, fueled by one moment of high transmission. This is the terrifying power of the R-number: it's not just an average, but a measure of potential that can be devastatingly realized in the right conditions.
+
+Now think of it this way: suppose you share this post's link with just 5 people, and each of them passes it along to 5 more, and so on. In just 2 steps, that’s $5^2 = 25$ people. After 3 steps, it’s $5^3 = 125$. And if this continues for 10 steps, you’d reach $5^{10} = 9,765,625$—nearly 10 million people. 
+
+This my friend is **going viral**, another way to look at exponential growth, but instead of babies, bacteria or COVID viruses, it's ideas or Richard Dawkin's memes that multiply. What begins as one quiet act—a single share—can grow into a digital crowd the size of a metropolis, echoing that same exponential curve that once gave Malthus nightmares.
+
