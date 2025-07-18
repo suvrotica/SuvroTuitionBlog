@@ -78,3 +78,32 @@ The problem describes a geometric progression where each new generation is twice
 So, the total lineage produced by that one person over 500 years would be **2,046 people**.
 
 *(Note: This doesn't include the original ancestor. In the final generation alone, which would be born around the year 2525, there would be $2^{10}$, or **1,024** people.)*
+
+This exponential logic gives us a tool to understand the frightening speed of a pandemic. During the early days of COVID-19, we all became amateur epidemiologists, anxiously watching the R-number—the average number of people an infected person would pass the virus to. This R-number is the direct driver of the doubling time. An R-value of 3 doesn't just mean three new cases; it means the entire epidemic is on track to triple in size over a single generation of the virus. When we saw case counts doubling every few days, we were witnessing the same mathematical reality in real-time: a simple exponent turning a handful of infections into a global crisis. The Malthusian panic I felt imagining a future Kolkata was the same anxiety the world felt watching the case counts climb that vertical curve.
+
+### An Example with the R-Number
+
+The growth in new cases per viral generation can be modeled with a simple exponential equation:
+
+$$N_n = N_0 \times R^n$$
+
+Where:
+* $N_n$ = The number of new cases in a specific generation `n`.
+* $N_0$ = The initial number of cases.
+* $R$ = The reproduction number.
+* $n$ = The number of generations that have passed.
+
+Let's imagine a scenario at the start of an outbreak:
+* We start with **10** initial cases ($N_0 = 10$).
+* The R-number is **3** ($R = 3$).
+* A viral generation (the time from one person getting infected to them infecting the next) is **5 days**.
+
+Using the equation, the spread of new infections would look like this:
+
+* **Day 0 (Gen 0):** Starts with 10 cases.
+* **Day 5 (Gen 1):** $10 \times 3^1 = 30$ new cases.
+* **Day 10 (Gen 2):** $10 \times 3^2 = 90$ new cases.
+* **Day 15 (Gen 3):** $10 \times 3^3 = 270$ new cases.
+* **Day 20 (Gen 4):** $10 \times 3^4 = 810$ new cases.
+
+In just **20 days**, the number of new infections generated in a single 5-day period has grown from 10 to over 800, powerfully demonstrating how an R-number above 1 drives explosive, exponential growth.
