@@ -35,11 +35,13 @@ My city’s growth has mirrored my life. Its doubling period—the time it takes
 
 So, what is Calcutta’s exponent? The most beautiful answer isn’t a tiny decimal point representing annual growth.
 
-It’s this:
-The Doubling Time \$T\_{double}\$ ≈ 50 years
-The formula looks like this:
-$P(t) = P_0 \times 2^{(t/50)}$
-Where \$P\_0\$ is the population in 1975 (7.9 million), and \$t\$ is the number of years since 1975. This formula is a mathematical description of how my world has transformed around me.
+It's this:
+The Doubling Time (T_{double}) \approx 50 years
+The formula for my city's growth, over the course of my life, looks like this:
+P(t) = P_0 \times 2^{(t/50)}
+Where P_0 is the population in 1975 (7.9 million) and t is the number of years since 1975. 
+
+This formula is a mathematical description of how my world has transformed around me.
 
 What does this doubling feel like? It means that for every single person who was waiting for a tram on the Maidan, for every voice in the cacophony of the New Market, for every fan in Eden Gardens back in 1975… there are now two.
 
