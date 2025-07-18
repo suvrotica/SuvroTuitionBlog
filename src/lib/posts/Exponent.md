@@ -37,11 +37,7 @@ Where $P_0$ is the population at a starting year and $t$ is the number of years 
 
 To calculate the *average number of children per person per generation* needed to double a population over a fixed time (e.g. 50 years from 1975 to 2025), we can model it using basic population dynamics under exponential growth.
 
-Since population doubled over 50 years, we know:
-
-$$
-P_{2025} = P_{1975} \cdot 2 = 7.9 \text{ million} \cdot 2 = 15.8 \text{ million}
-$$
+Since population doubled over 50 years. 
 
 Let’s assume non-immigration and no significant change in death rate, and define a *generation* as 25 years (biological generation length). Then, there are **2 generations** in 50 years. I know I am old. 
 
