@@ -77,6 +77,8 @@ The problem describes a geometric progression where each new generation is twice
 
 So, the total lineage produced by that one person's one child over 500 years would be **2,046 people**. Two produces twice that or **4,092 people**. Counting the original person and his 2 children from which these people descended the total amount of people is **4,095 of that family**
 
+Thankfully not all of them will be around (although by then longevity research may have changed all that), but the last generation itself is frightening **2048 people** from just one person with two kids today.
+
 This exponential logic gives us a tool to understand the frightening speed of a pandemic. During the early days of COVID-19, we all became amateur epidemiologists, anxiously watching the R-number—the average number of people an infected person would pass the virus to. This R-number is the direct driver of the doubling time. An R-value of 3 doesn't just mean three new cases; it means the entire epidemic is on track to triple in size over a single generation of the virus. When we saw case counts doubling every few days, we were witnessing the same mathematical reality in real-time: a simple exponent turning a handful of infections into a global crisis. The Malthusian panic I felt imagining a future Kolkata was the same anxiety the world felt watching the case counts climb that vertical curve.
 
 The growth in new cases per viral generation can be modeled with a simple exponential equation:
