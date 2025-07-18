@@ -104,4 +104,4 @@ Using the equation, the spread of new infections would look like this:
 * **Day 15 (Gen 3):** $10 \times 3^3 = 270$ new cases.
 * **Day 20 (Gen 4):** $10 \times 3^4 = 810$ new cases.
 
-In just **20 days**, the number of new infections generated in a single 5-day period has grown from 10 to over 800, powerfully demonstrating how an R-number above 1 drives explosive, exponential growth.
+In just **20 days**, the number of new infections generated in a single 5-day period has grown from 10 to over 800, powerfully demonstrating how an R-number above 1 drives explosive, exponential growth. Now imagine how the R number or infection rate or whatever makes it high is so deadly, and why if you now go back to the same equation above and substitute a large R because you sneezed in the Calcutta metro train and infected everyone else in that compartment, train station and on your way back home.
