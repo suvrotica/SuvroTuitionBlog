@@ -9,10 +9,12 @@ import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import { codeToHtml } from 'shiki';
 import { join } from 'path';
+import remarkMath from 'remark-math';
+// Change this import
+import rehypeKatexSvelte from 'rehype-katex-svelte';
 
 /**
  * Custom highlighter function using Shiki.
- * This version escapes special characters to prevent parsing issues during SSR.
  * @param {string} code The code to highlight.
  * @param {string | undefined} lang The language of the code.
  * @returns {Promise<string>} The highlighted and escaped HTML.
@@ -25,14 +27,11 @@ const highlighter = async (code, lang = 'text') => {
 			dark: 'github-dark'
 		}
 	});
-
-	// Escape Svelte template syntax and backticks
 	return html
 		.replace(/{/g, '&#123;')
 		.replace(/}/g, '&#125;')
 		.replace(/`/g, '&#96;');
 };
-
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -48,11 +47,14 @@ const config = {
 			},
 			remarkPlugins: [
 				remarkGfm,
-				[remarkFrontmatter, ['yaml', 'toml']]
+				[remarkFrontmatter, ['yaml', 'toml']],
+				remarkMath
 			],
 			rehypePlugins: [
 				rehypeSlug,
-				[rehypeAutolinkHeadings, { behavior: 'wrap' }]
+				[rehypeAutolinkHeadings, { behavior: 'wrap' }],
+				// And use the new plugin here
+				rehypeKatexSvelte 
 			],
 			smartypants: {
 				quotes: true,
@@ -70,5 +72,4 @@ const config = {
 		adapter: adapter()
 	}
 };
-
 export default config;

@@ -1,4 +1,4 @@
-# Context file generated on: Wednesday, July 16, 2025 at 11:45:56 AM GMT+5:30
+# Context file generated on: Friday, July 18, 2025 at 10:31:34 AM GMT+5:30
 ---
 
 # Project File Layout
@@ -50,6 +50,8 @@
 │   │   ├── index.ts
 │   │   └── posts
 │   │       ├── d3-integration.md
+│   │       ├── Exponent.md
+│   │       ├── Monk.md
 │   │       ├── p5js-abstract-art.md
 │   │       ├── plantuml-sequence-diagram.md
 │   │       ├── svelte-introduction.md
@@ -74,6 +76,9 @@
 │   └── images
 │       └── placeholders
 │           ├── d3-placeholder.jpeg
+│           ├── IMG-20250717-WA0006.jpg
+│           ├── IMG-20250718-WA0001.jpg
+│           ├── monk-fruit.png
 │           ├── p5js-placeholder.jpeg
 │           ├── plantuml-placeholder.jpeg
 │           ├── svelte-intro-thumbnail.png
@@ -120,6 +125,7 @@
 		"@types/d3": "^7.4.3",
 		"@types/hast": "^3.0.4",
 		"@types/p5": "^1.7.6",
+		"@types/pako": "^2.0.3",
 		"@types/three": "^0.165.0",
 		"@types/unist": "^3.0.3",
 		"@types/vfile": "^3.0.2",
@@ -127,11 +133,15 @@
 		"eslint-config-prettier": "^10.0.1",
 		"eslint-plugin-svelte": "^3.0.0",
 		"globals": "^16.0.0",
+		"katex": "^0.16.22",
 		"mdsvex": "^0.12.6",
+		"pako": "^2.1.0",
 		"prettier": "^3.4.2",
 		"prettier-plugin-svelte": "^3.3.3",
 		"prettier-plugin-tailwindcss": "^0.6.11",
+		"rehype-katex": "^7.0.1",
 		"rehype-slug": "^6.0.0",
+		"remark-math": "^6.0.0",
 		"shiki": "^3.6.0",
 		"svelte": "^5.0.0",
 		"svelte-check": "^4.0.0",
@@ -139,9 +149,7 @@
 		"typescript": "^5.0.0",
 		"typescript-eslint": "^8.20.0",
 		"vite": "^6.2.6",
-		"vite-plugin-devtools-json": "^0.2.0",
-		"@types/pako": "^2.0.3",
-		"pako": "^2.1.0"
+		"vite-plugin-devtools-json": "^0.2.0"
 	},
 	"dependencies": {
 		"d3": "^7.9.0",
@@ -168,9 +176,12 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import { codeToHtml } from 'shiki';
 import { join } from 'path';
 
+// Import the new plugins
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+
 /**
  * Custom highlighter function using Shiki.
- * This version escapes special characters to prevent parsing issues during SSR.
  * @param {string} code The code to highlight.
  * @param {string | undefined} lang The language of the code.
  * @returns {Promise<string>} The highlighted and escaped HTML.
@@ -183,14 +194,11 @@ const highlighter = async (code, lang = 'text') => {
 			dark: 'github-dark'
 		}
 	});
-
-	// Escape Svelte template syntax and backticks
 	return html
 		.replace(/{/g, '&#123;')
 		.replace(/}/g, '&#125;')
 		.replace(/`/g, '&#96;');
 };
-
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -206,11 +214,13 @@ const config = {
 			},
 			remarkPlugins: [
 				remarkGfm,
-				[remarkFrontmatter, ['yaml', 'toml']]
+				[remarkFrontmatter, ['yaml', 'toml']],
+				remarkMath // Add remarkMath here
 			],
 			rehypePlugins: [
 				rehypeSlug,
-				[rehypeAutolinkHeadings, { behavior: 'wrap' }]
+				[rehypeAutolinkHeadings, { behavior: 'wrap' }],
+				rehypeKatex // Add rehypeKatex here
 			],
 			smartypants: {
 				quotes: true,
@@ -381,10 +391,20 @@ pre.shiki { @apply p-4 rounded-lg overflow-x-auto; }
 
 // See https://svelte.dev/docs/kit/types#app.d.ts
 // for information about these interfaces
+
+// Import the Topic type from your server load function to ensure consistency
+import type { Topic } from './routes/+layout.server';
+
 declare global {
 	namespace App {
 		// interface Error {}
-		// interface Locals {}
+		interface Locals {}
+		
+		// Define the shape of data returned from the root layout's load function
+		interface LayoutData {
+			topics: Topic[];
+		}
+
 		// interface PageData {}
 		// interface PageState {}
 		// interface Platform {}
@@ -392,7 +412,6 @@ declare global {
 }
 
 export {};
-
 
 # File: src/app.html
 
@@ -1436,6 +1455,99 @@ $effect(() => {
     }
 });
 
+# File: src/lib/posts/Exponent.md
+
+---
+title: "On Exponential Growth and Calcutta"
+date: "2025-07-18"
+description: "A terrifying look at the population of Calcutta mathematically projected 500 years from now, using a personal-life-based doubling constant."
+topic: "Food & Science"
+thumbnail: "/images/placeholders/IMG-20250718-WA0001.jpg"
+---
+
+![An AI-imagined vision of Kolkata 500 years in the future, showcasing extreme urban density.](/images/placeholders/IMG-20250718-WA0001.jpg)
+
+## The Personal Exponent of Calcutta
+
+Picture the scene. It’s 1975. The world—and a brand-new me—takes its first gulp of Calcutta air. It was a city of glorious, elegant decay and unstoppable life. The grand colonial buildings were shedding plaster like dandruff in the Marxist air, but the streets buzzed with an energy that could power a small nation. The air was a thick soup of diesel from the iconic yellow Ambassador taxis, the sweet tang of sugarcane juice, and the ever-present humidity that feels like a warm, wet hug. The soundtrack was a constant jangling of tram bells, the shouts of vendors, and the gentle creak of the hand-pulled rickshaws.
+
+On that day, I was one soul amongst many. To find Calcutta’s “exponent,” I became a data detective. In 1975, the year of my birth, the population of the Calcutta Urban Agglomeration was hovering around **7.9 million** people.
+
+Now, let’s fast forward through my entire life—all the way to today, July 18th, 2025. As of right now, the estimated population of the Kolkata Metropolitan Area is about **15.8 million** people.
+
+Let's look at those numbers again:
+- **1975:** 7.9 million
+- **2025:** 15.8 million
+
+Wait a minute. $7.9 \times 2 = 15.8$.
+
+This is a coincidence so perfect, it feels scripted. In the 50 years since I was born, the population of my city has almost exactly doubled. Its doubling period—the time it takes to completely replicate its 1975 self—is my lifetime. So, what is Calcutta’s exponent? The most beautiful answer isn’t a tiny decimal point. It's this: The Doubling Time ($T_{\text{double}}$) is approximately 50 years.
+
+The formula for my city's growth, over the course of my life, looks like this:
+
+$$
+P(t) = P_0 \cdot 2^{t/50}
+$$
+
+Where $P_0$ is the population in 1975 (7.9 million) and $t$ is the number of years since 1975. What does this doubling feel like? It means that for every single person who was waiting for a tram on the Maidan, for every voice in the cacophony of the New Market, for every fan in Eden Gardens back in 1975… there are now two.
+
+## A Projection into the Absurd
+
+If I take this rule—that Kolkata doubles its population every 50 years—and run with it, what happens over the next five centuries? A 500-year projection means we’ll have 10 doubling periods ($500 / 50 = 10$). The formula is my city’s current population multiplied by 2, ten times over:
+
+$$
+\text{Future Population} = 15,800,000 \times 2^{10}
+$$
+
+Now, $2^{10}$ is a hefty 1024. So, the population of Kolkata in the year 2525 will be:
+
+$$
+15,800,000 \times 1024 = 16,179,200,000
+$$
+
+That’s **16.2 billion people**. Let that sink in. That’s more than double the current population of the entire Earth, all crammed into one sprawling mega-megalopolis. I imagine the Howrah Bridge will have evolved into a 300-level spaghetti junction of transport tubes. The concept of a “private room” will be a quaint myth; you’ll rent a “personal cubic meter.” It’s a terrifying, yet darkly hilarious, thought.
+
+## The Shoulders of Giants
+
+This powerful idea of exponents didn’t just pop out of nowhere. The person who really got the ball rolling was a 16th-century German monk and mathematician named **Michael Stifel**. In his 1544 book *Arithmetica integra*, he systematically laid out the rules for powers and even used the word “exponent.” Ironically, he also famously used his math skills to predict that the world would end at 8 a.m. on October 19, 1533. When it didn’t, his followers were less than pleased. But his work on exponents survived his doomsday blunder and gave us the very language to describe this kind of growth.
+
+But who first applied this tool to the alarming growth of human populations? For that, we turn to the English scholar **Thomas Malthus**. In 1798, he published his *Essay on the Principle of Population*. He was the one who famously pointed out that populations tend to grow exponentially (he called it “geometrically”), while our ability to produce food grows much slower (“arithmetically”). He predicted this mismatch would inevitably lead to what’s now called a “Malthusian catastrophe.”
+
+He essentially gave a name to the very panic I feel when I calculate Kolkata having 16.2 billion residents. It seems I’m not the first person to use exponents to give myself a headache about overcrowding. Stifel gave us the “how,” and Malthus gave us the “Oh, dear.”
+
+# File: src/lib/posts/Monk.md
+
+---
+title: "On Monks, Fruit, and Defying the Scale"
+date: "2025-07-17"
+description: "A somewhat bewildered look into the strange world of monk fruit, a sugar substitute that seems almost too good to be true."
+topic: "Food & Science"
+thumbnail: "/images/placeholders/monk-fruit.png"
+---
+![An oil painting of a monk, evoking the history of monk fruit.](/images/placeholders/monk-fruit.png)
+## A Curious Quest for Sweetness
+
+Of Monks, Molecules, and a Maddening Love for All Things Sweet
+
+My body and I have what you might call a strained relationship when it comes to sugar. My brain, a perfectly rational organ in most respects, understands that a diet consisting primarily of bapuji cakes is, in the long run, a poor life choice. My body, however, operates on a much simpler, more ancient principle: if it’s sweet, we must have it. Now. This internal tug-of-war has led me on many a grim, determined health kick, most of which last until approximately the next time someone opens a packet of biscuits in the same room.
+
+It was during one such crusade, while spelunking through the wilds of Amazon, that I came across something called “monk fruit.” The name alone was enough to stop me in my tracks. It conjures up these wonderfully serene images of wise, robed figures tending to a misty mountain orchard, which, as it turns out, isn't wildly far from the truth. The fruit, a funny-looking little green gourd known to botanists as *Siraitia grosvenorii*, has been cultivated for centuries in southern China, largely by Buddhist monks. You have to admire the sheer, delightful serendipity of it all.
+
+Now, here is where things get properly peculiar. The reason monk fruit is so astonishingly sweet has nothing to do with sugar. Not a scrap of fructose or sucrose, the usual suspects in the sweetness lineup. Instead, its knockout punch comes from a unique set of antioxidants called mogrosides. These are a type of molecule known as a triterpene glycoside (which sounds like a species of dinosaur but is far more interesting) that performs a magnificent chemical trick. Through a quirk of its shape, a mogroside molecule can latch onto the sweetness receptors on your tongue and convince them you’re experiencing a sweetness of epic proportions—somewhere between 200 and 300 times sweeter than regular sugar, in fact. This means you are, in essence, sweetening your tea with a form of plant-based virtue. It’s magnificent.
+
+The journey that little sensation of sweetness takes is a tale of biological wizardry. It all starts on your tongue, which is studded with taste buds. Think of these taste buds as tiny biological nightclubs, and stationed at the door are bouncer proteins called T1R2 and T1R3. These two work as a team, and they are exceptionally picky—they only let sweet molecules in. When a mogroside molecule turns up, it fits into the T1R2/T1R3 receptor perfectly, like a key in a lock. This sends a flurry of messages inside the cell, which then fires off a signal like a tiny telegraph.
+
+From there, the message, "Sweetness has arrived!" zips off to the brain along a network of three different cranial nerves—the facial, the glossopharyngeal, and the vagus nerves, which is frankly an impressive amount of wiring just to tell you that you're enjoying a piece of bapuji cake. The signals converge in the brainstem at a sort of central sorting office called the nucleus solitarius. From there, they’re forwarded to the thalamus (the brain’s Grand Central Station for sensory data) before finally reaching their destination: the gustatory cortex. It's only here, in a highly civilized bit of your frontal lobe, that the brain actually perceives the sensation we know and love as "sweet."
+
+Why go to all this trouble? Why are we so utterly devoted to this one particular taste? Well, like most of our stranger habits, we can blame our ancestors for it. For pretty much the whole of human history, sweetness was nature’s way of putting a big, friendly sign on food that said, “Eat this! It’s packed with energy and probably won’t kill you.” In a world where your next meal was never a guarantee, having a brain that lit up with pleasure at the taste of ripe fruit was a brilliant survival strategy. Calories were king, and sweetness was the king’s calling card.
+
+The problem, of course, is that we are now Stone Age brains living in a supermarket world. Our evolutionary wiring, once so helpful for finding berries, is now being constantly hijacked by an endless parade of fizzy drinks, pastries, and sweets. We are built for scarcity in an age of almost ludicrous abundance, which is why a bar of chocolate can feel like both the best idea you've ever had and a catastrophic personal failure at the very same time.
+
+And that brings us back to the peculiar little monk fruit. We humans, in our infinite and baffling ingenuity, have journeyed to the misty mountains of Guilin, adopted the agricultural wisdom of ancient monks, and employed a phalanx of food scientists to crush, infuse, and filter a fruit into a fine powder. All this, just so we can fool a handful of prehistoric receptors on our tongues. It’s all quite mad, really. Now, if you’ll excuse me, I believe there’s a bapuji cake somewhere that requires my immediate attention.
+
+Of course, to love a Bapuji Cake is to conveniently ignore the fact that you are consuming a bona fide masterpiece of chemical engineering. Let’s be clear-eyed about this: the cake’s foundational principle is a truly heroic quantity of sugar, a sweetness so profound it likely registers on the Richter scale. It’s not just sugar in the batter, but a payload of candied fruit and petha, which are themselves little more than sugar that’s been cleverly disguised as fruit. This goes a long way to explaining its appeal, but not its astonishing longevity. A truly moist cake should, by all rights, begin to cultivate interesting new life forms within days. Yet the Bapuji Cake endures, thanks to what one must assume is a chemical garrison of preservatives. While the exact formula is a secret known only to the good people at the New Howrah Bakery, it's almost certainly patrolled by tiny, unpronounceable soldiers like Calcium Propionate and perhaps a dash of Sodium Benzoate, a microscopic legion tasked with repelling the barbarian hordes of mold and bacteria. We are, in effect, eating a delicious, nostalgic relic that has been embalmed for freshness, a soft, sweet monument built to defy the relentless march of time and decay, all for the price of a few rupees.
+![bapuji cakes](/images/placeholders/IMG-20250717-WA0006.jpg) 
+
 # File: src/lib/posts/p5js-abstract-art.md
 
 ---
@@ -1773,16 +1885,29 @@ export const load: LayoutServerLoad = async () => {
 
 # File: src/routes/+layout.svelte
 
-<!-- src/routes/+layout.svelte -->
 <script lang="ts">
+	import type { Snippet } from 'svelte';
 	import '../app.css';
+
+	// Layout Components
 	import Header from '$lib/components/layout/Header.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
 	import Aside from '$lib/components/layout/Aside.svelte';
-	import ObsidianDrillDown from '$lib/components/layout/DrillDown.svelte';
+	import DrillDown from '$lib/components/layout/DrillDown.svelte';
 
-	let { data, children } = $props();
+	// Define props with Svelte 5 runes and add explicit types for better safety.
+	// App.LayoutData is now correctly defined in src/app.d.ts
+	let { data, children }: { data: App.LayoutData; children: Snippet } = $props();
 </script>
+
+<svelte:head>
+	<link
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css"
+		integrity="sha384-wcIxkf4k558ASAX/sL35lhjpEk321GSElyJSSgwWTK6+mClSjuCjdZchHBkH3BEe"
+		crossorigin="anonymous"
+	/>
+</svelte:head>
 
 <div class="main-layout">
 	<Aside topics={data.topics} />
@@ -1791,22 +1916,18 @@ export const load: LayoutServerLoad = async () => {
 		<Header />
 
 		<main class="scrollable-main">
-			<!-- 
-        This new grid layout accommodates the main content and the new drill-down sidebar.
-        The grid layout is responsive, stacking on smaller screens.
-      -->
 			<div class="container grid lg:grid-cols-[minmax(0,1fr)_auto] gap-8 py-8">
 				<div>
 					{@render children()}
 				</div>
-				<ObsidianDrillDown topics={data.topics} />
+
+				<DrillDown topics={data.topics} />
 			</div>
 		</main>
 
 		<Footer />
 	</div>
 </div>
-
 
 # File: src/routes/+page.svelte
 

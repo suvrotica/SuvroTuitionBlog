@@ -1,77 +1,30 @@
 ---
-title: "On Exponential Growth and Calcutta"
-date: "2025-07-18"
-description: "A terrifying look at the population mathematically 500 years from now"
+title: "On Monks, Fruit, and Defying the Scale"
+date: "2025-07-17"
+description: "A somewhat bewildered look into the strange world of monk fruit, a sugar substitute that seems almost too good to be true."
 topic: "Food & Science"
-thumbnail: "/images/placeholders/IMG-20250718-WA0001.jpg"
+thumbnail: "/images/placeholders/monk-fruit.png"
 ---
+![An oil painting of a monk, evoking the history of monk fruit.](/images/placeholders/monk-fruit.png)
+## A Curious Quest for Sweetness
 
-<script>
-    import GoldLine from '$lib/components/GoldLine.svelte';
-</script>
+Of Monks, Molecules, and a Maddening Love for All Things Sweet
 
-![kolkata 500 years AI imagined](/images/placeholders/IMG-20250718-WA0001.jpg)
+My body and I have what you might call a strained relationship when it comes to sugar. My brain, a perfectly rational organ in most respects, understands that a diet consisting primarily of bapuji cakes is, in the long run, a poor life choice. My body, however, operates on a much simpler, more ancient principle: if it’s sweet, we must have it. Now. This internal tug-of-war has led me on many a grim, determined health kick, most of which last until approximately the next time someone opens a packet of biscuits in the same room.
 
-## The Personal Exponent of Calcutta
+It was during one such crusade, while spelunking through the wilds of Amazon, that I came across something called “monk fruit.” The name alone was enough to stop me in my tracks. It conjures up these wonderfully serene images of wise, robed figures tending to a misty mountain orchard, which, as it turns out, isn't wildly far from the truth. The fruit, a funny-looking little green gourd known to botanists as *Siraitia grosvenorii*, has been cultivated for centuries in southern China, largely by Buddhist monks. You have to admire the sheer, delightful serendipity of it all.
 
-Picture the scene. It’s 1975. The world—and a brand-new me—takes my first gulp of Calcutta air. What was that city like? It was a city of glorious, elegant decay and unstoppable life. The grand colonial buildings were shedding plaster like dandruff in the Marxist air, but the streets buzzed with an energy that could power a small nation. The air was a thick soup of diesel from the iconic yellow Ambassador taxis, the sweet tang of sugarcane juice from street-side presses, and the ever-present humidity that feels like a warm, wet hug.
+Now, here is where things get properly peculiar. The reason monk fruit is so astonishingly sweet has nothing to do with sugar. Not a scrap of fructose or sucrose, the usual suspects in the sweetness lineup. Instead, its knockout punch comes from a unique set of antioxidants called mogrosides. These are a type of molecule known as a triterpene glycoside (which sounds like a species of dinosaur but is far more interesting) that performs a magnificent chemical trick. Through a quirk of its shape, a mogroside molecule can latch onto the sweetness receptors on your tongue and convince them you’re experiencing a sweetness of epic proportions—somewhere between 200 and 300 times sweeter than regular sugar, in fact. This means you are, in essence, sweetening your tea with a form of plant-based virtue. It’s magnificent.
 
-The soundtrack, reminiscent of Ananda Shankar’s *Streets of Calcutta*, was a constant jangling of tram bells, the shouts of vendors, and the gentle creak of the hand-pulled rickshaws.
+The journey that little sensation of sweetness takes is a tale of biological wizardry. It all starts on your tongue, which is studded with taste buds. Think of these taste buds as tiny biological nightclubs, and stationed at the door are bouncer proteins called T1R2 and T1R3. These two work as a team, and they are exceptionally picky—they only let sweet molecules in. When a mogroside molecule turns up, it fits into the T1R2/T1R3 receptor perfectly, like a key in a lock. This sends a flurry of messages inside the cell, which then fires off a signal like a tiny telegraph.
 
-On that day, as I was making my grand entrance, I was one soul amongst many. But how many, exactly?
+From there, the message, "Sweetness has arrived!" zips off to the brain along a network of three different cranial nerves—the facial, the glossopharyngeal, and the vagus nerves, which is frankly an impressive amount of wiring just to tell you that you're enjoying a piece of bapuji cake. The signals converge in the brainstem at a sort of central sorting office called the nucleus solitarius. From there, they’re forwarded to the thalamus (the brain’s Grand Central Station for sensory data) before finally reaching their destination: the gustatory cortex. It's only here, in a highly civilized bit of your frontal lobe, that the brain actually perceives the sensation we know and love as "sweet."
 
-<GoldLine />
+Why go to all this trouble? Why are we so utterly devoted to this one particular taste? Well, like most of our stranger habits, we can blame our ancestors for it. For pretty much the whole of human history, sweetness was nature’s way of putting a big, friendly sign on food that said, “Eat this! It’s packed with energy and probably won’t kill you.” In a world where your next meal was never a guarantee, having a brain that lit up with pleasure at the taste of ripe fruit was a brilliant survival strategy. Calories were king, and sweetness was the king’s calling card.
 
-This is where our story begins. Unlike a neat-and-tidy fictional town in a fictional mathy example, real cities are messy, chaotic beasts. Their growth isn’t a perfect, pre-written formula. To find Calcutta’s “exponent,” I had to become a data detective, and with a little rummaging through the dusty archives of global population data, I found that in 1975, the year of my birth, the population of the Calcutta Urban Agglomeration was hovering around 7.9 million people.
+The problem, of course, is that we are now Stone Age brains living in a supermarket world. Our evolutionary wiring, once so helpful for finding berries, is now being constantly hijacked by an endless parade of fizzy drinks, pastries, and sweets. We are built for scarcity in an age of almost ludicrous abundance, which is why a bar of chocolate can feel like both the best idea you've ever had and a catastrophic personal failure at the very same time.
 
-Now, let’s fast forward through my entire life. Through learning to walk, my first day at school, the switch from Doordarshan to satellite TV, the arrival of mobile phones and the internet, my long absence, all the way to today, July 18th, 2025. What does my city, now called Kolkata, look like? As of right now, in 2025, the estimated population of the Kolkata Metropolitan Area is about 15.8 million people.
+And that brings us back to the peculiar little monk fruit. We humans, in our infinite and baffling ingenuity, have journeyed to the misty mountains of Guilin, adopted the agricultural wisdom of ancient monks, and employed a phalanx of food scientists to crush, infuse, and filter a fruit into a fine powder. All this, just so we can fool a handful of prehistoric receptors on our tongues. It’s all quite mad, really. Now, if you’ll excuse me, I believe there’s a bapuji cake somewhere that requires my immediate attention.
 
-Now, hold on to your hat. Let’s look at those numbers again.
-
-1975: 7.9 million
-2025: 15.8 million
-
-Wait a minute. $7.9 \times 2 = 15.8$.
-
-This is absolutely extraordinary. It’s a coincidence so perfect, it feels like it was scripted. In the 50 years since I was born, the population of my city has almost exactly doubled.
-
-The frantic, explosive *n*-year doubling of a fantasy town is one thing. But this is something more profound.
-
-My city’s growth has mirrored my life. Its doubling period—the time it takes to completely replicate its 1975 self—is 50 years.
-
-So, what is Calcutta’s exponent? The most beautiful answer isn’t a tiny decimal point representing annual growth.
-
-It's this:
-The Doubling Time ($T_{\text{double}}$) $\approx 50$ years.
-
-The formula for my city's growth, over the course of my life, looks like this:
-$$P(t) = P_0 \times 2^{(t/50)}$$
-Where $P_0$ is the population in 1975 (7.9 million) and $t$ is the number of years since 1975.
-
-This formula is a mathematical description of how my world has transformed around me.
-
-What does this doubling feel like? It means that for every single person who was waiting for a tram on the Maidan, for every voice in the cacophony of the New Market, for every fan in Eden Gardens back in 1975… there are now two.
-
-<GoldLine />
-
-So, if I take this rule—that Kolkata doubles its population every 50 years—and run with it, what happens over the next five centuries? Let’s get our calculators out and our imaginations ready.
-
-We’re starting with 15.8 million people in 2025. A 500-year projection means we’ll have 10 doubling periods ($500 \div 50 = 10$).
-The formula is my city’s current population multiplied by 2, ten times over:
-$$\text{Future Population} = 15,800,000 \times 2^{10}$$
-Now, $2^{10}$ is a hefty 1024.
-So, the population of Kolkata in the year 2525 will be:
-$$15,800,000 \times 1024 = 16,179,200,000$$
-That’s 16.2 billion people.
-
-Let that sink in. That’s more than double the current population of the entire Earth, all crammed into one sprawling mega-megalopolis. I imagine the Howrah Bridge will have evolved into a 300-level spaghetti junction of transport tubes. The concept of a “private room” will be a quaint myth; you’ll rent a “personal cubic meter.” The entire Bengal basin will likely be a single, continent-sized city, where the cry of a fish eagle is something you only hear on ancient audio files. Every square inch will be occupied, and getting a plate of biryani might involve a three-week waiting list. It’s a terrifying, yet darkly hilarious, thought.
-
-<GoldLine />
-
-This powerful idea of exponents didn’t just pop out of nowhere. I got curious about who gave us these tools to predict my city’s absurd future.
-
-The person who really got the ball rolling on exponents was a 16th-century German monk and mathematician named Michael Stifel. He was a fascinating character who, in his 1544 book *Arithmetica integra*, systematically laid out the rules for powers and even used the word “exponent.” Ironically, he also famously used his math skills to predict that the world would end at 8 a.m. on October 19, 1533. When it didn’t, his followers were less than pleased. But his work on exponents (especially powers of 2!) survived his doomsday blunder and gave us the very language to describe this kind of growth.
-
-But who first took this mathematical tool and applied it to the alarming growth of human populations? For that, we turn to the English scholar Thomas Malthus. In 1798, he published his *Essay on the Principle of Population*. He was the one who famously pointed out that populations tend to grow exponentially, he called it “geometrically”, while our ability to produce food grows much slower—“arithmetically”.
-
-He predicted that this mismatch would inevitably lead to famine and misery—what’s now called a “Malthusian catastrophe.” He essentially gave a name to the very panic I feel when I calculate Kolkata having 16.2 billion residents. It seems I’m not the first person to use exponents to give myself a headache about overcrowding. Stifel gave us the “how,” and Malthus gave us the “Oh, dear.”
+Of course, to love a Bapuji Cake is to conveniently ignore the fact that you are consuming a bona fide masterpiece of chemical engineering. Let’s be clear-eyed about this: the cake’s foundational principle is a truly heroic quantity of sugar, a sweetness so profound it likely registers on the Richter scale. It’s not just sugar in the batter, but a payload of candied fruit and petha, which are themselves little more than sugar that’s been cleverly disguised as fruit. This goes a long way to explaining its appeal, but not its astonishing longevity. A truly moist cake should, by all rights, begin to cultivate interesting new life forms within days. Yet the Bapuji Cake endures, thanks to what one must assume is a chemical garrison of preservatives. While the exact formula is a secret known only to the good people at the New Howrah Bakery, it's almost certainly patrolled by tiny, unpronounceable soldiers like Calcium Propionate and perhaps a dash of Sodium Benzoate, a microscopic legion tasked with repelling the barbarian hordes of mold and bacteria. We are, in effect, eating a delicious, nostalgic relic that has been embalmed for freshness, a soft, sweet monument built to defy the relentless march of time and decay, all for the price of a few rupees.
+![bapuji cakes](/images/placeholders/IMG-20250717-WA0006.jpg) 
