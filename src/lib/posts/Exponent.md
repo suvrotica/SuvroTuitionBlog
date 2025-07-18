@@ -22,7 +22,7 @@ thumbnail: "/images/placeholders/IMG-20250718-WA0001.jpg"
 
 
 
-Picture the scene. It’s 1975. The world—and a brand-new me—takes its first gulp of Calcutta air. It was a city of glorious, elegant decay and unstoppable life. The grand colonial buildings were shedding plaster like dandruff in the Marxist air, but the streets buzzed with an energy that could power a small nation. The air was a thick soup of diesel from the iconic yellow Ambassador taxis, the sweet tang of sugarcane juice, and the ever-present humidity that feels like a warm, wet hug. The soundtrack was a constant jangling of tram bells, the shouts of vendors, and the gentle creak of the hand-pulled rickshaws.
+Picture the scene. It’s 1975. The world—and a brand-new me—takes his first baby gulp of Calcutta's polluted air. It was a city of glorious, elegant decay and unstoppable life. The grand colonial buildings were shedding plaster like dandruff in the Marxist air, but the streets buzzed with an energy that could power a small nation. The air was a thick soup of diesel from the iconic yellow Ambassador taxis, the sweet tang of sugarcane juice, and the ever-present humidity that feels like a warm, wet hug. The soundtrack was a constant jangling of tram bells, the shouts of vendors, and the gentle creak of the hand-pulled rickshaws.
 
 
 
