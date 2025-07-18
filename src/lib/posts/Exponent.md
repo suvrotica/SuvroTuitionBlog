@@ -40,9 +40,7 @@ P(t) = P_0 \cdot 2^{t/50}
 $$
 
 Where $P_0$ is the population at a starting year and $t$ is the number of years since that starting year. What does this doubling feel like? It means in 2025, for every single person who was waiting for a tram on the Maidan, for every voice in the cacophony of the New Market, for every fan in Eden Gardens back in 1975… there are now two.
-
 ## A Projection into the Absurd
-
 If I take this rule—that Kolkata doubles its population every 50 years—and run with it, what happens over the next five centuries from 2025? A 500-year projection means we’ll have 10 doubling periods ($500 / 50 = 10$). The formula is my city’s current population multiplied by 2, ten times over:
 
 Where the new $P_0$ is the population in 2025 (15.8 million)
@@ -60,9 +58,7 @@ $$
 That’s **16.2 billion people**.
 
 Let that sink in. That’s more than double the current population of the entire Earth, all crammed into one sprawling mega-megalopolis. I imagine the Howrah Bridge will have evolved into a 300-level spaghetti junction of transport tubes. The concept of a “private room” will be a quaint myth; you’ll rent a “personal cubic meter.” It’s a terrifying, yet darkly hilarious, thought.
-
 ## The Shoulders of Giants
-
 This powerful idea of exponents didn’t just pop out of nowhere. The person who really got the ball rolling was a 16th-century German monk and mathematician named **Michael Stifel**. In his 1544 book *Arithmetica integra*, he systematically laid out the rules for powers and even used the word “exponent.” Ironically, he also famously used his math skills to predict that the world would end at 8 a.m. on October 19, 1533. When it didn’t, his followers were less than pleased. But his work on exponents survived his doomsday blunder and gave us the very language to describe this kind of growth.
 
 But who first applied this tool to the alarming growth of human populations? For that, we turn to the English scholar **Thomas Malthus**. In 1798, he published his *Essay on the Principle of Population*. He was the one who famously pointed out that populations tend to grow exponentially (he called it “geometrically”), while our ability to produce food grows much slower (“arithmetically”). He predicted this mismatch would inevitably lead to what’s now called a “Malthusian catastrophe.” He essentially gave a name to the very panic I feel when I calculate Kolkata having 16.2 billion residents.
