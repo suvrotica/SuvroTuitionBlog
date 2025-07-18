@@ -75,9 +75,7 @@ The problem describes a geometric progression where each new generation is twice
 
     $$\sum_{n=1}^{10} 2^n = 2 + 4 + 8 + 16 + 32 + 64 + 128 + 256 + 512 + 1024 = 2046$$
 
-So, the total lineage produced by that one person over 500 years would be **2,046 people**.
-
-*(Note: This doesn't include the original ancestor. In the final generation alone, which would be born around the year 2525, there would be $2^{10}$, or **1,024** people.)*
+So, the total lineage produced by that one person's one child over 500 years would be **2,046 people**. Two produces twice that or **4,092 people**. 
 
 This exponential logic gives us a tool to understand the frightening speed of a pandemic. During the early days of COVID-19, we all became amateur epidemiologists, anxiously watching the R-number—the average number of people an infected person would pass the virus to. This R-number is the direct driver of the doubling time. An R-value of 3 doesn't just mean three new cases; it means the entire epidemic is on track to triple in size over a single generation of the virus. When we saw case counts doubling every few days, we were witnessing the same mathematical reality in real-time: a simple exponent turning a handful of infections into a global crisis. The Malthusian panic I felt imagining a future Kolkata was the same anxiety the world felt watching the case counts climb that vertical curve.
 
