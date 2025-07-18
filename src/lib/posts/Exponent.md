@@ -104,4 +104,12 @@ Using the equation, the spread of new infections would look like this:
 * **Day 15 (Gen 3):** $10 \times 3^3 = 270$ new cases.
 * **Day 20 (Gen 4):** $10 \times 3^4 = 810$ new cases.
 
-In just **20 days**, the number of new infections generated in a single 5-day period has grown from 10 to over 800, powerfully demonstrating how an R-number above 1 drives explosive, exponential growth. Now imagine how the R number or infection rate or whatever makes it high is so deadly, and why if you now go back to the same equation above and substitute a large R because you sneezed in the Calcutta metro train and infected everyone else in that compartment, train station and on your way back home.
+In just 20 days, the number of new infections generated in a single 5-day period has grown from 10 to over 800, powerfully demonstrating how an R-number above 1 drives explosive, exponential growth. This is why a high reproduction number is so deadly.
+
+Now, imagine applying this to a single superspreader event. Go back to the same equation ($N_n = N_0 \times R^n$), but substitute a much larger R-number from a single act, like an uncovered sneeze in a packed Calcutta metro train. In that dense environment, you might not infect just three people; your personal R-number for that moment could be 20.
+
+Starting with just yourself ($N_0 = 1$), the first generation of new cases would be:
+
+$$N_1 = 1 \times 20^1 = 20$$
+
+From a single person, 20 new branches of the infection tree are instantly created. Even if those 20 people then return to less crowded environments and spread the virus at the normal rate, the epidemic has already made a catastrophic leap forward, fueled by one moment of high transmission. This is the terrifying power of the R-number: it's not just an average, but a measure of potential that can be devastatingly realized in the right conditions.
