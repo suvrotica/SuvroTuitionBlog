@@ -57,4 +57,24 @@ This powerful idea of exponents didn’t just pop out of nowhere. The person who
 
 But who first applied this tool to the alarming growth of human populations? For that, we turn to the English scholar **Thomas Malthus**. In 1798, he published his *Essay on the Principle of Population*. He was the one who famously pointed out that populations tend to grow exponentially (he called it “geometrically”), while our ability to produce food grows much slower (“arithmetically”). He predicted this mismatch would inevitably lead to what’s now called a “Malthusian catastrophe.” He essentially gave a name to the very panic I feel when I calculate Kolkata having 16.2 billion residents.
 
-It seems I’m not the first person to use exponents to give myself a headache about overcrowding. Stifel gave us the “how,” and Malthus gave us the “Oh, dear.”
+It seems I’m not the first person to use exponents to give myself a headache about overcrowding. Stifel gave us the “how,” and Malthus gave us the “Oh, dear.” But I am happy to report I was 1 in 1975, I am still 1, and the descent contribution to the future in this exponential from me is 0. But normally if a person in 2025 in Calcutta were to birth 2 children, and those two children, a generation later, each have two of their own, suddenly one data point becomes two, then four, then eight. That is the quiet, inexorable engine of the exponent at work, hidden in the most personal of life's decisions. By stepping aside from this particular equation, I've ended a potential geometric progression—a small, silent act of defiance against the Malthusian curve.
+
+A single person would produce a total of **2,046 descendants** by the year 2525 under that model.
+
+The problem describes a geometric progression where each new generation is twice the size of the previous one.
+
+1.  **Number of Generations:** The timeframe is 500 years. With a new generation every 50 years, this results in **10 generations** of descendants. ($500 \div 50 = 10$).
+
+2.  **Descendants per Generation:** The number of new people in each generation follows the pattern $2^n$:
+    * **Generation 1 (Year 2075):** $2^1 = 2$ children
+    * **Generation 2 (Year 2125):** $2^2 = 4$ grandchildren
+    * **Generation 3 (Year 2175):** $2^3 = 8$ great-grandchildren
+    * ...and so on, up to the 10th generation.
+
+3.  **Total Descendants:** To find the total number of people produced, we sum the number of descendants from all 10 generations. This is the sum of a geometric series:
+
+    $$\sum_{n=1}^{10} 2^n = 2 + 4 + 8 + 16 + 32 + 64 + 128 + 256 + 512 + 1024 = 2046$$
+
+So, the total lineage produced by that one person over 500 years would be **2,046 people**.
+
+*(Note: This doesn't include the original ancestor. In the final generation alone, which would be born around the year 2525, there would be $2^{10}$, or **1,024** people.)*
