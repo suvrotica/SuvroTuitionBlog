@@ -25,7 +25,7 @@ Now, hold on to your hat. Let’s look at those numbers again.
 1975: 7.9 million
 2025: 15.8 million
 
-Wait a minute. 7.9 × 2 = 15.8.
+Wait a minute. $7.9 \times 2 = 15.8$.
 
 This is absolutely extraordinary. It’s a coincidence so perfect, it feels like it was scripted. In the 50 years since I was born, the population of my city has almost exactly doubled.
 
@@ -36,10 +36,11 @@ My city’s growth has mirrored my life. Its doubling period—the time it takes
 So, what is Calcutta’s exponent? The most beautiful answer isn’t a tiny decimal point representing annual growth.
 
 It's this:
-The Doubling Time (T_{double}) \approx 50 years
+The Doubling Time ($T_{\text{double}}$) $\approx 50$ years.
+
 The formula for my city's growth, over the course of my life, looks like this:
-P(t) = P_0 \times 2^{(t/50)}
-Where P_0 is the population in 1975 (7.9 million) and t is the number of years since 1975. 
+$$P(t) = P_0 \times 2^{(t/50)}$$
+Where $P_0$ is the population in 1975 (7.9 million) and $t$ is the number of years since 1975.
 
 This formula is a mathematical description of how my world has transformed around me.
 
@@ -47,12 +48,12 @@ What does this doubling feel like? It means that for every single person who was
 
 So, if I take this rule—that Kolkata doubles its population every 50 years—and run with it, what happens over the next five centuries? Let’s get our calculators out and our imaginations ready.
 
-We’re starting with 15.8 million people in 2025. A 500-year projection means we’ll have 10 doubling periods (500 ÷ 50 = 10).
+We’re starting with 15.8 million people in 2025. A 500-year projection means we’ll have 10 doubling periods ($500 \div 50 = 10$).
 The formula is my city’s current population multiplied by 2, ten times over:
-$\text{Future Population} = 15,800,000 \times 2^{10}$
-Now, \$2^{10}\$ is a hefty 1024.
+$$\text{Future Population} = 15,800,000 \times 2^{10}$$
+Now, $2^{10}$ is a hefty 1024.
 So, the population of Kolkata in the year 2525 will be:
-$15,800,000 \times 1024 = 16,179,200,000$
+$$15,800,000 \times 1024 = 16,179,200,000$$
 That’s 16.2 billion people.
 
 Let that sink in. That’s more than double the current population of the entire Earth, all crammed into one sprawling mega-megalopolis. I imagine the Howrah Bridge will have evolved into a 300-level spaghetti junction of transport tubes. The concept of a “private room” will be a quaint myth; you’ll rent a “personal cubic meter.” The entire Bengal basin will likely be a single, continent-sized city, where the cry of a fish eagle is something you only hear on ancient audio files. Every square inch will be occupied, and getting a plate of biryani might involve a three-week waiting list. It’s a terrifying, yet darkly hilarious, thought.
