@@ -58,7 +58,7 @@ $$
 
 
 
-Where $P_0$ is the population in 1975 (7.9 million) and $t$ is the number of years since 1975. What does this doubling feel like? It means that for every single person who was waiting for a tram on the Maidan, for every voice in the cacophony of the New Market, for every fan in Eden Gardens back in 1975… there are now two.
+Where $P_0$ is the population at a starting year and $t$ is the number of years since that starting year. What does this doubling feel like? It means in 2025, for every single person who was waiting for a tram on the Maidan, for every voice in the cacophony of the New Market, for every fan in Eden Gardens back in 1975… there are now two.
 
 
 
