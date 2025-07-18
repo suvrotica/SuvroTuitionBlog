@@ -35,8 +35,39 @@ $$
 
 Where $P_0$ is the population at a starting year and $t$ is the number of years since that starting year. What does this doubling feel like? It means in 2025, for every single person who was waiting for a tram on the Maidan, for every voice in the cacophony of the New Market, for every fan in Eden Gardens back in 1975… there are now two.
 
-But how many children, on average, did each generation actually have to produce to get us from 7.9 million in 1975 to 15.8 million in 2025? If we assume a generation length of 25 years, that gives us two full generations across those 50 years. For a population to double over two generations, each person would need to reproduce at a rate $r$ such that $r^2 = 2$, which gives $r = \sqrt{2} \approx 1.414$. That means every individual, on average, had to produce about 1.414 children per generation—or roughly 2.8 children per couple—to maintain this exact doubling pace. It’s a quiet statistical whisper behind the cacophony of city growth: just under three kids per couple, generation after generation, is enough to power an entire metropolis into its next doubling.
+To calculate the *average number of children per person per generation* needed to double a population over a fixed time (e.g. 50 years from 1975 to 2025), we can model it using basic population dynamics under exponential growth.
 
+Since population doubled over 50 years, we know:
+
+$$
+P_{2025} = P_{1975} \cdot 2 = 7.9 \text{ million} \cdot 2 = 15.8 \text{ million}
+$$
+
+Let’s assume non-immigration and no significant change in death rate, and define a *generation* as 25 years (biological generation length). Then, there are **2 generations** in 50 years. I know I am old. 
+
+If each individual in generation 0 produces $c$ children (on average), and those children also reproduce at the same rate $c$, then total multiplication over two generations is:
+
+$$
+text{Net Growth Factor} = c^2
+$$
+
+We know this net factor is 2 (population doubled). So:
+
+$$
+c^2 = 2 \Rightarrow c = \sqrt{2} \approx 1.414
+$$
+
+So, **each person needed to produce about 1.414 children per generation** (on average) to double the population over 50 years (i.e., across two generations).
+
+This corresponds to **2.828 children per couple per generation**. Rounded, **each couple would have to produce about 2.8 children** to double the population in 50 years, assuming stable mortality and no migration.
+
+You can generalize this with:
+
+$$
+r = 2^{1/c}
+$$
+
+Where $c$ is the number of children in the generations during the doubling period.
 
 If I take this rule—that Kolkata doubles its population every 50 years—and run with it, what happens over the next five centuries from 2025? A 500-year projection means we’ll have 10 doubling periods ($500 / 50 = 10$). The formula is my city’s current population multiplied by 2, ten times over:
 
