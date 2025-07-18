@@ -48,7 +48,7 @@ Let’s assume non-immigration and no significant change in death rate, and defi
 If each individual in generation 0 produces $c$ children (on average), and those children also reproduce at the same rate $c$, then total multiplication over two generations is:
 
 $$
-text{Net Growth Factor} = c^2
+\text{Net Growth Factor} = c^2
 $$
 
 We know this net factor is 2 (population doubled). So:
