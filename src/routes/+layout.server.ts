@@ -1,83 +1,48 @@
 // src/routes/+layout.server.ts
-import fs from 'fs/promises';
-import path from 'path';
-import { error } from '@sveltejs/kit';
 
-// Define clear "shapes" for our data
-interface Post {
-	slug: string;
+import type { ServerLoad } from '@sveltejs/kit';
+
+// Define a type for the post metadata for better type safety.
+type Post = {
 	title: string;
-	topic: string;
-}
+	date: string;
+	slug: string;
+	[key: string]: any; // Allows for other optional metadata properties
+};
 
-export interface Topic {
-	topic: string;
-	articles: Omit<Post, 'topic'>[];
-}
+export const load: ServerLoad = async () => {
+	// Use Vite's glob import to get all markdown files at build time.
+	const modules = import.meta.glob('/src/lib/posts/*.md', { eager: true });
 
-/**
- * A simple regex-based frontmatter parser.
- * This is a workaround for a bug in how `import.meta.glob`
- * interacts with mdsvex's preprocessor.
- */
-function parseFrontmatter(content: string): Omit<Post, 'slug'> {
-	const match = content.match(/^---\s*([\s\S]*?)\s*---/);
-	if (!match) {
-		return { title: 'Untitled', topic: 'Uncategorized' };
+	const posts: Post[] = [];
+	for (const path in modules) {
+		const file = modules[path];
+		const slug = path.split('/').pop()?.slice(0, -3);
+
+		// Ensure all parts are valid before proceeding
+		if (file && typeof file === 'object' && 'metadata' in file && slug) {
+			// Type cast metadata to allow for checking optional properties
+			const metadata = file.metadata as Partial<Post>;
+
+			// Check for the required properties before creating the post object.
+			// This prevents errors if a markdown file has missing frontmatter.
+			if (metadata && metadata.title && metadata.date) {
+				posts.push({
+					title: metadata.title,
+					date: metadata.date,
+					slug: slug,
+					...metadata // Add any other optional metadata properties
+				});
+			}
+		}
 	}
 
-	const frontmatter = match[1];
-	const metadata: { [key: string]: string } = {};
-	frontmatter.split('\n').forEach((line) => {
-		const parts = line.split(':');
-		if (parts.length > 1) {
-			const key = parts[0].trim();
-			const value = parts.slice(1).join(':').trim().replace(/['"]/g, '');
-			metadata[key] = value;
-		}
-	});
+	// Sort posts by date, newest first.
+	const sortedPosts = posts.sort(
+		(a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+	);
 
 	return {
-		title: metadata.title || 'Untitled',
-		topic: metadata.topic || 'Uncategorized'
+		posts: sortedPosts
 	};
-}
-
-export const load = async () => {
-	try {
-		const postsDir = path.resolve(process.cwd(), 'src/lib/posts');
-		const postFiles = await fs.readdir(postsDir);
-
-		const posts: Post[] = await Promise.all(
-			postFiles
-				.filter((file) => file.endsWith('.md'))
-				.map(async (file) => {
-					const slug = file.replace('.md', '');
-					const content = await fs.readFile(path.join(postsDir, file), 'utf-8');
-					const metadata = parseFrontmatter(content);
-					return { ...metadata, slug };
-				})
-		);
-
-		// Group posts by topic
-		const topics = posts.reduce<Topic[]>((acc, post) => {
-			let topic = acc.find((t) => t.topic === post.topic);
-			if (!topic) {
-				topic = { topic: post.topic, articles: [] };
-				acc.push(topic);
-			}
-			topic.articles.push({ slug: post.slug, title: post.title });
-			// Sort articles within the topic alphabetically by title
-			topic.articles.sort((a, b) => a.title.localeCompare(b.title));
-			return acc;
-		}, []);
-
-		// Sort topics alphabetically
-		topics.sort((a, b) => a.topic.localeCompare(b.topic));
-
-		return { topics };
-	} catch (e) {
-		console.error(e);
-		error(500, 'Could not load posts for layout.');
-	}
 };
