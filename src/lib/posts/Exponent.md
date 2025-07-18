@@ -3,9 +3,9 @@ title: "On Exponential Growth and Calcutta"
 date: "2025-07-18"
 description: "A terrifying look at the population mathematically 500 years from now"
 topic: "Food & Science"
-thumbnail: "/images/placeholders/monk-fruit.png"
+thumbnail: "/images/placeholders/Kolkata500.png"
 ---
-![An oil painting of a monk, evoking the history of monk fruit.](/images/placeholders/monk-fruit.png)
+![kolkata 500 years AI imagined](/images/placeholders/Kolkata500.png)
 ## The Personal Exponent of Calcutta
 
 Picture the scene. It’s 1975. The world—and a brand-new me—takes my first gulp of Calcutta air. What was that city like? It was a city of glorious, elegant decay and unstoppable life. The grand colonial buildings were shedding plaster like dandruff in the Marxist air, but the streets buzzed with an energy that could power a small nation. The air was a thick soup of diesel from the iconic yellow Ambassador taxis, the sweet tang of sugarcane juice from street-side presses, and the ever-present humidity that feels like a warm, wet hug.
