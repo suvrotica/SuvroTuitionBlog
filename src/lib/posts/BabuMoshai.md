@@ -1,7 +1,7 @@
 ---
 title: "The Litany of Today's Bengali Lower Middle-Class Angst"
 
-description: "An everyday bengali lower middle-class bengali"
+description: "A lower middle-class bengali babu moshai"
 
 topic: "Life"
 
