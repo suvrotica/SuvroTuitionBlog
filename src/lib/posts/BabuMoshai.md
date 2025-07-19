@@ -1,6 +1,11 @@
 ---
 title: "The Litany of Today's Bengali Lower Middle-Class Angst"
 date: 2025-03-24
+description: "An everyday bengali lower middle-class bengali"
+
+topic: "Life"
+
+thumbnail: "/images/placeholders/91d2477e-63e4-45a3-9c5c-0532df45fe0d.png"
 ---
 ![babu moshai](91d2477e-63e4-45a3-9c5c-0532df45fe0d.png) 
 Calcutta, the bustling urban carcass pretending to breathe, thrives on a diet of philosophical constipation and chronic dissatisfaction. The Bengali lower middle-class family—this ambitious little social experiment, caught permanently between intellectual diarrhoea and economic constipation—is forever trapped in a Kafkaesque limbo of EMI hell and LIC policy redemption fantasies. Each morning, a Bengali middle-class dad wakes up already disappointed, grouching about humidity (like he just now discovered it's moist out there), muttering lovingly unprintable things to the malfunctioning ceiling fan, his eternal nemesis. The fan creaks and shudders, spinning less out of mechanical duty than stubborn vengeance against Newton's laws of motion.
