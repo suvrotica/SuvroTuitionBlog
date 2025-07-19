@@ -8,10 +8,10 @@ description: "A perspective on the rat race"
 
 topic: "Work"
 
-thumbnail: "/images/placeholders/Ambition.png"
+thumbnail: "/images/placeholders/IMG-20250719-WA0000.jpg"
 
 ---
-![Ambitious bird](/images/placeholders/Ambition.png)
+![Ambitious bird](/images/placeholders/IMG-20250719-WA0000.jpg)
 
 Ambition. There’s an ugly word. Comes from the Latin *ambitio*, meaning—no surprise—"going around" (round and round in circles), desperately begging for votes, overpromising the sky and other lies. Essentially, a politician's daily bowel movement. Now ask yourself: do you really want your life's theme song to echo the gastrointestinal routine of a Roman senator, circling pathetically, shaking sweaty hands and making false promises about aqueducts using a metal for plumbing that we now know is a toxin? Precisely.
 
