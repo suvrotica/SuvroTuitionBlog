@@ -7,7 +7,7 @@ topic: "Life"
 
 thumbnail: "/images/placeholders/91d2477e-63e4-45a3-9c5c-0532df45fe0d.png"
 ---
-![babu moshai](91d2477e-63e4-45a3-9c5c-0532df45fe0d.png) 
+![babu moshai](/images/placeholders/91d2477e-63e4-45a3-9c5c-0532df45fe0d.png) 
 Calcutta, the bustling urban carcass pretending to breathe, thrives on a diet of philosophical constipation and chronic dissatisfaction. The Bengali lower middle-class family—this ambitious little social experiment, caught permanently between intellectual diarrhoea and economic constipation—is forever trapped in a Kafkaesque limbo of EMI hell and LIC policy redemption fantasies. Each morning, a Bengali middle-class dad wakes up already disappointed, grouching about humidity (like he just now discovered it's moist out there), muttering lovingly unprintable things to the malfunctioning ceiling fan, his eternal nemesis. The fan creaks and shudders, spinning less out of mechanical duty than stubborn vengeance against Newton's laws of motion.
 
 This man, our typical Babumoshai, armed with a torn newspaper folded precisely to the job section he’ll never read, launches himself heroically into the gory arena called public transportation. Battling with elbows sharper than Bose’s electromagnetic waves, he wields Newton’s third law of motion—every shove has an equal and opposite shove back—only to arrive late at a job where promotion is as mythical as spontaneous orgasm. Here, he pretends to work, the boss pretends to pay, and everybody pretends to believe in karma, destiny, and provident fund withdrawals.
