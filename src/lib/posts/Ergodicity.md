@@ -61,8 +61,25 @@ You can look at the average outcome across thousands of investors on a single da
 
 In fact, **wealth behaves like a non-ergodic process**. The average of everyone else’s outcomes says nothing about what will happen to you. The order of returns, the timing of shocks, and the fact that ruin is irreversible—these make time your real enemy.
 
-So no, the stock market is not ergodic. The long-term reality of one person often looks nothing like the average result of the crowd. You can drown in a river whose average depth is three feet.
+So no, the stock market is not ergodic. The long-term reality of one person often looks nothing like the average result of the crowd. 
 
 It's a comforting thought, when the world *is* ergodic. When one sample can teach you the whole story. When averages mean something. When you can trust the math. But whenever you can't—when the floods rise, or the rupee falls, or your retirement vanishes in a red line—just remember: averages don't save you in a non-ergodic world.
 
 They only *pretend* to.
+
+**You can drown in a river whose average depth is three feet.**
+
+You can drown in a river whose average depth is three feet" is a metaphor that exposes the danger of relying solely on averages—especially in systems that are non-ergodic or that involve high variance.
+
+An average depth of three feet suggests the river is shallow and therefore safe. But that average may hide crucial details: maybe much of the river is two feet deep, but there's one sudden drop where it's ten feet. If you step into that deep spot and can’t swim, the average won’t save you. You’ll drown—despite what the statistics said.
+
+The lesson is this: averages often smooth over rare but catastrophic events. In systems where outcomes are uneven, where tail risks exist, or where irreversible loss is possible, averages give a false sense of security.
+
+**the drowning-in-a-three-foot-average-river** metaphor is *not* about the failure of time averages. It’s about the **misleading nature of ensemble averages or global averages in the presence of high variance**.
+
+Here's the core issue: in this case, the problem is **distributional asymmetry**, not temporal unfolding. The average depth is computed across space (or locations), not over time. But **that spatial average conceals local extremes**. You could say it's the ensemble average of river depth at different points. But it tells you nothing about *where* it’s safe to step.
+
+The fallacy arises when we assume that the average implies typicality or safety. It doesn't—**especially when the underlying distribution includes extreme values or fat tails**. The metaphor exposes how *risk is not evenly distributed*, and how average metrics are blind to local fatal conditions.
+
+So while this isn't a failure of time averages per se, it is **a critique of using summary statistics (like averages) in systems where variation or extremes can dominate the outcome**—and that’s a conceptual cousin of non-ergodicity. In both, the average fails to describe what any one individual actually experiences or survives.
+
