@@ -51,4 +51,18 @@ Voila! The result from the time-spanning experiment is the same as the result fr
 
 The chai-wallah's pot is an **ergodic system**.
 
-It's a comforting thought. Sometimes, the universe is reliable. Sometimes, one small sample, whether it's one cup of chai or one hour in its life, really does tell you the whole story. But as for that floodwater... well, that's the universe reminding you that an average can be the most dangerous lie of all.
+**Why the Stock Market is a Trap for the Uncareful**
+
+Now imagine trying to “win” in the stock market. People often quote average returns—as if you can expect a nice, steady 7% gain each year like clockwork. But markets are not chai pots. They are chaotic, jagged, and brutally multiplicative.
+
+You invest ₹10,000. One year you gain 50%. Next year you lose 50%. You’re not back where you started—you’re down to ₹7,500. The math is not symmetrical. Losses hurt more than gains help.
+
+You can look at the average outcome across thousands of investors on a single day—that's the **ensemble average**. Some win, some lose, some get lucky with timing. But for you, over time, all it takes is one major crash, one bad bet, and you might never recover. That’s the **time average**, and it’s far less kind.
+
+In fact, **wealth behaves like a non-ergodic process**. The average of everyone else’s outcomes says nothing about what will happen to you. The order of returns, the timing of shocks, and the fact that ruin is irreversible—these make time your real enemy.
+
+So no, the stock market is not ergodic. The long-term reality of one person often looks nothing like the average result of the crowd. You can drown in a river whose average depth is three feet.
+
+It's a comforting thought, when the world *is* ergodic. When one sample can teach you the whole story. When averages mean something. When you can trust the math. But whenever you can't—when the floods rise, or the rupee falls, or your retirement vanishes in a red line—just remember: averages don't save you in a non-ergodic world.
+
+They only *pretend* to.
