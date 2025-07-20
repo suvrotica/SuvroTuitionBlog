@@ -7,7 +7,7 @@ topic: "Statistics"
 
 thumbnail: "/images/placeholders/erg.png"
 ---
-![babu moshai](/images/placeholders/91d2477erg.png)
+![4 feet in filth water](/images/placeholders/erg.png)
 
 The universe, you see, has a funny way of telling its secrets. Sometimes it whispers them in the spin of a galaxy, and other times it screams them from something as humble as a street-food cart. And one of its most peculiar secrets is a five-dollar word that sounds like a medical condition: **ergodicity**.
 
