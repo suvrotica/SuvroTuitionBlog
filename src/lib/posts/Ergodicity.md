@@ -5,9 +5,9 @@ description: "The Secret of the Universe, Told by a Puchka-Walla"
 
 topic: "Statistics"
 
-thumbnail: "/images/placeholders/91d2477e-63e4-45a3-9c5c-0532df45fe0d.png"
+thumbnail: "/images/placeholders/erg.png"
 ---
-![babu moshai](/images/placeholders/91d2477e-63e4-45a3-9c5c-0532df45fe0d.png)
+![babu moshai](/images/placeholders/91d2477erg.png)
 
 The universe, you see, has a funny way of telling its secrets. Sometimes it whispers them in the spin of a galaxy, and other times it screams them from something as humble as a street-food cart. And one of its most peculiar secrets is a five-dollar word that sounds like a medical condition: **ergodicity**.
 
