@@ -1,7 +1,7 @@
 ---
 title: "Ergodicity"
 
-description: "The Secret of the Universe, Told by a Puchka-Walla"
+description: "The Secret of the Universe, Told by a Chai-Walla"
 
 topic: "Statistics"
 
