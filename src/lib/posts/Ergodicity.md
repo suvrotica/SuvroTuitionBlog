@@ -1,8 +1,15 @@
+---
+title: "Ergodicity"
 
+description: "The Secret of the Universe, Told by a Puchka-Walla"
 
-### The Secret of the Universe, Told by a Puchka-Walla
+topic: "Statistics"
 
-Alright, settle in. The universe, you see, has a funny way of telling its secrets. Sometimes it whispers them in the spin of a galaxy, and other times it screams them from something as humble as a street-food cart. And one of its most peculiar secrets is a five-dollar word that sounds like a medical condition: **ergodicity**.
+thumbnail: "/images/placeholders/91d2477e-63e4-45a3-9c5c-0532df45fe0d.png"
+---
+![babu moshai](/images/placeholders/91d2477e-63e4-45a3-9c5c-0532df45fe0d.png)
+
+The universe, you see, has a funny way of telling its secrets. Sometimes it whispers them in the spin of a galaxy, and other times it screams them from something as humble as a street-food cart. And one of its most peculiar secrets is a five-dollar word that sounds like a medical condition: **ergodicity**.
 
 So, what in the name of Howrah Bridge is it?
 
@@ -14,11 +21,9 @@ Imagine you want to understand the grand, chaotic, beautiful, and occasionally m
 
 Now, for the magic trick. **Ergodicity** is simply the idea that for some systems, the results from Strategy One and Strategy Two are exactly the same. The long story of one random spot is identical to the snapshot story of all the spots. It's the universe saying, "Go on, take a sample. The little picture is the same as the big picture."
 
----
+**Why a Four-Foot Flood is a Liar**
 
-### Why a Four-Foot Flood is a Liar
-
-So let’s talk about that four feet of water sloshing around your living room in Salt Lake City after a proper gully-washer of a storm. Why is this situation a perfect example of a system that is **non-ergodic**?
+So let’s talk about that four feet of water sloshing around your living room in South Sinthee after a proper gully-washer of a storm. Why is this situation a perfect example of a system that is **non-ergodic**?
 
 Let's use our two strategies to measure the "average water level" of your neighbourhood.
 
@@ -32,9 +37,7 @@ And there you have it. The snapshot story (four feet of catastrophe) is wildly, 
 
 The long-term average completely fails to capture the dramatic, life-altering reality of that rare event. You can't understand the sheer panic of a flood by looking at the 20-year average. You had to be there.
 
----
-
-### Where Ergodicity Holds True: The Great Calcutta Chai Stall
+**Where Ergodicity Holds True: The Great Calcutta Chai Stall**
 
 So, is anything in this chaotic world actually ergodic? Yes! And for that, we return to our roadside chai-wallah.
 
