@@ -67,9 +67,7 @@ It's a comforting thought, when the world *is* ergodic. When one sample can teac
 
 They only *pretend* to.
 
-**You can drown in a river whose average depth is three feet.**
-
-You can drown in a river whose average depth is three feet" is a metaphor that exposes the danger of relying solely on averages—especially in systems that are non-ergodic or that involve high variance.
+**You can drown in a river whose average depth is three feet.** is a metaphor that exposes the danger of relying solely on averages—especially in systems that are non-ergodic or that involve high variance.
 
 An average depth of three feet suggests the river is shallow and therefore safe. But that average may hide crucial details: maybe much of the river is two feet deep, but there's one sudden drop where it's ten feet. If you step into that deep spot and can’t swim, the average won’t save you. You’ll drown—despite what the statistics said.
 
