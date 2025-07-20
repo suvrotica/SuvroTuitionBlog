@@ -27,7 +27,7 @@ So let’s talk about that four feet of water sloshing around your living room i
 
 Let's use our two strategies to measure the "average water level" of your neighbourhood.
 
-Using the **ensemble average** (our city-wide flash mob), we take a snapshot during the storm. We send out our friends with rulers. They measure four feet at your door, four feet at your neighbour's, four feet by the local sweet shop. The average is unequivocal: four feet. The reality of that moment is drenched, ruined furniture and the distinct possibility of a snake swimming in through the back door. The story is "FLOOD!"
+Using the **ensemble average** (our city-wide flash mob), we take a snapshot during the storm. We send out our friends with rulers. They measure four feet at your door, four feet at your neighbour's, four feet by the local sweet shop the Baishakhi Mishti shop. The average is unequivocal: four feet. The reality of that moment is drenched, ruined furniture and the distinct possibility of a snake swimming in through the back door. The story is "FLOOD!"
 
 But what about the **time average** (our immortal observer)? We plant a single measuring stick outside your house and check it every day for twenty years. For 7,300 days, the reading is zero. Zilch. Nada. Dry as a bone. Then, for maybe five or six days out of those two decades, it's a terrifying four feet.
 
