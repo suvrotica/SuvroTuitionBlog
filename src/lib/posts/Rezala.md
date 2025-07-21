@@ -19,7 +19,7 @@ So, whence this spectral white colour? The answer lies in a deliberate and fasci
 The base of the gravy is a carefully prepared yogurt, often whisked to a silken consistency. This provides a gentle tang, a foundational sourness that cuts through the richness. But yogurt on its own can be tricky; it has a tendency to split when heated. The genius of Rezala lies in its stabilizing agents.
 
 $$
-\text{Yogurt} + \text{Heat} \rightarrow \text{Protein Denaturation} + \text{Curdling}
+\text{Yogurt} + 🔥 \rightarrow \text{Protein Denaturation} + \text{Curdling}
 $$
 
 To counteract this, the cooks turned to pastes. A smooth, fine paste of soaked cashew nuts ($Anacardium$ $occidentale$) and white poppy seeds ($Papaver$ $somniferum$) is stirred into the yogurt. This is where the magic happens. The starch from the nuts and seeds acts as an emulsifier and thickener, preventing the yogurt proteins from clumping together and creating that signature, velvety-smooth gravy. The paste also lends a subtle sweetness and a nutty depth that is quintessentially Mughlai.
@@ -27,7 +27,7 @@ To counteract this, the cooks turned to pastes. A smooth, fine paste of soaked c
 The chicken itself is often marinated in a similar mixture of yogurt and spices, a process that does more than just flavour the meat. The lactic acid in the yogurt begins to break down the proteins in the chicken, a chemical process that tenderizes it beautifully.
 
 $$
-\text{Lactic Acid} + \text{Muscle Protein} \rightarrow \text{Denaturation} \rightarrow \text{Tenderization}
+\text{Lactic Acid} + 💪 \rightarrow \text{Denaturation} \rightarrow \text{Tenderization}
 $$
 
 The aromatics are where the soul of Rezala truly resides. It’s not about a blast of heat but a symphony of fragrances. Whole spices like green cardamom, cloves, cinnamon, and bay leaves are gently tempered in ghee, releasing their essential oils. But the final flourish, the secret whisper that makes Rezala so regal, is the addition of *kewra* water (an extract from the pandanus flower) and sometimes a drop of *meetha attar*, a sweet, edible perfume. These floral, ethereal scents are the final nod to its Awadhi ancestry, transforming a simple meal into an experience of sensory indulgence. A few dried red chillies are often fried and added more for a smoky hint and visual contrast than for fiery heat.
