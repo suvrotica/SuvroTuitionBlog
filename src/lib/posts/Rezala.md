@@ -21,7 +21,7 @@ The base of the gravy is a carefully prepared yogurt, often whisked to a silken 
 $$
 \text{Yogurt} + 🔥 \rightarrow \text{PD} + \text{Curdling}
 $$
-$PD=Protein Denaturation$
+$$PD=Protein \quad Denaturation$$
 To counteract this, the cooks turned to pastes. A smooth, fine paste of soaked cashew nuts ($Anacardium$ $occidentale$) and white poppy seeds ($Papaver$ $somniferum$) is stirred into the yogurt. This is where the magic happens. The starch from the nuts and seeds acts as an emulsifier and thickener, preventing the yogurt proteins from clumping together and creating that signature, velvety-smooth gravy. The paste also lends a subtle sweetness and a nutty depth that is quintessentially Mughlai.
 
 The chicken itself is often marinated in a similar mixture of yogurt and spices, a process that does more than just flavour the meat. The lactic acid in the yogurt begins to break down the proteins in the chicken, chemical processes of denaturation and tenderization respectively.
