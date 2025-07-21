@@ -5,7 +5,7 @@ description: "Long before the term 'semiconductor' was coined, Jagadish Chandra 
 topic: "History of Science"
 thumbnail: "/images/placeholders/IMG-20250721-WA0001.jpg"
 ---
-![jagadish chandra bose](/images/placeholders/IMG-20250721-WA0001.jpg){width=300}
+<img src="/images/placeholders/IMG-20250721-WA0001.jpg" alt="A portrait of Jagadish Chandra Bose" class="post-image-constrained" />
 Pick up your smartphone. Feel its cool, monolithic smoothness. Within that slab of glass and metal hums a universe built on silicon, a world governed by the almost mystical laws of semiconductor physics. We take it for granted, this ability to trap lightning in a bottle, to make inert matter compute, communicate, and create. We think of its genesis in Bell Labs, in the manicured lawns of Silicon Valley.
 
 But what if I told you the story began much earlier, in a place far removed from California's sunshine? What if the first whisper of this revolution was heard not in the 1940s, but in the 1890s? And not in a corporate lab, but in a dusty, humid laboratory in Calcutta, by a man who was as much a physicist as he was a philosopher.
