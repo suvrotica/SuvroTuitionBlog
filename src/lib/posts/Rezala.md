@@ -1,6 +1,5 @@
 ---
-title: "Chicken Rezala: A Tale of Royal Kitchens, Unlikely Ingredients, and a Silken Gravy"
-date: "2025-07-21"
+title: "Chicken Rezala"
 description: "A journey into the history and science behind the ethereal white curry that is Kolkata's beloved Chicken Rezala."
 topic: "Food & Science"
 thumbnail: "/images/placeholders/IMG-20250721-WA0003.jpg"
