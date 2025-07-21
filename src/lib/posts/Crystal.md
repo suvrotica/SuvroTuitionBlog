@@ -29,7 +29,7 @@ A radio wave is an alternating current. Its electric field oscillates back and f
 Bose's device, this humble meeting of metal and crystal, was performing a trick we now call **rectification**. It was acting as a one-way valve for electricity. The junction between the metal point and the crystal surface allowed the current from the radio wave to flow through much more easily in one direction than the other. It chopped off the negative-going half of the wave, turning the frantic oscillation into a series of positive pulses.
 
 $$
-\text{AC} \xrightarrow{\text{Bose's Crystal Junction}} \text{Pulsating DC)}
+\text{AC} \xrightarrow{\text{Bose's Crystal Junction}} \text{Pulsating DC}
 $$
 
 This behaviour, this **nonlinear conduction**, is the absolute, fundamental hallmark of a semiconductor. The point-contact on the crystal was, for all intents and purposes, the world's first **solid-state semiconductor diode**.
