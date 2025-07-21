@@ -78,7 +78,9 @@ pre.shiki { @apply p-4 rounded-lg overflow-x-auto; }
 	@apply w-4 h-4 rounded-full cursor-pointer border-none;
 	background-color: #D4AF47;
 }
-
+.post-image-constrained {
+	@apply max-w-xs mx-auto my-6 rounded-lg shadow-lg; /* max-w-xs is 320px, centers it, and adds margin/styling */
+		  }
 /* FIX: Removed hover:text-gold to prevent the build error */
 .tts-lang-toggle { @apply p-1 bg-transparent border-none text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors; }
 /* === TEXT-TO-SPEECH COMPONENT STYLES END === */
