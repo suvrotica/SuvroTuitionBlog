@@ -3,9 +3,9 @@ title: "Chicken Rezala: A Tale of Royal Kitchens, Unlikely Ingredients, and a Si
 date: "2025-07-21"
 description: "A journey into the history and science behind the ethereal white curry that is Kolkata's beloved Chicken Rezala."
 topic: "Food & Science"
-thumbnail: "/images/blog/chicken-rezala.jpg"
+thumbnail: "/images/placeholders/IMG-20250721-WA0003.jpg"
 ---
-
+![rezala](/images/placeholders/IMG-20250721-WA0003.jpg) 
 There are certain dishes that seem to carry stories in their very aroma, a culinary inheritance passed down through generations, whispering tales of bygone eras. Chicken Rezala is one such dish. To the uninitiated, it might appear as a rather unassuming, pale curry, a stark contrast to the fiery reds and vibrant yellows that dominate the Indian culinary landscape. But to those who know, that ivory-white gravy holds a saga of royal kitchens, cultural amalgamation, and a delightful defiance of culinary norms.
 
 My first encounter with Rezala was not in a grand, historic restaurant in Kolkata, the city most synonymous with this dish, but through the excited recollections of a friend, his voice filled with a nostalgia so potent I could almost taste the dish he was describing. He spoke of a silken, fragrant gravy, of chicken so tender it surrendered at the mere suggestion of a fork, and a flavour that was at once rich and delicately restrained. It was a description that lodged itself in my mind, a culinary enigma I had to unravel.
