@@ -1,5 +1,5 @@
 ---
-title: "Water, Memory, and Magical Thinking: Why Kolkata Must Rethink Homeopathy"
+title: "Magical Thinking: Homeopathy"
 description: "A deep dive into the historical allure and scientific absurdity of homeopathy, exploring why this 18th-century pseudoscience persists in a city of science like Kolkata."
 topic: "Science & Society"
 thumbnail: "/images/placeholders/24fb85b4-ec6e-4033-8c3d-c8844279dffa.png"
