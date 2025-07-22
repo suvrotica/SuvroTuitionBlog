@@ -1,6 +1,6 @@
 ---
-title: "Magical Thinking: Homeopathy"
-description: "A deep dive into the historical allure and scientific absurdity of homeopathy, exploring why this 18th-century pseudoscience persists in a city of science like Kolkata."
+title: "Homeopathy"
+description: "A deep dive into the historical allure and scientific absurdity of homeopathy, exploring why this 18th-century pseudoscience persists in a city of science like Calcutta."
 topic: "Science & Society"
 thumbnail: "/images/placeholders/24fb85b4-ec6e-4033-8c3d-c8844279dffa.png"
 ---
@@ -36,9 +36,9 @@ The homeopathic retort to this inconvenient fact is the notion that water "remem
 
 Decades of rigorous, double-blind, placebo-controlled studies—the gold standard of medical evidence—have confirmed this. A landmark 2015 meta-analysis by Australia’s National Health and Medical Research Council, which scrutinised over 225 studies, delivered a blunt verdict: homeopathy is no more effective than a placebo. A sugar pill.
 
-So why does it persist, especially here, in the city of Jagadish Chandra Bose and Satyendra Nath Bose? The answer is—these luminaries never represented the backwater that is Calcutta, and hidden in a tangled web of culture, muddled economics, physiology and hard to pin down human psychology. 
+So why does it persist, especially here, in the city of Jagadish Chandra Bose and Satyendra Nath Bose? The answer to the first question is—these luminaries never represented the backwater that is Calcutta, the answer to why homeopathy sometimes seems to work is more complicated and hidden in a tangled web of culture, muddled economics, physiology and hard to pin down human psychology. 
 
-Mainly the reason is physiology is not entirely emperical, homeopathy works for the same reason placebo work, or that in their appearance our human body under the hood self-repairs. Homeopaths often do not provide a wrong allopathic treatment (in India where doctors are often fake or half baked) or provide something their allopathic counterparts, constrained by time and patient load, do not: a long, empathetic consultation. They listen.  This act of being heard is powerful, and it is the engine of the placebo effect—the well-documented phenomenon where belief in a treatment can elicit a perceived or real improvement. 
+Mainly the reason is neither physiology (normalness) nor pathology (illness) is entirely emperical (that is easy to design or test with experimental setups), homeopathy works for the same reason placebo work, or that in their appearance our human body under the hood self-repairs. Homeopaths often do not provide a wrong allopathic treatment (in India where doctors are often fake or half baked) or provide something their allopathic counterparts, constrained by time and patient load, do not: a long, empathetic consultation. They listen.  This act of being heard is powerful, and it is the engine of the placebo effect—the well-documented phenomenon where belief in a treatment can elicit a perceived or real improvement. 
 
 But empathy is not a substitute for medicine, at least not if the disease is serious or needs immediate remedy. The placebo effect cannot shrink a cancerous tumour, it cannot neutralise a virus, and it cannot correct a metabolic disorder like diabetes. The real, pernicious harm of homeopathy lies in this deception. When people turn to these sugar pills for serious ailments, they delay or forego evidence-based treatments that could save their lives. They waste precious months while a manageable condition becomes critical. The World Health Organization has explicitly warned against using homeopathy for life-threatening diseases like HIV, tuberculosis, and malaria—illnesses that remain a stark reality for many in our state.
 
