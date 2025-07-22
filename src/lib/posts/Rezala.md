@@ -2,9 +2,9 @@
 title: "Chicken Rezala"
 description: "A journey into the history and science behind the ethereal white curry that is Kolkata's beloved Chicken Rezala."
 topic: "Food & Science"
-thumbnail: "/images/placeholders/IMG-20250721-WA0003.jpg"
+thumbnail: "/images/placeholders/757fbd57-9053-4e12-95a3-b17bc2008cef.png"
 ---
-![rezala](/images/placeholders/IMG-20250721-WA0003.jpg) 
+![rezala](/images/placeholders/757fbd57-9053-4e12-95a3-b17bc2008cef.png) 
 
 Let’s get one thing straight. If you ask a generic AI to generate a picture of "Indian curry," it will probably spit out something brownish-red or violently yellow, bubbling with enough oil to worry a cardiologist. That’s the stereotype, the default setting, the `curry_base_v1.0`. And then there’s Chicken Rezala. Stereotypes are everywhere, like those of Muslims in India, that they have more babies, or in the world that they are terrorists. Of course I am no endorser of Islam, but I am no endorser of any religion, all being equally false, including the one that's now put the Mughals out of the Indian history school syllabus—but anyway this is about food, but I want to make it clear, it's not the religious people or the dumb dogmas that give religions any reason to be written about, it's the ordinary people, often the docile, mute, religiously cuckolded and blindfolded faithful artisans back in those ancient times—cooks, artists, sometimes their patron kings, often philosophers and thinkers that need mention from time to time, primarily because of their secular contributions that would be felt multiplied in time downstreams. I am glad to be a bengali and have grown up uninterested and unindoctrinated to any faith, especially in modern time the inordinate time that some people spend thinking about and praying to nonexistent beings is utterly incommensurate and irritatingly anachronistic.
 
