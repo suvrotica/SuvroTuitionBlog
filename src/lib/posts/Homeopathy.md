@@ -22,6 +22,10 @@ This is not a matter of scientific debate; it’s a matter of fundamental chemis
 
 $$ 
 \text{Number of molecules in a 30C dilution} \approx \frac{N_A}{\text{Dilution Factor}} 
+
+$$
+
+$$
 = \frac{6.022 \times 10^{23}}{10^{60}} \approx 0 
 $$
 
