@@ -21,9 +21,12 @@ Let's pause to comprehend that number. A one followed by sixty zeroes. There are
 This is not a matter of scientific debate; it’s a matter of fundamental chemistry, governed by a constant discovered by Amedeo Avogadro. Avogadro's number, $N_A$, tells us how many particles are in one mole of a substance, roughly $6.022 \times 10^{23}$. Once you dilute past this point—a mere 12C potency—you have effectively run out of molecules.
 
 $$ 
-\text{Number of molecules in a 30C dilution} \approx \frac{N_A}{\text{Dilution Factor}} 
-
+\text{Number of molecules in a 30C dilution} 
 $$
+$$
+\approx \frac{N_A}{\text{Dilution Factor}} 
+$$
+
 
 $$
 = \frac{6.022 \times 10^{23}}{10^{60}} \approx 0 
