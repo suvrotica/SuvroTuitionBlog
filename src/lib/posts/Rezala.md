@@ -6,7 +6,7 @@ thumbnail: "/images/placeholders/IMG-20250721-WA0003.jpg"
 ---
 ![rezala](/images/placeholders/IMG-20250721-WA0003.jpg) 
 
-Let’s get one thing straight. If you ask a generic AI to generate a picture of "Indian curry," it will probably spit out something brownish-red or violently yellow, bubbling with enough oil to worry a cardiologist. That’s the stereotype, the default setting, the `curry_base_v1.0`. And then there’s Chicken Rezala.
+Let’s get one thing straight. If you ask a generic AI to generate a picture of "Indian curry," it will probably spit out something brownish-red or violently yellow, bubbling with enough oil to worry a cardiologist. That’s the stereotype, the default setting, the `curry_base_v1.0`. And then there’s Chicken Rezala. Stereotypes are everywhere, like those of Muslims in India, that they have more babies, or in the world that they are terrorists. Of course I am no endorser of Islam, but I am no endorser of any religion including the one that's now put the Mughals out of the history books—but anyway this is about food, but I want to make it clear it's not the religious people or the dumb dogmas give religions any reason to be written about, it's the ordinary people, often the dumb religuously cuckolded and faithful artisans, cooks, artists, sometimes kings, thinkers that need a mention from time to time.
 
 Rezala waltzes into the room in a pristine white tuxedo while everyone else is wearing a Jackson Pollock-inspired kurta. It’s the bug in the matrix of Indian cuisine, a dish that seems to have read the rulebook on curries and then politely used it as a coaster. It's rich without being heavy, aromatic without being pungent, and conspicuously, defiantly, *white*.
 
