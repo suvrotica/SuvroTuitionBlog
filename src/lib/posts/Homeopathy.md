@@ -21,7 +21,8 @@ Let's pause to comprehend that number. A one followed by sixty zeroes. There are
 This is not a matter of scientific debate; it’s a matter of fundamental chemistry, governed by a constant discovered by Amedeo Avogadro. Avogadro's number, $N_A$, tells us how many particles are in one mole of a substance, roughly $6.022 \times 10^{23}$. Once you dilute past this point—a mere 12C potency—you have effectively run out of molecules.
 
 $$ 
-\text{Number of molecules in a 30C dilution} \approx \frac{N_A}{\text{Dilution Factor}} = \frac{6.022 \times 10^{23}}{10^{60}} \approx 0 
+\text{Number of molecules in a 30C dilution} \approx \frac{N_A}{\text{Dilution Factor}} 
+= \frac{6.022 \times 10^{23}}{10^{60}} \approx 0 
 $$
 
 The homeopathic retort to this inconvenient fact is the notion that water "remembers" the properties of the substance it once contained. This is a bewitching idea, but it has no basis in physics. Water molecules are in a constant state of flux, forming and breaking hydrogen bonds on a timescale of picoseconds. They hold no memory. To believe they do is to abandon the principles of chemistry in favour of magical thinking, which people in the world have in bucket full..
