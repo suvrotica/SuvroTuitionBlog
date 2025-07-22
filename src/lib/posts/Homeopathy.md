@@ -3,8 +3,9 @@ title: "Water, Memory, and Magical Thinking: Why Kolkata Must Rethink Homeopathy
 date: "2025-07-22"
 description: "A deep dive into the historical allure and scientific absurdity of homeopathy, exploring why this 18th-century pseudoscience persists in a city of science like Kolkata."
 topic: "Science & Society"
-thumbnail: "/images/placeholders/homeopathy-kolkata.jpg"
+thumbnail: "/images/placeholders/24fb85b4-ec6e-4033-8c3d-c8844279dffa.png"
 ---
+![bengali eating medicine bottles](/images/placeholders/24fb85b4-ec6e-4033-8c3d-c8844279dffa.png)
 
 There is a certain, almost sacramental, ritual to homeopathy in a Bengali household. The tiny, identical white globules, dispensed from a slim glass vial, tasting faintly of sugar and nothing else. The solemn instructions: don't touch them with your hands, tip them into the cap, place them under your tongue, and avoid eating or drinking for thirty minutes. It’s a scene replayed across Calcutta, from the grand old houses of North in Dumdum, Sinthee where I live, to Ballygunge and everywhere else in the city of joy I can't afford to stuff in a sentence. It feels gentle, ancient, and profoundly… well, *ours*. But behind this comforting facade lies a story of historical happenstance, scientific impossibility, and a collective delusion that a city of reason should have shed long ago—yet it hasn't.
 
