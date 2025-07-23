@@ -35,7 +35,7 @@ Where $P_0$ is the population at a starting year and $t$ is the number of years 
 
 <GoldLine />
 
-### Interactive Population Projection
+**Interactive Population Projection**
 
 The formula above is a powerful tool for modeling growth. The component below uses this exact formula to project the population of various cities 500 years into the future. You can select different cities and change the **doubling period** to see how dramatically this single variable affects the outcome.
 
@@ -43,7 +43,7 @@ The formula above is a powerful tool for modeling growth. The component below us
 
 <GoldLine />
 
-### A Glimpse into the Future
+**A Glimpse into the Future**
 
 What does this doubling feel like? It means in 2025, for every single person who was waiting for a tram on the Maidan, for every voice in the cacophony of the New Market, for every fan in Eden Gardens back in 1975… there are now two.
 
@@ -61,26 +61,26 @@ $$
 
 That’s **16.2 billion people**. Let that sink in. That’s more than double the current population of the entire Earth, all crammed into one sprawling mega-megalopolis. I imagine the Howrah Bridge will have evolved into a 300-level spaghetti junction of transport tubes. The concept of a “private room” will be a quaint myth; you’ll rent a “personal cubic meter.” It’s a terrifying, yet darkly hilarious, thought.
 
-### The History of a Powerful Idea
+**The History of a Powerful Idea**
 
-This powerful idea of exponents didn’t just pop out of nowhere. The person who really got the ball rolling was a 16th-century German monk and mathematician named **Michael Stifel**. [cite_start]In his 1544 book *Arithmetica integra*, he systematically laid out the rules for powers and even used the word “exponent.” [cite: 4483, 4484] [cite_start]Ironically, he also famously used his math skills to predict that the world would end at 8 a.m. on October 19, 1533. [cite: 4485] When it didn’t, his followers were less than pleased. [cite_start]But his work on exponents survived his doomsday blunder and gave us the very language to describe this kind of growth. [cite: 4485, 4486]
+This powerful idea of exponents didn’t just pop out of nowhere. The person who really got the ball rolling was a 16th-century German monk and mathematician named **Michael Stifel**. In his 1544 book *Arithmetica integra*, he systematically laid out the rules for powers and even used the word “exponent.” Ironically, he also famously used his math skills to predict that the world would end at 8 a.m. on October 19, 1533. When it didn’t, his followers were less than pleased. But his work on exponents survived his doomsday blunder and gave us the very language to describe this kind of growth.
 
-But who first applied this tool to the alarming growth of human populations? For that, we turn to the English scholar **Thomas Malthus**. [cite_start]In 1798, he published his *Essay on the Principle of Population*. [cite: 4488, 4489] [cite_start]He was the one who famously pointed out that populations tend to grow exponentially (he called it “geometrically”), while our ability to produce food grows much slower (“arithmetically”). [cite: 4489, 4490] He essentially gave a name to the very panic I feel when I calculate Kolkata having 16.2 billion residents.
+But who first applied this tool to the alarming growth of human populations? For that, we turn to the English scholar **Thomas Malthus**. In 1798, he published his *Essay on the Principle of Population*. He was the one who famously pointed out that populations tend to grow exponentially (he called it “geometrically”), while our ability to produce food grows much slower (“arithmetically”). He essentially gave a name to the very panic I feel when I calculate Kolkata having 16.2 billion residents.
 
-### The Personal Exponent
+**The Personal Exponent**
 
 I am happy to report that while I was 1 in 1975, I am still 1 in 2025, and my contribution to this exponential future is 0. But if a person in Calcutta were to have two children, and those two children, a generation later, each have two of their own, suddenly one data point becomes two, then four, then eight. That is the quiet, inexorable engine of the exponent at work, hidden in the most personal of life's decisions.
 
-[cite_start]Let's do the math: if one person has two children, and this pattern continues for 10 generations over 500 years, the total lineage produced would be **2,046 people**. [cite: 4501] [cite_start]The last generation alone would consist of **1024 people**, all descended from that initial choice. [cite: 4501] By stepping aside from this particular equation, I've ended a potential geometric progression—a small, silent act of defiance against the Malthusian curve.
+Let's do the math: if one person has two children, and this pattern continues for 10 generations over 500 years, the total lineage produced would be **2,046 people**. The last generation alone would consist of **1024 people**, all descended from that initial choice. By stepping aside from this particular equation, I've ended a potential geometric progression—a small, silent act of defiance against the Malthusian curve.
 
-### From Pandemics to Viral Memes
+**From Pandemics to Viral Memes**
 
-This exponential logic gives us a tool to understand the frightening speed of a pandemic. [cite_start]During the early days of COVID-19, we all became amateur epidemiologists, anxiously watching the R-number—the average number of people an infected person would pass the virus to. [cite: 4504] The growth in new cases follows a simple exponential equation:
+This exponential logic gives us a tool to understand the frightening speed of a pandemic. During the early days of COVID-19, we all became amateur epidemiologists, anxiously watching the R-number—the average number of people an infected person would pass the virus to. The growth in new cases follows a simple exponential equation:
 
 $$
 N_n = N_0 \times R^n
 $$
 
-[cite_start]Where $N_0$ is the initial number of cases, $R$ is the reproduction number, and $n$ is the number of generations. [cite: 4511] [cite_start]An R-value of 3 doesn't just mean three new cases; it means the entire epidemic is on track to triple in size over a single generation of the virus. [cite: 4505] This is the same mathematical reality that turns a handful of infections into a global crisis.
+Where $N_0$ is the initial number of cases, $R$ is the reproduction number, and $n$ is the number of generations. An R-value of 3 doesn't just mean three new cases; it means the entire epidemic is on track to triple in size over a single generation of the virus. This is the same mathematical reality that turns a handful of infections into a global crisis.
 
-Now, think of it this way: suppose you share this post's link with just 5 people, and each of them passes it along to 5 more, and so on. [cite_start]In just 10 steps, you’d reach $5^{10} = 9,765,625$—nearly 10 million people. [cite: 4528, 4529] This is **going viral**, another way to look at exponential growth, but instead of babies or viruses, it's ideas that multiply. What begins as one quiet act—a single share—can grow into a digital crowd the size of a metropolis, echoing that same exponential curve that once gave Malthus nightmares.
+Now, think of it this way: suppose you share this post's link with just 5 people, and each of them passes it along to 5 more, and so on. In just 10 steps, you’d reach $5^{10} = 9,765,625$—nearly 10 million people. This is **going viral**, another way to look at exponential growth, but instead of babies or viruses, it's ideas that multiply. What begins as one quiet act—a single share—can grow into a digital crowd the size of a metropolis, echoing that same exponential curve that once gave Malthus nightmares.
