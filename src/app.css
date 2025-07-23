@@ -1,13 +1,20 @@
-/* src/app.css */
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
 body {
 	@apply bg-neutral-200 dark:bg-neutral-900;
+	/* --- ADD: Define the custom property here --- */
+	--color-gold: #D4AF47;
 }
 
-h1, h2, h3, h4, h5, h6, blockquote {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote {
 	@apply prose prose-neutral my-4 leading-none tracking-tight text-neutral-900 subpixel-antialiased md:tracking-wide dark:text-neutral-100;
 }
 
@@ -22,7 +29,11 @@ p {
 	@apply text-justify text-base leading-relaxed text-neutral-800 subpixel-antialiased dark:text-neutral-300;
 }
 
-footer, article, section, header, nav {
+footer,
+article,
+section,
+header,
+nav {
 	@apply m-0 bg-neutral-100 p-0 dark:bg-neutral-900;
 }
 
@@ -61,7 +72,6 @@ button { @apply rounded-lg bg-neutral-600 px-4 py-2 text-sm font-medium text-whi
 
 pre.shiki { @apply p-4 rounded-lg overflow-x-auto; }
 
-/* === TEXT-TO-SPEECH COMPONENT STYLES START === */
 .tts-container { @apply my-6 p-6 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-neutral-100 dark:bg-neutral-800/50; }
 .tts-text { @apply w-full h-40 p-3 rounded-md border border-neutral-300 dark:border-neutral-600 bg-white dark:bg-neutral-900 text-neutral-800 dark:text-neutral-200 resize-none; }
 .tts-text:disabled { @apply bg-neutral-200 dark:bg-neutral-800/50 cursor-not-allowed; }
@@ -72,15 +82,45 @@ pre.shiki { @apply p-4 rounded-lg overflow-x-auto; }
 
 .tts-speed-input::-webkit-slider-thumb {
 	@apply w-4 h-4 rounded-full cursor-pointer appearance-none;
-	background-color: #D4AF47;
+	/* --- CHANGE: Use the CSS variable --- */
+	background-color: var(--color-gold);
 }
 .tts-speed-input::-moz-range-thumb {
 	@apply w-4 h-4 rounded-full cursor-pointer border-none;
-	background-color: #D4AF47;
+	/* --- CHANGE: Use the CSS variable --- */
+	background-color: var(--color-gold);
 }
+
 .post-image-constrained {
-	@apply max-w-xs mx-auto my-6 rounded-lg shadow-lg; /* max-w-xs is 320px, centers it, and adds margin/styling */
-		  }
-/* FIX: Removed hover:text-gold to prevent the build error */
-.tts-lang-toggle { @apply p-1 bg-transparent border-none text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors; }
-/* === TEXT-TO-SPEECH COMPONENT STYLES END === */
+	@apply max-w-xs mx-auto my-6 rounded-lg shadow-lg;
+}
+
+.tts-lang-toggle {
+	@apply p-1 bg-transparent border-none text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors;
+}
+
+.legend { @apply flex flex-wrap gap-4 mt-4 justify-center; }
+.legend-item { @apply flex items-center text-sm text-neutral-700 dark:text-neutral-300; }
+.legend-color { @apply w-4 h-4 rounded-full mr-2; }
+
+.d3-axis .domain {
+	@apply stroke-neutral-500 dark:stroke-neutral-400;
+}
+.d3-axis .tick line {
+	@apply stroke-neutral-400 dark:stroke-neutral-500;
+}
+.d3-axis .tick text {
+	@apply fill-neutral-600 dark:fill-neutral-300 text-xs;
+}
+
+.d3-tooltip {
+	@apply absolute p-3 text-sm rounded-lg min-w-32 pointer-events-none transition-opacity opacity-0;
+	@apply bg-neutral-900/80 dark:bg-neutral-800/80 text-neutral-100 border border-neutral-700 shadow-xl;
+	@apply backdrop-blur-sm;
+}
+.d3-tooltip-line {
+	@apply stroke-neutral-500 dark:stroke-neutral-400 stroke-2;
+}
+.d3-tooltip-circle {
+	fill: var(--color-gold);
+}
