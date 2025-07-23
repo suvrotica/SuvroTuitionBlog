@@ -5,9 +5,9 @@ description: "Bloated with baloney"
 
 topic: "Life"
 
-thumbnail: "/images/placeholders/Pasted image 20240912170851.png"
+thumbnail: "/images/placeholders/IMG-20250723-WA0003.jpg"
 ---
-![1](`/images/placeholders/Pasted image 20240912170851.png`)
+![1](/images/placeholders/IMG-20250723-WA0003.jpg)
 Sometimes I feel like I might run out of words. I've already run out of many things, and I'm destined to peter out someday when the claptrap of the word-spool retires, frustrated with the reception. It's a crowded world, a world full of happenstance and probabilities that make jostling and sweating the only reward for the large majority of people.  
 ![2](/images/placeholders/YGEiXDBfQq2kVwzN7vUNIw.jpeg)
 It's strictly Darwinian and Malthusian; I realized that more in India, where a reasonable way to explain it would be to say that when someone's born, another falls off in the ocean. It's crowded. And the opportunity to work with the existing resources is often deceptively bureaucratic or nonexistent. The whole economy runs on the premise that if you make a rupee from a billion people, you have a billion rupees, but someone has to keep the equations balanced and keep these people at a point where they are in a position to spend that rupee, not if they are fighting adversities that are hidden away by the media, which never has the time to cover any real news. The advertisements of the shining faces of India that are portrayed outside are just masquerading an image that India never was, behind which the government and it's beneficiary businesses siphon tax payer money in the name of public projects to Swiss accounts. It's magic, except this level of collusion is well known and considered a well deserved dowry given to a politician.  
