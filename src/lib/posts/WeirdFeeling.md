@@ -15,8 +15,8 @@ It's strictly Darwinian and Malthusian; I realized that more in India, where a r
 The real India doesn't live in villages, cities, etcetera. The real India lives in the myths that obfuscate the reality of what is real and what is not. What we need is to get out of all this culture-centric baggage, rediscover ourselves, and secure a place in the world. This caste system, these Hindu-Muslim-Christian religious barricades, have to go; if there has to be any fiction that's important, that's the country, period. Let all the old man on the cloud fairytale rest in peace where it deserves, in our libraries and our shared cultures.  
 ![4](/images/placeholders/gDpjDHSHS72jcAoV6n7VEg.webp)
 The corruption that continues to erode India is perhaps the only legacy that we seem to be passing on with great efficiency, with morally bankrupt people at the helm, goons festooned with accolades, and a generally well-nourished spectrum of propaganda that has awarded the Indian media the status of a jester. The self-congratulatory style of saying whatever you want to say while keeping your head buried in the sand works well and gets lots of sponsorship, at least.  
-![[/images/placeholders/63wfYug_QOiLNCcvvo6OAg.webp]]
+![5](/images/placeholders/63wfYug_QOiLNCcvvo6OAg.webp)
 I don't know why I bother to write these laments. Nobody cares. But somehow something compels me to write, just in case there's a future leader or thinker who might get inspired. Even a nobody has the right to dream good things for the place he calls home, no matter if that place is hostile to him, or doesn't want him. I was born here, and that's something that's not going to change, nor are the impressions of my childhood years that has been formative in creating this neural network I call me.
-![[SzZopeKuTwuTaPKi_LpzLw.webp]]
+![6](SzZopeKuTwuTaPKi_LpzLw.webp)
 
 
