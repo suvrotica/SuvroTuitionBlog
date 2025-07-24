@@ -1,8 +1,8 @@
 ---
 title: "On Monks, Fruit, and Defying the Scale"
-date: "2025-07-17"
+
 description: "A somewhat bewildered look into the strange world of monk fruit, a sugar substitute that seems almost too good to be true."
-topic: "Food & Science"
+category: "Food"
 thumbnail: "/images/placeholders/monk-fruit.png"
 ---
 ![An oil painting of a monk, evoking the history of monk fruit.](/images/placeholders/monk-fruit.png)
