@@ -27,7 +27,7 @@ Makes him stab his kid instead.<br>
 
 Well don't worry I'm making it up,<br>
 I'm a story too, except not interesting.<br>
-Not in a doggerel I don't think,<br>
+Not even in a doggerel way, I don't think,<br>
 My life feverishly furiously depressing.<br>
 <br>
 </div>
