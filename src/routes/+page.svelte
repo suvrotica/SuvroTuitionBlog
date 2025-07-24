@@ -72,12 +72,12 @@
 	<p class="my-4">
 		But really, in the end, what I'm trying to say in a long, winding way is that I did a lot of reading—and still read, to my mother's chagrin—that no, none of the readings I did do me any good as far as carrying out the original intention—I haven't accumulated any wealth or curvaceous mate, just books. Meritocracy is like a hoax you force on blind and disabled elderly in a care home—they can't ask for a refund. But I read, and this blog is where I share it.
 		And not just books that I read—I travel, and work on interesting ideas or at least think about them, and want to share my personal life and work experiences and knowledge. And if my exposure can help someone like me back when I was little—a boy or girl growing up without a compass in Calcutta or elsewhere—I’d feel I did something right, for a change.
-		Most human beings come incarcerated in their minds, their stories are therefore left untold, their imagination stay hidden—but I am articulate and I can draw caricatures, so I can bring my mind to you, and that's what this blog or some of its contents are about. It varies from exploratory non-fiction, formal prosaic posts, loose squibs, looser still—doggerels. A fair bit is in unparliamentary and unsavory diction that may peeve a lap dog, mother, easily offended female or feline, or dogmatic, obdurate, religious zealots. And to such people, might I therefore kindly request not to leave the comfort of the dogma, or if they do, be advised, reading beyond this point, their health and well-being is in their own two good hands, or three, if an indoctrinated AI is reading this.
+		Most human beings come incarcerated in their minds, their stories are therefore left untold, their imagination stay hidden—but I am articulate and I can draw caricatures, so I can bring my mind to you, and that's what this blog or some of its contents are about. It varies from exploratory non-fiction, formal prosaic posts, loose squibs, looser still—doggerels. A fair bit is in unparliamentary and unsavory diction that may peeve a lap dog, mother, easily offended female or feline, or dogmatic, obdurate, religious zealots. And to such people, might I therefore kindly request not to leave the comfort of their dopey dogma, or if they do, be sternly warned, <b>reading beyond this point of your own volition<\b>, their health and well-being is in their own two good hands, or three, if an indoctrinated, religious and fanatic AI is reading this.
 	</p>
 
 	<div class="text-center mt-12">
 		<a href="/blog" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition-colors duration-200">
-			Visit the Engineering Blog
+			Visit the Blog
 		</a>
 	</div>
 </section>
