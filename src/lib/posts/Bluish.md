@@ -8,6 +8,8 @@ thumbnail: "/images/placeholders/IMG-20250724-WA0007.jpg"
 ---
 ![blue bengali man](/images/placeholders/IMG-20250724-WA0007.jpg) 
 
+<main class="prose prose-sm leading-relaxed max-w-prose mx-auto text-justify text-balance font-serif">
+ 
 It's bluish drab watercolor glue,
 A few drinks my mood sinks.
 I am just not feeling well today,
@@ -23,7 +25,9 @@ Dripping downstairs on someone's head.
 Annoying him and forcing him to look up and yell,
 Makes him stab his kid instead.
 
-Will don't worry I'm making it up,
+Well don't worry I'm making it up,
 I'm a story too, except not interesting.
 Not in a doggerel I don't think,
 My life is fucking depressing.
+
+</main>
