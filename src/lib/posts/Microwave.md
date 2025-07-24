@@ -1,12 +1,12 @@
 ---
 title: "Microwave"
 
-description: "And god said let their be microwave"
+description: "And the goodly god said let there be microwave—and so it was done"
 
 category: "non-fiction"  
-thumbnail: "/images/placeholders/723ccc8e-1bcd-4c1e-b678-219bce8504ee.png"
+thumbnail: "/images/placeholders/IMG-20250724-WA0009.jpg"
 ---
-![clockface](/images/placeholders/723ccc8e-1bcd-4c1e-b678-219bce8504ee.png) 
+![goodly](/images/placeholders/IMG-20250724-WA0009.jpg) 
 
 Calcutta—is a city where entropy doesn't just increase—it metastasizes. Walk down rashbehari avenue in the july heat and you will not only discover spontaneous human combustion, but also the truth that the big bang wasn’t an event 13.8 billion years ago, but rather, something ongoing: a continuous, ceaselessly tooting cosmic poot whose faint echo is what astrophysicists pompously call the cosmic microwave background radiation. Fancy words for something that's essentially the universe’s weak residual flatulence from when it was a teenager.
 
