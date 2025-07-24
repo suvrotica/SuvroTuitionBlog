@@ -15,7 +15,7 @@ Picture this. You've got the most sophisticated object in the known universe sit
 
 For the longest time, we've been approaching it a bit like a mechanic trying to understand a Ferrari by just listening to the engine. We stick little probes in, we watch bits light up on an MRI scan when you think about your dog, and we say, "Aha! That bit there is the 'dog' bit!" It's all very clever, but it's a bit like trying to appreciate the Mona Lisa by analyzing the chemical composition of the paint. We're cataloguing the ingredients, but we haven't got the faintest clue about the recipe, let alone the art.
 
-This is what you've rightly called the "language issue." We're basically tourists in the country of the mind. We can point at things and learn a few nouns—"this is a neuron," "that's the hippocampus"—but we can't speak a lick of the local dialect. We can't hold a conversation. We don't understand the grammar, the poetry, the idioms of thought itself.
+This is what is called the "language issue." We're basically tourists in the country of the mind. We can point at things and learn a few nouns—"this is a neuron," "that's the hippocampus"—but we can't speak a lick of the local dialect. We can't hold a conversation. We don't understand the grammar, the poetry, the idioms of thought itself.
 
 And that's because we might have been using the wrong kind of dictionary all along. The brain probably doesn't speak in words or in computer code. The new, slightly bonkers, and utterly brilliant idea is that the brain speaks in *shapes*.
 
