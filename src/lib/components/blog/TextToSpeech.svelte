@@ -6,21 +6,37 @@
 	export let lang: string = 'en-US';
 
 	// STATE
-	let text: string = 'Many people say they have no choice but to embrace the changes, even as they come to terms with the loss of freedom and spontaneity.';
+	let text: string = '';
 	let isSupported = false;
 	let isSpeaking = false;
 	let isPaused = false;
 	let speed = 1;
 	let currentCharacter = 0;
-
 	let utterance: SpeechSynthesisUtterance;
+	
+	// NEW: State for available voices and check for the specific voice
+	let voices: SpeechSynthesisVoice[] = [];
+	let isVoiceAvailable = false;
+
+	// NEW: Function to populate and check for voices
+	function populateVoiceList() {
+		if (!isSupported) return;
+		voices = window.speechSynthesis.getVoices();
+		isVoiceAvailable = voices.some(v => v.lang === lang);
+	}
 
 	onMount(() => {
 		if ('speechSynthesis' in window) {
 			isSupported = true;
-			utterance = new SpeechSynthesisUtterance();
-			utterance.lang = lang;
+			
+			// Initial population of voices
+			populateVoiceList();
 
+			// Voices are loaded asynchronously, so we listen for the `voiceschanged` event
+			window.speechSynthesis.onvoiceschanged = populateVoiceList;
+
+			utterance = new SpeechSynthesisUtterance();
+			
 			utterance.onend = () => {
 				isSpeaking = false;
 				isPaused = false;
@@ -30,32 +46,43 @@
 			utterance.onboundary = (event) => {
 				currentCharacter = event.charIndex;
 			};
-		}
 
-		if (contentSelector) {
-			const element = document.querySelector(contentSelector);
-			if (element) {
-				text = (element as HTMLElement).innerText;
+			if (contentSelector) {
+				const element = document.querySelector(contentSelector);
+				if (element) {
+					text = (element as HTMLElement).innerText;
+				}
 			}
 		}
 
 		return () => {
 			if (isSupported) {
+				window.speechSynthesis.onvoiceschanged = null;
 				window.speechSynthesis.cancel();
 			}
 		};
 	});
 
 	function playText() {
-		if (!isSupported || !text) return;
+		if (!isSupported || !text || !isVoiceAvailable) return;
+		
 		if (speechSynthesis.paused && speechSynthesis.speaking) {
 			isPaused = false;
 			return speechSynthesis.resume();
 		}
+		
 		if (speechSynthesis.speaking) return;
+
+		// Find and assign the specific voice for better reliability
+		const voice = voices.find(v => v.lang === lang);
+		if (voice) {
+			utterance.voice = voice;
+		}
+		
 		utterance.text = text;
 		utterance.rate = speed || 1;
 		utterance.lang = lang;
+		
 		speechSynthesis.speak(utterance);
 		isSpeaking = true;
 		isPaused = false;
@@ -69,7 +96,9 @@
 	}
 
 	function stopText() {
-		speechSynthesis.resume();
+		if(speechSynthesis.speaking) {
+			speechSynthesis.resume(); // Ensure it's not paused before cancelling
+		}
 		speechSynthesis.cancel();
 		isSpeaking = false;
 		isPaused = false;
@@ -77,21 +106,19 @@
 	}
 
 	function handleSpeedChange() {
-		// No need to update the `speed` variable here, as `bind:value` on the input handles it.
-		// Just re-apply the new speed if speech is active.
 		if (speechSynthesis.speaking) {
 			const wasPaused = isPaused;
+			const currentText = utterance.text; // Grab text before stopping
 			stopText();
+
+			// A small delay allows the synthesis engine to reset properly
 			setTimeout(() => {
-				const remainingText = text.substring(currentCharacter);
+				const remainingText = currentText.substring(currentCharacter);
 				if (remainingText) {
-					utterance.text = remainingText;
-					utterance.rate = speed || 1;
-					utterance.lang = lang;
-					speechSynthesis.speak(utterance);
-					isSpeaking = true;
+					playText(); // playText will now correctly find and set the voice
 					if (wasPaused) {
-						pauseText();
+						// A small delay here too ensures the speech has started before pausing
+						setTimeout(pauseText, 50);
 					}
 				}
 			}, 50);
@@ -100,8 +127,12 @@
 </script>
 
 {#if isSupported}
-	{#if !contentSelector}
-		<div class="tts-container not-prose">
+	<div class="tts-container not-prose">
+		{#if !isVoiceAvailable}
+			<p class="text-sm text-amber-600 dark:text-amber-400">
+				A Text-to-Speech voice for this language ('{lang}') is not available in your browser.
+			</p>
+		{:else if !contentSelector}
 			<textarea
 				class="tts-text"
 				bind:value={text}
@@ -128,7 +159,7 @@
 							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect x="6" y="4" width="4" height="16" /><rect x="14" y="4" width="4" height="16" /></svg>
 						</button>
 					{:else}
-						<button on:click={playText} aria-label="Play" disabled={!text}>
+						<button on:click={playText} aria-label="Play" disabled={!text || !isVoiceAvailable}>
 							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><polygon points="5 3 19 12 5 21 5 3" /></svg>
 						</button>
 					{/if}
@@ -137,9 +168,7 @@
 					</button>
 				</div>
 			</div>
-		</div>
-	{:else}
-		<div class="tts-container not-prose">
+		{:else}
 			<div class="tts-controls">
 				<label class="tts-speed-label">
 					<span>Speed</span>
@@ -160,7 +189,7 @@
 							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect x="6" y="4" width="4" height="16" /><rect x="14" y="4" width="4" height="16" /></svg>
 						</button>
 					{:else}
-						<button on:click={playText} aria-label="Play" disabled={!text}>
+						<button on:click={playText} aria-label="Play" disabled={!text || !isVoiceAvailable}>
 							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><polygon points="5 3 19 12 5 21 5 3" /></svg>
 						</button>
 					{/if}
@@ -169,8 +198,8 @@
 					</button>
 				</div>
 			</div>
-		</div>
-	{/if}
+		{/if}
+	</div>
 {:else}
 	<div class="tts-container not-prose">
 		<p class="text-sm text-red-600 dark:text-red-400">
@@ -178,8 +207,3 @@
 		</p>
 	</div>
 {/if}
-
-<style>
-	/* Targeting the number input arrows for better dark mode visibility */
-	/* No changes to styles are needed */
-</style>

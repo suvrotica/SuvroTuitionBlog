@@ -1,4 +1,4 @@
-# Context file generated on: Thursday, July 24, 2025 at 8:36:44 AM GMT+5:30
+# Context file generated on: Thursday, July 24, 2025 at 12:25:11 PM GMT+5:30
 ---
 
 # Project File Layout
@@ -54,6 +54,7 @@
 │   │   │   └── posts.ts
 │   │   ├── index.ts
 │   │   └── posts
+│   │       ├── adbhut-anubhuti.md
 │   │       ├── Apophenia.md
 │   │       ├── BabuMoshai.md
 │   │       ├── Crystal.md
@@ -666,45 +667,36 @@ export {};
 	import { onMount } from 'svelte';
 
 	// PROPS
-	/**
-	 * A CSS selector for the element containing the text to be read.
-	 * e.g., "#post-content"
-	 */
 	export let contentSelector: string = '';
+	export let lang: string = 'en-US';
 
 	// STATE
-	let text: string = 'Many people say they have no choice but to embrace the changes, even as they come to terms with the loss of freedom and spontaneity.'; // Default text
+	let text: string = 'Many people say they have no choice but to embrace the changes, even as they come to terms with the loss of freedom and spontaneity.';
 	let isSupported = false;
 	let isSpeaking = false;
 	let isPaused = false;
 	let speed = 1;
 	let currentCharacter = 0;
 
-	// DOM-element bindings
-	let speedInput: HTMLInputElement;
-
-	// We create a single utterance instance and reuse it.
 	let utterance: SpeechSynthesisUtterance;
 
 	onMount(() => {
 		if ('speechSynthesis' in window) {
 			isSupported = true;
 			utterance = new SpeechSynthesisUtterance();
+			utterance.lang = lang;
 
-			// When speech ends, reset the state.
 			utterance.onend = () => {
 				isSpeaking = false;
 				isPaused = false;
 				currentCharacter = 0;
 			};
 
-			// Track progress to allow for resuming or changing speed mid-speech.
 			utterance.onboundary = (event) => {
 				currentCharacter = event.charIndex;
 			};
 		}
 
-		// If a content selector is provided, extract the text from the DOM.
 		if (contentSelector) {
 			const element = document.querySelector(contentSelector);
 			if (element) {
@@ -712,7 +704,6 @@ export {};
 			}
 		}
 
-		// Cleanup: Ensure speech is stopped when the component is unmounted.
 		return () => {
 			if (isSupported) {
 				window.speechSynthesis.cancel();
@@ -722,18 +713,14 @@ export {};
 
 	function playText() {
 		if (!isSupported || !text) return;
-
-		// If we are paused, just resume.
 		if (speechSynthesis.paused && speechSynthesis.speaking) {
 			isPaused = false;
 			return speechSynthesis.resume();
 		}
-
-		// If we are already speaking, do nothing.
 		if (speechSynthesis.speaking) return;
-
 		utterance.text = text;
 		utterance.rate = speed || 1;
+		utterance.lang = lang;
 		speechSynthesis.speak(utterance);
 		isSpeaking = true;
 		isPaused = false;
@@ -747,7 +734,7 @@ export {};
 	}
 
 	function stopText() {
-		speechSynthesis.resume(); // Ensure it's not paused before cancelling.
+		speechSynthesis.resume();
 		speechSynthesis.cancel();
 		isSpeaking = false;
 		isPaused = false;
@@ -755,120 +742,111 @@ export {};
 	}
 
 	function handleSpeedChange() {
-		// If speaking, stop and restart from the current position to apply the new speed.
+		// No need to update the `speed` variable here, as `bind:value` on the input handles it.
+		// Just re-apply the new speed if speech is active.
 		if (speechSynthesis.speaking) {
+			const wasPaused = isPaused;
 			stopText();
-			// A brief delay to allow the cancel command to process fully.
 			setTimeout(() => {
 				const remainingText = text.substring(currentCharacter);
 				if (remainingText) {
 					utterance.text = remainingText;
 					utterance.rate = speed || 1;
+					utterance.lang = lang;
 					speechSynthesis.speak(utterance);
 					isSpeaking = true;
+					if (wasPaused) {
+						pauseText();
+					}
 				}
 			}, 50);
 		}
 	}
 </script>
 
-<div class="interactive-component-wrapper not-prose">
-	{#if isSupported}
-		<textarea
-			class="w-full h-48 p-3 rounded-md bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 focus:ring-2 focus:ring-gold dark:focus:ring-gold transition-all"
-			bind:value={text}
-			placeholder="Enter text to speak..."
-		></textarea>
-		<div class="flex items-center justify-between mt-4">
-			<div class="flex items-center gap-2">
-				<label for="speed" class="text-sm text-neutral-600 dark:text-neutral-400">Speed</label>
-				<input
-					type="number"
-					id="speed"
-					name="speed"
-					min="0.5"
-					max="2"
-					step="0.1"
-					class="w-20 rounded-md border-neutral-300 dark:border-neutral-700 bg-neutral-100 dark:bg-neutral-800 text-center"
-					bind:value={speed}
-					onchange={handleSpeedChange}
-					bind:this={speedInput}
-				/>
-			</div>
-
-			<div class="flex items-center gap-2">
-				{#if isSpeaking && !isPaused}
-					<button onclick={pauseText} aria-label="Pause">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="20"
-							height="20"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							class="w-5 h-5"
-						>
-							<rect x="6" y="4" width="4" height="16" /><rect x="14" y="4" width="4" height="16" />
-						</svg>
+{#if isSupported}
+	{#if !contentSelector}
+		<div class="tts-container not-prose">
+			<textarea
+				class="tts-text"
+				bind:value={text}
+				disabled={isSpeaking}
+				placeholder="Enter text to speak..."
+			></textarea>
+			<div class="tts-controls">
+				<label class="tts-speed-label">
+					<span>Speed</span>
+					<input
+						type="range"
+						min="0.5"
+						max="2"
+						step="0.1"
+						class="tts-speed-input"
+						bind:value={speed}
+						on:input={handleSpeedChange}
+					/>
+					<span class="w-8 text-center font-mono">{speed.toFixed(1)}x</span>
+				</label>
+				<div class="tts-actions">
+					{#if isSpeaking && !isPaused}
+						<button on:click={pauseText} aria-label="Pause">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect x="6" y="4" width="4" height="16" /><rect x="14" y="4" width="4" height="16" /></svg>
+						</button>
+					{:else}
+						<button on:click={playText} aria-label="Play" disabled={!text}>
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><polygon points="5 3 19 12 5 21 5 3" /></svg>
+						</button>
+					{/if}
+					<button on:click={stopText} disabled={!isSpeaking} aria-label="Stop">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /></svg>
 					</button>
-				{:else}
-					<button onclick={playText} aria-label="Play" disabled={!text}>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="20"
-							height="20"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							class="w-5 h-5"
-						>
-							<polygon points="5 3 19 12 5 21 5 3" />
-						</svg>
-					</button>
-				{/if}
-
-				<button onclick={stopText} disabled={!isSpeaking} aria-label="Stop">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="20"
-						height="20"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						class="w-5 h-5"
-					>
-						<rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-					</svg>
-				</button>
+				</div>
 			</div>
 		</div>
 	{:else}
+		<div class="tts-container not-prose">
+			<div class="tts-controls">
+				<label class="tts-speed-label">
+					<span>Speed</span>
+					<input
+						type="range"
+						min="0.5"
+						max="2"
+						step="0.1"
+						class="tts-speed-input"
+						bind:value={speed}
+						on:input={handleSpeedChange}
+					/>
+					<span class="w-8 text-center font-mono">{speed.toFixed(1)}x</span>
+				</label>
+				<div class="tts-actions">
+					{#if isSpeaking && !isPaused}
+						<button on:click={pauseText} aria-label="Pause">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect x="6" y="4" width="4" height="16" /><rect x="14" y="4" width="4" height="16" /></svg>
+						</button>
+					{:else}
+						<button on:click={playText} aria-label="Play" disabled={!text}>
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><polygon points="5 3 19 12 5 21 5 3" /></svg>
+						</button>
+					{/if}
+					<button on:click={stopText} disabled={!isSpeaking} aria-label="Stop">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /></svg>
+					</button>
+				</div>
+			</div>
+		</div>
+	{/if}
+{:else}
+	<div class="tts-container not-prose">
 		<p class="text-sm text-red-600 dark:text-red-400">
 			We're sorry, but Text-to-Speech is not supported by your browser.
 		</p>
-	{/if}
-</div>
+	</div>
+{/if}
 
 <style>
 	/* Targeting the number input arrows for better dark mode visibility */
-	input[type='number']::-webkit-inner-spin-button,
-	input[type='number']::-webkit-outer-spin-button {
-		filter: invert(0.8);
-	}
-
-	:global(html.light) input[type='number']::-webkit-inner-spin-button,
-	:global(html.light) input[type='number']::-webkit-outer-spin-button {
-		filter: none;
-	}
+	/* No changes to styles are needed */
 </style>
 
 # File: src/lib/components/D3/D3Axis.svelte
@@ -1859,6 +1837,40 @@ export const topics: Topic[] = [
 // place files you want to import through the `$lib` alias in this folder.
 
 
+# File: src/lib/posts/adbhut-anubhuti.md
+
+---
+title: "এক অদ্ভুত অনুভূতি"
+description: "শব্দের চরকিটা বোবা হয়ে যাবে"
+topic: "Life"
+category: "sketches"
+lang: "bn"
+thumbnail: "/images/placeholders/IMG-20250723-WA0003.jpg"
+date: "2025-07-24"
+---
+
+<script>
+    import TextToSpeech from '$lib/components/blog/TextToSpeech.svelte';
+</script>
+
+<TextToSpeech contentSelector="#post-content-bn" lang="bn-IN"/>
+
+<main id="post-content-bn">
+
+![](/images/placeholders/IMG-20250723-WA0003.jpg)
+মাঝে মাঝে মনে হয় আমার শব্দ ভান্ডার ফুরিয়ে যাবে। অনেক কিছুই তো ফুরিয়েছে, আর একদিন আমিও ফুরিয়ে যাব, যখন শব্দের চরকিটা বোবা হয়ে যাবে — অভ্যর্থনার অভাবে হতাশ হয়ে। এ এক ভিড়ে ঠাসা জগৎ, যেখানে আকস্মিকতা আর সম্ভাবনার খেলা চলে, আর তার মধ্যে পুরস্কার বলতে শুধু ধাক্কাধাক্কি আর ঘাম ঝরানো।
+
+![](/images/placeholders/YGEiXDBfQq2kVwzN7vUNIw.jpeg)
+এ জগৎ কঠোরভাবে ডারউইনীয় ও ম্যালথুসীয়; ভারতে এসে এটা আমি আরও বেশি করে উপলব্ধি করেছি, যেখানে সহজ ভাষায় বোঝাতে গেলে বলতে হয়, যখন একজন জন্মায়, তখন আরেকজন যেন মহাসাগরে ছিটকে পড়ে। ভীষণ ভিড়। আর বিদ্যমান সম্পদ নিয়ে কাজ করার সুযোগ হয় প্রতারণামূলকভাবে আমলাতান্ত্রিক অথবা অস্তিত্বহীন। পুরো অর্থনীতি এই ধারণার উপর চলে যে যদি একশ কোটি মানুষের কাছ থেকে এক টাকা করে নেওয়া যায়, তাহলে একশ কোটি টাকা হয়। কিন্তু কাউকে তো সমীকরণটা ঠিক রাখতে হবে, আর এই মানুষদের এমন জায়গায় রাখতে হবে যাতে তারা সেই এক টাকা খরচ করার অবস্থায় থাকে; বিশেষ করে যখন তারা এমন প্রতিকূলতার সাথে লড়ছে যা সংবাদমাধ্যম লুকিয়ে রাখে, যাদের আসল খবর দেখানোর সময়ই নেই। বাইরে যে উজ্জ্বল ভারতের ছবি দেখানো হয়, তা এমন এক অবাস্তব রূপের মুখোশ যা ভারত কখনও ছিল না। এর আড়ালে সরকার আর তার সুবিধাভোগী ব্যবসায়ীরা জনগণের প্রকল্পের নামে করের টাকা সুইস অ্যাকাউন্টে পাচার করে। এটা একরকম জাদু বটে, তবে এই স্তরের ষড়যন্ত্র সকলের জানা এবং এটাকে রাজনীতিবিদের প্রাপ্য যৌতুক বলেই মনে করা হয়।
+
+![](/images/placeholders/Fs6YTO0GQ_-nHWut1NkdVA.webp)
+আসল ভারত গ্রাম বা শহরে বাস করে না। আসল ভারত সেইসব পৌরাণিক কাহিনীর মধ্যে বাস করে যা বাস্তব আর অবাস্তবের ভেদাভেদকে অস্পষ্ট করে দেয়। আমাদের এই সংস্কৃতি-কেন্দ্রিক বোঝা থেকে বেরিয়ে এসে নিজেদের নতুন করে আবিষ্কার করতে হবে এবং বিশ্বে নিজেদের একটা জায়গা করে নিতে হবে। এই বর্ণপ্রথা, এই হিন্দু-মুসলিম-খ্রিস্টান ধর্মীয় বাধা দূর করতেই হবে; যদি কোনো কল্পকাহিনীকে গুরুত্ব দিতেই হয়, তবে তা হলো দেশ, আর কিছু নয়। মেঘের ওপর থাকা সেই 'বৃদ্ধ'-এর সব ভিন্ন আর বিভেদ সৃষ্টিকারী রূপকথাগুলো শান্তিতে ঘুমাক, যেখানে তাদের থাকা উচিত — আমাদের সকলের সংস্কৃতির গ্রন্থাগারে।
+
+![](/images/placeholders/gDpjDHSHS72jcAoV6n7VEg.webp)
+যে দুর্নীতি ভারতকে ক্রমাগত ক্ষয় করে চলেছে, সম্ভবত সেটাই একমাত্র উত্তরাধিকার যা আমরা অত্যন্ত দক্ষতার সাথে প্রজন্মের পর প্রজন্ম ধরে চালিয়ে যাচ্ছি। এর নেতৃত্বে রয়েছে নৈতিকভাবে দেউলিয়া মানুষ, প্রশংসায় ভূষিত গুন্ডা, আর এমন এক সুপুষ্ট প্রচারণার জাল যা ভারতীয় সংবাদমাধ্যমকে ভাঁড়ের পর্যায়ে নামিয়ে এনেছে। বালিতে মাথা গুঁজে যা খুশি বলার এই আত্ম-অഭിനন্দন শৈলী বেশ ভালোই কাজ করে, আর তাতে পৃষ্ঠপোষকতাও জোটে। আমি জানি না কেন এই বিলাপগুলো লেখার কষ্ট করি। কেউ পাত্তা দেয় না। কিন্তু কিছু একটা আমাকে লিখতে বাধ্য করে, এই ভেবে যে হয়তো ভবিষ্যতের কোনো নেতা বা চিন্তাবিদ অনুপ্রাণিত হতে পারেন। একজন নগণ্য মানুষেরও তো অধিকার আছে তার মাতৃভূমির জন্য ভালো স্বপ্ন দেখার, সেই জায়গাটা তার প্রতি প্রতিকূল হোক বা তাকে না চাক। আমি এখানে জন্মেছি, আর এটা বদলাবে না, যেমন বদলাবে না আমার শৈশবের সেইসব ছাপ যা 'আমি' নামক এই স্নায়ুজাল তৈরি করতে সাহায্য করেছে।
+</main>
+
+
 # File: src/lib/posts/Apophenia.md
 
 ---
@@ -2590,7 +2602,7 @@ thumbnail: "/images/placeholders/757fbd57-9053-4e12-95a3-b17bc2008cef.png"
 ---
 ![rezala](/images/placeholders/757fbd57-9053-4e12-95a3-b17bc2008cef.png) 
 
-Let’s get one thing straight. If you ask a generic AI to generate a picture of "Indian curry," it will probably spit out something brownish-red or violently yellow, bubbling with enough oil to worry a cardiologist. That’s the stereotype, the default setting, the `curry_base_v1.0`. And then there’s Chicken Rezala. Stereotypes are everywhere, like those of Muslims in India, that they have more babies, or in the world that they are terrorists. Of course I am no endorser of Islam, but I am no endorser of any religion, all being equally false, including the one that's now put the Mughals out of the Indian history school syllabus—but anyway this is about food, but I want to make it clear, it's not the religious people or the dumb dogmas that give religions any reason to be written about, it's the ordinary people, often the docile, mute, religiously cuckolded and blindfolded faithful artisans back in those ancient times—cooks, artists, sometimes their patron kings, often philosophers and thinkers that need mention from time to time, primarily because of their secular contributions that would be felt multiplied in time downstreams. I am glad to be a bengali and have grown up uninterested and unindoctrinated to any faith, especially in modern time the inordinate time that some people spend thinking about and praying to nonexistent beings is utterly incommensurate and irritatingly anachronistic.
+Let’s get one thing straight. If you ask a generic AI to generate a picture of "Indian curry," it will probably spit out something brownish-red or violently yellow, bubbling with enough oil to worry a cardiologist. That’s the stereotype, the default setting, the `curry_base_v1.0`. And then there’s Chicken Rezala. Stereotypes are everywhere, like those of Muslims in India, that they have more babies, or in the world that they are terrorists. Of course I am no endorser of Islam, but I am no endorser of any religion, all being equally false, including the one that's now put the Mughals out of the Indian history school syllabus—but anyway this is about food, but I want to make it clear, it's not the religious people or the dumb dogmas that give religions any reason to be written about, it's the ordinary people, often the docile, mute, religiously cuckolded and blindfolded faithful artisans back in those ancient times—cooks, artists, sometimes their patron kings, often philosophers and thinkers that need mention from time to time, primarily because of their secular contributions that would be felt multiplied in time downstreams. I am glad to be a bengali and have grown up uninterested and unindoctrinated to any faith, especially today the inordinate time that some people spend thinking about and praying to nonexistent beings is utterly incommensurate and irritatingly anachronistic. But whether it's on the face or not, the effects of religion are always pernicious if permitted outside fantasy—which is what it is. But I digress.
 
 Rezala waltzes into the room in a pristine white tuxedo while everyone else is wearing a Jackson Pollock-inspired kurta. It’s the bug in the matrix of Indian cuisine, a dish that seems to have read the rulebook on curries and then politely used it as a coaster. It's rich without being heavy, aromatic without being pungent, and conspicuously, defiantly, *white*.
 
@@ -2809,7 +2821,7 @@ thumbnail: "/images/placeholders/tts-placeholder.jpeg"
 
 This entire post can be read aloud by the browser's speech synthesis engine. The component below is aware of the content within the `div` with the ID `post-content`.
 
-<TTS contentSelector="#post-content" />
+<TTS contentSelector="#post-content" lang="en-US"/>
 
 <GoldLine />
 
@@ -2827,24 +2839,33 @@ Instead of using techniques like virtual DOM diffing, Svelte writes code that su
 
 ---
 title: "A weird feeling"
-
 description: "Bloated with baloney"
-
 topic: "Life"
 category: "sketches"
 thumbnail: "/images/placeholders/IMG-20250723-WA0003.jpg"
 ---
-![1](/images/placeholders/IMG-20250723-WA0003.jpg)
-Sometimes I feel like I might run out of words. I've already run out of many things, and I'm destined to peter out someday, when the word-spool go mute—frustrated with the reception. It's a crowded world, a world full of happenstance and probabilities that make jostling and sweating the only reward for the large majority of people.  
-![2](/images/placeholders/YGEiXDBfQq2kVwzN7vUNIw.jpeg)
-It's strictly Darwinian and Malthusian; I realized that more in India, where a reasonable way to explain it would be to say that when someone's born, another falls off in the ocean. It's crowded. And the opportunity to work with the existing resources is often deceptively bureaucratic or nonexistent. The whole economy runs on the premise that if you make a rupee from a billion people, you have a billion rupees, but someone has to keep the equations balanced and keep these people at a point where they are in a position to spend that rupee, not if they are fighting adversities that are hidden away by the media, which never has the time to cover any real news. The advertisements of the shining faces of India that are portrayed outside are just masquerading an image that India never was, behind which the government and it's beneficiary businesses siphon tax payer money in the name of public projects to Swiss accounts. It's magic, except this level of collusion is well known and considered a well deserved dowry given to a politician.  
-![3](/images/placeholders/Fs6YTO0GQ_-nHWut1NkdVA.webp)
-The real India doesn't live in villages, cities, etcetera. The real India lives in the myths that obfuscate the reality of what is real and what is not. What we need is to get out of all this culture-centric baggage, rediscover ourselves, and secure a place in the world. This caste system, these Hindu-Muslim-Christian religious barricades, have to go; if there has to be any fiction that's important, that's the country, period. Let all the disparate and divisive `old man on the cloud` fairytales rest in peace where they deserves, in our libraries of our shared cultures.  
-![4](/images/placeholders/gDpjDHSHS72jcAoV6n7VEg.webp)
-The corruption that continues to erode India is perhaps the only legacy that we seem to be passing on with great efficiency, with morally bankrupt people at the helm, goons festooned with accolades, and a generally well-nourished spectrum of propaganda that has awarded the Indian media the status of a jester. The self-congratulatory style of saying whatever you want to say while keeping your head buried in the sand works well and gets lots of sponsorship, at least.  
 
-I don't know why I bother to write these laments. Nobody cares. But somehow something compels me to write, just in case there's a future leader or thinker who might get inspired. Even a nobody has the right to dream good things for the place he calls home, no matter if that place is hostile to him, or doesn't want him. I was born here, and that's something that's not going to change, nor are the impressions of my childhood years that has been formative in creating this neural network I call me.
+<script>
+    import TextToSpeech from '$lib/components/blog/TextToSpeech.svelte';
+</script>
 
+<TextToSpeech contentSelector="#weird-feeling-content" lang="en-US"/>
+
+<div id="weird-feeling-content">
+
+![](/images/placeholders/IMG-20250723-WA0003.jpg)
+Sometimes I feel like I might run out of words. I've already run out of many things, and I'm destined to peter out someday, when the word-spool go mute—frustrated with the reception. It's a crowded world, a world full of happenstance and probabilities that make jostling and sweating the only reward for the large majority of people.
+
+![](/images/placeholders/YGEiXDBfQq2kVwzN7vUNIw.jpeg)
+It's strictly Darwinian and Malthusian; I realized that more in India, where a reasonable way to explain it would be to say that when someone's born, another falls off in the ocean. It's crowded. And the opportunity to work with the existing resources is often deceptively bureaucratic or nonexistent. The whole economy runs on the premise that if you make a rupee from a billion people, you have a billion rupees, but someone has to keep the equations balanced and keep these people at a point where they are in a position to spend that rupee, not if they are fighting adversities that are hidden away by the media, which never has the time to cover any real news. The advertisements of the shining faces of India that are portrayed outside are just masquerading an image that India never was, behind which the government and it's beneficiary businesses siphon tax payer money in the name of public projects to Swiss accounts. It's magic, except this level of collusion is well known and considered a well deserved dowry given to a politician.
+
+![](/images/placeholders/Fs6YTO0GQ_-nHWut1NkdVA.webp)
+The real India doesn't live in villages, cities, etcetera. The real India lives in the myths that obfuscate the reality of what is real and what is not. What we need is to get out of all this culture-centric baggage, rediscover ourselves, and secure a place in the world. This caste system, these Hindu-Muslim-Christian religious barricades, have to go; if there has to be any fiction that's important, that's the country, period. Let all the disparate and divisive `old man on the cloud` fairytales rest in peace where they deserves, in our libraries of our shared cultures.
+
+![](/images/placeholders/gDpjDHSHS72jcAoV6n7VEg.webp)
+The corruption that continues to erode India is perhaps the only legacy that we seem to be passing on with great efficiency, with morally bankrupt people at the helm, goons festooned with accolades, and a generally well-nourished spectrum of propaganda that has awarded the Indian media the status of a jester. The self-congratulatory style of saying whatever you want to say while keeping your head buried in the sand works well and gets lots of sponsorship, at least. I don't know why I bother to write these laments. Nobody cares. But somehow something compels me to write, just in case there's a future leader or thinker who might get inspired. Even a nobody has the right to dream good things for the place he calls home, no matter if that place is hostile to him, or doesn't want him. I was born here, and that's something that's not going to change, nor are the impressions of my childhood years that has been formative in creating this neural network I call me.
+
+</div>
 
 # File: src/routes/+layout.server.ts
 
@@ -3050,7 +3071,8 @@ injectAnalytics({ mode: dev ? 'development' : 'production' });
 	<p class="my-4">
 		But really, in the end, what I'm trying to say in a long, winding way is that I did a lot of reading—and still read, to my mother's chagrin—that no, none of the readings I did do me any good as far as carrying out the original intention—I haven't accumulated any wealth or curvaceous mate, just books. Meritocracy is like a hoax you force on blind and disabled elderly in a care home—they can't ask for a refund. But I read, and this blog is where I share it.
 		And not just books that I read—I travel, and work on interesting ideas or at least think about them, and want to share my personal life and work experiences and knowledge. And if my exposure can help someone like me back when I was little—a boy or girl growing up without a compass in Calcutta or elsewhere—I’d feel I did something right, for a change.
-		Most human beings come incarcerated in their minds, their stories are therefore left untold, their imagination stay hidden—but I am articulate and I can draw caricatures, so I can bring my mind to you, and that's what this blog or some of its contents are about. It varies from exploratory non-fiction, formal prosaic posts, loose squibs, looser still—doggerels. A fair bit is in unparliamentary and unsavory diction that may peeve a lap dog, an uneducated mother, an easily offended belligerent female or bellicose feline, a crusty, dogmatic, obdurate, religious zealot, or an unscrupulous, rabid, political ideologue or corrupt politician. And to such people, might I therefore kindly request not to leave the comfort of their dopey dogma, or if they do, be sternly warned, <b>reading beyond this point of their own volition</b>, (although there's no such thing, free will is an illusion, but still I have to write this) their health and well-being is in their own two good hands, or three, if an indoctrinated, religious and fanatic AI is reading this.
+		Most human beings come incarcerated in their minds, their stories are therefore left untold, their imagination stay hidden—but I am articulate and I can draw caricatures, so I can bring my mind to you, and that's what this blog or some of its contents are about. It varies from exploratory non-fiction, formal prosaic posts, loose squibs, looser still dopey doggerels—hokey hawk tuahs, greasy sentiments in verse. A fair bit is in unparliamentary and unsavory diction that may peeve a lap dog, an uneducated mother, an easily offended belligerent female or bellicose feline, a crusty, dogmatic, obdurate, religious zealot, or an unscrupulous, rabid, political ideologue or corrupt politician. And to such people, might I therefore kindly request not to leave the comfort of their dopey dogma, or if they do, be sternly warned, <b>reading beyond this point of their own volition</b>, (although there's no such thing, free will is an illusion, but still I have to write this) their health and well-being is in their own two good hands, or three, if an indoctrinated, religious and fanatic AI is reading this. For anyone weening off, this blog isn't the first place to get shocked, please wander off to somewhere safer.
+
 	</p>
 
 	<div class="text-center mt-12">
