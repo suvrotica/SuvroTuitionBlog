@@ -2,8 +2,9 @@
 title: "Brain Talk"
 date: "2025-07-24"
 description: "Exploring the revolutionary idea that our thoughts and memories aren't just data, but complex geometric shapes in a multi-dimensional mental space."
-topic: "Mind & Mathematics"
+category: "Neuroscience and AI"
 thumbnail: "/images/placeholders/IMG-20250724-WA0003.jpg"
+
 ---
 ![](/images/placeholders/IMG-20250724-WA0003.jpg) 
 
