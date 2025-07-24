@@ -25,6 +25,8 @@ Okay, stay with me. This is where it gets fun.
 
 Think about a single, simple concept. Let's say, "my neighbor's cat." Now, that isn't one little nugget of information stored in one little brain cell. It's a whole constellation of things, isn’t it?
 
+![cat](/images/placeholders/IMG-20250724-WA0004.jpg) 
+
 It’s the *name* of my neighbor's cat (Taklu Babu). It’s the *colour* of its fur (white with a sort of splotch of black). It’s the specific *sound* of its meow (sweetly grumbling). It’s the *feeling* of its fur under my hand (surprisingly coarse). It’s the *emotion* it triggers (a mix of affection and remembering how it always wants to urinate on things—male cat thing). It’s the *memory* of the only creature in the world visiting me everyday, who'd worry if I'm dead.
 
 Each one of these things—the name, the colour, the sound, the feeling, the place, the emotion—is a separate piece of data. Now, in mathematics, when I have a bunch of separate variables that all describe one thing, I can think of each variable as a *dimension*.
