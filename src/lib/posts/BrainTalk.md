@@ -31,9 +31,9 @@ Each one of these things—the name, the colour, the sound, the feeling, the pla
 
 I know, I know, "dimension" is a word that immediately makes you think of wormholes and sci-fi. But hang on. A line on a page is one-dimensional (length). A piece of paper is two-dimensional (length and width). A box is three-dimensional (length, width, height). All a dimension is, really, is another direction to move in, another quality you can measure.
 
-So what if the concept of "grandmother's cat" doesn't exist in 3 dimensions, but in, say, 20? Or 200? What if it's a single point in a vast, multi-dimensional space? And the thought isn't just the point itself, but a *shape*—a sort of complex, shimmering, mathematical ghost that connects all those different dimensions into one coherent idea. This is the wild and wonderful world of **manifolds**.
+So what if the concept of "neighbor's cat" doesn't exist in 3 dimensions, but in, say, 20? Or 200? What if it's a single point in a vast, multi-dimensional space? And the thought isn't just the point itself, but a *shape*—a sort of complex, shimmering, mathematical ghost that connects all those different dimensions into one coherent idea. This is the wild and wonderful world of **manifolds**.
 
-A manifold is just a fancy word for a shape that, if you zoom in really close, looks a bit flat and normal. The Earth is a perfect example. It's a giant 3D sphere, but for you or me walking down to the shops in Rajpur Sonarpur, it feels perfectly flat. Our immediate experience is a 2D-ish one. What if a thought is like that? What if it's a "walk" across a stupendously complex surface—a manifold with thousands of dimensions—that our consciousness experiences as a simple, single idea?
+A manifold is just a fancy word for a shape that, if you zoom in really close, looks a bit flat and normal. The Earth is a perfect example. It's a giant 3D sphere, but for you or me walking down to the shops in Calcutta, it feels perfectly flat. Our immediate experience is a 2D-ish one. What if a thought is like that? What if it's a "walk" across a stupendously complex surface—a manifold with thousands of dimensions—that our consciousness experiences as a simple, single idea?
 
 **The Ultimate Mapmakers**
 
