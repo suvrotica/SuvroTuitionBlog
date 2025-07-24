@@ -4,9 +4,9 @@ title: "It's bluish"
 description: "It's bluish" 
 topic: "Life"
 category: "doggerels"
-thumbnail: "/images/placeholders/91d2477e-63e4-45a3-9c5c-0532df45fe0d.png"
+thumbnail: "/images/placeholders/IMG-20250724-WA0007.jpg"
 ---
-![babu moshai](/images/placeholders/91d2477e-63e4-45a3-9c5c-0532df45fe0d.png) 
+![blue bengali man](/images/placeholders/IMG-20250724-WA0007.jpg) 
 
 It's bluish drab watercolor glue,
 A few drinks my mood sinks.
