@@ -11,7 +11,7 @@ Right then. Let’s pour a nice cup of darjeeling tea, sit down, and talk about 
 
 **Trying to Read the Jelly That Thinks**
 
-Picture this. I’ve got the most mad object in the known universe sitting on my shoulders. It's a three-pound lump of wobbly, pinkish-grey jelly that learned how to split the atom, write bad doggerels, and remember the precise smell of the sintheemore street-side urinals I've encountered on a rainy Tuesday many decades back. And I, clever clogs that I am, want to understand how it pulls off this magic trick.
+Picture this. I’ve got the most mad object in the known universe sitting on my shoulders. It's a three-pound lump of wobbly, pinkish-grey jelly that learned and understood how scientists split atoms, which writes bad doggerels, and remembers the precise smell of the sintheemore street-side urinals I've encountered on a rainy Tuesday many decades back. And I, clever clogs that I am, want to understand how it pulls off this magic trick.
 
 For the longest time, I’ve been approaching it a bit like a mechanic trying to understand a Honda by just listening to the engine. I stick little probes in, I watch bits light up on a doctor's MRI scan when I think about my dog, the black one, and I say, "Aha! That bit there is the 'melancholic' bit!" It's all very clever, but it's a bit like trying to appreciate the Mona Lisa by analyzing the chemical composition of the paint. I’m, or in this case the doctor who treated me (trabscranial magnetic stimulation in Sam Antonio), cataloguing the ingredients, but he hasn't got the faintest clue about the recipe, let alone the art.
 
