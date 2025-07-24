@@ -23,9 +23,9 @@ And that's because we might have been using the wrong kind of dictionary all alo
 
 Okay, stay with me. This is where it gets fun.
 
-Think about a single, simple concept. Let's say, "your grandmother's cat." Now, that isn't one little nugget of information stored in one little brain cell. It's a whole constellation of things, isn't it?
+Think about a single, simple concept. Let's say, "your cat." Now, that isn't one little nugget of information stored in one little brain cell. It's a whole constellation of things, isn't it?
 
-It's the *name* of the cat (Fluffy). It's the *colour* of its fur (a sort of ginger marmalade). It's the specific *sound* of its meow (annoyingly high-pitched). It's the *feeling* of its fur under your hand (surprisingly coarse). It's the *emotion* it triggers (a mix of affection and remembering how it once scratched you). It's the *memory* of where it used to sleep (on that green armchair).
+It's the *name* of your neighbor's cat (Taklu Babu). It's the *colour* of its fur (white with a sort of splotch of black). It's the specific *sound* of its meow (annoyingly high-pitched). It's the *feeling* of its fur under your hand (surprisingly coarse). It's the *emotion* it triggers (a mix of affection and remembering how it once scratched you). It's the *memory* of where it used to sleep (on that green armchair).
 
 Each one of these things—the name, the colour, the sound, the feeling, the place, the emotion—is a separate piece of data. Now, in mathematics, when you have a bunch of separate variables that all describe one thing, you can think of each variable as a *dimension*.
 
