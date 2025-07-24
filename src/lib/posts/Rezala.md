@@ -1,7 +1,7 @@
 ---
 title: "Chicken Rezala"
 description: "A journey into the history and science behind the ethereal white curry that is Kolkata's beloved Chicken Rezala."
-topic: "Food & Science"
+
 category: "Food"
 thumbnail: "/images/placeholders/757fbd57-9053-4e12-95a3-b17bc2008cef.png"
 ---
