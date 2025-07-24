@@ -3,7 +3,7 @@ title: "The Litany of Today's Bengali Lower Middle-Class Angst"
 
 description: "A lower middle-class bengali babu moshai"
 
-topic: "Life"
+category: "Life"
 
 thumbnail: "/images/placeholders/91d2477e-63e4-45a3-9c5c-0532df45fe0d.png"
 ---
