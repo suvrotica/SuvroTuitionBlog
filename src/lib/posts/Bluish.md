@@ -3,7 +3,7 @@ title: "It's bluish"
 
 description: "It's bluish" 
 topic: "Life"
-
+category: "doggerels"
 thumbnail: "/images/placeholders/91d2477e-63e4-45a3-9c5c-0532df45fe0d.png"
 ---
 ![babu moshai](/images/placeholders/91d2477e-63e4-45a3-9c5c-0532df45fe0d.png) 
