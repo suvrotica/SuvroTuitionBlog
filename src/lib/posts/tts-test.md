@@ -18,7 +18,7 @@ thumbnail: "/images/placeholders/tts-placeholder.jpeg"
 
 This entire post can be read aloud by the browser's speech synthesis engine. The component below is aware of the content within the `div` with the ID `post-content`.
 
-<TTS contentSelector="#post-content" />
+<TTS contentSelector="#post-content" lang="en-US"/>
 
 <GoldLine />
 

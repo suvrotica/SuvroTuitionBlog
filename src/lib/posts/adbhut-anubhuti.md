@@ -12,7 +12,7 @@ date: "2025-07-24"
     import TextToSpeech from '$lib/components/blog/TextToSpeech.svelte';
 </script>
 
-<TextToSpeech contentSelector="#post-content-bn" />
+<TextToSpeech contentSelector="#post-content-bn" lang="bn-IN"/>
 
 <main id="post-content-bn">
 
