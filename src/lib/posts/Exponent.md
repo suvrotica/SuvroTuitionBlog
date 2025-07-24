@@ -2,7 +2,7 @@
 title: "On Exponential Growth and Calcutta"
 date: "2025-07-18"
 description: "A terrifying look at the population of Calcutta mathematically projected 500 years from now, using a personal-life-based doubling constant."
-topic: "Food & Science"
+category: "Math"
 thumbnail: "/images/placeholders/a5nWmIXQTneuGRFUT5fQvg.webp"
 ---
 
