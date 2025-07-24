@@ -18,7 +18,7 @@ Or whenever it's me my mind thinks.<br>
 No too late to start anew I tell you,<br>
 At fifty I'm dead against always being shifty.<br>
 I can't sing a song the songs are sung,<br>
-In ten it's true I'll be sixty.<br>
+My favorite vinyls still gold are hefty.<br>
 <br>
 I'm the circling waste water down a drain,<br>
 Dripping downstairs on someone's head.<br>
