@@ -1,5 +1,5 @@
 ---
-title: "The Geometry of a Thought: Why My Brain Talks in Shapes"
+title: "Brain Talk"
 date: "2025-07-24"
 description: "Exploring the revolutionary idea that our thoughts and memories aren't just data, but complex geometric shapes in a multi-dimensional mental space."
 topic: "Mind & Mathematics"
