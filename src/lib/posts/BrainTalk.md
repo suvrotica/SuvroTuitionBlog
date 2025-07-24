@@ -15,7 +15,7 @@ Picture this. I’ve got the most mad object in the known universe sitting on my
 
 For the longest time, I’ve been approaching it a bit like a mechanic trying to understand a Honda by just listening to the engine. I stick little probes in, I watch bits light up on a doctor's MRI scan when I think about my dog, the black one, and I say, "Aha! That bit there is the 'melancholic' bit!" It's all very clever, but it's a bit like trying to appreciate the Mona Lisa by analyzing the chemical composition of the paint. I’m, or in this case the doctor who treated me (trabscranial magnetic stimulation in Sam Antonio), cataloguing the ingredients, but he hasn't got the faintest clue about the recipe, let alone the art.
 
-This is what is called the "language issue." I’m if I am trying to understand my brain, I am basically a tourist in the country of my own mind. I can point at things and learn a few nouns—"this is a neuron," "that's the hippocampus"—but I can’t speak a lick of the local dialect. I can’t hold a conversation. I don’t understand the grammar, the poetry, the idioms of thought itself. Not just me I mean, no one can. 
+This is what is called the "language issue." If I am trying to understand my brain, I am basically a tourist in the country of my own mind. I can point at things and learn a few nouns—"this is a neuron," "that's the hippocampus"—but I can’t speak a lick of the local dialect. I can’t hold a conversation. I don’t understand the grammar, the poetry, the idioms of thought itself. Not just me I mean, no one can. 
 
 And that's because we might have been using the wrong kind of dictionary all along. The brain doesn't speak in words or in computer code. The new, slightly bonkers, and utterly brilliant idea is that the brain speaks in *shapes*.
 
