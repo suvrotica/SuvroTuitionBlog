@@ -3,8 +3,9 @@ title: "The Geometry of a Thought: Why Your Brain Talks in Shapes"
 date: "2025-07-24"
 description: "Exploring the revolutionary idea that our thoughts and memories aren't just data, but complex geometric shapes in a multi-dimensional mental space."
 topic: "Mind & Mathematics"
-thumbnail: "/images/placeholders/brain-geometry.jpg"
+thumbnail: "/images/placeholders/IMG-20250724-WA0003.jpg"
 ---
+![](/images/placeholders/IMG-20250724-WA0003.jpg) 
 
 Right then. Let’s pour a nice cup of darjeeling tea, sit down, and talk about the universe you’ve got squirreled away between your ears. Because honestly, the stuff going on out in space with galaxies and whatnot has got nothing on the sheer, beautiful madness happening inside your own noggin.
 
