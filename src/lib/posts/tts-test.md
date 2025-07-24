@@ -3,6 +3,8 @@ title: "Testing the Text-to-Speech Component"
 date: "2025-07-16"
 description: "A demonstration of the integrated TTS component built with Svelte 4."
 topic: "SvelteKit"
+published: false
+
 thumbnail: "/images/placeholders/tts-placeholder.jpeg"
 ---
 

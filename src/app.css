@@ -124,3 +124,26 @@ pre.shiki { @apply p-4 rounded-lg overflow-x-auto; }
 .d3-tooltip-circle {
 	fill: var(--color-gold);
 }
+
+.mobile-nav-overlay {
+	@apply fixed inset-0 z-30 bg-black/60 transition-opacity duration-300 ease-in-out;
+}
+
+.mobile-nav-drawer {
+	@apply fixed top-0 left-0 bottom-0 z-40 w-72 transform bg-neutral-100 transition-transform duration-300 ease-in-out dark:bg-neutral-900;
+}
+.mobile-nav-drawer.open {
+	@apply translate-x-0;
+}
+.mobile-nav-drawer.closed {
+	@apply -translate-x-full;
+}
+
+/* Class to prevent background scrolling when the menu is open */
+.body-scroll-lock {
+	@apply overflow-hidden;
+}
+
+.hamburger {
+	@apply z-50; /* Ensure button is above other header content */
+}

@@ -3,6 +3,8 @@ title: "Charting with D3 Axes in Svelte"
 date: "2025-07-23"
 description: "A guide to creating reusable D3.js axes within a Svelte 5 component for clear and effective data visualization."
 topic: "3D & WebGL"
+published: false
+
 thumbnail: "/images/placeholders/d3-placeholder.jpeg"
 ---
 

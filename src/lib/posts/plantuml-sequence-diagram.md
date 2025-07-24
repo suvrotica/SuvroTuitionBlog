@@ -3,6 +3,8 @@ title: "Visualizing Workflows with PlantUML Sequence Diagrams"
 date: "2025-06-24"
 description: "How to create and embed PlantUML sequence diagrams directly into a SvelteKit blog for clear, maintainable technical documentation."
 topic: "SvelteKit"
+published: false
+
 layout: "blog"
 thumbnail: "/images/placeholders/plantuml-placeholder.jpeg"
 ---

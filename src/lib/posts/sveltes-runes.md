@@ -3,6 +3,8 @@ title: "A First Look at Svelte's Runes"
 date: "2025-06-19"
 description: "Exploring the new reactivity model in Svelte 5 and how it changes the way we build apps."
 topic: "SvelteKit"
+published: false
+
 thumbnail: "/images/placeholders/svelte-runes-thumbnail.jpeg"
 ---
 

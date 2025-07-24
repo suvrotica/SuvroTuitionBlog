@@ -3,6 +3,8 @@ title: "Creating a 3D Scene with Three.js in Svelte"
 date: "2025-06-22"
 description: "A step-by-step guide to integrating the popular 3D library Three.js into a Svelte 5 component to create interactive WebGL scenes."
 topic: "3D & WebGL"
+published: false
+
 thumbnail: "/images/placeholders/threejs-placeholder.jpeg"
 ---
 

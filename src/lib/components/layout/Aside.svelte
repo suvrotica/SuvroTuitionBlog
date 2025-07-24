@@ -1,19 +1,23 @@
 <script lang="ts">
 	import { page } from '$app/state';
-
-	// The topics data is now derived directly from the global page state.
-	// This makes the component self-sufficient with data it needs from the layout.
-	let topics = $derived(page.data.topics || []);
+	// Data is now `categories` from the root layout server load function.
+	let categories = $derived(page.data.categories || []);
 </script>
 
-<aside class="hidden lg:block">
+<aside >
 	<nav>
-		{#each topics as topic (topic.topic)}
+		<div class="sidebar-group">
+			<a href="/blog" class="sidebar-topic hover:underline">All Posts</a>
+		</div>
+		
+		{#each categories as category (category.name)}
 			<div class="sidebar-group">
-				<h3 class="sidebar-topic">{topic.topic}</h3>
+				<a href="/blog/{category.name}" class="sidebar-topic hover:underline">
+					{category.name}
+				</a>
 				<ul>
-					{#each topic.articles as article (article.slug)}
-						{@const href = `/blog/${article.slug}`}
+					{#each category.articles as article (article.slug)}
+						{@const href = `/blog/${article.category}/${article.slug}`}
 						<li>
 							<a {href} class:sidebar-link={true} class:sidebar-link-active={page.url.pathname === href}>
 								{article.title}

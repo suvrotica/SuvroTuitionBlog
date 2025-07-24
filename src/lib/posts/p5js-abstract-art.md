@@ -3,6 +3,8 @@ title: "Generative Abstract Art with p5.js and Svelte"
 date: "2025-06-22"
 description: "Learn how to integrate the creative coding power of p5.js into a modern Svelte 5 application to create dynamic, interactive art for the web."
 topic: "3D & WebGL"
+published: false
+
 thumbnail: "/images/placeholders/p5js-placeholder.jpeg"
 ---
 

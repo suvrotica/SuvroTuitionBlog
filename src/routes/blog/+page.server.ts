@@ -1,3 +1,4 @@
+// src/routes/blog/+page.server.ts
 import { error } from '@sveltejs/kit';
 
 interface Post {
@@ -5,7 +6,9 @@ interface Post {
 	title: string;
 	date: string;
 	description: string;
-	thumbnail?: string; // Add the optional thumbnail property
+	thumbnail?: string;
+	category: string;
+	published?: boolean;
 }
 
 /** @type {import('./$types').PageServerLoad} */
@@ -18,17 +21,21 @@ export async function load() {
 
 				if (file && typeof file === 'object' && 'metadata' in file && slug) {
 					const metadata = file.metadata as Omit<Post, 'slug'>;
-					// Provide a default thumbnail if one isn't specified
 					const post: Post = {
 						...metadata,
 						slug,
-						thumbnail: metadata.thumbnail || '/images/placeholders/default.png'
+						thumbnail: metadata.thumbnail || '/images/placeholders/default.png',
+						category: metadata.category || 'uncategorized'
 					};
 					return post;
 				}
 				return null;
 			})
-			.filter((post): post is Post => post !== null);
+			.filter((post): post is Post => {
+				if (!post) return false;
+				// Reverted: Always filter unpublished posts
+				return post.published !== false;
+			});
 
 		posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 

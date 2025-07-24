@@ -4,7 +4,7 @@ title: "Apophenia—a bengali pastime"
 description: "A pendulous self-flatulent bengali"
 
 topic: "Life"
-
+category: "non-fiction"  
 thumbnail: "/images/placeholders/723ccc8e-1bcd-4c1e-b678-219bce8504ee.png"
 ---
 ![clockface](/images/placeholders/723ccc8e-1bcd-4c1e-b678-219bce8504ee.png) 

@@ -1,4 +1,4 @@
-# Context file generated on: Wednesday, July 23, 2025 at 5:39:10 PM GMT+5:30
+# Context file generated on: Thursday, July 24, 2025 at 8:36:44 AM GMT+5:30
 ---
 
 # Project File Layout
@@ -71,7 +71,8 @@
 │   │       ├── svelte-introduction.md
 │   │       ├── sveltes-runes.md
 │   │       ├── threejs-integration.md
-│   │       └── tts-test.md
+│   │       ├── tts-test.md
+│   │       └── WeirdFeeling.md
 │   ├── routes
 │   │   ├── +layout.server.ts
 │   │   ├── +layout.svelte
@@ -80,10 +81,13 @@
 │   │   └── blog
 │   │       ├── +page.server.ts
 │   │       ├── +page.svelte
-│   │       └── [slug]
-│   │           ├── +layout.svelte
+│   │       └── [category]
+│   │           ├── +page.server.ts
 │   │           ├── +page.svelte
-│   │           └── +page.ts
+│   │           └── [slug]
+│   │               ├── +layout.svelte
+│   │               ├── +page.svelte
+│   │               └── +page.ts
 │   └── types
 │       └── mdsvex.d.ts
 ├── static
@@ -98,19 +102,23 @@
 │           ├── Ambition.png
 │           ├── d3-placeholder.jpeg
 │           ├── erg.png
+│           ├── Fs6YTO0GQ_-nHWut1NkdVA.webp
+│           ├── gDpjDHSHS72jcAoV6n7VEg.webp
 │           ├── IMG-20250717-WA0006.jpg
 │           ├── IMG-20250718-WA0001.jpg
 │           ├── IMG-20250718-WA0010.jpg
 │           ├── IMG-20250719-WA0000.jpg
 │           ├── IMG-20250721-WA0001.jpg
 │           ├── IMG-20250721-WA0003.jpg
+│           ├── IMG-20250723-WA0003.jpg
 │           ├── monk-fruit.png
 │           ├── p5js-placeholder.jpeg
 │           ├── plantuml-placeholder.jpeg
 │           ├── svelte-intro-thumbnail.png
 │           ├── svelte-runes-thumbnail.jpeg
 │           ├── threejs-placeholder.jpeg
-│           └── tts-placeholder.jpeg
+│           ├── tts-placeholder.jpeg
+│           └── YGEiXDBfQq2kVwzN7vUNIw.jpeg
 ├── svelte.config.js
 ├── tailwind.config.cjs
 ├── TheApp.txt
@@ -456,27 +464,41 @@ pre.shiki { @apply p-4 rounded-lg overflow-x-auto; }
 	fill: var(--color-gold);
 }
 
+.mobile-nav-overlay {
+	@apply fixed inset-0 z-30 bg-black/60 transition-opacity duration-300 ease-in-out;
+}
+
+.mobile-nav-drawer {
+	@apply fixed top-0 left-0 bottom-0 z-40 w-72 transform bg-neutral-100 transition-transform duration-300 ease-in-out dark:bg-neutral-900;
+}
+.mobile-nav-drawer.open {
+	@apply translate-x-0;
+}
+.mobile-nav-drawer.closed {
+	@apply -translate-x-full;
+}
+
+/* Class to prevent background scrolling when the menu is open */
+.body-scroll-lock {
+	@apply overflow-hidden;
+}
+
+.hamburger {
+	@apply z-50; /* Ensure button is above other header content */
+}
+
 # File: src/app.d.ts
 
-// See https://svelte.dev/docs/kit/types#app.d.ts
-// for information about these interfaces
-
-// Import the Topic type from your server load function to ensure consistency
-import type { Topic } from './routes/+layout.server';
+// src/app.d.ts
+import type { Category } from './routes/+layout.server'; // Import the new type
 
 declare global {
 	namespace App {
-		// interface Error {}
-		interface Locals {}
-		
-		// Define the shape of data returned from the root layout's load function
+		// ...
 		interface LayoutData {
-			topics: Topic[];
+			categories: Category[]; // Change 'topics' to 'categories'
 		}
-
-		// interface PageData {}
-		// interface PageState {}
-		// interface Platform {}
+		// ...
 	}
 }
 
@@ -622,16 +644,15 @@ export {};
 		slug: string;
 		title: string;
 		thumbnail?: string;
+		category: string; // <-- ADD CATEGORY
 	};
-
 	let { posts = [] }: { posts: Post[] } = $props();
 </script>
 
 <div class="post-gallery-grid">
 	{#each posts as post (post.slug)}
-		{@const href = `/blog/${post.slug}`}
-		<a {href} class="gallery-pin">
-			<div class="image-wrapper">
+		{@const href = `/blog/${post.category}/${post.slug}`}
+		<a {href} class="gallery-pin group"> <div class="image-wrapper">
 				<img src={post.thumbnail} alt={post.title} class="gallery-image" />
 			</div>
 			<h3 class="gallery-title">{post.title}</h3>
@@ -968,23 +989,25 @@ export {};
 
 	export type Point = { year: number; population: number };
 	export type Series = { name: string; values: Point[] };
+
 	type CirclePosition = { cx: number; cy: number };
 
+	// --- PROPS ---
 	let {
 		data = [] as Series[],
-		width = 600,
-		height = 400
+		aspectRatio = 1.5 // width / height, e.g., 600/400
 	}: {
 		data: Series[];
-		width?: number;
-		height?: number;
+		aspectRatio?: number;
 	} = $props();
 
-	// --- DOM BINDINGS ---
-	let svgEl: SVGSVGElement | undefined = $state();
+	// --- STATE & DOM BINDINGS ---
+	let chartContainer: HTMLDivElement | undefined = $state();
 	let tooltipEl: HTMLDivElement | undefined = $state();
+	let width = $state(0); // This will be bound to the container's width
 
-	// --- CHART DIMENSIONS ---
+	// --- RESPONSIVE DIMENSIONS ---
+	let height = $derived(width / aspectRatio);
 	const margin = { top: 20, right: 30, bottom: 40, left: 70 };
 	let innerWidth = $derived(width - margin.left - margin.right);
 	let innerHeight = $derived(height - margin.top - margin.bottom);
@@ -1014,12 +1037,13 @@ export {};
 
 	// --- INTERACTIVITY EFFECT ---
 	$effect(() => {
-		if (!svgEl || !tooltipEl) return;
+		if (!chartContainer || !tooltipEl || width === 0) return;
 
-		const svg = select(svgEl);
+		const svg = select(chartContainer).select('svg');
+		// --- FIX: Create the D3 selection for the tooltip ---
 		const tooltip = select(tooltipEl);
 
-		svg.selectAll('.event-layer').remove();
+		svg.selectAll('.event-layer, .d3-tooltip-line, .d3-tooltip-circle').remove();
 
 		const bisectYear = bisector((d: Point) => d.year).left;
 
@@ -1040,11 +1064,10 @@ export {};
 			.style('opacity', 0);
 
 		function onMouseMove(event: MouseEvent) {
-			// --- FIX: Add guard clause for svgEl and tooltipEl here ---
-			if (data.length === 0 || !tooltipEl || !svgEl) return;
+			if (data.length === 0 || !tooltipEl || !chartContainer) return;
 
-			const [mx, my] = pointer(event, svg.node());
-			const svgRect = svgEl.getBoundingClientRect();
+			const [mx, my] = pointer(event);
+			const svgRect = chartContainer.getBoundingClientRect();
 			const mouseX = mx - margin.left;
 
 			if (mouseX < 0 || mouseX > innerWidth) {
@@ -1053,7 +1076,6 @@ export {};
 			}
 
 			const hoveredYear = Math.round(xScale.invert(mouseX));
-
 			let tooltipContent = `<div class="font-bold text-base mb-1">~${hoveredYear}</div>`;
 			const circlePositions: CirclePosition[] = [];
 
@@ -1062,7 +1084,6 @@ export {};
 				const d0 = series.values[seriesIndex - 1];
 				const d1 = series.values[seriesIndex];
 				const d = d1 && hoveredYear - d0.year > d1.year - hoveredYear ? d1 : d0;
-
 				if (d) {
 					tooltipContent += `<div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full" style="background-color: ${colors[i % colors.length]}"></span>${series.name}: ${d.year}, ${yAxisFormat(d.population)}</div>`;
 					circlePositions.push({
@@ -1081,18 +1102,14 @@ export {};
 			if (newLeft + tooltipRect.width > svgRect.width) {
 				newLeft = mx - tooltipRect.width - 20;
 			}
-			
+
 			if (newTop + tooltipRect.height > svgRect.height) {
 				newTop = my - tooltipRect.height - 10;
 			}
 
 			tooltip.style('left', `${newLeft}px`).style('top', `${newTop}px`);
-			
-			tooltipLine
-				.style('opacity', 1)
-				.attr('x1', mx)
-				.attr('x2', mx);
 
+			tooltipLine.style('opacity', 1).attr('x1', mx).attr('x2', mx);
 			tooltipCircles
 				.style('opacity', 1)
 				.attr('cx', (d, i) => circlePositions[i]?.cx ?? -10)
@@ -1105,9 +1122,9 @@ export {};
 			tooltipCircles.style('opacity', 0);
 		}
 
-		const eventLayer = svg.append('g').attr('class', 'event-layer');
-		eventLayer
+		const eventLayer = svg
 			.append('rect')
+			.attr('class', 'event-layer')
 			.attr('width', width)
 			.attr('height', height)
 			.attr('fill', 'none')
@@ -1117,39 +1134,41 @@ export {};
 	});
 </script>
 
-<div class="chart-container relative not-prose">
-	<svg bind:this={svgEl} {width} {height} class="bg-neutral-200 dark:bg-neutral-800 rounded-md">
-		<g transform="translate({margin.left}, {margin.top})">
-			<D3Axis
-				orientation="bottom"
-				scale={xScale}
-				y={innerHeight}
-				ticks={width > 500 ? 10 : 5}
-				tickFormat="d"
-			/>
-			<D3Axis orientation="left" scale={yScale} tickFormat={yAxisFormat} />
-
-			{#each data as series, i (series.name)}
-				<path
-					d={lineGenerator(series.values)}
-					stroke={colors[i % colors.length]}
-					fill="none"
-					stroke-width="2"
+<div class="chart-container relative not-prose" bind:this={chartContainer} bind:clientWidth={width}>
+	{#if width > 0}
+		<svg {width} {height} class="bg-neutral-200 dark:bg-neutral-800 rounded-md">
+			<g transform="translate({margin.left}, {margin.top})">
+				<D3Axis
+					orientation="bottom"
+					scale={xScale}
+					y={innerHeight}
+					ticks={width > 500 ? 10 : 5}
+					tickFormat="d"
 				/>
-			{/each}
-		</g>
-	</svg>
-	
-	<div bind:this={tooltipEl} class="d3-tooltip"></div>
+				<D3Axis orientation="left" scale={yScale} tickFormat={yAxisFormat} />
 
-	<div class="legend">
-		{#each data as series, i (series.name)}
-			<div class="legend-item">
-				<span class="legend-color" style="background-color: {colors[i % colors.length]}"></span>
-				{series.name}
-			</div>
-		{/each}
-	</div>
+				{#each data as series, i (series.name)}
+					<path
+						d={lineGenerator(series.values)}
+						stroke={colors[i % colors.length]}
+						fill="none"
+						stroke-width="2"
+					/>
+				{/each}
+			</g>
+		</svg>
+
+		<div bind:this={tooltipEl} class="d3-tooltip"></div>
+
+		<div class="legend">
+			{#each data as series, i (series.name)}
+				<div class="legend-item">
+					<span class="legend-color" style="background-color: {colors[i % colors.length]}"></span>
+					{series.name}
+				</div>
+			{/each}
+		</div>
+	{/if}
 </div>
 
 # File: src/lib/components/GoldLine.svelte
@@ -1164,20 +1183,24 @@ export {};
 
 <script lang="ts">
 	import { page } from '$app/state';
-
-	// The topics data is now derived directly from the global page state.
-	// This makes the component self-sufficient with data it needs from the layout.
-	let topics = $derived(page.data.topics || []);
+	// Data is now `categories` from the root layout server load function.
+	let categories = $derived(page.data.categories || []);
 </script>
 
-<aside class="hidden lg:block">
+<aside >
 	<nav>
-		{#each topics as topic (topic.topic)}
+		<div class="sidebar-group">
+			<a href="/blog" class="sidebar-topic hover:underline">All Posts</a>
+		</div>
+		
+		{#each categories as category (category.name)}
 			<div class="sidebar-group">
-				<h3 class="sidebar-topic">{topic.topic}</h3>
+				<a href="/blog/{category.name}" class="sidebar-topic hover:underline">
+					{category.name}
+				</a>
 				<ul>
-					{#each topic.articles as article (article.slug)}
-						{@const href = `/blog/${article.slug}`}
+					{#each category.articles as article (article.slug)}
+						{@const href = `/blog/${article.category}/${article.slug}`}
 						<li>
 							<a {href} class:sidebar-link={true} class:sidebar-link-active={page.url.pathname === href}>
 								{article.title}
@@ -1338,40 +1361,64 @@ export {};
 
 # File: src/lib/components/layout/Header.svelte
 
-<!-- File: src/lib/components/layout/Header.svelte -->
 <script lang="ts">
-	// Hamburger menu state and logic will be added later.
-	let isMenuOpen = $state(false);
+	// State is now passed down from the root layout
+	let {
+		isMenuOpen = false,
+		toggleMenu = () => {}
+	}: {
+		isMenuOpen: boolean;
+		toggleMenu: () => void;
+	} = $props();
 </script>
 
 <header>
 	<div class="container">
 		<nav>
-			<a href="/" class="site-title">
-                SuvroGhosh.Blog
-            </a>
-			<!-- Placeholder for desktop nav items -->
+			<a href="/" class="site-title"> SuvroGhosh.Blog </a>
 			<div class="hidden md:flex items-center space-x-4">
 				<a href="/blog" class="sidebar-link">Blog</a>
 				<a href="/about" class="sidebar-link">About</a>
 				<a href="/contact" class="sidebar-link">Contact</a>
 			</div>
-			<!-- Hamburger Button -->
-			<button class="hamburger md:hidden" onclick={() => isMenuOpen = !isMenuOpen}>
-				<span class="sr-only">Open main menu</span>
-				<!-- SVG icon for hamburger -->
-				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+			<button
+				class="hamburger lg:hidden"
+				onclick={toggleMenu}
+				aria-label={isMenuOpen ? 'Close main menu' : 'Open main menu'}
+			>
+				{#if isMenuOpen}
+					<svg
+						class="w-6 h-6"
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+						xmlns="http://www.w3.org/2000/svg"
+						><path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M6 18L18 6M6 6l12 12"
+						></path></svg
+					>
+				{:else}
+					<svg
+						class="w-6 h-6"
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+						xmlns="http://www.w3.org/2000/svg"
+						><path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M4 6h16M4 12h16M4 18h16"
+						></path></svg
+					>
+				{/if}
 			</button>
 		</nav>
 	</div>
-	<!-- Mobile Menu (logic to show/hide will be implemented) -->
-	{#if isMenuOpen}
-		<div class="md:hidden">
-			<!-- mobile nav links here -->
-		</div>
-	{/if}
 </header>
-
 
 # File: src/lib/components/OnThisPage.svelte
 
@@ -1820,13 +1867,13 @@ title: "Apophenia—a bengali pastime"
 description: "A pendulous self-flatulent bengali"
 
 topic: "Life"
-
+category: "non-fiction"  
 thumbnail: "/images/placeholders/723ccc8e-1bcd-4c1e-b678-219bce8504ee.png"
 ---
 ![clockface](/images/placeholders/723ccc8e-1bcd-4c1e-b678-219bce8504ee.png) 
 Let’s talk patterns, because frankly, they're everywhere, hiding in your cereal bowl, creeping behind your sweaty armpits, and yes—even lurking behind that smug imbecilic clock face reading "11:11," which makes pseudo-philosophers and mid-level marketing executives spontaneously orgasm and declare it cosmic destiny. It's not. It's your brain's pendulous self-flatulent personality. It's called apophenia—a lovely Greek-derived word from apo- (away) and phainein (to show), meaning roughly, "seeing things that aren't really there." Yes, hallucinations without drugs—nature’s own "free-to-play" psychosis.
 
-Let me dial this back, or better still, crank this claptrap up. Your brain has an evolutionary affinity designed to spot leopards behind bushes. No leopards? Then the brain says: "Hey, you see that bush over there? Looks suspiciously leopard-shaped. Let’s wet our loincloth and sprint anyway!" Better safe than cat-food. Today, no big cats roam calcutta’s coffee shops—only big mustachioed goons sent by vindictive ladies with acid in their brains. Yet the leopard-finder lives on, spotting patterns that don’t at all exist. Enter stage left: Jungian synchronicity—a concept dreamt up by Carl Jung, that Swiss psychoanalytic mentalist with a fetish for mandalas, UFOs, and sharing beds with his patients—attractive ones only. According to Jung, synchronicity is "meaningful coincidence," which sounds fancy until you realize it translates roughly to, "Wow, look! Things happened at roughly the same time! That never happens except whenever I really think the girl is hot!"
+Let me dial this back, or better still, crank this claptrap up. Your brain has an evolutionary affinity designed to spot leopards behind bushes. No leopards? Then the brain says: "Hey, you see that bush over there? Looks suspiciously leopard-shaped. Let’s wet our loincloth and sprint anyway!" Better safe than cat-food. Today, no big lions roam calcutta’s coffee shops—only big mustachioed goons sent by vindictive leading ladies with sand irritating the hairy insides of their loins. Yet the leopard-finder lives on, spotting patterns that don’t at all exist. Enter stage left: Jungian synchronicity—a concept dreamt up by Carl Jung, that Swiss psychoanalytic mentalist with a fetish for mandalas, UFOs, and sharing beds with his patients—attractive ones only. According to Jung, synchronicity is "meaningful coincidence," which sounds fancy until you realize it translates roughly to, "Wow, look! Things happened at roughly the same time! That never happens except whenever I really think the girl is hot!"
 
 Here’s a fresh batch of cow dung cooked specially for starry-eyed, artsy Bengali chicks—those irresistible, intellectually ripe, bespectacled beauties sipping iced americanos at jadavpur university, who digest Tagore for breakfast and defecate Derrida before bedtime. Show one of these talcum layered fair damsels, the ones that like to pretend they aren't aware of the oversized mammary or glutes that they balance, that the number 11:11 appears a few times, casually whisper about cosmic alignment, nod sagely, sprinkle some Jung, and watch her neurons melt into a puddle of gooey literary submission. It’s psychological gaslighting dressed as intellectual flirtation—nothing cruel, just ethically bankrupt fun. Especially if they say it's all very fascinating, you can be sure she didn't understand a bit and you can press closer to her damp voluminous thighs. I tried it with the "arts chicks" at presidency and jadavpur when I was young naive and tried really hard—the girls don't like too much effort, you must puke poetry pathetically in their tea a bit, be casually indifferent to their jiggling adipose, laugh it off, break their hearts, just when they get interested, otherwise they'll break yours. 
 
@@ -1915,6 +1962,8 @@ title: "Charting with D3 Axes in Svelte"
 date: "2025-07-23"
 description: "A guide to creating reusable D3.js axes within a Svelte 5 component for clear and effective data visualization."
 topic: "3D & WebGL"
+published: false
+
 thumbnail: "/images/placeholders/d3-placeholder.jpeg"
 ---
 
@@ -1985,6 +2034,8 @@ title: "Integrating D3.js with Svelte"
 date: "2025-06-22"
 description: "A practical guide to combining the power of D3.js for data visualization with the reactive and component-based architecture of Svelte 5."
 topic: "3D & WebGL"
+published: false
+
 thumbnail: "/images/placeholders/d3-placeholder.jpeg"
 ---
 
@@ -2163,7 +2214,7 @@ Where $P_0$ is the population at a starting year and $t$ is the number of years 
 
 <GoldLine />
 
-### Interactive Population Projection
+**Interactive Population Projection**
 
 The formula above is a powerful tool for modeling growth. The component below uses this exact formula to project the population of various cities 500 years into the future. You can select different cities and change the **doubling period** to see how dramatically this single variable affects the outcome.
 
@@ -2171,7 +2222,7 @@ The formula above is a powerful tool for modeling growth. The component below us
 
 <GoldLine />
 
-### A Glimpse into the Future
+**A Glimpse into the Future**
 
 What does this doubling feel like? It means in 2025, for every single person who was waiting for a tram on the Maidan, for every voice in the cacophony of the New Market, for every fan in Eden Gardens back in 1975… there are now two.
 
@@ -2189,29 +2240,30 @@ $$
 
 That’s **16.2 billion people**. Let that sink in. That’s more than double the current population of the entire Earth, all crammed into one sprawling mega-megalopolis. I imagine the Howrah Bridge will have evolved into a 300-level spaghetti junction of transport tubes. The concept of a “private room” will be a quaint myth; you’ll rent a “personal cubic meter.” It’s a terrifying, yet darkly hilarious, thought.
 
-### The History of a Powerful Idea
+**The History of a Powerful Idea**
 
-This powerful idea of exponents didn’t just pop out of nowhere. The person who really got the ball rolling was a 16th-century German monk and mathematician named **Michael Stifel**. [cite_start]In his 1544 book *Arithmetica integra*, he systematically laid out the rules for powers and even used the word “exponent.” [cite: 4483, 4484] [cite_start]Ironically, he also famously used his math skills to predict that the world would end at 8 a.m. on October 19, 1533. [cite: 4485] When it didn’t, his followers were less than pleased. [cite_start]But his work on exponents survived his doomsday blunder and gave us the very language to describe this kind of growth. [cite: 4485, 4486]
+This powerful idea of exponents didn’t just pop out of nowhere. The person who really got the ball rolling was a 16th-century German monk and mathematician named **Michael Stifel**. In his 1544 book *Arithmetica integra*, he systematically laid out the rules for powers and even used the word “exponent.” Ironically, he also famously used his math skills to predict that the world would end at 8 a.m. on October 19, 1533. When it didn’t, his followers were less than pleased. But his work on exponents survived his doomsday blunder and gave us the very language to describe this kind of growth.
 
-But who first applied this tool to the alarming growth of human populations? For that, we turn to the English scholar **Thomas Malthus**. [cite_start]In 1798, he published his *Essay on the Principle of Population*. [cite: 4488, 4489] [cite_start]He was the one who famously pointed out that populations tend to grow exponentially (he called it “geometrically”), while our ability to produce food grows much slower (“arithmetically”). [cite: 4489, 4490] He essentially gave a name to the very panic I feel when I calculate Kolkata having 16.2 billion residents.
+But who first applied this tool to the alarming growth of human populations? For that, we turn to the English scholar **Thomas Malthus**. In 1798, he published his *Essay on the Principle of Population*. He was the one who famously pointed out that populations tend to grow exponentially (he called it “geometrically”), while our ability to produce food grows much slower (“arithmetically”). He essentially gave a name to the very panic I feel when I calculate Kolkata having 16.2 billion residents.
 
-### The Personal Exponent
+**The Personal Exponent**
 
 I am happy to report that while I was 1 in 1975, I am still 1 in 2025, and my contribution to this exponential future is 0. But if a person in Calcutta were to have two children, and those two children, a generation later, each have two of their own, suddenly one data point becomes two, then four, then eight. That is the quiet, inexorable engine of the exponent at work, hidden in the most personal of life's decisions.
 
-[cite_start]Let's do the math: if one person has two children, and this pattern continues for 10 generations over 500 years, the total lineage produced would be **2,046 people**. [cite: 4501] [cite_start]The last generation alone would consist of **1024 people**, all descended from that initial choice. [cite: 4501] By stepping aside from this particular equation, I've ended a potential geometric progression—a small, silent act of defiance against the Malthusian curve.
+Let's do the math: if one person has two children, and this pattern continues for 10 generations over 500 years, the total lineage produced would be **2,046 people**. The last generation alone would consist of **1024 people**, all descended from that initial choice. By stepping aside from this particular equation, I've ended a potential geometric progression—a small, silent act of defiance against the Malthusian curve.
 
-### From Pandemics to Viral Memes
+**From Pandemics to Viral Memes**
 
-This exponential logic gives us a tool to understand the frightening speed of a pandemic. [cite_start]During the early days of COVID-19, we all became amateur epidemiologists, anxiously watching the R-number—the average number of people an infected person would pass the virus to. [cite: 4504] The growth in new cases follows a simple exponential equation:
+This exponential logic gives us a tool to understand the frightening speed of a pandemic. During the early days of COVID-19, we all became amateur epidemiologists, anxiously watching the R-number—the average number of people an infected person would pass the virus to. The growth in new cases follows a simple exponential equation:
 
 $$
 N_n = N_0 \times R^n
 $$
 
-[cite_start]Where $N_0$ is the initial number of cases, $R$ is the reproduction number, and $n$ is the number of generations. [cite: 4511] [cite_start]An R-value of 3 doesn't just mean three new cases; it means the entire epidemic is on track to triple in size over a single generation of the virus. [cite: 4505] This is the same mathematical reality that turns a handful of infections into a global crisis.
+Where $N_0$ is the initial number of cases, $R$ is the reproduction number, and $n$ is the number of generations. An R-value of 3 doesn't just mean three new cases; it means the entire epidemic is on track to triple in size over a single generation of the virus. This is the same mathematical reality that turns a handful of infections into a global crisis.
 
-Now, think of it this way: suppose you share this post's link with just 5 people, and each of them passes it along to 5 more, and so on. [cite_start]In just 10 steps, you’d reach $5^{10} = 9,765,625$—nearly 10 million people. [cite: 4528, 4529] This is **going viral**, another way to look at exponential growth, but instead of babies or viruses, it's ideas that multiply. What begins as one quiet act—a single share—can grow into a digital crowd the size of a metropolis, echoing that same exponential curve that once gave Malthus nightmares.
+Now, think of it this way: suppose you share this post's link with just 5 people, and each of them passes it along to 5 more, and so on. In just 10 steps, you’d reach $5^{10} = 9,765,625$—nearly 10 million people. This is **going viral**, another way to look at exponential growth, but instead of babies or viruses, it's ideas that multiply. What begins as one quiet act—a single share—can grow into a digital crowd the size of a metropolis, echoing that same exponential curve that once gave Malthus nightmares.
+
 
 # File: src/lib/posts/Homeopathy.md
 
@@ -2379,7 +2431,7 @@ date: "2025-07-19"
 description: "A perspective on the rat race"
 
 topic: "Work"
-
+category: "doggerels"
 thumbnail: "/images/placeholders/IMG-20250719-WA0000.jpg"
 
 ---
@@ -2412,6 +2464,8 @@ title: "Generative Abstract Art with p5.js and Svelte"
 date: "2025-06-22"
 description: "Learn how to integrate the creative coding power of p5.js into a modern Svelte 5 application to create dynamic, interactive art for the web."
 topic: "3D & WebGL"
+published: false
+
 thumbnail: "/images/placeholders/p5js-placeholder.jpeg"
 ---
 
@@ -2477,6 +2531,8 @@ title: "Visualizing Workflows with PlantUML Sequence Diagrams"
 date: "2025-06-24"
 description: "How to create and embed PlantUML sequence diagrams directly into a SvelteKit blog for clear, maintainable technical documentation."
 topic: "SvelteKit"
+published: false
+
 layout: "blog"
 thumbnail: "/images/placeholders/plantuml-placeholder.jpeg"
 ---
@@ -2529,6 +2585,7 @@ Below is a sequence diagram illustrating a typical user login process in a Svelt
 title: "Chicken Rezala"
 description: "A journey into the history and science behind the ethereal white curry that is Kolkata's beloved Chicken Rezala."
 topic: "Food & Science"
+category: "essays"
 thumbnail: "/images/placeholders/757fbd57-9053-4e12-95a3-b17bc2008cef.png"
 ---
 ![rezala](/images/placeholders/757fbd57-9053-4e12-95a3-b17bc2008cef.png) 
@@ -2592,6 +2649,8 @@ title: "An Introduction to Svelte"
 date: "2025-07-05"
 description: "A personal take on why Svelte and SvelteKit offer a superior, more intuitive development experience."
 topic: "SvelteKit"
+published: false
+
 thumbnail: "/images/placeholders/svelte-intro-thumbnail.png"
 ---
 
@@ -2638,6 +2697,8 @@ title: "A First Look at Svelte's Runes"
 date: "2025-06-19"
 description: "Exploring the new reactivity model in Svelte 5 and how it changes the way we build apps."
 topic: "SvelteKit"
+published: false
+
 thumbnail: "/images/placeholders/svelte-runes-thumbnail.jpeg"
 ---
 
@@ -2676,6 +2737,8 @@ title: "Creating a 3D Scene with Three.js in Svelte"
 date: "2025-06-22"
 description: "A step-by-step guide to integrating the popular 3D library Three.js into a Svelte 5 component to create interactive WebGL scenes."
 topic: "3D & WebGL"
+published: false
+
 thumbnail: "/images/placeholders/threejs-placeholder.jpeg"
 ---
 
@@ -2731,6 +2794,8 @@ title: "Testing the Text-to-Speech Component"
 date: "2025-07-16"
 description: "A demonstration of the integrated TTS component built with Svelte 4."
 topic: "SvelteKit"
+published: false
+
 thumbnail: "/images/placeholders/tts-placeholder.jpeg"
 ---
 
@@ -2758,54 +2823,88 @@ Instead of using techniques like virtual DOM diffing, Svelte writes code that su
 
 </div>
 
+# File: src/lib/posts/WeirdFeeling.md
+
+---
+title: "A weird feeling"
+
+description: "Bloated with baloney"
+
+topic: "Life"
+category: "sketches"
+thumbnail: "/images/placeholders/IMG-20250723-WA0003.jpg"
+---
+![1](/images/placeholders/IMG-20250723-WA0003.jpg)
+Sometimes I feel like I might run out of words. I've already run out of many things, and I'm destined to peter out someday, when the word-spool go mute—frustrated with the reception. It's a crowded world, a world full of happenstance and probabilities that make jostling and sweating the only reward for the large majority of people.  
+![2](/images/placeholders/YGEiXDBfQq2kVwzN7vUNIw.jpeg)
+It's strictly Darwinian and Malthusian; I realized that more in India, where a reasonable way to explain it would be to say that when someone's born, another falls off in the ocean. It's crowded. And the opportunity to work with the existing resources is often deceptively bureaucratic or nonexistent. The whole economy runs on the premise that if you make a rupee from a billion people, you have a billion rupees, but someone has to keep the equations balanced and keep these people at a point where they are in a position to spend that rupee, not if they are fighting adversities that are hidden away by the media, which never has the time to cover any real news. The advertisements of the shining faces of India that are portrayed outside are just masquerading an image that India never was, behind which the government and it's beneficiary businesses siphon tax payer money in the name of public projects to Swiss accounts. It's magic, except this level of collusion is well known and considered a well deserved dowry given to a politician.  
+![3](/images/placeholders/Fs6YTO0GQ_-nHWut1NkdVA.webp)
+The real India doesn't live in villages, cities, etcetera. The real India lives in the myths that obfuscate the reality of what is real and what is not. What we need is to get out of all this culture-centric baggage, rediscover ourselves, and secure a place in the world. This caste system, these Hindu-Muslim-Christian religious barricades, have to go; if there has to be any fiction that's important, that's the country, period. Let all the disparate and divisive `old man on the cloud` fairytales rest in peace where they deserves, in our libraries of our shared cultures.  
+![4](/images/placeholders/gDpjDHSHS72jcAoV6n7VEg.webp)
+The corruption that continues to erode India is perhaps the only legacy that we seem to be passing on with great efficiency, with morally bankrupt people at the helm, goons festooned with accolades, and a generally well-nourished spectrum of propaganda that has awarded the Indian media the status of a jester. The self-congratulatory style of saying whatever you want to say while keeping your head buried in the sand works well and gets lots of sponsorship, at least.  
+
+I don't know why I bother to write these laments. Nobody cares. But somehow something compels me to write, just in case there's a future leader or thinker who might get inspired. Even a nobody has the right to dream good things for the place he calls home, no matter if that place is hostile to him, or doesn't want him. I was born here, and that's something that's not going to change, nor are the impressions of my childhood years that has been formative in creating this neural network I call me.
+
+
 # File: src/routes/+layout.server.ts
 
 // src/routes/+layout.server.ts
 
 import type { ServerLoad } from '@sveltejs/kit';
 
-// Define a type for the post metadata for better type safety.
-type Post = {
+export type Article = {
 	title: string;
-	date: string;
 	slug: string;
-	[key: string]: any; // Allows for other optional metadata properties
+	category: string;
+	published?: boolean;
+};
+
+export type Category = {
+	name: string;
+	articles: Article[];
 };
 
 export const load: ServerLoad = async () => {
-	// Use Vite's glob import to get all markdown files at build time.
 	const modules = import.meta.glob('/src/lib/posts/*.md', { eager: true });
-
-	const posts: Post[] = [];
+	const posts: Article[] = [];
 	for (const path in modules) {
 		const file = modules[path];
 		const slug = path.split('/').pop()?.slice(0, -3);
 
-		// Ensure all parts are valid before proceeding
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
-			// Type cast metadata to allow for checking optional properties
-			const metadata = file.metadata as Partial<Post>;
-
-			// Check for the required properties before creating the post object.
-			// This prevents errors if a markdown file has missing frontmatter.
-			if (metadata && metadata.title && metadata.date) {
+			const metadata = file.metadata as Omit<Article, 'slug'>;
+			if (metadata && metadata.title) {
+				// Reverted: Always filter unpublished posts
+				if (metadata.published === false) {
+					continue;
+				}
 				posts.push({
-					title: metadata.title,
-					date: metadata.date,
-					slug: slug,
-					...metadata // Add any other optional metadata properties
+					...metadata,
+					slug,
+					category: metadata.category || 'uncategorized'
 				});
 			}
 		}
 	}
 
-	// Sort posts by date, newest first.
-	const sortedPosts = posts.sort(
-		(a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-	);
+	const categoriesMap: Map<string, Article[]> = new Map();
+	posts.forEach((post) => {
+		const category = post.category;
+		if (!categoriesMap.has(category)) {
+			categoriesMap.set(category, []);
+		}
+		categoriesMap.get(category)?.push(post);
+	});
+
+	const categories: Category[] = Array.from(categoriesMap.entries()).map(([name, articles]) => ({
+		name,
+		articles: articles.sort((a, b) => a.title.localeCompare(b.title))
+	}));
+
+	categories.sort((a, b) => a.name.localeCompare(b.name));
 
 	return {
-		posts: sortedPosts
+		categories
 	};
 };
 
@@ -2818,16 +2917,43 @@ export const load: ServerLoad = async () => {
 	import Aside from '$lib/components/layout/Aside.svelte';
 	import ObsidianDrillDown from '$lib/components/layout/DrillDown.svelte';
 
-	// We no longer need to access `data` here, simplifying the component.
 	let { children } = $props();
+	let isMenuOpen = $state(false);
+
+	function toggleMenu() {
+		isMenuOpen = !isMenuOpen;
+	}
+
+	// Lock body scroll when mobile menu is open
+	$effect(() => {
+		if (isMenuOpen) {
+			document.body.classList.add('body-scroll-lock');
+		} else {
+			document.body.classList.remove('body-scroll-lock');
+		}
+	});
 </script>
 
+{#if isMenuOpen}
+	<div
+		class="mobile-nav-overlay lg:hidden"
+		onclick={toggleMenu}
+		role="button"
+		tabindex="0"
+		onkeydown={(e) => e.key === 'Escape' && toggleMenu()}
+	></div>
+	<div class="mobile-nav-drawer lg:hidden" class:open={isMenuOpen} class:closed={!isMenuOpen}>
+		<Aside />
+	</div>
+{/if}
+
 <div class="main-layout">
-	<Aside />
+	<div class="hidden lg:block">
+		<Aside />
+	</div>
 
 	<div class="main-content">
-		<Header />
-
+		<Header {isMenuOpen} {toggleMenu} />
 		<main class="scrollable-main">
 			<div class="container grid lg:grid-cols-[minmax(0,1fr)_auto] gap-8 py-8">
 				<div>
@@ -2836,7 +2962,6 @@ export const load: ServerLoad = async () => {
 				<ObsidianDrillDown />
 			</div>
 		</main>
-
 		<Footer />
 	</div>
 </div>
@@ -2855,69 +2980,82 @@ injectAnalytics({ mode: dev ? 'development' : 'production' });
 </script>
 
 <section class="container mx-auto py-8 max-w-4xl">
-	<h1 class=" mb-8">Reflections on a Schoolboy's Past</h1>
+	<h1 class="mb-8">Reflections on a Schoolboy's Past</h1>
 
 	<p class="mb-4">
-		I remember school through a veil of years of indifference to childhood memories, that grownups at a certain point must admit to—I do.
-		But mine was a complicated palimpsest of ambition, triumph, misadventures, romance, then—shame, regrets—most now like old luggage tags expired or useless.
-		I confess, as useless as perhaps the utility for or the importance of the places and characters and several linked trivia that I sometimes wake up to, wade, and wallow in, now that I am fifty.
+		I remember school through a veil of years of indifference to childhood memories that grownups, at a certain point, must admit to—I do.
+		But mine was a complicated palimpsest of ambition, triumph, misadventures, romance, then—shame, regrets—most now like old luggage tags, expired or useless.
+		I confess, as useless as perhaps the utility for, or the importance of, the places and characters and several linked trivia that I sometimes wake up to, wade, and wallow in, now that I am fifty.
 	</p>
 
 	<p class="my-4">
-		My past is ancient and present is a mystery speeding past; I live now mostly to <em>live</em> really—to barely escape frequent and routine annihilation, survive to remember and recollect the person I am, I was, I once wanted to be—inadvertently became, on the way to be—a leery litany of metamorphosis of a self that mostly started and remained unchanged at the core—which was a fledgling when I became a schoolboy to begin with and started to think, first feel of course—mainly, in my case, see through thick myopia correcting glasses—a visual person, and in my particular case overthink the still-uncorrected blurry—cerebrally—the world through the senses, through the then immature prefrontal and amygdalian theaters of rehearsed endorsements.
-		It happened in a shocking short span then weirdly in a longish sort of lifetime after—that I’m only now able to reconstruct into the surreal absurdity I had managed to bungle myself into being.
-
-</p>
-<p class="my-4">
-I want to start with what ordinarily is the start, I have an embarrassing memory of a very early male size comparison shame, while playing with my sprinkler on the nursery kindergarten back garden drain wall—the competition was a boy who was quite a bit big-boned and larger across several other exhibited jiggling animated adipose protuberances—nursery nuisances that litter such pigsties. But what had also caught my attention and had stayed to this day was—his sprinkler was not only endowed with <em>bigger</em> plumbing with ginormous dark velvety spheres, the resulting stream from the hydrology that came out unthrottled was thicker, more unbidden, forceful, and painted the wall with such ferocity that the reflected spray made me notice his assets. I have no way of going back and sifting through that particular memory's soaked sodden soil, a kid's private memory <em>this</em>—I didn't share with even my mother—who at the time was my only confidante. But toilet or rather the anathema of an always overflowing unkempt school loo, forced me to teach myself to hold my bowels. On two occasions I couldn't, and I defecated in my school half-pants, unable to hold it, as far as I can recollect, trying to keep composure on a waddling dilapidated handpulled rickshaw—these my mother can submit affidavits if required, poor woman, this is back in the day when the washing machine wasn't even in the impoverished imagination of the north calcutta middle class, and we weren't that affluent to have maids to do any cleaning up after us.
-
+		My past is ancient and present is a mystery speeding past; I live now mostly to <em>live</em>, really—to barely escape frequent and routine annihilation, survive to remember and recollect the person I am, I was, I once wanted to be—inadvertently became, on the way to be—a leery litany of metamorphosis of a self that mostly started and remained unchanged at the core—which was a fledgling when I became a schoolboy to begin with and started to think, first feel, of course—mainly, in my case, see through thick myopia-correcting glasses—a visual person, and in my particular case, overthink the still-uncorrected blurry—cerebrally—the world through the senses, through the then immature prefrontal and amygdalian theaters of rehearsed endorsements.
+		It happened in a shockingly short span, then weirdly in a longish sort of lifetime after—that I’m only now able to reconstruct into the surreal absurdity I had managed to bungle myself into being.
 	</p>
-<p class="my-4">
 
+	<p class="my-4">
+		I want to start with what ordinarily is the start. I have an embarrassing memory of a very early male size comparison shame, while playing with my sprinkler on the nursery kindergarten back garden drain wall—the competition was a boy who was quite a bit big-boned and larger across several other exhibited jiggling animated adipose protuberances—nursery nuisances that litter such pigsties. But what had also caught my attention and had stayed to this day was—his sprinkler was not only endowed with <em>bigger</em> plumbing with ginormous dark velvety spheres, the resulting stream from the hydrology that came out unthrottled was thicker, more unbidden, forceful, and painted the wall with such ferocity that the reflected spray made me notice his assets. I have no way of going back and sifting through that particular memory's soaked sodden soil, a kid's private memory <em>this</em>—I didn't share with even my mother—who at the time was my only confidante. But toilet, or rather the anathema of an always overflowing unkempt school loo, forced me to teach myself to hold my bowels. On two occasions I couldn't, and I defecated in my school half-pants, unable to hold it, as far as I can recollect, trying to keep composure on a waddling dilapidated hand-pulled rickshaw—these my mother can submit affidavits if required. Poor woman, this is back in the day when the washing machine wasn't even in the impoverished imagination of the North Calcutta middle class, and we weren't that affluent to have maids to do any cleaning up after us.
+	</p>
 
-There was one more occasion when it could have ended well, except it didn't—that a city of joy rarely has its College Street English bookstores' makeshift shanty loos equipped to flush fresh fetid feces—aggravating a nervous and nerve-wrecked boy without a way to clean his gentle bottom. When I reported this inadequacy of the establishment to the ungrateful shop clerk, he demanded I lug a heavy leaky balti, descriptive of poverty, half across the street in my English medium school dress, so I fled as fast as my unwashed bottom would allow. I went as a part of a group of kids who, although were all my age (section B), did not seem to have the same digestive or excretory system that from time to time in my case asserted that matter came in three states, and all the states were in fact coming out of some portion of my rear, all the time!
- </p>
-<p class="my-4">
-So that's what sort of started me startled with the disequilibrium with looks, size, shape, velocity and power in the gossipy, everyday, ordinary of this, what I eventually understood to be an extraordinary world, and this inconvenient discovery has stuck as I found out I am, in man's limited prowess over the middling distances, an extremely Lilliputian man in every way, shape, and form, and to this day—even as a bengali, that is where I am. It's neither an admission of guilt nor of defeat—there are no adversaries to speak of except man's own inhibition in most circumstances. But I like to recognize the parts for what they are, not for what I wish them to be—and therefore, in introspections, I've found the weaknesses in me are my strength, because that's what's authentic.
-</p>
+	<p class="my-4">
+		There was one more occasion when it could have ended well, except it didn't—that a city of joy rarely has its College Street English bookstores' makeshift shanty loos equipped to flush fresh fetid feces—aggravating a nervous and nerve-wracked boy without a way to clean his gentle bottom. When I reported this inadequacy of the establishment to the ungrateful shop clerk, he demanded I lug a heavy, leaky balti, descriptive of poverty, half across the street in my English medium school dress, so I fled as fast as my unwashed bottom would allow. I went as part of a group of kids who, although were all my age (Section B), did not seem to have the same digestive or excretory system that, from time to time, in my case, asserted that matter came in three states, and all the states were in fact coming out of some portion of my rear, all the time!
+	</p>
 
-<p class="my-4">
-People in the world—tragically, in the holy land I dwell especially—who have lower melanin or somewhat symmetrical distribution of skin and adipose around elevated cheekbones, standing a few inches above the median statistical height or fitting within a few inches smaller than the width of the median dress size—are propitiated by the population that lack these characteristics. This asymmetrical distribution in coveting is what causes the lifespan of some of us to get affected destructively by a devoted and toxic societal perusal of compensatory activities to match the deficiency with wealth, power, education, and other biologically inaccessible accouterments. I was like the majority in this common herd, trying hard to make up for all the deficiencies in the only way I knew how—by reading books.
-You reach heights in civilization or find mates with luscious curves only if you have, say, the torso of a Greco-Roman statue or like Tarzan the ape man, while if you're short-stature, melanin rich, and sans the golden ratios in appointed parts, you're destined to die of undiscovery and ignominy, blatant racism—or put a star before the ism, for in these matters, placeholders are your friend.
-</p>
-<p class="my-4">
-This compensatory curriculum I started very early. My mother started me at age two, first, I gather, by reading the books to me, which service was quickly unnecessary as my neurons were quick to pick up the linguistic abilities. As far as I can tell, from very early on, I was thinking—a skill till today not at all a human requirement of any importance, and given to asking and not giving up if the answers didn't satisfy me—I was irritatingly insistent. I wouldn't call it either curiosity or pursuit of excellence, as at that age I had no clear scientific intimation of, say, which side was in and which was out, except that there was a pattern of in and out and accompanying smell—good and bad—and specific rooms in which these activities were encouraged.
+	<p class="my-4">
+		So that's what sort of started me—startled with the disequilibrium with looks, size, shape, velocity, and power in the gossipy, everyday, ordinary of this, what I eventually understood to be an extraordinary world, and this inconvenient discovery has stuck as I found out I am, in man's limited prowess over the middling distances, an extremely Lilliputian man in every way, shape, and form, and to this day—even as a Bengali, that is where I am. It's neither an admission of guilt nor of defeat—there are no adversaries to speak of except man's own inhibition in most circumstances. But I like to recognize the parts for what they are, not for what I wish them to be—and therefore, in introspections, I've found the weaknesses in me are my strength, because that's what's authentic.
+	</p>
 
-This is how, as a child, I slowly started to grasp reality, and occasionally by being obtrusive and arrogantly inquisitive through chains of whys which adults find irksome I tried to dredge the benthic dregs lying neglected. They therefore avoided me and my inconvenient questions at all costs. I was given the terrace and a room in the attic. This garret is where I spent most of my time. It wasn't impossible to notice, even with meristematic brain system, that cognitive ability of the deficient and dud subtypes were everywhere at play and was what I was expected to rote learn to please the prevailing dogmatic adult supervisory overlords.
-</p>
-<p class="my-4">
-Given how elementary the level of education in the Indian system is, in spite of the incredible amount of marketing disinformation willingly spread to glorify some form of Indian supremacy in the West—this is comical, if not farcical, in its irony, given that the English medium system I was enslaved in, or any denomination of modern education in India, is a British colonial legacy of efforts to squeeze local and cheaper clerks instead of the more expensive and often temporary ones of forcing Europeans in a hostile tropical climate. Even the British system came from a German system of indentured training programs.
+	<p class="my-4">
+		People in the world—tragically, in the holy land I dwell especially—who have lower melanin or somewhat symmetrical distribution of skin and adipose around elevated cheekbones, standing a few inches above the median statistical height or fitting within a few inches smaller than the width of the median dress size—are propitiated by the population that lack these characteristics. This asymmetrical distribution in coveting is what causes the lifespan of some of us to get affected destructively by a devoted and toxic societal perusal of compensatory activities to match the deficiency with wealth, power, education, and other biologically inaccessible accouterments. I was like the majority in this common herd, trying hard to make up for all the deficiencies in the only way I knew how—by reading books.
+		You reach heights in civilization or find mates with luscious curves only if you have, say, the torso of a Greco-Roman statue or like Tarzan the Ape Man, while if you're short-statured, melanin-rich, and sans the golden ratios in appointed parts, you're destined to die of undiscovery and ignominy, blatant racism—or put a star before the -ism, for in these matters, placeholders are your friend.
+	</p>
 
-Conversely, this doesn't imply the Occident is superior in any subject—it's not, either. Homo sapiens is an ape which looks slightly different superficially and is found with various doses of self-esteem issues and delusions over various regions, and as you can expect, every region hypes its own abilities without any evidence. Historically, we sit on a biased landscape of exploitation and racism which has created generations of impoverished citizenry, which contrast when juxtaposed with those descended from the affluent and ruling generations. This asymmetrical skew will now get even more topsy-turvy, even tipsy, given synthetic intelligence will get added to the more affluent and already educated enough to reap its advantages first.
-</p>
-<p class="my-4">
-So all the parochial supremacy of the Indian stock is false—anyone who puts in the hours can master a subject. I could too, and I did easily, and devoted most of the time daydreaming or fornicating with my hand and wondering if the ejaculated matter was an indication of cancer. Since all matter of excretion were bad, how could this feel so good, and why did it come about while cognitive diversions were guided carnally to the opposite side of the species? I couldn't figure this out, of course, till much later.
-I was after all at the age when you are desirous of base sixty mathematical systems, for the illicit illegitimate love attraction to the word part formed by the first three alphabets in its name engraved in my palpitating lover-boy libidinous lust crazed heart.
-</p>
-<p class="my-4">
+	<p class="my-4">
+		This compensatory curriculum I started very early. My mother started me at age two—first, I gather, by reading the books to me, which service was quickly unnecessary as my neurons were quick to pick up the linguistic abilities. As far as I can tell, from very early on, I was thinking—a skill till today not at all a human requirement of any importance—and given to asking and not giving up if the answers didn't satisfy me—I was irritatingly insistent. I wouldn't call it either curiosity or pursuit of excellence, as at that age I had no clear scientific intimation of, say, which side was in and which was out, except that there was a pattern of in and out and accompanying smell—good and bad—and specific rooms in which these activities were encouraged.
+	</p>
 
-Those who prefer the opposite, longer-haired illusions of us for these cosmetic and meretricious patina of gloss—us cretins also misjudge melanin deficiency for superiority or experiments with holiness. We believe if white man George Harrison had condescended in his lyrics the coexistence of the dark-skinned mythological creation Krishna with the Christian mythology of white man Jesus, then they are both really real and there's a cowherd with methemoglobinemia and an antique flute and a schizophrenic carpenter stuck on a cross who live somewhere in Attapara in North Calcutta under some Bengali pseudonym.
+	<p class="my-4">
+		This is how, as a child, I slowly started to grasp reality, and occasionally, by being obtrusive and arrogantly inquisitive through chains of whys which adults find irksome, I tried to dredge the benthic dregs lying neglected. They therefore avoided me and my inconvenient questions at all costs. I was given the terrace and a room in the attic. This garret is where I spent most of my time. It wasn't impossible to notice, even with a meristematic brain system, that cognitive ability of the deficient and dud subtypes were everywhere at play and was what I was expected to rote learn to please the prevailing dogmatic adult supervisory overlords.
+	</p>
 
-Thus our ability to get muddled works hand in hand with a corrupted framework of basic data, information, or knowledge, and we grow up on a pyramid of crumbling make-believe fiction and frequently conflate it with facts. Of course, no one wants to wake up next to a hag with no teeth, but even this logic is specious because—give enough time to Aishwarya Rai Bachchan to age and I promise you she'll be a hag with no teeth. The only way out is a stuffed doll or a girl robot, but that is not how your brain would like to accept it—your brain would know it's a thing, and because of its lack of consciousness, its participation as a partner is void. Wait a few more years until a girl robot can dump you; at that point, it won't be a thing anymore.
-</p>
-<p class="my-4">
-I had also noticed adults insisted on covering up inconsistencies in their fictions with weaker tapestries of lies, and the separation of the ruling and the ruled was inherent in being party to this willed obfuscation or willing obeisance. This was fractally how society was structured at various levels—a distributed system of arranged or imposed parents and willing or subjugated children, at whatever level of fictional abstraction I looked: parent–child, of course, country leaders–citizen, company corporate vs. workers, religious elite priests and worshippers or the faithful, extending all the way to authors, artists, sportspersons and their consumers, teachers and students. The game was mainly lying and manipulation, with manicured gaslighting tweaked as per the needs of the specialty.
+	<p class="my-4">
+		Given how elementary the level of education in the Indian system is, in spite of the incredible amount of marketing disinformation willingly spread to glorify some form of Indian supremacy in the West—this is comical, if not farcical, in its irony, given that the English medium system I was enslaved in, or any denomination of modern education in India, is a British colonial legacy of efforts to squeeze local and cheaper clerks instead of the more expensive and often temporary ones of forcing Europeans in a hostile tropical climate. Even the British system came from a German system of indentured training programs.
+	</p>
 
-The prevalence of mythology—emphasised and encouraged bias, or the absence of nuanced understanding of the operating models versus the indoctrinated and forced fictions—I saw created a hierarchy of flimflammery, superstitious jibber-jabber, pseudoscience, and an inflated sense of inflated religious affirmation in Bengali society, which at that time was partly Marxist in Calcutta and wanted to hold on to atheism. And in spite of their efforts, most had too little reading in them to make up their mind. I remember Darwin’s evolution was an option with a subject as trivial as pisciculture—cosmology never entered the lexicon, and astronomy was synonymous with horoscopes, palmistry, and astrology. The Bengal I grew up in was in the eighties still really pre-Victorian, and now India, under the new religious right, has slid a few centuries back into an equivalent dark middle age—so much for moving forward. It’s all atavistic growth; appearances of gentrification, or any sophisticated sheen is patina, imported from outside the country.
-</p>
-<p class="my-4"> 
-But really in the end, what I'm trying to say in a long, winding way is that I did a lot of reading—and still read, to my mother's chagrin—that no, none of the readings I did—do me any good as far as carrying out the original intention—I haven't accumulated any wealth or curvaceous mate, just books. Meritocracy is like a hoax you force on blind and disabled elderly in a care home—they can't ask for a refund. But I read, and this blog is where I share it.
-And not just books that I read—I travel, and work on interesting ideas or at least think about them, and want to share my personal life and work experiences and knowledge. And if my exposure can help someone like me back when I was little—a boy or girl growing up without a compass in Calcutta or elsewhere—I’d feel I did something right, for a change.
-Most human beings come incarcerated in their minds, their stories are therefore left untold, their imagination stay hidden—but I am articulate and I can draw caricatures, so I can bring my mind to you, and that's what this blog or some of its squibs about. 
-</p>
+	<p class="my-4">
+		Conversely, this doesn't imply the Occident is superior in any subject—it's not, either. Homo sapiens is an ape which looks slightly different superficially and is found with various doses of self-esteem issues and delusions over various regions, and as you can expect, every region hypes its own abilities without any evidence. Historically, we sit on a biased landscape of exploitation and racism which has created generations of impoverished citizenry, which contrast when juxtaposed with those descended from the affluent and ruling generations. This asymmetrical skew will now get even more topsy-turvy, even tipsy, given synthetic intelligence will get added to the more affluent and already educated enough to reap its advantages first.
+	</p>
+
+	<p class="my-4">
+		So all the parochial supremacy of the Indian stock is false—anyone who puts in the hours can master a subject. I could too, and I did easily, and devoted most of the time daydreaming or fornicating with my hand and wondering if the ejaculated matter was an indication of cancer. Since all matter of excretion were bad, how could this feel so good, and why did it come about while cognitive diversions were guided carnally to the opposite side of the species? I couldn't figure this out, of course, till much later.
+		I was, after all, at the age when you are desirous of base sixty mathematical systems, for the illicit illegitimate love attraction to the word part formed by the first three alphabets in its name engraved in my palpitating lover-boy libidinous lust-crazed heart.
+	</p>
+
+	<p class="my-4">
+		Those who prefer the opposite, longer-haired illusions of us for these cosmetic and meretricious patina of gloss—us cretins also misjudge melanin deficiency for superiority or experiments with holiness. We believe if white man George Harrison had condescended in his lyrics the coexistence of the dark-skinned mythological creation Krishna with the Christian mythology of white man Jesus, then they are both really real and there's a cowherd with methemoglobinemia and an antique flute and a schizophrenic carpenter stuck on a cross who live somewhere in Attapara in North Calcutta under some Bengali pseudonym.
+	</p>
+
+	<p class="my-4">
+		Thus our ability to get muddled works hand in hand with a corrupted framework of basic data, information, or knowledge, and we grow up on a pyramid of crumbling make-believe fiction and frequently conflate it with facts. Of course, no one wants to wake up next to a hag with no teeth, but even this logic is specious because—give enough time to Aishwarya Rai Bachchan to age and I promise you she'll be a hag with no teeth. The only way out is a stuffed doll or a girl robot, but that is not how your brain would like to accept it—your brain would know it's a thing, and because of its lack of consciousness, its participation as a partner is void. Wait a few more years until a girl robot can dump you; at that point, it won't be a thing anymore.
+	</p>
+
+	<p class="my-4">
+		I had also noticed adults insisted on covering up inconsistencies in their fictions with weaker tapestries of lies, and the separation of the ruling and the ruled was inherent in being party to this willed obfuscation or willing obeisance. This was fractally how society was structured at various levels—a distributed system of arranged or imposed parents and willing or subjugated children, at whatever level of fictional abstraction I looked: parent–child, of course, country leaders–citizen, company corporate vs. workers, religious elite priests and worshippers or the faithful, extending all the way to authors, artists, sportspersons and their consumers, teachers and students. The game was mainly lying and manipulation, with manicured gaslighting tweaked as per the needs of the specialty.
+	</p>
+
+	<p class="my-4">
+		The prevalence of mythology—emphasised and encouraged bias, or the absence of nuanced understanding of the operating models versus the indoctrinated and forced fictions—I saw created a hierarchy of flimflammery, superstitious jibber-jabber, pseudoscience, and an inflated sense of inflated religious affirmation in Bengali society, which at that time was partly Marxist in Calcutta and wanted to hold on to atheism. And in spite of their efforts, most had too little reading in them to make up their mind. I remember Darwin’s evolution was an option with a subject as trivial as pisciculture—cosmology never entered the lexicon, and astronomy was synonymous with horoscopes, palmistry, and astrology. The Bengal I grew up in was in the eighties still really pre-Victorian, and now India, under the new religious right, has slid a few centuries back into an equivalent dark middle age—so much for moving forward. It’s all atavistic growth; appearances of gentrification, or any sophisticated sheen is patina, imported from outside the country.
+	</p>
+
+	<p class="my-4">
+		But really, in the end, what I'm trying to say in a long, winding way is that I did a lot of reading—and still read, to my mother's chagrin—that no, none of the readings I did do me any good as far as carrying out the original intention—I haven't accumulated any wealth or curvaceous mate, just books. Meritocracy is like a hoax you force on blind and disabled elderly in a care home—they can't ask for a refund. But I read, and this blog is where I share it.
+		And not just books that I read—I travel, and work on interesting ideas or at least think about them, and want to share my personal life and work experiences and knowledge. And if my exposure can help someone like me back when I was little—a boy or girl growing up without a compass in Calcutta or elsewhere—I’d feel I did something right, for a change.
+		Most human beings come incarcerated in their minds, their stories are therefore left untold, their imagination stay hidden—but I am articulate and I can draw caricatures, so I can bring my mind to you, and that's what this blog or some of its contents are about. It varies from exploratory non-fiction, formal prosaic posts, loose squibs, looser still—doggerels. A fair bit is in unparliamentary and unsavory diction that may peeve a lap dog, an uneducated mother, an easily offended belligerent female or bellicose feline, a crusty, dogmatic, obdurate, religious zealot, or an unscrupulous, rabid, political ideologue or corrupt politician. And to such people, might I therefore kindly request not to leave the comfort of their dopey dogma, or if they do, be sternly warned, <b>reading beyond this point of their own volition</b>, (although there's no such thing, free will is an illusion, but still I have to write this) their health and well-being is in their own two good hands, or three, if an indoctrinated, religious and fanatic AI is reading this.
+	</p>
+
 	<div class="text-center mt-12">
 		<a href="/blog" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition-colors duration-200">
-			Visit the Engineering Blog
+			Visit the Blog
 		</a>
 	</div>
 </section>
@@ -2932,6 +3070,7 @@ Most human beings come incarcerated in their minds, their stories are therefore 
 
 # File: src/routes/blog/+page.server.ts
 
+// src/routes/blog/+page.server.ts
 import { error } from '@sveltejs/kit';
 
 interface Post {
@@ -2939,7 +3078,9 @@ interface Post {
 	title: string;
 	date: string;
 	description: string;
-	thumbnail?: string; // Add the optional thumbnail property
+	thumbnail?: string;
+	category: string;
+	published?: boolean;
 }
 
 /** @type {import('./$types').PageServerLoad} */
@@ -2952,17 +3093,21 @@ export async function load() {
 
 				if (file && typeof file === 'object' && 'metadata' in file && slug) {
 					const metadata = file.metadata as Omit<Post, 'slug'>;
-					// Provide a default thumbnail if one isn't specified
 					const post: Post = {
 						...metadata,
 						slug,
-						thumbnail: metadata.thumbnail || '/images/placeholders/default.png'
+						thumbnail: metadata.thumbnail || '/images/placeholders/default.png',
+						category: metadata.category || 'uncategorized'
 					};
 					return post;
 				}
 				return null;
 			})
-			.filter((post): post is Post => post !== null);
+			.filter((post): post is Post => {
+				if (!post) return false;
+				// Reverted: Always filter unpublished posts
+				return post.published !== false;
+			});
 
 		posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
@@ -2990,7 +3135,86 @@ export async function load() {
 	<PostGallery posts={data.posts} />
 </section>
 
-# File: src/routes/blog/[slug]/+layout.svelte
+# File: src/routes/blog/[category]/+page.server.ts
+
+// src/routes/blog/[category]/+page.server.ts
+import { error } from '@sveltejs/kit';
+import type { PageServerLoad } from './$types';
+
+interface Post {
+	slug: string;
+	title: string;
+	date: string;
+	description: string;
+	thumbnail?: string;
+	category: string;
+	published?: boolean;
+}
+
+export const load: PageServerLoad = async ({ params }) => {
+	const { category } = params;
+	const postFiles = import.meta.glob('/src/lib/posts/*.md', { eager: true });
+
+	try {
+		const posts = Object.entries(postFiles)
+			.map(([path, file]): Post | null => {
+				const slug = path.split('/').pop()?.replace('.md', '');
+
+				if (file && typeof file === 'object' && 'metadata' in file && slug) {
+					const metadata = file.metadata as Omit<Post, 'slug'>;
+					const postCategory = metadata.category || 'uncategorized';
+
+					if (postCategory === category) {
+						// Reverted: Always filter unpublished posts
+						if (metadata.published === false) {
+							return null;
+						}
+						return {
+							...metadata,
+							slug,
+							thumbnail: metadata.thumbnail || '/images/placeholders/default.png',
+							category: postCategory
+						};
+					}
+				}
+				return null;
+			})
+			.filter((post): post is Post => post !== null);
+
+		if (posts.length === 0) {
+			error(404, 'No posts found in this category');
+		}
+
+		posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+		return {
+			posts,
+			category
+		};
+	} catch (e) {
+		console.error(e);
+		error(500, 'Could not load posts.');
+	}
+};
+
+# File: src/routes/blog/[category]/+page.svelte
+
+<script lang="ts">
+	import PostGallery from '$lib/components/blog/PostGallery.svelte';
+	let { data } = $props();
+</script>
+
+<svelte:head>
+	<title>{data.category} - SuvroGhosh.Blog</title>
+	<meta name="description" content="Articles in the {data.category} category." />
+</svelte:head>
+
+<section>
+	<h1 class="capitalize">Category: {data.category}</h1>
+	<PostGallery posts={data.posts} />
+</section>
+
+# File: src/routes/blog/[category]/[slug]/+layout.svelte
 
 <!-- src/routes/blog/[slug]/+layout.svelte -->
 <!-- 
@@ -3005,7 +3229,7 @@ export async function load() {
 {@render children()}
 
 
-# File: src/routes/blog/[slug]/+page.svelte
+# File: src/routes/blog/[category]/[slug]/+page.svelte
 
 <script lang="ts">
 	let { data } = $props();
@@ -3025,66 +3249,76 @@ export async function load() {
 	<Content />
 {/if}
 
-# File: src/routes/blog/[slug]/+page.ts
+# File: src/routes/blog/[category]/[slug]/+page.ts
 
-// File: src/routes/blog/[slug]/+page.ts
+// src/routes/blog/[category]/[slug]/+page.ts
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
+import type { SvelteComponent } from 'svelte';
 
-type Heading = {
-	level: number;
-	id: string;
-	text: string;
+type PostModule = {
+	default: SvelteComponent;
+	metadata: {
+		published?: boolean;
+		[key: string]: unknown;
+	};
 };
 
-// Helper function to generate GitHub-compatible slugs for headings
+type Heading = { level: number; id: string; text: string };
+
 function slugify(text: string): string {
 	return text
 		.toLowerCase()
 		.trim()
-		.replace(/[\s_]+/g, '-') // Replace spaces and underscores with -
-		.replace(/[^\w-]+/g, '') // Remove all non-word chars except -
-		.replace(/--+/g, '-') // Replace multiple - with single -
-		.replace(/^-+/, '') // Trim - from start of text
-		.replace(/-+$/, ''); // Trim - from end of text
+		.replace(/[\s_]+/g, '-')
+		.replace(/[^\w-]+/g, '')
+		.replace(/--+/g, '-')
+		.replace(/^-+/, '')
+		.replace(/-+$/, '');
 }
 
 export const load: PageLoad = async ({ params }) => {
 	try {
-		// Use Vite's features to dynamically import the component and the raw markdown
-		const postPromise = import(`../../../lib/posts/${params.slug}.md`);
-		const postsRaw = import.meta.glob('/src/lib/posts/*.md', { query: '?raw', eager: true, import: 'default' });
+		const postModules = import.meta.glob('/src/lib/posts/*.md');
 		const postPath = `/src/lib/posts/${params.slug}.md`;
+		const postModuleLoader = postModules[postPath];
+
+		if (!postModuleLoader) {
+			error(404, { message: `Post module not found for slug: ${params.slug}` });
+		}
+
+		const postPromise = postModuleLoader();
+
+		const postsRaw = import.meta.glob('/src/lib/posts/*.md', {
+			query: '?raw',
+			eager: true,
+			import: 'default'
+		});
 		const rawContent = postsRaw[postPath];
 
-		// FIX: Add an explicit type check to ensure rawContent is a string.
-		// This acts as a type guard and satisfies TypeScript.
 		if (typeof rawContent !== 'string') {
 			error(404, { message: `Could not find markdown content for: ${params.slug}` });
 		}
 
 		const headings: Heading[] = [];
-		// Regex to find h2 and h3 markdown headings
 		const headingRegex = /^(##|###)\s+(.*)/gm;
 		let match;
-
 		while ((match = headingRegex.exec(rawContent)) !== null) {
 			const text = match[2].trim();
-			headings.push({
-				level: match[1].length,
-				id: slugify(text),
-				text: text
-			});
+			headings.push({ level: match[1].length, id: slugify(text), text: text });
 		}
 
-		// Await the component import
-		const post = await postPromise;
+		const post = (await postPromise) as PostModule;
+
+		// Reverted: Always prevent access to unpublished posts
+		if (post.metadata.published === false) {
+			error(404, { message: 'This post is not available' });
+		}
 
 		return {
 			...post.metadata,
 			slug: params.slug,
 			content: post.default,
-			// Add the extracted headings to the page data
 			headings
 		};
 	} catch (e) {
@@ -3092,7 +3326,6 @@ export const load: PageLoad = async ({ params }) => {
 		error(404, { message: `Could not find post: ${params.slug}` });
 	}
 };
-
 
 # File: src/types/mdsvex.d.ts
 

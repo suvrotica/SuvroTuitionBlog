@@ -3,6 +3,8 @@ title: "Integrating D3.js with Svelte"
 date: "2025-06-22"
 description: "A practical guide to combining the power of D3.js for data visualization with the reactive and component-based architecture of Svelte 5."
 topic: "3D & WebGL"
+published: false
+
 thumbnail: "/images/placeholders/d3-placeholder.jpeg"
 ---
 

@@ -4,7 +4,7 @@ title: "A weird feeling"
 description: "Bloated with baloney"
 
 topic: "Life"
-
+category: "sketches"
 thumbnail: "/images/placeholders/IMG-20250723-WA0003.jpg"
 ---
 ![1](/images/placeholders/IMG-20250723-WA0003.jpg)

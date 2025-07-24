@@ -3,6 +3,8 @@ title: "An Introduction to Svelte"
 date: "2025-07-05"
 description: "A personal take on why Svelte and SvelteKit offer a superior, more intuitive development experience."
 topic: "SvelteKit"
+published: false
+
 thumbnail: "/images/placeholders/svelte-intro-thumbnail.png"
 ---
 
