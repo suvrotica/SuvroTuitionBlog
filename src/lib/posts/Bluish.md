@@ -1,5 +1,13 @@
 ---
-Title:
+title: "It's bluish"
+
+description: "It's bluish" 
+topic: "Life"
+
+thumbnail: "/images/placeholders/91d2477e-63e4-45a3-9c5c-0532df45fe0d.png"
+---
+![babu moshai](/images/placeholders/91d2477e-63e4-45a3-9c5c-0532df45fe0d.png) 
+
 It's bluish drab watercolor glue,
 A few drinks my mood sinks.
 I am just not feeling well today,
