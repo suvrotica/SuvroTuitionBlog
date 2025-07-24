@@ -3,7 +3,7 @@ title: "Microwave"
 
 description: "And the goodly god said let there be microwave—and so it was done"
 
-category: "non-fiction"  
+category: "Physics"  
 thumbnail: "/images/placeholders/IMG-20250724-WA0009.jpg"
 ---
 ![goodly](/images/placeholders/IMG-20250724-WA0009.jpg) 
