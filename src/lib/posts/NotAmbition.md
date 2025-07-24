@@ -6,7 +6,7 @@ date: "2025-07-19"
 
 description: "A perspective on the rat race"
 
-topic: "Work"
+category: "Work"
 
 thumbnail: "/images/placeholders/IMG-20250719-WA0000.jpg"
 
