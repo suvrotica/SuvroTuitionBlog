@@ -20,7 +20,7 @@ At fifty, I'm dead against always being shifty.<br>
 I can sing no song, my songs are sung,<br>
 My favorite vinyls, still gold, are hefty.<br>
 <br>
-The sewage circling down a dank drain,<br>
+Like sewage circling down a dank drain,<br>
 I drip downstairs on someone's head.<br>
 Annoying him forcing a look up and yell,<br>
 Makes him stab his kid instead.<br>
