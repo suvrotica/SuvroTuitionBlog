@@ -1,54 +1,43 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	// PROPS
-	/**
-	 * A CSS selector for the element containing the text to be read.
-	 * e.g., "#post-content"
-	 */
+	// PROPS (No changes needed here)
 	export let contentSelector: string = '';
+	export let textToRead: string = '';
 
-	// STATE
-	let text: string = 'Many people say they have no choice but to embrace the changes, even as they come to terms with the loss of freedom and spontaneity.'; // Default text
+	// STATE & LOGIC (No changes needed here)
+	let text: string = '';
 	let isSupported = false;
 	let isSpeaking = false;
 	let isPaused = false;
 	let speed = 1;
 	let currentCharacter = 0;
-
-	// DOM-element bindings
 	let speedInput: HTMLInputElement;
-
-	// We create a single utterance instance and reuse it.
 	let utterance: SpeechSynthesisUtterance;
 
 	onMount(() => {
 		if ('speechSynthesis' in window) {
 			isSupported = true;
 			utterance = new SpeechSynthesisUtterance();
-
-			// When speech ends, reset the state.
 			utterance.onend = () => {
 				isSpeaking = false;
 				isPaused = false;
 				currentCharacter = 0;
 			};
-
-			// Track progress to allow for resuming or changing speed mid-speech.
 			utterance.onboundary = (event) => {
 				currentCharacter = event.charIndex;
 			};
 		}
 
-		// If a content selector is provided, extract the text from the DOM.
-		if (contentSelector) {
+		if (textToRead) {
+			text = textToRead;
+		} else if (contentSelector) {
 			const element = document.querySelector(contentSelector);
 			if (element) {
 				text = (element as HTMLElement).innerText;
 			}
 		}
 
-		// Cleanup: Ensure speech is stopped when the component is unmounted.
 		return () => {
 			if (isSupported) {
 				window.speechSynthesis.cancel();
@@ -58,16 +47,11 @@
 
 	function playText() {
 		if (!isSupported || !text) return;
-
-		// If we are paused, just resume.
 		if (speechSynthesis.paused && speechSynthesis.speaking) {
 			isPaused = false;
 			return speechSynthesis.resume();
 		}
-
-		// If we are already speaking, do nothing.
 		if (speechSynthesis.speaking) return;
-
 		utterance.text = text;
 		utterance.rate = speed || 1;
 		speechSynthesis.speak(utterance);
@@ -83,7 +67,7 @@
 	}
 
 	function stopText() {
-		speechSynthesis.resume(); // Ensure it's not paused before cancelling.
+		speechSynthesis.resume();
 		speechSynthesis.cancel();
 		isSpeaking = false;
 		isPaused = false;
@@ -91,10 +75,8 @@
 	}
 
 	function handleSpeedChange() {
-		// If speaking, stop and restart from the current position to apply the new speed.
 		if (speechSynthesis.speaking) {
 			stopText();
-			// A brief delay to allow the cancel command to process fully.
 			setTimeout(() => {
 				const remainingText = text.substring(currentCharacter);
 				if (remainingText) {
@@ -110,26 +92,24 @@
 
 <div class="interactive-component-wrapper not-prose">
 	{#if isSupported}
-		<textarea
-			class="w-full h-48 p-3 rounded-md bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 focus:ring-2 focus:ring-gold dark:focus:ring-gold transition-all"
-			bind:value={text}
-			placeholder="Enter text to speak..."
-		></textarea>
-		<div class="flex items-center justify-between mt-4">
+		<div class="flex items-center justify-between">
 			<div class="flex items-center gap-2">
 				<label for="speed" class="text-sm text-neutral-600 dark:text-neutral-400">Speed</label>
 				<input
-					type="number"
+					type="range"
 					id="speed"
 					name="speed"
 					min="0.5"
 					max="2"
 					step="0.1"
-					class="w-20 rounded-md border-neutral-300 dark:border-neutral-700 bg-neutral-100 dark:bg-neutral-800 text-center"
+					class="tts-speed-input"
 					bind:value={speed}
-					onchange={handleSpeedChange}
+					oninput={handleSpeedChange}
 					bind:this={speedInput}
 				/>
+				<span class="text-sm font-mono text-neutral-600 dark:text-neutral-400 w-10 text-center"
+					>{speed.toFixed(1)}x</span
+				>
 			</div>
 
 			<div class="flex items-center gap-2">
@@ -193,16 +173,7 @@
 		</p>
 	{/if}
 </div>
-
 <style>
-	/* Targeting the number input arrows for better dark mode visibility */
-	input[type='number']::-webkit-inner-spin-button,
-	input[type='number']::-webkit-outer-spin-button {
-		filter: invert(0.8);
-	}
-
-	:global(html.light) input[type='number']::-webkit-inner-spin-button,
-	:global(html.light) input[type='number']::-webkit-outer-spin-button {
-		filter: none;
-	}
+	/* Styles for number input arrows can be removed as they are no longer used. */
+	/* The .tts-speed-input class from app.css will style the range slider. */
 </style>
