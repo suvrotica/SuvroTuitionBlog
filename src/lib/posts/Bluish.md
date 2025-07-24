@@ -8,7 +8,7 @@ thumbnail: "/images/placeholders/IMG-20250724-WA0007.jpg"
 ---
 ![blue bengali man](/images/placeholders/IMG-20250724-WA0007.jpg) 
 
-<main class="prose prose-sm leading-relaxed max-w-prose mx-auto text-justify text-balance font-serif">
+<div class="prose prose-sm leading-relaxed max-w-prose mx-auto text-justify text-balance font-serif">
  
 It's bluish drab watercolor glue,
 A few drinks my mood sinks.
@@ -30,4 +30,4 @@ I'm a story too, except not interesting.
 Not in a doggerel I don't think,
 My life is fucking depressing.
 
-</main>
+</div>
