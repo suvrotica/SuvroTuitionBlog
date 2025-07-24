@@ -8,7 +8,7 @@ thumbnail: "/images/placeholders/IMG-20250724-WA0007.jpg"
 ---
 ![blue bengali man](/images/placeholders/IMG-20250724-WA0007.jpg) 
 
-<div class="prose prose-sm leading-relaxed max-w-prose mx-auto text-justify text-balance font-serif">
+<div class="display-inline">
  
 It's bluish drab watercolor glue,
 A few drinks my mood sinks.
