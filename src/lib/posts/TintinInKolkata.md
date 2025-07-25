@@ -1,4 +1,13 @@
-![[Pasted image 20240912162548.png]]
+---
+title: "Tintin in Kolkata" 
+
+thumbnail: "/images/placeholders/IMG-20250726-WA0000.jpg" 
+
+category: "Humor" 
+---
+
+![Tintin in Kolkata](/images/placeholders/IMG-20250726-WA0000.jpg)
+
 I've always harbored this perverse itch—call it a congenital anomaly—to sketch Tintin, that Belgian boy-scout busybody, into something altogether less Belgian and considerably more Bengali. Imagine, if you have the gall and grotesquerie, our intrepid ginger-haired lad freshly transmogrified into a quintessential Bengali babu. Belly distended—courtesy of a ferocious bout of rice, hilsa fish swimming luxuriously in mustard gravy, and enough afternoon carbs to tranquilize a baby elephant. He's lounging in the stuporous afterglow of gluttony, only half-equipped, at best, to stumble into whatever hellish misadventure Kolkata coughs up next. Snowy, that canine opportunist—decidedly less finicky and more Bengali than you'd guess—is already proving a prodigious student of local custom, trotting along smugly with some poor fish clamped between his jaws, a little snack to sustain his colonial doggy resolve through the urban wilderness.
 
 Ah, Kolkata—city of joy, city of garbage. City of putrid heaps that bloom brighter and vaster than seasonal bougainvilleas. The rotting mounds—this fecund tapestry of trash—aren’t mere waste; they are the metric of our urban prosperity. The higher the mound, the more assured you can be of the locals’ magnificent descent into moral turpitude. Fat-ass rats, creatures of superior adaptability and lower social conscience, now rule our rubbish republic, outnumbering even the tea stalls, their beady little eyes flashing contempt at your bourgeois squeamishness.
