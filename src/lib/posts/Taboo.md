@@ -1,3 +1,12 @@
+---
+title: "Taboo"
+description: "Of Nicknames, Neural Circuits, and the Perverse Abstractions of Society" 
+
+category: "Biology"
+thumbnail: "/images/placeholders/IMG-20250724-WA0007.jpg"
+---
+![blue bengali man](/images/placeholders/IMG-20250724-WA0007.jpg) 
+
 In the first company I ever worked for in my life—harking back to a time in the early history of the world, or so it feels—it was the year 2000, and I was in Austin, Texas. There were four of us who always hung out together: Alex McCarrier, John Dodson, Russell Meyers, and yours faithfully. It was common in those days, depending on what nonsense happened to be in our heads, to give each other ad-hoc nicknames. Because Bin Laden was constantly in the news, and John Dodson was our group’s de facto spokes-spigot when it came to expressive irreverence (Russell came second, I was third, and Alex mostly spoke in his mind), I sometimes called him “John bin Dod.” My nickname, meanwhile, was “Suvrotica.” I think it was John who christened me that, although it might well have been Russman.
 
 If you've seen the movie *Office Space*, ClinZen Office was a bit like that—superficially trendy and open, as open as it could be in that era. I remember adult DVD megastores opening up next to supermarkets. But this was still Texas, and so it was a menagerie of people and their idiosyncratic opinions. We even had an Indian CEO, Nagi Rao, who, oddly enough, seemed to have the same urinary bladder timing as I did. My supervisor was Chinese, went by Charles, and was clearly frustrated at having a defiant Indian under him. Later, they hired an older Chinese gentleman who never, not once, left his cubicle—even to pee, I suspect.
