@@ -1,18 +1,22 @@
+// src/routes/+layout.svelte
+
 <script lang="ts">
 	import '../app.css';
 	import Header from '$lib/components/layout/Header.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
 	import Aside from '$lib/components/layout/Aside.svelte';
 	import ObsidianDrillDown from '$lib/components/layout/DrillDown.svelte';
+	import SEO from '$lib/components/seo/SEO.svelte';
+	import { page } from '$app/state';
 
 	let { children } = $props();
 	let isMenuOpen = $state(false);
 
 	function toggleMenu() {
+		// FIX: Corrected the typo from isMenu-open to isMenuOpen
 		isMenuOpen = !isMenuOpen;
 	}
 
-	// Lock body scroll when mobile menu is open
 	$effect(() => {
 		if (isMenuOpen) {
 			document.body.classList.add('body-scroll-lock');
@@ -20,7 +24,23 @@
 			document.body.classList.remove('body-scroll-lock');
 		}
 	});
+
+	// Derive SEO data from the page store. This allows page-specific SEO
+	// to seamlessly override the layout defaults.
+	let seo = $derived(page.data.seo);
+	let schema = $derived(page.data.schema);
 </script>
+
+{#if seo}
+	<SEO
+		title={seo.title}
+		description={seo.description}
+		canonicalUrl={seo.canonicalUrl}
+		ogImageUrl={seo.openGraph?.images[0]?.url}
+		ogImageAlt={seo.openGraph?.images[0]?.alt}
+		{schema}
+	/>
+{/if}
 
 {#if isMenuOpen}
 	<div

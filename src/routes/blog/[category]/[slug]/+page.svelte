@@ -1,16 +1,12 @@
+// src/routes/blog/[category]/[slug]/+page.svelte
 <script lang="ts">
-	let { data } = $props();
+	import SEO from '$lib/components/seo/SEO.svelte';
+	let { data }: { data: import('./$types').PageData } = $props();
 
-	// FIX: Use the $derived rune to make `Content` reactive.
-	// This ensures that when `data.content` changes on navigation,
-	// the `Content` variable is updated with the new component.
 	let Content = $derived(data.content);
 </script>
 
-<svelte:head>
-	<title>{data.title}</title>
-	<meta name="description" content={data.description} />
-</svelte:head>
+<SEO {...data.seo} schema={data.schema} />
 
 {#if Content}
 	<Content />
