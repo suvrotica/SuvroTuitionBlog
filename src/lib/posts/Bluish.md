@@ -3,7 +3,7 @@ title: "It's bluish"
 
 description: "It's bluish" 
 topic: "Life"
-category: "doggerels"
+category: "Bipolar Depression"
 thumbnail: "/images/placeholders/IMG-20250724-WA0007.jpg"
 ---
 ![blue bengali man](/images/placeholders/IMG-20250724-WA0007.jpg) 
