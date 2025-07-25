@@ -1,7 +1,7 @@
 ---
 title: "A fucking tower"
 
-thumbnail: "/images/placeholders/362d2373-9e11-4312-96c1-62e30289764b.png"
+thumbnail: "/images/placeholders/IMG-20250313-WA0010.jpg"
 
 description: "It's a meaning devoid sketch of a fucking lonely ass tower or built up brick shit" 
 
@@ -9,7 +9,7 @@ category: "Bipolar Depression"
 
 ---
 
-![a fucking tower](/images/placeholders/362d2373-9e11-4312-96c1-62e30289764b.png) 
+![a fucking tower](/images/placeholders/IMG-20250313-WA0010.jpg) 
 
 So here's a fucking tower—sketched from Pinterest and greased with the graphic naked, obscene vacuum in my thoughts I feel sometimes when I spiral into a depression. So yes my fucking tower—a concrete thrust shamelessly into the blistering Calcutta sun like some alien phallus raised by an architect hellbent on Freudian revenge. As if we didn't have enough symbols of man's ceaseless obsession with size. It's squat, graceless, decidedly austere without even the ironic charm. Look at the staircase—a twisted iron atrocity, a metal waffle whose sole existential purpose seems to be to provide shin injuries. I mean, how the hell do you climb that thing sober without whispering blasphemous invocations or praying for Darwinian mercy? I mean you don't, you can't, it's trapped in two dimension, like I am in three. I need to throw up—don't like it when I get too close to the center, I get fast, I get dizzy and one day I know I'll get dead. 
 
