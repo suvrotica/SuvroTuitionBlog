@@ -8,7 +8,7 @@ category: "Bipolar Depression"
 
 ![Architectural Tantrum](/images/placeholders/IMG-20250725-WA0006.jpg) 
 
-Here’s my architectural tantrum then: not a mere building, nor yet architecture, but a bleeding, screaming breakdown in brick and mortar—a goddamned hissy fit, if ever one was committed to paper. What I’ve drawn isn’t something static but something caught forever mid-spasm, mid-collapse, mid-"fuck-you-I-will-not-stay-put!" protestation against architectural sanity itself.
+Here’s my architectural tantrum then: not a mere building, nor yet architecture, but a bleeding, screaming breakdown in brick and mortar—a goddamned hissy fit, if ever one was committed to paper. What I’ve drawn isn’t something static but something caught forever mid-spasm, mid-collapse, mid-`fuck-you-I-will-not-stay-put`—esque protestation against architectural sanity itself.
 
 There it stands—if "stand" can even be allowed here—wobbling, leaning, sneering, shaking its bony fists at gravity, physics, and perhaps even Spinoza's god, if he’s still around this side of entropy. It’s a joyous fuckery, a pencilled revolt of lines and edges against rulers, architects, and every well-intentioned fool who insists walls must stay straight, corners must stay sharp, and buildings must meekly submit to geometry.
 
