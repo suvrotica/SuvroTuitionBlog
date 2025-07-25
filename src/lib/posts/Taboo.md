@@ -3,9 +3,9 @@ title: "Taboo"
 description: "Of Nicknames, Neural Circuits, and the Perverse Abstractions of Society" 
 
 category: "Biology"
-thumbnail: "/images/placeholders/IMG-20250724-WA0007.jpg"
+thumbnail: "/images/placeholders/IMG-20250725-WA0000.jpg"
 ---
-![blue bengali man](/images/placeholders/IMG-20250724-WA0007.jpg) 
+![blue bengali man](/images/placeholders/IMG-20250725-WA0000.jpg) 
 
 In the first company I ever worked for in my life—harking back to a time in the early history of the world, or so it feels—it was the year 2000, and I was in Austin, Texas. There were four of us who always hung out together: Alex McCarrier, John Dodson, Russell Meyers, and yours faithfully. It was common in those days, depending on what nonsense happened to be in our heads, to give each other ad-hoc nicknames. Because Bin Laden was constantly in the news, and John Dodson was our group’s de facto spokes-spigot when it came to expressive irreverence (Russell came second, I was third, and Alex mostly spoke in his mind), I sometimes called him “John bin Dod.” My nickname, meanwhile, was “Suvrotica.” I think it was John who christened me that, although it might well have been Russman.
 
