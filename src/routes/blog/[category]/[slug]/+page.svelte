@@ -1,4 +1,3 @@
-// src/routes/blog/[category]/[slug]/+page.svelte
 <script lang="ts">
 	import SEO from '$lib/components/seo/SEO.svelte';
 	let { data }: { data: import('./$types').PageData } = $props();
