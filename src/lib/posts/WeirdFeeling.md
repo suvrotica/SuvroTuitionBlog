@@ -10,7 +10,7 @@ thumbnail: "/images/placeholders/IMG-20250723-WA0003.jpg"
     import TextToSpeech from '$lib/components/blog/TextToSpeech.svelte';
 </script>
 
-<TextToSpeech contentSelector="#weird-feeling-content" lang="en-US"/>
+<TextToSpeech contentSelector="#weird-feeling-content" lang="en" />
 
 <div id="weird-feeling-content">
 

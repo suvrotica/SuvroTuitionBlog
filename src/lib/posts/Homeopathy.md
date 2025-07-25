@@ -1,7 +1,7 @@
 ---
 title: "Homeopathy"
 description: "A deep dive into the historical allure and scientific absurdity of homeopathy, exploring why this 18th-century pseudoscience persists in a city of science like Calcutta."
-topic: "Science & Society"
+category: "Pseudoscience"
 thumbnail: "/images/placeholders/24fb85b4-ec6e-4033-8c3d-c8844279dffa.png"
 ---
 ![bengali eating medicine bottles](/images/placeholders/24fb85b4-ec6e-4033-8c3d-c8844279dffa.png)

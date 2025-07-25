@@ -6,6 +6,7 @@ category: "sketches"
 lang: "bn"
 thumbnail: "/images/placeholders/IMG-20250723-WA0003.jpg"
 date: "2025-07-24"
+published: false
 ---
 
 <script>

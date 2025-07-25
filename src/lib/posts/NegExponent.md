@@ -1,8 +1,8 @@
 ---
 title: "The Art of the Fade-Out: Nature's Elegant Goodbye"
-date: "2025-07-18"
+
 description: From a cooling cup of tea to life-saving medicine, explore the beautiful and ubiquitous process of things fading away, known as exponential decay.
-topic: "Everyday Science"
+category: "Math"
 thumbnail: "/images/placeholders/IMG-20250718-WA0010.jpg"
 ---
 

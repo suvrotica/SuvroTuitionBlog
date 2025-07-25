@@ -1,7 +1,7 @@
 ---
 title: "The Crystal's Whisper: How a Bengali Scientist Taught a Stone to Listen"
 description: "Long before the term 'semiconductor' was coined, Jagadish Chandra Bose first coaxed a crystal into detecting the invisible world of radio waves."
-topic: "Physics"
+category: "Physics"
 thumbnail: "/images/placeholders/IMG-20250721-WA0001.jpg"
 ---
 ![Jagadish Chandra Bose](/images/placeholders/IMG-20250721-WA0001.jpg)

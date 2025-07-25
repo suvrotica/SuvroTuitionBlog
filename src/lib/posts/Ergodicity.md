@@ -3,7 +3,7 @@ title: "Ergodicity"
 
 description: "The Secret of the Universe, Told by a Chai-Walla"
 
-topic: "Statistics"
+category: "Statistics"
 
 thumbnail: "/images/placeholders/erg.png"
 ---
