@@ -3,8 +3,6 @@ title: "A fucking tower"
 
 thumbnail: "/images/placeholders/IMG-20250313-WA0010.jpg"
 
-description: "It's a meaning devoid sketch of a fucking lonely ass tower or built up brick shit" 
-
 category: "Bipolar Depression"
 
 ---
