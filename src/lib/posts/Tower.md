@@ -1,10 +1,12 @@
 ---
 title: "A fucking tower"
 
+thumbnail: "/images/placeholders/362d2373-9e11-4312-96c1-62e30289764b.png"
+
 description: "It's a meaning devoid sketch of a fucking lonely ass tower or built up brick shit" 
 
 category: "Bipolar Depression"
-thumbnail: "/images/placeholders/362d2373-9e11-4312-96c1-62e30289764b.png"
+
 ---
 
 ![a fucking tower](/images/placeholders/362d2373-9e11-4312-96c1-62e30289764b.png) 
