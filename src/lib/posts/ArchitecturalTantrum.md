@@ -1,12 +1,12 @@
 ---
 title: "Architectural Tantrum" 
 
-thumbnail: "/images/placeholders/709f62c6-b7c8-44f4-bcc9-4f4e43118a08.png" 
+thumbnail: "/images/placeholders/IMG-20250725-WA0006.jpg" 
 
 category: "Bipolar Depression" 
 ---
 
-![Architectural Tantrum](709f62c6-b7c8-44f4-bcc9-4f4e43118a08.png) 
+![Architectural Tantrum](/images/placeholders/IMG-20250725-WA0006.jpg) 
 
 Here’s my architectural tantrum then: not a mere building, nor yet architecture, but a bleeding, screaming breakdown in brick and mortar—a goddamned hissy fit, if ever one was committed to paper. What I’ve drawn isn’t something static but something caught forever mid-spasm, mid-collapse, mid-"fuck-you-I-will-not-stay-put!" protestation against architectural sanity itself.
 
