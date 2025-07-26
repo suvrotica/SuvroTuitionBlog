@@ -1,10 +1,13 @@
 ---
-title: "The Unseen Hand Guiding Our Hands: A Stroll with Wright's Law"
-date: "2025-07-26"
-description: An exploration of how the simple act of repetition, from building airplanes to brewing tea, drives down costs and effort in surprisingly predictable ways.
-topic: "Economics & Technology"
-thumbnail: "/images/placeholders/wrights-law.jpg"
+title: "A flight with Wright's Law"
+
+thumbnail: "/images/placeholders/IMG-20250726-WA0007.jpg"
+
+category: "Technology" 
+
 ---
+
+![a flying bengali](/images/placeholders/IMG-20250726-WA0007.jpg) 
 
 Perfecting the art of Bengali *doodh cha* on an induction oven is, for a task so seemingly humble, a surprisingly herculean feat. My first attempts were an insult to my heritage. The delicate alchemy of turning Amul milk powder and water into a creamy base often resulted in a lumpy, gritty liquid. Taming the fierce, binary nature of the induction cooktop felt impossible; the concoction would either sit there stubbornly inert or boil over in a furious, sticky wave. Add loose-leaf tea and a dash of monk fruit sweetener to this chaotic process, and the result was frequently a sad, beige tragedy, destined for the sink.
 
