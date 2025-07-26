@@ -1,4 +1,10 @@
-![[b9aff330-59f9-4761-aee5-0a109ccd5812.png]]
+---
+title : "The American H1B Visa" 
+
+thumbnail : "/images/placeholders/IMG-20250726-WA0010.jpg" 
+
+category : "Work" 
+---
 
 It may be helpful if I, as a US outsider but a former H1B, add my halfwits to this debate. Although, because the temperature is still hot on both sides, I might be misconstrued as taking some side. But my point is just this: there are things I know from almost a decade on the H1B—yes, two iterations of it—nuances that I can share.
 
