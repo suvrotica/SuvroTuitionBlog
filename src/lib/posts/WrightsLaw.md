@@ -17,7 +17,9 @@ Long before baristas were fussing over blooming times, an aeronautical engineer 
 
 This wasn't a forecast or a theoretical model; it was a brutally empirical observation. It became known as Wright's Law, or more broadly, the experience curve. The mathematical formulation is almost elegant in its simplicity. If $C_x$ is the cost of producing the $x$-th unit, the law states that:
 
-$$ C_x = C_1 x^{\log_2(k)} $$
+$$ 
+C_x = C_1 x^{\log_2(k)} 
+$$
 
 Here, $C_1$ is the cost of the very first unit, $x$ is the cumulative number of units produced, and $k$ is the "learning factor"—the percentage of the cost that remains after production doubles. For a 15% cost reduction, $k$ would be 0.85. The upshot is that costs don't fall with the passage of time, but with the accumulation of experience.
 
