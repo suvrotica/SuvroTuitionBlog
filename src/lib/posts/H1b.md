@@ -6,6 +6,8 @@ thumbnail : "/images/placeholders/IMG-20250726-WA0010.jpg"
 category : "Work" 
 ---
 
+![MAGA chasing a brown Indian](/images/placeholders/IMG-20250726-WA0010.jpg) 
+
 It may be helpful if I, as a US outsider but a former H1B, add my halfwits to this debate. Although, because the temperature is still hot on both sides, I might be misconstrued as taking some side. But my point is just this: there are things I know from almost a decade on the H1B—yes, two iterations of it—nuances that I can share.
 
 Just like the amount of melanin doesn’t proffer any advantages beyond what you ought to get at the right latitudes where it matches the slant of the sun, all supremacist claims are false, including Indian or Chinese ones. Americans should know better because the entire field of computer science—the cause behind the H1B tiff, not biology or chemistry—evolved in the US. The other fields of science allow even more foreigners to the US, which white supremacists or nationalists either don’t know about or conveniently avoid mentioning because the hard work and low graduate stipends for research are filled by foreigners flooding to the US, who hope to make a scientific contribution and a living out of it.
