@@ -28,6 +28,6 @@ It's your asshole, I don't have a clue. <br>
 <br>
 Toodles and eat all my shit noodles, <br>
 And yes do breathe my fart deep down.<br>
-Come part those legs you bitch ass cunt, <br>
-Your god is a fictional fat ass clown.<br>
+Come part those legs you bitch-ass cunt, <br>
+Your god is a fictional fat-ass clown.<br>
 </div>
