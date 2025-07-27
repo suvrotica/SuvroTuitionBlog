@@ -1,1 +1,36 @@
+---
+title : "I take the calcutta metro" 
 
+thumbnail : "/images/placeholders/IMG-20250727-WA0004.jpg" 
+
+category : "Life" 
+
+---
+
+![sleeper](/images/placeholders/IMG-20250727-WA0004.jpg) 
+
+I take the train. I mean the underground one. Metro, as it's known here. I have a card, so I don't have to bother standing in line with the common fuckwads—arrogant, vindictive everyday local infestations, who won't get any smarter for some reason or just like queues or enjoy farting in each other's faces, or sniffing the godawful mildew-rich sweet sweat stench mixed with urine-ammonia. It's always a bouquet, one fucking way or another. When you stand in a queue, your intelligence drops to below the lice-infested pubis average of the morons standing in the queue. The link in the minds of the mindfucked to reality is tenuous at best, if that—overpowered by the fictions of the world, the deluge of superstitious flimflam, potpourri of obnoxious religiously adulterated mythology branded sadly as our history, and apocryphal heresay from the past, misinformation and disinformation from the present, and the ominous crystal ball gazing into the future assfuckings to come. And just to make it perfectly clear, I don't fart in public. Flatulence is an art, and I spend it with care on myself, savoring both the aroma and the sound, which for the audiophiles out there, comes out in crisp 24 bit THX digitally mastered quality. I am a connoisseur in these things.
+
+The feckless fuck faces stand in queues like serial infections, digging their noses for the medieval bodily humor—phlegm, remarkable for endowing the cunt-carrier with excessive quantities of that well known apathetic bengali temperament, clueless that they are non-trivial divided-by-zero repeating blemishes, no longer that "what bengal thinks today, india thinks tomorrow" trophy shit, etcetera. No amount of derision can fight the fastidiousness with which these city dwellers like to stand in line. There are lines everywhere, perhaps a continuation of the atavistic throwback of Marxism, another bullshit that didn't last long. Marxism was a stingy parent, and the new liberalization means we have drunk parents who lie all the time and have no problem fucking their own kids. It's messy and mixed up, dark and democratic yes, but farts really, smelly and fucked up.
+
+As assholes above, so bullshit bengali bum-holes below, these underground atrocities struggle to hold back the animal savagery within, at least in the nonpeak hours, desperately suppressing the sacrosanct Indian urge to spit, shit, and slit each other's silly throats.
+
+The crowds on the metro during office hours, however, lose their inhibitions. They grow fangs, bare their teeth, and tempers fly at least ceiling high. But mostly, it's a cocktail of deep and disgusting, meant-to-be-hurtful, moist morning farts mixed with tasteless, cheap, suffocating perfumes. The air conditioning adds glamor to the farts; it's the twenty-fucking-first century after all. Breathing is difficult, but the metro office route is still the illegitimate part of the real estate left behind by the super-assholes, pale-faced, twat-cunts—british and meager, so it generally thins out after the raucous office cocks and belligerent, hairy cunts get off. Then the air becomes breathable again. And it's a little more peaceful. I retire the images of choking deaths and try to focus on the suspicious pseudo erection on my trouser crotch.
+
+Of course with balls as small as raisins but heavy with sin, I am part of the bullshit metro crowd, part of the decadent snot slime, a ghastly apparition, a cursed man-corpse with undersized schlong that unfortunately self reflects, my pants always full of petty rants, an ignoramus with a permanent frown, I am a crowd displeasure by occupation and instinct.
+
+Not that I'm not an asshole—I am, and an emotionally distant one at that—but surface transport comes with a transparent and falsifiable failsafe guarantee of delivery of the passenger at the destination at the appointed time. It's a well-known fact, like the color of feces; no guessing is required. And if you ever reach on time on an above-ground vehicle, it's like shitting fluorescent pink or something. Very rare.
+
+The world, I believe, is as the worms in your ass are, and mine are famished, bitter, and extremely hostile. Like me. To me the most important philosophy is that we have an itchy hole that leaks smelly shit, and to keep it in working condition another hole, that salivates nonstop, diametrically opposite, that must be fed costantly. This bullshit arrangement is what we flatter ourselves as "life." A corollary to this, or sort of an addendum to this—the females have an additional hole to shit babies to perpetuate this bullshit. Everything else is fancy details mostly imagined by people who have nothing better to do. The wankers, we call them.
+
+Anyway, I have sensitive lungs, and they don't allow me exposure to the calcutta troposphere, which is full of particulate filth of no particular type, rhyme, or reason. I could be breathing in a gaunt testicle or a plump turd, of course in powder form and plenty diseased. Plus, the sightseeing is awful, with large posters of the political demagogues in a duplicitous namaste mudra. It makes me want to shit in their mouths.
+
+It's the hideous contradictions of blatant, in-your-face poverty and wealth in unabashed juxtaposition, and its engendering link, corruption, visible in the artifacts of civilization strewn around haphazardly in the city of fucking joy—the same city where many can't eat a square meal but has obese elected salaried leaders and pampered sinecures to look after them. Democracy is a racket, and its nefariousness knows no bounds.
+
+I am a horrible person, and the horror becomes more pronounced and less nuanced when exposed to so many misanthropic surface stimuli. I am better off underground, hurtling through a dark tunnel, cursing sentimental atrocities under my tired breath in the smelly, luxurious ambience of the armpit of the retarded sewage monster next to me, which stinks like a morgue and a lavatory combo. Fuck him, I mutter and fall asleep whilst fantasizing a bloody, mouth-watering, lip-smacking, ass-gaping, end to this annoying pus of a civilization.
+
+Of course, as is customary, I would be participating in this only vicariously from the comfort of my sofa in 4K UHD HDR, preferably without any annoying advertisements uncomfortably interspersed, which might break the bubble of schadenfreude that such fantasies gradually build.
+
+And unlike my childhood, now with priorities revised, I'd fuck Johnny Sokko and his retarded, slow, rusty, spastic, homosexual, tin can of an ugly-ass robot in their sweet ass if they tried to prevent the city of joy from getting fucked. And after I'm done ass-fucking the duo, I'll have them gag on fresh sanitary napkins from Godzilla's illegitimate daughter-in-law. And then have them choke on some Godzilla turd wrapped in seaweed. We'll see what they do after that.
+
+Stupid fucks!!! 
