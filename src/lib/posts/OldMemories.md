@@ -1,10 +1,13 @@
 ---
-title: "Old Memories Come Rushing Back"
+
+title : "Old Memories Come Rushing Back"
 
 thumbnail : "/images/placeholders/IMG-20240723-WA0028.jpg" 
 
-category :"My Past" 
+category : "My Past"
+
 ---
+
 ![bought in San Marcos](/images/placeholders/IMG-20240723-WA0028.jpg) 
 
 Saw this old Sony CD/tape deck, and it brought all those memories rushing back—the San Marcos Sony outlet mall near San Antonio, that burgundy Toyota Tercel I drove, moments' notice, and so many miles on the highway. And where are those people, and where did everything go? These were proud, confident people leading proud, confident, conforming lives, and I just happened to be a shadow passing through, a flicker of light and shade, umbra and penumbra—nothing important to notice, like a passing cloud.
