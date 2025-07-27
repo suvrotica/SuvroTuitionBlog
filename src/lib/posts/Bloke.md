@@ -1,5 +1,5 @@
 ---
-title : "Bloke's bladder sick" 
+title : "Bloke's Bladder Sick" 
 
 thumbnail : "/images/placeholders/IMG-20250727-WA0015.jpg" 
 
@@ -17,7 +17,7 @@ The mob downhill dim wits they think, <br>
 I a god, not a bloke's bladder sick. <br>
 <br>
 So you drink a fellow's yellow stink, <br>
-And choke on stupid holy ass hokey hope. <br>
+And choke on stupid holy-ass hokey hope. <br>
 While deep up your arse I shove the gift,<br>
 The head of the your dead duplicitous pope.<br>
 <br>
