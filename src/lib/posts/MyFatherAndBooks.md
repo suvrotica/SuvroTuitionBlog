@@ -3,6 +3,7 @@ title : "My Father and Books"
 
 thumbnail : "/images/placeholders/IMG-20250727-WA0000.jpg" 
 
+category : "My Past" 
 ---
 
 ![books](/images/placeholders/IMG-20250727-WA0000.jpg) 
