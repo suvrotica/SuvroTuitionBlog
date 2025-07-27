@@ -21,13 +21,13 @@ And choke on stupid holy-ass hokey hope. <br>
 While deep up your arse I shove the gift,<br>
 The head of the your dead duplicitous pope.<br>
 <br>
-Rejoice yes my fucking arbitrary choice, <br>
-Fuck your mother and fathers too! <br>
-Yes up to you how many more fits there, <br>
-It's your asshole, I don't have a clue. <br>
+Rejoice? Yes, my fucking arbitrary choice, <br>
+You, with your mother and father too! <br>
+Yes, up to you, how many heads fit there, <br>
+It's your asshole—I don't have a clue. <br>
 <br>
-Toodles and eat all my shit noodles, <br>
-And yes do breathe my fart deep down.<br>
+So toodles and eat all my shit noodles, <br>
+And yes do draw deep inside my fart down.<br>
 Come part those legs you bitch-ass cunt, <br>
 Your god is a fictional fat-ass clown.<br>
 </div>
