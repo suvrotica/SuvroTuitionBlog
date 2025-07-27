@@ -19,7 +19,7 @@ I a god, not a bloke's bladder sick. <br>
 So you drink a fellow's yellow stink, <br>
 And choke on stupid holy-ass hokey hope. <br>
 While deep up your arse I shove the gift,<br>
-The head of the your dead duplicitous pope.<br>
+The head of the dead dud duplicitous pope.<br>
 <br>
 Rejoice? Yes, my fucking arbitrary choice, <br>
 You, with your mother and father too! <br>
