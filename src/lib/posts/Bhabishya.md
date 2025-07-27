@@ -8,7 +8,7 @@ category: "Religion"
 
 ![brahmin lecturing](/images/placeholders/IMG-20250727-WA0002.jpg) 
 
-There is a certain flavour of panic du jour circulating, a digital miasma thick with the fear of "AI slop." We envision a future—nay, a present—where the internet is a landfill of algorithmically generated, soul-less content. Veritable mountains of text and images, all plausible-looking yet utterly devoid of human intent or experience, created for no reason other than to exist and clog the arteries of information. We fret about this as if it were a uniquely 21st-century affliction, a problem born of silicon and sprawling server farms.
+There is a certain flavour of panic du jour circulating, a digital miasma thick with the fear of "AI slop." We envision a future—or maybe even a present—where the internet is a landfill of algorithmically generated, soul-less content. Veritable mountains of text and images, all plausible-looking yet utterly devoid of human intent or experience, created for no reason other than to exist and clog the arteries of information. We fret about this as if it were a uniquely 21st-century affliction, a problem born of silicon and sprawling server farms.
 
 But what if I told you that humanity mastered the art of generating convincing, large-scale, authoritative-sounding "slop" centuries ago? Before there was ChatGPT, there were scribes with a keen sense of contemporary politics and a very loose definition of the word "prophecy."
 
