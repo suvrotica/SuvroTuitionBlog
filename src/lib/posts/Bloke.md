@@ -9,6 +9,7 @@ category : "Doggerel"
 
 ![bladder](/images/placeholders/IMG-20250727-WA0015.jpg) 
 
+<div class="display-inline">
 <br>
 Goodly holy I am, upon a hill ma'am, <br>
 Piss path a pious parabolic dick pick. <br>
@@ -29,4 +30,4 @@ Toodles and eat all my shit noodles, <br>
 And yes do breathe my fart deep down.<br>
 Come part those legs you bitch ass cunt, <br>
 Your god is a fictional fat ass clown.<br>
-
+</div>
