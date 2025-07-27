@@ -1,5 +1,7 @@
 ---
 title : "My father and books" 
+
+date : June 11 2008
 ---
 
 An open mind is a precondition to an open heart. I don't quite remember where I read that quote, but I almost agree with it. I have seen people brag about their own generosity only to come out as not so compassionate. This is not something new. I have seen charity not begin at home—and most often, not begin at all. I saw that in my maternal relatives and around me, growing up in the 70s. I saw people choke their kindness based on caste or frivolous anecdotal hearsay.
