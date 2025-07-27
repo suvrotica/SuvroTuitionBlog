@@ -27,7 +27,7 @@ Yes, up to you, how many heads fit there, <br>
 It's your asshole—I don't have a clue. <br>
 <br>
 So toodles and eat all my shit noodles, <br>
-And yes do draw deep inside my fart down.<br>
+And yes, <i>do</i> draw <i>deep</i> inside, my fart down.<br>
 Come part those legs you bitch-ass cunt, <br>
 Your god is a fictional fat-ass clown.<br>
 </div>
