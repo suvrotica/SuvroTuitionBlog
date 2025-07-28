@@ -19,15 +19,15 @@ At least now I'm much less sad. <br>
 This god I pray, says to me one day, <br> 
 His shit he shoots like snot.  <br>
 I tried to do the same, an effort quite lame,  <br>
-Now I think he's a lying bigot.  <br>
+I think he's Most Lame, a lying bigot.  <br>
   <br>
 Once my shit is shot, I'll drink my piss hot,  <br>
 That always soothes a harried mind. <br> 
-Deep down, brown feces frown,  <br>
-Not happy in the hindoo karmic bind.  <br>
+Deep down, brown feces religiously frown,  <br>
+Not happy in the hindloo karmic bind.  <br>
   <br>
-What's more, my asshole is sore, <br> 
-The shit's hanging halfway out. <br> 
+What's more, my asshole gaped and sore, <br> 
+Passenger shit's hanging halfway out. <br> 
 Don't know what to do, maybe voodoo,  <br>
 An african god with major clout.  <br>
   <br>
