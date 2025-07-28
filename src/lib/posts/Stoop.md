@@ -17,9 +17,9 @@ A while back I also had piles,  <br>
 At least now I'm much less sad. <br> 
   <br>
 This god I pray, says to me one day, <br> 
-His shit he shoots like snot.  <br>
+Shit he shoots like snot from his spigot.  <br>
 I tried to do the same, an effort quite lame,  <br>
-I think he's Most Lame, a lying bigot.  <br>
+I think he's Most Lame, or a lying bigot.  <br>
   <br>
 Once my shit is shot, I'll drink my piss hot,  <br>
 That always soothes a harried mind. <br> 
