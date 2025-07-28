@@ -15,7 +15,7 @@ I stoop to poop, jump through hoops,<br>
 Constipation is really bad. <br> 
 A while back I also had piles,  <br>
 At least now I'm much less sad. <br> 
-  <br><br>
+  <br>
 This god I pray, says to me one day, <br> 
 His shit he shoots like snot.  <br>
 I tried to do the same, an effort quite lame,  <br>
