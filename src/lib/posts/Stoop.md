@@ -35,3 +35,16 @@ When I grow old, I'll sell my shit as gold,  <br>
 It's getting that color I've noticed. <br> 
 Or maybe I'll go insane, break window panes,  <br>
 Stand in a corner always pissed.<br>
+<br><br>
+Forked my tongue! Yes—while eating cowdung, <br>
+When in Hind cinema lane to break wind I go. <br>
+With dumbness and mass only such fuck has<br>
+An ungulate of hindoo very slow<br>
+<br><br>
+My noggin auto-plugging in its holy fatass<br>
+Shitty TITS shitty fuckity fuck FUCK. <br>
+Bovine ass unholy—basically shit plus gas, <br>
+Bent like this, forked tongue and I suck. <br>
+
+
+
