@@ -77,42 +77,42 @@ Gaslighting without any polluting gas.<br>
 <br>
 Our god's trump card, I, only and surely I,<br>
 Hallelujah I am finally totally back.<br>
-Like the second coming of christ,<br>
+Like the second cumming of christ,<br>
 I kick bloody the opposing ball sac.<br>
 <br>
-Putin my friend we'll bring the world to an end,<br>
-In an orgy of the richest white men sort.<br>
-Democracies subverted, all shiny legs parted,<br>
+Putin, you, I, Netanyahu, will the world end,<br>
+In an orgy of the richest white power sort.<br>
+Democracies subverted, prettiest shiny legs parted,<br>
 He who eats most pussy, wins the sport.<br>
 <br>
 Gift a GREAT dark age in a bacteriophage,<br>
-From Elon's Nazi ass I'm pretty sure.<br>
+From Elon's nasty Nazi ass I'm sure.<br>
 Not a frivolity who shits on the white house lawn,<br>
-But in expectant American mouths as a cure.<br>
+But in cancerous mouths waiting for a cure.<br>
 <br>
 From my cuck chair I watch, Elon's a sasquatch,<br>
-Let loose in America, a sweet bakery shop.<br>
-After the honey buns it's my bum,<br>
-Puckered and ready, my pants I drop.<br>
+Let loose in America, now his sweet bakery shop.<br>
+After the honey buns it's my sweet soft bum,<br>
+Puckered and ready, my pants I quickly drop.<br>
 <br>
-But at least for now I'm king, he—my sting,<br>
+But at least for now I'm king, he's an underling,<br>
 Wrecking scrotum balls his, I daresay.<br>
-And also Ukraine is anal pain,<br>
+And also Ukraine is anal necrotic pain,<br>
 Lick Putin's anus or they dearly pay.<br>
 <br>
 "Most-lame" very easy to blame,<br>
 Gaza the new shopping plaza—methinks.<br>
-Use Israel's hack, fuck them on a rack,<br>
+Using Israel's hack, I fuck them on a rack,<br>
 Double penetrate the hole that stinks.<br>
 <br>
 It's destined it's divine, helluva so fine,<br>
-Brown slavery by fiat with added visa pain.<br>
+Brown slavery by fiat without added visa pain.<br>
 The cunts won't be free with their cunts,<br>
 **I'll make america a fuck again.**<br>
 <br><br>
 Postscript: I just think that whatever little opportunity this spark we call life has bestowed upon us—in the form we presently occupy as Homo sapiens—should be used to preserve the planet and all of nature that sustains us. These next four years the Trump ketamine kakistocracy will erase all the good that was ever done and only encourage petty, parochial tendencies and further destruction—and Nazify the already unhinged dipshit right. Indeed, the America where I once lived is extinct, as is all contemporary goodwill toward humanity and the Earth—will be massacred at the altar of frivolous and cheap fibs about differences between man and man that do not exist.
 
-America, after the Second World War, was lionized as a melting pot of various groups, a hub of innovative and pioneering entrepreneurs. It represented curiosity, represented progress, and by freely sharing its research findings, it did more to dismantle the rigid silos of past centuries than we care to admit. But now, with religious Christian fundamentalism as its guiding force, it is no different from the Islamic world it wants to emancipate—one dogma against another, or is it three—just like old times, or from recent past like the three juicy tits of a homely whore I saw on Schwarzenegger's Total Recall. America will go tits up, three tits up, if it keeps trying pretend there's something supernatural about it. There isn't. Just greedy, narcissistic men will droopy balls who'll fuck the nation, as I see it, in the ass, without lubrication.
+America, after the Second World War, was lionized as a melting pot of various groups, a hub of innovative and pioneering entrepreneurs. It represented curiosity, represented progress, and by freely sharing its research findings, it did more to dismantle the rigid silos of past centuries than we care to admit. But now, with religious Christian fundamentalism as its guiding force, it is no different from the Islamic world it wants to emancipate—one dogma against another, or is it three—just like old times, or from recent past like the three juicy tits of a homely whore I saw on Schwarzenegger's Total Recall. America will go tits up, three tits up, if it keeps trying to pretend there's something supernatural about it. There isn't. Just greedy, narcissistic men with droopy balls who'll fuck the nation, as I see it, in the ass, without lubrication.
 
 These, along with the disturbing structural changes to the core American civil service, that is the indiscriminate winnowing in the name of elusive made-up efficiency, are mere distractions—buying the larcenous billionaires in the oligarchy enough time to flush everything good from the past and replace it with their treacherous version of the world: a kleptocratic monarchy. And here’s the clever part—all in the name of democracy.
 
