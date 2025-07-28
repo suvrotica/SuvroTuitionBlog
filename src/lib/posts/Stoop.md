@@ -44,7 +44,7 @@ An ungulate of hindoo, moving very slow. <br>
 My noggin forced plugging, in its holy fatass<br>
 Shitty TITS, shitty fuckity fuck FUCK. <br>
 Bovine ass unholy—basically shit plus gas, <br>
-Now bent like this, bonus forked tongue and I totally suck. <br>
+Now a bent fuck, with forked tongue I suck. <br>
 
 
 
