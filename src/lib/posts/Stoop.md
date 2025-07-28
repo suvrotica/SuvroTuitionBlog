@@ -41,7 +41,7 @@ When in Hind cinema lane to break wind I go. <br>
 With dumbness and mass only such fuck has, <br>
 An ungulate of hindoo, moving very slow. <br>
 <br>
-My noggin forced auto-plugging, in its holy fatass<br>
+My noggin forced plugging, in its holy fatass<br>
 Shitty TITS, shitty fuckity fuck FUCK. <br>
 Bovine ass unholy—basically shit plus gas, <br>
 Now bent like this, bonus forked tongue and I totally suck. <br>
