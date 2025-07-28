@@ -12,7 +12,7 @@ category : "Cosmology"
 
 There's a particular quality to the sky over the plains of Bengal, especially as the sun begins its languid descent. The horizon feels impossibly wide, a vast, flat line separating the solid earth from the ethereal dome above. It's a view that feels primordial, fundamental. You're here, on the ground. The sky is up there. What could be more obvious?
 
-This is the cosmos of our intuition, the one we are all born into. It’s a world built on a simple, reassuring duality: a floor beneath our feet and a ceiling over our heads. The charming little sketch accompanying this post captures this sentiment perfectly. In the "INITIAL" panel, we see it all: the ground, the sea, the trees, and the sky. A one-sided, self-contained world. The sun travels across the top and, well, it goes away somewhere. We don't worry too much about the particulars.
+This is the cosmos of our intuition, the one we are all born into. It’s a world built on a simple, reassuring duality: a floor beneath our feet and a ceiling over our heads. My little sketch accompanying this post captures this sentiment perfectly. In the "INITIAL" panel, we see it all: the ground, the sea, the trees, and the sky. A one-sided, self-contained world. The sun travels across the top and, well, it goes away somewhere. We don't worry too much about the particulars.
 
 For millennia, this was humanity's universe. It was the universe of the Babylonians, the Egyptians, and the early Hebrews. It worked, for the most part. It explained why things fall *down* and smoke rises *up*. But it harboured a profound, nagging conundrum. A cosmic loose thread.
 
@@ -30,7 +30,7 @@ Let that sink in.
 
 Anaximander suggested that the Earth is a body—he pictured it as a flat-topped cylinder, like a drum—hanging unsupported, floating in the centre of an infinite space. It stays in place, he reasoned, because it is equidistant from all other things and has no reason to move in one direction over any other.
 
-The genius of this is not that he got the shape right (he didn't). The genius is that he conceived of space *underneath* us. Suddenly, the world wasn't a single-sided stage; it was two-sided, as the second panel of the comic so elegantly illustrates.
+The genius of this is not that he got the shape right (he didn't). The genius is that he conceived of space *underneath* us. Suddenly, the world wasn't a single-sided stage; it was two-sided, as my second panel of the comic illustrates.
 
 With this single, magnificent leap of imagination, the nightly journey of the sun was no longer a mystery. It didn't have to sneak around the edges. It simply continued its circular path, passing cleanly *under* the floating Earth, to rise again in the east. The sky was not a dome; it was a sphere. There was an "up" and a "down" relative to where you stood on Earth, but in the grander cosmos, there was no absolute up or down. There was only "towards the centre" and "away from the centre."
 
