@@ -31,7 +31,7 @@ A carpenter from longish dark yore.<br>
 But I mix their shit up in motley,<br>
 Of course I add my shit before.<br>
 <br>
-My dick is noodle limp, myself a ninny wimp,<br>
+Dick is noodle limp, me a ninny pimp wimp,<br>
 I'm scared of everything most men dread.<br>
 Even my heart when I hear it beat,<br>
 Makes me shit in my megalocephalic head.<br>
