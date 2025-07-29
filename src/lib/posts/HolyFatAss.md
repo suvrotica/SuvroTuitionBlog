@@ -28,8 +28,8 @@ Makes me shit in my megalocephalic head.<br>
 <br>
 My ass is mighty round, asshole quite sound,<br>
 The farts usually of pythagorian decibel pitch.<br>
-My shit stinks bad, man tits—a creation very sad,<br>
-Nature can sometimes be both an ass and a bitch.<br>
+My shit stinks bad, man tits—a creation sad,<br>
+Nature can be both an ass and a bitch.<br>
 <br>
 Overall I am a pious masochistic goddamn,<br>
 But a very nice hindoo hokey holy.<br>
