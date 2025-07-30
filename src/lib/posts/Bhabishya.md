@@ -8,7 +8,7 @@ category: "Religion"
 
 ![brahmin lecturing](/images/placeholders/IMG-20250727-WA0002.jpg) 
 
-There is a certain flavour of panic du jour circulating, a digital miasma thick with the fear of "AI slop." We envision a future—or maybe even a present—where the internet is a landfill of algorithmically generated, soul-less content. Veritable mountains of text and images, all plausible-looking yet utterly devoid of human intent or experience, created for no reason other than to exist and clog the arteries of information. We fret about this as if it were a uniquely 21st-century affliction, a problem born of silicon and sprawling server farms.
+These days there is a certain flavour of panic du jour circulating, a sort of polluting digital miasma thick with the fear of "AI slop." We envision a future—or maybe even a present—where the internet is a landfill of algorithmically generated, soul-less content. Veritable mountains of text and images, all plausible-looking yet utterly devoid of human intent or experience, created for no reason other than to exist and clog the arteries of information. We fret about this as if it were a uniquely 21st-century affliction, a problem born of silicon and sprawling server farms.
 
 But what if I told you that humanity mastered the art of generating convincing, large-scale, authoritative-sounding "slop" centuries ago? Before there was ChatGPT, there were scribes with a keen sense of contemporary politics and a very loose definition of the word "prophecy."
 
@@ -32,12 +32,10 @@ What we are looking at is not divine foresight. It is history, written in the fu
 
 Think about it from the perspective of the colonial-era bard who wrote it. This was the generative AI of its day.
 
-**The ancient prompt:** "In the style of an ancient Purana, write a sacred prophecy that legitimises the rule of the British and integrates Queen Victoria into the cosmic timeline of India. Ensure it sounds ancient and authoritative etcetera. "
-
-**The output:** The *Pratisarga Parvan*, the third part of the *Bhavishya Purana*, complete with Viktavati and the rise of Calcutta.
+The ancient prompt was... write in the style of an ancient Purana, write a sacred prophecy that legitimises the rule of the British and integrates Queen Victoria into the cosmic timeline of India. Ensure it sounds ancient and authoritative etcetera. And the output was the *Pratisarga Parvan*, the third part of the *Bhavishya Purana*, complete with Viktavati and the rise of Calcutta.
 
 I as a bengali have a place in this, and had to share it. You see the motive is identical to the one driving much of today's AI slop: to generate equivocal content that fits an ensemble of needs and appears authentic to the rustic commoners. In their case, the need was to make sense of their present reality, to absorb the seismic shock of foreign rule into a familiar Hindu cosmological framework which hadn't anticipated the plot would go so awry. By "predicting" the British, they made their dominion seem fated, an inevitable chapter in an eons-long story. It was a coping mechanism, a political tool, and a brilliant act of literary forgery all rolled into one.
 
-Whence comes our modern panic, then? We see AI-generated text and fear a loss of authenticity, a deluge of fakery that will drown out truth. But the *Bhavishya Purana* reminds us that the human impulse to manufacture plausible realities is as old as time. The tools have merely changed. We've swapped the palm leaf and stylus for silicon and transformers, but the game is the same. The challenge has never been about stopping the production of "slop"—be it Puranic or programmatic. The challenge has always been to cultivate the wisdom to tell the difference.
+Whence comes our modern panic, then? We see AI-generated text and fear a loss of authenticity, a deluge of fakery that will drown out truth. But the Bhavishya Purana reminds us that the human impulse to manufacture plausible realities is as old as time. The tools have merely changed. We've swapped the palm leaf and stylus for silicon and transformers, but the game is the same. The challenge has never been about stopping the production of "slop"—be it Puranic or programmatic. The challenge has always been to cultivate the wisdom to tell the difference.
 
-So the next time you encounter a vapid, AI-generated listicle about "Ten Surprising Uses for Footsies," don't just despair for the future of the internet. Smile, and give a little nod to the 19th-century scribes of the *Bhavishya Purana*. They were the OG content farms, the original masters of prophecy slop, and they did it with such style that they’re still fooling people today.
+So the next time you encounter a vapid, AI-generated listicle about "Ten Surprising Uses for Footsies," don't just despair for the future of the internet. Smile, and give a little nod to the 19th-century scribes of the Bhavishya Purana. 
