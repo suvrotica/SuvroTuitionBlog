@@ -47,7 +47,7 @@ The worms crawling over my naked skin.<br>
 Can't say no, don't know where to go,<br>
 Backstabbing kith and fucking kin.<br>
 <br>
-It's a bloody ass gape, sealed with tape,<br> <br>
+It's a bloody ass gape, sealed with tape,<br> 
 Don't fuck with holy holes with me cunt.<br> 
 Shit fuck shock, not a hen but its cock, <br>
 I don't do men or anus I have to be blunt.<br> <br>
