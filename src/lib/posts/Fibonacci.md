@@ -6,6 +6,7 @@ thumbnail : "/images/placeholders/IMG-20250730-WA0005.jpg"
 category : "Mathematics" 
 
 ---
+
 ![fibonacci](/images/placeholders/IMG-20250730-WA0005.jpg) 
 
 It was a perfectly ordinary Wednesday afternoon, the kind where the air hangs thick and the biggest decision on the docket is whether to have a third cup of tea. On my laptop screen, a disembodied professor was droning on about an introduction to Linear Algebra. And then, there it was: the Fibonacci sequence.
