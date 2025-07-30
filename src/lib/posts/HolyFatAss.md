@@ -40,6 +40,11 @@ I'm scared of everything most men dread.<br>
 Even my heart when I hear it beat,<br>
 Makes me shit in my megalocephalic head.<br>
 <br>
+Pant full of cant, holy anus not cunt,<br>
+For religion your skirt I hike. <br>
+I lick in front, but insert behind,<br>
+Call me a romantic if you like.<br>
+<br>
 My ass is mighty round, asshole quite sound,<br>
 The farts usually of pythagorian decibel pitch.<br>
 My shit stinks bad, man tits—a creation sad,<br>
