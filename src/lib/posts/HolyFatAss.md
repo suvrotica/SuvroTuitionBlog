@@ -40,10 +40,10 @@ I'm scared of everything most men dread.<br>
 Even my heart when I hear it beat,<br>
 Makes me shit in my megalocephalic head.<br>
 <br>
-Pant full of cant, holy anus not cunt,<br>
-For religion your skirt I hike. <br>
-I lick in front, but insert behind,<br>
-Call me a romantic if you like.<br>
+Pant full of cant, holy anus not can't,<br>
+Verily for holy your skirt I hike. <br>
+I lick in front, but insert dogma behind,<br>
+Call me a romantic if you goodly like.<br>
 <br>
 My ass is mighty round, asshole quite sound,<br>
 The farts usually of pythagorian decibel pitch.<br>
