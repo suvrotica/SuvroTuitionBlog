@@ -1,10 +1,12 @@
 ---
-title: "A Matrix, a Rabbit, and a Wardrobe: A New Look at Fibonacci"
-date: "2025-07-30"
-description: Unraveling the surprisingly elegant matrix form of the Fibonacci sequence from first principles.
-topic: "Math & Science"
-thumbnail: "/images/blog/fibonacci-matrix-notes.jpg"
+title: "Fibonacci" 
+
+thumbnail : "/images/placeholders/IMG-20250730-WA0005.jpg" 
+
+category : "Mathematics" 
+
 ---
+![fibonacci](/images/placeholders/IMG-20250730-WA0005.jpg) 
 
 It was a perfectly ordinary Wednesday afternoon, the kind where the air hangs thick and the biggest decision on the docket is whether to have a third cup of tea. On my laptop screen, a disembodied professor was droning on about an introduction to Linear Algebra. And then, there it was: the Fibonacci sequence.
 
