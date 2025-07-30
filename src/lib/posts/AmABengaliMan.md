@@ -100,7 +100,7 @@ Bengali thoughts led the world,<br>
 Now it lags behind the slowest laggards.<br>
 It's not even safe to open your mouth,<br>
 Unless you like swallowing fartsy turds.<br>
-
+<br>
 From british clerks to all-round jerks,<br>
 The bengalis are convinced they're best.<br>
 The least of exertions, they queue up for,<br>
