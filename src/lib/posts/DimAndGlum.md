@@ -35,7 +35,7 @@ The world of vomit I have to spew.<br>
 I shit a turd, ball like bird,<br>
 A most monstrous thing in a flick.<br>
 It spoke—it said—"bitch can't you see," <br>
-I'm *that* uncooked cornish chick.<br>
+I'm that uncooked cornish chick.<br>
 <br>
 Flustered I, flushed the fucking fry,<br>
 Saw it flail its dumb uncooked wings.<br>
