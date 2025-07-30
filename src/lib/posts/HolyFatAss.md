@@ -22,11 +22,11 @@ I like fish, bengali sweets, mangoes,<br>
 And ghee with boiled basmati white rice.<br>
 <br>
 With morning stool I proselytize a fool,<br>
-Usually it's with a rama or krishna hiss,<br>
+Usually it's with a rama or krishna piss,<br>
 Or I use loony chants from camel boy,<br> 
-Mohammed I think his name is.<br>
+Muhamood I think that fucks' name is.<br>
 <br>
-Or the jewish jesus the shit-assed hobo,<br>
+Or the jewish jeeshoo the shit-assed hobo,<br>
 A carpenter from longish dark yore.<br>
 But I mix their shit up in motley,<br>
 Of course I add my shit before.<br>
