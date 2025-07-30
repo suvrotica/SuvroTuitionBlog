@@ -21,7 +21,7 @@ Flying into indignant wanton rage in a trice.<br>
 I like fish, bengali sweets, mangoes,<br>
 And ghee with boiled basmati white rice.<br>
 <br>
-I shit and with it proselytize a fool,<br>
+With my fresh morning stool I proselytize a fool,<br>
 Usually it's with a rama or krishna hiss,<br>
 Or I use loony chants from camel boy,<br> 
 Mohammed I think his name is.<br>
