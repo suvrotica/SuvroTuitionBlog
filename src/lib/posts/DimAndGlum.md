@@ -40,7 +40,7 @@ I'm *that* uncooked cornish chick.<br>
 Flustered I, flushed the fucking fry,<br>
 Saw it flail its dumb uncooked wings.<br>
 I must not order from this tandoori,<br>
-Shit hell fire on me if it brings.
+Shit hell fire on me if it brings.<br>
 <br>
 No peace in head, worried half dead,<br>
 The worms crawling over my naked skin.<br>
