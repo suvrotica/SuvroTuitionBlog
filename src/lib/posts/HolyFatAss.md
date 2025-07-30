@@ -31,7 +31,11 @@ A carpenter from longish dark yore.<br>
 But I mix their shit up in motley,<br>
 Of course I add my shit before.<br>
 <br>
-Dick is noodle limp, me a ninny pimp wimp,<br>
+I talk of rape and rapine, yap yapping,<br> 
+Like the type of shit people see gods do,<br> 
+Fuck or kill, or chill lazy ass on a hill,<br> 
+Common Calcutta cunts don't have no clue.<br><br>
+My dick is noodle limp, a ninny pimp wimp,<br>
 I'm scared of everything most men dread.<br>
 Even my heart when I hear it beat,<br>
 Makes me shit in my megalocephalic head.<br>
