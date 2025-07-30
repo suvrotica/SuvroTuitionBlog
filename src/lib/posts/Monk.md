@@ -1,10 +1,11 @@
 ---
 title: "Monk fruit for Diabetics"
 
+thumbnail: "/images/placeholders/monk-fruit.png"
 
 category: "Health"
 
-thumbnail: "/images/placeholders/monk-fruit.png"
+
 
 ---
 
