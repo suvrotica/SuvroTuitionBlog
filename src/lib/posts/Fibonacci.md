@@ -3,7 +3,7 @@ title: "Fibonacci"
 
 thumbnail : "/images/placeholders/IMG-20250730-WA0005.jpg" 
 
-category : "Mathematics" 
+category : "Math" 
 
 ---
 
