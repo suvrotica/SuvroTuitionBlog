@@ -48,4 +48,4 @@ Nature can be both an ass and a bitch.<br>
 Overall I am a pious masochistic goddamn,<br>
 But a very nice hindoo hokey holy.<br>
 Totally fifty years, very hairy somehow,<br>
-Life is a big ass shit baloney.<br>
+Life is a big-ass cock-suck shit baloney.<br>
