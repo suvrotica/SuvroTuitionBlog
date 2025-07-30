@@ -1,5 +1,5 @@
 ---
-title: "On Monks, Fruit, and Defying the Scale"
+title: "Monk fruit for Diabetics"
 
 
 category: "Health"
