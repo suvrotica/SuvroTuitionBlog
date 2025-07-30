@@ -31,7 +31,7 @@ A carpenter from longish dark yore.<br>
 But I mix their shit up in motley,<br>
 Of course I add my shit before.<br>
 <br>
-I talk of rape and rapine, yap yapping,<br> 
+I talk of rape and rapine, yap yappin',<br> 
 Like the type of shit people see gods do,<br> 
 Fuck or kill, or chill lazy ass on a hill,<br> 
 Common Calcutta cunts don't have no clue.<br><br>
