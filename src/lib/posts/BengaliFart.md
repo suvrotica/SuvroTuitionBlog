@@ -84,7 +84,7 @@ I feel bengali with Mamata's safety fart,<br>
 Just outside Bengal nationally,<br>
 I'd be forced to eat Modi's turd tart.<br>
 <br>
-I'd rather die than do that,<br>
-I say no to stupid old men shit.<br>
-So bengali fart it is for me,<br>
-Here I stay, here's where I fit.<br>
+I'd rather die than do shit like that,<br>
+No to low-life stupid mean old-fuck shit.<br>
+So bengali fart it is for me year around,<br>
+So here I stay, here's where I fit.<br>
