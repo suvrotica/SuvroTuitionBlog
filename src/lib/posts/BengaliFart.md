@@ -59,3 +59,13 @@ Sticky bengali shit, fart pathetic,<br>
 Shit performance in penetration still.<br>
 Sick small dick, but pubes very thick,<br>
 Forced to fan farts with goodly skill.<br>
+<br>
+Or fucked flatulent fluttering wind,<br>
+As the bookish types lean on.<br>
+From where these gas bags get,<br>
+I know not the smell of rotten con.<br>
+<br>
+So sweet bengali fart is all there is,<br>
+All around and the only real thing.<br>
+From the flabby ass to the shitty skinny,<br>
+Genteel to the bottom feeding scamny ninny.<br>
