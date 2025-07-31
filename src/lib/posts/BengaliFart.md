@@ -53,7 +53,7 @@ On his daughter as loo disguised.<br>
 Jiminy the jerk fucking in a park,<br>
 A christian prophet caught mid-fuck.<br>
 His dick knot, his god eats his snot,<br>
-In a mangy dog ass got tightly stuck.<br>
+In a mangy dog-ass got tightly stuck.<br>
 <br>
 Sticky bengali shit, fart pathetic,<br>
 Shit performance in penetration still.<br>
@@ -70,9 +70,9 @@ All around and the only real thing.<br>
 From the flabby ass to the shitty skinny,<br>
 Genteel to the bottom feeding scamny ninny.<br><br>
 Under sari, dhoti, skirt, and pants,<br>
-Pujas and interiors relished,<br>
-Of course 99% of Mamata's speech,<br>
-In what she has ever accomplished.<br>
+In pujas and interiors really relished,<br>
+Of course in most of Mamata's speech,<br>
+And in what she has ever accomplished.<br>
 <br>
 So if you fuck me when I fart,<br>
 It's not the only Bengali fart.<br>
