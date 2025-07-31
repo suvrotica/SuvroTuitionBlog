@@ -78,3 +78,13 @@ So if you fuck me when I fart,<br>
 It's not the only Bengali fart.<br>
 It mainly is from the very top,<br>
 Breathing it deeply in is your part.<br>
+<br>
+Even then in this fart full place,<br>
+I feel bengali with Mamata's safety fart,<br>
+Just outside Bengal nationally,<br>
+I'd be forced to eat Modi's turd tart.<br>
+<br>
+I'd rather die than do that,<br>
+I say no to stupid old men shit.<br>
+So bengali fart it is for me,<br>
+Here I stay, here's where I fit.<br>
