@@ -19,8 +19,13 @@ By prey and those with the preying tools.<br>
 <br>
 Dim and glum, fuck your mum,<br>
 Cum on her face—that fat sticky surface.<br>
-Or fuck your father, father's pop too, <br>
+Or fuck your father, father's mother too, <br>
 Turn your house into a whoring place! <br>
+<br>
+Fuck's the fool's feckless father I know, <br>
+City of joy is actually a city of rape, <br>
+Shit is what pours out when I open my yap,<br> 
+But jocular is the meat in the jape.<br>
 <br>
 I am myself an old waste of time,<br>
 A bengali whore of a rabid gent.<br>
