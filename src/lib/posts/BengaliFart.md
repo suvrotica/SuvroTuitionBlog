@@ -87,4 +87,4 @@ I'd be forced to eat Modi's turd tart.<br>
 I'd rather die than do shit like that,<br>
 No to low-life stupid mean old-fuck shit.<br>
 So bengali fart it is for me year around,<br>
-So here I stay, here's where I fit.<br>
+So here I die farting, here's where I fit.<br>
