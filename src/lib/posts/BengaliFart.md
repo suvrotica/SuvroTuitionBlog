@@ -68,7 +68,7 @@ I know not the smell of rotten con.<br>
 So sweet bengali fart is all there is,<br>
 All around and the only real thing.<br>
 From the flabby ass to the shitty skinny,<br>
-Genteel to the bottom feeding scamny ninny.<br>
+Genteel to the bottom feeding scamny ninny.<br><br>
 Under sari, dhoti, skirt, and pants,<br>
 Pujas and interiors relished,<br>
 Of course 99% of Mamata's speech,<br>
