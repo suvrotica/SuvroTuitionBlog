@@ -73,3 +73,8 @@ Under sari, dhoti, skirt, and pants,<br>
 Pujas and interiors relished,<br>
 Of course 99% of Mamata's speech,<br>
 In what she has ever accomplished.<br>
+<br>
+So if you fuck me when I fart,<br>
+It's not the only Bengali fart.<br>
+It mainly is from the very top,<br>
+Breathing it deeply in is your part.<br>
