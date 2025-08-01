@@ -83,7 +83,7 @@ I kick bloody the opposing ball sac.<br>
 Putin, you, I, Netanyahu, will the world end,<br>
 In an orgy of the richest white power sort.<br>
 Democracies subverted, prettiest shiny legs parted,<br>
-He who eats most pussy, wins the sport.<br>
+He who eats most white pussy, wins the sport.<br>
 <br>
 Gift a GREAT dark age in a bacteriophage,<br>
 From Elon's nasty Nazi ass I'm sure.<br>
