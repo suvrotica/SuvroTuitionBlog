@@ -111,7 +111,7 @@ Terrorist Pakistan—always been friends, <br>
 Taxed Indian brown to diarrhea-gay. <br>
 <br>
 It's destined it's divine, helluva so fine,<br>
-Brown slavery by fiat without added visa pain.<br>
+Brown slavery by fiat plus super-visa pain.<br>
 The cunts won't be free with their cunts,<br>
 **I'll make america a fuck again.**<br>
 <br><br>
