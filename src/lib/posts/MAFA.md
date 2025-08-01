@@ -82,16 +82,16 @@ I kick bloody the opposing ball sac.<br>
 <br>
 Putin, you, I, Netanyahu, will the world end,<br>
 In an orgy of the richest white power sort.<br>
-Democracies subverted, prettiest shiny legs parted,<br>
+Democracies subverted, shiny legs parted,<br>
 He who eats most white pussy, wins the sport.<br>
 <br>
 Gift a GREAT dark age in a bacteriophage,<br>
 From Elon's nasty Nazi ass I'm sure.<br>
-Not a frivolity who shits on the white house lawn,<br>
+Not a frivolity who shits in the white house,<br>
 But in cancerous mouths waiting for a cure.<br>
 <br>
 From my cuck chair I watch, Elon's a sasquatch,<br>
-Let loose in America, now his sweet bakery shop.<br>
+Let loose in America, his sweet bakery shop.<br>
 After the honey buns it's my sweet soft bum,<br>
 Puckered and ready, my pants I quickly drop.<br>
 <br>
@@ -107,8 +107,8 @@ Double penetrate this hole that stinks.<br>
 <br>
 India's a dirt-poor shit-brown polluted hell-hole,<br>
 With stupid names very hard to say.<br>
-Terrorist Pakistan—always been friends, <br>
-Taxed Indian brown to diarrhea-gay. <br>
+With terrorist Pakistan—always been friends, <br>
+And TAX India just a puppet I play. <br>
 <br>
 It's destined it's divine, helluva so fine,<br>
 Brown slavery by fiat plus super-visa pain.<br>
