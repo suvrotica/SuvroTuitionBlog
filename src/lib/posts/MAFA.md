@@ -108,7 +108,7 @@ Double penetrate this hole that stinks.<br>
 India's a dirt-poor shit-brown polluted hell-hole,<br>
 With stupid names very hard to say.<br>
 Terrorist Pakistan—always been friends, <br>
-Taxed them to flagrantly fluorescent fucked-gay. <br>
+Taxed Indian brown to diarrhea, type fluorescent fucked-gay. <br>
 <br>
 It's destined it's divine, helluva so fine,<br>
 Brown slavery by fiat without added visa pain.<br>
