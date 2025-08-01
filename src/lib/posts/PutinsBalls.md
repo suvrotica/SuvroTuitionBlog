@@ -53,7 +53,7 @@ Do you really think I, great Putin care?<br>
 In porn, a bendy Russian girl up her ass,<br>
 Has five black cocks plus one for free. <br>
 Imagine the pain I have them used to, <br>
-Outside Russia this is unbearable you see!<br> 
+Outside Russia this is unbearable you see!<br> <br>
 Ha Ha Ha Hiss Hiss Hiss Miss Piss Piss<br>
 <br>
 I force obsequious silly nations into,<br>
