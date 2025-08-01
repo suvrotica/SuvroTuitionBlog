@@ -60,7 +60,7 @@ Flock with the feathered fools in casino.<br>
 With peyote they dance, in trance,<br>
 Assured extinction in congressional slow mo.<br>
 <br>
-So suck my cock girl, suck me hard,<br>
+So suck my cock little girl, suck me hard,<br>
 As if I'm your long lost dear daddy.<br>
 Picking you up from kinder-fucking-garten,<br>
 In a world totally fucked wholly already.<br>
