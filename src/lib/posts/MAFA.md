@@ -113,7 +113,7 @@ Taxed Indian brown to diarrhea-gay. <br>
 It's destined it's divine, helluva so fine,<br>
 Brown slavery by fiat plus super-visa pain.<br>
 Yankee cunts won't be free with their cunts,<br>
-**I'll make america a fuck again.**<br>
+<b>I'll make america a fuck again.<\b><br>
 <br><br>
 Postscript: I just think that whatever little opportunity this spark we call life has bestowed upon us—in the form we presently occupy as Homo sapiens—should be used to preserve the planet and all of nature that sustains us. These next four years the Trump ketamine kakistocracy will erase all the good that was ever done and only encourage petty, parochial tendencies and further destruction—and Nazify the already unhinged dipshit right. Indeed, the America where I once lived is extinct, as is all contemporary goodwill toward humanity and the Earth—will be massacred at the altar of frivolous and cheap fibs about differences between man and man that do not exist.
 
