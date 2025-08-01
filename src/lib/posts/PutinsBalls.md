@@ -16,7 +16,7 @@ That is why you have a god like me,<br>
 An avatar—as the manly man in charge.<br>
 <br>
 I invaded Ukraine, child porn capital,<br>
-Also neo-nazi white supremacy voodoo<br>
+Plus neo-nazi white supremacy voodoo. <br>
 If you fancy shit fucking poetry,<br>
 Ode to peace there is just "Toodaloo".<br>
 <br>
