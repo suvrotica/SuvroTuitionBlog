@@ -105,10 +105,10 @@ Gaza the new shopping plaza—methinks.<br>
 Using Israel's hack, I fuck them on a rack,<br>
 Double penetrate this hole that stinks.<br>
 <br>
-India's a dirt-poor shit brown polluted hole,<br>
-With names very hard to say.<br>
-Supporting the terrorist Pakis, <br>
-I taxed India to flagrantly gay. <br>
+India's a dirt-poor shit-brown polluted hell-hole,<br>
+With stupid names very hard to say.<br>
+Terrorist Pakistan—always been friends, <br>
+Taxed them to flagrantly fluorescent fucked-gay. <br>
 <br>
 It's destined it's divine, helluva so fine,<br>
 Brown slavery by fiat without added visa pain.<br>
