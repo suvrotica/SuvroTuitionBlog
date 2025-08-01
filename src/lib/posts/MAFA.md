@@ -110,6 +110,11 @@ With stupid names very hard to say.<br>
 With terrorist pal pakistan and 25% TAX, <br>
 India my new shit pan I don't hafta pay. <br>
 <br>
+Modi a jolly jape, joker on a shitscape,<br>
+Hindoo my ploy, a toy in my ass I play. <br>
+They'll shit or piss in their own mouth,<br>
+The dirtiest dumb brown stupids I say.<br>
+<br>
 It's destined it's divine, helluva so fine,<br>
 Brown slavery by fiat plus super-visa pain.<br>
 Yankee cunts won't be free with their cunts,<br>
