@@ -45,10 +45,15 @@ When I stop their precious cheap fuel.<br>
 These softy white cocks hide in the dark,<br>
 When asked for a manly nuclear duel.<br>
 <br>
-And sanctions my unwiped shitty ass,<br>
+And sanctions? My unwiped shitty ass,<br>
 They can't hurt a Russian mega-billionaire!<br>
 And if the russians get bruised and raped,<br>
 Do you really think I, great Putin care?<br>
+<br>
+In porn, a bendy Russian girl up her ass,<br>
+Has five black cocks plus one for free. <br>
+Imagine the pain I have them used to, <br>
+Outside Russia this is unbearable you see!<br> 
 <br>
 I force obsequious silly nations into,<br>
 Glib equivocation all the fucking time.<br>
