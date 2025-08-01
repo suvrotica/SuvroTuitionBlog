@@ -1,11 +1,12 @@
 ---
-title: "Homeopathy"
-description: "A deep dive into the historical allure and scientific absurdity of homeopathy, exploring why this 18th-century pseudoscience persists in a city of science like Calcutta."
-category: "Pseudoscience"
-thumbnail: "/images/placeholders/24fb85b4-ec6e-4033-8c3d-c8844279dffa.png"
+title: "Homeopathy Debunked: The Science Behind Bengal's Beloved Pseudoscience"
+[cite_start]description: "A critical analysis of homeopathy's scientific impossibilities, from Avogadro's number to the myth of water memory. Explore why this 18th-century pseudoscience, debunked by modern research, maintains a powerful hold in Calcutta and Bengali culture, and the real dangers it poses when chosen over evidence-based medicine." [cite: 4923]
+[cite_start]category: "Pseudoscience" [cite: 4923]
+[cite_start]thumbnail: "/images/placeholders/24fb85b4-ec6e-4033-8c3d-c8844279dffa.png" [cite: 4923]
+date: "2025-07-22"
+keywords: ["homeopathy", "pseudoscience", "debunked", "scientific evidence", "Calcutta", "Bengali culture", "Samuel Hahnemann", "placebo effect", "Avogadro's number", "water memory", "alternative medicine", "medical myths", "public health"]
+published: true
 ---
-![bengali eating medicine bottles](/images/placeholders/24fb85b4-ec6e-4033-8c3d-c8844279dffa.png)
-
 There is a certain, almost sacramental, ritual to homeopathy in a Bengali household. The tiny, identical white globules, dispensed from a slim glass vial, tasting faintly of sugar and alcohol. The solemn instructions: don't touch them with your hands, tip them into the receiving palm, place them under your tongue, and avoid eating or drinking for thirty minutes. It’s a scene replayed across Calcutta, from the grand old houses of North Sinthee to Ballygunge and everywhere else in the city of joy I can't afford to stuff in a sentence. It feels gentle, ancient, and profoundly… well, *ours* as with astrology and star-signs it doesn't matter what you take, **nux vomica** or **arnica** it *seems* to work. But behind this comforting facade lies a story of historical happenstance, scientific impossibility, and a collective delusion that a city of reason should have shed long ago—yet it hasn't.
 
 The tale begins not in Bengal, but in late 18th-century Germany, a time when medicine was a theatre of horrors. Physicians, armed with little more than misguided conviction, would bleed, purge, and blister their patients, often hastening what might have otherwise been a recovery. Into this maelstrom stepped Samuel Hahnemann, a physician rightfully appalled by the brutality of his peers. His quest for a gentler alternative led him to an idea, an observation that would spawn a global movement. He noted that Cinchona bark, used to treat malaria, induced malaria-like symptoms in him when he was healthy. *Similia similibus curentur*—"let like be cured by like"—became his first principle.

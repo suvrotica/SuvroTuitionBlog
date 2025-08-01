@@ -1,11 +1,11 @@
 ---
-
-title: "Constant growth"
-
-thumbnail : "/images/placeholders/IMG-20250728-WA0010.jpg" 
-
-category : "Mathematics" 
-
+title: "What 'Constant Growth' Really Means"
+description: "An exploration of the phrase 'constant growth,' dissecting the clash between its everyday meaning and its precise mathematical definition. Using calculus and a Calcutta landmark, this post highlights the importance of clarity when modeling our world."
+category: "Math"
+thumbnail: "/images/placeholders/IMG-20250728-WA0010.jpg"
+date: "2025-07-28"
+keywords: ["constant growth", "mathematics", "linguistics", "calculus", "derivative", "mathematical modeling", "scientific communication", "language precision", "Kolkata", "Shaheed Minar"]
+published: true
 ---
 
 ![constant growth](/images/placeholders/IMG-20250728-WA0010.jpg) 

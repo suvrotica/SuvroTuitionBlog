@@ -1,11 +1,13 @@
 ---
-title: "Fibonacci" 
-
-thumbnail : "/images/placeholders/IMG-20250730-WA0005.jpg" 
-
-category : "Math" 
-
+title: "The Fibonacci"
+description: "Discover the hidden elegance of the Fibonacci sequence. This post breaks down how to transform its simple recursive formula into a powerful matrix, unlocking a faster, more direct way to calculate its terms through linear algebra."
+category: "Math"
+thumbnail: "/images/placeholders/IMG-20250730-WA0005.jpg"
+date: "2025-07-30"
+keywords: ["Fibonacci sequence", "linear algebra", "matrix exponentiation", "mathematics", "recursive functions", "Binet's formula", "mathematical concepts", "problem solving", "state vectors"]
+published: true
 ---
+
 
 ![fibonacci](/images/placeholders/IMG-20250730-WA0005.jpg) 
 

@@ -1,11 +1,11 @@
 ---
-
-title : "Bengali fart" 
-
-thumbnail : "/images/placeholders/IMG-20250731-WA0004.jpg" 
-
-category : "Doggerel" 
-
+title: "Bengali Fart"
+description: "A satirical and profane doggerel using the 'Bengali fart' as a potent metaphor for political decay and societal hypocrisy in Bengal and beyond. A darkly humorous take on identity and belonging."
+category: "Doggerel"
+thumbnail: "/images/placeholders/IMG-20250731-WA0004.jpg"
+date: "2025-07-31"
+keywords: ["doggerel", "political satire", "Bengali", "Kolkata", "profane poetry", "dark humor", "social commentary", "Mamata Banerjee", "Narendra Modi", "Indian politics", "scatological humor"]
+published: true
 ---
 ![farting bengali man](/images/placeholders/IMG-20250731-WA0004.jpg) 
 

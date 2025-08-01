@@ -7,6 +7,7 @@
 		canonicalUrl?: string;
 		ogImageUrl?: string;
 		ogImageAlt?: string;
+		keywords?: string[];
 		schema?: Record<string, any> | Array<Record<string, any>>;
 	};
 
@@ -16,6 +17,7 @@
 		canonicalUrl,
 		ogImageUrl,
 		ogImageAlt,
+		keywords,
 		schema = undefined
 	}: Props = $props();
 </script>
@@ -49,6 +51,10 @@
 	<meta name="twitter:description" content={description} />
 	{#if ogImageUrl}
 		<meta name="twitter:image" content={ogImageUrl} />
+	{/if}
+
+	{#if keywords && keywords.length > 0}
+		<meta name="keywords" content={keywords.join(', ')} />
 	{/if}
 
 	{#if schema}

@@ -1,12 +1,13 @@
 ---
-
-title : "Holy fat ass" 
-
-thumbnail : "/images/placeholders/IMG-20250729-WA0000.jpg" 
-
-category : "Doggerel" 
-
+title: "Holy Fat Ass"
+description: "A humorous and irreverent doggerel from the perspective of a pious, fat-assed Bengali man. This satirical poem explores the absurdities of religious hypocrisy and self-perception."
+category: "Doggerel"
+thumbnail: "/images/placeholders/IMG-20250729-WA0000.jpg"
+date: "2025-07-29"
+keywords: ["doggerel", "satirical poetry", "religious satire", "dark humor", "Bengali", "hypocrisy", "self-deprecation", "profane poetry"]
+published: true
 ---
+
 
 ![Holy fat ass](/images/placeholders/IMG-20250729-WA0000.jpg) 
 

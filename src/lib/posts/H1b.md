@@ -1,9 +1,11 @@
 ---
-title: "The American H1B Visa"
-
-thumbnail: "/images/placeholders/IMG-20250726-WA0010.jpg"
-
+title: "The H1B Visa"
+description: "A former H1B visa holder offers a blunt and personal perspective on the American immigration debate. This essay critiques the program's flaws, the hypocrisy of nationalist arguments, and the economic forces that truly shape the global tech landscape."
 category: "Work"
+thumbnail: "/images/placeholders/IMG-20250726-WA0010.jpg"
+date: "2025-07-26"
+keywords: ["H1B visa", "US immigration", "tech workers", "MAGA", "Indian diaspora", "American dream", "globalization", "political commentary", "work visa", "US economy", "Indian brain drain"]
+published: true
 ---
 
 ![MAGA chasing a brown Indian](/images/placeholders/IMG-20250726-WA0010.jpg)

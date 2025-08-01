@@ -1,11 +1,11 @@
 ---
-
-title: "Aspidistra" 
-
-thumbnail : "/images/placeholders/IMG-20250728-WA0000.jpg" 
-
-category : "Botany" 
-
+title: "Ode to the Aspidistra"
+description: "A humorous and cynical tribute to the Aspidistra, the indestructible 'cast-iron plant.' Explore the history and botany of this stubborn houseplant and why its survival is a perfect metaphor for mocking human pretension."
+category: "Botany"
+thumbnail: "/images/placeholders/IMG-20250728-WA0000.jpg"
+date: "2025-07-28"
+keywords: ["Aspidistra", "cast-iron plant", "houseplants", "botany", "Victorian era", "satire", "dark humor", "gardening", "resilience", "plant care"]
+published: true
 ---
 
 ![Head in Aspidistra](/images/placeholders/IMG-20250728-WA0000.jpg) 

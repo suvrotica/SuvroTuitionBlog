@@ -1,10 +1,11 @@
 ---
-title : "Bloke's Bladder Sick" 
-
-thumbnail : "/images/placeholders/IMG-20250727-WA0015.jpg" 
-
-category : "Doggerel" 
-
+title: "Bloke's Bladder Sick"
+description: "A short, scathing doggerel that satirizes blind faith and religious authority. Through profane and visceral humor, the poem critiques the gullibility of followers who mistake a sick man for a god."
+category: "Doggerel"
+thumbnail: "/images/placeholders/IMG-20250727-WA0015.jpg"
+date: "2025-07-27"
+keywords: ["doggerel", "blasphemy", "religious satire", "dark humor", "profane poetry", "anti-religion", "blind faith", "cynicism", "satirical poetry"]
+published: true
 ---
 
 ![bladder](/images/placeholders/IMG-20250727-WA0015.jpg) 

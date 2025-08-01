@@ -1,11 +1,11 @@
 ---
-
-title : "Dim and glum" 
-
-thumbnail : "/images/placeholders/IMG-20250730-WA0010.jpg" 
-
-category : "Doggerel" 
-
+title: "Dim and Glum"
+description: "A dark and surreal doggerel exploring a state of misanthropy and despair. This poem uses grotesque imagery and profane humor to paint a picture of a world filled with fools, backstabbers, and personal torment."
+category: "Doggerel"
+thumbnail: "/images/placeholders/IMG-20250730-WA0010.jpg"
+date: "2025-07-30"
+keywords: ["doggerel", "dark poetry", "profane humor", "misanthropy", "surrealism", "social critique", "cynicism", "Bengali", "personal angst"]
+published: true
 ---
 
 

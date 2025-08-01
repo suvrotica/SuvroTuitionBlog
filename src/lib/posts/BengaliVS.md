@@ -1,11 +1,11 @@
 ---
-
-title : "Bengali vampire scammer" 
-
-thumbnail : "/images/placeholders/IMG-20250731-WA0009.jpg" 
-
-category : "Doggerel" 
-
+title: "Bengali Vampire Scammer"
+description: "A dark doggerel told from the perspective of a unique predator: a Bengali vampire who moonlights as a daytime scammer. This poem explores themes of predation, deception, and the grim realities of a modern ghoul."
+category: "Doggerel"
+thumbnail: "/images/placeholders/IMG-20250731-WA0009.jpg"
+date: "2025-07-31"
+keywords: ["doggerel", "vampire", "scammer", "dark poetry", "macabre", "Bengali", "satire", "crime", "supernatural", "predator"]
+published: true
 ---
 
 ![bengali vampire](/images/placeholders/IMG-20250731-WA0009.jpg) 

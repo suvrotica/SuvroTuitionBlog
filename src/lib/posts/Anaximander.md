@@ -1,12 +1,13 @@
 ---
-
-title: "Anaximander" 
-
+title: "Anaximander's Revolution"
+description: "Explore the groundbreaking idea of Anaximander of Miletus, the ancient Greek philosopher who first imagined the Earth as a body floating in space. This post delves into the philosophical revolution that solved the mystery of the sun's nightly journey and gave birth to cosmology."
+category: "Cosmology"
 thumbnail: "/images/placeholders/IMG-20250728-WA0007.jpg"
-
-category : "Cosmology" 
-
+date: "2025-07-28"
+keywords: ["Anaximander", "cosmology", "pre-Socratic philosophy", "ancient Greece", "history of science", "astronomy", "flat Earth", "philosophy of science", "Miletus", "Thales"]
+published: true
 ---
+
 
 ![two pictures](/images/placeholders/IMG-20250728-WA0007.jpg) 
 

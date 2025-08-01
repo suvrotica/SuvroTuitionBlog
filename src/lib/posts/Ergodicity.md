@@ -1,11 +1,11 @@
 ---
 title: "Ergodicity"
-
-description: "The Secret of the Universe, Told by a Chai-Walla"
-
+description: "What can a Calcutta chai-wallah and a flash flood teach about statistics? This post breaks down ergodicity—the crucial difference between time and ensemble averages—and why understanding it is key to navigating risk in finance and daily life."
 category: "Statistics"
-
 thumbnail: "/images/placeholders/erg.png"
+date: "2025-07-20"
+keywords: ["ergodicity", "statistics", "time average", "ensemble average", "non-ergodic systems", "risk management", "probability", "data science", "financial markets", "Calcutta"]
+published: true
 ---
 ![4 feet in filth water](/images/placeholders/erg.png)
 

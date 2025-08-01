@@ -1,9 +1,11 @@
 ---
-title: "Architectural Tantrum" 
-
-thumbnail: "/images/placeholders/IMG-20250725-WA0006.jpg" 
-
-category: "Bipolar Depression" 
+title: "Architectural Tantrum"
+description: "A visceral interpretation of a pencil sketch, where a crumbling building becomes a powerful metaphor for a mental breakdown and the chaotic, resilient spirit of Calcutta. An exploration of defiance in art and life."
+category: "Bipolar Depression"
+thumbnail: "/images/placeholders/IMG-20250725-WA0006.jpg"
+date: "2025-07-25"
+keywords: ["architecture", "metaphor", "bipolar depression", "mental health", "art", "pencil sketch", "Calcutta", "Bengali culture", "personal essay", "resilience", "urban decay"]
+published: true
 ---
 
 ![Architectural Tantrum](/images/placeholders/IMG-20250725-WA0006.jpg) 

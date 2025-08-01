@@ -1,11 +1,11 @@
 ---
-
-title : "Fuck this fucking shit" 
-
-thumbnail : "/images/placeholders/IMG-20240517-WA0030.jpg" 
-
-category : "Doggerel" 
-
+title: "Fuck this fucking shit"
+description: "An angry, profane doggerel sparked by a simple mishap. This poem unleashes a torrent of frustration against societal decay, religious hypocrisy, and everyday annoyances."
+category: "Doggerel"
+thumbnail: "/images/placeholders/IMG-20240517-WA0030.jpg"
+date: "2024-05-17"
+keywords: ["doggerel", "profane poetry", "angry poem", "satire", "social critique", "religious hypocrisy", "rant", "dark humor"]
+published: true
 ---
 
 ![Fuck this fucking shit](/images/placeholders/IMG-20240517-WA0030.jpg) 

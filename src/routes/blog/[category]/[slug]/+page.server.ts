@@ -10,6 +10,7 @@ type PostMetadata = {
 	date?: string;
 	thumbnail?: string;
 	published?: boolean;
+	keywords?: string[];
 	[key: string]: unknown;
 };
 
@@ -67,7 +68,8 @@ export const load: PageServerLoad = async ({ params, url }) => {
 			ogImageUrl: post.thumbnail
 				? `${url.origin}${post.thumbnail}`
 				: `${url.origin}/images/placeholders/default.png`,
-			ogImageAlt: post.title
+			ogImageAlt: post.title,
+			keywords: post.keywords
 		};
 
 		const datePublished = post.date ? new Date(post.date).toISOString() : new Date().toISOString();

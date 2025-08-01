@@ -1,10 +1,13 @@
 ---
 title: "Bhavishya Purana"
-
+description: "Long before AI-generated content, there was the Bhavishya Purana. This post explores how the ancient Hindu text's startlingly accurate 'prophecies' of Queen Victoria and the British Raj are a masterful example of post-diction—history rewritten to legitimize the present."
+category: "Religion"
 thumbnail: "/images/placeholders/IMG-20250727-WA0002.jpg"
-
-category: "Religion" 
+date: "2025-07-27"
+keywords: ["Bhavishya Purana", "post-diction", "prophecy", "Hinduism", "Puranas", "AI slop", "generative AI", "history", "forgery", "Queen Victoria", "British Raj", "Indian history", "religious texts"]
+published: true
 ---
+
 
 ![brahmin lecturing](/images/placeholders/IMG-20250727-WA0002.jpg) 
 

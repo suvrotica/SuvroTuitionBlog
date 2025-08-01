@@ -1,11 +1,11 @@
 ---
-
-title : "I a pissing bengali man" 
-
-thumbnail : "/images/placeholders/IMG-20250728-WA0011.jpg" 
-
-category : "Doggerel" 
-
+title: "I a Pissing Bengali Man"
+description: "A raw and provocative doggerel that serves as a brutally honest self-portrait of a Bengali man. This poem is a scathing critique of cultural myths, political disillusionment, and societal decay in modern Bengal."
+category: "Doggerel"
+thumbnail: "/images/placeholders/IMG-20250728-WA0011.jpg"
+date: "2025-07-28"
+keywords: ["doggerel", "Bengali man", "social satire", "political critique", "profane poetry", "Kolkata", "Indian society", "cultural identity", "cynicism", "personal angst"]
+published: true
 ---
 
 ![bengali](/images/placeholders/IMG-20250728-WA0011.jpg )

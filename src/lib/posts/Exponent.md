@@ -1,9 +1,11 @@
 ---
-title: "On Exponential Growth and Calcutta"
+title: "The Doubling of Calcutta"
 date: "2025-07-18"
-description: "A terrifying look at the population of Calcutta mathematically projected 500 years from now, using a personal-life-based doubling constant."
+description: "Using Calcutta's 50-year population doubling period as a case study, this post explores the power of exponential growth. From Malthusian predictions to viral content and pandemics, see how a simple mathematical formula shapes our past, present, and a shockingly crowded future."
 category: "Math"
 thumbnail: "/images/placeholders/a5nWmIXQTneuGRFUT5fQvg.webp"
+keywords: ["exponential growth", "population growth", "Calcutta", "Kolkata", "mathematics", "Malthusian theory", "doubling time", "data visualization", "future projections", "viral growth", "pandemic modeling"]
+published: true
 ---
 
 <script>

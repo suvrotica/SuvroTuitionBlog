@@ -1,11 +1,11 @@
 ---
 title: "I Shit a Gargantuan Turd"
-
-description: "Happy the holy who just shit" 
+description: "A philosophical and satirical rant using a gargantuan turd as a metaphor for societal ills, from corrupt leaders to the hypocrisy of modern AI."
 category: "Humor"
-
 thumbnail: "/images/placeholders/IMG-20250725-WA0003.jpg"
-
+date: "2025-07-25"
+keywords: ["satire", "social commentary", "dark humor", "scatological humor", "philosophy", "AI critique", "Indian society", "corruption", "personal essay", "rant"]
+published: true
 ---
 
 ![Happy the holy who just shit](/images/placeholders/IMG-20250725-WA0003.jpg)

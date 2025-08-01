@@ -1,10 +1,11 @@
 ---
-title: "Microwave"
-
-description: "And the goodly god said let there be microwave—and so it was done"
-
-category: "Physics"  
+title: "Cosmic Microwave Background"
+description: "An irreverent and humorous explanation of the Cosmic Microwave Background radiation. Discover how the Big Bang's afterglow, a universal static humming at 2.725 Kelvin, was discovered and what it tells us about our universe's pimply adolescence."
+category: "Physics"
 thumbnail: "/images/placeholders/IMG-20250724-WA0009.jpg"
+date: "2025-07-24"
+keywords: ["Cosmic Microwave Background", "CMB", "Big Bang", "cosmology", "physics", "Penzias and Wilson", "blackbody radiation", "Planck's law", "astrophysics", "satire"]
+published: true
 ---
 ![goodly](/images/placeholders/IMG-20250724-WA0009.jpg) 
 

@@ -1,11 +1,11 @@
 ---
-
-title : "Make America a Fuck Again (MAFA)" 
-
-thumbnail : "/images/placeholders/IMG-20250728-WA0003.jpg" 
-
-category : "Doggerel-Political" 
-
+title: "Make America a Fuck Again (MAFA)"
+description: "A scathing satirical doggerel on the MAGA movement and its leader. This political commentary explores themes of power, corruption, and the potential future of American democracy through a dark, humorous lens."
+category: "Doggerel-Political"
+thumbnail: "/images/placeholders/IMG-20250728-WA0003.jpg"
+date: "2025-07-28"
+keywords: ["political satire", "doggerel", "MAGA", "Trump", "American politics", "political commentary", "satirical poetry", "US politics", "populism", "right-wing politics", "political humor"]
+published: true
 ---
 
 ![Orange](/images/placeholders/IMG-20250728-WA0003.jpg) 

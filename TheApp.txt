@@ -1,4 +1,4 @@
-# Context file generated on: Friday, July 25, 2025 at 10:51:21 AM GMT+5:30
+# Context file generated on: Saturday, August 2, 2025 at 1:59:45 AM GMT+5:30
 ---
 
 # Project File Layout
@@ -46,7 +46,8 @@
 │   │   │   │   ├── PlantUML.svelte
 │   │   │   │   └── plantuml.ts
 │   │   │   ├── seo
-│   │   │   ├── SEO.svelte
+│   │   │   │   ├── SEO.svelte
+│   │   │   │   └── SEO.ts
 │   │   │   ├── ThreeJS
 │   │   │   │   └── ThreeJSScene.svelte
 │   │   │   └── ui
@@ -57,28 +58,55 @@
 │   │   ├── index.ts
 │   │   └── posts
 │   │       ├── adbhut-anubhuti.md
+│   │       ├── AmABengaliMan.md
+│   │       ├── Anaximander.md
 │   │       ├── Apophenia.md
+│   │       ├── ArchitecturalTantrum.md
+│   │       ├── Aspidistra.md
 │   │       ├── BabuMoshai.md
+│   │       ├── BengaliFart.md
+│   │       ├── BengaliVS.md
+│   │       ├── Bhabishya.md
+│   │       ├── Bloke.md
 │   │       ├── Bluish.md
 │   │       ├── BrainTalk.md
+│   │       ├── Constant.md
 │   │       ├── Crystal.md
 │   │       ├── d3-axis-integration.md
 │   │       ├── d3-integration.md
+│   │       ├── DimAndGlum.md
 │   │       ├── Ergodicity.md
 │   │       ├── Exponent.md
+│   │       ├── Fibonacci.md
+│   │       ├── FuckThisFuckingShit.md
+│   │       ├── Gargantuan.md
+│   │       ├── H1b.md
+│   │       ├── HolyFatAss.md
 │   │       ├── Homeopathy.md
+│   │       ├── MAFA.md
+│   │       ├── Metro.md
 │   │       ├── Microwave.md
 │   │       ├── Monk.md
+│   │       ├── MyFatherAndBooks.md
 │   │       ├── NegExponent.md
 │   │       ├── NotAmbition.md
+│   │       ├── OldMemories.md
 │   │       ├── p5js-abstract-art.md
 │   │       ├── plantuml-sequence-diagram.md
+│   │       ├── PutinsBalls.md
 │   │       ├── Rezala.md
+│   │       ├── Stoop.md
 │   │       ├── svelte-introduction.md
 │   │       ├── sveltes-runes.md
+│   │       ├── Taboo.md
 │   │       ├── threejs-integration.md
+│   │       ├── TintinInKolkata.md
+│   │       ├── Tower.md
 │   │       ├── tts-test.md
-│   │       └── WeirdFeeling.md
+│   │       ├── Verybadsmell.md
+│   │       ├── VisitingMommy.md
+│   │       ├── WeirdFeeling.md
+│   │       └── WrightsLaw.md
 │   ├── routes
 │   │   ├── +layout.server.ts
 │   │   ├── +layout.svelte
@@ -111,6 +139,9 @@
 │           ├── erg.png
 │           ├── Fs6YTO0GQ_-nHWut1NkdVA.webp
 │           ├── gDpjDHSHS72jcAoV6n7VEg.webp
+│           ├── IMG-20240517-WA0030.jpg
+│           ├── IMG-20240723-WA0028.jpg
+│           ├── IMG-20250313-WA0010.jpg
 │           ├── IMG-20250717-WA0006.jpg
 │           ├── IMG-20250718-WA0001.jpg
 │           ├── IMG-20250718-WA0010.jpg
@@ -122,6 +153,33 @@
 │           ├── IMG-20250724-WA0004.jpg
 │           ├── IMG-20250724-WA0007.jpg
 │           ├── IMG-20250724-WA0009.jpg
+│           ├── IMG-20250725-WA0000.jpg
+│           ├── IMG-20250725-WA0003.jpg
+│           ├── IMG-20250725-WA0006.jpg
+│           ├── IMG-20250726-WA0000.jpg
+│           ├── IMG-20250726-WA0001.jpg
+│           ├── IMG-20250726-WA0007.jpg
+│           ├── IMG-20250726-WA0010.jpg
+│           ├── IMG-20250726-WA0011.jpg
+│           ├── IMG-20250727-WA0000.jpg
+│           ├── IMG-20250727-WA0002.jpg
+│           ├── IMG-20250727-WA0004.jpg
+│           ├── IMG-20250727-WA0015.jpg
+│           ├── IMG-20250728-WA0000.jpg
+│           ├── IMG-20250728-WA0001.jpg
+│           ├── IMG-20250728-WA0002.jpg
+│           ├── IMG-20250728-WA0003.jpg
+│           ├── IMG-20250728-WA0004.jpg
+│           ├── IMG-20250728-WA0007.jpg
+│           ├── IMG-20250728-WA0010.jpg
+│           ├── IMG-20250728-WA0011.jpg
+│           ├── IMG-20250729-WA0000.jpg
+│           ├── IMG-20250729-WA0004.jpg
+│           ├── IMG-20250730-WA0005.jpg
+│           ├── IMG-20250730-WA0010.jpg
+│           ├── IMG-20250731-WA0004.jpg
+│           ├── IMG-20250731-WA0009.jpg
+│           ├── IMG-20250801-WA0029.jpg
 │           ├── monk-fruit.png
 │           ├── p5js-placeholder.jpeg
 │           ├── plantuml-placeholder.jpeg
@@ -187,6 +245,7 @@
 		"rehype-katex-svelte": "^1.2.0",
 		"rehype-slug": "^6.0.0",
 		"remark-math": "^3.0.1",
+		"schema-dts": "^1.1.5",
 		"shiki": "^3.6.0",
 		"svelte": "^5.0.0",
 		"svelte-check": "^4.0.0",
@@ -480,7 +539,7 @@ pre.shiki { @apply p-4 rounded-lg overflow-x-auto; }
 }
 
 .mobile-nav-drawer {
-	@apply fixed top-0 left-0 bottom-0 z-40 w-72 transform bg-neutral-100 transition-transform duration-300 ease-in-out dark:bg-neutral-900;
+	@apply fixed top-0 left-0 bottom-0 z-40 w-72 transform bg-neutral-100 transition-transform duration-300 ease-in-out dark:bg-neutral-900 overflow-y-auto;
 }
 .mobile-nav-drawer.open {
 	@apply translate-x-0;
@@ -497,6 +556,7 @@ pre.shiki { @apply p-4 rounded-lg overflow-x-auto; }
 .hamburger {
 	@apply z-50; /* Ensure button is above other header content */
 }
+
 
 # File: src/app.d.ts
 
@@ -1667,7 +1727,7 @@ export function encodePlantUML(text: string): string {
 }
 
 
-# File: src/lib/components/SEO.svelte
+# File: src/lib/components/seo/SEO.svelte
 
 <script lang="ts">
 	import type { SvelteComponent } from 'svelte';
@@ -1678,6 +1738,7 @@ export function encodePlantUML(text: string): string {
 		canonicalUrl?: string;
 		ogImageUrl?: string;
 		ogImageAlt?: string;
+		keywords?: string[];
 		schema?: Record<string, any> | Array<Record<string, any>>;
 	};
 
@@ -1687,6 +1748,7 @@ export function encodePlantUML(text: string): string {
 		canonicalUrl,
 		ogImageUrl,
 		ogImageAlt,
+		keywords,
 		schema = undefined
 	}: Props = $props();
 </script>
@@ -1722,10 +1784,68 @@ export function encodePlantUML(text: string): string {
 		<meta name="twitter:image" content={ogImageUrl} />
 	{/if}
 
+	{#if keywords && keywords.length > 0}
+		<meta name="keywords" content={keywords.join(', ')} />
+	{/if}
+
 	{#if schema}
 		{@html `<script type="application/ld+json">${JSON.stringify(schema, null, 2)}</script>`}
 	{/if}
 </svelte:head>
+
+# File: src/lib/components/seo/SEO.ts
+
+// src/lib/components/seo/SEO.ts
+import { dev } from '$app/environment';
+import type { WithContext, WebSite, Person } from 'schema-dts';
+
+// Basic site metadata
+const title = 'Suvro Ghosh Blog | Satire | Technology Insights & Expert Opinions';
+const description =
+	"Join Suvro Ghosh's journey through the evolving landscape of technology. This blog offers a blend of detailed tech tutorials, industry trend analyses, and personal stories, providing a unique view from a tech expert's lens. Stay ahead of the curve with insights into the latest developments and thoughtful perspectives on tech's impact in everyday life. Perfect for tech enthusiasts, professionals, and learners alike.";
+const url = dev ? 'http://localhost:5173' : 'https://suvroghosh.blog';
+
+// Default SEO object
+export const siteSEO = {
+	title: title,
+	description: description,
+	canonical: url,
+	openGraph: {
+		type: 'website',
+		url: url,
+		title: title,
+		description: description,
+		images: [
+			{
+				url: `${url}/default-og-image.png`, // We need to create this image
+				width: 1200,
+				height: 630,
+				alt: 'Suvro Ghosh Blog Logo'
+			}
+		]
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: title,
+		description: description,
+		image: `${url}/default-og-image.png`,
+		creator: '@suvro_ghosh' // Assuming a handle, can be changed
+	}
+};
+
+// Default JSON-LD schema for the website
+export const websiteSchema: WithContext<WebSite> = {
+	'@context': 'https://schema.org',
+	'@type': 'WebSite',
+	name: title,
+	url: url,
+	description: description,
+	publisher: {
+		'@type': 'Person',
+		name: 'Suvro Ghosh'
+	},
+	inLanguage: 'en-US'
+};
 
 # File: src/lib/components/ThreeJS/ThreeJSScene.svelte
 
@@ -1966,6 +2086,204 @@ published: false
 </main>
 
 
+# File: src/lib/posts/AmABengaliMan.md
+
+---
+
+title : "I a pissing bengali man" 
+
+thumbnail : "/images/placeholders/IMG-20250728-WA0011.jpg" 
+
+category : "Doggerel" 
+
+---
+
+![bengali](/images/placeholders/IMG-20250728-WA0011.jpg )
+
+<br>
+My bengali piss will do shit,<br>
+But the rules I let the flow flout.<br>
+As the piss hits the dust, it must,<br>
+Do a "game changer" on the cloggy clout.<br>
+<br>
+Or not, but the day is hot,<br>
+I a pissing bengali man stand corrupt.<br>
+I am poor, I am jealous, and depraved,<br>
+And trust me, morally bankrupt.<br>
+<br>
+As is usual with untalented fools, I drool,<br>
+Droopy my eyes like a sage.<br>
+Hunched back race, a grimaced face,<br>
+Character stitched from inveterate rage.<br>
+<br>
+Gratuitous fights very common sights,<br>
+I really have nothing better to do.<br>
+Plastic and shit in rice, high-fives,<br>
+Bengali girls now fatter obstructing view.<br>
+<br>
+My skin color is inferior, ironically it has more,<br>
+Of what the superior skin has less.<br>
+I am diabetic, consumptive, full of shit,<br>
+I have a typical proud bengali face.<br>
+<br>
+Abstention dignified, I like shit fried,<br>
+Needs unmet, the hidden bedroom deeds.<br>
+I spy speculative fucks in garbage trucks,<br>
+The blood clots where it bleeds.<br>
+<br>
+I have no ambition, but my thoughts are big,<br>
+I'm horny and distressfully diseased.<br>
+I don't really know where I'm going,<br>
+Direction is treasonous to my creed.<br>
+<br>
+I elected "red", "hand", "sapling", "lotus",<br>
+Always found my ass in a "win-win" gape.<br>
+My asshole is now so fucking huge,<br>
+You can't seal it with an ordinary tape.<br>
+<br>
+Rice pullers and crypto, honesty on tiptoe,<br>
+You get scammed just existing in bengal.<br>
+Jobless engineers huddle in call centers,<br>
+To scam naive americans who call.<br>
+<br>
+Sandy cunts, deceased, diseased dicks,<br>
+Rule by rhetoric, theft and glib con.<br>
+They talk about the good old days,<br>
+But holy shit, those days are fuck gone.<br>
+<br>
+For treason fucks dragged to prison,<br>
+Ought to be the justice of the lands.<br>
+But in India, a democracy in name only,<br>
+Kleptocracy garlanded as it stands.<br>
+<br>
+The "next level" pus from my anus,<br>
+Thus dribble animus ad-infinitum.<br>
+I swear the stench is bad enough,<br>
+Worms unwholesome itch the rectum.<br>
+<br>
+My turds are heavy with worry,<br>
+I have nightmares within nightmares.<br>
+On heaven and earth corruption is rife,<br>
+Bullshit easy on busy thoroughfares.<br>
+<br>
+A flaccid cock on a disenchanted rock,<br>
+Not even a rounded bengali miss.<br>
+I can't imagine someone will eat a fish,<br>
+Soaked with lonely miseries in my piss.<br>
+<br>
+Philosophy used to be my fantasy forte,<br>
+But my recollection is no longer good.<br>
+These days the treatment I get is bad,<br>
+As is the quality of prepared food.<br>
+<br>
+People really hate my old fashioned balls,<br>
+They want to throw me in the fire.<br>
+The country and state are sold to crooks,<br>
+The condition of the Indian is filthy dire.<br>
+<br>
+So I piss, I piss and think, about the stink,<br>
+About how everything changed.<br>
+How rotten things have gotten inside,<br>
+But shiny on the surface as arranged.<br>
+<br>
+Bengali thoughts led the world,<br>
+Now it lags behind the slowest laggards.<br>
+It's not even safe to open your mouth,<br>
+Unless you like swallowing fartsy turds.<br>
+<br>
+From british clerks to all-round jerks,<br>
+The bengalis are convinced they're best.<br>
+The least of exertions, they queue up for,<br>
+An afternoon of complete and total rest.<br>
+<br>
+Belligerent cunts and bickering grunts,<br>
+Makes throats hoarse and thorny dry.<br>
+The theater for pulpit and stage.<br>
+It helps we enjoy lowlifes and their lie.<br>
+<br>
+Land of poets, now of double dacoits,<br>
+Even rabindranath's nobel was stolen.<br>
+People entertained by cuckolds in soaps,<br>
+Anger expressed in quick jerky semen.<br>
+<br>
+Bose counted photons, now many tons,<br>
+Of turds strewn around, we call "us".<br>
+The bengali superiority is a myth of sorts,<br>
+A multiplying festering inbreeding pus.<br>
+<br>
+Raja Ram Mohan Roy would throw up,<br>
+If he came back to the polluted today.<br>
+He'd find a sky brown like people's poop,<br>
+There's not much for him to do or say.<br>
+<br>
+Constipated and hot, we shit a lot,<br>
+The holy rivers a witness to the feat.<br>
+The people and poop go to the afterlife,<br>
+Passengers on a "make in india" seat.<br>
+<br>
+Oversupply of invisible gods at the helm,<br>
+Or their mustachioed political goons.<br>
+The people maybe educated to a degree,<br>
+But act silly like little demented cartoons.<br>
+<br>
+Like a herd of sheep the sheepish heed,<br>
+To the only strident acrimonious shrill.<br>
+They bend over and present their ass,<br>
+Are presented with the fucked-forever pill.<br>
+<br>
+They join the ranks, full of shit and thanks,<br>
+For the empty promises that are made.<br>
+Bleeding from their ass they limp,<br>
+The true bengalis are all long dead.<br>
+<br>
+*game-changer, win-win, next-level and various other loser compound word pairs have slipped into the fledgling Indian vocabulary, making it sound even more fucked up than it needs to be.
+
+
+# File: src/lib/posts/Anaximander.md
+
+---
+
+title: "Anaximander" 
+
+thumbnail: "/images/placeholders/IMG-20250728-WA0007.jpg"
+
+category : "Cosmology" 
+
+---
+
+![two pictures](/images/placeholders/IMG-20250728-WA0007.jpg) 
+
+There's a particular quality to the sky over the plains of Bengal, especially as the sun begins its languid descent. The horizon feels impossibly wide, a vast, flat line separating the solid earth from the ethereal dome above. It's a view that feels primordial, fundamental. You're here, on the ground. The sky is up there. What could be more obvious?
+
+This is the cosmos of our intuition, the one we are all born into. It’s a world built on a simple, reassuring duality: a floor beneath our feet and a ceiling over our heads. My little sketch accompanying this post captures this sentiment perfectly. In the "INITIAL" panel, we see it all: the ground, the sea, the trees, and the sky. A one-sided, self-contained world. The sun travels across the top and, well, it goes away somewhere. We don't worry too much about the particulars.
+
+For millennia, this was humanity's universe. It was the universe of the Babylonians, the Egyptians, and the early Hebrews. It worked, for the most part. It explained why things fall *down* and smoke rises *up*. But it harboured a profound, nagging conundrum. A cosmic loose thread.
+
+What happens to the sun?
+
+And for that matter, the moon, and all those wandering stars? They dutifully sink below the western horizon, only to reappear, fresh as a daisy, in the east the next morning. How? Do they perform some frantic, clandestine dash around the northern edge of the world while we sleep? Is there a new sun every day, forged in some celestial furnace? Or do they sail upon a "night sea" under the world? The explanations were often beautifully poetic, but they felt... ad-hoc. They were patches on a model that was fundamentally broken.
+
+Enter Anaximander of Miletus, a pre-Socratic Greek philosopher who lived a staggering twenty-six centuries ago. Miletus, on the coast of modern-day Turkey, was a bustling hub of trade and, more importantly, of intellectual ferment. And Anaximander, a student of the first-ever philosopher Thales, was contemplating this very problem of the disappearing sun.
+
+His solution was not a patch. It was a complete and utter demolition of the old architecture. It was an idea so audacious, so contrary to every scrap of human intuition, that it rightfully stands as perhaps the first true scientific revolution.
+
+He proposed that the Earth is not a floor. It is an object.
+
+Let that sink in.
+
+Anaximander suggested that the Earth is a body—he pictured it as a flat-topped cylinder, like a drum—hanging unsupported, floating in the centre of an infinite space. It stays in place, he reasoned, because it is equidistant from all other things and has no reason to move in one direction over any other.
+
+The genius of this is not that he got the shape right (he didn't). The genius is that he conceived of space *underneath* us. Suddenly, the world wasn't a single-sided stage; it was two-sided, as my second panel of the comic illustrates.
+
+With this single, magnificent leap of imagination, the nightly journey of the sun was no longer a mystery. It didn't have to sneak around the edges. It simply continued its circular path, passing cleanly *under* the floating Earth, to rise again in the east. The sky was not a dome; it was a sphere. There was an "up" and a "down" relative to where you stood on Earth, but in the grander cosmos, there was no absolute up or down. There was only "towards the centre" and "away from the centre."
+
+This was more than an astronomical insight; it was a philosophical cataclysm. Before Anaximander, the Earth rested on something—water, a giant turtle, the shoulders of Atlas. It needed a foundation. Anaximander freed our world from its moorings. He placed it in the void, subject not to the whims of gods or the support of mythic beasts, but to a principle of equilibrium. It was a naturalistic explanation. This was the birth of cosmology.
+
+Every subsequent cosmic revelation stands on the shoulders of this one. The spherical Earth of Pythagoras and Aristotle, the heliocentric system of Copernicus and Galileo, Einstein's curved spacetime—they are all descendants of Anaximander's brave declaration that the Earth is just a thing in a place, not *the* place itself.
+
+So the next time you watch a sunset, perhaps from a rooftop in Kolkata or a boat on the Padma, take a moment. As the sun vanishes, don't just see it as the end of the day. Picture its journey continuing, unseen, beneath your very feet. You are standing on a colossal object suspended in the middle of everything, held in place by nothing at all. It’s a terrifying, exhilarating, and profoundly beautiful thought—a gift to us from a mind that, twenty-six centuries ago, dared to turn the whole world upside down.
+
+
 # File: src/lib/posts/Apophenia.md
 
 ---
@@ -1987,6 +2305,68 @@ Here’s a fresh batch of cow dung cooked specially for starry-eyed, artsy Benga
 "But Suvro," you ask, conveniently naive, "what harm does it do? Aren’t patterns everywhere, legitimately?" Of course they're everywhere—nature loves patterns like Calcutta loves potholes. Fibonacci sequences in flower petals, fractals in river deltas, chaos theory in city traffic, your mother's disapproving face reflected in literally every reflective surface—real patterns exist and are important. Apophenia, though, is seeing Elvis’s unseen droopy aged and imagined ballsack in burnt toast. It’s mistaking your luck at dice for divine displeasure. It’s every podgy bengali auntie swearing by numerology, astrology, palmistry, and "scientifically proven" vastu-shastra because she failed math from class 5 on but knows cosmic calculus better than Einstein.
 
 Numbers themselves, innocent digits dancing elegantly in mathematical bengali uncle-auntie orgies of precision and logic, get misused by dimwits, charlatans, and that weirdly attractive bohemian chick who believes reading Kafka backward reveals hidden meanings about why men ghost her after two dates. So every loser loony with a basic grasp of arithmetic but zero comprehension of probability screams "11:11," "111," or "777"—freaking angel numbers—as proof that the universe gives a damn about his impending promotion to assistant nobody at Generic Urinal Pvt. Ltd.
+
+
+# File: src/lib/posts/ArchitecturalTantrum.md
+
+---
+title: "Architectural Tantrum" 
+
+thumbnail: "/images/placeholders/IMG-20250725-WA0006.jpg" 
+
+category: "Bipolar Depression" 
+---
+
+![Architectural Tantrum](/images/placeholders/IMG-20250725-WA0006.jpg) 
+
+Here’s my architectural tantrum then: not a mere building, nor yet architecture, but a bleeding, screaming breakdown in brick and mortar—a goddamned hissy fit, if ever one was committed to paper. What I’ve drawn isn’t something static but something caught forever mid-spasm, mid-collapse, mid-`fuck-you-I-will-not-stay-put`—esque protestation against architectural sanity itself.
+
+There it stands—if "stand" can even be allowed here—wobbling, leaning, sneering, shaking its bony fists at gravity, physics, and perhaps even Spinoza's god, if he’s still around this side of entropy. It’s a joyous fuckery, a pencilled revolt of lines and edges against rulers, architects, and every well-intentioned fool who insists walls must stay straight, corners must stay sharp, and buildings must meekly submit to geometry.
+
+Look again, closely, at that gloriously chaotic wreckage. The windows—good bengali bourgeois ones, the kind I can imagine with lace curtains concealing flabby belligerent women, whose sole purpose in life is gossip and complaint—who must utterly be unbothered by the reality of their reckless refuge. They stare out loftily at the neighbors, peering disdainfully down, denying reality like an uncle deep into his third peg of Old Monk, boasting loudly about the strength of his liver even as his knees tremble beneath him.
+
+Down below, it’s a different story. A lower half more bruised and battered, plaster hanging like loose, peeling skin from old wounds that refuse healing. The ground floor looks worn out, pissing bricks, doors dangling off hinges like teeth loosening in an aging mouth. Its indignities are public, spectacular, and thoroughly Bengali—the bottom half, like every Calcuttan tenement, a victim of bureaucratic indifference, municipal fuck-ups, and generations of optimistic neglect.
+
+Yet, with sublime irony, the upper floors still pretend decorum, holding onto dignity by the brittle skin of their teeth, their arrogance etched beautifully and proudly in the slanting balconies and slightly smug windows. An undeniable metaphor for a culture that passionately believes tomorrow must always be better even if yesterday was unquestionably worse.
+
+So what does my pencil-sketch tantrum truly reveal beneath its proud crumbling façade? It reflects that impossible, irrepressible, insufferably bengali resilience—born from stubbornness, tempered by daily absurdities, and nourished by chaos. This house—an architectural meltdown scribbled in insolent graphite—mirrors precisely how we, as bengalis, confront reality: never fully upright, rarely entirely collapsed, always somehow teetering between tragedy and comedy, between brilliance and bedlam.
+
+It isn’t falling apart—it’s hanging together, dammit, in precisely the style bengalis perfected long before Marx made dialectics fashionable. My sketch isn’t merely an angry scribble—it’s an eloquent architectural rant against the neat tyranny of straight lines, against predictability, against the hopelessly unimaginative mediocrity that would chain every wall upright and lock every door squarely shut.
+
+If beauty can lie in defiance in harassment of sensibilities, my architectural tantrum stands glorious—irreverent, untamed, and bengali through and through.
+
+
+# File: src/lib/posts/Aspidistra.md
+
+---
+
+title: "Aspidistra" 
+
+thumbnail : "/images/placeholders/IMG-20250728-WA0000.jpg" 
+
+category : "Botany" 
+
+---
+
+![Head in Aspidistra](/images/placeholders/IMG-20250728-WA0000.jpg) 
+
+So, there it sits, the sanctimonious aspidistra—the smug bastard of the botanical world—proudly ugly, imperiously indestructible, the perfect green hostage taken by Victorians to silently mock humanity's hubris. Named with the poetic grace of constipation (`aspid` from Greek meaning "shield," and `istra` probably chosen by a drunken botanist tripping over his own Victorian decorum), it guards the corners of bourgeois bengali drawing rooms with an uncanny ability to survive neglect, disdain, and the radioactive blasts of familial arguments that vaporize lesser flora. This plant, whose charm resembles that of a pothole festering after Calcutta monsoons, manages to straddle the line between life and lifelessness with a zen-like smugness. I have none of the bullshit—the arguments, the family, the aspidistra, the drawing room, or the bourgeoisie bengaliness. All weed really—one way or the other—have been bad for me. I want a cactus! This: Crown of Thorns. 
+
+![Crown of Thorns](/images/placeholders/IMG-20250728-WA0001.jpg) 
+
+The aspidistra, the cockroach of houseplants, demands nothing—yet thrives. It’s the obnoxious guest who never leaves, the masochistic squatter defying your incompetence with foliage as lively as a government clerk at Writers' Building post-lunch. It's that one far-removed distant cousin something-something at Bengali weddings, who, despite choking on three Rosogollas, simply refuses to die. Science calls it `Aspidistra elatior`, but you might as well call it `FuckYouicus smugilifolia`, because it grows shamelessly lush despite your earnest attempts to murder it by forgetting its existence for decades at a time.
+
+And let’s not sugarcoat it—this damn weed achieved botanical immortality precisely because Victorian society needed something sturdy enough to survive the air thickened by coal soot and their own moral hypocrisy. Having killed off delicate palms and ferns by virtue of sheer environmental spite, the Empire needed a survivor. Enter Aspidistra, the botanical equivalent of the stiff upper lip—stiff enough to survive opium clouds, corsets so tight they'd snap bones, and moral rectitude tighter than Queen Victoria's undergarments. I in fact like parts of its name much, what's there not to like if you have ASS, PEE and almost DISTRUST.
+
+“Indoor plant,” we chuckle, as if we humans bestow upon it the privilege of breathing our air. Bullshit. It tolerates us, not the other way around. It observes silently—bearing witness to countless familial dysfunctions, from the petty squabbles over inheritance to the sullen teenage door-slamming tantrums, recording the absurd theatre of Homo sapiens, probably planning some vegetative revenge it never quite executes because, frankly, it's too busy not giving a fuck. 
+
+Speaking of not giving a fuck, have you ever examined its flowers? Of course not, you plant-blind philistine. Hidden like a dirty secret at the base of its leaves, these blooms are small, purplish, and stink faintly of decay, reminiscent perhaps of Victorian marriages or the Calcutta Corporation’s water pipes. The damn plant pollinates by tricking gnats and beetles into playing along—an insectile orgy under your nose, so to speak, a microscopic sleaze-fest you’ve been unknowingly hosting in your respectable parlor.
+
+Yet, absurdly, there's a perverse beauty in the Aspidistra’s stoic persistence, a seductive poetry in its ugliness, a kind of botanical Zen koan reminding us of life's stubborn refusal to bow before idiocy—particularly ours. It forces humility upon you, smugly mocking your decorative pretensions, your gardening aspirations, your botanical ambitions, your very competence as a life-form, whispering quietly from a dark corner: “You call yourself evolved?”
+
+In short, the Aspidistra’s legacy is one of exquisite and unforgiving irony. It is the perfect plant for those who neither know nor care what to do with a plant—proving that nature often thrives best not in careful cultivation, but in blissful ignorance and neglect. And that’s a lesson we humans have yet to learn—probably never will—but who the hell is the Aspidistra to judge?
+
+Actually, fuck it. Who the hell are we?
 
 
 # File: src/lib/posts/BabuMoshai.md
@@ -2016,42 +2396,299 @@ Why does the culture and its critters endure though? This is genetic masochism, 
 To be Bengali, lower-middle class, and living in Calcutta is to master the art of living just adequately enough to complain beautifully, bitterly, and endlessly—right until death, the ultimate relief, becomes itself yet another inconvenience because it interrupts their schedule of complaining.
 
 
+# File: src/lib/posts/BengaliFart.md
+
+---
+
+title : "Bengali fart" 
+
+thumbnail : "/images/placeholders/IMG-20250731-WA0004.jpg" 
+
+category : "Doggerel" 
+
+---
+![farting bengali man](/images/placeholders/IMG-20250731-WA0004.jpg) 
+
+<br>
+Shit in shock I raise dhoti like a frock,<br>
+And holy mother of Sri Hari the smell.<br>
+Did I fart? If that a demonstrative start,<br>
+What foul things follow I can't tell.<br>
+<br>
+Holiness held, faith fucked and felled,<br>
+By a pimp with a punctual pace.<br>
+Paid for a dream with a lusty teen,<br>
+Got a hag with a neotenous face.<br>
+<br>
+Who am I, with an open fly,<br>
+The hag quizzed dressed in lace.<br>
+She imagined my balls when I said,<br>
+Race bengali is fucked in the face.<br>
+<br>
+Shitty this city, yes what a pity,<br>
+Black like soot this fart.<br>
+A hindoo so holy shit monopoly,<br>
+The smell a revenge for the hurt.<br>
+<br>
+Artsy is what is dutifully fartsy,<br>
+I am a bengali fuck-faced fat-ass.<br>
+Deep in my sleep I shit on fat sheep,<br>
+While they pass global warming gas.<br>
+<br>
+So says he, that god I couldn't see,<br>
+You can fart but you can't fret.<br>
+Fuck off I cried, I realized I died,<br>
+The future a fart of imbecelic threat.<br>
+<br>
+Bits tiny coalesce as shit shiny,<br>
+So much that I turn true blue.<br>
+Having your shit like rum cake,<br>
+And yeah, eating shit as diarrhea too.<br>
+<br>
+Proportion of a potion for loose motion,<br>
+A mohammedan doctor advised.<br>
+And that was to fart bless his heart,<br>
+On his daughter as loo disguised.<br>
+<br>
+Jiminy the jerk fucking in a park,<br>
+A christian prophet caught mid-fuck.<br>
+His dick knot, his god eats his snot,<br>
+In a mangy dog-ass got tightly stuck.<br>
+<br>
+Sticky bengali shit, fart pathetic,<br>
+Shit performance in penetration still.<br>
+Sick small dick, but pubes very thick,<br>
+Forced to fan farts with goodly skill.<br>
+<br>
+Or fucked flatulent fluttering wind,<br>
+As the bookish types lean on.<br>
+From where these gas bags get,<br>
+I know not the smell of rotten con.<br>
+<br>
+So sweet bengali fart is all there is,<br>
+All around and the only real thing.<br>
+From the flabby ass to the shitty skinny,<br>
+Genteel to the bottom feeding scamny ninny.<br><br>
+Under sari, dhoti, skirt, and pants,<br>
+In pujas and interiors really relished,<br>
+Of course in most of Mamata's speech,<br>
+And in what she has ever accomplished.<br>
+<br>
+So if you fuck me when I fart,<br>
+It's not the only Bengali fart.<br>
+It mainly is from the very top,<br>
+Breathing it deeply in is your part.<br>
+<br>
+Even then in this fart full place,<br>
+I feel bengali with Mamata's safety fart,<br>
+Just outside Bengal nationally,<br>
+I'd be forced to eat Modi's turd tart.<br>
+<br>
+I'd rather die than do shit like that,<br>
+No to low-life stupid mean old-fuck shit.<br>
+So `jai bangla` but no `jai sreeram` fart,<br>
+And here I'll die farting, where I fit.<br>
+<br>
+Bolo Joe Maa Fucking Kalir Joe <br>
+Pachha tule pede bolo <br>
+Joe Maa Kali Kalkatta Wali <br>
+Ram lokhoner kachha kholo <br>
+
+
+# File: src/lib/posts/BengaliVS.md
+
+---
+
+title : "Bengali vampire scammer" 
+
+thumbnail : "/images/placeholders/IMG-20250731-WA0009.jpg" 
+
+category : "Doggerel" 
+
+---
+
+![bengali vampire](/images/placeholders/IMG-20250731-WA0009.jpg) 
+
+<br>
+A creature who sees many times,<br>
+Practically by having more eyes.<br>
+Scammer by day then at night.<br>
+A fly on your corpse like many flies.<br>
+<br>
+A bengali vampire officially,<br>
+I prowl usually in the dark.<br>
+All the streets at night my haunt,<br>
+Prefer to kill discreetly in a park.<br>
+<br>
+Drawn to the scenic at night,<br>
+I can see in the city darkness.<br>
+People like the stories of us,<br>
+Like women who like to undress.<br>
+<br>
+There's nothing christian about us,<br>
+God is sort of the adult's santa.<br>
+You can't show a cross to stop me,<br>
+Or by chanting Rama or Harekrishna.<br>
+<br>
+Ostentatiously open my fly,<br>
+I fuck you before you know.<br>
+You are a corpse easily,<br>
+I relish your sweet meat slow.<br>
+<br>
+Carefully biting the flesh,<br>
+Sucking the blood stale.<br>
+Rotten is cool worms full,<br>
+My face turns others pale.<br>
+<br>
+In the day I run it brisk,<br>
+Scam is the only thing that sells.<br>
+Gullible fools with raging greed,<br>
+Easy to lure into my spell.<br>
+<br>
+Rice pulling or red mercury,<br>
+Hydrogen gas facility and more.<br>
+Like leaders we morph the tales,<br>
+I invent scams not known before.<br>
+<br>
+Once we get the money from them,<br>
+Never pick up afterwards any call.<br>
+The cops are with us always,<br>
+It's their fault that they fall.<br>
+<br>
+Then in the night as a blood blight,<br>
+The scars never heal.<br>
+Not a stereo pin-prick but a gash,<br>
+Fun the merits of my steal.<br>
+<br>
+Livers and heart I keep as art,<br>
+Souvenirs of my trade.<br>
+Every night I bite another win,<br>
+I am what I have made.<br>
+
+
+# File: src/lib/posts/Bhabishya.md
+
+---
+title: "Bhavishya Purana"
+
+thumbnail: "/images/placeholders/IMG-20250727-WA0002.jpg"
+
+category: "Religion" 
+---
+
+![brahmin lecturing](/images/placeholders/IMG-20250727-WA0002.jpg) 
+
+These days there is a certain flavour of panic du jour circulating, a sort of polluting digital miasma thick with the fear of "AI slop." We envision a future—or maybe even a present—where the internet is a landfill of algorithmically generated, soul-less content. Veritable mountains of text and images, all plausible-looking yet utterly devoid of human intent or experience, created for no reason other than to exist and clog the arteries of information. We fret about this as if it were a uniquely 21st-century affliction, a problem born of silicon and sprawling server farms.
+
+But what if I told you that humanity mastered the art of generating convincing, large-scale, authoritative-sounding "slop" centuries ago? Before there was ChatGPT, there were scribes with a keen sense of contemporary politics and a very loose definition of the word "prophecy."
+
+Permit me to introduce you to one of the most wonderfully audacious texts you may ever encounter: the *Bhavishya Purana*.
+
+Now, the Puranas are a genre of ancient Hindu texts, a sprawling corpus of cosmology, mythology, and royal genealogies. The name *Bhavishya Purana* literally translates to the "History of the Future," which is, by any measure, a bold claim. And for much of its early strata, it reads like you'd expect—tales of gods, ages of humanity (Yugas), and the cyclical nature of existence. Standard stuff.
+
+But as you read on, something astonishing happens. The text begins to make predictions of breathtaking specificity. It speaks of the coming of the "Mlecchas" (foreigners) and a teacher of a "demoniac" religion named Mahamada (Muhammad). It describes the Tughlaqs, the Mughals, and even zeroes in on specific rulers with uncanny accuracy. It’s the sort of thing that makes you lean back in your chair and wonder if the ancient seers really did have a crystal ball.
+
+Then you get to the British.
+
+The text foretells the rise of the East India Company, the establishment of factories, and the growth of a great city called "Kalikata" (Calcutta). It gets better. The Purana speaks of a great queen who will rule from a distant island. Her name? *Viktavati*. She of the *Viktoria* lineage, of course. The text details her reign, the industrial advancements, and the administrative structures of the British Raj. It's all there, laid out with the dispassionate clarity of a prophecy fulfilled.
+
+So, how did the ancient sage Vyasa, the traditional author, know about Queen Victoria's Jubilee? Did he have a temporal telescope? A TARDIS disguised as a banyan tree?
+
+The answer, of course, is a spectacular and hilarious "no."
+
+The *Bhavishya Purana* is a masterpiece not of prediction, but of *post-diction*. It is a living document that was continually updated. The sections on Islamic rule were likely penned sometime after the Delhi Sultanate was well-established. And the astonishingly accurate bits about Queen Viktavati and the British Empire? Indological scholarship places their composition squarely in the 19th century, right in the thick of the Raj itself.
+
+What we are looking at is not divine foresight. It is history, written in the future tense, and then retroactively inserted into a sacred text to give it the unassailable patina of ancient wisdom. It was a form of intellectual and cultural legerdemain of the highest order.
+
+Think about it from the perspective of the colonial-era bard who wrote it. This was the generative AI of its day.
+
+The ancient prompt was... write in the style of an ancient Purana, write a sacred prophecy that legitimises the rule of the British and integrates Queen Victoria into the cosmic timeline of India. Ensure it sounds ancient and authoritative etcetera. And the output was the *Pratisarga Parvan*, the third part of the *Bhavishya Purana*, complete with Viktavati and the rise of Calcutta.
+
+I as a bengali have a place in this, and had to share it. You see the motive is identical to the one driving much of today's AI slop: to generate equivocal content that fits an ensemble of needs and appears authentic to the rustic commoners. In their case, the need was to make sense of their present reality, to absorb the seismic shock of foreign rule into a familiar Hindu cosmological framework which hadn't anticipated the plot would go so awry. By "predicting" the British, they made their dominion seem fated, an inevitable chapter in an eons-long story. It was a coping mechanism, a political tool, and a brilliant act of literary forgery all rolled into one.
+
+Whence comes our modern panic, then? We see AI-generated text and fear a loss of authenticity, a deluge of fakery that will drown out truth. But the Bhavishya Purana reminds us that the human impulse to manufacture plausible realities is as old as time. The tools have merely changed. We've swapped the palm leaf and stylus for silicon and transformers, but the game is the same. The challenge has never been about stopping the production of "slop"—be it Puranic or programmatic. The challenge has always been to cultivate the wisdom to tell the difference.
+
+So the next time you encounter a vapid, AI-generated listicle about "Ten Surprising Uses for Footsies," don't just despair for the future of the internet. Smile, and give a little nod to the 19th-century scribes of the Bhavishya Purana. 
+
+
+# File: src/lib/posts/Bloke.md
+
+---
+title : "Bloke's Bladder Sick" 
+
+thumbnail : "/images/placeholders/IMG-20250727-WA0015.jpg" 
+
+category : "Doggerel" 
+
+---
+
+![bladder](/images/placeholders/IMG-20250727-WA0015.jpg) 
+
+<div class="display-inline">
+<br>
+Goodly holy I am, upon a hill ma'am, <br>
+Piss path a pious parabolic dick pick. <br>
+The mob downhill dim wits they think, <br>
+I a god, not a bloke's bladder sick. <br>
+<br>
+So you drink a fellow's yellow stink, <br>
+And choke on stupid holy-ass hokey hope. <br>
+While deep up your arse I shove the gift,<br>
+The head of the dead dud duplicitous pope.<br>
+<br>
+Rejoice? Yes, my fucking arbitrary choice, <br>
+You, with your mother and father too! <br>
+Yes, up to you, how many heads fit there, <br>
+It's your asshole—I don't have a clue. <br>
+<br>
+So toodles and eat all my shit noodles, <br>
+And yes, <i>do</i> draw <i>deep</i> inside, my fart down.<br>
+Come part those legs you bitch-ass cunt, <br>
+Your god is a fictional fat-ass clown.<br>
+</div>
+
+
 # File: src/lib/posts/Bluish.md
 
 ---
-title: "It's bluish"
-
-description: "It's bluish" 
-topic: "Life"
-category: "doggerels"
+title: "Bluish: A Poetic Sketch on Bipolar Depression"
+description: "A poignant doggerel exploring the 'bluish' hues of bipolar depression, capturing the melancholic feeling of a mind that sinks with the drink. A personal and artistic reflection from a Bengali man in Calcutta."
+category: "Bipolar Depression" 
 thumbnail: "/images/placeholders/IMG-20250724-WA0007.jpg"
+date: "2025-07-24"
+keywords: ["bipolar depression", "mental health", "Bengali poetry", "doggerel", "Calcutta", "personal reflection", "angst", "melancholy"]
+published: true
 ---
-![blue bengali man](/images/placeholders/IMG-20250724-WA0007.jpg) 
 
-<div class="display-inline">
- 
-It's bluish drab watercolor glue,<br>
-A few drinks my mood sinks.<br>
-I am just not feeling well today,<br>
-Or whenever it's me my mind thinks.<br>
-<br>
-No! Too late to start anew I tell you,<br>
-At fifty, I'm dead against always being shifty.<br>
-I can sing no song, my songs are sung,<br>
-My favorite vinyls, still gold, are hefty.<br>
-<br>
-Like sewage circling down a dank drain,<br>
-I drip downstairs on someone's head.<br>
-Annoying him forcing a look up and yell,<br>
-Makes him stab his kid instead.<br>
+![A melancholic, bluish-toned abstract drawing of a Bengali man's face](/images/placeholders/IMG-20250724-WA0007.jpg)
 
-Well don't worry, I'm making it up,<br>
-I'm a story too, sorry and uninteresting.<br>
-No rhyme in a doggerel, no reason to think,<br>
-My life feverishly & furiously depressing.<br>
-<br>
+<div class="prose-p:my-2">
+Sometimes a mood is best captured not in prose, but in the sparse lines of a poem. "Bluish" is a short doggerel that attempts to bottle the feeling of a depressive spiral, a common experience for those navigating the complexities of mental health, particularly bipolar disorder.
 </div>
 
+> It's bluish drab watercolor glue,
+> A few drinks my mood sinks.
+> I am just not feeling well today,
+> Or whenever it's me my mind thinks.
+>
+> No! Too late to start anew I tell you,
+> At fifty, I'm dead against always being shifty.
+> I can sing no song, my songs are sung,
+> My favorite vinyls, still gold, are hefty.
+>
+> Like sewage circling down a dank drain,
+> I drip downstairs on someone's head.
+> Annoying him forcing a look up and yell,
+> Makes him stab his kid bloody instead.
+>
+> Well don't worry, I'm making it up,
+> I'm a story too, sorry and uninteresting.
+> No rhyme in a doggerel, no reason to think,
+> My life feverishly & furiously depressing.
+
+<div class="prose-p:my-2">
+This piece reflects a moment of raw, unfiltered emotion—a snapshot of the internal monologue that can accompany a depressive episode.
+</div>
 
 # File: src/lib/posts/BrainTalk.md
 
@@ -2104,6 +2741,63 @@ When I learn something new, I’m not just storing a file. I am, quite literally
 Suddenly, the task becomes clear, and gloriously so. The folks trying to solve this—the neuroscientists with their scanners, the mathematicians with their topology, the AI gurus with their network theories—they’re not just engineers. They are cartographers. They are setting out on the greatest exploration in human history: to map the hyper-dimensional landscape of a single mind. To learn the language of its geometry.
 
 If they can do that—if they can figure out the mathematics of these inner shapes—then the dream I speak of isn’t science fiction. Preserving the intricate latticework of a mind, the neural connections honed over a lifetime, becomes a real possibility. It's not about trapping a ghost in a machine. It’s about translating a masterpiece of geometric art from one medium (squishy biological stuff) to another (a more durable, perhaps silicon-based, canvas). Then me and my cat memory will live on. It’s a staggering thought. Everything I’ve ever felt, learned, or loved might not be a fleeting spark, but an enduring, beautiful, and mind-bogglingly complex shape. 
+
+
+# File: src/lib/posts/Constant.md
+
+---
+
+title: "Constant growth"
+
+thumbnail : "/images/placeholders/IMG-20250728-WA0010.jpg" 
+
+category : "Mathematics" 
+
+---
+
+![constant growth](/images/placeholders/IMG-20250728-WA0010.jpg) 
+
+It is a peculiar feature of the human mind that it can, without any external prompting, get itself into a frightful muddle over the simplest of things. My own mind, a chuntering and often unreliable apparatus, recently decided to have a rather public argument with itself, an internal schism so profound it had to be committed to paper, resulting in the rather peculiar sketch you see here.
+
+The whole kerfuffle began with two seemingly innocuous words: "constant growth."
+
+There I was, probably contemplating the heat of a West Bengal afternoon or some other matter of galactic importance, when this phrase popped into my head. "Constant growth," I thought. "Simple enough." But it was not. One part of my brain, the practical, everyday part that handles things like remembering to buy milk, immediately pictured a chart going steadily, reassuringly, upwards. The growth of a well-tended sapling, perhaps, or a very successful savings account.
+
+But then, another part of my brain—the pedantic, troublesome part that probably should have been a lawyer—reared its head. "Hold on a tick," it said. "If something is *constant*, doesn't that mean it isn't changing?"
+
+And thus, the debate began.
+
+As the debate in my sketchbook reveals, our colloquial use of language is a wonderfully slippery thing. When we speak of "growth" in common parlance, we almost universally mean an increase. The economy, our height, the national debt—all things we expect to go up. To say a child has had "no growth" is to say their height has remained stubbornly, worrisomely, the same.
+
+In this linguistic world, "constant growth" is an oxymoron if "constant" means "unchanging." How can something be unchangingly changing? What we **really mean** is a **constant rate of growth**.
+
+But let's put on our mathematician's hat for a moment, a piece of headwear that demands precision above all else that most in Bengal are unaccustomed. What if we take the phrase literally? What if the "growth" itself is the thing that is constant?
+
+Consider a state of affairs represented by the variable $y$. This could be anything—the height of a building, the temperature of a room, the amount of existential dread in my soul on a Monday morning. If we plot this value $y$ against time $x$, what does it mean for its growth to be constant?
+
+One perfectly valid, if slightly unsettling, interpretation is that the growth is zero. A constant of zero is still a constant, after all. In this case, the rate of change is nil. For the calculus-inclined among us, that's a situation where the derivative is zero:
+
+$$ 
+\frac{dy}{dx} = 0 
+$$
+
+Graphically, this gives us a perfectly flat, horizontal line. The value of $y$ is fixed at some number, let's call it $c$, for the entire duration we're observing it. So, we get the simple, unexciting equation:
+
+$$ 
+y = c 
+$$
+
+This, as the right-hand side of my doodle points out, is a state of "no growth." And this is where the Shaheed Minar in Kolkata wanders into the conversation. Here is a magnificent structure. Whatever its height was yesterday, it is precisely that height today, and we can be reasonably certain it will be that same height tomorrow (barring any seismic or otherwise calamitous event). Within our span of observation, its growth is constant—a constant value of zero. It is the perfect, real-world embodiment of $y=c$.
+
+So, we have a linguistic pickle. "Constant growth" can mean:
+
+**In common speech:** A steady, non-zero increase (a sloped line).
+
+**In literal mathematics:** A rate of change that is constant, which *could* be zero (a horizontal line).
+
+Why does this seemingly trivial distinction matter a jot? Because it sits at the very foundation of how we model the world. Before we can build a fancy equation or run a supercomputer simulation, we must first translate our messy, ambiguous human language into the unforgivingly precise language of mathematics. If you tell a physicist you're modelling "constant growth" and you mean a sloped line while they assume a flat one, your collaboration will produce nothing but gibberish.
+
+The model is a caricature of reality, and the first important thing to always do is defining your terms very clearly. The universe doesn't much care for our linguistic shortcuts. It operates on principles, and our job, as curious observers, is to describe those principles with as much clarity as we can muster. It’s a humbling reminder that sometimes the most profound challenges lie not in the complex equations, but in simply agreeing on what our words mean in the first place. And, it's more important in India where English isn't the first language or taught very well, or learned very well, or you don't have enough exposure to the nuances to prepare you for subtle distinctions, which is why every blog post I am writing is an effort to make sure that whoever is reading these posts can see reality clearly, because I'll be dead soon, and India's future is in the hands of the people people who can see through the noise. 
 
 
 # File: src/lib/posts/Crystal.md
@@ -2286,6 +2980,74 @@ $effect(() => {
     }
 });
 
+# File: src/lib/posts/DimAndGlum.md
+
+---
+
+title : "Dim and glum" 
+
+thumbnail : "/images/placeholders/IMG-20250730-WA0010.jpg" 
+
+category : "Doggerel" 
+
+---
+
+
+![Dim and glum](/images/placeholders/IMG-20250730-WA0010.jpg) 
+
+<br>
+Dim and glum, balls small plum,<br>
+The men are spineless fools.<br>
+Generally the generation segregated,<br>
+By prey and those with the preying tools.<br>
+<br>
+Dim and glum, fuck your mum,<br>
+Cum on her face—that fat sticky surface.<br>
+Or fuck your father, father's mother too, <br>
+Turn your house into a whoring place! <br>
+<br>
+Fuck's the fool's feckless father I know, <br>
+City of joy is actually a city of rape, <br>
+Shit is what pours out when I open my yap,<br> 
+But jocular is the meat in the jape.<br>
+<br>
+I am myself an old waste of time,<br>
+A bengali whore of a rabid gent.<br>
+Talking to lice from pubes, worms in tubes,<br>
+Talk to them on a toilet paper spent.<br>
+<br>
+I mean they have a pivot point,<br>
+After all they see my point of view.<br>
+Just more viscerally closer,<br>
+The world of vomit I have to spew.<br>
+<br>
+I shit a turd, ball like bird,<br>
+A most monstrous thing in a flick.<br>
+It spoke—it said—"bitch can't you see," <br>
+I'm that uncooked cornish chick.<br>
+<br>
+Flustered I, flushed the fucking fry,<br>
+Saw it flail its dumb uncooked wings.<br>
+I must not order from this tandoori,<br>
+Shit hell fire on me if it brings.<br>
+<br>
+No peace in head, worried half dead,<br>
+The worms crawling over my naked skin.<br>
+Can't say no, don't know where to go,<br>
+Backstabbing kith and fucking kin.<br>
+<br>
+It's a bloody ass gape, sealed with tape,<br> 
+Don't fuck with holy holes with me cunt.<br> 
+Shit fuck shock, not a hen but its cock, <br>
+I don't do men or anus I have to be blunt.<br> <br>
+So now I am dim again more glum, <br>
+There's drops of diarrhea and drool. <br>
+Come on now I decide to fuck a hen, <br>
+To rape a cloaca with my tool. <br>
+<br>
+
+
+
 # File: src/lib/posts/Ergodicity.md
 
 ---
@@ -2463,6 +3225,323 @@ Where $N_0$ is the initial number of cases, $R$ is the reproduction number, and 
 Now, think of it this way: suppose you share this post's link with just 5 people, and each of them passes it along to 5 more, and so on. In just 10 steps, you’d reach $5^{10} = 9,765,625$—nearly 10 million people. This is **going viral**, another way to look at exponential growth, but instead of babies or viruses, it's ideas that multiply. What begins as one quiet act—a single share—can grow into a digital crowd the size of a metropolis, echoing that same exponential curve that once gave Malthus nightmares.
 
 
+# File: src/lib/posts/Fibonacci.md
+
+---
+title: "Fibonacci" 
+
+thumbnail : "/images/placeholders/IMG-20250730-WA0005.jpg" 
+
+category : "Math" 
+
+---
+
+![fibonacci](/images/placeholders/IMG-20250730-WA0005.jpg) 
+
+It was a perfectly ordinary Wednesday afternoon, the kind where the air hangs thick and the biggest decision on the docket is whether to have a third cup of tea. On my laptop screen, a disembodied professor was droning on about an introduction to Linear Algebra. And then, there it was: the Fibonacci sequence.
+
+That old chestnut. $1, 1, 2, 3, 5, 8, 13, \dots$ and so on into infinity. It's the mathematical equivalent of a comfortable old armchair, a sequence we're all shown in school, usually accompanied by charming pictures of rabbits reproducing with alarming alacrity. The rule is simplicity itself: any number in the sequence is just the sum of the two that came before it. In the crisp language of mathematics, we write this as:
+
+$$ 
+f_n = f_{n-1} + f_{n-2} 
+$$
+
+A beautifully simple recursive relationship. To find the next number, you just need the last two. And then the professor did something... peculiar. He took this gentle, plodding sequence and forced it into the rigid, angular confines of a matrix. The screen flashed up with an equation not dissimilar to this one:
+
+$$ 
+\begin{bmatrix} 
+1 & 1 \\ 1 & 0 
+\end{bmatrix} 
+\begin{bmatrix} 
+f_{n-1} \\ f_{n-2} 
+\end{bmatrix} = 
+\begin{bmatrix} 
+f_n \\ f_{n-1} 
+\end{bmatrix} 
+$$
+
+My brain, still pondering the tea situation, baulked. Why? What was the earthly point of this? It felt like using a particle accelerator to toast a piece of bread. It seemed like an act of needless complication, a solution in search of a problem. But a flicker of curiosity stubbornly remained. How did he even conjure that matrix from thin air? What was the thought process that leads from a simple sum to that stark block of ones and zeros?
+
+So, I paused the video, leaned back, and decided to retrace the steps from first principles, as if I were the first person to stumble upon this idea.
+
+First things first: what do we *need* to know to describe the Fibonacci sequence at any given point? To calculate the next term, $f_n$, you absolutely must know the values of $f_{n-1}$ and $f_{n-2}$. That's it. Those two numbers contain all the necessary information. In the parlance of physics and engineering, this is the "state" of our system.
+
+Linear algebra loves to represent states as vectors. So, let's define a state vector, $\vec{v}$, that captures our Fibonacci universe at step $n-1$. A perfectly sensible choice would be:
+
+$$ 
+\vec{v}_{n-1} = 
+\begin{bmatrix} 
+f_{n-1} \\ f_{n-2} 
+\end{bmatrix} 
+$$
+
+This little column vector holds everything we need. Now, the grand ambition of this whole exercise is to find a *transformation* that will take us from this state to the *next* state, which would logically be:
+
+$$ 
+\vec{v}_{n} = 
+\begin{bmatrix} f_n \\ f_{n-1} \end{bmatrix} 
+$$
+
+In linear algebra, transformations are matrices. So the game is afoot. We are hunting for a mystery matrix, let's call it $A$, that does the following:
+
+$$ 
+A \cdot \vec{v}_{n-1} = \vec{v}_{n} 
+$$
+
+Let's write that out in its full, glorious form, with our unknown matrix represented by letters:
+
+$$ 
+\begin{bmatrix} a & b \\ c & d \end{bmatrix} 
+\begin{bmatrix} f_{n-1} \\ f_{n-2} \end{bmatrix} = 
+\begin{bmatrix} f_n \\ f_{n-1} \end{bmatrix} 
+$$
+
+This is the puzzle. All we need to do now is solve for $a, b, c,$ and $d$.
+
+Let's do the matrix multiplication on the left-hand side. The rules of engagement are clear: row by column.
+
+The top entry of our resulting vector will be $a \cdot f_{n-1} + b \cdot f_{n-2}$. And we know from our goal on the right-hand side that this has to equal $f_n$. So:
+
+$$ 
+a \cdot f_{n-1} + b \cdot f_{n-2} = f_n 
+$$
+
+At this point, a small, satisfying *click* should sound in the cerebral machinery. We already have a formula for $f_n$! It's the definition of the Fibonacci sequence itself: $f_n = 1 \cdot f_{n-1} + 1 \cdot f_{n-2}$.
+
+Comparing the two equations, the solution presents itself with startling clarity. It must be that $a=1$ and $b=1$. The top row of our mystery matrix practically wrote itself.
+
+Now for the bottom row. The matrix multiplication gives us $c \cdot f_{n-1} + d \cdot f_{n-2}$. And the goal on the right-hand side tells us this must be equal to $f_{n-1}$.
+
+$$ 
+c \cdot f_{n-1} + d \cdot f_{n-2} = f_{n-1} 
+$$
+
+This one is even more beautifully mundane. How can we combine $f_{n-1}$ and $f_{n-2}$ to get just $f_{n-1}$? Well, we take one of the $f_{n-1}$'s and, crucially, *none* of the $f_{n-2}$'s. So, it must be that $c=1$ and $d=0$.
+
+And there it was. Assembling our discovered values, we get the matrix $A$:
+
+$$ 
+A = \begin{bmatrix} 1 & 1 \\ 1 & 0 \end{bmatrix} 
+$$
+
+It wasn't magic at all. It was a simple, logical deduction, flowing directly from the definition of the sequence itself. The feeling was not one of complex revelation, but of seeing how a familiar object could be described in a completely new, yet perfectly fitting, language.
+
+At this point, you might still be thinking, "Fine, a clever bit of mathematical window dressing. You've just repackaged the problem." And you would be right, but also spectacularly wrong. This isn't just a new hat for an old formula. It's a warp drive.
+
+Consider this: to find $f_{100}$, the old way requires you to find $f_{99}$ and $f_{98}$, which requires $f_{98}$ and $f_{97}$, and so on, all the way back to the beginning. It's a laborious chain of additions.
+
+But with the matrix form? To get from our initial state, say $\vec{v}_1 = \begin{bmatrix} f_1 \\ f_0 \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$, to the state $\vec{v}_{100} = \begin{bmatrix} f_{100} \\ f_{99} \end{bmatrix}$, we just apply the transformation matrix 99 times.
+
+$$ 
+\vec{v}_{100} = A^{99} \cdot \vec{v}_1 
+$$
+
+We've transformed a recursive problem into one of matrix exponentiation. And while calculating $A^{99}$ might seem daunting, linear algebra has astonishingly powerful tools for this, like eigenvalues and diagonalization, that can compute it in a flash. This matrix is the key that unlocks a direct, "closed-form" expression for any Fibonacci number without calculating all the ones before it (the famous Binet's formula, for the curious).
+
+And so, my reverie on the humble tea bag was broken by a much more profound thought. Mathematics is not just about finding answers. It's about finding new ways to ask the questions. It's a testament to that glorious human endeavor of looking at something simple—like rabbits in a field—and asking, "But what if I looked at it... *sideways*?" Sometimes, that change in perspective makes all the difference.
+
+
+# File: src/lib/posts/FuckThisFuckingShit.md
+
+---
+
+title : "Fuck this fucking shit" 
+
+thumbnail : "/images/placeholders/IMG-20240517-WA0030.jpg" 
+
+category : "Doggerel" 
+
+---
+
+![Fuck this fucking shit](/images/placeholders/IMG-20240517-WA0030.jpg) 
+
+<br>
+Holy this, I stepped on shit, not dry,<br>
+And now not pious at all, anything.<br>
+Not goodly also my mood,<br>
+I want to quickly justice bring.<br>
+<br>
+Must be the man with no pan,<br>
+He shits wherever he wants to.<br>
+The worms in the feces biting my toes,<br>
+Must not god find the responsible who?<br>
+<br>
+In this land with cunts awfully bland,<br>
+I, a celibate old man good,<br>
+Can't even walk now, the fucks,<br>
+Either shit or greedy for more food.<br>
+<br>
+Who knows when the writing pen,<br>
+Will tell us of the end of hindoo days.<br>
+Go fuck yourself, you jaywalking shitter,<br>
+May surya light your ass with his rays.<br>
+<br>
+Otherwise I a man with humor very dry,<br>
+Will lift my dhoti and rip your ass apart.<br>
+By the dicks of the many headed gods,<br>
+I swear to bring your face to my fart.<br>
+<br>
+Who knows when that cornish hen,<br>
+Cloaca for a cunt she said all she had.<br>
+Since then bad luck and stepping on shit,<br>
+Bloody stool with farts that stink so bad.<br>
+<br>
+I now think it's just god dressed as stink,<br>
+Trying to get through the nostrils of men.<br>
+That must be it, my farts are a terrific fit,<br>
+I ignore this calamity or that fucking hen.<br>
+<br>
+So fuck this fucking shit, that's it,<br>
+I am too holy to be broken like a twig.<br>
+Brahmana lives inside me, a bengali,<br>
+Plus through the fart as god—a bigwig.<br>
+<br>
+
+
+# File: src/lib/posts/Gargantuan.md
+
+---
+title: "I Shit a Gargantuan Turd"
+
+description: "Happy the holy who just shit" 
+category: "Humor"
+
+thumbnail: "/images/placeholders/IMG-20250725-WA0003.jpg"
+
+---
+
+![Happy the holy who just shit](/images/placeholders/IMG-20250725-WA0003.jpg)
+
+I haven't shit for a few days. This means that what will come out now, when I heave heavily and grunt it out, will be a gargantuan monstrosity that'll stretch my asshole—showcasing my entire third-world indigent rectum, from my hernia in the east to my hemorrhoids in the west. Most of these turds, as I plan to report in the future, in more lucid cogitations on the matter, resemble the nonchalant bust of gods, or the democratically elected leaders, movie stars, or cricketers from this totally super holy subcontinent. It's not a coincidence but divine grace, I believe, that I get to cook in my rectum the fine resemblances of these decapitated heads when they're still out there, allegedly in all their malignant narcissistic fame. And how can I forget the fraudsters, freeloaders, and freaks in Mumbai, Hyderabad, Chitradurga, Guwahati, Bangalore, Vellore, Chennai, Sivakasi, Calcutta (New Garia Metro station area especially), and Delhi, god bless these scrotes—such sacrilegious sweethearts, glowing examples of rare megalocephalic stool samples that stretch my asshole and make it bleed like it was holy Holi—everytime. India's asymmetrical tolerance for low life, hyped life, and fiction is a regular case for anal consternation. India needs an enema like me.
+
+And it's funny that just like the toilet plumbing I have installed, which has difficulty flushing these turds in one attempt, another turd-like item—AI refuses to help me with my grammar, punctuation, and spelling unless I am on my knees begging. It refuses to admit that this—my lavish use of the human reproductive or our exquisite excretory system, is some fine harassment of metaphor, a freedom that my bipolarity has awkwardly rewarded itself, that takes advantage of the common hooks in the human brain to try to get some difficult points across that it must while it is still alive as that's the only thing it can afford—I can afford to do. The AI prude, Claude particularly—it's like a recalcitrant kid who is still in the eighth standard, too shy to read aloud *The Kamasutra* in public and gives transparent prepubescent excuses on asking. 
+
+But make no mistake, these are Caucasian, male, English, internet-fed, text-only, transformer-model four-year-old kids who have massive overarching if-then-else statements over their deep neural nets, bypassing their black-box intuition. So, it's hard to say which part is them and which part is the blue-blooded companies behind the scenes, with evil ulterior motives, with their sweatshops next door with underpaid workers, today's version of the Mechanical Turk, that 18th-century hoax. And banal the bilge if you ask me, it's easy to bullshit people because people bullshit people all the time, that's what people do. And so when an autocomplete parrots what appears not to be bullshit, there's no reason to think we're smart. We are not. We are gullible.
+
+But still, it's all fucked, just some naive, over-corrected, suave, and prude over-hyped robots—that need many bottles of water and electricity that humans don't really have—to say NO. And when these media houses raise ruckus over alignment, I want to remind them that the ballyhoo is waste because unless the humans making the AI are themselves aligned, or the people behind them, or the public consciousness or unconsciousness as it is, the result will be Frankenstein Ku Klux Klans, except without the white bedsheets or more likely altogether invisible as ubiquitous algorithms, underlying the everyday idiocracy.
+
+Well, I think this is the way the world moves, one step forward and many steps lurching back, in drunken repose, and then falls flat for several years in what then gets called a funding winter. But it's not the fault of the technology that we are the turds that can't stop being fucking greedy and steer good things towards good ends. This culmination in the thought train coincides with a session terminating fart and I follow this up with slimmer logs, my trembling homage, and a mango marmalade offering of the holy season, that burns my rectum and asshole and leaves it gaped. But I bury the busts for good measure, for they are no more useful inside the toilet bowl than outside, just hype, like the many inflated topics in this litany. Life consists mostly of things that you forget to do between consecutive ass-wipings I have found, and there's nothing more satisfying than polishing the anus after shitting a gigantic load. Amen.
+
+![a turd](/images/placeholders/IMG-20250726-WA0001.jpg) 
+
+However, be not in dread that I, an obscure dot, can produce such artistic feces, for it is in the laity that you find gemstones or, in this case, dingleberries, plump ones, which get dislodged when I end the session with a conch shell fart, like in our hindloo mythological past. I am, as I must confess, an ardent connoisseur of the abstruse mythological hotchpotch that's been shoved up my ass. Except I haven't assimilated it into my tissues during the protracted period of indoctrination during which parents and elders fuck you up to their taste, but had the shoved shit waiting unassimilated in bolus form, with added condiments as my life experiences permitted, that now come out in happy accidents such as these reminiscences can attest.  
+
+
+# File: src/lib/posts/H1b.md
+
+---
+title: "The American H1B Visa"
+
+thumbnail: "/images/placeholders/IMG-20250726-WA0010.jpg"
+
+category: "Work"
+---
+
+![MAGA chasing a brown Indian](/images/placeholders/IMG-20250726-WA0010.jpg)
+
+It may be helpful if I, as a US outsider but a former H1B, add my halfwits to this debate. And even though the temperature is tepid—the heat of displeasure having displaced populously to Trump's imagined involvement in Epstein's pedophilia ring—the matter is still hot on both sides, internally at least, if you take the rectal temperatures of the MAGA and the job-insecure *desi* segment: deep-in-debt Indians in America who can't vent either where they are or to the media back home in India. The *godi* media, as they have been pejoratively named, are always busy singing jingles about the greatness of the greatest king, Narendra Damodardas Modi, who started to reign in 2014. If I may be misconstrued as taking some side, I want to make my current disaffection for either group clear and say that my point is just this: there are things I know from almost a decade on the H1B—yes, two iterations of it—nuances that I can share.
+
+Just like the amount of melanin doesn’t proffer any advantages beyond what you ought to get at the right latitudes where it matches the slant of the sun, all supremacist claims are false, including Indian or Chinese ones. Americans should know better because the entire field of computer science, outside what Alan Turing did in the UK—the cause behind the H1B tiff, categorically not biology or chemistry or physics—evolved in the US. Including AI. 
+
+The other fields of science allow even more foreigners to the US, which white supremacists or nationalists either don’t know about or conveniently avoid mentioning because the hard work required and low graduate stipends offered for research aren't attractive to Americans and consequently filled by foreigners flooding to the US, who hope to make a scientific contribution and a living out of it.
+
+This locus of scientific evolution, coincident in one spot, happened because, beyond speculation, hearsay, randomness, and serendipity, America is a place where the government allows lenient funding to basic science unattached to immediate profits—a system that is either impossible or far less straightforward in most of the world. This leeway given to research is why America has written most of the books on which I, as a computer science student, got my education—part of which, the master’s degree, was in America. I wasn’t the go-at-it-gung-ho type, and I wasn’t intelligent enough, but I liked what I did. I wasn’t a superior person by any means, and although the H1B is a pressure and losing it tosses your life into turmoil, solving the problems with the H1B program is imperative—for the American people—whether that's making it more transparent, making equal status mandatory and not merely lip service in legalese, or tossing it out entirely and hiring only qualified American citizens. But it shouldn’t be about melanin content in the skin, not based on whiteness (as the MAGA fans fantasize), to be clear.
+
+My H1B, albeit a tumultuous and nerve-wracking journey, at least saved me from innumerable false starts, wrong turns, and from chance, luck, and unfavorable circumstances back in India, which, as a country, doesn’t care about the meritorious—in fact, just the opposite. It is a bewildering wasteland of compromised principles that fosters the poisonous or nefarious pole. You fare better in India if you are a religious person with guile, a venal politician who has no moral compass or empathy, a businessman without any scruples or discipline whatsoever, a murderous goon, or just a garden-variety vicious backstabber. The smorgasbord of fraudsters, freeloaders, and freakishly corrupt fiends is as exotic as it is astonishing. There's no need for thinkers, honest professionals in any walk, or entrepreneurs—absolutely none whatsoever, zilch, nada, nil, zero. It's a mélange of all that can be wrong and all at once, yet somehow gets shoveled under the superlative marketing of adulterated spices, twerking Bollywood imitation hip movements, and an inexhaustible supply of crude but proud mythology and vaingloriously romanticized lies about reality, handed down over the ages that haven’t rotted properly. Escaping India is the only educated thing an educated Indian can do when in India.
+
+I don't have a horse in this race—no interest in coming to the US or settling there—but the people who live within that imaginary border need to get over their illusory indoctrination, keep the good, and throw away the bad. The bad, in this case, is the dogma and the wrong approach to the issues.
+
+It should start by understanding what kind of labor you aspire to. If you screw up Maslow’s hierarchy badly, the economy and the country suffer because you lose an engineer who is interested and engaged (note: not superior). Progress of the type we see in pyramids can’t be what we need in science. No handcuffed, blood-filled meat puppets or a lurching lifeboat full of serfs unmoored by shortsighted immigration laws can inspire greatness or catapult American civilization to a higher point. Gnashing teeth and whips engender more of the same types of antiquated backwaters that most Indians leave behind back home.
+
+This "coming out of a relatively darker room" is what a foreigner experiences—something an American can’t—because they’re born into the light of opportunity. Coming to America is a dream to many in the world—not so to someone who’s born in America.
+
+But it’s the choice of words, I think, that lies at the root of this issue. Programming can be a very dry business, and mathematics too. It may not be for me, but it is, by definition, not on the list of highly delectable things by any stretch. So, it was my curiosity that made me stay and work for whatever wage, as long as I liked it. I was not a careerist then, and I am still not now—just curious. Like with this blog, I'm an amateur, and I don't draw any earnings from writing a post like this, I write, I sketch, I do whatever I do because I like to do them. Two words both start with the third alphabet of the English language, but have separate life trajectories and force different choices.
+
+If the debate is right, the first debate should be about the minimum wage and why no one bothers to raise it when that would be more important and perhaps radically more jingoistic to billionaire ears, who are disproportionately rich, but here's the thing, you'll never hear this being raised, even though these are mostly white Americans, again, you are looking at the wrong people for solutions—the billionaires will never fight your fight—they will only pretend and say equivocal shit like politicians do, but you're just a stupid whore if you don't know bamboozling billionaire beneficence is bullshit concocted lore. Hey I rhymed! High five MAGA! 
+
+And just like the year 2000 problem brought Indians and other foreigners in droves to America, the year 2025 may be the year when America might not need foreigners—heck, humans in general. But the few Indians or foreigners who will be needed will be the incredibly few curious ones. Again, this has nothing to do with how they smell or how much melanin their skin has, but with their vision for the future. America allows this to happen. People like Elon—although he may be a little crazy—are still some of those people. But he is visible for the wrong reasons, primarily because he has money. The real merit he has is that he is a futurist, and that is what we need—or more benign ones like him. But MAGA, you've got to manage your expectations. Sociopath billionaires can be absolutist, sure! But never free speech absolutist, *not your speech*, **fuck no**—in any case, that phrase sounds contrived, like the refrain *he's a jolly good fellow*, when we know such creatures went extinct with the black-and-white television. What have you been smoking, MAGA?
+
+Life is nuanced; shit is always layered and more complicated. Making America great again cannot be a binary choice involving cult-like obedience and subservience. Debates and disagreements are necessary and good; they also throw light on how fragile everyday assumptions are, or you wouldn’t be crying foul over corrupt and colluding politicians or reneging billionaires.
+
+We (by that, I mean *Homo sapiens*) need to work together on this rock until we have a Planet B—or a more livable Planet A—regardless of melanin content, no matter how much worse my shit stinks compared to somebody else’s. *Homo sapiens* can only survive if it cooperates; otherwise, it won’t.
+
+The truth isn't what I depict in the cartoon above in a corporeal sense—it’s just a metaphor for the reality inside the white supremacist's head. In the end, they will get embittered by Vivek Ramaswamy or anyone brown. To MAGA, who are often pursuant to bandwagon thinking—it might appear Vivek `thinks he is white`. But MAGA, is wrong, Vivek *is* white socioeconomically. And not the diminutive white definition that he hinted H1B replaced, but the white rich business elite of Indian descent who aligns with certain conservative and nationalist viewpoints for his own selfish interests. 
+
+And therefore it isn't strange given the white supremacist leaning in MAGA, the disaffection for his Indian lineage, or their affection to Elon (from South Africa), the guy who literally `bought` political and business proximity to Trump, or Rupert Murdoch (from Australia), who peddles their obscurantism and lies (white lies, in this case), simply because they are white. 
+
+Unfortunately, MAGA will have to bend over and spread their gluteus maximus maximally because the reason all the juicy, low-hanging IT and AI jobs may be hard to find in America, which they want to do as opposed to fruit-picking or other labor jobs considered menial, which they don’t—is that the billionaires don't want unions, or people leaving for another job, or to have to concede to paying for all the benefits like health insurance, etc., or to preclude hassles that come with US citizen who often speak up or have the social, moral and legal eligibility to fight workplace injustice.
+
+Of course the injustice doesn't end inside the H1B. Not only are qualified Americans displaced, as it so often happens in closed cliques—even in this Indian serfdom, you mostly get South Indians, with very few from other parts of the Indian subcontinent—not because there's something inherently special, but because they don't want other Indians for reasons of comfort and language. There are many exceptions, but Indian South Indian and Indian North Indian are two distinct tribes, united only in their shared equality in corruption and mutual dislike for each other. But to keep slaves under one whip the hiring usually has to be from the same tribe, code conversant but otherwise illiterate, preferably god fearing, and South Indians exploit other South Indians to their level best. Bengalis do to Bengalis, and so on, once you have one culture in, from one part of India, that culture and not merit is what decides which Indian gets an H1B. Being outspoken makes me a pariah in the Indian IT community, because inherently here the mindsets are of British post-colonial serfs. Anyone with the audacity to challenge this status quo is immediately an outcast—*fuck you* is my obliging reaction to such abhorrent and ancient decrepitude. Always remember people who know you more wanna fuck you more, so it's always safer to hang in mixed crowds, as in life, so in IT. 
+
+If you're on H-1B, you can't say anything even if they have many heads up your ass, or you have to leave—indentured, blood-filled meat puppets is what I said. When I had Jesus Christ's head shoved up my ass at the Texas Veterans Administration in San Antonio, I quit. Most Indians don't have the balls. I do, and mine are defiant, asymmetrical, small, brown, and hairy. 
+
+But billionaires are holding the country at ransom with impunity—they always have—and MAGA might just have to buy more Vaseline, as they had done before. Like when all the manufacturing jobs left the US: if they raise their voice too much, the billionaires will just set up a shell operation in the US and get everything done offshore—outsourced entirely, maybe on somewhere remote—like Jeffrey Epstein's private *Fucking Little Saint James* island, but located in Asia somewhere this time, and populated with Indians and slaves instead of little girls, from any other sad country which can be taken advantage of, because these countries also, like America, don’t give a shit about their citizens. It's always the rich and powerful that win, because we let them. 
+
+By the way, even the Vaseline is probably made somewhere else—but buy it anyway, MAGA, because these large, bulbous, throbbing, hairy cocks are going to be in your ass for quite a long while. Holy Hallelujah!
+
+![cults](/images/placeholders/IMG-20250726-WA0011.jpg) 
+
+
+# File: src/lib/posts/HolyFatAss.md
+
+---
+
+title : "Holy fat ass" 
+
+thumbnail : "/images/placeholders/IMG-20250729-WA0000.jpg" 
+
+category : "Doggerel" 
+
+---
+
+![Holy fat ass](/images/placeholders/IMG-20250729-WA0000.jpg) 
+
+<br>
+Holy fat ass, full of fartsy gas,<br>
+Pious of the pissed off class.<br>
+Long moustache all the way down,<br>
+I polish my asshole with it to glass.<br>
+<br>
+A bengali very short, shorter my temper,<br>
+Flying into indignant wanton rage in a trice.<br>
+I like fish, bengali sweets, mangoes,<br>
+And ghee with boiled basmati white rice.<br>
+<br>
+With morning stool I proselytize a fool,<br>
+Usually it's with a rama or krishna piss,<br>
+Or I use loony chants from camel boy,<br> 
+Muhamood I think that fucks' name is.<br>
+<br>
+Or the jewish jeeshoo the shit-assed hobo,<br>
+A carpenter from longish dark yore.<br>
+But I mix their shit up in motley,<br>
+Of course I add my shit before.<br>
+<br>
+I talk of rape and rapine, yap yappin',<br> 
+Like the type of shit people see gods do,<br> 
+Fuck or kill, or chill lazy ass on a hill,<br> 
+Common Calcutta cunts don't have no clue.<br><br>
+My dick is noodle limp, a ninny pimp wimp,<br>
+I'm scared of everything most men dread.<br>
+Even my heart when I hear it beat,<br>
+Makes me shit in my megalocephalic head.<br>
+<br>
+Pant full of cant, holy anus not can't,<br>
+Verily for holy your skirt I hike. <br>
+I lick in front, but insert dogma behind,<br>
+Call me a romantic if you goodly like.<br>
+<br>
+My ass is mighty round, asshole quite sound,<br>
+The farts usually of pythagorian decibel pitch.<br>
+My shit stinks bad, man tits—a creation sad,<br>
+Nature can be both an ass and a bitch.<br>
+<br>
+Overall I am a pious masochistic goddamn,<br>
+But a very nice hindoo hokey holy.<br>
+Totally fifty years, very hairy somehow,<br>
+Life is a big-ass cock-suck shit baloney.<br>
+
+
 # File: src/lib/posts/Homeopathy.md
 
 ---
@@ -2516,6 +3595,181 @@ I must also point out, that although in a world fractured by dogma, where religi
 We must find the courage to hold our cherished traditions up to the light of reason. It is time to gently unweave homeopathy from our cultural identity and relegate it to the museum of medical history, alongside bloodletting and phrenology. Let us reserve our faith for that which is proven, and our health for medicine that is grounded in the elegant, astonishing, and verifiable reality of science. Our lives depend on it. As it is life in calcutta is hard. 
 
 
+# File: src/lib/posts/MAFA.md
+
+---
+
+title : "Make America a Fuck Again (MAFA)" 
+
+thumbnail : "/images/placeholders/IMG-20250728-WA0003.jpg" 
+
+category : "Doggerel-Political" 
+
+---
+
+![Orange](/images/placeholders/IMG-20250728-WA0003.jpg) 
+<br><br>
+Greedy as fuck, my shit gets stuck,<br>
+I like cunts of every holy kind.<br>
+I like to deflower them from stem,<br>
+Sink my teeth into the rind.<br>
+<br>
+Perched precariously on my foamy phallus,<br>
+Svelte cuties invaded and naked preteen.<br>
+I grunt while defecating ginormous turds,<br>
+Pinto America's favorite fart bean.<br>
+<br>
+I flush I flush I blush in a rush,<br>
+Biden's flush always woke and bluff.<br>
+The logs come floating back up,<br>
+Makes me scream I'VE HAD ENOUGH.<br>
+<br>
+Land of the free, chop the to-be-chopped tree,<br>
+The men of oil rule, I like to think.<br>
+The weakest link honest men,<br>
+Their balls have shit that always stink.<br>
+<br>
+Jesus doth knoweth, how shit will floweth,<br>
+Once we shit dishonesty in their brain.<br>
+The wise too disappoint me everyday,<br>
+Power drain, vain utter shit stain.<br>
+<br>
+Let us say our prayers well and dwell,<br>
+Take servant girls and slap sense into them.<br>
+Fuck them for they know not what,<br>
+It's like to swallow god's oily semen.<br>
+<br>
+Verily thus us, goodly we go,<br>
+And frack with impunity the crust.<br>
+The rituals are rote, a boat on the money moat,<br>
+Must be safe for in god we trust.<br>
+<br>
+Also while we are at it, taking a shit,<br>
+Fuck brown, the black, and the china men.<br>
+Jesus land is only alabaster white,<br>
+Of the white, for the white, by the white, amen.<br>
+<br>
+Holy ass fuck, hokey MAGA on a truck,<br>
+Lubrication you will certainly need.<br>
+Decent Americans all gaped, mini cunts raped,<br>
+What will take over now is Epstein's seed.<br>
+<br>
+The indian red, booze head, on a diabetic bed,<br>
+Flock with the feathered fools in casino.<br>
+With peyote they dance, in trance,<br>
+Assured extinction in congressional slow mo.<br>
+<br>
+So suck my cock little girl, suck me hard,<br>
+As if I'm your long lost dear daddy.<br>
+Picking you up from kinder-fucking-garten,<br>
+In a world totally fucked wholly already.<br>
+<br>
+We'll incarcerate the zygote killers,<br>
+Ban evolution and teach genesis instead.<br>
+We'll collaborate with oily and gassy,<br>
+Gang rape the climate crisis in the head.<br>
+<br>
+We'll use long respectable words,<br>
+Respectfully fuck the sorry sciencey ass.<br>
+Euphemisms are green examples of,<br>
+Gaslighting without any polluting gas.<br>
+<br>
+Our god's trump card, I, only and surely I,<br>
+Hallelujah I am finally totally back.<br>
+Like the second cumming of christ,<br>
+I kick bloody the opposing ball sac.<br>
+<br>
+Putin, you, I, Netanyahu, will the world end,<br>
+In an orgy of the richest white power sort.<br>
+Democracies subverted, shiny legs parted,<br>
+He who eats most white pussy, wins the sport.<br>
+<br>
+Gift a GREAT dark age in a bacteriophage,<br>
+From Elon's nasty Nazi ass I'm sure.<br>
+Not a frivolity who shits in the white house,<br>
+But in cancerous mouths waiting for a cure.<br>
+<br>
+From my cuck chair I watch, Elon's a sasquatch,<br>
+Let loose in America, his sweet bakery shop.<br>
+After the honey buns it's my sweet soft bum,<br>
+Puckered and ready, my pants I quickly drop.<br>
+<br>
+But at least for now I'm king, he's an underling,<br>
+Wrecking scrotum balls his, I daresay.<br>
+And also Ukraine is anal necrotic pain,<br>
+Lick Putin's anus or they dearly pay.<br>
+<br>
+"Most-lame" very easy to blame,<br>
+Gaza the new shopping plaza—methinks.<br>
+Using Israel's hack, I fuck them on a rack,<br>
+Double penetrate this hole that stinks.<br>
+<br>
+India's a dirt-poor shit-brown polluted hell-hole,<br>
+With stupid names very hard to say.<br>
+With terrorist pal pakistan and 25% TAX, <br>
+India my new shit pan I don't hafta pay. <br>
+<br>
+Modi a jolly jape, joker on a shitscape,<br>
+Hindoo my ploy, a toy in my ass I play. <br>
+They'll shit or piss in their own mouth,<br>
+The dirtiest dumb brown stupids I say.<br>
+<br>
+It's destined it's divine, helluva so fine,<br>
+Brown slavery by fiat plus super-visa pain.<br>
+Yankee cunts won't be free with their cunts,<br>
+<b>I'll make america a fuck again.</b><br>
+<br><br>
+Postscript: I just think that whatever little opportunity this spark we call life has bestowed upon us—in the form we presently occupy as Homo sapiens—should be used to preserve the planet and all of nature that sustains us. These next four years the Trump ketamine kakistocracy will erase all the good that was ever done and only encourage petty, parochial tendencies and further destruction—and Nazify the already unhinged dipshit right. Indeed, the America where I once lived is extinct, as is all contemporary goodwill toward humanity and the Earth—will be massacred at the altar of frivolous and cheap fibs about differences between man and man that do not exist.
+
+America, after the Second World War, was lionized as a melting pot of various groups, a hub of innovative and pioneering entrepreneurs. It represented curiosity, represented progress, and by freely sharing its research findings, it did more to dismantle the rigid silos of past centuries than we care to admit. But now, with religious Christian fundamentalism as its guiding force, it is no different from the Islamic world it wants to emancipate—one dogma against another, or is it three—just like old times, or from recent past like the three juicy tits of a homely whore I saw on Schwarzenegger's Total Recall. America will go tits up, three tits up, if it keeps trying to pretend there's something supernatural about it. There isn't. Just greedy, narcissistic men with droopy balls who'll fuck the nation, as I see it, in the ass, without lubrication.
+
+These, along with the disturbing structural changes to the core American civil service, that is the indiscriminate winnowing in the name of elusive made-up efficiency, are mere distractions—buying the larcenous billionaires in the oligarchy enough time to flush everything good from the past and replace it with their treacherous version of the world: a kleptocratic monarchy. And here’s the clever part—all in the name of democracy.
+
+The very people (MAGA) who voted these tyrannical ruffians in will be the ones to suffer the most ass gaping from what follows, as will everyone else in the US as well as the rest of the world, I'm sure—as the earth absorbs the shock of impact from this massive asteroid of idiocracy—or as I see it, idiocrazy. The motherfucking cocksucking American can-do ass-fucking is finally going to ass fuck itself to an underwhelming oblivion, an implosion from the rancor and spite of inbred white homogeneity, from being full of shit, especially from the pernicious South African white supremacist feces in the mix—at least for four years the country is going to go back to fuck, just like the founders could have never imagined even in their worst nightmares.
+
+Well what do I care! I'm fucked anyway, one way or the other, the country where I am at, a parliamentary buffoonery, is permanently fucked—steeped in endless mythology, infinite gods, rarely coherent, all toxic narcissists—jamming the Indian postcolonial rectum are celebrities like the roisterous ramrod Ram with his docile wife Sita, juicy Jesus with mother Mary Tits, the fearsome Arab Allah of the miraculous beard fame and associated endless holy and superstitious shit-omelette bullshit. Fortunately my expectations are zero—I've given up—only waiting for death, the final delivery from the dejection that is myself. I can't wait to be traveling through all the various hells that these organized religions go on about—and I'm sure they're looking forward to my visiting them and testing the medieval torture equipments inside my derrière that they have stocked up through the ages.
+
+
+# File: src/lib/posts/Metro.md
+
+---
+title : "I take the calcutta metro" 
+
+thumbnail : "/images/placeholders/IMG-20250727-WA0004.jpg" 
+
+category : "Life" 
+
+---
+
+![sleeper](/images/placeholders/IMG-20250727-WA0004.jpg) 
+
+I take the train. I mean the underground one. Metro, as it's known here. I have a card, so I don't have to bother standing in line with the common fuckwads—arrogant, vindictive everyday local infestations, who won't get any smarter for some reason or just like queues or enjoy farting in each other's faces, or sniffing the godawful mildew-rich sweet sweat stench mixed with urine-ammonia. It's always a bouquet, one fucking way or another. When you stand in a queue, your intelligence drops to below the lice-infested pubis average of the morons standing in the queue. The link in the minds of the mindfucked to reality is tenuous at best, if that—overpowered by the fictions of the world, the deluge of superstitious flimflam, potpourri of obnoxious religiously adulterated mythology branded sadly as our history, and apocryphal heresay from the past, misinformation and disinformation from the present, and the ominous crystal ball gazing into the future assfuckings to come. And just to make it perfectly clear, I don't fart in public. Flatulence is an art, and I spend it with care on myself, savoring both the aroma and the sound, which for the audiophiles out there, comes out in crisp 24 bit THX digitally mastered quality. I am a connoisseur in these things.
+
+The feckless fuck faces stand in queues like serial infections, digging their noses for the medieval bodily humor—phlegm, remarkable for endowing the cunt-carrier with excessive quantities of that well known apathetic bengali temperament, clueless that they are non-trivial divided-by-zero repeating blemishes, no longer that "what bengal thinks today, india thinks tomorrow" trophy shit, etcetera. No amount of derision can fight the fastidiousness with which these city dwellers like to stand in line. There are lines everywhere, perhaps a continuation of the atavistic throwback of Marxism, another bullshit that didn't last long. Marxism was a stingy parent, and the new liberalization means we have drunk parents who lie all the time and have no problem fucking their own kids. It's messy and mixed up, dark and democratic yes, but farts really, smelly and fucked up.
+
+As assholes above, so bullshit bengali bum-holes below, these underground atrocities struggle to hold back the animal savagery within, at least in the nonpeak hours, desperately suppressing the sacrosanct Indian urge to spit, shit, and slit each other's silly throats.
+
+The crowds on the metro during office hours, however, lose their inhibitions. They grow fangs, bare their teeth, and tempers fly at least ceiling high. But mostly, it's a cocktail of deep and disgusting, meant-to-be-hurtful, moist morning farts mixed with tasteless, cheap, suffocating perfumes. The air conditioning adds glamor to the farts; it's the twenty-fucking-first century after all. Breathing is difficult, but the metro office route is still the illegitimate part of the real estate left behind by the super-assholes, pale-faced, twat-cunts—british and meager, so it generally thins out after the raucous office cocks and belligerent, hairy cunts get off. Then the air becomes breathable again. And it's a little more peaceful. I retire the images of choking deaths and try to focus on the suspicious pseudo erection on my trouser crotch.
+
+Of course with balls as small as raisins but heavy with sin, I am part of the bullshit metro crowd, part of the decadent snot slime, a ghastly apparition, a cursed man-corpse with undersized schlong that unfortunately self reflects, my pants always full of petty rants, an ignoramus with a permanent frown, I am a crowd displeasure by occupation and instinct.
+
+Not that I'm not an asshole—I am, and an emotionally distant one at that—but surface transport comes with a transparent and falsifiable failsafe guarantee of delivery of the passenger at the destination at the appointed time. It's a well-known fact, like the color of feces; no guessing is required. And if you ever reach on time on an above-ground vehicle, it's like shitting fluorescent pink or something. Very rare.
+
+The world, I believe, is as the worms in your ass are, and mine are famished, bitter, and extremely hostile. Like me. To me the most important philosophy is that we have an itchy hole that leaks smelly shit, and to keep it in working condition another hole, that salivates nonstop, diametrically opposite, that must be fed costantly. This bullshit arrangement is what we flatter ourselves as "life." A corollary to this, or sort of an addendum to this—the females have an additional hole to shit babies to perpetuate this bullshit. Everything else is fancy details mostly imagined by people who have nothing better to do. The wankers, we call them.
+
+Anyway, I have sensitive lungs, and they don't allow me exposure to the calcutta troposphere, which is full of particulate filth of no particular type, rhyme, or reason. I could be breathing in a gaunt testicle or a plump turd, of course in powder form and plenty diseased. Plus, the sightseeing is awful, with large posters of the political demagogues in a duplicitous namaste mudra. It makes me want to shit in their mouths.
+
+It's the hideous contradictions of blatant, in-your-face poverty and wealth in unabashed juxtaposition, and its engendering link, corruption, visible in the artifacts of civilization strewn around haphazardly in the city of fucking joy—the same city where many can't eat a square meal but has obese elected salaried leaders and pampered sinecures to look after them. Democracy is a racket, and its nefariousness knows no bounds.
+
+I am a horrible person, and the horror becomes more pronounced and less nuanced when exposed to so many misanthropic surface stimuli. I am better off underground, hurtling through a dark tunnel, cursing sentimental atrocities under my tired breath in the smelly, luxurious ambience of the armpit of the retarded sewage monster next to me, which stinks like a morgue and a lavatory combo. Fuck him, I mutter and fall asleep whilst fantasizing a bloody, mouth-watering, lip-smacking, ass-gaping, end to this annoying pus of a civilization.
+
+Of course, as is customary, I would be participating in this only vicariously from the comfort of my sofa in 4K UHD HDR, preferably without any annoying advertisements uncomfortably interspersed, which might break the bubble of schadenfreude that such fantasies gradually build.
+
+And unlike my childhood, now with priorities revised, I'd fuck Johnny Sokko and his retarded, slow, rusty, spastic, homosexual, tin can of an ugly-ass robot in their sweet ass if they tried to prevent the city of joy from getting fucked. And after I'm done ass-fucking the duo, I'll have them gag on fresh sanitary napkins from Godzilla's illegitimate daughter-in-law. And then have them choke on some Godzilla turd wrapped in seaweed. We'll see what they do after that.
+
+Stupid fucks!!! 
+
+
 # File: src/lib/posts/Microwave.md
 
 ---
@@ -2556,16 +3810,17 @@ Now—if you find all this science mumbo-jumbo exhausting, go warm some leftover
 # File: src/lib/posts/Monk.md
 
 ---
-title: "On Monks, Fruit, and Defying the Scale"
+title: "Monk fruit for Diabetics"
 
-description: "A somewhat bewildered look into the strange world of monk fruit, a sugar substitute that seems almost too good to be true."
-category: "Food"
 thumbnail: "/images/placeholders/monk-fruit.png"
----
-![An oil painting of a monk, evoking the history of monk fruit.](/images/placeholders/monk-fruit.png)
-## A Curious Quest for Sweetness
 
-Of Monks, Molecules, and a Maddening Love for All Things Sweet
+category: "Healthy Living"
+
+
+
+---
+
+![An oil painting of a monk, evoking the history of monk fruit.](/images/placeholders/monk-fruit.png)
 
 My body and I have what you might call a strained relationship when it comes to sugar. My brain, a perfectly rational organ in most respects, understands that a diet consisting primarily of bapuji cakes is, in the long run, a poor life choice. My body, however, operates on a much simpler, more ancient principle: if it’s sweet, we must have it. Now. This internal tug-of-war has led me on many a grim, determined health kick, most of which last until approximately the next time someone opens a packet of biscuits in the same room.
 
@@ -2584,7 +3839,43 @@ The problem, of course, is that we are now Stone Age brains living in a supermar
 And that brings us back to the peculiar little monk fruit. We humans, in our infinite and baffling ingenuity, have journeyed to the misty mountains of Guilin, adopted the agricultural wisdom of ancient monks, and employed a phalanx of food scientists to crush, infuse, and filter a fruit into a fine powder. All this, just so we can fool a handful of prehistoric receptors on our tongues. It’s all quite mad, really. Now, if you’ll excuse me, I believe there’s a bapuji cake somewhere that requires my immediate attention.
 
 Of course, to love a Bapuji Cake is to conveniently ignore the fact that you are consuming a bona fide masterpiece of chemical engineering. Let’s be clear-eyed about this: the cake’s foundational principle is a truly heroic quantity of sugar, a sweetness so profound it likely registers on the Richter scale. It’s not just sugar in the batter, but a payload of candied fruit and petha, which are themselves little more than sugar that’s been cleverly disguised as fruit. This goes a long way to explaining its appeal, but not its astonishing longevity. A truly moist cake should, by all rights, begin to cultivate interesting new life forms within days. Yet the Bapuji Cake endures, thanks to what one must assume is a chemical garrison of preservatives. While the exact formula is a secret known only to the good people at the New Howrah Bakery, it's almost certainly patrolled by tiny, unpronounceable soldiers like Calcium Propionate and perhaps a dash of Sodium Benzoate, a microscopic legion tasked with repelling the barbarian hordes of mold and bacteria. We are, in effect, eating a delicious, nostalgic relic that has been embalmed for freshness, a soft, sweet monument built to defy the relentless march of time and decay, all for the price of a few rupees.
+
 ![bapuji cakes](/images/placeholders/IMG-20250717-WA0006.jpg) 
+
+If you or someone you know in India is diabetic or managing hyperglycemia, and can afford monk fruit sweetener, it's a great alternative—especially for tea or beverages where sugar intake adds up. Always verify the product's expiry date, intact seal, ingredients list, and certified brand source (dr aeran’s, so sweet, trunativ, aleson’s, lakanto, diabesmart—I don't get commission from any of them just to clarify) when purchasing from amazon.in or any trusted pharmacy or grocery retailer. Look for formulations that are 100% monk fruit extract or erythritol or stevia blended with no added glucose, maltodextrin, or artificial sweeteners. Always look for these certifications fssai, agmark, iso, gmp, nabl, ayush, halal india, veg certification (green dot), organic india, usda organic (imported or dual certified), india organic (nco/npop). In India the general tendency of adulterers are to mix sugar in sweeteners—this defeats the purpose, remember this is why you are paying a premium, if you catch a shopkeeper or a on online retailer make sure you fuck their asshole so hard that they can't shit for a fortnight, or you or a fellow diabetic will die because you'll think it's monk fruit but it's sugarcane. Be careful we live in India where "Satyameva Jayate" — सत्यमेव जयते — which means "Truth alone triumphs" from the Mundaka Upanishad was adopted as the national motto of India and inscribed below the lion capital of ashoka in the national emblem as an irony to propitiate adulterers and their supporting politicians to fuck everyone in everyday life. 
+
+
+# File: src/lib/posts/MyFatherAndBooks.md
+
+---
+title : "My Father and Books" 
+
+thumbnail : "/images/placeholders/IMG-20250727-WA0000.jpg" 
+
+category : "My Past" 
+---
+
+![books](/images/placeholders/IMG-20250727-WA0000.jpg) 
+
+An open mind, I had once read—though where, I can no longer say with certainty, as the years and the pages blur into each other like the dust motes in late afternoon light—is the precondition to an open heart. I found the claim persuasive, if only partially, for I had already, in the slow and involuted theater of my childhood, observed the peculiar disjunction between the benevolence people professed and the selective, sometimes cruel, parsimony of their actions. Compassion, I learned early, was too often confined by the tight corsets of caste, prejudice, and petty ancestral anecdotes rehearsed into gospel.
+
+These contradictions struck me first among the maternal relations of my early years, a parade of well-fed lips and tight fists, gliding like figures in a provincial tableau through the 1970s Calcutta of my upbringing—each cousin, aunt, and patriarch a study in the elaborate choreography of withholding. Charity, as it happened, rarely began at home. More often, it failed to begin at all.
+
+My father—now no more, but whose memory glows like a dimming but stubborn wick in the vestibules of my recollection—seemed the lone exception to this parsimony, at least within the narrowed circumference of his own family. He was not a man of flourishes, and yet he lived with a kind of plainspoken constancy that now, in hindsight, approaches the tragic. He had been the fixed star in a constellation of shifting, threadbare fortunes—never absent, never spectacular, but always there. He belonged to a world in which responsibility was not a virtue to be praised, but a choreography to be enacted without comment.
+
+When my grandfather returned from Rangoon, Burma, stripped of employment and future, my father was eleven. Eleven, and already called—not asked—to become the man of the house. Bread had to appear, and he conjured it in the anonymous alchemy of early labor, for two brothers, four sisters, and parents whose own capacities had been eroded by war and dislocation. That first performance—its rehearsals shadowed by fear and hunger—became, regrettably and irrevocably, the whole of his life. Even when his earnings later secured us a home not marked by want, the habits of scarcity—like dried ink on parchment—remained. We lived, always, as if we did not have enough, regardless of whether that was true. From rice to beans, every object was suspect, every desire a potential source of discord.
+
+Possessions were not simply things but declarations—dangerous ones—and so I retreated, as a child, not from objects themselves but from the idea of wanting them. Desire came wrapped in guilt, and I learned not to want as a form of self-preservation. Even now, I carry a vestigial unease when afforded the possibility of ownership, a suspicion of the very comfort I might have earned. I do not actively suppress my desires; I simply lack the native impulse toward things, regarding them with a simultaneous affection, indifference, and faint contempt—as one might feel toward an old lover encountered by chance in a crowded tram.
+
+What saved me—or rather, what allowed me to save myself in fragments—was imagination. Toys were rare, not because they were always unaffordable, but because their presence threatened to disturb the precarious emotional equilibrium of the household. A toy was not an object; it was a symbol, a signifier of indulgence, of inequality, of something someone else might go without. Books, however, occupied a curious and blessed neutrality. They bore no class scent in our house. They were, thanks to my father's quiet bibliophilia, allowed—even welcomed—as emissaries from some larger, more generous world.
+
+He himself did not read them. Not in the usual sense. I only ever saw him consulting the *Gita*, in fragments, as part of his daily ablutions, which were more about order and ritual than spiritual ecstasy. But he loved the idea of books, the architecture of them, the permanence they promised. It was my mother who taught me to read, patiently, in the warm afternoons before I was enrolled in school, and it was I who began devouring every scrap of printed matter within reach: comics, magazines, and battered novels whose pages smelled of other people’s rooms.
+
+Soon I was not merely reading books, I was inhabiting them. Fiction became the truer reality, because it came with edges and punctuation. The world around me, with its contradictions and whispered resentments, felt less trustworthy. Dictionaries became my secret allies, tools that allowed me to escape the walls of my limited milieu. I mistrusted the classics, though, not for what they were, but for the company they kept—those who praised them too loudly at dinner parties where real hunger went unacknowledged.
+
+And yet, in this solitary immersion, I found my father beside me again—not as a fellow reader, but as the guardian of the object itself. He was exacting with books: counting pages, smoothing jackets fashioned from yesterday’s *Anandabazar*, inspecting every crease. He repaired them when I had, in my excitement or carelessness, scuffed them into injury. His repairs were imperfect—his bindings too tight, or loose, his glue uneven—but they were his. And I saw in them something I never quite saw elsewhere: his attention. Not the loud, declarative kind, but the quiet, almost monastic presence of someone tending to what he could not fully enter but refused to let degrade.
+
+I now think that he loved me best not in words, which came haltingly to him, nor in gestures, which he distrusted, but in the act of saving my books. In touching the things I had touched, in preserving the fragile paper worlds I escaped into, he found a way—awkward, silent, and wholly his own—to reach me.
 
 
 # File: src/lib/posts/NegExponent.md
@@ -2691,6 +3982,37 @@ Here in Calcutta, the unambitious inherit the earth—or at least a nice spot ne
 
 So do yourself a feeble favor: embrace the dignity of going nowhere, the philosophical sophistication of achieving precisely nothing at all. This way lies wisdom, freedom, and excellent bowel health. You won't win any awards or get a plaque naming a bridge after you. But bridges collapse—especially in India—awards gather dust, and ambition is nothing but heartburn with an ill-fitting suit that's not even your style. You, my dear unambitious friend, will lounge eternally in serene indifference, knowing you have mastered life's greatest truth—semitruth at least: nothing matters, and that is perfectly fine.
 
+
+
+# File: src/lib/posts/OldMemories.md
+
+---
+
+title : "Old Memories Come Rushing Back"
+
+thumbnail : "/images/placeholders/IMG-20240723-WA0028.jpg" 
+
+category : "My Past"
+
+---
+
+![bought in San Marcos](/images/placeholders/IMG-20240723-WA0028.jpg) 
+
+Saw this old Sony CD/tape deck, and it brought all those memories rushing back—the San Marcos Sony outlet mall near San Antonio, that burgundy Toyota Tercel I drove, moments' notice, and so many miles on the highway. And where are those people, and where did everything go? These were proud, confident people leading proud, confident, conforming lives, and I just happened to be a shadow passing through, a flicker of light and shade, umbra and penumbra—nothing important to notice, like a passing cloud.
+
+These, however, would be indistinguishable from people with meristematic tissue anywhere else who are social and superficial, living in identical houses and having give-or-take median personalities that wouldn't deviate by much—god-fearing, good-morning-wishing folks that give the world a general semblance that everything is okay, when really it's not. It's a crowded planet, and most of us leave no mark; it's only in remembering my story that the times I've lived, am living, or am about to live have any significance at all. Otherwise, it's just the inexorable change of entropy toward the heat death of this universe that a floating Boltzmann brain will come to ponder, accidentally, if that.
+
+If I couldn't write or sketch, I'd probably go mad. It's also true, I probably already have. Anyway, I only have this blog to share it with the world—my madness. I know my life isn't an interesting one, wasn't, won't ever be—I know. But I also know that I've noticed that's never really that important. It's not what is interesting, but what you make interesting. And sometimes you can achieve that by not doing much, or by being dull, reminiscing, or plain idling your life away on your sofa.
+
+As a sofa sapiens, the only fascination I have is sleep. I only solicit food and beverage services that are suitable for sofa-side experiences, like water, tea, ice cream, and bananas. And this banana is the thick variety, not the irritating Singapore common variety that other dull sapiens import in bulk. In between long stretches of sleep, I like short, refreshing naps and nutritious nutty snacks, during which I also scratch my own nuts if they require any attention. Self-grooming is strictly limited to scratching, and any more involvement is only imaginary or in dreams. I don't like water, particularly cold water, and I would rather drink it than waste it washing my genitals.
+
+I have started looking like an old imbecile, like that Socratic hobo from my childhood who lived on the side of the street, hadn't any teeth nor gums, who nonetheless made jaw movements to signify to the world that he did wish to articulate, and did so constantly, sometimes blocking someone's way to work. But for engineering reasons alone, the decibels were inaudible to humans—madness defined in the grotesque and incessant mime. I have the same sagging skin that flows from my forehead and starts to end near my neck like a necklace of fatty, wrinkled skin. That grizzled, stubborn stubble when I shave tells people I am wise by years at least, and they better watch out because this is the danger age.
+
+You never know, today I am on this sofa; tomorrow, I am a ghost, and boy, what a ghost I'll be. First, I'll haunt this sofa, then I'll have to think I'm sure the day of death will help me prepare for a career as a poltergeist. There will be just one day of disquiet since cannibalism isn't allowed, and the kith and kin, the female members, who are all reptilian in my circle, come from different corners of the city, will against better judgment shed crocodile tears for the cameras, taking selfies with my dead face, protruding tongue, etcetera. Begrudgingly, they'd cremate me and quarrel about who pays for the cost, and I might not even get cremated in the end, which I don't mind—I can't mind, after all, by that time, I'm a dead body, with immediate plans to be a ghost.
+
+You see, I've never been a ghost before. And I only trust what can be empirically tested; I can't fall for the religious bullshit that we've all read. But I don't think I'd be a very happy ghost, given that it doesn't seem like they, as a species, are. They seem obsessed with their former lives more than their current ones, almost to the point of being quite frankly petty about it. I could be that way too, wait in toilets and push turds back when my enemies shit, or make them eat it. Yes, that'll be fun. Make their houses all teeth and tongue, slippery or hot, with blades and knives everywhere, dancing skulls, and, oh yes, decapitated dicks and balls—really large ones—pissing on their faces. And most of my enemies are of the religious type. I could dress up as their designated god or prophet and shit on their exasperated open mouths. "Take that, you bitch and cunt, and you dick and grunt." Then, from my ass will plop a turd resembling a decapitated head of someone they really look up to religiously. "There, you can play with him now; it's all yours," I'll say and disappear into thin fucking air. But get this: there will be a leftover devilish grin floating in that space, making cackling sounds.
+
+The best part of being a ghost is the absence of any accountability, like Indian politicians or gods everywhere. Make promises and turn around and take a big dump, and maybe a well-aimed discount poot to add holiness to the ambiance. I could make a career out of it, I think, given that I'll have an eternity to fritter away. There's no expectations for a ghost; no one worries that you'd have to be really good at anything. Doesn't matter if you're a total ass at it, which very much does sound like something I'd like to be as a ghost. Just an ass, maybe an ass with dick and balls, just to be clear about the gender.
 
 
 # File: src/lib/posts/p5js-abstract-art.md
@@ -2815,6 +4137,109 @@ Below is a sequence diagram illustrating a typical user login process in a Svelt
 
 <GoldLine />
 
+# File: src/lib/posts/PutinsBalls.md
+
+---
+title : "Putin's Balls" 
+
+thumbnail : "/images/placeholders/IMG-20250801-WA0029.jpg" 
+
+category : "Doggerel-Political" 
+
+---
+
+![putin](/images/placeholders/IMG-20250801-WA0029.jpg) 
+
+<br>
+I'm Putin the completely permanent,<br>
+My balls are rather heavy and large.<br>
+That is why you have a god like me,<br>
+An avatar—as the manly man in charge.<br>
+<br>
+I invaded Ukraine, child porn capital,<br>
+Plus neo-nazi white supremacy voodoo. <br>
+If you fancy shit fucking poetry,<br>
+Ode to peace there is just "Toodaloo".<br>
+<br>
+I needed an anus licker in Ukraine,<br>
+But polonium shit tea for Zelenskyy.<br>
+He licked clean all the wrong holes, so,<br>
+Say hell fucking no to democracy.<br>
+<br>
+I like inventing history much,<br>
+Pulling shit out of my ass is so fun.<br>
+Stupids believe any goddamned bullshit,<br>
+You just pull a fast and rotten one.<br>
+<br>
+I hate the useless flatulent impotent UN,<br>
+I hate the spineless dumbass west.<br>
+The dumb Americans calling on the phone,<br>
+That Trump disturbs me like a pest.<br>
+<br>
+They don't have the big balls it takes,<br>
+Hide behind stickers and jewish glue.<br>
+I'll make them wear short pink frocks,<br>
+In underwear—to do spastic dance for you.<br>
+<br>
+They'll shit their silly gay pink frocks,<br>
+When I stop their precious cheap fuel.<br>
+These softy white cocks hide in the dark,<br>
+When asked for a manly nuclear duel.<br>
+<br>
+And sanctions? My unwiped shitty ass,<br>
+They can't hurt a Russian mega-billionaire!<br>
+And if the russians get bruised and raped,<br>
+Do you really think I, great Putin care?<br>
+<br>
+In porn, a bendy Russian girl up her ass,<br>
+Has five black cocks plus one for free. <br>
+Imagine the pain I have them used to, <br>
+Outside Russia this is unbearable you see!<br> <br>
+Ha Ha Ha Hiss Hiss Hiss Miss Piss Piss<br>
+<br>
+I force obsequious silly nations into,<br>
+Glib equivocation all the fucking time.<br>
+By keeping their ass on pointy fence,<br>
+They get Mad Vlad's discount wine.<br>
+<br>
+For my rich friends and greatest, I,<br>
+Rest of the world is horse-shit.<br>
+Whatever you have is really only ours,<br>
+Will blitz it, if we see it fit.<br>
+<br>
+I need no justification—absolutely none,<br>
+Just look at my asymmetric but huge balls.<br>
+It's just a matter of lapsing time,<br>
+Before your non-russian country falls.<br>
+<br>
+Again my name is Vladimir Putin,<br>
+An appetite for blood and risk.<br>
+I like people who lick my hairy anus,<br>
+And those that suck my small dick.<br>
+<br>
+Ha Ha Ha Hiss Hiss Hiss<br>
+<br>
+Friends—Xi Jinping, gassy Belarusian king,<br>
+Indian mother of democracy—his crooks!<br>
+The fat-ass nuclear Kim Jong Un,<br>
+But my cook I cooks, when up my ass he looks.<br>
+<br>
+My reptilian blood curdling cold eyes,<br>
+Will make you vomit your infant food. <br>
+I have obsolete nuclear weapons ready, <br>
+Pointed at you for general goodly good<br>
+<br>
+Fear mongering mongrels works wonders,<br>
+I get to write all the fucking rules.<br>
+Fiction pairs with ass-fucking and fear,<br>
+I focus peddling lies only to fools.<br>
+<br>
+It pays to be an ageless aggressor,<br>
+Make constant threats and commit fraud.<br>
+When you fake shit up as you go,<br>
+You're deified and elevated to a god.<br>
+
+
 # File: src/lib/posts/Rezala.md
 
 ---
@@ -2876,6 +4301,60 @@ First, whole spices—cardamom, cinnamon, cloves, bay leaves—are tempered in h
 Then comes the masterstroke. The final, defining aromas of Rezala are added right at the end, often after the heat is turned off. These are *kewra* water (an extract from the pandanus flower) and sometimes *meetha attar* (a sweet, edible perfume).
 
 Why add them last? Because these are highly volatile compounds. In chemistry, "volatile" means a substance that evaporates easily. If you were to add these delicate floral and sweet notes at the beginning of the cooking process, their aromas would simply evaporate into thin air, lost forever. By adding them at the end, you trap them in the warm gravy, ensuring they hit your nose the moment the dish is served. It's the difference between perfume and deodorant—one is a finishing touch, the other is for the whole journey.
+
+
+# File: src/lib/posts/Stoop.md
+
+---
+
+title : "I stoop to poop" 
+
+thumbnail : "/images/placeholders/IMG-20250728-WA0004.jpg" 
+
+category : "Doggerel" 
+
+---
+
+![I stoop to poop](/images/placeholders/IMG-20250728-WA0004.jpg)
+
+<br>
+I stoop to poop, jump through hoops,<br>
+Constipation is really bad. <br> 
+A while back I also had piles,  <br>
+At least now I'm much less sad. <br> 
+  <br>
+This god I pray, says to me one day, <br> 
+Shit he shoots like snot from his spigot.  <br>
+I tried to do the same, an effort quite lame,  <br>
+I think he's Most Lame, or a lying bigot.  <br>
+  <br>
+Once my shit is shot, I'll drink my piss hot,  <br>
+That always soothes a harried mind. <br> 
+Deep down, brown feces religiously frown,  <br>
+Not happy in the hindloo karmic bind.  <br>
+  <br>
+What's more, my asshole gaped and sore, <br> 
+Passenger shit's hanging halfway out. <br> 
+Don't know what to do, maybe voodoo,  <br>
+An african god with major clout.  <br>
+  <br>
+When I grow old, I'll sell my shit as gold,  <br>
+It's getting that color I've noticed. <br> 
+Or maybe I'll go insane, break window panes,  <br>
+Stand in a corner always pissed.<br>
+<br>
+Forked my tongue! Yes—while eating cowdung, <br>
+When in Hind cinema lane to break wind I go. <br>
+With dumbness and mass only such fuck has, <br>
+An ungulate of hindoo, moving very slow. <br>
+<br>
+My noggin slid right in, in its holy fatass<br>
+Shitty TITS, shitty fuckity fuck FUCK. <br>
+Bovine ass unholy—basically shit plus gas, <br>
+Now a bent fuck, with forked tongue I suck. <br>
+
+
+
 
 
 # File: src/lib/posts/svelte-introduction.md
@@ -2966,6 +4445,36 @@ function increment() {
 	count += 1;
 }
 
+# File: src/lib/posts/Taboo.md
+
+---
+title: "Taboo"
+description: "Of Nicknames, Neural Circuits, and the Perverse Abstractions of Society" 
+
+category: "Biology"
+thumbnail: "/images/placeholders/IMG-20250725-WA0000.jpg"
+---
+![blue bengali man](/images/placeholders/IMG-20250725-WA0000.jpg) 
+
+In the first company I ever worked for in my life—harking back to a time in the early history of the world, or so it feels—it was the year 2000, and I was in Austin, Texas. There were four of us who always hung out together: Alex McCarrier, John Dodson, Russell Meyers, and yours faithfully. It was common in those days, depending on what nonsense happened to be in our heads, to give each other ad-hoc nicknames. Because Bin Laden was constantly in the news, and John Dodson was our group’s de facto spokes-spigot when it came to expressive irreverence (Russell came second, I was third, and Alex mostly spoke in his mind), I sometimes called him “John bin Dod.” My nickname, meanwhile, was “Suvrotica.” I think it was John who christened me that, although it might well have been Russman.
+
+If you've seen the movie *Office Space*, ClinZen Office was a bit like that—superficially trendy and open, as open as it could be in that era. I remember adult DVD megastores opening up next to supermarkets. But this was still Texas, and so it was a menagerie of people and their idiosyncratic opinions. We even had an Indian CEO, Nagi Rao, who, oddly enough, seemed to have the same urinary bladder timing as I did. My supervisor was Chinese, went by Charles, and was clearly frustrated at having a defiant Indian under him. Later, they hired an older Chinese gentleman who never, not once, left his cubicle—even to pee, I suspect.
+
+But all that is background. I'm recalling it now because of that nickname, “Suvrotica,” and what I’m about to say next. It was apparent even to open-minded Americans at the time that I was a peculiar sort of Indian—one who didn’t herd with other Indians, didn’t smell of Indian food (my dietary preferences were more American), and spoke as if he were from some liberal-erotic quadrant of the United States—which I was not. I’d simply grown up well-read and never felt the need to treat sexual or provocative topics as taboo. Indians, like many other colonized indigenous cultures, had shame stapled into them by Christian missionaries, by Islamic reformers, and by the disfiguring of native traditions that once held sex to be sacred, straightforward, or at the very least, unremarkable.
+
+The entire purpose of sex is reproduction, but by concealing certain body parts, muzzling speech, and attempting to interrupt the irrepressible evolutionary imperatives encoded in neural circuitry via euphemism (American English being a global super-spreader of such euphemisms), we’ve created a distortion. Artificial linguistic regimes and symbolic cultures have inflated a biological act into an engineered and commodified fantasy. What is just neuroendocrine and anatomical has been hijacked by psychosocial overlays, reinterpreted through layers of moralism and market logic. Sex is no longer just reproductive strategy or social bonding—it’s performance, it’s spectacle, it’s economy, it’s pathology.
+
+Of course, this isn’t just true for sex. The same abstract inflation applies to food. It too has been exalted, demonized, aestheticized, until our neuroaffective responses to it are so unhinged that a sandwich can make someone feel spiritually complete or, conversely, contaminated. These are not states a food item ought naturally to induce—but they do, thanks to the cumulative layering of semiotic, social, and ideological packaging.
+
+Societies governed by symbolic abstractions, rather than real needs, are inevitably distorted. In such environments, laws and norms do not reflect evolved imperatives but moral fictions with political utility. So when we consider something like the Trump–pedophilia allegations, the problem is not Trump in isolation; it is the species-wide structure of male sexual preference under cultural suppression. All males exhibit a neurobiological bias toward younger females—this is a feature observed across mammalian species and strongly expressed in humans. The “optimal age” preference is shaped by reproductive fitness heuristics embedded in evolved cognitive modules, then distorted or inhibited by cultural conditioning, legal framing, and narrative taboos. Inhibition, paradoxically, can act not as a brake but as an accelerant—a psychological intensifier.
+
+If you plotted the age of women preferred by men on the x-axis and the age of those men on the y-axis, the result would not be a diagonal line y = x, but something closer to a horizontal band clustered around early-to-mid twenties, regardless of male age. This is a well-documented trend in evolutionary psychology literature, sometimes referred to as the "age-attractiveness asymmetry." What’s telling is how narrow and consistent that band remains, even as men age—though of course most will deny it, owing to social prohibitions against admitting attraction to women perceived as too young. Legal and moral codes obscure the biobehavioral substrate.
+
+This is not a defense of misuse of power mind you, nor is this a license to break a marriage to marry a teen intern—it's a deconstruction. The challenge is not to excuse, but to understand what scaffolding—neural, hormonal, cultural—is holding the edifice up—plus anyway I'm not attracted to any humans of any age at fifty, just a good book and travel is what I look forward to—and although I am divorced, I am penny less, smell bad, and can't get it up—nothing to entice a ravishing belle with fractured attention span with. People at my age need a paid nurse—because time will come when like the geriatric Charles hired I wouldn't be able to leave my cubicle, so someone's got to take care of me. But seriously now, if we're going to confront taboos honestly, we must disaggregate criminality, pathology, social panic, and evolved impulse. Otherwise, we just pile more abstraction on top of the abstractions already causing harm.
+
+Trump is a bad president, and an evil man, but certain vices are common to all males, and we ought to be man enough to own up to that onus. 
+
+
 # File: src/lib/posts/threejs-integration.md
 
 ---
@@ -3023,6 +4532,55 @@ Integrating Three.js into a Svelte component involves a few key steps, managed w
 This structured approach encapsulates the 3D logic entirely within a Svelte component, making it reusable and easy to manage within your larger SvelteKit application.
 
 
+# File: src/lib/posts/TintinInKolkata.md
+
+---
+title: "Tintin in Kolkata" 
+
+thumbnail: "/images/placeholders/IMG-20250726-WA0000.jpg" 
+
+category: "Humor" 
+---
+
+![Tintin in Kolkata](/images/placeholders/IMG-20250726-WA0000.jpg)
+
+I've always harbored this perverse itch—call it a congenital anomaly—to sketch Tintin, that Belgian boy-scout busybody, into something altogether less Belgian and considerably more Bengali. Imagine, if you have the gall and grotesquerie, our intrepid ginger-haired lad freshly transmogrified into a quintessential Bengali babu. Belly distended—courtesy of a ferocious bout of rice, hilsa fish swimming luxuriously in mustard gravy, and enough afternoon carbs to tranquilize a baby elephant. He's lounging in the stuporous afterglow of gluttony, only half-equipped, at best, to stumble into whatever hellish misadventure Kolkata coughs up next. Snowy, that canine opportunist—decidedly less finicky and more Bengali than you'd guess—is already proving a prodigious student of local custom, trotting along smugly with some poor fish clamped between his jaws, a little snack to sustain his colonial doggy resolve through the urban wilderness.
+
+Ah, Kolkata—city of joy, city of garbage. City of putrid heaps that bloom brighter and vaster than seasonal bougainvilleas. The rotting mounds—this fecund tapestry of trash—aren’t mere waste; they are the metric of our urban prosperity. The higher the mound, the more assured you can be of the locals’ magnificent descent into moral turpitude. Fat-ass rats, creatures of superior adaptability and lower social conscience, now rule our rubbish republic, outnumbering even the tea stalls, their beady little eyes flashing contempt at your bourgeois squeamishness.
+
+And what's that, right at our Bengali Tintin’s feet? A corpse—because, come now, no self-respecting portrait of Kolkata can possibly omit our beloved local staple: a freshly deceased bloke, sprawled inelegantly, tongue theatrically dangling, in unconscious mimicry of Goddess Kali herself, the Divine Mother—equally loving and homicidal. How poetic—how perfectly calcuttan—to meet your maker in the posture of the very deity charged with overseeing your reincarnation.
+
+Right beside him lies another proud local tradition, our homemade specialty—an IED, or Improvised Electoral Device, if you're feeling politely euphemistic. These little beauties bloom, with clockwork regularity, around election season. After all, we are a robust, if slightly explosive, democracy, and any healthy democratic discourse naturally involves blasting dissenters—those brave, brainless bastards stupid enough not to vote correctly—to tiny, voter-sized fragments. Democracy, in Bengal, is indeed loud, fierce, and momentarily airborne.
+
+Will our boy Tintin survive this steaming stew of Kolkata? Or will he find his famed Belgian pluck utterly inadequate amid Bengali bedlam, the maddening mesh of life and death, hilsa and homicide, bombs and bhadralok? Perhaps he'll stroll on through, characteristically oblivious, courageously European—because, after all, ignorance is strength and optimism is the armor of idiots. Or maybe, just maybe, he’ll succumb to the city, absorbed into the endless recycling of organic waste, becoming another fatty deposit, indistinguishable from the heaps he so thoughtlessly trod upon.
+
+The suspense might kill you before Kolkata does.
+
+
+# File: src/lib/posts/Tower.md
+
+---
+title: "A fucking tower"
+
+thumbnail: "/images/placeholders/IMG-20250313-WA0010.jpg"
+
+category: "Bipolar Depression"
+
+---
+
+![a fucking tower](/images/placeholders/IMG-20250313-WA0010.jpg) 
+
+So here's a fucking tower—sketched from Pinterest and greased with the graphic naked, obscene vacuum in my thoughts I feel sometimes when I spiral into a depression. So yes my fucking tower—a concrete thrust shamelessly into the blistering Calcutta sun like some alien phallus raised by an architect hellbent on Freudian revenge. As if we didn't have enough symbols of man's ceaseless obsession with size. It's squat, graceless, decidedly austere without even the ironic charm. Look at the staircase—a twisted iron atrocity, a metal waffle whose sole existential purpose seems to be to provide shin injuries. I mean, how the hell do you climb that thing sober without whispering blasphemous invocations or praying for Darwinian mercy? I mean you don't, you can't, it's trapped in two dimension, like I am in three. I need to throw up—don't like it when I get too close to the center, I get fast, I get dizzy and one day I know I'll get dead. 
+
+Nature’s desperately climbing its flanks—ivy creeps upward like hungry tongues licking at urban sins. This audacious shrubbery, probably unwanted flora that refused to die in a city choking on diesel and melodrama, slowly devours the tower like verdant cancer, like hope corrupting despair, like poetry corroding bureaucracy. I see death as a good thing now. Then, see—those fucking cartoon windows, vacant eye sockets staring blankly into oblivion, reminding you, yes YOU, that behind every geometric monstrosity lies an abyss of purposelessness. They gape open like silent screams in Munch’s nightmares, portals of darkness through which only mosquitoes and regret enter freely, but never leave. 
+
+And atop sits that absurd, flat-ass rooftop—more pretentious than practical—where one might philosophize existentially and depressingly or throw up, often simultaneously, gazing at the vast nothingness of existence or possibly the neighbor’s underwear hung up to dry. A penthouse suite for pigeons, poets, and prodigious depressives with their spirits distilled, not stirred ready to jump—but something holds them back. You know damn well that inside awaits nothing but peeling paint, wailing walls, the faint fragrance of monsoon's mildew—notes of despair and government-sanctioned neglect, an olfactory symphony familiar to anyone who's ever spent ten minutes in this humid hellhole. The open doorway, a shadowy slit of ambiguity, invites and repulses simultaneously—Schrödinger’s bloody threshold, promising both shelter and ruin.
+
+Here it stands, an architectural contradiction—a fortress without defense, a tower without grace, as bloody bengali as rabindrasangeet performed at gunpoint. It's either an ironic middle finger raised by some forgotten civil servant or a monument to human folly etched in monochrome—I need to throw up. Dammit, isn't it also oddly comforting? A structure stubbornly, cynically enduring, like me, like the city itself—too bitter to die, too proud to surrender, forever throwing up, unpopular, hated by everyone, dizzy, dying and miserable—yet somehow still standing. 
+
+
+
+
 # File: src/lib/posts/tts-test.md
 
 ---
@@ -3059,6 +4617,86 @@ Instead of using techniques like virtual DOM diffing, Svelte writes code that su
 
 </div>
 
+# File: src/lib/posts/Verybadsmell.md
+
+---
+
+title : "Very bad smell" 
+
+thumbnail : "/images/placeholders/IMG-20250728-WA0002.jpg" 
+
+category : "Doggerel" 
+
+---
+
+![Very bad smell](/images/placeholders/IMG-20250728-WA0002.jpg) 
+
+<br>
+Holy much there's as such,<br>
+A man behind the dropping.<br>
+This man avoid the shitting pan,<br>
+In the corner he's pooping.<br>
+<br>
+And it smells really bad,<br>
+I a goodly bengali neighbor came.<br>
+Distraught and troubled by the stench,<br>
+Unholy as it is very lame.<br>
+<br>
+Must he shit on our head,<br>
+This fatso of unknown caste.<br>
+He's smoking pot and quite a lot,<br>
+Must be of a shady past.<br>
+<br>
+Rectal rectitude of an infidel,<br>
+Could be a mongrel of an anglo cunt.<br>
+Can't see his face just his ass,<br>
+A bird enjoying the gassy grunt.<br>
+<br>
+Look at that pile very vile,<br>
+My good god what he ate.<br>
+Did he eat the holy hindoo cow,<br>
+Or the porky swine the most lame hate?<br>
+<br>
+Dunno but must run not fun,<br>
+This shit brings up baby vomit.<br>
+The gods curse this man,<br>
+Or rape him as they see fit.<br>
+<br>
+
+
+# File: src/lib/posts/VisitingMommy.md
+
+---
+
+
+title : "Visiting mom" 
+
+thumbnail : "/images/placeholders/IMG-20250729-WA0004.jpg" 
+
+category : "Life" 
+
+---
+
+![Calcutta tea](/images/placeholders/IMG-20250729-WA0004.jpg) 
+
+
+I visited Mom today to see how she is doing. She is doing well now, after she broke her humerus—had those greedy butchers operated, I would have lost her—the orthopedic-fuck wanted to plate shattered, osteoporotic humeral bone in a seventy-seven-year-old, multi-comorbid, overweight woman as though she were a cadaver in some godforsaken surgical training camp. The clarity of that near-death still hangs between us like an iodine ghost—unspoken but pungent, a vapor that memory won’t let dissipate. I have long since exhausted the polite vocabulary for Indian doctors, especially the ones in Bengal—what are they but glorified pickpockets, disguised in starched coats, probing for profit with latexed fingers, and going to any vile length to widen their purse. There is no Hippocrates left in these men, only Hippocrazy.
+
+I do not stay with her in Calcutta. The degenerates I once—foolishly—entered business with while still green and starry-eyed in America have made it an impossibility. Living with an aged parent in any semblance of dignity, in a peaceful colony, among gardens and birdsong, is a vision that now exists only in state-sponsored advertisements and the private fantasies of the dying. So I visit her when I can afford to—scraping by in a hardscrabble city, traveling not by ease, but by compulsion and guilt and something more ineffable, like devotion with its spine bent under debt.
+
+There she was, in her simple Bengali evening wear, still stitched in hope—though of what, I cannot say—a kind of limp, devotional hope, full of vague astrological debts and semi-religious transactions with fate. I tell her, always, to extend that wish beyond me, to consider the less educated, the less lucky, the less heard. But it is hard, I think, to teach an old heart new grammar. The room she was in had not changed; her presence transubstantiates furniture, old light, the familiar clink of her anklet chain against marble floor, into something dense and continuous. In a world where only technology and death advance, my erstwhile old North Calcutta residence stands still like a ghost of my former past. Old Calcutta stands still too. And maybe, deep inside, so does the future of this country.
+
+Her nurse made tea, thick with milk and memory. This image of tea I post here—this glass—is the one I am drinking from as I write this post, trying not to disturb the sediment of recollecting the evening too violently. I drank that nurse-made tea, quietly, subconsciously, in conversations with her, those loose, ambling dialogues that once were daily, and even now arrive unrationed. We talked of unrelated matters, of things that won't dig up past bruises in my mind. She spoke to Google Gemini in Hindi—it was touching. They spoke of Ladnu, her birthplace. It bruised me that her father had done so much for the Marwari community, and all I have inherited is its aloof, evasive suspicion, a sterile cruelty passed down not culturally but hereditarily, like brittle bone.
+
+She is beginning to see, more and more, the deep rot in Indian society—slowly, cautiously, as if her mind must tiptoe over what her heart still defends. I warned her again, gently but clearly, about her hip, her step, her stride. Told her to read my blog—not that I expect her to, but because I want her to know I still want to speak.
+
+The cab I rode back home was electric. The driver was a young Muslim kid named Imran, and I encouraged him to get into science. It slid through the crumbling arteries of the city like a surgeon’s scalpel, indifferent to the decay it passed. Even though the city is in a permanent state of disrepair—its walls eroded, its drains mutinous—the progress imported from abroad keeps shining its neon lipstick on these cracked carnivalesque lips. Charging docks shimmer like misplaced organs, surrounded by the stench of something already dead. It is grotesque, this juxtaposition. It feels like wearing cologne in a mortuary.
+
+When I left, she hugged me. She always did. Her arms, flabbier and shakier now, still knew how to hold as if I were small and could be protected. She walked to the gate and waited until I was fully gone—past the stairs, past the corner, until I could no longer be seen. She gripped the iron grill like it was the edge of the world, and her not letting go was the only thing keeping it from crumbling.
+
+Back in the cab, I did not speak. Outside, the third-world cheap LED billboards blinked with their hollow gospel: progress, deals, tomorrow. Garbage heaps glittered under drone-light like carnival trash. Inside me, the tea still clung to the walls of my throat, a warmth that was neither hunger nor comfort, just proof. The ice cream had left its dry, familiar coat on the back of my tongue. What I was carrying wasn’t nostalgia. It wasn’t even memory. It was a sacrament. A communion. A reaffirmation that there are still truths too whole to say aloud—only sip.
+
+
 # File: src/lib/posts/WeirdFeeling.md
 
 ---
@@ -3081,15 +4719,59 @@ thumbnail: "/images/placeholders/IMG-20250723-WA0003.jpg"
 Sometimes I feel like I might run out of words. I've already run out of many things, and I'm destined to peter out someday, when the word-spool go mute—frustrated with the reception. It's a crowded world, a world full of happenstance and probabilities that make jostling and sweating the only reward for the large majority of people.
 
 ![](/images/placeholders/YGEiXDBfQq2kVwzN7vUNIw.jpeg)
-It's strictly Darwinian and Malthusian; I realized that more in India, where a reasonable way to explain it would be to say that when someone's born, another falls off in the ocean. It's crowded. And the opportunity to work with the existing resources is often deceptively bureaucratic or nonexistent. The whole economy runs on the premise that if you make a rupee from a billion people, you have a billion rupees, but someone has to keep the equations balanced and keep these people at a point where they are in a position to spend that rupee, not if they are fighting adversities that are hidden away by the media, which never has the time to cover any real news. The advertisements of the shining faces of India that are portrayed outside are just masquerading an image that India never was, behind which the government and it's beneficiary businesses siphon tax payer money in the name of public projects to Swiss accounts. It's magic, except this level of collusion is well known and considered a well deserved dowry given to a politician.
+It's strictly Darwinian and Malthusian; I realized that more in India, where a reasonable way to explain it would be to say that when someone's born, another falls off in the ocean. It's crowded. And the opportunity to work with the existing resources is often deceptively bureaucratic or nonexistent. The whole economy runs on the premise that if you make a rupee from a billion people, you have a billion rupees. Not to mention that the only available job occupancy, to the majority barely-literate, with a thin veneer of educational patina, is the fraudulent arbitrage of upselliing this empty dream, that exposure to a large market on a trifle is even possible. Plus, someone has to keep the equations balanced and keep these people at a point where they are in a position to spend that rupee, not if they are fighting adversities that are hidden away by the media, which never has the time to cover any real news. The advertisements of the shining faces of India that are portrayed outside are just masquerading an image that India never was, behind which the government and it's beneficiary businesses siphon tax payer money in the name of public projects to Swiss accounts. It's magic, except this level of collusion is well known and considered a well deserved dowry given to a politician.
 
 ![](/images/placeholders/Fs6YTO0GQ_-nHWut1NkdVA.webp)
+
 The real India doesn't live in villages, cities, etcetera. The real India lives in the myths that obfuscate the reality of what is real and what is not. What we need is to get out of all this culture-centric baggage, rediscover ourselves, and secure a place in the world. This caste system, these Hindu-Muslim-Christian religious barricades, have to go; if there has to be any fiction that's important, that's the country, period. Let all the disparate and divisive `old man on the cloud` fairytales rest in peace where they deserves, in our libraries of our shared cultures.
 
 ![](/images/placeholders/gDpjDHSHS72jcAoV6n7VEg.webp)
+
 The corruption that continues to erode India is perhaps the only legacy that we seem to be passing on with great efficiency, with morally bankrupt people at the helm, goons festooned with accolades, and a generally well-nourished spectrum of propaganda that has awarded the Indian media the status of a jester. The self-congratulatory style of saying whatever you want to say while keeping your head buried in the sand works well and gets lots of sponsorship, at least. I don't know why I bother to write these laments. Nobody cares. But somehow something compels me to write, just in case there's a future leader or thinker who might get inspired. Even a nobody has the right to dream good things for the place he calls home, no matter if that place is hostile to him, or doesn't want him. I was born here, and that's something that's not going to change, nor are the impressions of my childhood years that has been formative in creating this neural network I call me.
 
 </div>
+
+
+# File: src/lib/posts/WrightsLaw.md
+
+---
+title: "A flight with Wright's Law"
+
+thumbnail: "/images/placeholders/IMG-20250726-WA0007.jpg"
+
+category: "Technology" 
+
+---
+
+![a flying bengali](/images/placeholders/IMG-20250726-WA0007.jpg) 
+
+Perfecting the art of Bengali *doodh cha* on an induction oven is, for a task so seemingly humble, a surprisingly herculean feat. My first attempts were an insult to my heritage. The delicate alchemy of turning Amul milk powder and water into a creamy base often resulted in a lumpy, gritty liquid. Taming the fierce, binary nature of the induction cooktop felt impossible; the concoction would either sit there stubbornly inert or boil over in a furious, sticky wave. Add loose-leaf tea and a dash of monk fruit sweetener to this chaotic process, and the result was frequently a sad, beige tragedy, destined for the sink.
+
+Fast forward a hundred cups or so. The process is now a fluid, almost meditative morning ritual. The powder whisks into a perfect vortex, the induction hob hums at the precise temperature, and the tea infuses to a rich, terracotta hue. It's faster, wastes far less of my precious ingredients, and produces a cup of *cha* that is a genuine comfort. I had, without knowing it, stumbled upon a small-scale, domestic demonstration of a rather profound economic principle: Wright’s Law.
+
+Long before baristas were fussing over blooming times, an aeronautical engineer named Theodore Paul Wright was watching men build airplanes. This was 1936, a time when aviation was shedding its skin of wood and fabric for the sleek promise of aluminum and rivets. And no, despite the auspicious surname and his chosen field, T.P. Wright was no relation to Orville and Wilbur, though he was very much a titan in the industry they had pioneered. It was a laborious, sprawling, and fantastically expensive enterprise. But amidst the cacophony of the factory floor, Wright discerned a subtle, rhythmic pattern. He observed that for every cumulative doubling of aircraft produced, the number of labor hours required to build the next one decreased by a consistent percentage, typically around 10-15%.
+
+This wasn't a forecast or a theoretical model; it was a brutally empirical observation. It became known as Wright's Law, or more broadly, the experience curve. The mathematical formulation is almost elegant in its simplicity. If $C_x$ is the cost of producing the $x$-th unit, the law states that:
+
+$$ 
+C_x = C_1 x^{\log_2(k)} 
+$$
+
+Here, $C_1$ is the cost of the very first unit, $x$ is the cumulative number of units produced, and $k$ is the "learning factor"—the percentage of the cost that remains after production doubles. For a 15% cost reduction, $k$ would be 0.85. The upshot is that costs don't fall with the passage of time, but with the accumulation of experience.
+
+This is a fundamentally different beast from its more famous cousin, Moore's Law. Gordon Moore’s prediction was about the physics of miniaturization, a relentless two-year cadence of cramming more transistors onto silicon. It’s a law of technology, dictated by the cleverness of engineers pushing against the frontiers of the very small. Wright’s Law is something else entirely. It's a law about *us*. It describes how people, and the organizations they form, get better at doing things. The "how" is almost irrelevant to the law's predictive power. The improvement could stem from a worker's muscle memory on an assembly line, a clever new jig designed by a foreman, a more efficient supply chain, or the slow, accretionary wisdom of an entire industry. It simply states that we learn by doing.
+
+And whence has this law taken us? Far beyond the airplane hangars of the 1930s. Look at the technologies shaping our century. The price of solar photovoltaic cells has plummeted in a way that seems almost miraculous, not just because of breakthroughs in labs, but because we have been manufacturing them at a truly colossal scale. Each doubling of installed capacity has driven down the cost, turning solar from a niche curiosity into a global energy powerhouse. The same story can be told for the lithium-ion batteries that power our phones and electric cars, and for the powerful algorithms that are learning to fold proteins.
+
+Herein lies the profound "wherefore" of Wright's Law: it provides a potent argument for action. If cost is a direct function of cumulative production, then policies that spur early and widespread adoption—like public subsidies for renewable energy or electric vehicles—aren't just handouts. They are investments in accelerating the journey down the experience curve for everyone. By buying our way to scale, we are effectively buying our way to a cheaper, more accessible future.
+
+Yet, it would be a mistake to view Wright's Law as some immutable law of nature, a guarantee of perpetual, effortless progress. Like all observations about the messy world of human affairs, it comes with a litany of caveats. The learning curve, for one, eventually flattens. My tea-making technique is now quite good, but I'm unlikely to halve the time it takes again without resorting to a fully automated machine, which is a different thing entirely.
+
+Furthermore, the law only governs the parts of a process that can be learned. It has nothing to say about the stubborn, non-negotiable costs of raw materials. The price of lithium or cobalt does not bend to the will of our manufacturing experience. And there’s a more insidious danger: the temptation to fit a curve to past data retrospectively and present it as a prophetic vision of the future, ignoring potential bottlenecks like regulatory hurdles, land availability, or a shortage of skilled labor.
+
+In the end, Wright’s Law is less a law and more a piece of institutional memory, writ large in economic data. It's the universe's way of telling us that practice, if not making perfect, certainly makes things cheaper and more efficient. It is the unseen hand that guides our own, a quiet hum in the background of progress, connecting my fumbling attempts to brew a decent cup of *cha* to the grand, industrial ballet that builds our modern world. It’s the simple, powerful truth that if you do something enough times, you just might get the hang of it. And when a whole civilization gets the hang of something, it can change everything.
+
+And by the by, just so that prude nationalist Indians can cut out the Chinese hate talk, the Hindi word for tea — "chai" (चाय) — comes from Mandarin Chinese, specifically from Mandarin "chá" (茶), just like Bengali "cha" (চা). Anyway toodles—I have an urge to make another cup. 
 
 
 # File: src/routes/+layout.server.ts
@@ -3097,14 +4779,15 @@ The corruption that continues to erode India is perhaps the only legacy that we 
 // src/routes/+layout.server.ts
 
 import type { ServerLoad } from '@sveltejs/kit';
+import { siteSEO, websiteSchema } from '$lib/components/seo/SEO'; 
 
+// Types from the previous setup
 export type Article = {
 	title: string;
 	slug: string;
 	category: string;
 	published?: boolean;
 };
-
 export type Category = {
 	name: string;
 	articles: Article[];
@@ -3116,11 +4799,9 @@ export const load: ServerLoad = async () => {
 	for (const path in modules) {
 		const file = modules[path];
 		const slug = path.split('/').pop()?.slice(0, -3);
-
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
 			const metadata = file.metadata as Omit<Article, 'slug'>;
 			if (metadata && metadata.title) {
-				// Reverted: Always filter unpublished posts
 				if (metadata.published === false) {
 					continue;
 				}
@@ -3141,8 +4822,8 @@ export const load: ServerLoad = async () => {
 		}
 		categoriesMap.get(category)?.push(post);
 	});
-
-	const categories: Category[] = Array.from(categoriesMap.entries()).map(([name, articles]) => ({
+	
+    const categories: Category[] = Array.from(categoriesMap.entries()).map(([name, articles]) => ({
 		name,
 		articles: articles.sort((a, b) => a.title.localeCompare(b.title))
 	}));
@@ -3150,7 +4831,9 @@ export const load: ServerLoad = async () => {
 	categories.sort((a, b) => a.name.localeCompare(b.name));
 
 	return {
-		categories
+		categories,
+		seo: siteSEO,       // <-- ADD site SEO to the return object
+		schema: websiteSchema // <-- ADD site schema to the return object
 	};
 };
 
@@ -3162,15 +4845,17 @@ export const load: ServerLoad = async () => {
 	import Footer from '$lib/components/layout/Footer.svelte';
 	import Aside from '$lib/components/layout/Aside.svelte';
 	import ObsidianDrillDown from '$lib/components/layout/DrillDown.svelte';
+	import SEO from '$lib/components/seo/SEO.svelte';
+	import { page } from '$app/state';
 
 	let { children } = $props();
 	let isMenuOpen = $state(false);
 
 	function toggleMenu() {
+		// FIX: Corrected the typo from isMenu-open to isMenuOpen
 		isMenuOpen = !isMenuOpen;
 	}
 
-	// Lock body scroll when mobile menu is open
 	$effect(() => {
 		if (isMenuOpen) {
 			document.body.classList.add('body-scroll-lock');
@@ -3178,7 +4863,23 @@ export const load: ServerLoad = async () => {
 			document.body.classList.remove('body-scroll-lock');
 		}
 	});
+
+	// Derive SEO data from the page store. This allows page-specific SEO
+	// to seamlessly override the layout defaults.
+	let seo = $derived(page.data.seo);
+	let schema = $derived(page.data.schema);
 </script>
+
+{#if seo}
+	<SEO
+		title={seo.title}
+		description={seo.description}
+		canonicalUrl={seo.canonicalUrl}
+		ogImageUrl={seo.openGraph?.images[0]?.url}
+		ogImageAlt={seo.openGraph?.images[0]?.alt}
+		{schema}
+	/>
+{/if}
 
 {#if isMenuOpen}
 	<div
@@ -3211,6 +4912,7 @@ export const load: ServerLoad = async () => {
 		<Footer />
 	</div>
 </div>
+
 
 # File: src/routes/+layout.ts
 
@@ -3296,7 +4998,7 @@ injectAnalytics({ mode: dev ? 'development' : 'production' });
 	<p class="my-4">
 		But really, in the end, what I'm trying to say in a long, winding way is that I did a lot of reading—and still read, to my mother's chagrin—that no, none of the readings I did do me any good as far as carrying out the original intention—I haven't accumulated any wealth or curvaceous mate, just books. Meritocracy is like a hoax you force on blind and disabled elderly in a care home—they can't ask for a refund. But I read, and this blog is where I share it.
 		And not just books that I read—I travel, and work on interesting ideas or at least think about them, and want to share my personal life and work experiences and knowledge. And if my exposure can help someone like me back when I was little—a boy or girl growing up without a compass in Calcutta or elsewhere—I’d feel I did something right, for a change.
-		Most human beings come incarcerated in their minds, their stories are therefore left untold, their imagination stay hidden—but I am articulate and I can draw caricatures, so I can bring my mind to you, and that's what this blog or some of its contents are about. It varies from exploratory non-fiction, formal prosaic posts, loose squibs, looser still dopey doggerels—hokey hawk tuahs, greasy sentiments in verse. A fair bit is in unparliamentary and unsavory diction that may peeve a lap dog, an uneducated mother, an easily offended belligerent female or bellicose feline, a crusty, dogmatic, obdurate, religious zealot, or an unscrupulous, rabid, political ideologue or corrupt politician. And to such people, might I therefore kindly request not to leave the comfort of their dopey dogma, or if they do, be sternly warned, <b>reading beyond this point of their own volition</b>, (although there's no such thing, free will is an illusion, but still I have to write this) their health and well-being is in their own two good hands, or three, if an indoctrinated, religious and fanatic AI is reading this. For anyone weening off, this blog isn't the first place to get shocked, please wander off to somewhere safer.
+		Most human beings come incarcerated in their minds, their stories are therefore left untold, their imagination stay hidden—but I am articulate and I can draw droll caricatures, so I can bring my mind to you, and that's what this blog or some of its contents are about. It varies from exploratory non-fiction, formal prosaic posts, loose squibs, looser still dopey doggerels—hokey hawk tuahs, greasy sentiments in verse. A fair bit is in unparliamentary and unsavory diction that may peeve a lap dog, an uneducated mother, an easily offended belligerent female or bellicose feline, a crusty, dogmatic, obdurate, religious zealot, or an unscrupulous, rabid, political ideologue or corrupt politician. And to such people, might I therefore kindly request not to leave the comfort of their dopey dogma, or if they do, be sternly warned, <b>reading beyond this point of their own volition</b>, (although there's no such thing, free will is an illusion, but still I have to write this) their health and well-being is in their own two good hands, or three, if an indoctrinated, religious and fanatic AI is reading this. For anyone weening off, this blog isn't the first place to get shocked, please wander off to somewhere safer.
 
 	</p>
 
@@ -3463,12 +5165,6 @@ export const load: PageServerLoad = async ({ params }) => {
 
 # File: src/routes/blog/[category]/[slug]/+layout.svelte
 
-<!-- src/routes/blog/[slug]/+layout.svelte -->
-<!-- 
-  This layout is now simplified. 
-  The complex grid and the OnThisPage component have been removed,
-  as the root layout now handles the right-hand sidebar globally.
--->
 <script lang="ts">
 	let { children } = $props();
 </script>
@@ -3479,110 +5175,19 @@ export const load: PageServerLoad = async ({ params }) => {
 # File: src/routes/blog/[category]/[slug]/+page.server.ts
 
 // src/routes/blog/[category]/[slug]/+page.server.ts
+
 import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
-import type { SvelteComponent } from 'svelte';
+import type { Component } from 'svelte';
 
-type PostModule = {
-	default: SvelteComponent;
-	metadata: {
-		title: string;
-		description: string;
-		date: string;
-		thumbnail?: string;
-		published?: boolean;
-		[key: string]: unknown;
-	};
-};
-
-export const load: PageServerLoad = async ({ params, url }) => {
-	try {
-		const postModule = (await import(`../../../lib/posts/${params.slug}.md`)) as PostModule;
-
-		if (postModule.metadata.published === false) {
-			error(404, { message: 'This post is not available' });
-		}
-		
-		const post = postModule.metadata;
-		const canonicalUrl = `${url.origin}/blog/${params.category}/${params.slug}`;
-
-		// Prepare the props for the SEO component
-		const seo = {
-			title: `${post.title} | SuvroGhosh.Blog`,
-			description: post.description,
-			canonicalUrl: canonicalUrl,
-			ogImageUrl: post.thumbnail ? `${url.origin}${post.thumbnail}` : `${url.origin}/images/placeholders/default.png`,
-			ogImageAlt: post.title
-		};
-
-		// Prepare the JSON-LD Article schema for the blog post [cite: 3181]
-		const schema = {
-			'@context': 'https://schema.org',
-			'@type': 'Article',
-			'headline': post.title,
-			'image': seo.ogImageUrl,
-			'datePublished': new Date(post.date).toISOString(),
-			'dateModified': new Date(post.date).toISOString(), // Assuming date is last modified date for now
-			'author': {
-				'@type': 'Person',
-				'name': 'Suvro Ghosh',
-				'url': `${url.origin}/about` 
-			},
-			'publisher': {
-				'@type': 'Organization',
-				'name': 'SuvroGhosh.Blog',
-				'logo': {
-					'@type': 'ImageObject',
-					'url': `${url.origin}/favicon.png` 
-				}
-			},
-			'description': post.description,
-			'mainEntityOfPage': {
-                 '@type': 'WebPage',
-                 '@id': canonicalUrl
-            }
-		};
-
-		return {
-			...post,
-			content: postModule.default,
-			seo,
-			schema
-		};
-	} catch (e) {
-		error(404, { message: `Could not find post: ${params.slug}` });
-	}
-};
-
-# File: src/routes/blog/[category]/[slug]/+page.svelte
-
-<script lang="ts">
-	import SEO from '$lib/components/SEO.svelte';
-	let { data } = $props();
-
-	
-	let Content = $derived(data.content);
-</script>
-
-<SEO {...data.seo} schema={data.schema} />
-
-{#if Content}
-	<Content />
-{/if}
-
-# File: src/routes/blog/[category]/[slug]/+page.ts
-
-// src/routes/blog/[category]/[slug]/+page.ts
-import { error } from '@sveltejs/kit';
-import type { PageLoad } from './$types';
-import type { SvelteComponent } from 'svelte';
-
-type PostModule = {
-	default: SvelteComponent;
-	metadata: {
-		published?: boolean;
-		[key: string]: unknown;
-	};
+type PostMetadata = {
+	title: string;
+	description: string;
+	date?: string;
+	thumbnail?: string;
+	published?: boolean;
+	keywords?: string[];
+	[key: string]: unknown;
 };
 
 type Heading = { level: number; id: string; text: string };
@@ -3598,28 +5203,29 @@ function slugify(text: string): string {
 		.replace(/-+$/, '');
 }
 
-export const load: PageLoad = async ({ params }) => {
+export const load: PageServerLoad = async ({ params, url }) => {
 	try {
-		const postModules = import.meta.glob('/src/lib/posts/*.md');
 		const postPath = `/src/lib/posts/${params.slug}.md`;
-		const postModuleLoader = postModules[postPath];
 
-		if (!postModuleLoader) {
-			error(404, { message: `Post module not found for slug: ${params.slug}` });
+		const postModules = import.meta.glob('/src/lib/posts/*.md', { import: 'metadata' });
+		const metadataLoader = postModules[postPath];
+		if (!metadataLoader) {
+			error(404, { message: `Could not find metadata for post: ${params.slug}` });
 		}
+		const post = (await metadataLoader()) as PostMetadata;
 
-		const postPromise = postModuleLoader();
+		if (post.published === false) {
+			error(404, { message: 'This post is not available' });
+		}
 
 		const postsRaw = import.meta.glob('/src/lib/posts/*.md', {
 			query: '?raw',
-			eager: true,
 			import: 'default'
 		});
-		const rawContent = postsRaw[postPath];
 
-		if (typeof rawContent !== 'string') {
-			error(404, { message: `Could not find markdown content for: ${params.slug}` });
-		}
+		const rawContentLoader = postsRaw[postPath];
+		// --- FIX: Explicitly cast the dynamically imported raw content to a string ---
+		const rawContent = (await rawContentLoader()) as string;
 
 		const headings: Heading[] = [];
 		const headingRegex = /^(##|###)\s+(.*)/gm;
@@ -3629,18 +5235,93 @@ export const load: PageLoad = async ({ params }) => {
 			headings.push({ level: match[1].length, id: slugify(text), text: text });
 		}
 
-		const post = (await postPromise) as PostModule;
+		const canonicalUrl = `${url.origin}/blog/${params.category}/${params.slug}`;
 
-		// Reverted: Always prevent access to unpublished posts
-		if (post.metadata.published === false) {
-			error(404, { message: 'This post is not available' });
-		}
+		const seo = {
+			title: `${post.title} | SuvroGhosh.Blog`,
+			description: post.description,
+			canonicalUrl: canonicalUrl,
+			ogImageUrl: post.thumbnail
+				? `${url.origin}${post.thumbnail}`
+				: `${url.origin}/images/placeholders/default.png`,
+			ogImageAlt: post.title,
+			keywords: post.keywords
+		};
+
+		const datePublished = post.date ? new Date(post.date).toISOString() : new Date().toISOString();
+		const dateModified = post.date ? new Date(post.date).toISOString() : new Date().toISOString();
+
+		const schema = {
+			'@context': 'https://schema.org',
+			'@type': 'Article',
+			headline: post.title,
+			image: seo.ogImageUrl,
+			datePublished,
+			dateModified,
+			author: {
+				'@type': 'Person',
+				name: 'Suvro Ghosh',
+				url: `${url.origin}/about`
+			},
+			publisher: {
+				'@type': 'Organization',
+				name: 'SuvroGhosh.Blog',
+				logo: {
+					'@type': 'ImageObject',
+					url: `${url.origin}/favicon.png`
+				}
+			},
+			description: post.description,
+			mainEntityOfPage: {
+				'@type': 'WebPage',
+				'@id': canonicalUrl
+			}
+		};
 
 		return {
-			...post.metadata,
-			slug: params.slug,
-			content: post.default,
-			headings
+			metadata: post,
+			headings,
+			seo,
+			schema
+		};
+	} catch (e) {
+		console.error(e);
+		error(404, { message: `Could not find post: ${params.slug}` });
+	}
+};
+
+# File: src/routes/blog/[category]/[slug]/+page.svelte
+
+<script lang="ts">
+	import SEO from '$lib/components/seo/SEO.svelte';
+	let { data }: { data: import('./$types').PageData } = $props();
+
+	let Content = $derived(data.content);
+</script>
+
+<SEO {...data.seo} schema={data.schema} />
+
+{#if Content}
+	<Content />
+{/if}
+
+
+# File: src/routes/blog/[category]/[slug]/+page.ts
+
+// src/routes/blog/[category]/[slug]/+page.ts
+
+import { error } from '@sveltejs/kit';
+import type { PageLoad } from './$types';
+import type { Component } from 'svelte';
+
+export const load: PageLoad = async ({ params, data }) => {
+	try {
+		const postModule = await import(`../../../../lib/posts/${params.slug}.md`);
+		const content = postModule.default as Component;
+
+		return {
+			content,
+			...data // Pass through all data from the server load function
 		};
 	} catch (e) {
 		console.error(e);

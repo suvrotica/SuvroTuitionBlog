@@ -1,10 +1,11 @@
 ---
-title : "I take the calcutta metro" 
-
-thumbnail : "/images/placeholders/IMG-20250727-WA0004.jpg" 
-
-category : "Life" 
-
+title: "Riding the Calcutta Metro: A Journey Through the Bowels of the City"
+description: "A raw, unfiltered account of commuting on the Calcutta Metro. A personal reflection on the crowds, the chaos, and the contradictions of a city hurtling through a dark tunnel, both literally and metaphorically."
+category: "Life"
+thumbnail: "/images/placeholders/IMG-20250727-WA0004.jpg"
+date: "2025-07-27"
+keywords: ["Calcutta Metro", "Kolkata Metro", "public transport", "city life", "social commentary", "Bengali culture", "urban decay", "misanthropy", "personal essay", "City of Joy", "Kolkata life"]
+published: true
 ---
 
 ![sleeper](/images/placeholders/IMG-20250727-WA0004.jpg) 

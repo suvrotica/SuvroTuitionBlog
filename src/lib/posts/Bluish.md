@@ -1,33 +1,39 @@
 ---
-title: "It's bluish"
-
-description: "It's bluish" 
-topic: "Life"
-category: "Bipolar Depression"
+title: "Bluish: A Poetic Sketch on Bipolar Depression"
+description: "A poignant doggerel exploring the 'bluish' hues of bipolar depression, capturing the melancholic feeling of a mind that sinks with the drink. A personal and artistic reflection from a Bengali man in Calcutta."
+category: "Bipolar Depression" 
 thumbnail: "/images/placeholders/IMG-20250724-WA0007.jpg"
+date: "2025-07-24"
+keywords: ["bipolar depression", "mental health", "Bengali poetry", "doggerel", "Calcutta", "personal reflection", "angst", "melancholy"]
+published: true
 ---
-![blue bengali man](/images/placeholders/IMG-20250724-WA0007.jpg) 
 
-<div class="display-inline">
- 
-It's bluish drab watercolor glue,<br>
-A few drinks my mood sinks.<br>
-I am just not feeling well today,<br>
-Or whenever it's me my mind thinks.<br>
-<br>
-No! Too late to start anew I tell you,<br>
-At fifty, I'm dead against always being shifty.<br>
-I can sing no song, my songs are sung,<br>
-My favorite vinyls, still gold, are hefty.<br>
-<br>
-Like sewage circling down a dank drain,<br>
-I drip downstairs on someone's head.<br>
-Annoying him forcing a look up and yell,<br>
-Makes him stab his kid bloody instead.<br>
-<br>
-Well don't worry, I'm making it up,<br>
-I'm a story too, sorry and uninteresting.<br>
-No rhyme in a doggerel, no reason to think,<br>
-My life feverishly & furiously depressing.<br>
-<br>
+![A melancholic, bluish-toned abstract drawing of a Bengali man's face](/images/placeholders/IMG-20250724-WA0007.jpg)
+
+<div class="prose-p:my-2">
+Sometimes a mood is best captured not in prose, but in the sparse lines of a poem. "Bluish" is a short doggerel that attempts to bottle the feeling of a depressive spiral, a common experience for those navigating the complexities of mental health, particularly bipolar disorder.
+</div>
+
+> It's bluish drab watercolor glue,
+> A few drinks my mood sinks.
+> I am just not feeling well today,
+> Or whenever it's me my mind thinks.
+>
+> No! Too late to start anew I tell you,
+> At fifty, I'm dead against always being shifty.
+> I can sing no song, my songs are sung,
+> My favorite vinyls, still gold, are hefty.
+>
+> Like sewage circling down a dank drain,
+> I drip downstairs on someone's head.
+> Annoying him forcing a look up and yell,
+> Makes him stab his kid bloody instead.
+>
+> Well don't worry, I'm making it up,
+> I'm a story too, sorry and uninteresting.
+> No rhyme in a doggerel, no reason to think,
+> My life feverishly & furiously depressing.
+
+<div class="prose-p:my-2">
+This piece reflects a moment of raw, unfiltered emotion—a snapshot of the internal monologue that can accompany a depressive episode.
 </div>

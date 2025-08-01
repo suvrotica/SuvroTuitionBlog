@@ -1,10 +1,11 @@
 ---
 title: "Brain Talk"
 date: "2025-07-24"
-description: "Exploring the revolutionary idea that our thoughts and memories aren't just data, but complex geometric shapes in a multi-dimensional mental space."
+description: "Our thoughts aren't just data; they might be complex geometric shapes. This post explores the revolutionary idea of modeling the mind with high-dimensional manifolds, where memories and concepts exist as intricate structures in a vast mental space."
 category: "Neuroscience and AI"
 thumbnail: "/images/placeholders/IMG-20250724-WA0003.jpg"
-
+keywords: ["neuroscience", "artificial intelligence", "manifolds", "geometry of thought", "cognitive science", "memory", "consciousness", "brain mapping", "multi-dimensional space", "neural correlates", "mind uploading"]
+published: true
 ---
 ![](/images/placeholders/IMG-20250724-WA0003.jpg) 
 
