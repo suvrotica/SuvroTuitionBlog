@@ -103,7 +103,12 @@ Lick Putin's anus or they dearly pay.<br>
 "Most-lame" very easy to blame,<br>
 Gaza the new shopping plaza—methinks.<br>
 Using Israel's hack, I fuck them on a rack,<br>
-Double penetrate the hole that stinks.<br>
+Double penetrate this hole that stinks.<br>
+<br>
+India's a dirt-poor shit brown polluted hole,<br>
+With names very hard to say.<br>
+Supporting the terrorist Pakis, <br>
+I taxed India to flagrantly gay. <br>
 <br>
 It's destined it's divine, helluva so fine,<br>
 Brown slavery by fiat without added visa pain.<br>
