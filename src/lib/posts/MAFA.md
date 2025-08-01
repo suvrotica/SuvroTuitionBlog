@@ -91,7 +91,7 @@ Not a frivolity who shits in the white house,<br>
 But in cancerous mouths waiting for a cure.<br>
 <br>
 From my cuck chair I watch, Elon's a sasquatch,<br>
-Let loose in America, his sweet bakery shop.<br>
+Let loose in America, his Indian sweat shop.<br>
 After the honey buns it's my sweet soft bum,<br>
 Puckered and ready, my pants I quickly drop.<br>
 <br>
