@@ -4,7 +4,7 @@ title : "Make America a Fuck Again (MAFA)"
 
 thumbnail : "/images/placeholders/IMG-20250728-WA0003.jpg" 
 
-category : "Doggerel" 
+category : "Doggerel-Political" 
 
 ---
 
