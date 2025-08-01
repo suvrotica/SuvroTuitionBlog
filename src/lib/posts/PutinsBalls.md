@@ -73,21 +73,21 @@ And those that suck my dick.<br>
 Ha Ha Ha Hiss Hiss Hiss<br>
 <br>
 My friends—Xi Jinping, gassy Belarusian king,<br>
-The mother of democracy and his crooks!<br>
+White-beard mother of democracy—his crooks!<br>
 The fat-ass nuclear Kim Jong Un,<br>
 But my cook I cooks, when up my ass he looks.<br>
 <br>
-My blood curdling eyes,<br>
-Will make you vomit your food<br>
-I have nuclear weapons ready<br>
-Pointed at you for general good<br>
+My reptilian blood curdling cold eyes,<br>
+Will make you vomit your infant food<br>
+I have obsolete nuclear weapons ready<br>
+Pointed at you for general goodly good<br>
 <br>
-Fear mongering works,<br>
-I write all the rules.<br>
-Fiction pairs easy with fear,<br>
-I peddle lies to fools.<br>
+Fear mongering mongrels works wonders,<br>
+I get to write all the fucking rules.<br>
+Fiction pairs with ass-fucking and fear,<br>
+I focus peddling lies only to fools.<br>
 <br>
-It pays to be an aggressor,<br>
-Make threats and commit fraud.<br>
+It pays to be an ageless aggressor,<br>
+Make constant threats and commit fraud.<br>
 When you fake shit up as you go,<br>
-You're treated like a god.<br>
+You're deified and elevated to a god.<br>
