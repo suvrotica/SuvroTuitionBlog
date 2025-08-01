@@ -107,8 +107,8 @@ Double penetrate this hole that stinks.<br>
 <br>
 India's a dirt-poor shit-brown polluted hell-hole,<br>
 With stupid names very hard to say.<br>
-With terrorist Pakistan—always been friends, <br>
-And TAX India just a puppet I play. <br>
+With terrorist pal pakistan and 25% TAX, <br>
+India my new shit pan I don't hafta pay. <br>
 <br>
 It's destined it's divine, helluva so fine,<br>
 Brown slavery by fiat plus super-visa pain.<br>
