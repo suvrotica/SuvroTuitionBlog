@@ -4,6 +4,8 @@ title : "Birthday Boy"
 
 thumbnail : "/images/placeholders/IMG-20240417-WA0003.jpg" 
 
+category : "Life" 
+
 ---
 
 ![cosmic serpent](/images/placeholders/IMG-20240417-WA0003.jpg) 
