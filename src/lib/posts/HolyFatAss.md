@@ -7,7 +7,9 @@ date: "2025-07-29"
 keywords: ["doggerel", "satirical poetry", "religious satire", "dark humor", "Bengali", "hypocrisy", "self-deprecation", "profane poetry"]
 published: true
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 
 ![Holy fat ass](/images/placeholders/IMG-20250729-WA0000.jpg) 
 
