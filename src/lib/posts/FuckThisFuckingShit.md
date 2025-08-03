@@ -7,7 +7,9 @@ date: "2024-05-17"
 keywords: ["doggerel", "profane poetry", "angry poem", "satire", "social critique", "religious hypocrisy", "rant", "dark humor"]
 published: true
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![Fuck this fucking shit](/images/placeholders/IMG-20240517-WA0030.jpg) 
 
 <br>
