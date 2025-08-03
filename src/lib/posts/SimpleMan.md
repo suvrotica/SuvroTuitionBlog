@@ -39,7 +39,7 @@ Fuck flimflammery & fairy foolishness. <br>
 Let's open our eyes wide or our ribs.<br>
 <br>
 The texture of troubling times,<br>
-And dancing our last dance.<br>
+And dancing my final dance.<br>
 I am weeping in the bengali rain,<br>
 Another trance in the pungent prance.<br>
 <br>
