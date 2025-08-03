@@ -7,6 +7,9 @@ date: "2025-07-20"
 keywords: ["ergodicity", "statistics", "time average", "ensemble average", "non-ergodic systems", "risk management", "probability", "data science", "financial markets", "Calcutta"]
 published: true
 ---
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![4 feet in filth water](/images/placeholders/erg.png)
 
 The universe, you see, has a funny way of telling its secrets. Sometimes it whispers them in the spin of a galaxy, and other times it screams them from something as humble as a street-food cart. And one of its most peculiar secrets is a five-dollar word that sounds like a medical condition: **ergodicity**.
