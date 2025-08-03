@@ -7,7 +7,9 @@ date: "2025-07-27"
 keywords: ["doggerel", "blasphemy", "religious satire", "dark humor", "profane poetry", "anti-religion", "blind faith", "cynicism", "satirical poetry"]
 published: true
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![bladder](/images/placeholders/IMG-20250727-WA0015.jpg) 
 
 <div class="display-inline">
