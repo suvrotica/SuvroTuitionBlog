@@ -23,7 +23,7 @@ See? Flowchart.
 
 **More examples?**
 
-```
+```mermaid 
 flowchart TD
     WakeUp((ঘুম থেকে উঠো / उठो)) --> BrushTeeth(Brush teeth)
     BrushTeeth --> Coffee{दूध है क्या? / Dudh ache?}
@@ -36,7 +36,7 @@ flowchart TD
 
 **Different arrows?** Of course. Some say "maybe," some say "definitely," and some just lie. It’s like listening to election promises:
 
-```
+```mermaid 
 flowchart LR
     PlanA --- PipeDreams
     Dotted -.-> Detour
@@ -47,7 +47,7 @@ flowchart LR
 
 **Subgraphs?** That’s just grouping your nonsense. Like calling the chaos of a Bengali wedding “logistics.”
 
-```
+```mermaid 
 flowchart TD
     subgraph Morning
         A1(Wake up) --> A2(Brush teeth)
@@ -64,7 +64,7 @@ flowchart TD
 
 **Styling?** Want your flowchart to look like Durga Puja pandal lighting? Knock yourself out:
 
-```
+```mermaid 
 flowchart LR
     Cha --> Shingara --> Mishti
     style Cha fill:#ffb347,stroke:#e67300,color:#000
@@ -74,7 +74,7 @@ flowchart LR
 
 And don’t forget the comments. You know, those sarcastic thoughts you had while making this? They go like this:
 
-```
+```mermaid 
 flowchart LR
     %% This is where your hopes begin
     Idea --> Excitement
