@@ -7,7 +7,9 @@ date: "2025-07-30"
 keywords: ["doggerel", "dark poetry", "profane humor", "misanthropy", "surrealism", "social critique", "cynicism", "Bengali", "personal angst"]
 published: true
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 
 ![Dim and glum](/images/placeholders/IMG-20250730-WA0010.jpg) 
 
