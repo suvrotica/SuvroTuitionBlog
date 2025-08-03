@@ -7,6 +7,9 @@ thumbnail : "/images/placeholders/IMG-20250728-WA0004.jpg"
 category : "Doggerel" 
 
 ---
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 
 ![I stoop to poop](/images/placeholders/IMG-20250728-WA0004.jpg)
 
