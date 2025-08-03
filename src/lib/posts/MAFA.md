@@ -23,6 +23,11 @@ published: true
 	href="/blog/Doggerel-Political/PutinsBalls"
 	standalone
 />
+<PostBadge
+	title="Read: Taboo"
+	href="/blog/Biology/Taboo"
+	standalone
+/>
 <br><br>
 Greedy as fuck, my shit gets stuck,<br>
 I like cunts of every holy kind.<br>
