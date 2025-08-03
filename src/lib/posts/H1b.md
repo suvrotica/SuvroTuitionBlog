@@ -7,9 +7,15 @@ date: "2025-07-26"
 keywords: ["H1B visa", "US immigration", "tech workers", "MAGA", "Indian diaspora", "American dream", "globalization", "political commentary", "work visa", "US economy", "Indian brain drain"]
 published: true
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![MAGA chasing a brown Indian](/images/placeholders/IMG-20250726-WA0010.jpg)
-
+<PostBadge
+	title="Read: On Not Ambition"
+	href="/blog/Work/NotAmbition"
+	standalone
+/>
 It may be helpful if I, as a US outsider but a former H1B, add my halfwits to this debate. And even though the temperature is tepid—the heat of displeasure having displaced populously to Trump's imagined involvement in Epstein's pedophilia ring—the matter is still hot on both sides, internally at least, if you take the rectal temperatures of the MAGA and the job-insecure *desi* segment: deep-in-debt Indians in America who can't vent either where they are or to the media back home in India. The *godi* media, as they have been pejoratively named, are always busy singing jingles about the greatness of the greatest king, Narendra Damodardas Modi, who started to reign in 2014. If I may be misconstrued as taking some side, I want to make my current disaffection for either group clear and say that my point is just this: there are things I know from almost a decade on the H1B—yes, two iterations of it—nuances that I can share.
 
 Just like the amount of melanin doesn’t proffer any advantages beyond what you ought to get at the right latitudes where it matches the slant of the sun, all supremacist claims are false, including Indian or Chinese ones. Americans should know better because the entire field of computer science, outside what Alan Turing did in the UK—the cause behind the H1B tiff, categorically not biology or chemistry or physics—evolved in the US. Including AI. 
