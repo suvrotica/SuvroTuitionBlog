@@ -8,7 +8,9 @@ keywords: ["Bhavishya Purana", "post-diction", "prophecy", "Hinduism", "Puranas"
 published: true
 ---
 
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![brahmin lecturing](/images/placeholders/IMG-20250727-WA0002.jpg) 
 
 These days there is a certain flavour of panic du jour circulating, a sort of polluting digital miasma thick with the fear of "AI slop." We envision a future—or maybe even a present—where the internet is a landfill of algorithmically generated, soul-less content. Veritable mountains of text and images, all plausible-looking yet utterly devoid of human intent or experience, created for no reason other than to exist and clog the arteries of information. We fret about this as if it were a uniquely 21st-century affliction, a problem born of silicon and sprawling server farms.
