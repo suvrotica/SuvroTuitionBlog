@@ -7,7 +7,9 @@ date: "2025-07-31"
 keywords: ["doggerel", "vampire", "scammer", "dark poetry", "macabre", "Bengali", "satire", "crime", "supernatural", "predator"]
 published: true
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![bengali vampire](/images/placeholders/IMG-20250731-WA0009.jpg) 
 
 <br>
