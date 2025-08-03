@@ -37,3 +37,8 @@ Simple men, simple lives are simple lies, <br>
 Feeble fictions—fuck these fools and fibs. <br>
 Fuck flimflammery & fairy foolishness. <br>
 Let's open our eyes wide or our ribs.<br>
+<br>
+The texture of troubling times,<br>
+And dancing our last dance.<br>
+I am weeping in the bengali rain,<br>
+Another trance in the pungent prance.<br>
