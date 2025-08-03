@@ -7,6 +7,9 @@ date: "2025-07-24"
 keywords: ["Cosmic Microwave Background", "CMB", "Big Bang", "cosmology", "physics", "Penzias and Wilson", "blackbody radiation", "Planck's law", "astrophysics", "satire"]
 published: true
 ---
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![goodly](/images/placeholders/IMG-20250724-WA0009.jpg) 
 
 Calcutta—is a city where entropy doesn't just increase—it metastasizes. Walk down rashbehari avenue in the july heat and you will not only discover spontaneous human combustion, but also the truth that the big bang wasn’t an event 13.8 billion years ago, but rather, something ongoing: a continuous, ceaselessly tooting cosmic poot whose faint echo is what astrophysicists pompously call the cosmic microwave background radiation. Fancy words for something that's essentially the universe’s weak residual flatulence from when it was a teenager.
