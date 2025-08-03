@@ -42,3 +42,8 @@ The texture of troubling times,<br>
 And dancing our last dance.<br>
 I am weeping in the bengali rain,<br>
 Another trance in the pungent prance.<br>
+<br>
+Dick pic and feelings sick,<br>
+Bright shiny eyes I was him.<br>
+Doesn't matter now where I turn,<br>
+All roads in Calcutta turn dim<br>
