@@ -52,3 +52,8 @@ Reflections and recollections all,<br>
 Shattered on liquid glass shards.<br>
 Sad we're not made of but,<br>
 Remembering old greeting cards.<br>
+<br>
+It's a stamp, a shriveled shrine,<br>
+Masculinity's most misunderstood prayer.<br>
+Going nowhere now the wind,<br>
+Mute silence in the shrill still air.<br>
