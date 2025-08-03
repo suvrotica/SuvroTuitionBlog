@@ -85,6 +85,11 @@ In an orgy of the richest white power sort.<br>
 Democracies subverted, shiny legs parted,<br>
 He who eats most white pussy, wins the sport.<br>
 <br>
+Statistics with carrots and sticks,<br>
+Sometimes up asses I suppose.<br>
+Numbers that don't agree are wrong,<br>
+It's wise to pick those I have chose.<br>
+<br>
 Gift a GREAT dark age in a bacteriophage,<br>
 From Elon's nasty Nazi ass I'm sure.<br>
 Not a frivolity who shits in the white house,<br>
