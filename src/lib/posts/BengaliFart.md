@@ -7,6 +7,9 @@ date: "2025-07-31"
 keywords: ["doggerel", "political satire", "Bengali", "Kolkata", "profane poetry", "dark humor", "social commentary", "Mamata Banerjee", "Narendra Modi", "Indian politics", "scatological humor"]
 published: true
 ---
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![farting bengali man](/images/placeholders/IMG-20250731-WA0004.jpg) 
 
 <br>
