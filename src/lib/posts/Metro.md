@@ -7,7 +7,9 @@ date: "2025-07-27"
 keywords: ["Calcutta Metro", "Kolkata Metro", "public transport", "city life", "social commentary", "Bengali culture", "urban decay", "misanthropy", "personal essay", "City of Joy", "Kolkata life"]
 published: true
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![sleeper](/images/placeholders/IMG-20250727-WA0004.jpg) 
 
 I take the train. I mean the underground one. Metro, as it's known here. I have a card, so I don't have to bother standing in line with the common fuckwads—arrogant, vindictive everyday local infestations, who won't get any smarter for some reason or just like queues or enjoy farting in each other's faces, or sniffing the godawful mildew-rich sweet sweat stench mixed with urine-ammonia. It's always a bouquet, one fucking way or another. When you stand in a queue, your intelligence drops to below the lice-infested pubis average of the morons standing in the queue. The link in the minds of the mindfucked to reality is tenuous at best, if that—overpowered by the fictions of the world, the deluge of superstitious flimflam, potpourri of obnoxious religiously adulterated mythology branded sadly as our history, and apocryphal heresay from the past, misinformation and disinformation from the present, and the ominous crystal ball gazing into the future assfuckings to come. And just to make it perfectly clear, I don't fart in public. Flatulence is an art, and I spend it with care on myself, savoring both the aroma and the sound, which for the audiophiles out there, comes out in crisp 24 bit THX digitally mastered quality. I am a connoisseur in these things.
