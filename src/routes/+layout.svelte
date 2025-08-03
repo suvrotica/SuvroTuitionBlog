@@ -11,7 +11,6 @@
 	let isMenuOpen = $state(false);
 
 	function toggleMenu() {
-		// FIX: Corrected the typo from isMenu-open to isMenuOpen
 		isMenuOpen = !isMenuOpen;
 	}
 
@@ -23,8 +22,6 @@
 		}
 	});
 
-	// Derive SEO data from the page store. This allows page-specific SEO
-	// to seamlessly override the layout defaults.
 	let seo = $derived(page.data.seo);
 	let schema = $derived(page.data.schema);
 </script>
@@ -54,7 +51,7 @@
 {/if}
 
 <div class="main-layout">
-	<div class="hidden lg:block">
+	<div class="sidebar-container hidden lg:block">
 		<Aside />
 	</div>
 

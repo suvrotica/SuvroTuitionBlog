@@ -47,7 +47,14 @@ header { @apply border-b border-neutral-300 dark:border-neutral-700; }
 header nav { @apply flex items-center justify-between p-4; }
 .site-title { @apply text-2xl text-neutral-900 subpixel-antialiased dark:text-neutral-100 font-bold font-sans; }
 
-aside { @apply w-64 flex-shrink-0 bg-neutral-100 p-4 dark:bg-neutral-900 border-r border-neutral-300 dark:border-neutral-700 overflow-y-auto; }
+/* MODIFIED: Removed overflow-y-auto */
+aside { @apply w-64 flex-shrink-0 bg-neutral-100 p-4 dark:bg-neutral-900 border-r border-neutral-300 dark:border-neutral-700; }
+
+/* ADDED: New class for the sidebar's container div */
+.sidebar-container {
+	@apply overflow-y-auto h-screen;
+}
+
 .sidebar-group:not(:last-child) { @apply mb-6; }
 .sidebar-topic { @apply mb-2 text-sm font-semibold text-neutral-600 dark:text-neutral-400 uppercase tracking-wider; word-break: break-word; }
 .sidebar-link { @apply block rounded p-2 text-neutral-700 hover:bg-neutral-200 dark:text-neutral-300 dark:hover:bg-neutral-800 transition-colors duration-150 text-sm leading-normal; }
@@ -146,4 +153,48 @@ pre.shiki { @apply p-4 rounded-lg overflow-x-auto; }
 
 .hamburger {
 	@apply z-50; /* Ensure button is above other header content */
+}
+
+/* Main container for the badge */
+.post-badge {
+	@apply inline-block relative overflow-hidden rounded-lg px-6 py-3 text-center no-underline;
+	@apply font-sans font-bold text-lg text-neutral-100;
+	@apply transition-transform duration-300 ease-in-out hover:scale-105;
+	/* A solid background for fallback and to ensure the container has a color */
+	@apply bg-neutral-800;
+	/* Ensure content is positioned correctly */
+	z-index: 1;
+}
+
+/* Pseudo-element for the animated gradient background */
+.post-badge::before {
+	content: '';
+	@apply absolute inset-0;
+	/* The grayscale "Gaussian" gradient */
+	background-image: radial-gradient(circle at 50% 50%, theme('colors.neutral.500'), theme('colors.neutral.800'));
+	/* The animation itself */
+	animation: gentle-pulse 8s ease-in-out infinite;
+	/* Position it behind the text content */
+	z-index: -1;
+}
+
+/* The keyframe animation for the gentle, looping effect */
+@keyframes gentle-pulse {
+	0% {
+		transform: scale(1.5);
+		opacity: 0.6;
+	}
+	50% {
+		transform: scale(2.5);
+		opacity: 0.9;
+	}
+	100% {
+		transform: scale(1.5);
+		opacity: 0.6;
+	}
+}
+
+/* Ensure the text itself is rendered above the pseudo-element */
+.post-badge span {
+	@apply relative;
 }

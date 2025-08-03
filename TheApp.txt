@@ -1,4 +1,4 @@
-# Context file generated on: Sunday, August 3, 2025 at 3:21:41 PM GMT+5:30
+# Context file generated on: Sunday, August 3, 2025 at 4:14:05 PM GMT+5:30
 ---
 
 # Project File Layout
@@ -88,6 +88,7 @@
 │   │       ├── MAFA.md
 │   │       ├── Metro.md
 │   │       ├── Microwave.md
+│   │       ├── Mindmap.md
 │   │       ├── Monk.md
 │   │       ├── MyFatherAndBooks.md
 │   │       ├── NegExponent.md
@@ -464,7 +465,14 @@ header { @apply border-b border-neutral-300 dark:border-neutral-700; }
 header nav { @apply flex items-center justify-between p-4; }
 .site-title { @apply text-2xl text-neutral-900 subpixel-antialiased dark:text-neutral-100 font-bold font-sans; }
 
-aside { @apply w-64 flex-shrink-0 bg-neutral-100 p-4 dark:bg-neutral-900 border-r border-neutral-300 dark:border-neutral-700 overflow-y-auto; }
+/* MODIFIED: Removed overflow-y-auto */
+aside { @apply w-64 flex-shrink-0 bg-neutral-100 p-4 dark:bg-neutral-900 border-r border-neutral-300 dark:border-neutral-700; }
+
+/* ADDED: New class for the sidebar's container div */
+.sidebar-container {
+	@apply overflow-y-auto h-screen;
+}
+
 .sidebar-group:not(:last-child) { @apply mb-6; }
 .sidebar-topic { @apply mb-2 text-sm font-semibold text-neutral-600 dark:text-neutral-400 uppercase tracking-wider; word-break: break-word; }
 .sidebar-link { @apply block rounded p-2 text-neutral-700 hover:bg-neutral-200 dark:text-neutral-300 dark:hover:bg-neutral-800 transition-colors duration-150 text-sm leading-normal; }
@@ -565,7 +573,6 @@ pre.shiki { @apply p-4 rounded-lg overflow-x-auto; }
 	@apply z-50; /* Ensure button is above other header content */
 }
 
-
 # File: src/app.d.ts
 
 // src/app.d.ts
@@ -629,58 +636,110 @@ export {};
 
 # File: src/lib/components/blog/Mermaid.svelte
 
-<script>
-    import { onMount } from 'svelte';
-    import mermaid from 'mermaid';
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import mermaid from 'mermaid';
 
-    // The Mermaid code is passed as a prop from your markdown file
-    export let code;
+	let { code }: { code: string } = $props();
 
-    // A unique ID for each diagram to prevent rendering conflicts
-    const id = `mermaid-${Math.random().toString(36).substring(2, 9)}`;
+	const id = `mermaid-${Math.random().toString(36).substring(2, 9)}`;
 
-    onMount(async () => {
-        // Initialize Mermaid with a theme (e.g., 'neutral', 'forest', 'dark')
-        // The 'base' theme is good for inheriting your site's CSS variables
-        mermaid.initialize({
-            startOnLoad: false,
-            theme: 'neutral', 
-        });
+	let isDarkMode = $state(false);
+	let el: HTMLDivElement | undefined = $state();
 
-        // Get the div element that will hold the diagram
-        const el = document.getElementById(id);
+	const lightTheme = {
+		background: '#f5f5f5',
+		primaryColor: '#e5e5e5',
+		primaryTextColor: '#171717',
+		lineColor: '#525252',
+		textColor: '#262626'
+	};
 
-        if (el && code) {
-            // Render the diagram and get the SVG code
-            const { svg } = await mermaid.render(id + '-svg', code);
-            // Place the rendered SVG inside our div
-            el.innerHTML = svg;
-        }
-    });
+	const darkTheme = {
+		background: '#262626',
+		primaryColor: '#404040',
+		primaryTextColor: '#f5f5f5',
+		lineColor: '#a3a3a3',
+		textColor: '#d4d4d4'
+	};
+
+	async function renderDiagram() {
+		if (!el || !code) return;
+		const currentThemeVars = isDarkMode ? darkTheme : lightTheme;
+		mermaid.initialize({
+			startOnLoad: false,
+			theme: 'base',
+			themeVariables: {
+				...currentThemeVars,
+				'--mermaid-font-family': '"Fira Code", monospace'
+			}
+		});
+
+		try {
+			const { svg } = await mermaid.render(`${id}-svg`, code);
+			el.innerHTML = svg;
+		} catch (e) {
+			console.error('Mermaid rendering failed:', e);
+			el.innerHTML = 'Error rendering diagram.';
+		}
+	}
+
+	onMount(() => {
+		isDarkMode = document.documentElement.classList.contains('dark');
+		renderDiagram();
+
+		const observer = new MutationObserver((mutations) => {
+			for (const mutation of mutations) {
+				if (mutation.attributeName === 'class') {
+					const newIsDarkMode = document.documentElement.classList.contains('dark');
+					if (newIsDarkMode !== isDarkMode) {
+						isDarkMode = newIsDarkMode;
+						renderDiagram();
+					}
+				}
+			}
+		});
+
+		observer.observe(document.documentElement, { attributes: true });
+
+		return () => {
+			observer.disconnect();
+		};
+	});
 </script>
 
-{#key code}
-    <div id={id} class="mermaid-diagram">
-        <pre><code>{code}</code></pre>
-    </div>
+{#key `${code}-${isDarkMode}`}
+	<div
+		bind:this={el}
+		{id}
+		class="mermaid-diagram p-4 rounded-lg bg-neutral-100 dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700"
+	>
+		<pre><code>{code}</code></pre>
+	</div>
 {/key}
 
 <style>
-    /* Optional: Add some styling for the container */
-    .mermaid-diagram {
-        display: flex;
-        justify-content: center;
-        margin: 2em 0;
-        line-height: 1; /* Fixes potential layout shifts */
-    }
-    /* Hide the preformatted code once the SVG is rendered */
-    .mermaid-diagram :global(svg) {
-        max-width: 100%;
-        height: auto;
-    }
-    .mermaid-diagram pre {
-        display: none;
-    }
+	/* 2. The `@apply` directive has been completely removed */
+	.mermaid-diagram {
+		display: flex;
+		justify-content: center;
+		margin: 2em 0;
+		line-height: 1;
+		width: 100%;
+	}
+
+	.mermaid-diagram :global(svg) {
+		max-width: 100%;
+		height: auto;
+		color: var(--mermaid-textColor, #262626);
+	}
+	:global(html.dark) .mermaid-diagram :global(svg) {
+		color: var(--mermaid-textColor, #d4d4d4);
+	}
+
+	.mermaid-diagram pre {
+		display: none;
+	}
 </style>
 
 # File: src/lib/components/blog/PopulationProjector.svelte
@@ -3514,9 +3573,9 @@ flowchart TD
 <Mermaid code={` 
 flowchart LR
     Cha --> Shingara --> Mishti
-    style Cha fill:#ffb347,stroke:#e67300,color:#000
-    style Shingara fill:#f9d423,stroke:#c9a602,color:#000
-    style Mishti fill:#ff6666,stroke:#a00,color:#fff
+    style Cha fill:#0f0307,stroke:#e67300,color:#000
+    style Shingara fill:#000423,stroke:#000,color:#000
+    style Mishti fill:#006666,stroke:#a00,color:#000
 `} />
 
 And don’t forget the comments. You know, those sarcastic thoughts you had while making this? They go like this:
@@ -4012,6 +4071,89 @@ This formula explains why your night sky isn't blazing with light; why, instead,
 In short, the cosmic microwave background is a universal embarrassment, a ghostly echo of the universe’s adolescence, when everything was acne-riddled, overheated, and desperately expanding. It's an eternal reminder, bouncing around calcutta's electromagnetic gutters, that we’re all riding the same cosmic tart poot toward eventual oblivion—where even entropy itself will grow tired and bored, and existence will yawn into nothingness.
 
 Now—if you find all this science mumbo-jumbo exhausting, go warm some leftover mutton rezala in your kitchen microwave and remind yourself: you're literally cooking dinner using the same electromagnetic waves that whisper the secrets of the universe's pimply, embarrassing adolescence. How's that for existential dread?
+
+
+# File: src/lib/posts/Mindmap.md
+
+---
+
+title: "Mindmaps"
+
+thumbnail: "/images/placeholders/IMG-20250803-WA0003.jpg"
+
+category: "Technology"
+
+---
+
+<script>
+    import Mermaid from '$lib/components/blog/Mermaid.svelte';
+</script>
+
+
+![mindmap](/images/placeholders/IMG-20250803-WA0003.jpg) 
+
+They say the shortest distance between two points is a straight line. That’s why we invented flowcharts. But then some bright spark decided that maybe, just maybe, the human brain doesn't think in straight lines. It meanders. It loops. It free-associates like a stand-up comic on mushrooms. Enter: the mindmap.
+
+A mindmap is what happens when a flowchart eats a thesaurus, grows tentacles, and starts talking about its feelings. It’s the tool for when your thoughts aren’t a pipeline but a party. Everyone’s invited. Ideas, doubts, distractions, regrets, that one memory from third grade—come on in.
+
+Now let’s get down to the technicalities.
+
+**Definition**
+At its core, a mindmap in Mermaid is just a nested list. That’s it. Indentation is your master. Indentation is your god. If you can indent a paragraph in Microsoft Word without throwing your computer out the window, you can write a mindmap.
+
+<Mermaid code={`mindmap
+    Me, trying to focus
+        A brilliant idea
+            Wait, does this already exist?
+                Existential panic
+        Another idea
+            Better than the last one?
+            Where's my coffee?
+        The original idea again
+            No longer feels original`} />
+
+Each node here is a thought, a neuron firing in the dark. “Me, trying to focus” is the root, and every child node is another mental browser tab you forgot to close.
+
+**Shapes**
+You like boxes? You like clouds? You want your thoughts shaped like a hexagon because you're feeling spicy? Good news.
+
+<Mermaid code={`mindmap
+    My Mood Today         [Just a square]
+        (A little rounded)
+        ((Trapped in a circle))
+        ))POW! Bang! Zap!(( 
+        )Daydream cloud(
+        {{Hexagone à la française}}`} />
+
+Use square brackets for squares, parentheses for rounded ones, double parens for circles, double outside-in parens for “Batman comic shout,” and curly braces for hexagons. You are now styling your thoughts. You are now a thought stylist.
+
+**Markdown & Icons**
+Yes, you can style the text. Because your ideas have feelings, and some of them are bold. Some are *softly italicized*. Some come with bling.
+
+But a word of caution: GitHub might look at your fancy Font Awesome icon and say, “Nice try, nerd.” So if you're publishing on platforms that don’t support external icon libraries, don’t be surprised when your fancy `::icon(fa fa-brain)` renders as the digital equivalent of a shrug.
+
+Still, here's how it looks if your setup supports it:
+
+<Mermaid code={`mindmap
+    Brainstorm         **Strong thought**
+        *Fleeting notion*         ::icon(fa fa-lightbulb)         ::icon(mdi mdi-coffee)`} />
+
+And now, for the final flourish: you want your mindmap to look like your thoughts at 2am during Durga Puja? With the color sense of Kolkata neon and the logic of a late-night adda? Knock yourself out:
+
+<Mermaid code={`mindmap
+    Idea Factory
+        Creativity
+            Subconscious
+                Dreams
+        Doubt
+            Impostor Syndrome
+                Late-stage Panic
+    style Idea Factory fill:#d97706,stroke:#78350f,color:#fef3c7
+    style Creativity fill:#a3e635,stroke:#4d7c0f,color:#1a2e05
+    style Doubt fill:#fca5a5,stroke:#b91c1c,color:#7f1d1d
+    style Impostor Syndrome fill:#f87171,stroke:#991b1b,color:#fff`} />
+
+No one's stopping you from making your inner chaos visible. Just remember: the mindmap is a mirror. Use it wisely, or risk staring into the abyss of your own to-do list.
 
 
 # File: src/lib/posts/Monk.md
@@ -5060,7 +5202,6 @@ export const load: ServerLoad = async () => {
 	let isMenuOpen = $state(false);
 
 	function toggleMenu() {
-		// FIX: Corrected the typo from isMenu-open to isMenuOpen
 		isMenuOpen = !isMenuOpen;
 	}
 
@@ -5072,8 +5213,6 @@ export const load: ServerLoad = async () => {
 		}
 	});
 
-	// Derive SEO data from the page store. This allows page-specific SEO
-	// to seamlessly override the layout defaults.
 	let seo = $derived(page.data.seo);
 	let schema = $derived(page.data.schema);
 </script>
@@ -5103,7 +5242,7 @@ export const load: ServerLoad = async () => {
 {/if}
 
 <div class="main-layout">
-	<div class="hidden lg:block">
+	<div class="sidebar-container hidden lg:block">
 		<Aside />
 	</div>
 
@@ -5120,7 +5259,6 @@ export const load: ServerLoad = async () => {
 		<Footer />
 	</div>
 </div>
-
 
 # File: src/routes/+layout.ts
 
