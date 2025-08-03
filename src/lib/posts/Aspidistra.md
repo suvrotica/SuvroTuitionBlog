@@ -7,7 +7,9 @@ date: "2025-07-28"
 keywords: ["Aspidistra", "cast-iron plant", "houseplants", "botany", "Victorian era", "satire", "dark humor", "gardening", "resilience", "plant care"]
 published: true
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![Head in Aspidistra](/images/placeholders/IMG-20250728-WA0000.jpg) 
 
 So, there it sits, the sanctimonious aspidistra—the smug bastard of the botanical world—proudly ugly, imperiously indestructible, the perfect green hostage taken by Victorians to silently mock humanity's hubris. Named with the poetic grace of constipation (`aspid` from Greek meaning "shield," and `istra` probably chosen by a drunken botanist tripping over his own Victorian decorum), it guards the corners of bourgeois bengali drawing rooms with an uncanny ability to survive neglect, disdain, and the radioactive blasts of familial arguments that vaporize lesser flora. This plant, whose charm resembles that of a pothole festering after Calcutta monsoons, manages to straddle the line between life and lifelessness with a zen-like smugness. I have none of the bullshit—the arguments, the family, the aspidistra, the drawing room, or the bourgeoisie bengaliness. All weed really—one way or the other—have been bad for me. I want a cactus! This: Crown of Thorns. 
