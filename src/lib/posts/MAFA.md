@@ -13,13 +13,11 @@ published: true
 <script>
     import PostBadge from '$lib/components/ui/PostBadge.svelte';
 </script>
-
 <PostBadge
 	title="Read: The H1B Visa"
 	href="/blog/Work/H1b"
 	standalone
 />
-
 <br><br>
 Greedy as fuck, my shit gets stuck,<br>
 I like cunts of every holy kind.<br>
