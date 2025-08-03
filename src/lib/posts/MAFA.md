@@ -14,17 +14,17 @@ published: true
     import PostBadge from '$lib/components/ui/PostBadge.svelte';
 </script>
 <PostBadge
-	title="Read: The H1B Visa"
+	title="The H1B Visa"
 	href="/blog/Work/H1b"
 	standalone
 />
 <PostBadge
-	title="Read: Putin's Balls"
+	title="Putin's Balls"
 	href="/blog/Doggerel-Political/PutinsBalls"
 	standalone
 />
 <PostBadge
-	title="Read: Taboo"
+	title="Taboo"
 	href="/blog/Biology/Taboo"
 	standalone
 />
