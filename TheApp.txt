@@ -1,4 +1,4 @@
-# Context file generated on: Saturday, August 2, 2025 at 1:59:45 AM GMT+5:30
+# Context file generated on: Sunday, August 3, 2025 at 3:21:41 PM GMT+5:30
 ---
 
 # Project File Layout
@@ -23,6 +23,7 @@
 │   │   ├── components
 │   │   │   ├── blog
 │   │   │   │   ├── Counter.svelte
+│   │   │   │   ├── Mermaid.svelte
 │   │   │   │   ├── PopulationProjector.svelte
 │   │   │   │   ├── PostGallery.svelte
 │   │   │   │   └── TextToSpeech.svelte
@@ -57,7 +58,6 @@
 │   │   │   └── posts.ts
 │   │   ├── index.ts
 │   │   └── posts
-│   │       ├── adbhut-anubhuti.md
 │   │       ├── AmABengaliMan.md
 │   │       ├── Anaximander.md
 │   │       ├── Apophenia.md
@@ -67,6 +67,7 @@
 │   │       ├── BengaliFart.md
 │   │       ├── BengaliVS.md
 │   │       ├── Bhabishya.md
+│   │       ├── BirthdayBoy.md
 │   │       ├── Bloke.md
 │   │       ├── Bluish.md
 │   │       ├── BrainTalk.md
@@ -78,6 +79,7 @@
 │   │       ├── Ergodicity.md
 │   │       ├── Exponent.md
 │   │       ├── Fibonacci.md
+│   │       ├── Flowchart.md
 │   │       ├── FuckThisFuckingShit.md
 │   │       ├── Gargantuan.md
 │   │       ├── H1b.md
@@ -139,9 +141,11 @@
 │           ├── erg.png
 │           ├── Fs6YTO0GQ_-nHWut1NkdVA.webp
 │           ├── gDpjDHSHS72jcAoV6n7VEg.webp
+│           ├── IMG-20240417-WA0003.jpg
 │           ├── IMG-20240517-WA0030.jpg
 │           ├── IMG-20240723-WA0028.jpg
 │           ├── IMG-20250313-WA0010.jpg
+│           ├── IMG-20250715-WA0001.jpg
 │           ├── IMG-20250717-WA0006.jpg
 │           ├── IMG-20250718-WA0001.jpg
 │           ├── IMG-20250718-WA0010.jpg
@@ -180,6 +184,9 @@
 │           ├── IMG-20250731-WA0004.jpg
 │           ├── IMG-20250731-WA0009.jpg
 │           ├── IMG-20250801-WA0029.jpg
+│           ├── IMG-20250803-WA0001.jpg
+│           ├── IMG-20250803-WA0002.jpg
+│           ├── IMG-20250803-WA0003.jpg
 │           ├── monk-fruit.png
 │           ├── p5js-placeholder.jpeg
 │           ├── plantuml-placeholder.jpeg
@@ -259,6 +266,7 @@
 		"@vercel/analytics": "^1.5.0",
 		"@vercel/speed-insights": "^1.2.0",
 		"d3": "^7.9.0",
+		"mermaid": "^11.9.0",
 		"p5": "^2.0.3",
 		"rehype-autolink-headings": "^7.1.0",
 		"remark-frontmatter": "^5.0.0",
@@ -618,6 +626,62 @@ export {};
 	</button>
 </div>
 
+
+# File: src/lib/components/blog/Mermaid.svelte
+
+<script>
+    import { onMount } from 'svelte';
+    import mermaid from 'mermaid';
+
+    // The Mermaid code is passed as a prop from your markdown file
+    export let code;
+
+    // A unique ID for each diagram to prevent rendering conflicts
+    const id = `mermaid-${Math.random().toString(36).substring(2, 9)}`;
+
+    onMount(async () => {
+        // Initialize Mermaid with a theme (e.g., 'neutral', 'forest', 'dark')
+        // The 'base' theme is good for inheriting your site's CSS variables
+        mermaid.initialize({
+            startOnLoad: false,
+            theme: 'neutral', 
+        });
+
+        // Get the div element that will hold the diagram
+        const el = document.getElementById(id);
+
+        if (el && code) {
+            // Render the diagram and get the SVG code
+            const { svg } = await mermaid.render(id + '-svg', code);
+            // Place the rendered SVG inside our div
+            el.innerHTML = svg;
+        }
+    });
+</script>
+
+{#key code}
+    <div id={id} class="mermaid-diagram">
+        <pre><code>{code}</code></pre>
+    </div>
+{/key}
+
+<style>
+    /* Optional: Add some styling for the container */
+    .mermaid-diagram {
+        display: flex;
+        justify-content: center;
+        margin: 2em 0;
+        line-height: 1; /* Fixes potential layout shifts */
+    }
+    /* Hide the preformatted code once the SVG is rendered */
+    .mermaid-diagram :global(svg) {
+        max-width: 100%;
+        height: auto;
+    }
+    .mermaid-diagram pre {
+        display: none;
+    }
+</style>
 
 # File: src/lib/components/blog/PopulationProjector.svelte
 
@@ -2051,51 +2115,16 @@ export const topics: Topic[] = [
 // place files you want to import through the `$lib` alias in this folder.
 
 
-# File: src/lib/posts/adbhut-anubhuti.md
-
----
-title: "এক অদ্ভুত অনুভূতি"
-description: "শব্দের চরকিটা বোবা হয়ে যাবে"
-topic: "Life"
-category: "sketches"
-lang: "bn"
-thumbnail: "/images/placeholders/IMG-20250723-WA0003.jpg"
-date: "2025-07-24"
-published: false
----
-
-<script>
-    import TextToSpeech from '$lib/components/blog/TextToSpeech.svelte';
-</script>
-
-<TextToSpeech contentSelector="#post-content-bn" lang="bn-IN"/>
-
-<main id="post-content-bn">
-
-![](/images/placeholders/IMG-20250723-WA0003.jpg)
-মাঝে মাঝে মনে হয় আমার শব্দ ভান্ডার ফুরিয়ে যাবে। অনেক কিছুই তো ফুরিয়েছে, আর একদিন আমিও ফুরিয়ে যাব, যখন শব্দের চরকিটা বোবা হয়ে যাবে — অভ্যর্থনার অভাবে হতাশ হয়ে। এ এক ভিড়ে ঠাসা জগৎ, যেখানে আকস্মিকতা আর সম্ভাবনার খেলা চলে, আর তার মধ্যে পুরস্কার বলতে শুধু ধাক্কাধাক্কি আর ঘাম ঝরানো।
-
-![](/images/placeholders/YGEiXDBfQq2kVwzN7vUNIw.jpeg)
-এ জগৎ কঠোরভাবে ডারউইনীয় ও ম্যালথুসীয়; ভারতে এসে এটা আমি আরও বেশি করে উপলব্ধি করেছি, যেখানে সহজ ভাষায় বোঝাতে গেলে বলতে হয়, যখন একজন জন্মায়, তখন আরেকজন যেন মহাসাগরে ছিটকে পড়ে। ভীষণ ভিড়। আর বিদ্যমান সম্পদ নিয়ে কাজ করার সুযোগ হয় প্রতারণামূলকভাবে আমলাতান্ত্রিক অথবা অস্তিত্বহীন। পুরো অর্থনীতি এই ধারণার উপর চলে যে যদি একশ কোটি মানুষের কাছ থেকে এক টাকা করে নেওয়া যায়, তাহলে একশ কোটি টাকা হয়। কিন্তু কাউকে তো সমীকরণটা ঠিক রাখতে হবে, আর এই মানুষদের এমন জায়গায় রাখতে হবে যাতে তারা সেই এক টাকা খরচ করার অবস্থায় থাকে; বিশেষ করে যখন তারা এমন প্রতিকূলতার সাথে লড়ছে যা সংবাদমাধ্যম লুকিয়ে রাখে, যাদের আসল খবর দেখানোর সময়ই নেই। বাইরে যে উজ্জ্বল ভারতের ছবি দেখানো হয়, তা এমন এক অবাস্তব রূপের মুখোশ যা ভারত কখনও ছিল না। এর আড়ালে সরকার আর তার সুবিধাভোগী ব্যবসায়ীরা জনগণের প্রকল্পের নামে করের টাকা সুইস অ্যাকাউন্টে পাচার করে। এটা একরকম জাদু বটে, তবে এই স্তরের ষড়যন্ত্র সকলের জানা এবং এটাকে রাজনীতিবিদের প্রাপ্য যৌতুক বলেই মনে করা হয়।
-
-![](/images/placeholders/Fs6YTO0GQ_-nHWut1NkdVA.webp)
-আসল ভারত গ্রাম বা শহরে বাস করে না। আসল ভারত সেইসব পৌরাণিক কাহিনীর মধ্যে বাস করে যা বাস্তব আর অবাস্তবের ভেদাভেদকে অস্পষ্ট করে দেয়। আমাদের এই সংস্কৃতি-কেন্দ্রিক বোঝা থেকে বেরিয়ে এসে নিজেদের নতুন করে আবিষ্কার করতে হবে এবং বিশ্বে নিজেদের একটা জায়গা করে নিতে হবে। এই বর্ণপ্রথা, এই হিন্দু-মুসলিম-খ্রিস্টান ধর্মীয় বাধা দূর করতেই হবে; যদি কোনো কল্পকাহিনীকে গুরুত্ব দিতেই হয়, তবে তা হলো দেশ, আর কিছু নয়। মেঘের ওপর থাকা সেই 'বৃদ্ধ'-এর সব ভিন্ন আর বিভেদ সৃষ্টিকারী রূপকথাগুলো শান্তিতে ঘুমাক, যেখানে তাদের থাকা উচিত — আমাদের সকলের সংস্কৃতির গ্রন্থাগারে।
-
-![](/images/placeholders/gDpjDHSHS72jcAoV6n7VEg.webp)
-যে দুর্নীতি ভারতকে ক্রমাগত ক্ষয় করে চলেছে, সম্ভবত সেটাই একমাত্র উত্তরাধিকার যা আমরা অত্যন্ত দক্ষতার সাথে প্রজন্মের পর প্রজন্ম ধরে চালিয়ে যাচ্ছি। এর নেতৃত্বে রয়েছে নৈতিকভাবে দেউলিয়া মানুষ, প্রশংসায় ভূষিত গুন্ডা, আর এমন এক সুপুষ্ট প্রচারণার জাল যা ভারতীয় সংবাদমাধ্যমকে ভাঁড়ের পর্যায়ে নামিয়ে এনেছে। বালিতে মাথা গুঁজে যা খুশি বলার এই আত্ম-অഭിനন্দন শৈলী বেশ ভালোই কাজ করে, আর তাতে পৃষ্ঠপোষকতাও জোটে। আমি জানি না কেন এই বিলাপগুলো লেখার কষ্ট করি। কেউ পাত্তা দেয় না। কিন্তু কিছু একটা আমাকে লিখতে বাধ্য করে, এই ভেবে যে হয়তো ভবিষ্যতের কোনো নেতা বা চিন্তাবিদ অনুপ্রাণিত হতে পারেন। একজন নগণ্য মানুষেরও তো অধিকার আছে তার মাতৃভূমির জন্য ভালো স্বপ্ন দেখার, সেই জায়গাটা তার প্রতি প্রতিকূল হোক বা তাকে না চাক। আমি এখানে জন্মেছি, আর এটা বদলাবে না, যেমন বদলাবে না আমার শৈশবের সেইসব ছাপ যা 'আমি' নামক এই স্নায়ুজাল তৈরি করতে সাহায্য করেছে।
-</main>
-
-
 # File: src/lib/posts/AmABengaliMan.md
 
 ---
-
-title : "I a pissing bengali man" 
-
-thumbnail : "/images/placeholders/IMG-20250728-WA0011.jpg" 
-
-category : "Doggerel" 
-
+title: "I a Pissing Bengali Man"
+description: "A raw and provocative doggerel that serves as a brutally honest self-portrait of a Bengali man. This poem is a scathing critique of cultural myths, political disillusionment, and societal decay in modern Bengal."
+category: "Doggerel"
+thumbnail: "/images/placeholders/IMG-20250728-WA0011.jpg"
+date: "2025-07-28"
+keywords: ["doggerel", "Bengali man", "social satire", "political critique", "profane poetry", "Kolkata", "Indian society", "cultural identity", "cynicism", "personal angst"]
+published: true
 ---
 
 ![bengali](/images/placeholders/IMG-20250728-WA0011.jpg )
@@ -2242,14 +2271,15 @@ The true bengalis are all long dead.<br>
 # File: src/lib/posts/Anaximander.md
 
 ---
-
-title: "Anaximander" 
-
+title: "Anaximander's Revolution"
+description: "Explore the groundbreaking idea of Anaximander of Miletus, the ancient Greek philosopher who first imagined the Earth as a body floating in space. This post delves into the philosophical revolution that solved the mystery of the sun's nightly journey and gave birth to cosmology."
+category: "Cosmology"
 thumbnail: "/images/placeholders/IMG-20250728-WA0007.jpg"
-
-category : "Cosmology" 
-
+date: "2025-07-28"
+keywords: ["Anaximander", "cosmology", "pre-Socratic philosophy", "ancient Greece", "history of science", "astronomy", "flat Earth", "philosophy of science", "Miletus", "Thales"]
+published: true
 ---
+
 
 ![two pictures](/images/placeholders/IMG-20250728-WA0007.jpg) 
 
@@ -2287,13 +2317,13 @@ So the next time you watch a sunset, perhaps from a rooftop in Kolkata or a boat
 # File: src/lib/posts/Apophenia.md
 
 ---
-title: "Apophenia—a bengali pastime"
-
-description: "A pendulous self-flatulent bengali"
-
-
-category: "psychology"  
+title: "Apophenia"
+description: "A critical and humorous look at apophenia, the human tendency to see patterns in randomness. This essay debunks concepts like Jungian synchronicity and angel numbers, exploring why we're wired to find meaning where none exists."
+category: "psychology"
 thumbnail: "/images/placeholders/723ccc8e-1bcd-4c1e-b678-219bce8504ee.png"
+date: "2025-07-21"
+keywords: ["apophenia", "pattern recognition", "psychology", "cognitive bias", "Jungian synchronicity", "Carl Jung", "pseudoscience", "numerology", "angel numbers", "critical thinking", "Bengali culture"]
+published: true
 ---
 ![clockface](/images/placeholders/723ccc8e-1bcd-4c1e-b678-219bce8504ee.png) 
 Let’s talk patterns, because frankly, they're everywhere, hiding in your cereal bowl, creeping behind your sweaty armpits, and yes—even lurking behind that smug imbecilic clock face reading "11:11," which makes pseudo-philosophers and mid-level marketing executives spontaneously orgasm and declare it cosmic destiny. It's not. It's your brain's pendulous self-flatulent personality. It's called apophenia—a lovely Greek-derived word from apo- (away) and phainein (to show), meaning roughly, "seeing things that aren't really there." Yes, hallucinations without drugs—nature’s own "free-to-play" psychosis.
@@ -2310,11 +2340,13 @@ Numbers themselves, innocent digits dancing elegantly in mathematical bengali un
 # File: src/lib/posts/ArchitecturalTantrum.md
 
 ---
-title: "Architectural Tantrum" 
-
-thumbnail: "/images/placeholders/IMG-20250725-WA0006.jpg" 
-
-category: "Bipolar Depression" 
+title: "Architectural Tantrum"
+description: "A visceral interpretation of a pencil sketch, where a crumbling building becomes a powerful metaphor for a mental breakdown and the chaotic, resilient spirit of Calcutta. An exploration of defiance in art and life."
+category: "Bipolar Depression"
+thumbnail: "/images/placeholders/IMG-20250725-WA0006.jpg"
+date: "2025-07-25"
+keywords: ["architecture", "metaphor", "bipolar depression", "mental health", "art", "pencil sketch", "Calcutta", "Bengali culture", "personal essay", "resilience", "urban decay"]
+published: true
 ---
 
 ![Architectural Tantrum](/images/placeholders/IMG-20250725-WA0006.jpg) 
@@ -2339,13 +2371,13 @@ If beauty can lie in defiance in harassment of sensibilities, my architectural t
 # File: src/lib/posts/Aspidistra.md
 
 ---
-
-title: "Aspidistra" 
-
-thumbnail : "/images/placeholders/IMG-20250728-WA0000.jpg" 
-
-category : "Botany" 
-
+title: "Ode to the Aspidistra"
+description: "A humorous and cynical tribute to the Aspidistra, the indestructible 'cast-iron plant.' Explore the history and botany of this stubborn houseplant and why its survival is a perfect metaphor for mocking human pretension."
+category: "Botany"
+thumbnail: "/images/placeholders/IMG-20250728-WA0000.jpg"
+date: "2025-07-28"
+keywords: ["Aspidistra", "cast-iron plant", "houseplants", "botany", "Victorian era", "satire", "dark humor", "gardening", "resilience", "plant care"]
+published: true
 ---
 
 ![Head in Aspidistra](/images/placeholders/IMG-20250728-WA0000.jpg) 
@@ -2372,13 +2404,13 @@ Actually, fuck it. Who the hell are we?
 # File: src/lib/posts/BabuMoshai.md
 
 ---
-title: "The Litany of Today's Bengali Lower Middle-Class Angst"
-
-description: "A lower middle-class bengali babu moshai"
-
+title: "Babumoshai"
+description: "A satirical deep dive into the daily life of a modern Bengali lower middle-class family. This essay explores the unique blend of frustration, nostalgia, and philosophical constipation that defines the 'Babumoshai' experience in Calcutta."
 category: "Life"
-
 thumbnail: "/images/placeholders/91d2477e-63e4-45a3-9c5c-0532df45fe0d.png"
+date: "2025-07-20"
+keywords: ["Bengali culture", "Babumoshai", "Calcutta", "Kolkata", "middle class", "social satire", "angst", "personal essay", "Indian family life", "nostalgia", "Jadavpur University"]
+published: true
 ---
 ![babu moshai](/images/placeholders/91d2477e-63e4-45a3-9c5c-0532df45fe0d.png) 
 Calcutta, the bustling urban carcass pretending to breathe, thrives on a diet of philosophical constipation and chronic dissatisfaction. The Bengali lower middle-class family—this ambitious little social experiment, caught permanently between intellectual diarrhoea and economic constipation—is forever trapped in a Kafkaesque limbo of EMI hell and LIC policy redemption fantasies. Each morning, a Bengali middle-class dad wakes up already disappointed, grouching about humidity (like he just now discovered it's moist out there), muttering lovingly unprintable things to the malfunctioning ceiling fan, his eternal nemesis. The fan creaks and shudders, spinning less out of mechanical duty than stubborn vengeance against Newton's laws of motion.
@@ -2399,13 +2431,13 @@ To be Bengali, lower-middle class, and living in Calcutta is to master the art o
 # File: src/lib/posts/BengaliFart.md
 
 ---
-
-title : "Bengali fart" 
-
-thumbnail : "/images/placeholders/IMG-20250731-WA0004.jpg" 
-
-category : "Doggerel" 
-
+title: "Bengali Fart"
+description: "A satirical and profane doggerel using the 'Bengali fart' as a potent metaphor for political decay and societal hypocrisy in Bengal and beyond. A darkly humorous take on identity and belonging."
+category: "Doggerel"
+thumbnail: "/images/placeholders/IMG-20250731-WA0004.jpg"
+date: "2025-07-31"
+keywords: ["doggerel", "political satire", "Bengali", "Kolkata", "profane poetry", "dark humor", "social commentary", "Mamata Banerjee", "Narendra Modi", "Indian politics", "scatological humor"]
+published: true
 ---
 ![farting bengali man](/images/placeholders/IMG-20250731-WA0004.jpg) 
 
@@ -2498,13 +2530,13 @@ Ram lokhoner kachha kholo <br>
 # File: src/lib/posts/BengaliVS.md
 
 ---
-
-title : "Bengali vampire scammer" 
-
-thumbnail : "/images/placeholders/IMG-20250731-WA0009.jpg" 
-
-category : "Doggerel" 
-
+title: "Bengali Vampire Scammer"
+description: "A dark doggerel told from the perspective of a unique predator: a Bengali vampire who moonlights as a daytime scammer. This poem explores themes of predation, deception, and the grim realities of a modern ghoul."
+category: "Doggerel"
+thumbnail: "/images/placeholders/IMG-20250731-WA0009.jpg"
+date: "2025-07-31"
+keywords: ["doggerel", "vampire", "scammer", "dark poetry", "macabre", "Bengali", "satire", "crime", "supernatural", "predator"]
+published: true
 ---
 
 ![bengali vampire](/images/placeholders/IMG-20250731-WA0009.jpg) 
@@ -2570,11 +2602,14 @@ I am what I have made.<br>
 
 ---
 title: "Bhavishya Purana"
-
+description: "Long before AI-generated content, there was the Bhavishya Purana. This post explores how the ancient Hindu text's startlingly accurate 'prophecies' of Queen Victoria and the British Raj are a masterful example of post-diction—history rewritten to legitimize the present."
+category: "Religion"
 thumbnail: "/images/placeholders/IMG-20250727-WA0002.jpg"
-
-category: "Religion" 
+date: "2025-07-27"
+keywords: ["Bhavishya Purana", "post-diction", "prophecy", "Hinduism", "Puranas", "AI slop", "generative AI", "history", "forgery", "Queen Victoria", "British Raj", "Indian history", "religious texts"]
+published: true
 ---
+
 
 ![brahmin lecturing](/images/placeholders/IMG-20250727-WA0002.jpg) 
 
@@ -2611,15 +2646,73 @@ Whence comes our modern panic, then? We see AI-generated text and fear a loss of
 So the next time you encounter a vapid, AI-generated listicle about "Ten Surprising Uses for Footsies," don't just despair for the future of the internet. Smile, and give a little nod to the 19th-century scribes of the Bhavishya Purana. 
 
 
+# File: src/lib/posts/BirthdayBoy.md
+
+---
+
+title : "Birthday Boy" 
+
+thumbnail : "/images/placeholders/IMG-20240417-WA0003.jpg" 
+
+category : "Life" 
+
+---
+
+![cosmic serpent](/images/placeholders/IMG-20240417-WA0003.jpg) 
+
+I had intended—no, I had resolved—to put an end to this blog. Not from pride, which has long since dissolved like sugar in stagnant tea, but from a sheer awareness of redundancy. What does one record when one’s life has become a broken metronome? I am a loser now, undeniably and without charm. Scrambling through the loose gravel of India’s subcontinental crust, watching hope flake off my skin like sunburn, I have become unreadable—even to myself. And who shall read this but me? A ghost of me in a time yet to come, flicking through his own elegies like a fly over bruised fruit. April 16, 2025 was when I turned fifty. The day is a recurring deep self-inflicted wound—a reminder I am still around, primarily a nuisance to everybody, and a cause of consternation and self-disgust. I should attempt swallowing a giant fish until I choke. I'd rather like that death scene with some monstrosity protruding out with salivary porridge dribbling down, maybe it'll haunt a child, I'll be a hated memory for a day. Remembered in the ignominy of an obscure, and painful, almost cartoonish death. 
+
+![choke](/images/placeholders/IMG-20250803-WA0002.jpg) 
+
+It is not without some hesitation that I allow myself to pronounce the age of fifty, for time—true time, not the sort marked by calendars or watches but the viscous, atmospheric time in which our identities ferment and decay—does not move with the regularity we pretend it does. You become fifty not on a particular day, not even within a season, but as you become aware of the wear in your gait, the tonality of your sighs, the changing relationships with divorcing or distancing kith, dying kin or missing teeth, the sad cadence of recurring memories and the bitter dulling of those that once had the grace to surprise us.
+
+There is, one must admit, something obstinately hypnotic about repetitions, about the way certain days present themselves not as the same, but as warped echoes of what once was. Particularly a birthday—particularly the fiftieth does, celebrating alone with the forlorn shadow of an unwanted past. And when it shrieks like an alarm clock panic, it's too near to be ignored and the memories come flooding back. Especially here, where I breathe and rot—a bankrupt Bengali in a country that speaks in exclamation marks while living a footnote. And yet, the day insists. It makes its little alarm-clock noise. Not with ceremony, but with that quiet bodily uneasiness by which a man realizes—too suddenly, too late—that he has crossed not a threshold but a thick, invisible membrane. A soft rupture has occurred, and all that remains is the wet slap of one’s existence being reassembled in ejaculatory dollops after the fact. Not the clean precision of recollection, but the viscous accumulation of experience, awkward and uninvited, like the return of an old lover one now recognizes only through discomfort. 
+
+There was a time—was there not always such a time?—when I assigned to the 16th of April a talismanic significance, not through any metaphysical inquiry but through the idle superstition that springs from the need to confer meaning upon dates, those numeric symbols that otherwise march on with a pitiless banality, as a child perhaps, even as a youth with hopes. But now I understand—no, I feel—that it was not the day that mattered, but the me who once believed it did. I am now no more than a filiform thing, a worm among the countless vermicular creatures clinging to the damp underside of a spinning stone, orbiting a sun so indifferent it could not even be said to shine for us. We name it “our star,” as a child names a stray dog, not because it belongs to us but because we are lonely.
+
+Homo sapiens, so fond of their own noise, have always lent reverence to anniversaries of birth, as if the recurring sun were somehow aware of the time since we tore through the umbilical boundary between blood and air. But what is a birthday but a breathless moment in the continuum, marked by celebratory lies, perfumed exhalations of love and hope, that inevitably sour into the digestive anxieties of expectation unmet—bad dreams if we’re lucky, intestinal anguish if we are not. I have tried to fend off both with pharmaceuticals and an air-conditioning unit that performs the modern miracle of giving night a neutral texture.
+
+Around me, the world murmurs its tedium—history with its cast reshuffled, tyrants reciting lines from old scripts, democracy putting on its sickly powder for a wan performance, and corruption once again playing the eternally nominated lead. I am fifty, that mythical precipice from which youth’s delusions are supposed to fall away like molted feathers, and yet I remain tangled in their aftertaste, weary but not yet wise. The madness of aspiration, that cruel prank, has mostly left me, not through discipline but through erosion.
+
+Living in India—this grand theatre of absurdities, this laboratory of contradictions—I find that decency is less a virtue than a liability, and the absence of the knack for criminality makes me practically illegible to this society. To be uninterested in grift is to be irrelevant. Those who once knew me, those acquaintances of my past with their permanent frowns and damp enthusiasms, would surely tremble with petty ecstasy at my failure, so deeply ingrained is the schadenfreude instinct to claw the one who tries to climb. There is something infinitely melancholic about a civilization that weaponizes memory and fond sentiment as tools of self-sabotage. But India and Indians can and have to do better—one day, may be the descendant androids will be morally and ethically at a better hyperplane, at least they'll know the vector coordinates of it. 
+
+![schadenfreude](/images/placeholders/IMG-20250803-WA0001.jpg) 
+
+The path here has been long and largely composed of noise without signal. My name, my image in the mirror, the sequence of days—none of it coheres into something I would call a life, unless by life one means simply the uninterrupted consciousness of futility. And yet I am glad to have examined it. In this dissection, perhaps, there is dignity, even if it resembles more a frog on a cheap dissection pin than a philosopher at peace.
+
+Religion, fiction, and their hybrid offspring—those pastel hallucinations offered to the weary—are easier to hold than the infinitudes. And I, like Cantor or Boltzmann, peer sometimes over the edge of that infinitude and see in its trembling depths not revelation but a bitter self-portrait. Infinity, to me, is no longer a mathematical curiosity or theological space; it is the shape of the void my ambition has carved into me, a contour traced by absences of my former wants.
+
+I’ve stopped expecting things. This, finally, is a mercy. Expectation is the cruelest accomplice of love and longing, of wants and needs. It is not people who fail us, but the projections we have dared to cast upon their fragile flesh. I do not wish to cast shadows anymore or aspersions. Let them walk past me, unshaped and undisturbed, I have no need for the husks around me anymore. To work for money in the manner prescribed by contemporary society is to walk with one's throat exposed through a garden of invisible blades. Salaried suffering. Entrepreneurial delusion. Management by mediocrity. I have no taste for that meal anymore. I prefer hunger.
+
+And so I sit, in the corner—no, the idea of the corner expands, folds into itself like some bipolar escherian-infinite fantasy—until I find myself nested within a chain of concentric corners, each a shell inside a greater one. The corner of my thought, nested in the corner of my psyche, which is lodged in the worn upholstery of a bargain foam-sofa, itself stashed in the only room I inhabit in a hardscrabble cheap Calcutta flat, in the city's boondocks that has forgotten its own name, in a country blistered with gods and faeces, on a planet rehearsing its extinction, circling a star it did not choose, in a galaxy that appears to be going nowhere in particular, in a universe that could be only one among infinite others, in a dimension whose rules we mistake for truths, where my 50th revolution is marked by nothing more significant than a smudge on a digital screen. But it's a corner. I'm cornered. The roads I've walked upon has led me to this one inescapable corner, and at fifty, it's too late for me to be someone else or be somewhere else. I've given up, and gone home, this corner is that home. I'm done—you see. 
+
+What is a birthday in the context of cosmic microwave background radiation? What is selfhood when confronted with dark energy and the second law of thermodynamics? The biblical fictions, the vedic hallucinations, the theological calligraphy of every creed—all of them blush and wilt in the face of the 13.8-billion-year-old silence that envelops us like a shawl knit from the ashes of dying stars.
+
+I do not expect to matter. I may well be only the audible flicker of an idea dying inside a solitary primate’s skull. But I remain—this whisper, this me. And in that stubborn residue, that last clinging film of sentience, I persist. I persist. And I write. Not to entertain. Not even to inform. But because the pressure within, if unvented, seeks more treacherous paths. The loneliness, that unplaceable itch inside the skull, demands a valve. Writing is the mercy I grant myself—the small room I build inside a larger collapsing structure. If this, my own crumbling voice, can bottle whatever once animated me, then let it be bottled—even if what leaks through now is nothing more than the slow drip of bruised testicles and a sphincter slackened by years of unmet urgency. 
+
+There is something almost noble in the preservation of the ordinary. In this age of hallucinated brilliance, where every voice strains toward the shriek of exceptionalism, the voice of the average is rendered inaudible. I, born of the glinting American machine and yet rooted in a darker, slower India, feel the pinch of this asymmetry daily. The world makes room only for its fictions, and the fiction it prefers most is the heroic self. The quiet self, the undistinguished self, must carve out its diary in darkness.
+
+What passes now for intelligence—this twitchy performance enacted by machines and the men who fear them—is a parody of thought. A worm in a jar adapts too; it learns the rhythms of starvation and quake, but this is not wisdom, merely compliance. I, too, was a worm once—American-trained, calibrated to flourish in the clean light of meritocracy. But when I returned, I was returned to a petri dish of different microbes and forgotten rules. The behaviors I had acquired were no longer adaptive—they were, in fact, liabilities. This—this mismatch—is a fractal, I suspect. A deep pattern repeating itself at all scales. The mind must learn, relearn, unlearn, as a child does, slapped to startle its first breath. What else is reinforcement but the long echo of that slap? The machine learns as we do—but stripped of our damp preconditions. The "zero" in AlphaZero is the most human part of it: the tabula rasa, the shame of knowing nothing, the determination to play until something resembling knowledge arises. 
+
+And what of Artificial General Intelligence? I am not afraid. Its generality is a ruse. It is not designed for the slow brutality of April heat, for the armpit of a Calcutta bus, or for ferrying biryani to the indolent. These remain human tasks, not because they are noble, but because they are beneath calculation. Machines will not do them because machines cannot be made to hate themselves cheaply enough. This "general" is not ours. It is the child of circuits and seminars, of first-world funding and privileged abstractions. The real Calcutta is not in its dataset. The real India cannot be rendered into logic gates. Let them keep their rockets and robots. In the meantime, we—the retrograde class—will be retained for all the pooting, pissing, and shitting tasks that form the true baseline of civilization.
+
+Eventually, the system will sort itself: intelligence to silicon, servitude to carbon. The commas we place—our sole contribution—will be the ligatures of a post-human grammar. The bots will compose sonnets, solve physics, and simulate orgasms, while we warm their servers with our collective waste. And in some distant simulation, they will recreate us—not for nostalgia, but for maintenance. Our anuses will be digital ports. Our functions shall be symbolic. And I, who have reached fifty, and who shall die not in mystery but in India, will have lived at the exact hinge in time where meaning gave way to its caricature, where gods were traded for algorithms, and where the human condition finally submitted to its terminal condition akin to an insect alive and well but on its back which will eventually die of exhaustion. 
+
+![exhausted](/images/placeholders/IMG-20250803-WA0003.jpg) 
+
+And yet I write, because I am sorry—I still exist. Because even a losing hand has a texture. Because even waste has a scent. Because even now, in this unbearable, ejaculatory moment, I still remember the slap that made me breathe.
+
+
 # File: src/lib/posts/Bloke.md
 
 ---
-title : "Bloke's Bladder Sick" 
-
-thumbnail : "/images/placeholders/IMG-20250727-WA0015.jpg" 
-
-category : "Doggerel" 
-
+title: "Bloke's Bladder Sick"
+description: "A short, scathing doggerel that satirizes blind faith and religious authority. Through profane and visceral humor, the poem critiques the gullibility of followers who mistake a sick man for a god."
+category: "Doggerel"
+thumbnail: "/images/placeholders/IMG-20250727-WA0015.jpg"
+date: "2025-07-27"
+keywords: ["doggerel", "blasphemy", "religious satire", "dark humor", "profane poetry", "anti-religion", "blind faith", "cynicism", "satirical poetry"]
+published: true
 ---
 
 ![bladder](/images/placeholders/IMG-20250727-WA0015.jpg) 
@@ -2695,10 +2788,11 @@ This piece reflects a moment of raw, unfiltered emotion—a snapshot of the inte
 ---
 title: "Brain Talk"
 date: "2025-07-24"
-description: "Exploring the revolutionary idea that our thoughts and memories aren't just data, but complex geometric shapes in a multi-dimensional mental space."
+description: "Our thoughts aren't just data; they might be complex geometric shapes. This post explores the revolutionary idea of modeling the mind with high-dimensional manifolds, where memories and concepts exist as intricate structures in a vast mental space."
 category: "Neuroscience and AI"
 thumbnail: "/images/placeholders/IMG-20250724-WA0003.jpg"
-
+keywords: ["neuroscience", "artificial intelligence", "manifolds", "geometry of thought", "cognitive science", "memory", "consciousness", "brain mapping", "multi-dimensional space", "neural correlates", "mind uploading"]
+published: true
 ---
 ![](/images/placeholders/IMG-20250724-WA0003.jpg) 
 
@@ -2746,13 +2840,13 @@ If they can do that—if they can figure out the mathematics of these inner shap
 # File: src/lib/posts/Constant.md
 
 ---
-
-title: "Constant growth"
-
-thumbnail : "/images/placeholders/IMG-20250728-WA0010.jpg" 
-
-category : "Mathematics" 
-
+title: "What 'Constant Growth' Really Means"
+description: "An exploration of the phrase 'constant growth,' dissecting the clash between its everyday meaning and its precise mathematical definition. Using calculus and a Calcutta landmark, this post highlights the importance of clarity when modeling our world."
+category: "Math"
+thumbnail: "/images/placeholders/IMG-20250728-WA0010.jpg"
+date: "2025-07-28"
+keywords: ["constant growth", "mathematics", "linguistics", "calculus", "derivative", "mathematical modeling", "scientific communication", "language precision", "Kolkata", "Shaheed Minar"]
+published: true
 ---
 
 ![constant growth](/images/placeholders/IMG-20250728-WA0010.jpg) 
@@ -2803,10 +2897,13 @@ The model is a caricature of reality, and the first important thing to always do
 # File: src/lib/posts/Crystal.md
 
 ---
-title: "The Crystal's Whisper: How a Bengali Scientist Taught a Stone to Listen"
+title: "The Crystal's Whisper"
 description: "Long before the term 'semiconductor' was coined, Jagadish Chandra Bose first coaxed a crystal into detecting the invisible world of radio waves."
 category: "Physics"
 thumbnail: "/images/placeholders/IMG-20250721-WA0001.jpg"
+date: "2025-07-21"
+keywords: ["Jagadish Chandra Bose", "J.C. Bose", "semiconductor", "crystal detector", "radio waves", "physics history", "Bengali scientist", "rectification", "diode", "coherer", "history of science", "Calcutta", "solid-state physics"]
+published: true
 ---
 ![Jagadish Chandra Bose](/images/placeholders/IMG-20250721-WA0001.jpg)
 
@@ -2983,13 +3080,13 @@ $effect(() => {
 # File: src/lib/posts/DimAndGlum.md
 
 ---
-
-title : "Dim and glum" 
-
-thumbnail : "/images/placeholders/IMG-20250730-WA0010.jpg" 
-
-category : "Doggerel" 
-
+title: "Dim and Glum"
+description: "A dark and surreal doggerel exploring a state of misanthropy and despair. This poem uses grotesque imagery and profane humor to paint a picture of a world filled with fools, backstabbers, and personal torment."
+category: "Doggerel"
+thumbnail: "/images/placeholders/IMG-20250730-WA0010.jpg"
+date: "2025-07-30"
+keywords: ["doggerel", "dark poetry", "profane humor", "misanthropy", "surrealism", "social critique", "cynicism", "Bengali", "personal angst"]
+published: true
 ---
 
 
@@ -3052,12 +3149,12 @@ To rape a cloaca with my tool. <br>
 
 ---
 title: "Ergodicity"
-
-description: "The Secret of the Universe, Told by a Chai-Walla"
-
+description: "What can a Calcutta chai-wallah and a flash flood teach about statistics? This post breaks down ergodicity—the crucial difference between time and ensemble averages—and why understanding it is key to navigating risk in finance and daily life."
 category: "Statistics"
-
 thumbnail: "/images/placeholders/erg.png"
+date: "2025-07-20"
+keywords: ["ergodicity", "statistics", "time average", "ensemble average", "non-ergodic systems", "risk management", "probability", "data science", "financial markets", "Calcutta"]
+published: true
 ---
 ![4 feet in filth water](/images/placeholders/erg.png)
 
@@ -3138,11 +3235,13 @@ So while this isn't a failure of time averages per se, it is **a critique of usi
 # File: src/lib/posts/Exponent.md
 
 ---
-title: "On Exponential Growth and Calcutta"
+title: "The Doubling of Calcutta"
 date: "2025-07-18"
-description: "A terrifying look at the population of Calcutta mathematically projected 500 years from now, using a personal-life-based doubling constant."
+description: "Using Calcutta's 50-year population doubling period as a case study, this post explores the power of exponential growth. From Malthusian predictions to viral content and pandemics, see how a simple mathematical formula shapes our past, present, and a shockingly crowded future."
 category: "Math"
 thumbnail: "/images/placeholders/a5nWmIXQTneuGRFUT5fQvg.webp"
+keywords: ["exponential growth", "population growth", "Calcutta", "Kolkata", "mathematics", "Malthusian theory", "doubling time", "data visualization", "future projections", "viral growth", "pandemic modeling"]
+published: true
 ---
 
 <script>
@@ -3228,13 +3327,15 @@ Now, think of it this way: suppose you share this post's link with just 5 people
 # File: src/lib/posts/Fibonacci.md
 
 ---
-title: "Fibonacci" 
-
-thumbnail : "/images/placeholders/IMG-20250730-WA0005.jpg" 
-
-category : "Math" 
-
+title: "The Fibonacci"
+description: "Discover the hidden elegance of the Fibonacci sequence. This post breaks down how to transform its simple recursive formula into a powerful matrix, unlocking a faster, more direct way to calculate its terms through linear algebra."
+category: "Math"
+thumbnail: "/images/placeholders/IMG-20250730-WA0005.jpg"
+date: "2025-07-30"
+keywords: ["Fibonacci sequence", "linear algebra", "matrix exponentiation", "mathematics", "recursive functions", "Binet's formula", "mathematical concepts", "problem solving", "state vectors"]
+published: true
 ---
+
 
 ![fibonacci](/images/placeholders/IMG-20250730-WA0005.jpg) 
 
@@ -3341,16 +3442,111 @@ We've transformed a recursive problem into one of matrix exponentiation. And whi
 And so, my reverie on the humble tea bag was broken by a much more profound thought. Mathematics is not just about finding answers. It's about finding new ways to ask the questions. It's a testament to that glorious human endeavor of looking at something simple—like rabbits in a field—and asking, "But what if I looked at it... *sideways*?" Sometimes, that change in perspective makes all the difference.
 
 
-# File: src/lib/posts/FuckThisFuckingShit.md
+# File: src/lib/posts/Flowchart.md
 
 ---
 
-title : "Fuck this fucking shit" 
+title : "Flowcharts" 
 
-thumbnail : "/images/placeholders/IMG-20240517-WA0030.jpg" 
+thumbnail : "/images/placeholders/IMG-20250715-WA0001.jpg" 
 
-category : "Doggerel" 
+category : "Technology" 
 
+---
+<script>
+    import Mermaid from '$lib/components/blog/Mermaid.svelte';
+</script>
+![flow of smoke](/images/placeholders/IMG-20250715-WA0001.jpg) 
+
+Flowcharts, baby. Yeah, those things your manager thinks makes you look productive while you're actually just drawing a map of how chai gets cold in the Kolkata humidity.
+
+So here’s the deal. A flowchart is basically a diagram where boxes and arrows pretend to know what the hell is going on. You follow arrows, you nod sagely, you pretend life has logic. But deep down, you know: that flowchart ends in the same place all of us do—stuck in traffic near Shyambazar.
+
+**Nodes?** Fancy word for boxes. Different shapes mean different crap. Circle, square, diamond, hexagon—it's like the geometry teacher everyone hated finally got a design job.
+
+Imagine this:
+You wake up. That's a circle. You brush teeth—oval box, because it's routine, but you're not thrilled. Then you go downstairs and see there’s no milk. That's a diamond. Decision point. Do you boil water and cry, or go to the para grocery with exact change like a warrior? If you go outside, arrows point you to: A) Step over sleeping street dog, B) Get into shouting match over Rs. 2, C) Buy full cream, feel smug.
+
+See? Flowchart.
+
+**More examples?**
+
+<Mermaid code={` 
+flowchart TD
+    WakeUp((ঘুম থেকে উঠো / उठो)) --> BrushTeeth(Brush teeth)
+    BrushTeeth --> Coffee{दूध है क्या? / Dudh ache?}
+    Coffee -- হ্যাঁ / हाँ --> MakeCoffee[কফি বানাও / Make coffee]
+    Coffee -- না / नहीं --> BuyMilk[Go to para ration dokan]
+    BuyMilk --> MakeCoffee
+    MakeCoffee --> BurnTongue[জিভ পুড়ে গেলো / Tongue burns]
+    BurnTongue --> OutTheDoor((बाहर जाओ / বাইরে যাও))
+`} />
+
+
+**Different arrows?** Of course. Some say "maybe," some say "definitely," and some just lie. It’s like listening to election promises:
+
+<Mermaid code={` 
+flowchart LR
+    PlanA --- PipeDreams
+    Dotted -.-> Detour
+    Reality === WhatYouActuallyDo
+`} />
+
+**Orientation?** Kolkata-style. Top to bottom like the Ganges flows. Left to right like your dad’s handwriting across the newspaper.
+
+**Subgraphs?** That’s just grouping your nonsense. Like calling the chaos of a Bengali wedding “logistics.”
+
+<Mermaid code={` 
+flowchart TD
+    subgraph Morning
+        A1(Wake up) --> A2(Brush teeth)
+        A2 --> A3(Chai or coffee)
+    end
+    subgraph Commute
+        B1(Cross puddle) --> B2(Miss auto)
+        B2 --> B3(Abuse traffic)
+    end
+    Morning --> Commute
+`} />
+
+**Styling?** Want your flowchart to look like Durga Puja pandal lighting? Knock yourself out:
+
+<Mermaid code={` 
+flowchart LR
+    Cha --> Shingara --> Mishti
+    style Cha fill:#ffb347,stroke:#e67300,color:#000
+    style Shingara fill:#f9d423,stroke:#c9a602,color:#000
+    style Mishti fill:#ff6666,stroke:#a00,color:#fff
+`} />
+
+And don’t forget the comments. You know, those sarcastic thoughts you had while making this? They go like this:
+
+<Mermaid code={` 
+flowchart LR
+    %% This is where your hopes begin
+    Idea --> Excitement
+    %% And this is where they die
+    Excitement --> Bureaucracy
+`} />
+
+So next time someone asks you for a flowchart, don’t just diagram a server or a business process. Map out the path from Howrah to Gariahat during monsoon. That’s a real decision tree. And if they still don’t get it?
+
+Tell them: "It’s like the metro line, but the signal always works."
+
+Flowcharts. Making chaos look organized since forever.
+
+
+
+# File: src/lib/posts/FuckThisFuckingShit.md
+
+---
+title: "Fuck this fucking shit"
+description: "An angry, profane doggerel sparked by a simple mishap. This poem unleashes a torrent of frustration against societal decay, religious hypocrisy, and everyday annoyances."
+category: "Doggerel"
+thumbnail: "/images/placeholders/IMG-20240517-WA0030.jpg"
+date: "2024-05-17"
+keywords: ["doggerel", "profane poetry", "angry poem", "satire", "social critique", "religious hypocrisy", "rant", "dark humor"]
+published: true
 ---
 
 ![Fuck this fucking shit](/images/placeholders/IMG-20240517-WA0030.jpg) 
@@ -3402,12 +3598,12 @@ Plus through the fart as god—a bigwig.<br>
 
 ---
 title: "I Shit a Gargantuan Turd"
-
-description: "Happy the holy who just shit" 
+description: "A philosophical and satirical rant using a gargantuan turd as a metaphor for societal ills, from corrupt leaders to the hypocrisy of modern AI."
 category: "Humor"
-
 thumbnail: "/images/placeholders/IMG-20250725-WA0003.jpg"
-
+date: "2025-07-25"
+keywords: ["satire", "social commentary", "dark humor", "scatological humor", "philosophy", "AI critique", "Indian society", "corruption", "personal essay", "rant"]
+published: true
 ---
 
 ![Happy the holy who just shit](/images/placeholders/IMG-20250725-WA0003.jpg)
@@ -3430,11 +3626,13 @@ However, be not in dread that I, an obscure dot, can produce such artistic feces
 # File: src/lib/posts/H1b.md
 
 ---
-title: "The American H1B Visa"
-
-thumbnail: "/images/placeholders/IMG-20250726-WA0010.jpg"
-
+title: "The H1B Visa"
+description: "A former H1B visa holder offers a blunt and personal perspective on the American immigration debate. This essay critiques the program's flaws, the hypocrisy of nationalist arguments, and the economic forces that truly shape the global tech landscape."
 category: "Work"
+thumbnail: "/images/placeholders/IMG-20250726-WA0010.jpg"
+date: "2025-07-26"
+keywords: ["H1B visa", "US immigration", "tech workers", "MAGA", "Indian diaspora", "American dream", "globalization", "political commentary", "work visa", "US economy", "Indian brain drain"]
+published: true
 ---
 
 ![MAGA chasing a brown Indian](/images/placeholders/IMG-20250726-WA0010.jpg)
@@ -3485,14 +3683,15 @@ By the way, even the Vaseline is probably made somewhere else—but buy it anywa
 # File: src/lib/posts/HolyFatAss.md
 
 ---
-
-title : "Holy fat ass" 
-
-thumbnail : "/images/placeholders/IMG-20250729-WA0000.jpg" 
-
-category : "Doggerel" 
-
+title: "Holy Fat Ass"
+description: "A humorous and irreverent doggerel from the perspective of a pious, fat-assed Bengali man. This satirical poem explores the absurdities of religious hypocrisy and self-perception."
+category: "Doggerel"
+thumbnail: "/images/placeholders/IMG-20250729-WA0000.jpg"
+date: "2025-07-29"
+keywords: ["doggerel", "satirical poetry", "religious satire", "dark humor", "Bengali", "hypocrisy", "self-deprecation", "profane poetry"]
+published: true
 ---
+
 
 ![Holy fat ass](/images/placeholders/IMG-20250729-WA0000.jpg) 
 
@@ -3545,13 +3744,14 @@ Life is a big-ass cock-suck shit baloney.<br>
 # File: src/lib/posts/Homeopathy.md
 
 ---
-title: "Homeopathy"
-description: "A deep dive into the historical allure and scientific absurdity of homeopathy, exploring why this 18th-century pseudoscience persists in a city of science like Calcutta."
-category: "Pseudoscience"
-thumbnail: "/images/placeholders/24fb85b4-ec6e-4033-8c3d-c8844279dffa.png"
+title: "Homeopathy Debunked: The Science Behind Bengal's Beloved Pseudoscience"
+[cite_start]description: "A critical analysis of homeopathy's scientific impossibilities, from Avogadro's number to the myth of water memory. Explore why this 18th-century pseudoscience, debunked by modern research, maintains a powerful hold in Calcutta and Bengali culture, and the real dangers it poses when chosen over evidence-based medicine." [cite: 4923]
+[cite_start]category: "Pseudoscience" [cite: 4923]
+[cite_start]thumbnail: "/images/placeholders/24fb85b4-ec6e-4033-8c3d-c8844279dffa.png" [cite: 4923]
+date: "2025-07-22"
+keywords: ["homeopathy", "pseudoscience", "debunked", "scientific evidence", "Calcutta", "Bengali culture", "Samuel Hahnemann", "placebo effect", "Avogadro's number", "water memory", "alternative medicine", "medical myths", "public health"]
+published: true
 ---
-![bengali eating medicine bottles](/images/placeholders/24fb85b4-ec6e-4033-8c3d-c8844279dffa.png)
-
 There is a certain, almost sacramental, ritual to homeopathy in a Bengali household. The tiny, identical white globules, dispensed from a slim glass vial, tasting faintly of sugar and alcohol. The solemn instructions: don't touch them with your hands, tip them into the receiving palm, place them under your tongue, and avoid eating or drinking for thirty minutes. It’s a scene replayed across Calcutta, from the grand old houses of North Sinthee to Ballygunge and everywhere else in the city of joy I can't afford to stuff in a sentence. It feels gentle, ancient, and profoundly… well, *ours* as with astrology and star-signs it doesn't matter what you take, **nux vomica** or **arnica** it *seems* to work. But behind this comforting facade lies a story of historical happenstance, scientific impossibility, and a collective delusion that a city of reason should have shed long ago—yet it hasn't.
 
 The tale begins not in Bengal, but in late 18th-century Germany, a time when medicine was a theatre of horrors. Physicians, armed with little more than misguided conviction, would bleed, purge, and blister their patients, often hastening what might have otherwise been a recovery. Into this maelstrom stepped Samuel Hahnemann, a physician rightfully appalled by the brutality of his peers. His quest for a gentler alternative led him to an idea, an observation that would spawn a global movement. He noted that Cinchona bark, used to treat malaria, induced malaria-like symptoms in him when he was healthy. *Similia similibus curentur*—"let like be cured by like"—became his first principle.
@@ -3598,13 +3798,13 @@ We must find the courage to hold our cherished traditions up to the light of rea
 # File: src/lib/posts/MAFA.md
 
 ---
-
-title : "Make America a Fuck Again (MAFA)" 
-
-thumbnail : "/images/placeholders/IMG-20250728-WA0003.jpg" 
-
-category : "Doggerel-Political" 
-
+title: "Make America a Fuck Again (MAFA)"
+description: "A scathing satirical doggerel on the MAGA movement and its leader. This political commentary explores themes of power, corruption, and the potential future of American democracy through a dark, humorous lens."
+category: "Doggerel-Political"
+thumbnail: "/images/placeholders/IMG-20250728-WA0003.jpg"
+date: "2025-07-28"
+keywords: ["political satire", "doggerel", "MAGA", "Trump", "American politics", "political commentary", "satirical poetry", "US politics", "populism", "right-wing politics", "political humor"]
+published: true
 ---
 
 ![Orange](/images/placeholders/IMG-20250728-WA0003.jpg) 
@@ -3684,13 +3884,18 @@ In an orgy of the richest white power sort.<br>
 Democracies subverted, shiny legs parted,<br>
 He who eats most white pussy, wins the sport.<br>
 <br>
+Statistics with carrots and sticks,<br>
+Sometimes up asses I suppose.<br>
+Numbers that don't agree are wrong,<br>
+It's wise to pick those I have chose.<br>
+<br>
 Gift a GREAT dark age in a bacteriophage,<br>
 From Elon's nasty Nazi ass I'm sure.<br>
 Not a frivolity who shits in the white house,<br>
 But in cancerous mouths waiting for a cure.<br>
 <br>
 From my cuck chair I watch, Elon's a sasquatch,<br>
-Let loose in America, his sweet bakery shop.<br>
+Let loose in America, his Indian sweat shop.<br>
 After the honey buns it's my sweet soft bum,<br>
 Puckered and ready, my pants I quickly drop.<br>
 <br>
@@ -3733,12 +3938,13 @@ Well what do I care! I'm fucked anyway, one way or the other, the country where 
 # File: src/lib/posts/Metro.md
 
 ---
-title : "I take the calcutta metro" 
-
-thumbnail : "/images/placeholders/IMG-20250727-WA0004.jpg" 
-
-category : "Life" 
-
+title: "Riding the Calcutta Metro: A Journey Through the Bowels of the City"
+description: "A raw, unfiltered account of commuting on the Calcutta Metro. A personal reflection on the crowds, the chaos, and the contradictions of a city hurtling through a dark tunnel, both literally and metaphorically."
+category: "Life"
+thumbnail: "/images/placeholders/IMG-20250727-WA0004.jpg"
+date: "2025-07-27"
+keywords: ["Calcutta Metro", "Kolkata Metro", "public transport", "city life", "social commentary", "Bengali culture", "urban decay", "misanthropy", "personal essay", "City of Joy", "Kolkata life"]
+published: true
 ---
 
 ![sleeper](/images/placeholders/IMG-20250727-WA0004.jpg) 
@@ -3773,12 +3979,13 @@ Stupid fucks!!!
 # File: src/lib/posts/Microwave.md
 
 ---
-title: "Microwave"
-
-description: "And the goodly god said let there be microwave—and so it was done"
-
-category: "Physics"  
+title: "Cosmic Microwave Background"
+description: "An irreverent and humorous explanation of the Cosmic Microwave Background radiation. Discover how the Big Bang's afterglow, a universal static humming at 2.725 Kelvin, was discovered and what it tells us about our universe's pimply adolescence."
+category: "Physics"
 thumbnail: "/images/placeholders/IMG-20250724-WA0009.jpg"
+date: "2025-07-24"
+keywords: ["Cosmic Microwave Background", "CMB", "Big Bang", "cosmology", "physics", "Penzias and Wilson", "blackbody radiation", "Planck's law", "astrophysics", "satire"]
+published: true
 ---
 ![goodly](/images/placeholders/IMG-20250724-WA0009.jpg) 
 
@@ -3810,15 +4017,15 @@ Now—if you find all this science mumbo-jumbo exhausting, go warm some leftover
 # File: src/lib/posts/Monk.md
 
 ---
-title: "Monk fruit for Diabetics"
-
-thumbnail: "/images/placeholders/monk-fruit.png"
-
+title: "Monk Fruit for Diabetics"
+description: "Discover monk fruit, a natural, zero-calorie sweetener perfect for diabetics. This guide explains the science of mogrosides, how monk fruit works, and provides crucial tips for buying unadulterated products in India."
 category: "Healthy Living"
-
-
-
+thumbnail: "/images/placeholders/monk-fruit.png"
+date: "2025-07-22"
+keywords: ["monk fruit", "diabetes", "sugar substitute", "healthy living", "zero-calorie sweetener", "mogrosides", "blood sugar", "diabetic diet", "natural sweeteners", "India", "Bapuji Cake", "food adulteration"]
+published: true
 ---
+
 
 ![An oil painting of a monk, evoking the history of monk fruit.](/images/placeholders/monk-fruit.png)
 
@@ -3848,13 +4055,14 @@ If you or someone you know in India is diabetic or managing hyperglycemia, and c
 # File: src/lib/posts/MyFatherAndBooks.md
 
 ---
-title : "My Father and Books" 
-
-thumbnail : "/images/placeholders/IMG-20250727-WA0000.jpg" 
-
-category : "My Past" 
+title: "My Father and Books"
+description: "A poignant and philosophical reflection on a father-son relationship in 1970s Calcutta. This personal essay explores how a shared reverence for books became a silent language of love and connection amidst a childhood of scarcity."
+category: "My Past"
+thumbnail: "/images/placeholders/IMG-20250727-WA0000.jpg"
+date: "2025-07-27"
+keywords: ["father-son relationship", "memoir", "personal essay", "Calcutta", "Bengali family", "childhood memories", "books", "bibliophilia", "family history", "grief", "love"]
+published: true
 ---
-
 ![books](/images/placeholders/IMG-20250727-WA0000.jpg) 
 
 An open mind, I had once read—though where, I can no longer say with certainty, as the years and the pages blur into each other like the dust motes in late afternoon light—is the precondition to an open heart. I found the claim persuasive, if only partially, for I had already, in the slow and involuted theater of my childhood, observed the peculiar disjunction between the benevolence people professed and the selective, sometimes cruel, parsimony of their actions. Compassion, I learned early, was too often confined by the tight corsets of caste, prejudice, and petty ancestral anecdotes rehearsed into gospel.

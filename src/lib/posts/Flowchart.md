@@ -7,7 +7,9 @@ thumbnail : "/images/placeholders/IMG-20250715-WA0001.jpg"
 category : "Technology" 
 
 ---
-
+<script>
+    import Mermaid from '$lib/components/blog/Mermaid.svelte';
+</script>
 ![flow of smoke](/images/placeholders/IMG-20250715-WA0001.jpg) 
 
 Flowcharts, baby. Yeah, those things your manager thinks makes you look productive while you're actually just drawing a map of how chai gets cold in the Kolkata humidity.
@@ -23,7 +25,7 @@ See? Flowchart.
 
 **More examples?**
 
-```mermaid 
+<Mermaid code={` 
 flowchart TD
     WakeUp((ঘুম থেকে উঠো / उठो)) --> BrushTeeth(Brush teeth)
     BrushTeeth --> Coffee{दूध है क्या? / Dudh ache?}
@@ -32,55 +34,54 @@ flowchart TD
     BuyMilk --> MakeCoffee
     MakeCoffee --> BurnTongue[জিভ পুড়ে গেলো / Tongue burns]
     BurnTongue --> OutTheDoor((बाहर जाओ / বাইরে যাও))
-```
+`} />
+
 
 **Different arrows?** Of course. Some say "maybe," some say "definitely," and some just lie. It’s like listening to election promises:
 
-```mermaid 
+<Mermaid code={` 
 flowchart LR
     PlanA --- PipeDreams
     Dotted -.-> Detour
     Reality === WhatYouActuallyDo
-```
+`} />
 
 **Orientation?** Kolkata-style. Top to bottom like the Ganges flows. Left to right like your dad’s handwriting across the newspaper.
 
 **Subgraphs?** That’s just grouping your nonsense. Like calling the chaos of a Bengali wedding “logistics.”
 
-```mermaid 
+<Mermaid code={` 
 flowchart TD
     subgraph Morning
         A1(Wake up) --> A2(Brush teeth)
         A2 --> A3(Chai or coffee)
     end
-
     subgraph Commute
         B1(Cross puddle) --> B2(Miss auto)
         B2 --> B3(Abuse traffic)
     end
-
     Morning --> Commute
-```
+`} />
 
 **Styling?** Want your flowchart to look like Durga Puja pandal lighting? Knock yourself out:
 
-```mermaid 
+<Mermaid code={` 
 flowchart LR
     Cha --> Shingara --> Mishti
-    style Cha fill:#ffb347,stroke:#e67300,color:#000
-    style Shingara fill:#f9d423,stroke:#c9a602,color:#000
-    style Mishti fill:#ff6666,stroke:#a00,color:#fff
-```
+    style Cha fill:#0f0307,stroke:#e67300,color:#000
+    style Shingara fill:#000423,stroke:#000,color:#000
+    style Mishti fill:#006666,stroke:#a00,color:#000
+`} />
 
 And don’t forget the comments. You know, those sarcastic thoughts you had while making this? They go like this:
 
-```mermaid 
+<Mermaid code={` 
 flowchart LR
     %% This is where your hopes begin
     Idea --> Excitement
     %% And this is where they die
     Excitement --> Bureaucracy
-```
+`} />
 
 So next time someone asks you for a flowchart, don’t just diagram a server or a business process. Map out the path from Howrah to Gariahat during monsoon. That’s a real decision tree. And if they still don’t get it?
 
