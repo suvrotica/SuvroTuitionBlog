@@ -11,8 +11,9 @@ published: true
 <script>
     import PopulationProjector from '$lib/components/blog/PopulationProjector.svelte';
     import GoldLine from '$lib/components/GoldLine.svelte';
-</script>
 
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![An AI-imagined vision of Kolkata 500 years in the future, showcasing extreme urban density.](/images/placeholders/a5nWmIXQTneuGRFUT5fQvg.webp)
 
 Picture the scene. It’s 1975. The world—and a brand-new me—takes his first baby gulp of Calcutta's polluted air. It was a city of glorious, elegant decay and unstoppable life. The grand colonial buildings were shedding plaster like dandruff in the Marxist air, but the streets buzzed with an energy that could power a small nation. The air was a thick soup of diesel from the iconic yellow Ambassador taxis, the sweet tang of sugarcane juice, and the ever-present humidity that feels like a warm, wet hug. The soundtrack was a constant jangling of tram bells, the shouts of vendors, and the gentle creak of the hand-pulled rickshaws.
