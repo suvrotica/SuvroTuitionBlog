@@ -7,7 +7,9 @@ date: "2025-07-28"
 keywords: ["doggerel", "Bengali man", "social satire", "political critique", "profane poetry", "Kolkata", "Indian society", "cultural identity", "cynicism", "personal angst"]
 published: true
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![bengali](/images/placeholders/IMG-20250728-WA0011.jpg )
 
 <br>
