@@ -7,6 +7,9 @@ date: "2025-07-20"
 keywords: ["Bengali culture", "Babumoshai", "Calcutta", "Kolkata", "middle class", "social satire", "angst", "personal essay", "Indian family life", "nostalgia", "Jadavpur University"]
 published: true
 ---
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![babu moshai](/images/placeholders/91d2477e-63e4-45a3-9c5c-0532df45fe0d.png) 
 Calcutta, the bustling urban carcass pretending to breathe, thrives on a diet of philosophical constipation and chronic dissatisfaction. The Bengali lower middle-class family—this ambitious little social experiment, caught permanently between intellectual diarrhoea and economic constipation—is forever trapped in a Kafkaesque limbo of EMI hell and LIC policy redemption fantasies. Each morning, a Bengali middle-class dad wakes up already disappointed, grouching about humidity (like he just now discovered it's moist out there), muttering lovingly unprintable things to the malfunctioning ceiling fan, his eternal nemesis. The fan creaks and shudders, spinning less out of mechanical duty than stubborn vengeance against Newton's laws of motion.
 
