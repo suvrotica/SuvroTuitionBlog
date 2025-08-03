@@ -7,7 +7,9 @@ thumbnail : "/images/placeholders/IMG-20240417-WA0003.jpg"
 category : "Life" 
 
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![cosmic serpent](/images/placeholders/IMG-20240417-WA0003.jpg) 
 
 I had intended—no, I had resolved—to put an end to this blog. Not from pride, which has long since dissolved like sugar in stagnant tea, but from a sheer awareness of redundancy. What does one record when one’s life has become a broken metronome? I am a loser now, undeniably and without charm. Scrambling through the loose gravel of India’s subcontinental crust, watching hope flake off my skin like sunburn, I have become unreadable—even to myself. And who shall read this but me? A ghost of me in a time yet to come, flicking through his own elegies like a fly over bruised fruit. April 16, 2025 was when I turned fifty. The day is a recurring deep self-inflicted wound—a reminder I am still around, primarily a nuisance to everybody, and a cause of consternation and self-disgust. I should attempt swallowing a giant fish until I choke. I'd rather like that death scene with some monstrosity protruding out with salivary porridge dribbling down, maybe it'll haunt a child, I'll be a hated memory for a day. Remembered in the ignominy of an obscure, and painful, almost cartoonish death. 
