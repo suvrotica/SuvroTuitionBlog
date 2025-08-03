@@ -7,6 +7,9 @@ date: "2025-07-21"
 keywords: ["Jagadish Chandra Bose", "J.C. Bose", "semiconductor", "crystal detector", "radio waves", "physics history", "Bengali scientist", "rectification", "diode", "coherer", "history of science", "Calcutta", "solid-state physics"]
 published: true
 ---
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![Jagadish Chandra Bose](/images/placeholders/IMG-20250721-WA0001.jpg)
 
 Pick up your smartphone. Feel its cool, monolithic smoothness. Within that slab of glass and metal hums a universe built on silicon, a world governed by the almost mystical laws of semiconductor physics. We take it for granted, this ability to trap lightning in a bottle, to make inert matter compute, communicate, and create. We think of its genesis in Bell Labs, in the manicured lawns of Silicon Valley.
