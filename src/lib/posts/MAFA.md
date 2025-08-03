@@ -18,6 +18,11 @@ published: true
 	href="/blog/Work/H1b"
 	standalone
 />
+<PostBadge
+	title="Read: Putin's Balls"
+	href="/blog/Doggerel-Political/PutinsBalls"
+	standalone
+/>
 <br><br>
 Greedy as fuck, my shit gets stuck,<br>
 I like cunts of every holy kind.<br>
