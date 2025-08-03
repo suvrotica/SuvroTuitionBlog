@@ -24,7 +24,7 @@
 	rel="noopener noreferrer"
 	class={[
 		'post-badge',
-		standalone && 'block my-8 mx-auto w-fit',
+		standalone && 'block my-2 mx-auto w-fit',
 		className
 	]}
 >
