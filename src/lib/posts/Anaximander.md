@@ -7,7 +7,9 @@ date: "2025-07-28"
 keywords: ["Anaximander", "cosmology", "pre-Socratic philosophy", "ancient Greece", "history of science", "astronomy", "flat Earth", "philosophy of science", "Miletus", "Thales"]
 published: true
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 
 ![two pictures](/images/placeholders/IMG-20250728-WA0007.jpg) 
 
