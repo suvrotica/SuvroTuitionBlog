@@ -7,7 +7,9 @@ date: "2025-07-28"
 keywords: ["constant growth", "mathematics", "linguistics", "calculus", "derivative", "mathematical modeling", "scientific communication", "language precision", "Kolkata", "Shaheed Minar"]
 published: true
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![constant growth](/images/placeholders/IMG-20250728-WA0010.jpg) 
 
 It is a peculiar feature of the human mind that it can, without any external prompting, get itself into a frightful muddle over the simplest of things. My own mind, a chuntering and often unreliable apparatus, recently decided to have a rather public argument with itself, an internal schism so profound it had to be committed to paper, resulting in the rather peculiar sketch you see here.
