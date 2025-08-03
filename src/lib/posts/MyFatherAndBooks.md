@@ -7,6 +7,9 @@ date: "2025-07-27"
 keywords: ["father-son relationship", "memoir", "personal essay", "Calcutta", "Bengali family", "childhood memories", "books", "bibliophilia", "family history", "grief", "love"]
 published: true
 ---
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![books](/images/placeholders/IMG-20250727-WA0000.jpg) 
 
 An open mind, I had once read—though where, I can no longer say with certainty, as the years and the pages blur into each other like the dust motes in late afternoon light—is the precondition to an open heart. I found the claim persuasive, if only partially, for I had already, in the slow and involuted theater of my childhood, observed the peculiar disjunction between the benevolence people professed and the selective, sometimes cruel, parsimony of their actions. Compassion, I learned early, was too often confined by the tight corsets of caste, prejudice, and petty ancestral anecdotes rehearsed into gospel.
