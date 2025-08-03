@@ -7,7 +7,9 @@ date: "2025-07-24"
 keywords: ["bipolar depression", "mental health", "Bengali poetry", "doggerel", "Calcutta", "personal reflection", "angst", "melancholy"]
 published: true
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![A melancholic, bluish-toned abstract drawing of a Bengali man's face](/images/placeholders/IMG-20250724-WA0007.jpg)
 
 <div class="prose-p:my-2">
