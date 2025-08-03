@@ -47,3 +47,8 @@ Dick pic and feelings sick,<br>
 Bright shiny eyes I was him.<br>
 Doesn't matter now where I turn,<br>
 All roads in Calcutta turn dim<br>
+<br>
+Reflections and recollections all,<br>
+Shattered on liquid glass shards.<br>
+Sad we're not made of but,<br>
+Remembering old greeting cards.<br>
