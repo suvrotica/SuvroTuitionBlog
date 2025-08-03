@@ -9,6 +9,8 @@ category : "Technology"
 ---
 <script>
     import Mermaid from '$lib/components/blog/Mermaid.svelte';
+
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
 </script>
 ![flow of smoke](/images/placeholders/IMG-20250715-WA0001.jpg) 
 
