@@ -7,7 +7,9 @@ date: "2025-07-22"
 keywords: ["monk fruit", "diabetes", "sugar substitute", "healthy living", "zero-calorie sweetener", "mogrosides", "blood sugar", "diabetic diet", "natural sweeteners", "India", "Bapuji Cake", "food adulteration"]
 published: true
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 
 ![An oil painting of a monk, evoking the history of monk fruit.](/images/placeholders/monk-fruit.png)
 
