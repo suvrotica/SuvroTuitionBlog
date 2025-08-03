@@ -6,9 +6,15 @@ thumbnail : "/images/placeholders/IMG-20250801-WA0029.jpg"
 category : "Doggerel-Political" 
 
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![putin](/images/placeholders/IMG-20250801-WA0029.jpg) 
-
+<PostBadge
+	title="Read: Make America a Fuck Again (MAFA)"
+	href="/blog/Doggerel-Political/MAFA"
+	standalone
+/>
 <br>
 I'm Putin the completely permanent,<br>
 My balls are rather heavy and large.<br>
