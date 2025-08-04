@@ -44,9 +44,9 @@ On margins in between lines,<br>
 Underlined but outside the head.<br>
 <br>
 I am old now, old as dung dregs, <br>
-Drink it like a man and then die. <br>
+I drink it like a man and then I die. <br>
 Why pussyfoot your whole goddamn life, <br>
-Like a shit-worm sick fucking sly fly? <br>
+Like a fucking sly, sick, shit-worm fly? <br>
 <br>
 Simple men, simple lives are simple lies, <br>
 Feeble fictions—fuck those fools and fibs. <br>
