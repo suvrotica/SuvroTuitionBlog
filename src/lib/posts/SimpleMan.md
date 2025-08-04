@@ -27,6 +27,7 @@ category : "Doggerel-Political"
 	href="/blog/Biology/Taboo"
 	standalone
 />
+
 ![suvrotica stamp](/images/placeholders/IMG-20250322-WA0000.jpg) 
 
 <br>
