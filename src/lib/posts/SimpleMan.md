@@ -14,24 +14,24 @@ category : "Doggerel"
 
 <br>
 I am in concentrics of doom,<br>
-Looming swooning swirling just a, <br>
-Happiness overloaded zombie,<br>
-Flickering fluorescence of Calcutta.<br>
+Looming swooning swirling cheese feta, <br>
+A happiness-overloaded gluttonous zombie,<br>
+Fetid flickering fluorescence of Calcutta.<br>
 <br>
 Dingy dark dank deep I know,<br>
 Light outshines, blood outlast. <br>
-Syringe and glasses, smoke,<br>
-People call me the outcast.<br>
+Syringe and half-empty glasses and smoke,<br>
+Cretins call me the twat outcast.<br>
 <br>
 Sinthee, San Antonio, Hyderabad,<br>
-People keep talking about me.<br>
+Shadows keep shitting on me.<br>
 I ride rough, I talk shit & tough,<br>
-Hand-cuff me and I break free. <br>
+Hand-cuff me but I break free. <br>
 <br>
 I am old now, old as dung dregs, <br>
 Drink it like a man and then die. <br>
 Why pussyfoot your whole goddamn life, <br>
-Like a shit-worm sick fucking sly. <br>
+Like a shit-worm sick fucking sly fly? <br>
 <br>
 Simple men, simple lives are simple lies, <br>
 Feeble fictions—fuck those fools and fibs. <br>
