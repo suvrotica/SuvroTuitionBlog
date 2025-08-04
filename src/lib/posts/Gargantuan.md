@@ -2,7 +2,7 @@
 title: "I Shit a Gargantuan Turd"
 description: "A philosophical and satirical rant using a gargantuan turd as a metaphor for societal ills, from corrupt leaders to the hypocrisy of modern AI."
 category: "Humor"
-thumbnail: "/images/placeholders/IMG-20250725-WA0003.jpg"
+thumbnail: "/images/placeholders/IMG-20250804-WA0002.jpg"
 date: "2025-07-25"
 keywords: ["satire", "social commentary", "dark humor", "scatological humor", "philosophy", "AI critique", "Indian society", "corruption", "personal essay", "rant"]
 published: true
@@ -10,7 +10,7 @@ published: true
 <script>
     import PostBadge from '$lib/components/ui/PostBadge.svelte';
 </script>
-![Happy the holy who just shit](/images/placeholders/IMG-20250725-WA0003.jpg)
+![Happy the holy who just shit](/images/placeholders/IMG-20250804-WA0002.jpg)
 
 I haven't shit for a few days. This means that what will come out now, when I heave heavily and grunt it out, will be a gargantuan monstrosity that'll stretch my asshole—showcasing my entire third-world indigent rectum, from my hernia in the east to my hemorrhoids in the west. Most of these turds, as I plan to report in the future, in more lucid cogitations on the matter, resemble the nonchalant bust of gods, or the democratically elected leaders, movie stars, or cricketers from this totally super holy subcontinent. It's not a coincidence but divine grace, I believe, that I get to cook in my rectum the fine resemblances of these decapitated heads when they're still out there, allegedly in all their malignant narcissistic fame. And how can I forget the fraudsters, freeloaders, and freaks in Mumbai, Hyderabad, Chitradurga, Guwahati, Bangalore, Vellore, Chennai, Sivakasi, Calcutta (New Garia Metro station area especially), and Delhi, god bless these scrotes—such sacrilegious sweethearts, glowing examples of rare megalocephalic stool samples that stretch my asshole and make it bleed like it was holy Holi—everytime. India's asymmetrical tolerance for low life, hyped life, and fiction is a regular case for anal consternation. India needs an enema like me.
 
