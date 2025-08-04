@@ -11,7 +11,7 @@ category : "Doggerel-Political"
 </script>
 ![putin](/images/placeholders/IMG-20250801-WA0029.jpg) 
 <PostBadge
-	title="Read: Make America a Fuck Again (MAFA)"
+	title="Make America a Fuck Again (MAFA)"
 	href="/blog/Doggerel-Political/MAFA"
 	standalone
 />
