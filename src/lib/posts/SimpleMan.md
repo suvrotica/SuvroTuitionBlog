@@ -12,7 +12,11 @@ category : "Doggerel-Political"
 <script>
     import PostBadge from '$lib/components/ui/PostBadge.svelte';
 </script>
-
+<PostBadge
+	title="Make America a Fuck Again (MAFA)"
+	href="/blog/Doggerel-Political/MAFA"
+	standalone
+/>
 <PostBadge
 	title="On Not Ambition"
 	href="/blog/Work/NotAmbition"
