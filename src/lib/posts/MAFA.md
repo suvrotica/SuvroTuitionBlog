@@ -109,6 +109,10 @@ Sometimes up asses I suppose.<br>
 Numbers that don't agree are wrong,<br>
 It's wise to pick those I have chose.<br>
 <br>
+My prattle sabre rattle or tattle,<br>
+Battle is really my home front.<br>
+A slim part is natty, most fatty,<br>
+And those cunts are blunt.<br><br>
 Gift a GREAT dark age in a bacteriophage,<br>
 From Elon's nasty Nazi ass I'm sure.<br>
 Not a frivolity who shits in the white house,<br>
