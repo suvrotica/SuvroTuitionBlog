@@ -17,6 +17,7 @@ I am in concentrics of doom,<br>
 Looming swooning swirling cheese feta, <br>
 A happiness-overloaded gluttonous zombie,<br>
 Fetid flickering fluorescence of Calcutta.<br>
+<br>
 Love, greed, hate, lust, bait, mate,<br>
 Clay tea cups broken then scattered.<br>
 Most start school with high dreams,<br>
