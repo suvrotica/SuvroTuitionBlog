@@ -28,6 +28,16 @@ Shadows keep shitting on me.<br>
 I ride rough, I talk shit & tough,<br>
 Hand-cuff me but I break free. <br>
 <br>
+A shimmering dribbling hope blob,<br>
+Exasperation in beads of sweat.<br>
+Billions of meaningless millions,<br>
+A brown third-world corrupt fate.<br>
+<br>
+Teeming tens with writing pens,<br>
+Scribbles scrawled footnotes bled.<br>
+On margins in between lines,<br>
+Underlined but outside the head.<br>
+<br>
 I am old now, old as dung dregs, <br>
 Drink it like a man and then die. <br>
 Why pussyfoot your whole goddamn life, <br>
