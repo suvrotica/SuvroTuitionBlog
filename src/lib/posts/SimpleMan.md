@@ -5,11 +5,24 @@ title : "Simple Man"
 thumbnail : "/images/placeholders/IMG-20250322-WA0000.jpg" 
 
 
-category : "Doggerel" 
+category : "Doggerel-Political" 
 
 
 ---
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 
+<PostBadge
+	title="On Not Ambition"
+	href="/blog/Work/NotAmbition"
+	standalone
+/>
+<PostBadge
+	title="Taboo"
+	href="/blog/Biology/Taboo"
+	standalone
+/>
 ![suvrotica stamp](/images/placeholders/IMG-20250322-WA0000.jpg) 
 
 <br>
