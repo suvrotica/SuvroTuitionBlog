@@ -34,7 +34,7 @@ Why pussyfoot your whole goddamn life, <br>
 Like a shit-worm sick fucking sly. <br>
 <br>
 Simple men, simple lives are simple lies, <br>
-Feeble fictions—fuck these fools and fibs. <br>
+Feeble fictions—fuck those fools and fibs. <br>
 Fuck flimflammery & fairy foolishness. <br>
 Let's open our eyes wide or our ribs.<br>
 <br>
@@ -46,14 +46,19 @@ Another trance in the pungent prance.<br>
 Dick pic and crestfallen sick,<br>
 Bright shiny eyes I was him.<br>
 Doesn't matter now where I turn,<br>
-All roads in Calcutta turn dim<br>
+All roads in Calcutta turn grisly dim<br>
 <br>
 Reflections and recollections all,<br>
 Shattered on liquid glass shards.<br>
 Sad we're not made of but,<br>
 Remembering old greeting cards.<br>
 <br>
-It's a stamp, a shriveled shrine,<br>
+The city transactional and testy,<br>
+People like pinworms on a rim.<br>
+The daily grind the roughage,<br>
+Under the surface it's giddy grim.<br>
+<br>
+Yes it's a stamp, my shriveled shrine,<br>
 Masculinity's most misunderstood prayer.<br>
 Going nowhere now the wind,<br>
 Mute silence in the shrill still air.<br>
