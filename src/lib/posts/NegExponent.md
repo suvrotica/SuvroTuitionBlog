@@ -3,12 +3,12 @@ title: "The Art of the Fade-Out: Nature's Elegant Goodbye"
 
 description: From a cooling cup of tea to life-saving medicine, explore the beautiful and ubiquitous process of things fading away, known as exponential decay.
 category: "Math"
-thumbnail: "/images/placeholders/IMG-20250718-WA0010.jpg"
+thumbnail: "/images/placeholders/IMG-20250804-WA0001.jpg"
 ---
 <script>
     import PostBadge from '$lib/components/ui/PostBadge.svelte';
 </script>
-![An AI-imagined decay](/images/placeholders/IMG-20250718-WA0010.jpg) 
+![An AI-imagined decay](/images/placeholders/IMG-20250804-WA0001.jpg) 
 
 Alright, pull up a chair. Let's talk about the way things end. Not with a sudden, jarring crash, but with a slow, graceful sigh. Think about that clay cup of *chaa* you bought at the station—how it goes from volcanically hot to merely lukewarm. Or that earworm of a pop song that’s the soundtrack to your entire Tuesday but is a forgotten relic by Friday. Or, let's be honest, the fiery enthusiasm for that "get fit" resolution you made on January 1st. It doesn't just stop dead. It fades. It dwindles. It performs a slow, elegant, and remarkably predictable exit from the stage.
 
