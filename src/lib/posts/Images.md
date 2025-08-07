@@ -15,7 +15,7 @@ published: true
 
     // 1. Use Vite's import.meta.glob to find all image files in the new directory.
     //    'eager: true' imports the modules directly.
-    const imageModules = import.meta.glob('$lib/assets/slideshow-images/*.{jpg,jpeg,png,webp}', { eager: true });
+    const imageModules = import.meta.glob('/*.{jpg,jpeg,png,webp}', { eager: true });
 
     // 2. Extract the default export (the URL path) from each module.
     const imageUrls = Object.values(imageModules).map((module: any) => module.default);
