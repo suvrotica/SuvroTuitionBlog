@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
-	import { cubicInOut } from 'svelte/easing'; // Import an easing function
+	import { cubicInOut } from 'svelte/easing';
 
 	// PROPS
 	type Props = {
@@ -22,8 +22,6 @@
 	$effect(() => {
 		if (images.length <= 1) return;
 
-		// The interval delay is the sum of the hold time and the transition time.
-		// This ensures the image stays fully visible for the entire holdDuration.
 		const interval = setInterval(() => {
 			currentIndex = (currentIndex + 1) % images.length;
 		}, holdDuration + transitionDuration);
@@ -45,22 +43,7 @@
 				in:fade={{ duration: transitionDuration, easing: cubicInOut }}
 				out:fade={{ duration: transitionDuration, easing: cubicInOut }}
 			/>
-		{/key}
-	</div>
-{:else}
-	<div class="slideshow-container slideshow-placeholder">
-		<p>No images to display.</p>
-	</div>
-{/if}		{#key currentIndex}
-			<img
-				src={images[currentIndex]}
-				alt="Slideshow image {currentIndex + 1}"
-				class="slideshow-image"
-				in:fade={{ duration: transitionDuration }}
-				out:fade={{ duration: transitionDuration }}
-			/>
-		{/key}
-	</div>
+		{/key} </div>
 {:else}
 	<div class="slideshow-container slideshow-placeholder">
 		<p>No images to display.</p>
