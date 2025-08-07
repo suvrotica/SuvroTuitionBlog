@@ -27,6 +27,11 @@
 		I confess, as useless as perhaps the utility for, or the importance of, the places and characters and several linked trivia that I sometimes wake up to, wade, and wallow in, now that I am fifty.
 	</p>
 
+	
+	<div class="my-8">
+		<ImageSlideshow images={imageUrls} />
+	</div>
+
 	<p class="my-4">
 		My past is ancient and present is a mystery speeding past; I live now mostly to <em>live</em>, really—to barely escape frequent and routine annihilation, survive to remember and recollect the person I am, I was, I once wanted to be—inadvertently became, on the way to be—a leery litany of metamorphosis of a self that mostly started and remained unchanged at the core—which was a fledgling when I became a schoolboy to begin with and started to think, first feel, of course—mainly, in my case, see through thick myopia-correcting glasses—a visual person, and in my particular case, overthink the still-uncorrected blurry—cerebrally—the world through the senses, through the then immature prefrontal and amygdalian theaters of rehearsed endorsements.
 		It happened in a shockingly short span, then weirdly in a longish sort of lifetime after—that I’m only now able to reconstruct into the surreal absurdity I had managed to bungle myself into being.
@@ -74,10 +79,7 @@
 		Those who prefer the opposite, longer-haired illusions of us for these cosmetic and meretricious patina of gloss—us cretins also misjudge melanin deficiency for superiority or experiments with holiness. We believe if white man George Harrison had condescended in his lyrics the coexistence of the dark-skinned mythological creation Krishna with the Christian mythology of white man Jesus, then they are both really real and there's a cowherd with methemoglobinemia and an antique flute and a schizophrenic carpenter stuck on a cross who live somewhere in Attapara in North Calcutta under some Bengali pseudonym.
 	</p>
 
-	<div class="my-8">
-		<ImageSlideshow images={imageUrls} />
-	</div>
-	
+
 	<p class="my-4">
 		Thus our ability to get muddled works hand in hand with a corrupted framework of basic data, information, or knowledge, and we grow up on a pyramid of crumbling make-believe fiction and frequently conflate it with facts. Of course, no one wants to wake up next to a hag with no teeth, but even this logic is specious because—give enough time to Aishwarya Rai Bachchan to age and I promise you she'll be a hag with no teeth. The only way out is a stuffed doll or a girl robot, but that is not how your brain would like to accept it—your brain would know it's a thing, and because of its lack of consciousness, its participation as a partner is void. Wait a few more years until a girl robot can dump you; at that point, it won't be a thing anymore.
 	</p>
