@@ -1,9 +1,26 @@
 <script lang="ts">
+	import ImageSlideshow from '$lib/components/blog/ImageSlideshow.svelte';
+
+	// FIX: Add the `Record<string, string>` type annotation.
+	// This tells TypeScript that `imageModules` is an object where both
+	// the keys and the values are strings.
+	const imageModules: Record<string, string> = import.meta.glob(
+		'$lib/assets/slideshow-images/*.{jpg,jpeg,png,webp}',
+		{
+			eager: true,
+			query: '?url',
+			import: 'default'
+		}
+	);
+
+	// With the fix above, TypeScript now correctly infers `imageUrls` as `string[]`.
+	const imageUrls = Object.values(imageModules);
 </script>
+
 
 <section class="container mx-auto py-8 max-w-4xl">
 	<h1 class="mb-8">Reflections on a Schoolboy's Past</h1>
-
+	
 	<p class="mb-4">
 		I remember school through a veil of years of indifference to childhood memories that grownups, at a certain point, must admit to—I do.
 		But mine was a complicated palimpsest of ambition, triumph, misadventures, romance, then—shame, regrets—most now like old luggage tags, expired or useless.
@@ -57,6 +74,10 @@
 		Those who prefer the opposite, longer-haired illusions of us for these cosmetic and meretricious patina of gloss—us cretins also misjudge melanin deficiency for superiority or experiments with holiness. We believe if white man George Harrison had condescended in his lyrics the coexistence of the dark-skinned mythological creation Krishna with the Christian mythology of white man Jesus, then they are both really real and there's a cowherd with methemoglobinemia and an antique flute and a schizophrenic carpenter stuck on a cross who live somewhere in Attapara in North Calcutta under some Bengali pseudonym.
 	</p>
 
+	<div class="my-8">
+		<ImageSlideshow images={imageUrls} />
+	</div>
+	
 	<p class="my-4">
 		Thus our ability to get muddled works hand in hand with a corrupted framework of basic data, information, or knowledge, and we grow up on a pyramid of crumbling make-believe fiction and frequently conflate it with facts. Of course, no one wants to wake up next to a hag with no teeth, but even this logic is specious because—give enough time to Aishwarya Rai Bachchan to age and I promise you she'll be a hag with no teeth. The only way out is a stuffed doll or a girl robot, but that is not how your brain would like to accept it—your brain would know it's a thing, and because of its lack of consciousness, its participation as a partner is void. Wait a few more years until a girl robot can dump you; at that point, it won't be a thing anymore.
 	</p>

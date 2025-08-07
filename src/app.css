@@ -201,16 +201,20 @@ pre.shiki { @apply p-4 rounded-lg overflow-x-auto; }
 
 
 .slideshow-container {
-	/* REMOVE h-96, ADD transition */
-	@apply relative w-full bg-neutral-300 dark:bg-neutral-800 rounded-lg shadow-inner overflow-hidden;
-	transition: aspect-ratio 500ms cubic-bezier(0.4, 0, 0.2, 1);
+	/* Just change bg-neutral-300 to bg-neutral-200 and dark:bg-neutral-800 to dark:bg-neutral-900 */
+	@apply relative w-full bg-neutral-200 dark:bg-neutral-900 rounded-lg shadow-inner overflow-hidden;
 }
+
 
 .slideshow-image {
-	/* CHANGE object-cover to object-contain */
-	@apply absolute top-0 left-0 w-full h-full object-contain;
+	/* This is a robust way to center an absolutely positioned element.
+	   It also constrains the image, preventing it from being cropped. */
+	@apply absolute inset-0 m-auto max-w-full max-h-full;
 }
-
 .slideshow-placeholder {
 	@apply flex items-center justify-center text-neutral-500 aspect-[16/9];
-	}
+}
+
+.image-placeholder-wrapper {
+    @apply w-full h-full flex items-center justify-center bg-neutral-200 dark:bg-neutral-800 text-2xl text-neutral-500;
+}

@@ -2,14 +2,9 @@
 	import { fade } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 
-	// PROPS: Now expects image objects with dimensions
-	type Image = {
-		src: string;
-		width: number;
-		height: number;
-	};
+	// FIX: The component now expects a simple array of URL strings.
 	type Props = {
-		images: Image[];
+		images: string[];
 		holdDuration?: number;
 		transitionDuration?: number;
 	};
@@ -20,14 +15,13 @@
 		transitionDuration = 1000
 	}: Props = $props();
 
-	// STATE
 	let currentIndex = $state(0);
 	
-	// DERIVED STATE: Automatically calculate aspect ratio for the current image
+	// FIX: currentImage is now just a URL string.
 	let currentImage = $derived(images[currentIndex]);
-	let aspectRatio = $derived(currentImage ? currentImage.width / currentImage.height : 16 / 9);
-
-	// EFFECT for cycling through images
+	
+	// REMOVED: The dynamic aspect-ratio logic is removed.
+	
 	$effect(() => {
 		if (images.length <= 1) return;
 
@@ -40,10 +34,10 @@
 </script>
 
 {#if currentImage}
-	<div class="slideshow-container" style:aspect-ratio={aspectRatio}>
+	<div class="slideshow-container aspect-[16/9]">
 		{#key currentIndex}
 			<img
-				src={currentImage.src}
+				src={currentImage}
 				alt="Slideshow image {currentIndex + 1}"
 				class="slideshow-image"
 				in:fade={{ duration: transitionDuration, easing: cubicInOut }}

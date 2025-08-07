@@ -1,4 +1,4 @@
-# Context file generated on: Sunday, August 3, 2025 at 4:14:05 PM GMT+5:30
+# Context file generated on: Friday, August 8, 2025 at 12:18:29 AM GMT+5:30
 ---
 
 # Project File Layout
@@ -20,9 +20,16 @@
 │   ├── app.d.ts
 │   ├── app.html
 │   ├── lib
+│   │   ├── assets
+│   │   │   └── slideshow-images
+│   │   │       ├── IMG-20250805-WA0001(1).jpg
+│   │   │       ├── IMG-20250806-WA0002.jpg
+│   │   │       ├── IMG-20250807-WA0006.jpg
+│   │   │       └── IMG-20250807-WA0010.jpg
 │   │   ├── components
 │   │   │   ├── blog
 │   │   │   │   ├── Counter.svelte
+│   │   │   │   ├── ImageSlideshow.svelte
 │   │   │   │   ├── Mermaid.svelte
 │   │   │   │   ├── PopulationProjector.svelte
 │   │   │   │   ├── PostGallery.svelte
@@ -52,7 +59,8 @@
 │   │   │   ├── ThreeJS
 │   │   │   │   └── ThreeJSScene.svelte
 │   │   │   └── ui
-│   │   │       └── InfoBox.md
+│   │   │       ├── InfoBox.md
+│   │   │       └── PostBadge.svelte
 │   │   ├── data
 │   │   │   ├── city-populations.ts
 │   │   │   └── posts.ts
@@ -85,6 +93,7 @@
 │   │       ├── H1b.md
 │   │       ├── HolyFatAss.md
 │   │       ├── Homeopathy.md
+│   │       ├── Images.md
 │   │       ├── MAFA.md
 │   │       ├── Metro.md
 │   │       ├── Microwave.md
@@ -98,7 +107,9 @@
 │   │       ├── plantuml-sequence-diagram.md
 │   │       ├── PutinsBalls.md
 │   │       ├── Rezala.md
+│   │       ├── SimpleMan.md
 │   │       ├── Stoop.md
+│   │       ├── SuperHolyIAm.md
 │   │       ├── svelte-introduction.md
 │   │       ├── sveltes-runes.md
 │   │       ├── Taboo.md
@@ -108,7 +119,9 @@
 │   │       ├── tts-test.md
 │   │       ├── Verybadsmell.md
 │   │       ├── VisitingMommy.md
+│   │       ├── WakingUp.md
 │   │       ├── WeirdFeeling.md
+│   │       ├── WhyHindooHiccups.md
 │   │       └── WrightsLaw.md
 │   ├── routes
 │   │   ├── +layout.server.ts
@@ -146,6 +159,7 @@
 │           ├── IMG-20240517-WA0030.jpg
 │           ├── IMG-20240723-WA0028.jpg
 │           ├── IMG-20250313-WA0010.jpg
+│           ├── IMG-20250322-WA0000.jpg
 │           ├── IMG-20250715-WA0001.jpg
 │           ├── IMG-20250717-WA0006.jpg
 │           ├── IMG-20250718-WA0001.jpg
@@ -188,6 +202,14 @@
 │           ├── IMG-20250803-WA0001.jpg
 │           ├── IMG-20250803-WA0002.jpg
 │           ├── IMG-20250803-WA0003.jpg
+│           ├── IMG-20250803-WA0006.jpg
+│           ├── IMG-20250804-WA0001.jpg
+│           ├── IMG-20250804-WA0002.jpg
+│           ├── IMG-20250805-WA0001.jpg
+│           ├── IMG-20250805-WA0002.jpg
+│           ├── IMG-20250806-WA0004.jpg
+│           ├── IMG-20250806-WA0010.jpg
+│           ├── IMG-20250807-WA0003.jpg
 │           ├── monk-fruit.png
 │           ├── p5js-placeholder.jpeg
 │           ├── plantuml-placeholder.jpeg
@@ -228,6 +250,7 @@
 		"@eslint/compat": "^1.2.5",
 		"@eslint/js": "^9.18.0",
 		"@sveltejs/adapter-vercel": "^5.6.3",
+		"@sveltejs/enhanced-img": "^0.3.0",
 		"@sveltejs/kit": "^2.16.0",
 		"@sveltejs/vite-plugin-svelte": "^5.0.0",
 		"@tailwindcss/forms": "^0.5.10",
@@ -357,15 +380,18 @@ export default config;
 
 # File: vite.config.ts
 
+// Import the new plugin at the top
+import { enhancedImages } from '@sveltejs/enhanced-img';
+
 import tailwindcss from '@tailwindcss/vite';
 import devtoolsJson from 'vite-plugin-devtools-json';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-	plugins: [tailwindcss(), sveltekit(), devtoolsJson()]
+	// Add enhancedImages() to your plugins array, BEFORE sveltekit()
+	plugins: [enhancedImages(), tailwindcss(), sveltekit(), devtoolsJson()]
 });
-
 
 # File: tailwind.config.cjs
 
@@ -573,6 +599,70 @@ pre.shiki { @apply p-4 rounded-lg overflow-x-auto; }
 	@apply z-50; /* Ensure button is above other header content */
 }
 
+/* Main container for the badge */
+.post-badge {
+	@apply inline-block relative overflow-hidden rounded-lg px-6 py-3 text-center no-underline;
+	@apply font-sans font-bold text-lg text-neutral-100;
+	@apply transition-transform duration-300 ease-in-out hover:scale-105;
+	/* A solid background for fallback and to ensure the container has a color */
+	@apply bg-neutral-800;
+	/* Ensure content is positioned correctly */
+	z-index: 1;
+}
+
+/* Pseudo-element for the animated gradient background */
+.post-badge::before {
+	content: '';
+	@apply absolute inset-0;
+	/* The grayscale "Gaussian" gradient */
+	background-image: radial-gradient(circle at 50% 50%, theme('colors.neutral.500'), theme('colors.neutral.800'));
+	/* The animation itself */
+	animation: gentle-pulse 8s ease-in-out infinite;
+	/* Position it behind the text content */
+	z-index: -1;
+}
+
+/* The keyframe animation for the gentle, looping effect */
+@keyframes gentle-pulse {
+	0% {
+		transform: scale(1.5);
+		opacity: 0.6;
+	}
+	50% {
+		transform: scale(2.5);
+		opacity: 0.9;
+	}
+	100% {
+		transform: scale(1.5);
+		opacity: 0.6;
+	}
+}
+
+/* Ensure the text itself is rendered above the pseudo-element */
+.post-badge span {
+	@apply relative;
+}
+
+
+.slideshow-container {
+	/* Just change bg-neutral-300 to bg-neutral-200 and dark:bg-neutral-800 to dark:bg-neutral-900 */
+	@apply relative w-full bg-neutral-200 dark:bg-neutral-900 rounded-lg shadow-inner overflow-hidden;
+}
+
+
+.slideshow-image {
+	/* This is a robust way to center an absolutely positioned element.
+	   It also constrains the image, preventing it from being cropped. */
+	@apply absolute inset-0 m-auto max-w-full max-h-full;
+}
+.slideshow-placeholder {
+	@apply flex items-center justify-center text-neutral-500 aspect-[16/9];
+}
+
+.image-placeholder-wrapper {
+    @apply w-full h-full flex items-center justify-center bg-neutral-200 dark:bg-neutral-800 text-2xl text-neutral-500;
+}
+
 # File: src/app.d.ts
 
 // src/app.d.ts
@@ -633,6 +723,61 @@ export {};
 	</button>
 </div>
 
+
+# File: src/lib/components/blog/ImageSlideshow.svelte
+
+<script lang="ts">
+	import { fade } from 'svelte/transition';
+	import { cubicInOut } from 'svelte/easing';
+
+	// FIX: The component now expects a simple array of URL strings.
+	type Props = {
+		images: string[];
+		holdDuration?: number;
+		transitionDuration?: number;
+	};
+
+	let {
+		images = [],
+		holdDuration = 2000,
+		transitionDuration = 1000
+	}: Props = $props();
+
+	let currentIndex = $state(0);
+	
+	// FIX: currentImage is now just a URL string.
+	let currentImage = $derived(images[currentIndex]);
+	
+	// REMOVED: The dynamic aspect-ratio logic is removed.
+	
+	$effect(() => {
+		if (images.length <= 1) return;
+
+		const interval = setInterval(() => {
+			currentIndex = (currentIndex + 1) % images.length;
+		}, holdDuration + transitionDuration);
+
+		return () => clearInterval(interval);
+	});
+</script>
+
+{#if currentImage}
+	<div class="slideshow-container aspect-[16/9]">
+		{#key currentIndex}
+			<img
+				src={currentImage}
+				alt="Slideshow image {currentIndex + 1}"
+				class="slideshow-image"
+				in:fade={{ duration: transitionDuration, easing: cubicInOut }}
+				out:fade={{ duration: transitionDuration, easing: cubicInOut }}
+			/>
+		{/key}
+	</div>
+{:else}
+	<div class="slideshow-container slideshow-placeholder">
+		<p>No images to display.</p>
+	</div>
+{/if}
 
 # File: src/lib/components/blog/Mermaid.svelte
 
@@ -2100,6 +2245,42 @@ layout: false
     </div>
 </div>
 
+# File: src/lib/components/ui/PostBadge.svelte
+
+<script lang="ts">
+	import type { ClassValue } from 'svelte/elements';
+
+	/**
+	 * A decorative badge component that links to another post.
+	 * It opens the link in a new browser tab.
+	 */
+	let {
+		title, // The text to display on the badge
+		href, // The URL the badge should link to
+		standalone = false, // If true, applies default block/margin/centering styles
+		class: className = '' // Accept an optional 'class' prop, aliased to className
+	}: {
+		title: string;
+		href: string;
+		standalone?: boolean;
+		class?: ClassValue;
+	} = $props();
+</script>
+
+<a
+	{href}
+	target="_blank"
+	rel="noopener noreferrer"
+	class={[
+		'post-badge',
+		standalone && 'block my-2 mx-auto w-fit',
+		className
+	]}
+>
+	<span>{title}</span>
+</a>
+
+
 # File: src/lib/data/city-populations.ts
 
 // File: src/lib/data/city-populations.ts
@@ -2185,7 +2366,9 @@ date: "2025-07-28"
 keywords: ["doggerel", "Bengali man", "social satire", "political critique", "profane poetry", "Kolkata", "Indian society", "cultural identity", "cynicism", "personal angst"]
 published: true
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![bengali](/images/placeholders/IMG-20250728-WA0011.jpg )
 
 <br>
@@ -2338,7 +2521,9 @@ date: "2025-07-28"
 keywords: ["Anaximander", "cosmology", "pre-Socratic philosophy", "ancient Greece", "history of science", "astronomy", "flat Earth", "philosophy of science", "Miletus", "Thales"]
 published: true
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 
 ![two pictures](/images/placeholders/IMG-20250728-WA0007.jpg) 
 
@@ -2384,6 +2569,9 @@ date: "2025-07-21"
 keywords: ["apophenia", "pattern recognition", "psychology", "cognitive bias", "Jungian synchronicity", "Carl Jung", "pseudoscience", "numerology", "angel numbers", "critical thinking", "Bengali culture"]
 published: true
 ---
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![clockface](/images/placeholders/723ccc8e-1bcd-4c1e-b678-219bce8504ee.png) 
 Let’s talk patterns, because frankly, they're everywhere, hiding in your cereal bowl, creeping behind your sweaty armpits, and yes—even lurking behind that smug imbecilic clock face reading "11:11," which makes pseudo-philosophers and mid-level marketing executives spontaneously orgasm and declare it cosmic destiny. It's not. It's your brain's pendulous self-flatulent personality. It's called apophenia—a lovely Greek-derived word from apo- (away) and phainein (to show), meaning roughly, "seeing things that aren't really there." Yes, hallucinations without drugs—nature’s own "free-to-play" psychosis.
 
@@ -2407,7 +2595,9 @@ date: "2025-07-25"
 keywords: ["architecture", "metaphor", "bipolar depression", "mental health", "art", "pencil sketch", "Calcutta", "Bengali culture", "personal essay", "resilience", "urban decay"]
 published: true
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![Architectural Tantrum](/images/placeholders/IMG-20250725-WA0006.jpg) 
 
 Here’s my architectural tantrum then: not a mere building, nor yet architecture, but a bleeding, screaming breakdown in brick and mortar—a goddamned hissy fit, if ever one was committed to paper. What I’ve drawn isn’t something static but something caught forever mid-spasm, mid-collapse, mid-`fuck-you-I-will-not-stay-put`—esque protestation against architectural sanity itself.
@@ -2438,7 +2628,9 @@ date: "2025-07-28"
 keywords: ["Aspidistra", "cast-iron plant", "houseplants", "botany", "Victorian era", "satire", "dark humor", "gardening", "resilience", "plant care"]
 published: true
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![Head in Aspidistra](/images/placeholders/IMG-20250728-WA0000.jpg) 
 
 So, there it sits, the sanctimonious aspidistra—the smug bastard of the botanical world—proudly ugly, imperiously indestructible, the perfect green hostage taken by Victorians to silently mock humanity's hubris. Named with the poetic grace of constipation (`aspid` from Greek meaning "shield," and `istra` probably chosen by a drunken botanist tripping over his own Victorian decorum), it guards the corners of bourgeois bengali drawing rooms with an uncanny ability to survive neglect, disdain, and the radioactive blasts of familial arguments that vaporize lesser flora. This plant, whose charm resembles that of a pothole festering after Calcutta monsoons, manages to straddle the line between life and lifelessness with a zen-like smugness. I have none of the bullshit—the arguments, the family, the aspidistra, the drawing room, or the bourgeoisie bengaliness. All weed really—one way or the other—have been bad for me. I want a cactus! This: Crown of Thorns. 
@@ -2464,17 +2656,20 @@ Actually, fuck it. Who the hell are we?
 
 ---
 title: "Babumoshai"
-description: "A satirical deep dive into the daily life of a modern Bengali lower middle-class family. This essay explores the unique blend of frustration, nostalgia, and philosophical constipation that defines the 'Babumoshai' experience in Calcutta."
+description: "A satirical deep dive into the daily life of a modern Bengali lower middle-class family. This essay explores the unique blend of frustration, disembodied nostalgia, and philosophical constipation that defines the 'Babumoshai' experience in Calcutta."
 category: "Life"
 thumbnail: "/images/placeholders/91d2477e-63e4-45a3-9c5c-0532df45fe0d.png"
 date: "2025-07-20"
 keywords: ["Bengali culture", "Babumoshai", "Calcutta", "Kolkata", "middle class", "social satire", "angst", "personal essay", "Indian family life", "nostalgia", "Jadavpur University"]
 published: true
 ---
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![babu moshai](/images/placeholders/91d2477e-63e4-45a3-9c5c-0532df45fe0d.png) 
-Calcutta, the bustling urban carcass pretending to breathe, thrives on a diet of philosophical constipation and chronic dissatisfaction. The Bengali lower middle-class family—this ambitious little social experiment, caught permanently between intellectual diarrhoea and economic constipation—is forever trapped in a Kafkaesque limbo of EMI hell and LIC policy redemption fantasies. Each morning, a Bengali middle-class dad wakes up already disappointed, grouching about humidity (like he just now discovered it's moist out there), muttering lovingly unprintable things to the malfunctioning ceiling fan, his eternal nemesis. The fan creaks and shudders, spinning less out of mechanical duty than stubborn vengeance against Newton's laws of motion.
+Calcutta, the bustling urban carcass pretending to breathe, thrives on a diet of philosophical constipation, disembodied nostalgia and chronic dissatisfaction. The Bengali lower middle-class family—this ambitious little social experiment, caught permanently between intellectual diarrhoea and economic constipation—is forever trapped in a Kafkaesque limbo of EMI hell and LIC policy redemption fantasies stymied by reluctance to frivolous chores like, for example, the urgency to lookup a word in the dictionary, or hold off passing matter at bowel distensions at life detriment. Each morning, a Bengali middle-class dad wakes up already disappointed, grouching about humidity (like he just now discovered it's moist out there), muttering lovingly unprintable things to the malfunctioning ceiling fan, his eternal nemesis. The fan creaks and shudders, spinning less out of mechanical duty than stubborn vengeance against Newton's laws of motion.
 
-This man, our typical Babumoshai, armed with a torn newspaper folded precisely to the job section he’ll never read, launches himself heroically into the gory arena called public transportation. Battling with elbows sharper than *tamahagane* Japanese samurai steel, he wields Newton’s third law of motion—every shove has an equal and opposite shove back—only to arrive late at a job where promotion is as mythical as spontaneous orgasm. Here, he pretends to work—fudgel, the boss pretends to pay, and everybody pretends to believe in karma, destiny, and provident fund withdrawals.
+This unnuanced man, our typical Babumoshai, armed with a torn newspaper folded precisely to the job section he’ll never read, launches himself heroically into the gory arena called public transportation. Battling with elbows sharper than *tamahagane* Japanese samurai steel, he wields Newton’s third law of motion—every shove has an equal and opposite shove back—only to arrive late at a job where promotion is as mythical as spontaneous orgasm. Here, he pretends to work—fudgel, the boss pretends to pay, and everybody pretends to believe in karma, destiny, and provident fund withdrawals.
 
 At home, his teenage child, that damned revolutionary-in-pyjamas who goes to the Jadavpur University, oscillates between communism and TikTok trends faster than the electron jumping orbitals in Bohr's atomic circus. He protests capitalism by demanding an iPhone, denounces tradition by loudly reading Tagore in English (pronounced with an accent of no particular Occidental leaning and suspiciously close to diarrheal urgency), and mistakes his hormonal indignation for social activism. The TV drones in the background—bald cuckold male politicians or their belligerent queens spewing economic theories that could only have emerged from sustained cerebral hypoxia, while Bengali soap operas portray women weeping rivers of glycerin tears because they mistakenly added one extra grain of salt to the in-laws’ fish curry.
 
@@ -2498,6 +2693,9 @@ date: "2025-07-31"
 keywords: ["doggerel", "political satire", "Bengali", "Kolkata", "profane poetry", "dark humor", "social commentary", "Mamata Banerjee", "Narendra Modi", "Indian politics", "scatological humor"]
 published: true
 ---
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![farting bengali man](/images/placeholders/IMG-20250731-WA0004.jpg) 
 
 <br>
@@ -2597,7 +2795,9 @@ date: "2025-07-31"
 keywords: ["doggerel", "vampire", "scammer", "dark poetry", "macabre", "Bengali", "satire", "crime", "supernatural", "predator"]
 published: true
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![bengali vampire](/images/placeholders/IMG-20250731-WA0009.jpg) 
 
 <br>
@@ -2669,7 +2869,9 @@ keywords: ["Bhavishya Purana", "post-diction", "prophecy", "Hinduism", "Puranas"
 published: true
 ---
 
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![brahmin lecturing](/images/placeholders/IMG-20250727-WA0002.jpg) 
 
 These days there is a certain flavour of panic du jour circulating, a sort of polluting digital miasma thick with the fear of "AI slop." We envision a future—or maybe even a present—where the internet is a landfill of algorithmically generated, soul-less content. Veritable mountains of text and images, all plausible-looking yet utterly devoid of human intent or experience, created for no reason other than to exist and clog the arteries of information. We fret about this as if it were a uniquely 21st-century affliction, a problem born of silicon and sprawling server farms.
@@ -2716,7 +2918,9 @@ thumbnail : "/images/placeholders/IMG-20240417-WA0003.jpg"
 category : "Life" 
 
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![cosmic serpent](/images/placeholders/IMG-20240417-WA0003.jpg) 
 
 I had intended—no, I had resolved—to put an end to this blog. Not from pride, which has long since dissolved like sugar in stagnant tea, but from a sheer awareness of redundancy. What does one record when one’s life has become a broken metronome? I am a loser now, undeniably and without charm. Scrambling through the loose gravel of India’s subcontinental crust, watching hope flake off my skin like sunburn, I have become unreadable—even to myself. And who shall read this but me? A ghost of me in a time yet to come, flicking through his own elegies like a fly over bruised fruit. April 16, 2025 was when I turned fifty. The day is a recurring deep self-inflicted wound—a reminder I am still around, primarily a nuisance to everybody, and a cause of consternation and self-disgust. I should attempt swallowing a giant fish until I choke. I'd rather like that death scene with some monstrosity protruding out with salivary porridge dribbling down, maybe it'll haunt a child, I'll be a hated memory for a day. Remembered in the ignominy of an obscure, and painful, almost cartoonish death. 
@@ -2773,7 +2977,9 @@ date: "2025-07-27"
 keywords: ["doggerel", "blasphemy", "religious satire", "dark humor", "profane poetry", "anti-religion", "blind faith", "cynicism", "satirical poetry"]
 published: true
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![bladder](/images/placeholders/IMG-20250727-WA0015.jpg) 
 
 <div class="display-inline">
@@ -2811,7 +3017,9 @@ date: "2025-07-24"
 keywords: ["bipolar depression", "mental health", "Bengali poetry", "doggerel", "Calcutta", "personal reflection", "angst", "melancholy"]
 published: true
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![A melancholic, bluish-toned abstract drawing of a Bengali man's face](/images/placeholders/IMG-20250724-WA0007.jpg)
 
 <div class="prose-p:my-2">
@@ -2842,6 +3050,7 @@ Sometimes a mood is best captured not in prose, but in the sparse lines of a poe
 This piece reflects a moment of raw, unfiltered emotion—a snapshot of the internal monologue that can accompany a depressive episode.
 </div>
 
+
 # File: src/lib/posts/BrainTalk.md
 
 ---
@@ -2853,6 +3062,9 @@ thumbnail: "/images/placeholders/IMG-20250724-WA0003.jpg"
 keywords: ["neuroscience", "artificial intelligence", "manifolds", "geometry of thought", "cognitive science", "memory", "consciousness", "brain mapping", "multi-dimensional space", "neural correlates", "mind uploading"]
 published: true
 ---
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![](/images/placeholders/IMG-20250724-WA0003.jpg) 
 
 Right then. Let’s pour a nice cup of darjeeling tea, sit down, and talk about the universe I’ve got squirreled away between my ears. Because honestly, the stuff going on out in space with galaxies and whatnot has got nothing on the sheer, beautiful madness happening inside my own noggin—and it's not because I am bipolar.
@@ -2907,7 +3119,9 @@ date: "2025-07-28"
 keywords: ["constant growth", "mathematics", "linguistics", "calculus", "derivative", "mathematical modeling", "scientific communication", "language precision", "Kolkata", "Shaheed Minar"]
 published: true
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![constant growth](/images/placeholders/IMG-20250728-WA0010.jpg) 
 
 It is a peculiar feature of the human mind that it can, without any external prompting, get itself into a frightful muddle over the simplest of things. My own mind, a chuntering and often unreliable apparatus, recently decided to have a rather public argument with itself, an internal schism so profound it had to be committed to paper, resulting in the rather peculiar sketch you see here.
@@ -2964,6 +3178,9 @@ date: "2025-07-21"
 keywords: ["Jagadish Chandra Bose", "J.C. Bose", "semiconductor", "crystal detector", "radio waves", "physics history", "Bengali scientist", "rectification", "diode", "coherer", "history of science", "Calcutta", "solid-state physics"]
 published: true
 ---
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![Jagadish Chandra Bose](/images/placeholders/IMG-20250721-WA0001.jpg)
 
 Pick up your smartphone. Feel its cool, monolithic smoothness. Within that slab of glass and metal hums a universe built on silicon, a world governed by the almost mystical laws of semiconductor physics. We take it for granted, this ability to trap lightning in a bottle, to make inert matter compute, communicate, and create. We think of its genesis in Bell Labs, in the manicured lawns of Silicon Valley.
@@ -3147,7 +3364,9 @@ date: "2025-07-30"
 keywords: ["doggerel", "dark poetry", "profane humor", "misanthropy", "surrealism", "social critique", "cynicism", "Bengali", "personal angst"]
 published: true
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 
 ![Dim and glum](/images/placeholders/IMG-20250730-WA0010.jpg) 
 
@@ -3215,6 +3434,9 @@ date: "2025-07-20"
 keywords: ["ergodicity", "statistics", "time average", "ensemble average", "non-ergodic systems", "risk management", "probability", "data science", "financial markets", "Calcutta"]
 published: true
 ---
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![4 feet in filth water](/images/placeholders/erg.png)
 
 The universe, you see, has a funny way of telling its secrets. Sometimes it whispers them in the spin of a galaxy, and other times it screams them from something as humble as a street-food cart. And one of its most peculiar secrets is a five-dollar word that sounds like a medical condition: **ergodicity**.
@@ -3306,8 +3528,9 @@ published: true
 <script>
     import PopulationProjector from '$lib/components/blog/PopulationProjector.svelte';
     import GoldLine from '$lib/components/GoldLine.svelte';
-</script>
 
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![An AI-imagined vision of Kolkata 500 years in the future, showcasing extreme urban density.](/images/placeholders/a5nWmIXQTneuGRFUT5fQvg.webp)
 
 Picture the scene. It’s 1975. The world—and a brand-new me—takes his first baby gulp of Calcutta's polluted air. It was a city of glorious, elegant decay and unstoppable life. The grand colonial buildings were shedding plaster like dandruff in the Marxist air, but the streets buzzed with an energy that could power a small nation. The air was a thick soup of diesel from the iconic yellow Ambassador taxis, the sweet tang of sugarcane juice, and the ever-present humidity that feels like a warm, wet hug. The soundtrack was a constant jangling of tram bells, the shouts of vendors, and the gentle creak of the hand-pulled rickshaws.
@@ -3395,7 +3618,9 @@ keywords: ["Fibonacci sequence", "linear algebra", "matrix exponentiation", "mat
 published: true
 ---
 
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![fibonacci](/images/placeholders/IMG-20250730-WA0005.jpg) 
 
 It was a perfectly ordinary Wednesday afternoon, the kind where the air hangs thick and the biggest decision on the docket is whether to have a third cup of tea. On my laptop screen, a disembodied professor was droning on about an introduction to Linear Algebra. And then, there it was: the Fibonacci sequence.
@@ -3514,6 +3739,8 @@ category : "Technology"
 ---
 <script>
     import Mermaid from '$lib/components/blog/Mermaid.svelte';
+
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
 </script>
 ![flow of smoke](/images/placeholders/IMG-20250715-WA0001.jpg) 
 
@@ -3607,7 +3834,9 @@ date: "2024-05-17"
 keywords: ["doggerel", "profane poetry", "angry poem", "satire", "social critique", "religious hypocrisy", "rant", "dark humor"]
 published: true
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![Fuck this fucking shit](/images/placeholders/IMG-20240517-WA0030.jpg) 
 
 <br>
@@ -3659,13 +3888,15 @@ Plus through the fart as god—a bigwig.<br>
 title: "I Shit a Gargantuan Turd"
 description: "A philosophical and satirical rant using a gargantuan turd as a metaphor for societal ills, from corrupt leaders to the hypocrisy of modern AI."
 category: "Humor"
-thumbnail: "/images/placeholders/IMG-20250725-WA0003.jpg"
+thumbnail: "/images/placeholders/IMG-20250804-WA0002.jpg"
 date: "2025-07-25"
 keywords: ["satire", "social commentary", "dark humor", "scatological humor", "philosophy", "AI critique", "Indian society", "corruption", "personal essay", "rant"]
 published: true
 ---
-
-![Happy the holy who just shit](/images/placeholders/IMG-20250725-WA0003.jpg)
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
+![Happy the holy who just shit](/images/placeholders/IMG-20250804-WA0002.jpg)
 
 I haven't shit for a few days. This means that what will come out now, when I heave heavily and grunt it out, will be a gargantuan monstrosity that'll stretch my asshole—showcasing my entire third-world indigent rectum, from my hernia in the east to my hemorrhoids in the west. Most of these turds, as I plan to report in the future, in more lucid cogitations on the matter, resemble the nonchalant bust of gods, or the democratically elected leaders, movie stars, or cricketers from this totally super holy subcontinent. It's not a coincidence but divine grace, I believe, that I get to cook in my rectum the fine resemblances of these decapitated heads when they're still out there, allegedly in all their malignant narcissistic fame. And how can I forget the fraudsters, freeloaders, and freaks in Mumbai, Hyderabad, Chitradurga, Guwahati, Bangalore, Vellore, Chennai, Sivakasi, Calcutta (New Garia Metro station area especially), and Delhi, god bless these scrotes—such sacrilegious sweethearts, glowing examples of rare megalocephalic stool samples that stretch my asshole and make it bleed like it was holy Holi—everytime. India's asymmetrical tolerance for low life, hyped life, and fiction is a regular case for anal consternation. India needs an enema like me.
 
@@ -3693,8 +3924,20 @@ date: "2025-07-26"
 keywords: ["H1B visa", "US immigration", "tech workers", "MAGA", "Indian diaspora", "American dream", "globalization", "political commentary", "work visa", "US economy", "Indian brain drain"]
 published: true
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![MAGA chasing a brown Indian](/images/placeholders/IMG-20250726-WA0010.jpg)
+<PostBadge
+	title="On Not Ambition"
+	href="/blog/Work/NotAmbition"
+	standalone
+/>
+<PostBadge
+	title="Taboo"
+	href="/blog/Biology/Taboo"
+	standalone
+/>
 
 It may be helpful if I, as a US outsider but a former H1B, add my halfwits to this debate. And even though the temperature is tepid—the heat of displeasure having displaced populously to Trump's imagined involvement in Epstein's pedophilia ring—the matter is still hot on both sides, internally at least, if you take the rectal temperatures of the MAGA and the job-insecure *desi* segment: deep-in-debt Indians in America who can't vent either where they are or to the media back home in India. The *godi* media, as they have been pejoratively named, are always busy singing jingles about the greatness of the greatest king, Narendra Damodardas Modi, who started to reign in 2014. If I may be misconstrued as taking some side, I want to make my current disaffection for either group clear and say that my point is just this: there are things I know from almost a decade on the H1B—yes, two iterations of it—nuances that I can share.
 
@@ -3702,7 +3945,7 @@ Just like the amount of melanin doesn’t proffer any advantages beyond what you
 
 The other fields of science allow even more foreigners to the US, which white supremacists or nationalists either don’t know about or conveniently avoid mentioning because the hard work required and low graduate stipends offered for research aren't attractive to Americans and consequently filled by foreigners flooding to the US, who hope to make a scientific contribution and a living out of it.
 
-This locus of scientific evolution, coincident in one spot, happened because, beyond speculation, hearsay, randomness, and serendipity, America is a place where the government allows lenient funding to basic science unattached to immediate profits—a system that is either impossible or far less straightforward in most of the world. This leeway given to research is why America has written most of the books on which I, as a computer science student, got my education—part of which, the master’s degree, was in America. I wasn’t the go-at-it-gung-ho type, and I wasn’t intelligent enough, but I liked what I did. I wasn’t a superior person by any means, and although the H1B is a pressure and losing it tosses your life into turmoil, solving the problems with the H1B program is imperative—for the American people—whether that's making it more transparent, making equal status mandatory and not merely lip service in legalese, or tossing it out entirely and hiring only qualified American citizens. But it shouldn’t be about melanin content in the skin, not based on whiteness (as the MAGA fans fantasize), to be clear.
+This locus of scientific evolution, coincident in one spot, happened because, beyond speculation, hearsay, randomness, and serendipity, America is a place where the government allows lenient funding to basic science unattached to immediate profits—a system that is either impossible or far less straightforward in most of the world. This leeway given to research is why America has written most of the books on which I, as a computer science student, got my education—part of which, the master’s degree, was in America. I wasn’t the go-at-it-gung-ho type, and I wasn’t intelligent enough, but I liked what I did. I wasn’t a superior person by any means, and although the H1B is a pressure and losing it tosses your life into turmoil, solving the problems with the H1B program is imperative—for the American people—whether that's making it more transparent, making equal status mandatory and not merely lip service in legalese, or tossing it out entirely and hiring only qualified American citizens. But it shouldn’t be about melanin content in the skin, not based on whiteness (as the MAGA fans fantasize), to be clear. And you should seriously rethink giving girls like Melanie, who was in 1998 Eastern European, Einstein visa for their looks too—considering that eventually when her husband now the president of your country is all about driving foreigners out—or is it just ugly and above a certain melanin profile? 
 
 My H1B, albeit a tumultuous and nerve-wracking journey, at least saved me from innumerable false starts, wrong turns, and from chance, luck, and unfavorable circumstances back in India, which, as a country, doesn’t care about the meritorious—in fact, just the opposite. It is a bewildering wasteland of compromised principles that fosters the poisonous or nefarious pole. You fare better in India if you are a religious person with guile, a venal politician who has no moral compass or empathy, a businessman without any scruples or discipline whatsoever, a murderous goon, or just a garden-variety vicious backstabber. The smorgasbord of fraudsters, freeloaders, and freakishly corrupt fiends is as exotic as it is astonishing. There's no need for thinkers, honest professionals in any walk, or entrepreneurs—absolutely none whatsoever, zilch, nada, nil, zero. It's a mélange of all that can be wrong and all at once, yet somehow gets shoveled under the superlative marketing of adulterated spices, twerking Bollywood imitation hip movements, and an inexhaustible supply of crude but proud mythology and vaingloriously romanticized lies about reality, handed down over the ages that haven’t rotted properly. Escaping India is the only educated thing an educated Indian can do when in India.
 
@@ -3750,7 +3993,9 @@ date: "2025-07-29"
 keywords: ["doggerel", "satirical poetry", "religious satire", "dark humor", "Bengali", "hypocrisy", "self-deprecation", "profane poetry"]
 published: true
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 
 ![Holy fat ass](/images/placeholders/IMG-20250729-WA0000.jpg) 
 
@@ -3803,14 +4048,22 @@ Life is a big-ass cock-suck shit baloney.<br>
 # File: src/lib/posts/Homeopathy.md
 
 ---
-title: "Homeopathy Debunked: The Science Behind Bengal's Beloved Pseudoscience"
-[cite_start]description: "A critical analysis of homeopathy's scientific impossibilities, from Avogadro's number to the myth of water memory. Explore why this 18th-century pseudoscience, debunked by modern research, maintains a powerful hold in Calcutta and Bengali culture, and the real dangers it poses when chosen over evidence-based medicine." [cite: 4923]
-[cite_start]category: "Pseudoscience" [cite: 4923]
-[cite_start]thumbnail: "/images/placeholders/24fb85b4-ec6e-4033-8c3d-c8844279dffa.png" [cite: 4923]
+
+title: "Homeopathy"
+description: "A critical analysis of homeopathy's scientific impossibilities, from Avogadro's number to the myth of water memory. Explore why this 18th-century pseudoscience, debunked by modern research, maintains a powerful hold in Calcutta and Bengali culture, and the real dangers it poses when chosen over evidence-based medicine."
+category: "Pseudoscience"
+thumbnail: "/images/placeholders/24fb85b4-ec6e-4033-8c3d-c8844279dffa.png"
 date: "2025-07-22"
 keywords: ["homeopathy", "pseudoscience", "debunked", "scientific evidence", "Calcutta", "Bengali culture", "Samuel Hahnemann", "placebo effect", "Avogadro's number", "water memory", "alternative medicine", "medical myths", "public health"]
+
 published: true
+
 ---
+
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
+
 There is a certain, almost sacramental, ritual to homeopathy in a Bengali household. The tiny, identical white globules, dispensed from a slim glass vial, tasting faintly of sugar and alcohol. The solemn instructions: don't touch them with your hands, tip them into the receiving palm, place them under your tongue, and avoid eating or drinking for thirty minutes. It’s a scene replayed across Calcutta, from the grand old houses of North Sinthee to Ballygunge and everywhere else in the city of joy I can't afford to stuff in a sentence. It feels gentle, ancient, and profoundly… well, *ours* as with astrology and star-signs it doesn't matter what you take, **nux vomica** or **arnica** it *seems* to work. But behind this comforting facade lies a story of historical happenstance, scientific impossibility, and a collective delusion that a city of reason should have shed long ago—yet it hasn't.
 
 The tale begins not in Bengal, but in late 18th-century Germany, a time when medicine was a theatre of horrors. Physicians, armed with little more than misguided conviction, would bleed, purge, and blister their patients, often hastening what might have otherwise been a recovery. Into this maelstrom stepped Samuel Hahnemann, a physician rightfully appalled by the brutality of his peers. His quest for a gentler alternative led him to an idea, an observation that would spawn a global movement. He noted that Cinchona bark, used to treat malaria, induced malaria-like symptoms in him when he was healthy. *Similia similibus curentur*—"let like be cured by like"—became his first principle.
@@ -3854,6 +4107,36 @@ I must also point out, that although in a world fractured by dogma, where religi
 We must find the courage to hold our cherished traditions up to the light of reason. It is time to gently unweave homeopathy from our cultural identity and relegate it to the museum of medical history, alongside bloodletting and phrenology. Let us reserve our faith for that which is proven, and our health for medicine that is grounded in the elegant, astonishing, and verifiable reality of science. Our lives depend on it. As it is life in calcutta is hard. 
 
 
+# File: src/lib/posts/Images.md
+
+---
+title : "Art" 
+thumbnail : "/images/placeholders/IMG-20250807-WA0003.jpg" 
+category : "Art" 
+keywords: ["svelte", "sveltekit", "slideshow", "vite", "component"]
+published: true
+---
+<script lang="ts">
+    import ImageSlideshow from '$lib/components/blog/ImageSlideshow.svelte';
+
+    // FIX: Use `?url` to get direct image URLs instead of `?enhanced` metadata objects.
+    // The `import: 'default'` option ensures we get an array of strings directly.
+    const imageModules = import.meta.glob(
+        '$lib/assets/slideshow-images/*.{jpg,jpeg,png,webp}', 
+        { 
+            eager: true, 
+            query: '?url',
+            import: 'default'
+        }
+    );
+
+    const imageUrls = Object.values(imageModules);
+</script>
+
+**Slideshow**
+
+<ImageSlideshow images={imageUrls} />
+
 # File: src/lib/posts/MAFA.md
 
 ---
@@ -3867,6 +4150,25 @@ published: true
 ---
 
 ![Orange](/images/placeholders/IMG-20250728-WA0003.jpg) 
+
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
+<PostBadge
+	title="The H1B Visa"
+	href="/blog/Work/H1b"
+	standalone
+/>
+<PostBadge
+	title="Putin's Balls"
+	href="/blog/Doggerel-Political/PutinsBalls"
+	standalone
+/>
+<PostBadge
+	title="Taboo"
+	href="/blog/Biology/Taboo"
+	standalone
+/>
 <br><br>
 Greedy as fuck, my shit gets stuck,<br>
 I like cunts of every holy kind.<br>
@@ -3948,6 +4250,10 @@ Sometimes up asses I suppose.<br>
 Numbers that don't agree are wrong,<br>
 It's wise to pick those I have chose.<br>
 <br>
+My prattle sabre rattle or tattle,<br>
+Battle is really my home front.<br>
+A slim part is natty, most fatty,<br>
+And those cunts are blunt.<br><br>
 Gift a GREAT dark age in a bacteriophage,<br>
 From Elon's nasty Nazi ass I'm sure.<br>
 Not a frivolity who shits in the white house,<br>
@@ -3993,6 +4299,8 @@ The very people (MAGA) who voted these tyrannical ruffians in will be the ones t
 
 Well what do I care! I'm fucked anyway, one way or the other, the country where I am at, a parliamentary buffoonery, is permanently fucked—steeped in endless mythology, infinite gods, rarely coherent, all toxic narcissists—jamming the Indian postcolonial rectum are celebrities like the roisterous ramrod Ram with his docile wife Sita, juicy Jesus with mother Mary Tits, the fearsome Arab Allah of the miraculous beard fame and associated endless holy and superstitious shit-omelette bullshit. Fortunately my expectations are zero—I've given up—only waiting for death, the final delivery from the dejection that is myself. I can't wait to be traveling through all the various hells that these organized religions go on about—and I'm sure they're looking forward to my visiting them and testing the medieval torture equipments inside my derrière that they have stocked up through the ages.
 
+![super holy indian polity](/images/placeholders/IMG-20250803-WA0006.jpg)
+
 
 # File: src/lib/posts/Metro.md
 
@@ -4005,7 +4313,9 @@ date: "2025-07-27"
 keywords: ["Calcutta Metro", "Kolkata Metro", "public transport", "city life", "social commentary", "Bengali culture", "urban decay", "misanthropy", "personal essay", "City of Joy", "Kolkata life"]
 published: true
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![sleeper](/images/placeholders/IMG-20250727-WA0004.jpg) 
 
 I take the train. I mean the underground one. Metro, as it's known here. I have a card, so I don't have to bother standing in line with the common fuckwads—arrogant, vindictive everyday local infestations, who won't get any smarter for some reason or just like queues or enjoy farting in each other's faces, or sniffing the godawful mildew-rich sweet sweat stench mixed with urine-ammonia. It's always a bouquet, one fucking way or another. When you stand in a queue, your intelligence drops to below the lice-infested pubis average of the morons standing in the queue. The link in the minds of the mindfucked to reality is tenuous at best, if that—overpowered by the fictions of the world, the deluge of superstitious flimflam, potpourri of obnoxious religiously adulterated mythology branded sadly as our history, and apocryphal heresay from the past, misinformation and disinformation from the present, and the ominous crystal ball gazing into the future assfuckings to come. And just to make it perfectly clear, I don't fart in public. Flatulence is an art, and I spend it with care on myself, savoring both the aroma and the sound, which for the audiophiles out there, comes out in crisp 24 bit THX digitally mastered quality. I am a connoisseur in these things.
@@ -4046,6 +4356,9 @@ date: "2025-07-24"
 keywords: ["Cosmic Microwave Background", "CMB", "Big Bang", "cosmology", "physics", "Penzias and Wilson", "blackbody radiation", "Planck's law", "astrophysics", "satire"]
 published: true
 ---
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![goodly](/images/placeholders/IMG-20250724-WA0009.jpg) 
 
 Calcutta—is a city where entropy doesn't just increase—it metastasizes. Walk down rashbehari avenue in the july heat and you will not only discover spontaneous human combustion, but also the truth that the big bang wasn’t an event 13.8 billion years ago, but rather, something ongoing: a continuous, ceaselessly tooting cosmic poot whose faint echo is what astrophysicists pompously call the cosmic microwave background radiation. Fancy words for something that's essentially the universe’s weak residual flatulence from when it was a teenager.
@@ -4087,8 +4400,9 @@ category: "Technology"
 
 <script>
     import Mermaid from '$lib/components/blog/Mermaid.svelte';
-</script>
 
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 
 ![mindmap](/images/placeholders/IMG-20250803-WA0003.jpg) 
 
@@ -4167,7 +4481,9 @@ date: "2025-07-22"
 keywords: ["monk fruit", "diabetes", "sugar substitute", "healthy living", "zero-calorie sweetener", "mogrosides", "blood sugar", "diabetic diet", "natural sweeteners", "India", "Bapuji Cake", "food adulteration"]
 published: true
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 
 ![An oil painting of a monk, evoking the history of monk fruit.](/images/placeholders/monk-fruit.png)
 
@@ -4205,6 +4521,9 @@ date: "2025-07-27"
 keywords: ["father-son relationship", "memoir", "personal essay", "Calcutta", "Bengali family", "childhood memories", "books", "bibliophilia", "family history", "grief", "love"]
 published: true
 ---
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![books](/images/placeholders/IMG-20250727-WA0000.jpg) 
 
 An open mind, I had once read—though where, I can no longer say with certainty, as the years and the pages blur into each other like the dust motes in late afternoon light—is the precondition to an open heart. I found the claim persuasive, if only partially, for I had already, in the slow and involuted theater of my childhood, observed the peculiar disjunction between the benevolence people professed and the selective, sometimes cruel, parsimony of their actions. Compassion, I learned early, was too often confined by the tight corsets of caste, prejudice, and petty ancestral anecdotes rehearsed into gospel.
@@ -4235,12 +4554,14 @@ title: "The Art of the Fade-Out: Nature's Elegant Goodbye"
 
 description: From a cooling cup of tea to life-saving medicine, explore the beautiful and ubiquitous process of things fading away, known as exponential decay.
 category: "Math"
-thumbnail: "/images/placeholders/IMG-20250718-WA0010.jpg"
+thumbnail: "/images/placeholders/IMG-20250804-WA0001.jpg"
 ---
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
+![An AI-imagined decay](/images/placeholders/IMG-20250804-WA0001.jpg) 
 
-![An AI-imagined decay](/images/placeholders/IMG-20250718-WA0010.jpg) 
-
-Alright, pull up a chair. Let's talk about the way things end. Not with a sudden, jarring crash, but with a slow, graceful sigh. Think about that clay cup of *chaa* you bought at the station—how it goes from volcanically hot to merely lukewarm. Or that earworm of a pop song that’s the soundtrack to your entire Tuesday but is a forgotten relic by Friday. Or, let's be honest, the fiery enthusiasm for that "get fit" resolution you made on January 1st. It doesn't just stop dead. It fades. It dwindles. It performs a slow, elegant, and remarkably predictable exit from the stage.
+Alright, pull up a chair. Let's talk about the way things end. Not with a sudden, jarring crash, but with a slow, graceful sigh. Think about that clay cup of *chaa* you bought at the station—how it goes from volcanically hot to merely lukewarm. Or that earworm of a pop song that’s the soundtrack to your entire Tuesday but is a forgotten relic by Friday. Or, let's be honest, the fiery enthusiasm for that "get fit" resolution you made on January 1st. It doesn't just stop dead. It fades. It dwindles. It performs a slow, elegant, and remarkably predictable exit from the stage. I have somehow always imagined without the humility of banality, this as a smaller monster being birthed by the more familiar giant dragon—the positive exponential. Of course metaphors are as bendy and stretchy as these mathematically gifted growth functions are, and this one particularly often catches us by surprise. 
 
 This elegant vanishing act has a name: **Exponential Decay**. And far from being a gloomy tale of endings, it’s one of the most wonderfully useful and tidy processes in the entire universe. It’s nature’s way of cleaning up after itself, a fundamental rhythm that governs everything from atoms to memories.
 
@@ -4312,6 +4633,9 @@ category: "Work"
 thumbnail: "/images/placeholders/IMG-20250719-WA0000.jpg"
 
 ---
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![Ambitious bird](/images/placeholders/IMG-20250719-WA0000.jpg)
 
 Ambition. There’s an ugly word. Comes from the Latin *ambitio*, meaning—no surprise—"going around" (round and round in circles), desperately begging for votes, overpromising the sky and other lies. Essentially, a politician's daily bowel movement. Now ask yourself: do you really want your life's theme song to echo the gastrointestinal routine of a Roman senator, circling pathetically, shaking sweaty hands and making false promises about aqueducts using a metal for plumbing that we now know is a toxin? Precisely.
@@ -4345,7 +4669,9 @@ thumbnail : "/images/placeholders/IMG-20240723-WA0028.jpg"
 category : "My Past"
 
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![bought in San Marcos](/images/placeholders/IMG-20240723-WA0028.jpg) 
 
 Saw this old Sony CD/tape deck, and it brought all those memories rushing back—the San Marcos Sony outlet mall near San Antonio, that burgundy Toyota Tercel I drove, moments' notice, and so many miles on the highway. And where are those people, and where did everything go? These were proud, confident people leading proud, confident, conforming lives, and I just happened to be a shadow passing through, a flicker of light and shade, umbra and penumbra—nothing important to notice, like a passing cloud.
@@ -4497,9 +4823,15 @@ thumbnail : "/images/placeholders/IMG-20250801-WA0029.jpg"
 category : "Doggerel-Political" 
 
 ---
-
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![putin](/images/placeholders/IMG-20250801-WA0029.jpg) 
-
+<PostBadge
+	title="Make America a Fuck Again (MAFA)"
+	href="/blog/Doggerel-Political/MAFA"
+	standalone
+/>
 <br>
 I'm Putin the completely permanent,<br>
 My balls are rather heavy and large.<br>
@@ -4599,6 +4931,9 @@ description: "A journey into the history and science behind the ethereal white c
 category: "Food"
 thumbnail: "/images/placeholders/757fbd57-9053-4e12-95a3-b17bc2008cef.png"
 ---
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![rezala](/images/placeholders/757fbd57-9053-4e12-95a3-b17bc2008cef.png) 
 
 Let’s get one thing straight. If you ask a generic AI to generate a picture of "Indian curry," it will probably spit out something brownish-red or violently yellow, bubbling with enough oil to worry a cardiologist. That’s the stereotype, the default setting, the `curry_base_v1.0`. And then there’s Chicken Rezala. Stereotypes are everywhere, like those of Muslims in India, that they have more babies, or in the world that they are terrorists. Of course I am no endorser of Islam, but I am no endorser of any religion, all being equally false, including the one that's now put the Mughals out of the Indian history school syllabus—but anyway this is about food, but I want to make it clear, it's not the religious people or the dumb dogmas that give religions any reason to be written about, it's the ordinary people, often the docile, mute, religiously cuckolded and blindfolded faithful artisans back in those ancient times—cooks, artists, sometimes their patron kings, often philosophers and thinkers that need mention from time to time, primarily because of their secular contributions that would be felt multiplied in time downstreams. I am glad to be a bengali and have grown up uninterested and unindoctrinated to any faith, especially today the inordinate time that some people spend thinking about and praying to nonexistent beings is utterly incommensurate and irritatingly anachronistic. But whether it's on the face or not, the effects of religion are always pernicious if permitted outside fantasy—which is what it is. But I digress.
@@ -4653,6 +4988,117 @@ Then comes the masterstroke. The final, defining aromas of Rezala are added righ
 Why add them last? Because these are highly volatile compounds. In chemistry, "volatile" means a substance that evaporates easily. If you were to add these delicate floral and sweet notes at the beginning of the cooking process, their aromas would simply evaporate into thin air, lost forever. By adding them at the end, you trap them in the warm gravy, ensuring they hit your nose the moment the dish is served. It's the difference between perfume and deodorant—one is a finishing touch, the other is for the whole journey.
 
 
+# File: src/lib/posts/SimpleMan.md
+
+---
+
+title : "Simple Man" 
+
+thumbnail : "/images/placeholders/IMG-20250322-WA0000.jpg" 
+
+
+category : "Doggerel-Political" 
+
+
+---
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
+<PostBadge
+	title="Make America a Fuck Again (MAFA)"
+	href="/blog/Doggerel-Political/MAFA"
+	standalone
+/>
+<PostBadge
+	title="On Not Ambition"
+	href="/blog/Work/NotAmbition"
+	standalone
+/>
+<PostBadge
+	title="Taboo"
+	href="/blog/Biology/Taboo"
+	standalone
+/>
+
+![suvrotica stamp](/images/placeholders/IMG-20250322-WA0000.jpg) 
+
+<br>
+I am in concentrics of doom,<br>
+Looming swooning swirling cheese feta, <br>
+A happiness-overloaded gluttonous zombie,<br>
+Fetid flickering fluorescence of Calcutta.<br>
+<br>
+Love, greed, hate, lust, bait, mate,<br>
+Clay tea cups broken then scattered.<br>
+Most start school with high dreams,<br>
+At fifty I'm shell, hopes shattered.<br>
+<br>
+Dingy dark dank deep I know,<br>
+Light outshines, blood outlast. <br>
+Syringe and half-empty glasses and smoke,<br>
+Cretins call me the twat outcast.<br>
+<br>
+Sinthee, San Antonio, Hyderabad,<br>
+Shadows keep shitting on me.<br>
+I ride rough, I talk shit & tough,<br>
+Hand-cuff me but I break free. <br>
+<br>
+A shimmering dribbling hope blob,<br>
+Exasperation in beads of sweat.<br>
+Billions of meaningless millions,<br>
+A brown third-world corrupt fate.<br>
+<br>
+Teeming tens with writing pens,<br>
+Scribbles scrawled footnotes bled.<br>
+On margins in between lines,<br>
+Underlined but outside the head.<br>
+<br>
+I am old now, old as dung dregs, <br>
+I drink it like a man and then I die. <br>
+Why pussyfoot your whole goddamn life, <br>
+Like a fucking sly, sick, shit-worm fly? <br>
+<br>
+Simple men, simple lives are simple lies, <br>
+Feeble fictions—fuck those fools and fibs. <br>
+Fuck flimflammery & fairy foolishness. <br>
+Let's open our eyes wide or our ribs.<br>
+<br>
+The texture of troubling times,<br>
+And dancing my final dance.<br>
+I am weeping in the bengali rain,<br>
+Another trance in the pungent prance.<br>
+<br>
+Dick pic and crestfallen sick,<br>
+Bright shiny eyes I was him.<br>
+Doesn't matter now where I turn,<br>
+All roads in Calcutta turn grisly dim<br>
+<br>
+Reflections and recollections all,<br>
+Shattered on liquid glass shards.<br>
+Sad we're not made of but,<br>
+Remembering old greeting cards.<br>
+<br>
+The city transactional and testy,<br>
+People like pinworms on a rim.<br>
+The daily grind the roughage,<br>
+Under the surface it's giddy grim.<br>
+<br>
+Yes it's a stamp, my shriveled shrine,<br>
+Masculinity's most misunderstood prayer.<br>
+Going nowhere now the wind,<br>
+Mute silence in the shrill still air.<br>
+<br><br>
+It's a confounding travesty that I’ve reached half a century, surrounded by a country of dunces in exemplary and shimmering pristine backwaters reminiscent of the nation I went to school in back when all nations were deservedly backwater. And in all likelihood, I will be assaulted and murdered by the stillborns of this present generation—narcissists of fine caliber of heavy uncritical religious disposition, but functionally duds on the world stage of today in any capacity. 
+
+The Indian paper tiger, at eighty-seven rupees per dollar, will soon cross the sentimental catharsis of ninety, and I’m sure the `hind-loo` in the country will find some popular mythology to justify the event—or better still, blame it on the nearest `most-lame` or `christ-cunt`. But will I still be alive to see it cross a century? Well, maybe—I can never underestimate how low the rupee or our ministers can stoop to poop a massive goop in the ever-expectant mouths of the losing laity who only want to exist, to survive the difficult disdain of just one more fucking day, to barely arrive at just another self-similar fractal tomorrow full of the usual apathetic blabbering bullshit from another bladder, or ungulate piss touting guru, or godmen. Or flexibly, served by political or business goons and gangbang style mafia who come with parted ass cheeks ready to shit into their mouths and so on, carnage for five years the full Lok Sabha term—until the next planning or shitting shift takes over, whence anew starts the renewed democratic precum-lubricated fisting of mother India in all her already gaping, deeply empty colonial and hemorrhagic post-colonial holes. 
+
+As more and more swaying scrotums and smelly, seepy cunts full of sand fill the politics of where we are going—with belligerent and slaverous acrimony—the nation slips deeper into the mediocre character of a sullen, dull, middle-aged hindustani clerk with a masturbatory fetish for gazing at the reflection of his rancid asshole gaping in the window mirror, oblivious to the fact that the glass has another side, where the onlookers of the wider world camp out to ogle at the destitution `karma-porn` on display, with popcorn, beer and routine festive subscription cheer. And just when the riveting crowd-pleasing squelchy puckering was showing the decimated labyrinthine bleeding anal polyps, a lean, menacing surpentine steamy turd scurrilously slithered on to the already disturbed and complex metaphor—to hoops and much needed cum squirting fanfare on the world outside the window pane. You could say the only thing missing was a fan—but who knows in another parallel reality the turd might have just indeed done that—hit the fan. That fan incidentally is Trump for India. 
+
+Indians may finally know what the fuck anyone is talking about—or not—this year that I turn fifty, because shit's constantly hitting the fan here, or being fanned by the fan, but it still fails to register—this is how dumb Indians have been made with religiosity and paid press. Or maybe I'll start enjoying passing gas so much that I stop giving a fuck about what the fuck anyone is talking about or really anything at all—especially stuff like shit that should matter, like food, air, shelter. Notice I leave out education because, in a religious or holy country—where sensibilities are dulled, you don't need shit like that. Or medicine. Or healthcare. More astrology, palmistry, crystals, gurus smoking gajas up their assholes, babas with billions—fuck yes! No wonder I'll be huddling in a drain in a slum in Calcutta forever—fuck me while I fart.
+
+I'm fucking fifty. But that's it. It all goes downhill—if there's any more downhill left for me. I'm sure it's below sea level at this point. The balls are already quite small and scrunched up—the sperms could go drier though, I guess. And the dick, which is already a toothpick, could shrivel up into a singularity. Well, there's downhill—a dick black hole—but I guess that title is more apt for my asshole, which is brown, just one shade away from the singularity. But no reason not to remember I did once have a healthy looking shaft and plump testicles—hence the celebratory postage, incase you were wondering. Stupid fucking cunts!
+
+
 # File: src/lib/posts/Stoop.md
 
 ---
@@ -4664,6 +5110,9 @@ thumbnail : "/images/placeholders/IMG-20250728-WA0004.jpg"
 category : "Doggerel" 
 
 ---
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 
 ![I stoop to poop](/images/placeholders/IMG-20250728-WA0004.jpg)
 
@@ -4705,6 +5154,71 @@ Now a bent fuck, with forked tongue I suck. <br>
 
 
 
+
+
+# File: src/lib/posts/SuperHolyIAm.md
+
+---
+
+title : "Super holy I am" 
+
+thumbnail : "/images/placeholders/IMG-20250806-WA0004.jpg" 
+
+category : "Doggerel Religion" 
+
+---
+
+![holy tibetan](/images/placeholders/IMG-20250806-WA0004.jpg) 
+<br>
+I am a holy man, super holy I am,<br>
+And yet the bird shit on my head.<br>
+I curse the species to an early extinction,<br>
+And I want this bird dead.<br>
+<br>
+I hope bird brain can take the pain,<br>
+I'm sure it's cloaca won't be happy.<br>
+First I fuck it, then I bleed it,<br>
+As we know that's alrighty with almighty.<br>
+<br>
+In Tibet when I sodomized a pet civet,<br>
+My dick stank like a skunk.<br>
+Not to fear, skunks are leaders here,<br>
+Plus this is expected of a masculine monk.<br>
+<br>
+Sin will win if you fuck your kin,<br>
+Just an aphorism to put on your ass.<br>
+Fuck everyone, advisable as a tattoo,<br>
+If you want a free boarding pass.<br>
+<br>
+My roommate meditates with his mouth open,<br>
+I'll transfer the poop as a friend.<br>
+That bastard farts in his sleep,<br>
+I plan to bring him to his monastic end.<br>
+<br>
+I hope he chokes on the poop,<br>
+I'll ensure that his head bursts.<br>
+I'll kick his pious balls until he's there,<br>
+In bald buddha he says he trusts.<br>
+<br>
+Just a lot of bald bull they pull I say,<br>
+And I ask, to what gnarly end?<br>
+You get proxy poop in your mouth,<br>
+And kicked to death by a bad bald friend.<br>
+<br>
+I'm holy but with big holes,<br>
+With wants, I fuck gents and cunts.<br>
+Every man for himself and shit,<br>
+Pretend pathetic the monastic stunts.<br>
+<br>
+After he's gone I run to his house,<br>
+All the illegitimate daughters suck my dick.<br>
+The sons become errand runners,<br>
+His wife as mistress I plan to keep.<br>
+<br>
+Fucking ascetic, my ass,<br>
+He was a duplicitous man.<br>
+I am worse and I act today,<br>
+Stop me if you fucking can.<br>
 
 
 # File: src/lib/posts/svelte-introduction.md
@@ -4804,7 +5318,15 @@ description: "Of Nicknames, Neural Circuits, and the Perverse Abstractions of So
 category: "Biology"
 thumbnail: "/images/placeholders/IMG-20250725-WA0000.jpg"
 ---
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
 ![blue bengali man](/images/placeholders/IMG-20250725-WA0000.jpg) 
+<PostBadge
+	title="Make America a Fuck Again (MAFA)"
+	href="/blog/Doggerel-Political/MAFA"
+	standalone
+/>
 
 In the first company I ever worked for in my life—harking back to a time in the early history of the world, or so it feels—it was the year 2000, and I was in Austin, Texas. There were four of us who always hung out together: Alex McCarrier, John Dodson, Russell Meyers, and yours faithfully. It was common in those days, depending on what nonsense happened to be in our heads, to give each other ad-hoc nicknames. Because Bin Laden was constantly in the news, and John Dodson was our group’s de facto spokes-spigot when it came to expressive irreverence (Russell came second, I was third, and Alex mostly spoke in his mind), I sometimes called him “John bin Dod.” My nickname, meanwhile, was “Suvrotica.” I think it was John who christened me that, although it might well have been Russman.
 
@@ -5047,6 +5569,38 @@ When I left, she hugged me. She always did. Her arms, flabbier and shakier now, 
 Back in the cab, I did not speak. Outside, the third-world cheap LED billboards blinked with their hollow gospel: progress, deals, tomorrow. Garbage heaps glittered under drone-light like carnival trash. Inside me, the tea still clung to the walls of my throat, a warmth that was neither hunger nor comfort, just proof. The ice cream had left its dry, familiar coat on the back of my tongue. What I was carrying wasn’t nostalgia. It wasn’t even memory. It was a sacrament. A communion. A reaffirmation that there are still truths too whole to say aloud—only sip.
 
 
+# File: src/lib/posts/WakingUp.md
+
+---
+
+title : "Waking up Me" 
+
+thumbnail : "/images/placeholders/IMG-20250805-WA0001.jpg" 
+
+category : "Bipolar Depression" 
+
+---
+
+![thought eats thought](/images/placeholders/IMG-20250805-WA0001.jpg) 
+
+It is in those earliest moments of waking—when the boundaries between dream and recollection have not yet hardened into the inflexible clarity of day—that I find myself most estranged, most violently dislocated. The mind, that nostalgic liar, still inhabits the soft light of a different life, still wears the skin of a younger self. There, in that thin-fogged interstice between sleep and consciousness, I awaken not in Calcutta, not in this slackening city of heat and noise and unrecoverable age, but in that other place—San Antonio—where my sense of self had once arranged itself into coherent meaning, like a symphony not yet broken into discordant fragments.
+
+I do not awaken into melancholy. I awaken into confusion. And then, almost immediately, into revulsion. There is a violence in the recognition that the room I expect—the soft-furnished echo of a more ancient but younger existence—is not the one that receives me. Instead, I am met by the stale, humid reality of this one: this room with its industrial exhaustion, this air thick with a weariness that was never earned, this body—sweating, gapped of tooth, bowed by the slow sabotage of time—who stares back at me with the unsparing gaze of a mirror that does not lie, not even to spare me a second.
+
+This is not a lament. It is not another act in the grand tragic opera of depression. I do not seek pity or consolation, for there is no listener gentle enough, and no ear that would not flatten the tune into cliché. What I am recording—what I must, lest it dissolve into vapor—is the horror of the exact moment when an old man in Calcutta realizes that the last dwindling glimmers of what once passed for a sustaining flame are now flickering into death, one after the other. Not dramatically. Not even noticeably. But with the quiet, surgical precision of inevitability.
+
+Already I have surrendered, not in posture, not in confession, but in that deeper, slow erosion where one continues to act out the farce of participation. I cook, I clean, I reply, I pretend to matter—if not to others, then at least to the inner auditor who keeps record of whether I “tried.” And I have tried. By god or whatever godless logic rules this universe—I have tried. And I want the record to show it. That even if all else fails and my name is forgotten, anyone who ever crossed paths with me, even in disdain, would admit—yes, tenacity was there, even in the ruins.
+
+But I know, I feel, that the spring is winding down. The machine is folding into itself. The internal alarms that once rang as melancholia or madness now simply murmur—this is the biology of it, this is the neurology of surrender. It arrives not as a crash but as a soft grinding. The bipolar mind knows this well: it eats from within, it feeds on itself, whether by conscious gnawing or from within concentric shells of unconscious dread—each shell cracked open by nightmares that wake me with no name, no memory, just an aftertaste of catastrophe.
+
+More than once, I have woken certain I was still there—in that cramped apartment in Texas, that old life with its catalog of joys and irritations, its familiar wallpaper of companionship and small duties. I expect the fabric of the sheets, the particular draft that passed through the window, the habits of furniture and affection. But the waking kills it. What I find is not just another place, but another person—I wake not only elsewhere but as someone else, someone older, someone lonelier, someone whose story is so violently severed from the one I remember that I sometimes think I am waking in another life entirely, a future I did not write but was somehow sentenced to.
+
+This place—this Calcutta of now—is not the one I was born into. It is a hallucination of entropy, a fevered hallucination I never even had in my worst psychotic dream as a boy. I have not merely returned. I have been returned. By what logic? By what cruel and indifferent author? I do not know.
+
+But I write it down. Because if I don't, I will become one more detail that disappears.
+
+
+
 # File: src/lib/posts/WeirdFeeling.md
 
 ---
@@ -5080,6 +5634,27 @@ The real India doesn't live in villages, cities, etcetera. The real India lives 
 The corruption that continues to erode India is perhaps the only legacy that we seem to be passing on with great efficiency, with morally bankrupt people at the helm, goons festooned with accolades, and a generally well-nourished spectrum of propaganda that has awarded the Indian media the status of a jester. The self-congratulatory style of saying whatever you want to say while keeping your head buried in the sand works well and gets lots of sponsorship, at least. I don't know why I bother to write these laments. Nobody cares. But somehow something compels me to write, just in case there's a future leader or thinker who might get inspired. Even a nobody has the right to dream good things for the place he calls home, no matter if that place is hostile to him, or doesn't want him. I was born here, and that's something that's not going to change, nor are the impressions of my childhood years that has been formative in creating this neural network I call me.
 
 </div>
+
+
+# File: src/lib/posts/WhyHindooHiccups.md
+
+---
+
+title : "Why hindoos have hiccups" 
+
+thumbnail : "/images/placeholders/IMG-20250805-WA0002.jpg" 
+
+category : "The Weather" 
+
+---
+
+![watching the weather](/images/placeholders/IMG-20250805-WA0002.jpg) 
+
+It's pouring cats and dogs, and in the northern parts, larger ungulates—very holy, certainly holier than the cows in Calcutta, and the media has to curtail some of the hate-mongering attacks on the anemic opposition due to this climate crisis. I mean, you can't ignore this sort of cataclysm—sinking cities, stranded pedestrians with flooded pubes and miss the rainy opportunity to shift the blame of some sort of bad city planning, from the reigning monarch and kinsmen of the prevalent successful democratic subversion conveniently to someone not in power. This is the Mughals most often, less frequently the British, or whoever created the drainage systems that are still being used. Of course, these are short-lived; no one has time to carry on about drainage systems or boring non-issues like that—given the detail that wallowing in a waterlogged city is the fancier way for kicking the bucket, inadvertently of course, your own bucket as well as unrelated buckets. The amnesia Indians have is magical; they'll forget everything and crowd in front of the TV for the next debate on "why hindoos have hiccups...". The promises and stories that politicians tell have plots that are thinner than the thinnest used, and even that too, in the lowest budgeted porn flicks, or blue filim (sic) as the more vernacular moniker goes, and consequently, it's only the ones held at gun point, brain dead, heavily bribed, devoutly indoctrinated, securely brainwashed, or inmates of asylums that can be expected to feel the jubilation in the self-congratulatory nature of achievements that festoon the paid media.
+
+I do read them; it's a good practice for correcting my Hindi dyslexia, and given that it's guaranteed to generate whoops of uncontrollably difficult spasms in my breathing tube in public, I prefer to do it privately, preferably in aid of bowel movements, it has been a savior for my recurrent bouts of constipation. If there's any job where you can screw it up completely and still have people publicly suffocate with various existential angst and contradictory fanfare and be officially forced to say the said omnipotent did a good job, it's sitting on an Indian chair that's elected. No matter what happens afterwards, your job is secure, and usually the only work you do for the rest of your life is make sure you sit on that or some other chair and collect enough wealth so that every kith and kin in the next fourteen generations (চৌদ্দ পুরুষ in bengali) can spend a lavish life in an European country. And with the great hairy gods, their attractively voluptuous consorts, meaty poultry and beefy ungulates on the side, anything under the unfair sky is possible as both god and money are real—that is, hardly an illusion, although an illusion nonetheless, but a product of human agreement, and it is agreed that not everyone has to be in on it, unless there's a cut involved.
+
+Reality is such an easy ball of bull fecal clay that it can be played around—usually right in front of your eyes and using the same language, albeit all very rhetorically and god willing (and he's always willing) you won't know shit from Shinola. And all thanks to the previous generations of squandering forepeople, we have a large number of citizens who are quite close to being illiterate, and the ones that have a bit in their heads usually come out like confused semi-colonial masala spaghetti that's undercooked and unpalatable for the modern gluttonous creed. But since most people don't know what they don't know, that gives them strident confidence in the debates that are always bloodthirsty and amusing at the same time. So why do hindoos have hiccups? Well, I don't know I've to admit, but you should find out.
 
 
 # File: src/lib/posts/WrightsLaw.md
@@ -5271,11 +5846,28 @@ injectAnalytics({ mode: dev ? 'development' : 'production' });
 # File: src/routes/+page.svelte
 
 <script lang="ts">
+	import ImageSlideshow from '$lib/components/blog/ImageSlideshow.svelte';
+
+	// FIX: Add the `Record<string, string>` type annotation.
+	// This tells TypeScript that `imageModules` is an object where both
+	// the keys and the values are strings.
+	const imageModules: Record<string, string> = import.meta.glob(
+		'$lib/assets/slideshow-images/*.{jpg,jpeg,png,webp}',
+		{
+			eager: true,
+			query: '?url',
+			import: 'default'
+		}
+	);
+
+	// With the fix above, TypeScript now correctly infers `imageUrls` as `string[]`.
+	const imageUrls = Object.values(imageModules);
 </script>
+
 
 <section class="container mx-auto py-8 max-w-4xl">
 	<h1 class="mb-8">Reflections on a Schoolboy's Past</h1>
-
+	
 	<p class="mb-4">
 		I remember school through a veil of years of indifference to childhood memories that grownups, at a certain point, must admit to—I do.
 		But mine was a complicated palimpsest of ambition, triumph, misadventures, romance, then—shame, regrets—most now like old luggage tags, expired or useless.
@@ -5329,6 +5921,10 @@ injectAnalytics({ mode: dev ? 'development' : 'production' });
 		Those who prefer the opposite, longer-haired illusions of us for these cosmetic and meretricious patina of gloss—us cretins also misjudge melanin deficiency for superiority or experiments with holiness. We believe if white man George Harrison had condescended in his lyrics the coexistence of the dark-skinned mythological creation Krishna with the Christian mythology of white man Jesus, then they are both really real and there's a cowherd with methemoglobinemia and an antique flute and a schizophrenic carpenter stuck on a cross who live somewhere in Attapara in North Calcutta under some Bengali pseudonym.
 	</p>
 
+	<div class="my-8">
+		<ImageSlideshow images={imageUrls} />
+	</div>
+	
 	<p class="my-4">
 		Thus our ability to get muddled works hand in hand with a corrupted framework of basic data, information, or knowledge, and we grow up on a pyramid of crumbling make-believe fiction and frequently conflate it with facts. Of course, no one wants to wake up next to a hag with no teeth, but even this logic is specious because—give enough time to Aishwarya Rai Bachchan to age and I promise you she'll be a hag with no teeth. The only way out is a stuffed doll or a girl robot, but that is not how your brain would like to accept it—your brain would know it's a thing, and because of its lack of consciousness, its participation as a partner is void. Wait a few more years until a girl robot can dump you; at that point, it won't be a thing anymore.
 	</p>

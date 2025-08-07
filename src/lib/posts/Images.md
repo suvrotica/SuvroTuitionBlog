@@ -1,51 +1,27 @@
 ---
-
 title : "Art" 
-
 thumbnail : "/images/placeholders/IMG-20250807-WA0003.jpg" 
-
 category : "Art" 
-
 keywords: ["svelte", "sveltekit", "slideshow", "vite", "component"]
 published: true
 ---
 <script lang="ts">
     import ImageSlideshow from '$lib/components/blog/ImageSlideshow.svelte';
 
-
+    // FIX: Use `?url` to get direct image URLs instead of `?enhanced` metadata objects.
+    // The `import: 'default'` option ensures we get an array of strings directly.
     const imageModules = import.meta.glob(
-        '/static/*.{jpg,jpeg,png,webp}', 
+        '$lib/assets/slideshow-images/*.{jpg,jpeg,png,webp}', 
         { 
             eager: true, 
-            query: '?url&w&h' 
+            query: '?url',
+            import: 'default'
         }
     );
 
-    
-    const imagesWithData = Object.values(imageModules).map((module: any) => ({
-        src: module.default.url,
-        width: module.default.w,
-        height: module.default.h
-    }));
-    
+    const imageUrls = Object.values(imageModules);
 </script>
 
 **Slideshow**
 
-<ImageSlideshow images={imagesWithData} />
-
-
-
-
-
-![a1](/images/placeholders/IMG-20250807-WA0003.jpg) 
-
-![a2](/images/placeholders/IMG-20250806-WA0010.jpg) 
-
-![a3](/IMG-20250806-WA0002.jpg) 
-
-![a4](/IMG-20250807-WA0006.jpg) 
-
-![a5](/IMG-20250805-WA0001(1).jpg) 
-
-![a6](/IMG-20250807-WA0010.jpg) 
+<ImageSlideshow images={imageUrls} />
