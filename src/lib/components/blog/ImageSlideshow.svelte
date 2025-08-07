@@ -2,21 +2,30 @@
 	import { fade } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 
-	// PROPS
+	// PROPS: Now expects image objects with dimensions
+	type Image = {
+		src: string;
+		width: number;
+		height: number;
+	};
 	type Props = {
-		images: string[];
+		images: Image[];
 		holdDuration?: number;
 		transitionDuration?: number;
 	};
 
 	let {
 		images = [],
-		holdDuration = 2000, // Time each slide is fully visible (2 seconds)
-		transitionDuration = 1000 // Duration of the fade in/out animation (1 second)
+		holdDuration = 2000,
+		transitionDuration = 1000
 	}: Props = $props();
 
 	// STATE
 	let currentIndex = $state(0);
+	
+	// DERIVED STATE: Automatically calculate aspect ratio for the current image
+	let currentImage = $derived(images[currentIndex]);
+	let aspectRatio = $derived(currentImage ? currentImage.width / currentImage.height : 16 / 9);
 
 	// EFFECT for cycling through images
 	$effect(() => {
@@ -26,24 +35,22 @@
 			currentIndex = (currentIndex + 1) % images.length;
 		}, holdDuration + transitionDuration);
 
-		// Cleanup function to clear the interval when the component is unmounted
-		return () => {
-			clearInterval(interval);
-		};
+		return () => clearInterval(interval);
 	});
 </script>
 
-{#if images.length > 0}
-	<div class="slideshow-container">
+{#if currentImage}
+	<div class="slideshow-container" style:aspect-ratio={aspectRatio}>
 		{#key currentIndex}
 			<img
-				src={images[currentIndex]}
+				src={currentImage.src}
 				alt="Slideshow image {currentIndex + 1}"
 				class="slideshow-image"
 				in:fade={{ duration: transitionDuration, easing: cubicInOut }}
 				out:fade={{ duration: transitionDuration, easing: cubicInOut }}
 			/>
-		{/key} </div>
+		{/key}
+	</div>
 {:else}
 	<div class="slideshow-container slideshow-placeholder">
 		<p>No images to display.</p>
