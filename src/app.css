@@ -198,3 +198,14 @@ pre.shiki { @apply p-4 rounded-lg overflow-x-auto; }
 .post-badge span {
 	@apply relative;
 }
+.slideshow-container {
+	@apply relative w-full h-96 bg-neutral-300 dark:bg-neutral-800 rounded-lg shadow-inner overflow-hidden;
+}
+
+.slideshow-image {
+	@apply absolute top-0 left-0 w-full h-full object-cover;
+}
+
+.slideshow-placeholder {
+	@apply flex items-center justify-center text-neutral-500;
+}
