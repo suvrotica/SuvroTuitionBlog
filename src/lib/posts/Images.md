@@ -14,7 +14,7 @@ published: true
 
     // 1. UPDATE the query to ask for url, width (w), and height (h).
     const imageModules = import.meta.glob(
-        '/*.{jpg,jpeg,png,webp}', 
+        '/static/*.{jpg,jpeg,png,webp}', 
         { 
             eager: true, 
             query: '?url&w&h' 
