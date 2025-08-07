@@ -12,7 +12,7 @@ published: true
 <script lang="ts">
     import ImageSlideshow from '$lib/components/blog/ImageSlideshow.svelte';
 
-    // 1. UPDATE the query to ask for url, width (w), and height (h).
+
     const imageModules = import.meta.glob(
         '/static/*.{jpg,jpeg,png,webp}', 
         { 
@@ -21,13 +21,16 @@ published: true
         }
     );
 
-    // 2. UPDATE the mapping to create an array of { src, width, height } objects.
+    
     const imagesWithData = Object.values(imageModules).map((module: any) => ({
         src: module.default.url,
         width: module.default.w,
         height: module.default.h
     }));
+    
 </script>
+
+**Slideshow**
 
 <ImageSlideshow images={imagesWithData} />
 
