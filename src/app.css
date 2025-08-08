@@ -205,12 +205,11 @@ pre.shiki { @apply p-4 rounded-lg overflow-x-auto; }
 	@apply relative max-w-full max-h-full bg-neutral-200 dark:bg-neutral-900 rounded-lg shadow-inner overflow-hidden aspect-[16/9];
 }
 
-
 .slideshow-image {
-	/* This is a robust way to center an absolutely positioned element.
-	   It also constrains the image, preventing it from being cropped. */
-	@apply absolute inset-0 m-auto max-w-full max-h-full;
+    @apply absolute inset-0 m-auto w-full h-auto;
 }
+
+
 .slideshow-placeholder {
 	@apply flex items-center justify-center text-neutral-500 aspect-[16/9];
 }
