@@ -202,7 +202,7 @@ pre.shiki { @apply p-4 rounded-lg overflow-x-auto; }
 
 .slideshow-container {
 	/* Just change bg-neutral-300 to bg-neutral-200 and dark:bg-neutral-800 to dark:bg-neutral-900 */
-	@apply relative w-full bg-neutral-200 dark:bg-neutral-900 rounded-lg shadow-inner overflow-hidden;
+	@apply relative max-w-full max-h-full bg-neutral-200 dark:bg-neutral-900 rounded-lg shadow-inner overflow-hidden;
 }
 
 
