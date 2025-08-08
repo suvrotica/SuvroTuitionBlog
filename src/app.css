@@ -201,18 +201,18 @@ pre.shiki { @apply p-4 rounded-lg overflow-x-auto; }
 
 
 .slideshow-container {
-    @apply relative max-w-full bg-neutral-200 dark:bg-neutral-900 rounded-lg shadow-inner overflow-hidden;
+    @apply relative w-full bg-neutral-200 dark:bg-neutral-900 rounded-lg shadow-inner overflow-hidden;
 }
 
 .slideshow-image {
+    /* Full width, keep aspect ratio, center both directions */
     @apply absolute left-1/2 top-1/2 w-full h-auto -translate-x-1/2 -translate-y-1/2;
 }
 
-
 .slideshow-placeholder {
-	@apply flex items-center justify-center text-neutral-500 aspect-[16/9];
+    @apply flex items-center justify-center text-neutral-500 w-full aspect-[16/9];
 }
 
 .image-placeholder-wrapper {
-    @apply max-w-full max-h-full flex items-center justify-center bg-neutral-200 dark:bg-neutral-800 text-2xl text-neutral-500;
+    @apply w-full h-full flex items-center justify-center bg-neutral-200 dark:bg-neutral-800 text-2xl text-neutral-500;
 }
