@@ -1,11 +1,17 @@
 <script lang="ts">
 	import ImageSlideshow from '$lib/components/blog/ImageSlideshow.svelte';
 
-	// FIX: Add the `Record<string, string>` type annotation.
-	// This tells TypeScript that `imageModules` is an object where both
-	// the keys and the values are strings.
-	const imageModules: Record<string, string> = import.meta.glob(
-		'$lib/assets/slideshow-images/*.{jpg,jpeg,png,webp}',
+	const imageModulesSquare: Record<string, string> = import.meta.glob(
+		'$lib/assets/slideshow-images/square/*.{jpg,jpeg,png,webp}',
+		{
+			eager: true,
+			query: '?url',
+			import: 'default'
+		}
+	);
+	
+	const imageModulesLandscape: Record<string, string> = import.meta.glob(
+		'$lib/assets/slideshow-images/landscape/*.{jpg,jpeg,png,webp}',
 		{
 			eager: true,
 			query: '?url',
@@ -13,8 +19,18 @@
 		}
 	);
 
-	// With the fix above, TypeScript now correctly infers `imageUrls` as `string[]`.
-	const imageUrls = Object.values(imageModules);
+	const imageModulesPortrait: Record<string, string> = import.meta.glob(
+		'$lib/assets/slideshow-images/portrait/*.{jpg,jpeg,png,webp}',
+		{
+			eager: true,
+			query: '?url',
+			import: 'default'
+		}
+	);
+
+	const imageUrlsLandscape = Object.values(imageModulesLandscape);
+	const imageUrlsPortrait = Object.values(imageModulesPortrait);
+	const imageUrlsSquare = Object.values(imageModulesSquare);
 </script>
 
 
@@ -29,8 +45,9 @@
 
 	
 	<div class="my-8">
-		<ImageSlideshow images={imageUrls} />
+		<ImageSlideshow images={imageUrlsSquare} />
 	</div>
+	
 
 	<p class="my-4">
 		My past is ancient and present is a mystery speeding past; I live now mostly to <em>live</em>, really—to barely escape frequent and routine annihilation, survive to remember and recollect the person I am, I was, I once wanted to be—inadvertently became, on the way to be—a leery litany of metamorphosis of a self that mostly started and remained unchanged at the core—which was a fledgling when I became a schoolboy to begin with and started to think, first feel, of course—mainly, in my case, see through thick myopia-correcting glasses—a visual person, and in my particular case, overthink the still-uncorrected blurry—cerebrally—the world through the senses, through the then immature prefrontal and amygdalian theaters of rehearsed endorsements.
@@ -40,6 +57,7 @@
 	<p class="my-4">
 		I want to start with what ordinarily is the start. I have an embarrassing memory of a very early male size comparison shame, while playing with my sprinkler on the nursery kindergarten back garden drain wall—the competition was a boy who was quite a bit big-boned and larger across several other exhibited jiggling animated adipose protuberances—nursery nuisances that litter such pigsties. But what had also caught my attention and had stayed to this day was—his sprinkler was not only endowed with <em>bigger</em> plumbing with ginormous dark velvety spheres, the resulting stream from the hydrology that came out unthrottled was thicker, more unbidden, forceful, and painted the wall with such ferocity that the reflected spray made me notice his assets. I have no way of going back and sifting through that particular memory's soaked sodden soil, a kid's private memory <em>this</em>—I didn't share with even my mother—who at the time was my only confidante. But toilet, or rather the anathema of an always overflowing unkempt school loo, forced me to teach myself to hold my bowels. On two occasions I couldn't, and I defecated in my school half-pants, unable to hold it, as far as I can recollect, trying to keep composure on a waddling dilapidated hand-pulled rickshaw—these my mother can submit affidavits if required. Poor woman, this is back in the day when the washing machine wasn't even in the impoverished imagination of the North Calcutta middle class, and we weren't that affluent to have maids to do any cleaning up after us.
 	</p>
+
 
 	<p class="my-4">
 		There was one more occasion when it could have ended well, except it didn't—that a city of joy rarely has its College Street English bookstores' makeshift shanty loos equipped to flush fresh fetid feces—aggravating a nervous and nerve-wracked boy without a way to clean his gentle bottom. When I reported this inadequacy of the establishment to the ungrateful shop clerk, he demanded I lug a heavy, leaky balti, descriptive of poverty, half across the street in my English medium school dress, so I fled as fast as my unwashed bottom would allow. I went as part of a group of kids who, although were all my age (Section B), did not seem to have the same digestive or excretory system that, from time to time, in my case, asserted that matter came in three states, and all the states were in fact coming out of some portion of my rear, all the time!
@@ -79,6 +97,11 @@
 		Those who prefer the opposite, longer-haired illusions of us for these cosmetic and meretricious patina of gloss—us cretins also misjudge melanin deficiency for superiority or experiments with holiness. We believe if white man George Harrison had condescended in his lyrics the coexistence of the dark-skinned mythological creation Krishna with the Christian mythology of white man Jesus, then they are both really real and there's a cowherd with methemoglobinemia and an antique flute and a schizophrenic carpenter stuck on a cross who live somewhere in Attapara in North Calcutta under some Bengali pseudonym.
 	</p>
 
+	
+	<div class="my-8">
+		<ImageSlideshow images={imageUrlsPortrait} />
+	</div>
+
 
 	<p class="my-4">
 		Thus our ability to get muddled works hand in hand with a corrupted framework of basic data, information, or knowledge, and we grow up on a pyramid of crumbling make-believe fiction and frequently conflate it with facts. Of course, no one wants to wake up next to a hag with no teeth, but even this logic is specious because—give enough time to Aishwarya Rai Bachchan to age and I promise you she'll be a hag with no teeth. The only way out is a stuffed doll or a girl robot, but that is not how your brain would like to accept it—your brain would know it's a thing, and because of its lack of consciousness, its participation as a partner is void. Wait a few more years until a girl robot can dump you; at that point, it won't be a thing anymore.
@@ -91,6 +114,10 @@
 	<p class="my-4">
 		The prevalence of mythology—emphasised and encouraged bias, or the absence of nuanced understanding of the operating models versus the indoctrinated and forced fictions—I saw created a hierarchy of flimflammery, superstitious jibber-jabber, pseudoscience, and an inflated sense of inflated religious affirmation in Bengali society, which at that time was partly Marxist in Calcutta and wanted to hold on to atheism. And in spite of their efforts, most had too little reading in them to make up their mind. I remember Darwin’s evolution was an option with a subject as trivial as pisciculture—cosmology never entered the lexicon, and astronomy was synonymous with horoscopes, palmistry, and astrology. The Bengal I grew up in was in the eighties still really pre-Victorian, and now India, under the new religious right, has slid a few centuries back into an equivalent dark middle age—so much for moving forward. It’s all atavistic growth; appearances of gentrification, or any sophisticated sheen is patina, imported from outside the country.
 	</p>
+
+	<div class="my-8">
+		<ImageSlideshow images={imageUrlsLandscape} />
+	</div>
 
 	<p class="my-4">
 		But really, in the end, what I'm trying to say in a long, winding way is that I did a lot of reading—and still read, to my mother's chagrin—that no, none of the readings I did do me any good as far as carrying out the original intention—I haven't accumulated any wealth or curvaceous mate, just books. Meritocracy is like a hoax you force on blind and disabled elderly in a care home—they can't ask for a refund. But I read, and this blog is where I share it.

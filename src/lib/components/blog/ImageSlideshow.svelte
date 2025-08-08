@@ -2,7 +2,6 @@
 	import { fade } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 
-	// FIX: The component now expects a simple array of URL strings.
 	type Props = {
 		images: string[];
 		holdDuration?: number;
@@ -12,15 +11,13 @@
 	let {
 		images = [],
 		holdDuration = 4000,
-		transitionDuration = 1000
+		transitionDuration = 10
 	}: Props = $props();
 
 	let currentIndex = $state(0);
 	
-	// FIX: currentImage is now just a URL string.
 	let currentImage = $derived(images[currentIndex]);
 	
-	// REMOVED: The dynamic aspect-ratio logic is removed.
 	
 	$effect(() => {
 		if (images.length <= 1) return;
