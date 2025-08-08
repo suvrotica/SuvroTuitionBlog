@@ -51,30 +51,61 @@ You like boxes? You like clouds? You want your thoughts shaped like a hexagon be
 
 Use square brackets for squares, parentheses for rounded ones, double parens for circles, double outside-in parens for “Batman comic shout,” and curly braces for hexagons. You are now styling your thoughts. You are now a thought stylist.
 
-**Markdown & Icons**
-Yes, you can style the text. Because your ideas have feelings, and some of them are bold. Some are *softly italicized*. Some come with bling.
+**Software Evolution**
 
-But a word of caution: GitHub might look at your fancy Font Awesome icon and say, “Nice try, nerd.” So if you're publishing on platforms that don’t support external icon libraries, don’t be surprised when your fancy `::icon(fa fa-brain)` renders as the digital equivalent of a shrug.
-
-Still, here's how it looks if your setup supports it:
+Here is the detailed and exhaustive mindmap showing the conceptual evolution from Software 1.0 through 3.0
 
 <Mermaid code={`mindmap
-    Brainstorm         **Strong thought**
-        *Fleeting notion*         ::icon(fa fa-lightbulb)         ::icon(mdi mdi-coffee)`} />
+    Programming Paradigms
+        Imperative: Explicit step-by-step instructions
+            Procedural: Organized into procedures/functions (C, Pascal)
+            Object-Oriented: Objects combine data+methods (Java, Python)
+                Class-Based: Objects from classes (Java, C++)
+                Prototype-Based: Objects from other objects (JavaScript, Lua)
+            Parallel/Concurrent: Multiple tasks at once (Go, Erlang)
+            Event-Driven: Respond to events/triggers (JavaScript, Node.js)
+        Declarative: State what you want, not how to get it
+            Functional: Pure functions, no state changes (Haskell, Lisp)
+                Pure Functional: No side effects (Haskell)
+                Lazy Evaluation: Compute only when needed (Haskell)
+                Strict Evaluation: Compute immediately (OCaml)
+            Logic: Rules and facts, inference (Prolog)
+            Constraint: Satisfy constraints, find solutions (MiniZinc)
+            Dataflow: Computation as data moving through graph (LabVIEW)
+            Reactive: Values update when dependencies change (RxJS)
+`} />
 
-And now, for the final flourish: you want your mindmap to look like your thoughts at 2am during Durga Puja? With the color sense of Kolkata neon and the logic of a late-night adda? Knock yourself out:
 
 <Mermaid code={`mindmap
-    Idea Factory
-        Creativity
-            Subconscious
-                Dreams
-        Doubt
-            Impostor Syndrome
-                Late-stage Panic
-    style Idea Factory fill:#d97706,stroke:#78350f,color:#fef3c7
-    style Creativity fill:#a3e635,stroke:#4d7c0f,color:#1a2e05
-    style Doubt fill:#fca5a5,stroke:#b91c1c,color:#7f1d1d
-    style Impostor Syndrome fill:#f87171,stroke:#991b1b,color:#fff`} />
-
-No one's stopping you from making your inner chaos visible. Just remember: the mindmap is a mirror. Use it wisely, or risk staring into the abyss of your own to-do list.
+    Software Evolution
+        Software 1.0: Traditional Explicit Code
+            Imperative: Step-by-step commands
+            Procedural: Functions and procedures
+            Declarative: What, not how
+            Object-Oriented: Objects combining data and behavior
+            Functional: Pure functions and immutability
+            Logic: Rules and inference
+        Software 2.0: Learned / Trained Models (ML)
+            Supervised Learning: Learn from labeled data
+            Unsupervised Learning: Discover patterns without labels
+            Reinforcement Learning: Learn by interaction and reward
+            Deep Learning: Multi-layer neural networks
+            Probabilistic Models: Model uncertainty
+            Feature Engineering: Manual data transformations
+            Transfer Learning: Reuse learned features
+            AutoML: Automated model selection and tuning
+        Software 3.0: Prompting, Generative AI, LLMs
+            Prompt Engineering: Designing inputs for models
+            Few-shot Learning: Learning from few examples
+            Zero-shot Learning: Generalizing without examples
+            Program Synthesis: Generating code from specs or prompts
+            Self-modifying Code: Code that adapts or rewrites itself
+            Interactive Natural Language Interfaces: Conversing with AI to get software behaviors
+            Meta-Learning: Learning how to learn
+            Generative AI Models: Models creating content or code
+            Human-in-the-Loop Programming: Collaborative human+AI development
+            Differentiable Programming: Programs with gradients for optimization
+            Conversational Agents: AI assistants driving tasks
+            Code Completion and Generation: AI-generated code snippets
+            Knowledge Graph Integration: Semantic context for AI understanding
+`} />
