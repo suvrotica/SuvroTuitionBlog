@@ -34,7 +34,7 @@
 </script>
 
 {#if currentImage}
-	<div class="slideshow-container aspect-[16/9]">
+	<div class="slideshow-container">
 		{#key currentIndex}
 			<img
 				src={currentImage}
