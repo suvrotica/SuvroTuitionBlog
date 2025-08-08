@@ -72,12 +72,10 @@ Colored by branch point with Mermaid’s classDefs and class assignments:
             Constraint: Satisfy constraints, find solutions (MiniZinc)
             Dataflow: Computation as data moving through graph (LabVIEW)
             Reactive: Values update when dependencies change (RxJS)
-
     class Imperative,Procedural,Object-Oriented,Parallel/Concurrent,Event-Driven imperativeBranch;
     class Declarative,Functional,Logic,Constraint,Dataflow,Reactive declarativeBranch;
     class Class-Based,Prototype-Based oopBranch;
     class Pure Functional,Lazy Evaluation,Strict Evaluation functionalBranch;
-
     classDef imperativeBranch stroke:#d6336c,stroke-width:2px;
     classDef declarativeBranch stroke:#198754,stroke-width:2px;
     classDef oopBranch stroke:#0d6efd,stroke-width:2px,dasharray: 5 3;
@@ -119,11 +117,9 @@ The conceptual evolution from Software 1.0 through 3.0, with color-coded main br
             Conversational Agents: AI assistants driving tasks
             Code Completion and Generation: AI-generated code snippets
             Knowledge Graph Integration: Semantic context for AI understanding
-
     class "Software 1.0: Traditional Explicit Code",Imperative,Procedural,Declarative,Object-Oriented,Functional,Logic s1Branch;
     class "Software 2.0: Learned / Trained Models (ML)",Supervised Learning,Unsupervised Learning,Reinforcement Learning,Deep Learning,Probabilistic Models,Feature Engineering,Transfer Learning,AutoML s2Branch;
     class "Software 3.0: Prompting, Generative AI, LLMs",Prompt Engineering,Few-shot Learning,Zero-shot Learning,Program Synthesis,Self-modifying Code,Interactive Natural Language Interfaces,Meta-Learning,Generative AI Models,Human-in-the-Loop Programming,Differentiable Programming,Conversational Agents,Code Completion and Generation,Knowledge Graph Integration s3Branch;
-
     classDef s1Branch stroke:#6f42c1,stroke-width:2px;
     classDef s2Branch stroke:#d6336c,stroke-width:2px;
     classDef s3Branch stroke:#0d6efd,stroke-width:2px;
