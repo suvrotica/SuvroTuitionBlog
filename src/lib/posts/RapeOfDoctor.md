@@ -12,7 +12,7 @@ category : "Crime"
 
 ---
 
-![rape of a doctor](../assets/slideshow-images/portrait/IMG-20240815-WA0016.jpg) 
+![rape of a doctor](./src/lib/assets/slideshow-images/portrait/IMG-20240815-WA0016.jpg) 
 
 I can't express my feelings for the girl who is no more, but the brutality of the alleged crime haunts me. How we are leading untroubled lives one year on, how justice is always a mirage, how she was forced out of her viscera—twisted sinews, broken bones while pre-mortem, gaslighted, gangraped mentally, then raped, choked, and then raped post-mortem as a corpse multiple times. 
 
