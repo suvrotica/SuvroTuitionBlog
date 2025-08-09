@@ -1,4 +1,5 @@
 <script lang="ts">
+	// Existing imports
 	import '../app.css';
 	import Header from '$lib/components/layout/Header.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
@@ -6,6 +7,26 @@
 	import ObsidianDrillDown from '$lib/components/layout/DrillDown.svelte';
 	import SEO from '$lib/components/seo/SEO.svelte';
 	import { page } from '$app/state';
+
+	// START: NEWLY ADDED FOR MERMAID
+	import mermaid from 'mermaid';
+	import { browser } from '$app/environment';
+
+	// This runs the Mermaid configuration once when the app loads in the browser.
+	if (browser) {
+		mermaid.initialize({
+			startOnLoad: false,
+			// The 'base' theme is required for classDef styling to work.
+			theme: 'base',
+			themeVariables: {
+				primaryColor: '#fff',
+				primaryTextColor: '#111',
+				lineColor: '#112233',
+				fontFamily: 'inherit'
+			}
+		});
+	}
+	// END: NEWLY ADDED FOR MERMAID
 
 	let { children } = $props();
 	let isMenuOpen = $state(false);
