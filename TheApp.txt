@@ -1,4 +1,4 @@
-# Context file generated on: Friday, August 8, 2025 at 8:06:29 AM GMT+5:30
+# Context file generated on: Sunday, August 10, 2025 at 12:43:35 AM GMT+5:30
 ---
 
 # Project File Layout
@@ -29,7 +29,10 @@
 │   │   │       │   ├── ChatGPT Image Aug 8, 2025, 06_09_56 AM.png
 │   │   │       │   ├── ChatGPT Image Aug 8, 2025, 06_17_13 AM.png
 │   │   │       │   ├── ChatGPT Image Aug 8, 2025, 06_29_15 AM.png
-│   │   │       │   └── ChatGPT Image Aug 8, 2025, 06_58_40 AM.png
+│   │   │       │   ├── ChatGPT Image Aug 8, 2025, 06_58_40 AM.png
+│   │   │       │   ├── IMG-20240815-WA0016.jpg
+│   │   │       │   ├── IMG-20240816-WA0000.jpg
+│   │   │       │   └── IMG-20240824-WA0000.jpg
 │   │   │       └── square
 │   │   │           ├── 00b4e1c4-42d9-4b02-9f46-9d46f2a6d9d7.webp
 │   │   │           ├── 3d095f14-d2b3-4abd-868e-f69096a655d3.webp
@@ -116,6 +119,7 @@
 │   │       ├── p5js-abstract-art.md
 │   │       ├── plantuml-sequence-diagram.md
 │   │       ├── PutinsBalls.md
+│   │       ├── RapeOfDoctor.md
 │   │       ├── Rezala.md
 │   │       ├── SimpleMan.md
 │   │       ├── Stoop.md
@@ -11461,7 +11465,7 @@ published: true
     import PostBadge from '$lib/components/ui/PostBadge.svelte';
 </script>
 ![babu moshai](/images/placeholders/91d2477e-63e4-45a3-9c5c-0532df45fe0d.png) 
-Calcutta, the bustling urban carcass pretending to breathe, thrives on a diet of philosophical constipation, disembodied nostalgia and chronic dissatisfaction. The Bengali lower middle-class family—this ambitious little social experiment, caught permanently between intellectual diarrhoea and economic constipation—is forever trapped in a Kafkaesque limbo of EMI hell and LIC policy redemption fantasies stymied by reluctance to frivolous chores like, for example, the urgency to lookup a word in the dictionary, or hold off passing matter at bowel distensions at life detriment. Each morning, a Bengali middle-class dad wakes up already disappointed, grouching about humidity (like he just now discovered it's moist out there), muttering lovingly unprintable things to the malfunctioning ceiling fan, his eternal nemesis. The fan creaks and shudders, spinning less out of mechanical duty than stubborn vengeance against Newton's laws of motion.
+Calcutta, the bustling urban carcass pretending to breathe, thrives on a diet of philosophical constipation, disembodied nostalgia and chronic dissatisfaction. The Bengali lower middle-class family—this ambitious little social experiment, caught permanently between intellectual diarrhoea and economic constipation—is forever trapped in a Kafkaesque limbo of EMI hell and LIC policy redemption fantasies stymied by reluctance to frivolous chores like, for example, the urgency to lookup a word in the dictionary, or hold off passing matter at bowel distensions at life detriment. Each morning, a Bengali middle-class dad, wakes up, acting or actually frail, already disappointed by his undersized existence, grouching about humidity (like he just now discovered it's moist out there), muttering plaintively unprintable things to the malfunctioning and diminutive objects around, especially his eternal nemesis. The fan creaks and shudders, spinning less out of mechanical duty than stubborn vengeance against Newton's laws of motion. The lethargy of the fan blades and the sounds it makes are however matching its owner. 
 
 This unnuanced man, our typical Babumoshai, armed with a torn newspaper folded precisely to the job section he’ll never read, launches himself heroically into the gory arena called public transportation. Battling with elbows sharper than *tamahagane* Japanese samurai steel, he wields Newton’s third law of motion—every shove has an equal and opposite shove back—only to arrive late at a job where promotion is as mythical as spontaneous orgasm. Here, he pretends to work—fudgel, the boss pretends to pay, and everybody pretends to believe in karma, destiny, and provident fund withdrawals.
 
@@ -13235,33 +13239,80 @@ You like boxes? You like clouds? You want your thoughts shaped like a hexagon be
 
 Use square brackets for squares, parentheses for rounded ones, double parens for circles, double outside-in parens for “Batman comic shout,” and curly braces for hexagons. You are now styling your thoughts. You are now a thought stylist.
 
-**Markdown & Icons**
-Yes, you can style the text. Because your ideas have feelings, and some of them are bold. Some are *softly italicized*. Some come with bling.
-
-But a word of caution: GitHub might look at your fancy Font Awesome icon and say, “Nice try, nerd.” So if you're publishing on platforms that don’t support external icon libraries, don’t be surprised when your fancy `::icon(fa fa-brain)` renders as the digital equivalent of a shrug.
-
-Still, here's how it looks if your setup supports it:
+**Programming Paradigms**  
+Colored by branch point with Mermaid’s classDefs and class assignments:
 
 <Mermaid code={`mindmap
-    Brainstorm         **Strong thought**
-        *Fleeting notion*         ::icon(fa fa-lightbulb)         ::icon(mdi mdi-coffee)`} />
+    Programming Paradigms
+        Imperative: Explicit step-by-step instructions
+            Procedural: Organized into procedures/functions (C, Pascal)
+            Object-Oriented: Objects combine data+methods (Java, Python)
+                Class-Based: Objects from classes (Java, C++)
+                Prototype-Based: Objects from other objects (JavaScript, Lua)
+            Parallel/Concurrent: Multiple tasks at once (Go, Erlang)
+            Event-Driven: Respond to events/triggers (JavaScript, Node.js)
+        Declarative: State what you want, not how to get it
+            Functional: Pure functions, no state changes (Haskell, Lisp)
+                Pure Functional: No side effects (Haskell)
+                Lazy Evaluation: Compute only when needed (Haskell)
+                Strict Evaluation: Compute immediately (OCaml)
+            Logic: Rules and facts, inference (Prolog)
+            Constraint: Satisfy constraints, find solutions (MiniZinc)
+            Dataflow: Computation as data moving through graph (LabVIEW)
+            Reactive: Values update when dependencies change (RxJS)
+    class Imperative,Procedural,Object-Oriented,Parallel/Concurrent,Event-Driven imperativeBranch;
+    class Declarative,Functional,Logic,Constraint,Dataflow,Reactive declarativeBranch;
+    class Class-Based,Prototype-Based oopBranch;
+    class Pure Functional,Lazy Evaluation,Strict Evaluation functionalBranch;
+    classDef imperativeBranch stroke:#d6336c,stroke-width:2px;
+    classDef declarativeBranch stroke:#198754,stroke-width:2px;
+    classDef oopBranch stroke:#0d6efd,stroke-width:2px,dasharray: 5 3;
+    classDef functionalBranch stroke:#f59f00,stroke-width:2px,dasharray: 2 2;
+`} />
 
-And now, for the final flourish: you want your mindmap to look like your thoughts at 2am during Durga Puja? With the color sense of Kolkata neon and the logic of a late-night adda? Knock yourself out:
+**Software Evolution**  
+The conceptual evolution from Software 1.0 through 3.0, with color-coded main branches:
 
 <Mermaid code={`mindmap
-    Idea Factory
-        Creativity
-            Subconscious
-                Dreams
-        Doubt
-            Impostor Syndrome
-                Late-stage Panic
-    style Idea Factory fill:#d97706,stroke:#78350f,color:#fef3c7
-    style Creativity fill:#a3e635,stroke:#4d7c0f,color:#1a2e05
-    style Doubt fill:#fca5a5,stroke:#b91c1c,color:#7f1d1d
-    style Impostor Syndrome fill:#f87171,stroke:#991b1b,color:#fff`} />
+    Software Evolution
+        Software 1.0: Traditional Explicit Code
+            Imperative: Step-by-step commands
+            Procedural: Functions and procedures
+            Declarative: What, not how
+            Object-Oriented: Objects combining data and behavior
+            Functional: Pure functions and immutability
+            Logic: Rules and inference
+        Software 2.0: Learned / Trained Models (ML)
+            Supervised Learning: Learn from labeled data
+            Unsupervised Learning: Discover patterns without labels
+            Reinforcement Learning: Learn by interaction and reward
+            Deep Learning: Multi-layer neural networks
+            Probabilistic Models: Model uncertainty
+            Feature Engineering: Manual data transformations
+            Transfer Learning: Reuse learned features
+            AutoML: Automated model selection and tuning
+        Software 3.0: Prompting, Generative AI, LLMs
+            Prompt Engineering: Designing inputs for models
+            Few-shot Learning: Learning from few examples
+            Zero-shot Learning: Generalizing without examples
+            Program Synthesis: Generating code from specs or prompts
+            Self-modifying Code: Code that adapts or rewrites itself
+            Interactive Natural Language Interfaces: Conversing with AI to get software behaviors
+            Meta-Learning: Learning how to learn
+            Generative AI Models: Models creating content or code
+            Human-in-the-Loop Programming: Collaborative human+AI development
+            Differentiable Programming: Programs with gradients for optimization
+            Conversational Agents: AI assistants driving tasks
+            Code Completion and Generation: AI-generated code snippets
+            Knowledge Graph Integration: Semantic context for AI understanding
+    class "Software 1.0: Traditional Explicit Code",Imperative,Procedural,Declarative,Object-Oriented,Functional,Logic s1Branch;
+    class "Software 2.0: Learned / Trained Models (ML)",Supervised Learning,Unsupervised Learning,Reinforcement Learning,Deep Learning,Probabilistic Models,Feature Engineering,Transfer Learning,AutoML s2Branch;
+    class "Software 3.0: Prompting, Generative AI, LLMs",Prompt Engineering,Few-shot Learning,Zero-shot Learning,Program Synthesis,Self-modifying Code,Interactive Natural Language Interfaces,Meta-Learning,Generative AI Models,Human-in-the-Loop Programming,Differentiable Programming,Conversational Agents,Code Completion and Generation,Knowledge Graph Integration s3Branch;
+    classDef s1Branch stroke:#6f42c1,stroke-width:2px;
+    classDef s2Branch stroke:#d6336c,stroke-width:2px;
+    classDef s3Branch stroke:#0d6efd,stroke-width:2px;
+`} />
 
-No one's stopping you from making your inner chaos visible. Just remember: the mindmap is a mirror. Use it wisely, or risk staring into the abyss of your own to-do list.
 
 
 # File: src/lib/posts/Monk.md
@@ -13714,6 +13765,49 @@ It pays to be an ageless aggressor,<br>
 Make constant threats and commit fraud.<br>
 When you fake shit up as you go,<br>
 You're deified and elevated to a god.<br>
+
+
+# File: src/lib/posts/RapeOfDoctor.md
+
+---
+
+title: "The anniversary of injustice"
+
+thumbnail : "$lib/assets/slideshow-images/portrait/IMG-20240815-WA0016.jpg" 
+
+tags: ["blog", "society", "corruption", "violence", "India", "reflection"]
+
+summary: "A harrowing reflection on the brutal realities of modern society, the decay of civilization, and the indifference that perpetuates these horrors."
+
+category : "Crime" 
+
+---
+
+![rape of a doctor]($lib/assets/slideshow-images/portrait/IMG-20240815-WA0016.jpg) 
+
+I can't express my feelings for the girl who is no more, but the brutality of the alleged crime haunts me. How we are leading untroubled lives one year on, how justice is always a mirage, how she was forced out of her viscera—twisted sinews, broken bones while pre-mortem, gaslighted, gangraped mentally, then raped, choked, and then raped post-mortem as a corpse multiple times. 
+
+In her passing, she showed us just what it means to be inhuman. Yet these were either doctors or civic volunteers with connections to a hospital. These are people. People quite like us. So, where does that leave us? Because these people are not "them", they are "us" and crime and criminals are not just those who are charged in courts, but the complacency in every single one of us, the "me-me" selfishness which not only fosters indecent intent but accolades it with inaction, and promotes more of this general moral slippage. Can we really shrug this off as an yesteryear problem? 
+
+For the Bengali who only smells the sweetest in the worst and nothing else, this may be a time of reckoning—although my experience of India as I will explain in other posts, stands vindicated. This is the new India where corruption is king, and cruelty is its soulmate. Their teeth and fangs are what will leave marks in history, not the educated or hardworking population who suffer in silence. I’ve known my nerves go numb a number of times, often in moments that backed me into a corner. 
+
+This was an exception where it wasn't me, but in her, many of us will still identify ourselves—people who hail from a meagre background, love books, who study hard to reach their destination, who bend to no one and always speak with an intonation free of flattery. I can only voice my thoughts in my blog, and I have no expectations from this society, because it’s like a hollow tin vessel. It can sound when beaten, and it can beat up a loud crescendo to its own made-up glory or in praise of its female gods who thankfully can't be raped being nonexistent, but nothing changes the fact that it’s hollow inside. The truly meritorious will leave for the lush greenery of betterment that awaits in the world outside.
+
+The death of a civilization isn't like the death of a man; it's a long, drawn-out process over a timespan that doesn't lend itself well to the human attention span. But all the markers of it are in India. Whatever cocktail of horror you can conceive—so long as you're not too particular about the skin color of the cast—you'll find it here. If we don't already have it, we're quick learners, advanced even, especially when it comes to the destructive or carnal gruesome arts. We always have funding for it; our conniving leaders salivate at the chance. Because only here, touch wood, transparency is as good as a thick lead shield, and no one has to be responsible for anything, ever. Usually, there's a scapegoat factory somewhere, and hallelujah, the citizens have amnesia.
+
+Flames flicker and die; candles struggle to stay lit in these wounded winds. A peaceful show of strength? Not in this country. Instead remembering the mayhem last year to suppress popular outcry, a flurry of thirty paid goons descends—thank god they’re illiterate fuckwads who confuse the Bengali তিন তলা(teen tola) with the English second floor. They ransack the general ward instead of the seminar room, breaking whatever CCTV cameras they can find, then leave. And it will be Independence Day soon, at least another unremarkable one. Congratulations to us nitwits—what a great country we’ve spun from our semen. The only way to divert attention from a rape is to create more rumors, rapine and ruckus, perhaps in a way that further muddles an already muddled, scatterbrained, impoverished, and easily tired population. Their stamina to hold on to an ideology is as fleeting as their interest in a television channel. Time is always on the side of the incumbent who follows the 'do nothing' policy—it always works. Just sit tight, toss an occasional distracting fart or two into the media, perform random actions to raise bewilderment, and presto—amnesia. Especially in the monsoon when floods are a good distraction this is added on top of false promises to repair or rebuild. The rebuilding really needed is character. 
+
+![rape of a doctor](/src/lib/assets/slideshow-images/portrait/IMG-20240816-WA0000.jpg) 
+
+## Fancy dress parades 
+I remember she got a hurried cremation—they couldn't risk a second, more detailed, more gruesome, and gloomier post-mortem. But what about the post-mortem of the civilization? Have these friends or fiends recorded her last ordeal? Will they entertain people with tastes like theirs in the undergrowth of the internet, bringing them to a masturbatory climax over and over again? Will this become a movie, making a group of people rich who will never contribute to the cause of people like her? A book deal? Perhaps the point is this: lessons from her death won't be learned, no changes wrought, just more societal gift wrappers. But she will still be alive in the many working-class women who positively transform the world, who, like her, aspire to be good at what they do, who—like me—can't stand corrupt people and fall victim to nefarious plots, still preyed on, still vulnerable. I know it's only a matter of time before another villain comes scurrying from the shadows to rinse and repeat this, and once again, we will see gross inaction and a society slowly dying its own death because it has traded its spine for the fancy dress competition of a hedonistic parade, allowing the submission of judgment to crimes for petty, useless trinkets.
+
+![dunces all around](/src/lib/assets/slideshow-images/portrait/IMG-20240824-WA0000.jpg) 
+
+## The shadows of men
+There isn't any solution that can be worked out overnight, or by one government or even one civilization. The important question to ask is why, not where. The ingrained nature of certain behaviors is reflected in language patterns in every society, however dissimilar. It’s plain that violence against women is coded into male DNA, reflected in the artifacts of language and culture, the very things that obscure the primal urges of the animal inside, which in attire we forget. If you have a careful ear, you’ll discern this—invectives across cultures often target mothers and sisters, paired with expletives. Rarely, if ever, do father or brother fuckers gain any popularity in any language that I’m aware of. Although in this case, the root cause can’t be extirpated because we are animals, and evolution has delicately designed us with certain abstruse needs, we can still do more than just the usual—hand-waving the problem away or offering a feeble, farcical papyrus of symptomatic treatment that does no good.
+
+
 
 
 # File: src/lib/posts/Rezala.md

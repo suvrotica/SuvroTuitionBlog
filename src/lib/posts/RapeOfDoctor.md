@@ -12,7 +12,7 @@ category : "Crime"
 
 ---
 
-![rape of a doctor](./src/lib/assets/slideshow-images/portrait/IMG-20240815-WA0016.jpg) 
+![rape of a doctor](/src/lib/assets/slideshow-images/portrait/IMG-20240815-WA0016.jpg)
 
 I can't express my feelings for the girl who is no more, but the brutality of the alleged crime haunts me. How we are leading untroubled lives one year on, how justice is always a mirage, how she was forced out of her viscera—twisted sinews, broken bones while pre-mortem, gaslighted, gangraped mentally, then raped, choked, and then raped post-mortem as a corpse multiple times. 
 
@@ -26,7 +26,7 @@ The death of a civilization isn't like the death of a man; it's a long, drawn-ou
 
 Flames flicker and die; candles struggle to stay lit in these wounded winds. A peaceful show of strength? Not in this country. Instead remembering the mayhem last year to suppress popular outcry, a flurry of thirty paid goons descends—thank god they’re illiterate fuckwads who confuse the Bengali তিন তলা(teen tola) with the English second floor. They ransack the general ward instead of the seminar room, breaking whatever CCTV cameras they can find, then leave. And it will be Independence Day soon, at least another unremarkable one. Congratulations to us nitwits—what a great country we’ve spun from our semen. The only way to divert attention from a rape is to create more rumors, rapine and ruckus, perhaps in a way that further muddles an already muddled, scatterbrained, impoverished, and easily tired population. Their stamina to hold on to an ideology is as fleeting as their interest in a television channel. Time is always on the side of the incumbent who follows the 'do nothing' policy—it always works. Just sit tight, toss an occasional distracting fart or two into the media, perform random actions to raise bewilderment, and presto—amnesia. Especially in the monsoon when floods are a good distraction this is added on top of false promises to repair or rebuild. The rebuilding really needed is character. 
 
-![rape of a doctor](/src/lib/assets/slideshow-images/portrait/IMG-20240816-WA0000.jpg) 
+![society reponsible](/src/lib/assets/slideshow-images/portrait/IMG-20240816-WA0000.jpg) 
 
 ## Fancy dress parades 
 I remember she got a hurried cremation—they couldn't risk a second, more detailed, more gruesome, and gloomier post-mortem. But what about the post-mortem of the civilization? Have these friends or fiends recorded her last ordeal? Will they entertain people with tastes like theirs in the undergrowth of the internet, bringing them to a masturbatory climax over and over again? Will this become a movie, making a group of people rich who will never contribute to the cause of people like her? A book deal? Perhaps the point is this: lessons from her death won't be learned, no changes wrought, just more societal gift wrappers. But she will still be alive in the many working-class women who positively transform the world, who, like her, aspire to be good at what they do, who—like me—can't stand corrupt people and fall victim to nefarious plots, still preyed on, still vulnerable. I know it's only a matter of time before another villain comes scurrying from the shadows to rinse and repeat this, and once again, we will see gross inaction and a society slowly dying its own death because it has traded its spine for the fancy dress competition of a hedonistic parade, allowing the submission of judgment to crimes for petty, useless trinkets.
