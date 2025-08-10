@@ -69,7 +69,7 @@
 
 	<p class="my-4">
 		People in the world—tragically, in the holy land I dwell especially—who have lower melanin or somewhat symmetrical distribution of skin and adipose around elevated cheekbones, standing a few inches above the median statistical height or fitting within a few inches smaller than the width of the median dress size—are propitiated by the population that lack these characteristics. This asymmetrical distribution in coveting is what causes the lifespan of some of us to get affected destructively by a devoted and toxic societal perusal of compensatory activities to match the deficiency with wealth, power, education, and other biologically inaccessible accouterments. I was like the majority in this common herd, trying hard to make up for all the deficiencies in the only way I knew how—by reading books.
-		You reach heights in civilization or find mates with luscious curves only if you have, say, the torso of a Greco-Roman statue or like Tarzan the Ape Man, while if you're short-statured, melanin-rich, and sans the golden ratios in appointed parts, you're destined to die of undiscovery and ignominy, blatant racism—or put a star before the -ism, for in these matters, placeholders are your friend.
+		You reach heights in civilization or find mates with luscious curves only if you have, say, the torso of a Greco-Roman statue or like Tarzan the Ape Man, while if you're short-statured, melanin-rich, sans the golden ratios in appointed parts, and mumble inaudibly constantly a jumbled plaintive monotone in effeminate whispers—you're destined to die of undiscovery and ignominy, blatant racism—or put a star before the -ism, for in these matters, placeholders are your friend.
 	</p>
 
 	<p class="my-4">
