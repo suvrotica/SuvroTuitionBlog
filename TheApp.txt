@@ -1,4 +1,4 @@
-# Context file generated on: Sunday, August 10, 2025 at 12:43:35 AM GMT+5:30
+# Context file generated on: Sunday, August 10, 2025 at 10:57:22 AM GMT+5:30
 ---
 
 # Project File Layout
@@ -25,14 +25,15 @@
 │   │   │       ├── landscape
 │   │   │       │   └── ChatGPT Image Aug 8, 2025, 06_58_29 AM.png
 │   │   │       ├── portrait
+│   │   │       │   ├── ChatGPT Image Aug 10, 2025, 02_04_17 AM.png
+│   │   │       │   ├── ChatGPT Image Aug 10, 2025, 02_21_38 AM.png
+│   │   │       │   ├── ChatGPT Image Aug 10, 2025, 02_29_56 AM.png
+│   │   │       │   ├── ChatGPT Image Aug 10, 2025, 10_55_49 AM.png
 │   │   │       │   ├── ChatGPT Image Aug 8, 2025, 05_48_13 AM.png
 │   │   │       │   ├── ChatGPT Image Aug 8, 2025, 06_09_56 AM.png
 │   │   │       │   ├── ChatGPT Image Aug 8, 2025, 06_17_13 AM.png
 │   │   │       │   ├── ChatGPT Image Aug 8, 2025, 06_29_15 AM.png
-│   │   │       │   ├── ChatGPT Image Aug 8, 2025, 06_58_40 AM.png
-│   │   │       │   ├── IMG-20240815-WA0016.jpg
-│   │   │       │   ├── IMG-20240816-WA0000.jpg
-│   │   │       │   └── IMG-20240824-WA0000.jpg
+│   │   │       │   └── ChatGPT Image Aug 8, 2025, 06_58_40 AM.png
 │   │   │       └── square
 │   │   │           ├── 00b4e1c4-42d9-4b02-9f46-9d46f2a6d9d7.webp
 │   │   │           ├── 3d095f14-d2b3-4abd-868e-f69096a655d3.webp
@@ -46,6 +47,7 @@
 │   │   │   │   ├── Mermaid.svelte
 │   │   │   │   ├── PopulationProjector.svelte
 │   │   │   │   ├── PostGallery.svelte
+│   │   │   │   ├── PostImage.svelte
 │   │   │   │   └── TextToSpeech.svelte
 │   │   │   ├── D3
 │   │   │   │   ├── D3
@@ -106,7 +108,6 @@
 │   │       ├── H1b.md
 │   │       ├── HolyFatAss.md
 │   │       ├── Homeopathy.md
-│   │       ├── Images.md
 │   │       ├── MAFA.md
 │   │       ├── Metro.md
 │   │       ├── Microwave.md
@@ -9580,108 +9581,27 @@ a�i����Ô7����[h	�=3R2H�
 # File: src/lib/components/blog/Mermaid.svelte
 
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import mermaid from 'mermaid';
 
 	let { code }: { code: string } = $props();
+	let el = $state<HTMLDivElement>();
+	let id = `mermaid-${crypto.randomUUID()}`;
 
-	const id = `mermaid-${Math.random().toString(36).substring(2, 9)}`;
-
-	let isDarkMode = $state(false);
-	let el: HTMLDivElement | undefined = $state();
-
-	const lightTheme = {
-		background: '#f5f5f5',
-		primaryColor: '#e5e5e5',
-		primaryTextColor: '#171717',
-		lineColor: '#525252',
-		textColor: '#262626'
-	};
-
-	const darkTheme = {
-		background: '#262626',
-		primaryColor: '#404040',
-		primaryTextColor: '#f5f5f5',
-		lineColor: '#a3a3a3',
-		textColor: '#d4d4d4'
-	};
-
-	async function renderDiagram() {
-		if (!el || !code) return;
-		const currentThemeVars = isDarkMode ? darkTheme : lightTheme;
-		mermaid.initialize({
-			startOnLoad: false,
-			theme: 'base',
-			themeVariables: {
-				...currentThemeVars,
-				'--mermaid-font-family': '"Fira Code", monospace'
-			}
-		});
-
-		try {
-			const { svg } = await mermaid.render(`${id}-svg`, code);
-			el.innerHTML = svg;
-		} catch (e) {
-			console.error('Mermaid rendering failed:', e);
-			el.innerHTML = 'Error rendering diagram.';
+	$effect(() => {
+		if (el && code) {
+			mermaid.render(id, code).then(({ svg }) => {
+				el!.innerHTML = svg;
+			});
 		}
-	}
-
-	onMount(() => {
-		isDarkMode = document.documentElement.classList.contains('dark');
-		renderDiagram();
-
-		const observer = new MutationObserver((mutations) => {
-			for (const mutation of mutations) {
-				if (mutation.attributeName === 'class') {
-					const newIsDarkMode = document.documentElement.classList.contains('dark');
-					if (newIsDarkMode !== isDarkMode) {
-						isDarkMode = newIsDarkMode;
-						renderDiagram();
-					}
-				}
-			}
-		});
-
-		observer.observe(document.documentElement, { attributes: true });
-
-		return () => {
-			observer.disconnect();
-		};
 	});
 </script>
 
-{#key `${code}-${isDarkMode}`}
-	<div
-		bind:this={el}
-		{id}
-		class="mermaid-diagram p-4 rounded-lg bg-neutral-100 dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700"
-	>
-		<pre><code>{code}</code></pre>
-	</div>
-{/key}
+<div bind:this={el} class="mermaid-container"></div>
 
 <style>
-	/* 2. The `@apply` directive has been completely removed */
-	.mermaid-diagram {
-		display: flex;
-		justify-content: center;
-		margin: 2em 0;
-		line-height: 1;
-		width: 100%;
-	}
-
-	.mermaid-diagram :global(svg) {
-		max-width: 100%;
-		height: auto;
-		color: var(--mermaid-textColor, #262626);
-	}
-	:global(html.dark) .mermaid-diagram :global(svg) {
-		color: var(--mermaid-textColor, #d4d4d4);
-	}
-
-	.mermaid-diagram pre {
-		display: none;
+	.mermaid-container {
+		text-align: center;
+		margin-block: 2rem;
 	}
 </style>
 
@@ -9796,6 +9716,47 @@ a�i����Ô7����[h	�=3R2H�
 		</a>
 	{/each}
 </div>
+
+# File: src/lib/components/blog/PostImage.svelte
+
+<script lang="ts">
+	let {
+		src,
+		alt,
+		caption = ''
+	}: {
+		src: string;
+		alt: string;
+		caption?: string;
+	} = $props();
+</script>
+
+<figure class="post-image">
+	<img {src} {alt} loading="lazy" decoding="async" />
+	{#if caption}
+		<figcaption>{caption}</figcaption>
+	{/if}
+</figure>
+
+<style>
+	/* Scoped styles from your app.css will apply if configured */
+	.post-image {
+    margin: 2rem 0 0.5rem;
+    text-align: center;
+}
+	img {
+		max-width: 100%;
+		height: auto;
+		border-radius: 0.5rem;
+		box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+	}
+	figcaption {
+		margin-top: 0.75rem;
+		font-size: 0.9rem;
+		color: var(--color-text-secondary); /* Example CSS variable */
+		font-style: italic;
+	}
+</style>
 
 # File: src/lib/components/blog/TextToSpeech.svelte
 
@@ -12905,36 +12866,6 @@ I must also point out, that although in a world fractured by dogma, where religi
 We must find the courage to hold our cherished traditions up to the light of reason. It is time to gently unweave homeopathy from our cultural identity and relegate it to the museum of medical history, alongside bloodletting and phrenology. Let us reserve our faith for that which is proven, and our health for medicine that is grounded in the elegant, astonishing, and verifiable reality of science. Our lives depend on it. As it is life in calcutta is hard. 
 
 
-# File: src/lib/posts/Images.md
-
----
-title : "Art" 
-thumbnail : "/images/placeholders/IMG-20250807-WA0003.jpg" 
-category : "Art" 
-keywords: ["svelte", "sveltekit", "slideshow", "vite", "component"]
-published: true
----
-<script lang="ts">
-    import ImageSlideshow from '$lib/components/blog/ImageSlideshow.svelte';
-
-    // FIX: Use `?url` to get direct image URLs instead of `?enhanced` metadata objects.
-    // The `import: 'default'` option ensures we get an array of strings directly.
-    const imageModules = import.meta.glob(
-        '$lib/assets/slideshow-images/*.{jpg,jpeg,png,webp}', 
-        { 
-            eager: true, 
-            query: '?url',
-            import: 'default'
-        }
-    );
-
-    const imageUrls = Object.values(imageModules);
-</script>
-
-**Slideshow**
-
-<ImageSlideshow images={imageUrls} />
-
 # File: src/lib/posts/MAFA.md
 
 ---
@@ -13224,6 +13155,7 @@ At its core, a mindmap in Mermaid is just a nested list. That’s it. Indentatio
         The original idea again
             No longer feels original`} />
 
+
 Each node here is a thought, a neuron firing in the dark. “Me, trying to focus” is the root, and every child node is another mental browser tab you forgot to close.
 
 **Shapes**
@@ -13238,82 +13170,6 @@ You like boxes? You like clouds? You want your thoughts shaped like a hexagon be
         {{Hexagone à la française}}`} />
 
 Use square brackets for squares, parentheses for rounded ones, double parens for circles, double outside-in parens for “Batman comic shout,” and curly braces for hexagons. You are now styling your thoughts. You are now a thought stylist.
-
-**Programming Paradigms**  
-Colored by branch point with Mermaid’s classDefs and class assignments:
-
-<Mermaid code={`mindmap
-    Programming Paradigms
-        Imperative: Explicit step-by-step instructions
-            Procedural: Organized into procedures/functions (C, Pascal)
-            Object-Oriented: Objects combine data+methods (Java, Python)
-                Class-Based: Objects from classes (Java, C++)
-                Prototype-Based: Objects from other objects (JavaScript, Lua)
-            Parallel/Concurrent: Multiple tasks at once (Go, Erlang)
-            Event-Driven: Respond to events/triggers (JavaScript, Node.js)
-        Declarative: State what you want, not how to get it
-            Functional: Pure functions, no state changes (Haskell, Lisp)
-                Pure Functional: No side effects (Haskell)
-                Lazy Evaluation: Compute only when needed (Haskell)
-                Strict Evaluation: Compute immediately (OCaml)
-            Logic: Rules and facts, inference (Prolog)
-            Constraint: Satisfy constraints, find solutions (MiniZinc)
-            Dataflow: Computation as data moving through graph (LabVIEW)
-            Reactive: Values update when dependencies change (RxJS)
-    class Imperative,Procedural,Object-Oriented,Parallel/Concurrent,Event-Driven imperativeBranch;
-    class Declarative,Functional,Logic,Constraint,Dataflow,Reactive declarativeBranch;
-    class Class-Based,Prototype-Based oopBranch;
-    class Pure Functional,Lazy Evaluation,Strict Evaluation functionalBranch;
-    classDef imperativeBranch stroke:#d6336c,stroke-width:2px;
-    classDef declarativeBranch stroke:#198754,stroke-width:2px;
-    classDef oopBranch stroke:#0d6efd,stroke-width:2px,dasharray: 5 3;
-    classDef functionalBranch stroke:#f59f00,stroke-width:2px,dasharray: 2 2;
-`} />
-
-**Software Evolution**  
-The conceptual evolution from Software 1.0 through 3.0, with color-coded main branches:
-
-<Mermaid code={`mindmap
-    Software Evolution
-        Software 1.0: Traditional Explicit Code
-            Imperative: Step-by-step commands
-            Procedural: Functions and procedures
-            Declarative: What, not how
-            Object-Oriented: Objects combining data and behavior
-            Functional: Pure functions and immutability
-            Logic: Rules and inference
-        Software 2.0: Learned / Trained Models (ML)
-            Supervised Learning: Learn from labeled data
-            Unsupervised Learning: Discover patterns without labels
-            Reinforcement Learning: Learn by interaction and reward
-            Deep Learning: Multi-layer neural networks
-            Probabilistic Models: Model uncertainty
-            Feature Engineering: Manual data transformations
-            Transfer Learning: Reuse learned features
-            AutoML: Automated model selection and tuning
-        Software 3.0: Prompting, Generative AI, LLMs
-            Prompt Engineering: Designing inputs for models
-            Few-shot Learning: Learning from few examples
-            Zero-shot Learning: Generalizing without examples
-            Program Synthesis: Generating code from specs or prompts
-            Self-modifying Code: Code that adapts or rewrites itself
-            Interactive Natural Language Interfaces: Conversing with AI to get software behaviors
-            Meta-Learning: Learning how to learn
-            Generative AI Models: Models creating content or code
-            Human-in-the-Loop Programming: Collaborative human+AI development
-            Differentiable Programming: Programs with gradients for optimization
-            Conversational Agents: AI assistants driving tasks
-            Code Completion and Generation: AI-generated code snippets
-            Knowledge Graph Integration: Semantic context for AI understanding
-    class "Software 1.0: Traditional Explicit Code",Imperative,Procedural,Declarative,Object-Oriented,Functional,Logic s1Branch;
-    class "Software 2.0: Learned / Trained Models (ML)",Supervised Learning,Unsupervised Learning,Reinforcement Learning,Deep Learning,Probabilistic Models,Feature Engineering,Transfer Learning,AutoML s2Branch;
-    class "Software 3.0: Prompting, Generative AI, LLMs",Prompt Engineering,Few-shot Learning,Zero-shot Learning,Program Synthesis,Self-modifying Code,Interactive Natural Language Interfaces,Meta-Learning,Generative AI Models,Human-in-the-Loop Programming,Differentiable Programming,Conversational Agents,Code Completion and Generation,Knowledge Graph Integration s3Branch;
-    classDef s1Branch stroke:#6f42c1,stroke-width:2px;
-    classDef s2Branch stroke:#d6336c,stroke-width:2px;
-    classDef s3Branch stroke:#0d6efd,stroke-width:2px;
-`} />
-
-
 
 # File: src/lib/posts/Monk.md
 
@@ -13773,7 +13629,7 @@ You're deified and elevated to a god.<br>
 
 title: "The anniversary of injustice"
 
-thumbnail : "$lib/assets/slideshow-images/portrait/IMG-20240815-WA0016.jpg" 
+thumbnail: "/src/lib/assets/slideshow-images/portrait/ChatGPT Image Aug 10, 2025, 02_04_17 AM.png"
 
 tags: ["blog", "society", "corruption", "violence", "India", "reflection"]
 
@@ -13783,7 +13639,15 @@ category : "Crime"
 
 ---
 
-![rape of a doctor]($lib/assets/slideshow-images/portrait/IMG-20240815-WA0016.jpg) 
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/ChatGPT Image Aug 10, 2025, 02_04_17 AM.png?url';
+    import imageSrc2 from '$lib/assets/slideshow-images/portrait/ChatGPT Image Aug 10, 2025, 02_21_38 AM.png?url';
+    import imageSrc3 from '$lib/assets/slideshow-images/portrait/ChatGPT Image Aug 10, 2025, 02_29_56 AM.png?url';
+    
+</script>
+
+<PostImage src={imageSrc1} alt="rape anniversary" />
 
 I can't express my feelings for the girl who is no more, but the brutality of the alleged crime haunts me. How we are leading untroubled lives one year on, how justice is always a mirage, how she was forced out of her viscera—twisted sinews, broken bones while pre-mortem, gaslighted, gangraped mentally, then raped, choked, and then raped post-mortem as a corpse multiple times. 
 
@@ -13797,14 +13661,12 @@ The death of a civilization isn't like the death of a man; it's a long, drawn-ou
 
 Flames flicker and die; candles struggle to stay lit in these wounded winds. A peaceful show of strength? Not in this country. Instead remembering the mayhem last year to suppress popular outcry, a flurry of thirty paid goons descends—thank god they’re illiterate fuckwads who confuse the Bengali তিন তলা(teen tola) with the English second floor. They ransack the general ward instead of the seminar room, breaking whatever CCTV cameras they can find, then leave. And it will be Independence Day soon, at least another unremarkable one. Congratulations to us nitwits—what a great country we’ve spun from our semen. The only way to divert attention from a rape is to create more rumors, rapine and ruckus, perhaps in a way that further muddles an already muddled, scatterbrained, impoverished, and easily tired population. Their stamina to hold on to an ideology is as fleeting as their interest in a television channel. Time is always on the side of the incumbent who follows the 'do nothing' policy—it always works. Just sit tight, toss an occasional distracting fart or two into the media, perform random actions to raise bewilderment, and presto—amnesia. Especially in the monsoon when floods are a good distraction this is added on top of false promises to repair or rebuild. The rebuilding really needed is character. 
 
-![rape of a doctor](/src/lib/assets/slideshow-images/portrait/IMG-20240816-WA0000.jpg) 
+<PostImage src={imageSrc2} alt="dunces all around" />
 
-## Fancy dress parades 
 I remember she got a hurried cremation—they couldn't risk a second, more detailed, more gruesome, and gloomier post-mortem. But what about the post-mortem of the civilization? Have these friends or fiends recorded her last ordeal? Will they entertain people with tastes like theirs in the undergrowth of the internet, bringing them to a masturbatory climax over and over again? Will this become a movie, making a group of people rich who will never contribute to the cause of people like her? A book deal? Perhaps the point is this: lessons from her death won't be learned, no changes wrought, just more societal gift wrappers. But she will still be alive in the many working-class women who positively transform the world, who, like her, aspire to be good at what they do, who—like me—can't stand corrupt people and fall victim to nefarious plots, still preyed on, still vulnerable. I know it's only a matter of time before another villain comes scurrying from the shadows to rinse and repeat this, and once again, we will see gross inaction and a society slowly dying its own death because it has traded its spine for the fancy dress competition of a hedonistic parade, allowing the submission of judgment to crimes for petty, useless trinkets.
 
-![dunces all around](/src/lib/assets/slideshow-images/portrait/IMG-20240824-WA0000.jpg) 
+<PostImage src={imageSrc3} alt="society reponsible" />
 
-## The shadows of men
 There isn't any solution that can be worked out overnight, or by one government or even one civilization. The important question to ask is why, not where. The ingrained nature of certain behaviors is reflected in language patterns in every society, however dissimilar. It’s plain that violence against women is coded into male DNA, reflected in the artifacts of language and culture, the very things that obscure the primal urges of the animal inside, which in attire we forget. If you have a careful ear, you’ll discern this—invectives across cultures often target mothers and sisters, paired with expletives. Rarely, if ever, do father or brother fuckers gain any popularity in any language that I’m aware of. Although in this case, the root cause can’t be extirpated because we are animals, and evolution has delicately designed us with certain abstruse needs, we can still do more than just the usual—hand-waving the problem away or offering a feeble, farcical papyrus of symptomatic treatment that does no good.
 
 
@@ -14653,6 +14515,7 @@ export const load: ServerLoad = async () => {
 # File: src/routes/+layout.svelte
 
 <script lang="ts">
+	// Existing imports
 	import '../app.css';
 	import Header from '$lib/components/layout/Header.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
@@ -14660,6 +14523,26 @@ export const load: ServerLoad = async () => {
 	import ObsidianDrillDown from '$lib/components/layout/DrillDown.svelte';
 	import SEO from '$lib/components/seo/SEO.svelte';
 	import { page } from '$app/state';
+
+	// START: NEWLY ADDED FOR MERMAID
+	import mermaid from 'mermaid';
+	import { browser } from '$app/environment';
+
+	// This runs the Mermaid configuration once when the app loads in the browser.
+	if (browser) {
+		mermaid.initialize({
+			startOnLoad: false,
+			// The 'base' theme is required for classDef styling to work.
+			theme: 'base',
+			themeVariables: {
+				primaryColor: '#fff',
+				primaryTextColor: '#111',
+				lineColor: '#112233',
+				fontFamily: 'inherit'
+			}
+		});
+	}
+	// END: NEWLY ADDED FOR MERMAID
 
 	let { children } = $props();
 	let isMenuOpen = $state(false);
