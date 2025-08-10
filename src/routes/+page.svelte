@@ -64,7 +64,7 @@
 	</p>
 
 	<p class="my-4">
-		So that's what sort of started me—startled with the disequilibrium with looks, size, shape, velocity, and power in the gossipy, everyday, ordinary of this, what I eventually understood to be an extraordinary world, and this inconvenient discovery has stuck as I found out I am, in man's limited prowess over the middling distances, an extremely Lilliputian man in every way, shape, and form, and to this day—even as a Bengali, that is where I am. It's neither an admission of guilt nor of defeat—there are no adversaries to speak of except man's own inhibition in most circumstances. But I like to recognize the parts for what they are, not for what I wish them to be—and therefore, in introspections, I've found the weaknesses in me are my strength, because that's what's authentic.
+		So that's what sort of started me—startled with the disequilibrium with looks, size, shape, velocity, and power in the gossipy, everyday, ordinary of this, what I eventually understood to be an extraordinary world, and this inconvenient discovery has stuck as I found out I am, in man's limited prowess over the middling distances, an extremely lilliputian man in every way, shape, and form, and to this day—especially as a Bengali, that is where I am. It's neither an admission of guilt nor of defeat—there are no adversaries to speak of except man's own inhibition in most circumstances. But I like to recognize the parts for what they are, not for what I wish them to be—and therefore, in introspections, I've found the weaknesses in me are my strength, because that's what's authentic.
 	</p>
 
 	<p class="my-4">
