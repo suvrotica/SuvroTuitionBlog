@@ -1,12 +1,21 @@
 ---
-
 title : "Lonely Rapist" 
-
-
-
-category :"Doggerel" 
-
+description: "A raw and provocative doggerel about church rapes in America"
+category : "Doggerel" 
+thumbnail: "/src/lib/assets/slideshow-images/portrait/lonely_rapist.jpg"
+date: "2025-08-12"
+keywords: ["doggerel", "american holy man", "social satire", "political critique", "profane poetry", America", "religious society", "cultural identity", "cynicism", "personal angst"]
+published: true
 ---
+
+
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/lonely_rapist.jpg?url';
+</script>
+
+<PostImage src={imageSrc1} alt="the lonely rapist" />
+
 <br>
 Shit totally escapist I'm a lonely rapist,<br>
 I rape all the children in the city. <br>
