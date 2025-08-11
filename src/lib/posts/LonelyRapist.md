@@ -58,6 +58,6 @@ Don't know if it's my mind or my dick,<br>
 I keep fucking until the moment would pass.<br>
 <br>
 Church is good for boys and little girls,<br>
-Busy parents should be this be told.<br>
-A god, at least his janitor in his stead,<br>
-Will bless the little fucks into gold.<br>
+Busy parents should be thus, this be told.<br>
+A god, at least a janitor, in his stead,<br>
+Will bless their little fucks into gold.<br>
