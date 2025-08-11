@@ -2,7 +2,7 @@
 
 title : "Lonely Rapist" 
 
-thumbnail :"" 
+
 
 category :"Doggerel" 
 
