@@ -1,4 +1,4 @@
-# Context file generated on: Monday, August 11, 2025 at 10:04:47 AM GMT+5:30
+# Context file generated on: Monday, August 11, 2025 at 10:55:00 AM GMT+5:30
 ---
 
 # Project File Layout
@@ -142,7 +142,11 @@
 │   │   │   ├── WhyHindooHiccups.md
 │   │   │   └── WrightsLaw.md
 │   │   ├── posts.ts
+│   │   ├── server
+│   │   │   └── posts.ts
 │   │   ├── types.ts
+│   │   ├── utils
+│   │   │   └── readingTime.ts
 │   │   └── utils.ts
 │   ├── routes
 │   │   ├── +layout.server.ts
@@ -314,6 +318,7 @@
 		"@vercel/analytics": "^1.5.0",
 		"@vercel/speed-insights": "^1.2.0",
 		"d3": "^7.9.0",
+		"gray-matter": "^4.0.3",
 		"mermaid": "^11.9.0",
 		"p5": "^2.0.3",
 		"rehype-autolink-headings": "^7.1.0",
@@ -730,6 +735,20 @@ declare global {
 			categories: Category[]; // Change 'topics' to 'categories'
 		}
 		// ...
+		interface Post {
+			slug: string;
+			content: string;
+			meta: {
+				title: string;
+				description: string;
+				date: string;
+				lastModified: string;
+				category: string;
+				published: boolean;
+				featured?: boolean;
+				readingTime: number;
+			};
+		}
 	}
 }
 
@@ -3087,7 +3106,7 @@ published: true
 <script>
     import PostBadge from '$lib/components/ui/PostBadge.svelte';
 </script>
-![](/images/placeholders/IMG-20250724-WA0003.jpg) 
+![A diagram showing the different lobes of the human brain](/images/placeholders/IMG-20250724-WA0003.jpg) 
 
 Right then. Let’s pour a nice cup of darjeeling tea, sit down, and talk about the universe I’ve got squirreled away between my ears. Because honestly, the stuff going on out in space with galaxies and whatnot has got nothing on the sheer, beautiful madness happening inside my own noggin—and it's not because I am bipolar.
 
@@ -3259,21 +3278,15 @@ thumbnail: "/images/placeholders/d3-placeholder.jpeg"
     import GoldLine from '$lib/components/GoldLine.svelte';
 </script>
 
-## Why Build Axis Components?
-
 When creating data visualizations, axes are fundamental. They provide the context and scale needed to understand the data. D3.js offers powerful and highly configurable axis generators like `axisBottom` and `axisLeft`. By encapsulating this logic within a Svelte component, we can create reusable, declarative charts that fit perfectly into our SvelteKit application.
 
 <GoldLine />
-
-### A Reusable Axis Example
 
 The component below demonstrates a basic chart setup. It uses D3 to create linear scales for the X and Y dimensions and then renders the corresponding axes. The entire visualization is contained within a Svelte component, making it easy to drop into any page.
 
 <D3Axis />
 
 <GoldLine />
-
-### The Svelte Component Code
 
 The component's script handles all the D3 logic. Using the `$effect` rune, we ensure the D3 code runs only after the SVG element has been mounted in the DOM. This keeps our D3 manipulations cleanly separated from Svelte's declarative structure.
 
@@ -5734,17 +5747,17 @@ thumbnail: "/images/placeholders/IMG-20250723-WA0003.jpg"
 
 <div id="weird-feeling-content">
 
-![](/images/placeholders/IMG-20250723-WA0003.jpg)
+![wormy me](/images/placeholders/IMG-20250723-WA0003.jpg)
 Sometimes I feel like I might run out of words. I've already run out of many things, and I'm destined to peter out someday, when the word-spool go mute—frustrated with the reception. It's a crowded world, a world full of happenstance and probabilities that make jostling and sweating the only reward for the large majority of people.
 
-![](/images/placeholders/YGEiXDBfQq2kVwzN7vUNIw.jpeg)
+![crowd](/images/placeholders/YGEiXDBfQq2kVwzN7vUNIw.jpeg)
 It's strictly Darwinian and Malthusian; I realized that more in India, where a reasonable way to explain it would be to say that when someone's born, another falls off in the ocean. It's crowded. And the opportunity to work with the existing resources is often deceptively bureaucratic or nonexistent. The whole economy runs on the premise that if you make a rupee from a billion people, you have a billion rupees. Not to mention that the only available job occupancy, to the majority barely-literate, with a thin veneer of educational patina, is the fraudulent arbitrage of upselliing this empty dream, that exposure to a large market on a trifle is even possible. Plus, someone has to keep the equations balanced and keep these people at a point where they are in a position to spend that rupee, not if they are fighting adversities that are hidden away by the media, which never has the time to cover any real news. The advertisements of the shining faces of India that are portrayed outside are just masquerading an image that India never was, behind which the government and it's beneficiary businesses siphon tax payer money in the name of public projects to Swiss accounts. It's magic, except this level of collusion is well known and considered a well deserved dowry given to a politician.
 
-![](/images/placeholders/Fs6YTO0GQ_-nHWut1NkdVA.webp)
+![myths](/images/placeholders/Fs6YTO0GQ_-nHWut1NkdVA.webp)
 
 The real India doesn't live in villages, cities, etcetera. The real India lives in the myths that obfuscate the reality of what is real and what is not. What we need is to get out of all this culture-centric baggage, rediscover ourselves, and secure a place in the world. This caste system, these Hindu-Muslim-Christian religious barricades, have to go; if there has to be any fiction that's important, that's the country, period. Let all the disparate and divisive `old man on the cloud` fairytales rest in peace where they deserves, in our libraries of our shared cultures.
 
-![](/images/placeholders/gDpjDHSHS72jcAoV6n7VEg.webp)
+![indian god](/images/placeholders/gDpjDHSHS72jcAoV6n7VEg.webp)
 
 The corruption that continues to erode India is perhaps the only legacy that we seem to be passing on with great efficiency, with morally bankrupt people at the helm, goons festooned with accolades, and a generally well-nourished spectrum of propaganda that has awarded the Indian media the status of a jester. The self-congratulatory style of saying whatever you want to say while keeping your head buried in the sand works well and gets lots of sponsorship, at least. I don't know why I bother to write these laments. Nobody cares. But somehow something compels me to write, just in case there's a future leader or thinker who might get inspired. Even a nobody has the right to dream good things for the place he calls home, no matter if that place is hostile to him, or doesn't want him. I was born here, and that's something that's not going to change, nor are the impressions of my childhood years that has been formative in creating this neural network I call me.
 
@@ -5893,6 +5906,66 @@ export async function getPostsByCategory(category: string) {
 	};
 }
 
+# File: src/lib/server/posts.ts
+
+import { dev } from '$app/environment';
+import grayMatter from 'gray-matter';
+import { execSync } from 'child_process';
+import { calculateReadingTime } from '$lib/utils/readingTime';
+
+// Find all markdown posts using Vite's glob import
+const modules = import.meta.glob('/src/lib/posts/**/*.md', { query: '?raw', import: 'default', eager: true });
+
+/**
+ * Gets the last Git commit date for a given file and returns it as an ISO string.
+ * This is our new automatic way to get the 'lastModified' date.
+ * @param {string} filepath - The file path provided by import.meta.glob.
+ */
+function getGitLastModified(filepath: string) {
+	try {
+		// The filepath from glob is like '/src/lib/posts/file.md'. We need to remove the leading '/'.
+		const command = `git log -1 --pretty="format:%cI" -- "${filepath.substring(1)}"`;
+		const date = execSync(command).toString().trim();
+		// Return the date or a new date if the file is not yet in git
+		return date || new Date().toISOString();
+	} catch (error) {
+		// Fallback for any other errors
+		console.error(`Failed to get last modified date for ${filepath}:`, error);
+		return new Date().toISOString();
+	}
+}
+
+export async function getPosts() {
+	const posts = Object.entries(modules).map(([filepath, rawContent]) => {
+		const { data: meta, content } = grayMatter(rawContent as string);
+		const slug = filepath.split('/').pop()?.slice(0, -3);
+
+		return {
+			slug,
+			meta: {
+				...meta,
+				// Automatically add the last modified date from Git!
+				lastModified: getGitLastModified(filepath),
+				readingTime: calculateReadingTime(content)
+			},
+			content
+		} as App.Post;
+	});
+
+	// Filter out unpublished posts in production
+	const publishedPosts = dev ? posts : posts.filter((post) => post.meta.published);
+
+	// Sort posts by original date, most recent first
+	const sortedPosts = publishedPosts.sort(
+		(a, b) => new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime()
+	);
+
+	return {
+		posts: sortedPosts,
+		total: sortedPosts.length
+	};
+}
+
 # File: src/lib/types.ts
 
 // This file defines the shape of your data structures.
@@ -5913,6 +5986,19 @@ export type Post = {
     slug: string;
     lastUpdated: Date; // The file's last modified date
 };
+
+# File: src/lib/utils/readingTime.ts
+
+/**
+ * Estimates the reading time of a piece of text.
+ * @param {string} text The text to be read.
+ * @returns {number} The estimated reading time in minutes.
+ */
+export function calculateReadingTime(text: string): number {
+	const wordsPerMinute = 200;
+	const numberOfWords = text.split(/\s/g).length;
+	return Math.ceil(numberOfWords / wordsPerMinute);
+}
 
 # File: src/lib/utils.ts
 
@@ -6097,33 +6183,24 @@ injectAnalytics({ mode: dev ? 'development' : 'production' });
 # File: src/routes/+page.server.ts
 
 import { POSTS_PER_PAGE } from '$lib/config';
-import { getPosts } from '$lib/posts';
+import { getPosts } from '$lib/server/posts';
 import { error } from '@sveltejs/kit';
-import { statSync } from 'fs';
-import path from 'path'; // <-- Import the path module
 
 export const load = async ({ url }) => {
 	try {
 		const page = parseInt(url.searchParams.get('page') || '1');
-		const { posts, total } = await getPosts(page, POSTS_PER_PAGE);
-
-		// Manually add the 'AmABengaliMan' post to be featured
 		const featuredPostSlug = 'AmABengaliMan';
-		const featuredPostModule = await import(`../lib/posts/${featuredPostSlug}.md`);
-		const featuredPostMetadata = featuredPostModule.metadata;
 
-		// Create a robust, absolute path to the file
-		const postPath = path.resolve('src/lib/posts', `${featuredPostSlug}.md`);
-		
-		// Get last modified time using the correct path
-		const stats = statSync(postPath);
-		const lastModified = stats.mtime.toISOString();
+		// 1. Get the posts array by destructuring the result from getPosts()
+		const { posts: allPosts } = await getPosts();
 
-		const featuredPost = {
-			slug: featuredPostSlug,
-			...featuredPostMetadata,
-			lastModified
-		};
+		// 2. Find the featured post from the list. This will now work correctly.
+		const featuredPost = allPosts.find((p) => p.slug === featuredPostSlug);
+
+		// 3. Create a paginated list that doesn't include the featured post.
+		const postsForList = allPosts.filter((p) => p.slug !== featuredPostSlug);
+		const total = postsForList.length;
+		const posts = postsForList.slice((page - 1) * POSTS_PER_PAGE, page * POSTS_PER_PAGE);
 
 		return {
 			posts,
@@ -6133,9 +6210,8 @@ export const load = async ({ url }) => {
 			featuredPost
 		};
 	} catch (e) {
-		console.error(e);
-		// This will now give a more meaningful error if something is wrong
-		error(500, 'Could not load the featured post. Please check the server logs.');
+		console.error('Failed to load page:', e);
+		error(500, 'Could not load posts. Please check the server logs.');
 	}
 };
 

@@ -1,76 +1,57 @@
 import { dev } from '$app/environment';
-import { statSync } from 'fs';
-import { glob } from 'glob';
+import grayMatter from 'gray-matter';
+import { execSync } from 'child_process';
+import { calculateReadingTime } from '$lib/utils/readingTime';
 
-type GlobResolver = Record<string, () => Promise<Post>>;
+// Find all markdown posts using Vite's glob import
+const modules = import.meta.glob('/src/lib/posts/**/*.md', { query: '?raw', import: 'default', eager: true });
 
-type PostMetadata = {
-	title: string;
-	description: string;
-	date: string;
-	published: boolean;
-	category: string;
-};
-
-type Post = {
-	metadata: PostMetadata;
-};
-
-export type PostSummary = PostMetadata & {
-	slug: string;
-	lastModified: string;
-};
-
-async function getPostSummaries() {
-	const paths = import.meta.glob('/src/lib/posts/*.md', { eager: false });
-
-	const posts = await Promise.all(
-		Object.entries(paths).map(async ([path, resolver]) => {
-			const { metadata } = (await resolver()) as Post;
-			const slug = path.split('/').pop()?.slice(0, -3) ?? '';
-
-			// Get last modified time
-			const stats = statSync(`src/lib/posts/${slug}.md`);
-			const lastModified = stats.mtime.toISOString();
-
-			return { slug, ...metadata, lastModified };
-		})
-	);
-
-	let sortedPosts = posts.sort(
-		(a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf()
-	);
-
-	if (!dev) {
-		sortedPosts = sortedPosts.filter((post) => post.published);
+/**
+ * Gets the last Git commit date for a given file and returns it as an ISO string.
+ * This is our new automatic way to get the 'lastModified' date.
+ * @param {string} filepath - The file path provided by import.meta.glob.
+ */
+function getGitLastModified(filepath: string) {
+	try {
+		// The filepath from glob is like '/src/lib/posts/file.md'. We need to remove the leading '/'.
+		const command = `git log -1 --pretty="format:%cI" -- "${filepath.substring(1)}"`;
+		const date = execSync(command).toString().trim();
+		// Return the date or a new date if the file is not yet in git
+		return date || new Date().toISOString();
+	} catch (error) {
+		// Fallback for any other errors
+		console.error(`Failed to get last modified date for ${filepath}:`, error);
+		return new Date().toISOString();
 	}
-
-	return sortedPosts;
 }
 
-export async function getPosts(page = 1, limit = -1) {
-	const posts = await getPostSummaries();
+export async function getPosts() {
+	const posts = Object.entries(modules).map(([filepath, rawContent]) => {
+		const { data: meta, content } = grayMatter(rawContent as string);
+		const slug = filepath.split('/').pop()?.slice(0, -3);
 
-	if (limit > 0) {
-		const start = (page - 1) * limit;
-		const end = start + limit;
 		return {
-			posts: posts.slice(start, end),
-			total: posts.length
-		};
-	}
+			slug,
+			meta: {
+				...meta,
+				// Automatically add the last modified date from Git!
+				lastModified: getGitLastModified(filepath),
+				readingTime: calculateReadingTime(content)
+			},
+			content
+		} as App.Post;
+	});
+
+	// Filter out unpublished posts in production
+	const publishedPosts = dev ? posts : posts.filter((post) => post.meta.published);
+
+	// Sort posts by original date, most recent first
+	const sortedPosts = publishedPosts.sort(
+		(a, b) => new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime()
+	);
 
 	return {
-		posts,
-		total: posts.length
-	};
-}
-
-export async function getPostsByCategory(category: string) {
-	const posts = await getPostSummaries();
-	const filteredPosts = posts.filter((post) => post.category.toLowerCase() === category.toLowerCase());
-	return {
-		posts: filteredPosts,
-		total: filteredPosts.length
+		posts: sortedPosts,
+		total: sortedPosts.length
 	};
 }

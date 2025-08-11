@@ -1,16 +1,16 @@
 <script lang="ts">
 	import { toTitleCase } from '$lib/utils';
 	import type { PageData } from './$types';
-	// 1. Import the type for a single post
-	import type { PostSummary } from '$lib/posts';
+	// This type is actually defined in app.d.ts, but for clarity let's assume PostSummary is what we want.
+	type PostSummary = App.Post;
 
 	let { data } = $props<{ data: PageData }>();
 
 	const posts = $derived(
-		// 2. Add the PostSummary type to the 'post' parameter
 		data.posts.map((post: PostSummary) => ({
 			...post,
-			formattedTitle: toTitleCase(post.title)
+			// The title formatting is a nice touch, let's keep it.
+			formattedTitle: toTitleCase(post.meta.title) 
 		}))
 	);
 </script>
@@ -27,15 +27,15 @@
 		{#each posts as post (post.slug)}
 			<li class="card mb-6">
 				<h2>
-					<a class="post-link" href={`/blog/${post.category}/${post.slug}`}>
+					<a class="post-link" href={`/blog/${post.meta.category}/${post.slug}`}>
 						{post.formattedTitle}
 					</a>
 				</h2>
 
-				<p class="text-secondary">{post.description}</p>
+				<p class="text-secondary">{post.meta.description}</p>
 				
 				<p class="text-sm text-tertiary text-right">
-					Last updated: {new Date(post.lastModified).toLocaleDateString('en-GB', {
+					Last updated: {new Date(post.meta.lastModified).toLocaleDateString('en-GB', {
 						year: 'numeric',
 						month: 'long',
 						day: 'numeric'

@@ -13,21 +13,15 @@ thumbnail: "/images/placeholders/d3-placeholder.jpeg"
     import GoldLine from '$lib/components/GoldLine.svelte';
 </script>
 
-## Why Build Axis Components?
-
 When creating data visualizations, axes are fundamental. They provide the context and scale needed to understand the data. D3.js offers powerful and highly configurable axis generators like `axisBottom` and `axisLeft`. By encapsulating this logic within a Svelte component, we can create reusable, declarative charts that fit perfectly into our SvelteKit application.
 
 <GoldLine />
-
-### A Reusable Axis Example
 
 The component below demonstrates a basic chart setup. It uses D3 to create linear scales for the X and Y dimensions and then renders the corresponding axes. The entire visualization is contained within a Svelte component, making it easy to drop into any page.
 
 <D3Axis />
 
 <GoldLine />
-
-### The Svelte Component Code
 
 The component's script handles all the D3 logic. Using the `$effect` rune, we ensure the D3 code runs only after the SVG element has been mounted in the DOM. This keeps our D3 manipulations cleanly separated from Svelte's declarative structure.
 

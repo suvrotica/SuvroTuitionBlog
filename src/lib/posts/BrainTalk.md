@@ -10,7 +10,7 @@ published: true
 <script>
     import PostBadge from '$lib/components/ui/PostBadge.svelte';
 </script>
-![](/images/placeholders/IMG-20250724-WA0003.jpg) 
+![A diagram showing the different lobes of the human brain](/images/placeholders/IMG-20250724-WA0003.jpg) 
 
 Right then. Let’s pour a nice cup of darjeeling tea, sit down, and talk about the universe I’ve got squirreled away between my ears. Because honestly, the stuff going on out in space with galaxies and whatnot has got nothing on the sheer, beautiful madness happening inside my own noggin—and it's not because I am bipolar.
 
