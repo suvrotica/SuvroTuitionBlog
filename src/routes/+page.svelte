@@ -1,141 +1,47 @@
 <script lang="ts">
-	import ImageSlideshow from '$lib/components/blog/ImageSlideshow.svelte';
+	import { toTitleCase } from '$lib/utils';
+	import type { PageData } from './$types';
+	// 1. Import the type for a single post
+	import type { PostSummary } from '$lib/posts';
 
-	const imageModulesSquare: Record<string, string> = import.meta.glob(
-		'$lib/assets/slideshow-images/square/*.{jpg,jpeg,png,webp}',
-		{
-			eager: true,
-			query: '?url',
-			import: 'default'
-		}
-	);
-	
-	const imageModulesLandscape: Record<string, string> = import.meta.glob(
-		'$lib/assets/slideshow-images/landscape/*.{jpg,jpeg,png,webp}',
-		{
-			eager: true,
-			query: '?url',
-			import: 'default'
-		}
-	);
+	let { data } = $props<{ data: PageData }>();
 
-	const imageModulesPortrait: Record<string, string> = import.meta.glob(
-		'$lib/assets/slideshow-images/portrait/*.{jpg,jpeg,png,webp}',
-		{
-			eager: true,
-			query: '?url',
-			import: 'default'
-		}
+	const posts = $derived(
+		// 2. Add the PostSummary type to the 'post' parameter
+		data.posts.map((post: PostSummary) => ({
+			...post,
+			formattedTitle: toTitleCase(post.title)
+		}))
 	);
-
-	const imageUrlsLandscape = Object.values(imageModulesLandscape);
-	const imageUrlsPortrait = Object.values(imageModulesPortrait);
-	const imageUrlsSquare = Object.values(imageModulesSquare);
 </script>
 
+<svelte:head>
+	<title>Suvro Ghosh | Engineering & Personal Blog</title>
+	<meta name="description" content="The personal and engineering blog of Suvro Ghosh." />
+</svelte:head>
 
-<section class="container mx-auto py-8 max-w-4xl">
-	<h1 class="mb-8">Reflections on a Schoolboy's Past</h1>
-	
-	<p class="mb-4">
-		I remember school through a veil of years of indifference to childhood memories that grownups, at a certain point, must admit to—I do.
-		But mine was a complicated palimpsest of ambition, triumph, misadventures, romance, then—shame, regrets—most now like old luggage tags, expired or useless.
-		I confess, as useless as perhaps the utility for, or the importance of, the places and characters and several linked trivia that I sometimes wake up to, wade, and wallow in, now that I am fifty.
-	</p>
+<div class="container my-8 ">
+	<h1 class="text-center">Latest Posts</h1>
 
-	
-	<div class="my-8">
-		<ImageSlideshow images={imageUrlsSquare} />
-	</div>
-	
+	<ul class="list-none p-0 ">
+		{#each posts as post (post.slug)}
+			<li class="card mb-6">
+				<h2>
+					<a class="post-link" href={`/blog/${post.category}/${post.slug}`}>
+						{post.formattedTitle}
+					</a>
+				</h2>
 
-	<p class="my-4">
-		My past is ancient and present is a mystery speeding past; I live now mostly to <em>live</em>, really—to barely escape frequent and routine annihilation, survive to remember and recollect the person I am, I was, I once wanted to be—inadvertently became, on the way to be—a leery litany of metamorphosis of a self that mostly started and remained unchanged at the core—which was a fledgling when I became a schoolboy to begin with and started to think, first feel, of course—mainly, in my case, see through thick myopia-correcting glasses—a visual person, and in my particular case, overthink the still-uncorrected blurry—cerebrally—the world through the senses, through the then immature prefrontal and amygdalian theaters of rehearsed endorsements.
-		It happened in a shockingly short span, then weirdly in a longish sort of lifetime after—that I’m only now able to reconstruct into the surreal absurdity I had managed to bungle myself into being.
-	</p>
-
-	<p class="my-4">
-		I want to start with what ordinarily is the start. I have an embarrassing memory of a very early male size comparison shame, while playing with my sprinkler on the nursery kindergarten back garden drain wall—the competition was a boy who was quite a bit big-boned and larger across several other exhibited jiggling animated adipose protuberances—nursery nuisances that litter such pigsties. But what had also caught my attention and had stayed to this day was—his sprinkler was not only endowed with <em>bigger</em> plumbing with ginormous dark velvety spheres, the resulting stream from the hydrology that came out unthrottled was thicker, more unbidden, forceful, and painted the wall with such ferocity that the reflected spray made me notice his assets with awe. I have no way of going back and sifting through that particular memory's soaked sodden soil, a kid's private memory <em>this</em>—I didn't share with even my mother—who at the time was my only confidante. But toilet, or rather the anathema of an always overflowing unkempt school loo, forced me to teach myself to hold my bowels. On two occasions I couldn't, and I defecated in my school half-pants, unable to hold it, as far as I can recollect, trying to keep composure on a waddling dilapidated hand-pulled rickshaw—these my mother can submit affidavits if required. Poor woman, this is back in the day when the washing machine wasn't even in the impoverished imagination of the North Calcutta middle class, and we weren't that affluent to have maids to do any cleaning up after us.
-	</p>
-
-
-	<p class="my-4">
-		There was one more occasion when it could have ended well, except it didn't—that a city of joy rarely has its College Street English bookstores' makeshift shanty loos equipped to flush fresh fetid feces—aggravating a nervous and nerve-wracked boy without a way to clean his gentle bottom. When I reported this inadequacy of the establishment to the ungrateful shop clerk, he demanded I lug a heavy, leaky balti, descriptive of poverty, half across the street in my English medium school dress, so I fled as fast as my unwashed bottom would allow. I went as part of a group of kids who, although were all my age (Section B), did not seem to have the same digestive or excretory system that, from time to time, in my case, asserted that matter came in three states, and all the states were in fact coming out of some portion of my rear, all the time!
-	</p>
-
-	<p class="my-4">
-		So that's what sort of started me—startled with the disequilibrium with looks, size, shape, velocity, and power in the gossipy, everyday, ordinary of this, what I eventually understood to be an extraordinary world, and this inconvenient discovery has stuck as I found out I am, in man's limited prowess over the middling distances, an extremely lilliputian man in every way, shape, and form, and to this day—especially as a Bengali, that is where I am. It's neither an admission of guilt nor of defeat—there are no adversaries to speak of except man's own inhibition in most circumstances. But I like to recognize the parts for what they are, not for what I wish them to be—and therefore, in introspections, I've found the weaknesses in me are my strength, because that's what's authentic.
-	</p>
-
-	<p class="my-4">
-		People in the world—tragically, in the holy land I dwell especially—who have lower melanin or somewhat symmetrical distribution of skin and adipose around elevated cheekbones, standing a few inches above the median statistical height or fitting within a few inches smaller than the width of the median dress size—are propitiated by the population that lack these characteristics. This asymmetrical distribution in coveting is what causes the lifespan of some of us to get affected destructively by a devoted and toxic societal perusal of compensatory activities to match the deficiency with wealth, power, education, and other biologically inaccessible accouterments. I was like the majority in this common herd, trying hard to make up for all the deficiencies in the only way I knew how—by reading books.
-		You reach heights in civilization or find mates with luscious curves only if you have, say, the torso of a Greco-Roman statue or like Tarzan the Ape Man, while if you're short-statured, melanin-rich, sans the golden ratios in appointed parts, and mumble inaudibly constantly a jumbled plaintive monotone in effeminate whispers—you're destined to die of undiscovery and ignominy, blatant racism—or put a star before the -ism, for in these matters, placeholders are your friend.
-	</p>
-
-	<p class="my-4">
-		This compensatory curriculum I started very early. My mother started me at age two—first, I gather, by reading the books to me, which service was quickly unnecessary as my neurons were quick to pick up the linguistic abilities. As far as I can tell, from very early on, I was thinking—a skill till today not at all a human requirement of any importance—and given to asking and not giving up if the answers didn't satisfy me—I was irritatingly insistent. I wouldn't call it either curiosity or pursuit of excellence, as at that age I had no clear scientific intimation of, say, which side was in and which was out, except that there was a pattern of in and out and accompanying smell—good and bad—and specific rooms in which these activities were encouraged.
-	</p>
-
-	<p class="my-4">
-		This is how, as a child, I slowly started to grasp reality, and occasionally, by being obtrusive and arrogantly inquisitive through chains of whys which adults find irksome, I tried to dredge the benthic dregs lying neglected. They therefore avoided me and my inconvenient questions at all costs. I was given the terrace and a room in the attic. This garret is where I spent most of my time. It wasn't impossible to notice, even with a meristematic brain system, that cognitive ability of the deficient and dud subtypes were everywhere at play and was what I was expected to rote learn to please the prevailing dogmatic adult supervisory overlords.
-	</p>
-
-	<p class="my-4">
-		Given how elementary the level of education in the Indian system is, in spite of the incredible amount of marketing disinformation willingly spread to glorify some form of Indian supremacy in the West—this is comical, if not farcical, in its irony, given that the English medium system I was enslaved in, or any denomination of modern education in India, is a British colonial legacy of efforts to squeeze local and cheaper clerks instead of the more expensive and often temporary ones of forcing Europeans in a hostile tropical climate. Even the British system came from a German system of indentured training programs.
-	</p>
-
-	<p class="my-4">
-		Conversely, this doesn't imply the Occident is superior in any subject—it's not, either. Homo sapiens is an ape which looks slightly different superficially and is found with various doses of self-esteem issues and delusions over various regions, and as you can expect, every region hypes its own abilities without any evidence. Historically, we sit on a biased landscape of exploitation and racism which has created generations of impoverished citizenry, which contrast when juxtaposed with those descended from the affluent and ruling generations. This asymmetrical skew will now get even more topsy-turvy, even tipsy, given synthetic intelligence will get added to the more affluent and already educated enough to reap its advantages first.
-	</p>
-
-	<p class="my-4">
-		So all the parochial supremacy of the Indian stock is false—anyone who puts in the hours can master a subject. I could too, and I did easily, and profligated most of the remaining time daydreaming or fornicating with my hand and endlessly worrying when touching the sphincter felt incredible or wondering cluelessly if the ejaculated matter was an indication of cancer. Since all matter of excretion were bad, how could this feel so good, and why did it come about while cognitive diversions were guided carnally to the opposite side of the species? I couldn't figure this out, of course, till much later.
-		I was, after all, at the age when you are desirous of base sixty mathematical systems, for the illicit illegitimate love attraction to the word part formed by the first three alphabets in its name engraved in my palpitating lover-boy libidinous lust-crazed heart.
-	</p>
-
-	<p class="my-4">
-		Those who prefer the opposite, longer-haired illusions of us for these cosmetic and meretricious patina of gloss—us cretins also misjudge melanin deficiency for superiority or experiments with holiness. We believe if white man George Harrison had condescended in his lyrics the coexistence of the dark-skinned mythological creation Krishna with the Christian mythology of white man Jesus, then they are both really real and there's a cowherd with methemoglobinemia and an antique flute and a schizophrenic carpenter stuck on a cross who live somewhere in Attapara in North Calcutta under some Bengali pseudonym.
-	</p>
-
-	
-	<div class="my-8">
-		<ImageSlideshow images={imageUrlsPortrait} />
-	</div>
-
-
-	<p class="my-4">
-		Thus our ability to get muddled works hand in hand with a corrupted framework of basic data, information, or knowledge, and we grow up on a pyramid of crumbling make-believe fiction and frequently conflate it with facts. Of course, no one wants to wake up next to a hag with no teeth, but even this logic is specious because—give enough time to Aishwarya Rai Bachchan to age and I promise you she'll be a hag with no teeth. The only way out is a stuffed doll or a girl robot, but that is not how your brain would like to accept it—your brain would know it's a thing, and because of its lack of consciousness, its participation as a partner is void. Wait a few more years until a girl robot can dump you; at that point, it won't be a thing anymore.
-	</p>
-
-	<p class="my-4">
-		I had also noticed adults insisted on covering up inconsistencies in their fictions with weaker tapestries of lies, and the separation of the ruling and the ruled was inherent in being party to this willed obfuscation or willing obeisance. This was fractally how society was structured at various levels—a distributed system of arranged or imposed parents and willing or subjugated children, at whatever level of fictional abstraction I looked: parent–child, of course, country leaders–citizen, company corporate vs. workers, religious elite priests and worshippers or the faithful, extending all the way to authors, artists, sportspersons and their consumers, teachers and students. The game was mainly lying and manipulation, with manicured gaslighting tweaked as per the needs of the specialty.
-	</p>
-
-	<p class="my-4">
-		The prevalence of mythology—emphasised and encouraged bias, or the absence of nuanced understanding of the operating models versus the indoctrinated and forced fictions—I saw created a hierarchy of flimflammery, superstitious jibber-jabber, pseudoscience, and an inflated sense of inflated religious affirmation in Bengali society, which at that time was partly Marxist in Calcutta and wanted to hold on to atheism. And in spite of their efforts, most had too little reading in them to make up their mind. I remember Darwin’s evolution was an option with a subject as trivial as pisciculture—cosmology never entered the lexicon, and astronomy was synonymous with horoscopes, palmistry, and astrology. The Bengal I grew up in was in the eighties still really pre-Victorian, and now India, under the new religious right, has slid a few centuries back into an equivalent dark middle age—so much for moving forward. It’s all atavistic growth; appearances of gentrification, or any sophisticated sheen is patina, imported from outside the country.
-	</p>
-
-	<div class="my-8">
-		<ImageSlideshow images={imageUrlsLandscape} />
-	</div>
-
-	<p class="my-4">
-		But really, in the end, what I'm trying to say in a long, winding way is that I did a lot of reading—and still read, to my mother's chagrin—that no, none of the readings I did do me any good as far as carrying out the original intention—I haven't accumulated any wealth or curvaceous mate, just books. Meritocracy is like a hoax you force on blind and disabled elderly in a care home—they can't ask for a refund. But I read, and this blog is where I share it.
-		And not just books that I read—I travel, and work on interesting ideas or at least think about them, and want to share my personal life and work experiences and knowledge. And if my exposure can help someone like me back when I was little—a boy or girl growing up without a compass in Calcutta or elsewhere—I’d feel I did something right, for a change.
-		Most human beings come incarcerated in their minds, their stories are therefore left untold, their imagination stay hidden—but I am articulate and I can draw droll caricatures, so I can bring my mind to you, and that's what this blog or some of its contents are about. It varies from exploratory non-fiction, formal prosaic posts, loose squibs, looser still dopey doggerels—hokey hawk tuahs, greasy sentiments in verse. A fair bit is in unparliamentary and unsavory diction that may peeve a lap dog, an uneducated mother, an easily offended belligerent female or bellicose feline, a crusty, dogmatic, obdurate, religious zealot, or an unscrupulous, rabid, political ideologue or corrupt politician. And to such people, might I therefore kindly request not to leave the comfort of their dopey dogma, or if they do, be sternly warned, <b>reading beyond this point of their own volition</b>, (although there's no such thing, free will is an illusion, but still I have to write this) their health and well-being is in their own two good hands, or three, if an indoctrinated, religious and fanatic AI is reading this. For anyone weening off, this blog isn't the first place to get shocked, please wander off to somewhere safer.
-
-	</p>
-
-	<div class="text-center mt-12">
-		<a href="/blog" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition-colors duration-200">
-			Visit the Blog
-		</a>
-	</div>
-</section>
-
-<style lang="postcss">
-	/* Tailwind classes are globally defined in src/app.css, so specific component styles are minimal here. */
-	/* The 'button' style from src/app.css will automatically apply to the <a> tag due to how Tailwind applies.
-	   However, for a more distinct primary link, I've used direct blue classes here,
-	   which you can easily adjust based on your global `app.css` styling conventions for links/buttons. */
-</style>
+				<p class="text-secondary">{post.description}</p>
+				
+				<p class="text-sm text-tertiary text-right">
+					Last updated: {new Date(post.lastModified).toLocaleDateString('en-GB', {
+						year: 'numeric',
+						month: 'long',
+						day: 'numeric'
+					})}
+				</p>
+			</li>
+		{/each}
+	</ul>
+</div>

@@ -15,7 +15,7 @@ h4,
 h5,
 h6,
 blockquote {
-	@apply prose prose-neutral my-4 leading-none tracking-tight text-neutral-900 subpixel-antialiased md:tracking-wide dark:text-neutral-100;
+	@apply prose prose-neutral my-4 leading-none tracking-tight text-neutral-800 subpixel-antialiased md:tracking-wide dark:text-neutral-300;
 }
 
 h1 { @apply text-5xl md:text-6xl; }
@@ -28,6 +28,8 @@ h6 { @apply text-lg md:text-xl; }
 p {
 	@apply text-justify text-base leading-relaxed text-neutral-800 subpixel-antialiased dark:text-neutral-300;
 }
+
+
 
 footer,
 article,
@@ -215,4 +217,35 @@ pre.shiki { @apply p-4 rounded-lg overflow-x-auto; }
 
 .image-placeholder-wrapper {
     @apply w-full h-full flex items-center justify-center bg-neutral-200 dark:bg-neutral-800 text-2xl text-neutral-500;
+}
+
+/* === Blog Post List Styles === */
+
+.card {
+	@apply bg-neutral-100 dark:bg-neutral-800/50 border border-neutral-300 dark:border-neutral-700 rounded-lg p-6 shadow-md transition-shadow duration-300 hover:shadow-lg;
+}
+
+/* Override the default heading margins within a card for better spacing */
+.card h2 {
+	@apply mt-0 mb-2;
+}
+
+/* Style for the main post title link */
+.post-link {
+	@apply text-neutral-900 dark:text-neutral-100 no-underline transition-colors duration-200;
+}
+
+/* Use the custom gold color for the link's hover state */
+.post-link:hover {
+	@apply text-[var(--color-gold)];
+}
+
+/* For secondary text, like the post description */
+.text-secondary {
+	@apply text-neutral-700 dark:text-neutral-400;
+}
+
+/* For tertiary text, like dates or metadata */
+.text-tertiary {
+	@apply text-neutral-500 dark:text-neutral-500;
 }

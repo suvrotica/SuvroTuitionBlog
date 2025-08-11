@@ -15,7 +15,7 @@ const TOP_LEVEL_FILES_TO_INCLUDE_IN_CONTENT = [
 	'tsconfig.json'
 ];
 const IGNORE_PATTERNS = new Set(['.git', 'node_modules', '.svelte-kit', 'build', 'dist']);
-const IGNORE_EXTENSIONS_IN_CONTENT = new Set(['.log', '.ico', '.png', '.jpg', '.jpeg', '.gif']);
+const IGNORE_EXTENSIONS_IN_CONTENT = new Set(['.log', '.ico', '.png', '.jpg', '.jpeg', '.gif','.webp']);
 
 // --- SCRIPT LOGIC ---
 const output = [];
