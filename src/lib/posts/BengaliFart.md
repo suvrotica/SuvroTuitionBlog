@@ -25,7 +25,7 @@ Got a hag with a neotenous face.<br>
 <br>
 Who am I, with an open fly,<br>
 The hag quizzed dressed in lace.<br>
-She imagined my balls when I said,<br>
+`She or He` imagined my balls when I said,<br>
 Race bengali is fucked in the face.<br>
 <br>
 Shitty this city, yes what a pity,<br>
