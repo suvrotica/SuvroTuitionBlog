@@ -35,12 +35,17 @@ As I am the janitor of a mega-church loo.<br>
 I fuddle the muddled I fuck I cuddle,<br>
 Huddled all the fools conveniently.<br>
 If you want to rape find a church,<br>
-I savagely buttfuck the holy silly.<br>
+I savagely buttfuck the holy to fuck silly.<br>
 <br>
 Raping mindfucked men women who are,<br>
 Already fucked by their imaginary lord. <br>
 I tie them to a chair and shit into,<br>
 Their pious mouths—of my own accord. <br>
+<br>
+Holy despotic avarice causes rapacious,<br>
+Church temple mosque synagogue to rape.<br>
+I flood my crotch with tears when I think,<br>
+How goodly this service in every ass gape.<br>
 <br>
 It's so holy, it's so pious, I'm joyous,<br>
 A world of joy, in my jolly belly jelly.<br>
