@@ -32,6 +32,11 @@ With grace, the unemployed homeless too.<br>
 I can't count how few animals I've fucked,<br>
 As I am the janitor of a mega-church loo.<br>
 <br>
+I fuddle the muddled I fuck I cuddle,<br>
+Huddled all the fools conveniently.<br>
+If you want to rape find a church,<br>
+I savagely buttfuck the holy silly.<br>
+<br>
 Raping mindfucked men women who are,<br>
 Already fucked by their imaginary lord. <br>
 I tie them to a chair and shit into,<br>
