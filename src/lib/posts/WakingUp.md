@@ -32,5 +32,6 @@ More than once, I have woken certain I was still there—in that cramped apartme
 
 This place—this Calcutta of now—is not the one I was born into. It is a hallucination of entropy, a fevered hallucination I never even had in my worst psychotic dream as a boy. I have not merely returned. I have been returned. By what logic? By what cruel and indifferent author? I do not know.
 
-But I write it down. Because if I don't, I will become one more detail that disappears.
+But I write it down. Because if I don't, I will become one more detail that disappears. A life traced in the faintest of threads, embroidered not in substance but in the gauze of gossamer dreams—so light they dissolved at a breath, so fragile they could never bear the weight of waking. Always wished for, always pursued with an urgency that felt like purpose, yet leading, again and again, not to fulfillment but to the looping corridors of return—each failed arrival folded into the next as fuel for a private, repressed combustion. And so the chase itself became the only enduring reality, the dreams feeding the madness, and the madness, in turn, weaving ever more intricate tapestries of what might have been.
+ 
 
