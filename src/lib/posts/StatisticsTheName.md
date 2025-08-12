@@ -2,21 +2,24 @@
 
 title : "My first statistics post" 
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20250805-WA0001.jpg" 
+description: "Introducing the word `statistics`"
+
+thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20250812-WA0001.jpg" 
 
 tags: ["blog", "mathematics", "statistics"]
 
-summary: "Introducing the word statistics"
 
 category : "Statistics" 
 
 date: "2025-08-12"
 
+published: true
+
 ---
 
 <script>
     import PostImage from '$lib/components/blog/PostImage.svelte';
-    import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20250805-WA0001.jpg?url';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20250812-WA0001.jpg?url';
     
     
 </script>
