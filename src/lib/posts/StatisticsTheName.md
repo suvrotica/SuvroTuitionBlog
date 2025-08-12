@@ -16,7 +16,7 @@ date: "2025-08-12"
 
 <script>
     import PostImage from '$lib/components/blog/PostImage.svelte';
-    import imageSrc1 from '/src/lib/assets/slideshow-images/portrait/IMG-20250805-WA0001.jpg?url';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20250805-WA0001.jpg?url';
     
     
 </script>
