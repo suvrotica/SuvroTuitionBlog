@@ -2,13 +2,25 @@
 
 title : "Waking up Me" 
 
-thumbnail : "/images/placeholders/IMG-20250805-WA0001.jpg" 
+description : "A remembered waking up from forced cycles of escapist sleep" 
+
+thumbnail : "/src/lib/assets/slideshow-images/portrait/b7748a5c-99dd-4337-8dbc-6344c2e944b4.png" 
 
 category : "Bipolar Depression" 
 
+tags: ["bengali", "NRI", "insomnia", "depression", "melancholy", "reflection", "bipolar" ]
+
 ---
 
-![thought eats thought](/images/placeholders/IMG-20250805-WA0001.jpg) 
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/b7748a5c-99dd-4337-8dbc-6344c2e944b4.png?url';
+    
+    
+</script>
+
+<PostImage src={imageSrc1} alt="remembering the past me" />
+
 
 Sometimes—often without warning—the sluice gates of memory fail, and the past, long held at bay, surges forward with a force that shatters the pitiful fortifications the mind had so painstakingly, so hopefully, erected. These fences were never truly walls; they were embarrassingly frail trellises draped in the illusion of strength, and against the pressure of remembrance they splinter at once.
 
