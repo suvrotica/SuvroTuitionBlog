@@ -6,7 +6,7 @@ thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20250805-WA0001.jpg"
 
 tags: ["blog", "mathematics", "statistics"]
 
-summary: "Introducing the word `statistics`"
+summary: "Introducing the word statistics"
 
 category : "Statistics" 
 
