@@ -52,6 +52,11 @@ A world of joy, in my jolly belly jelly.<br>
 I fart in people's faces too, that's true,<br>
 Like a capricious god as shown on telly.<br>
 <br>
+The pimp pastor uses oil castor,<br>
+Fucks only asses of repentent gents.<br>
+Blessed holy when I spy church men ogling,<br>
+Tiny girls, erect cocks in their tents.<br>
+<br>
 Holy abracadabra plus or minus the umbra,<br>
 Penumbra is the always best choice I think.<br>
 Darker the thoughts, better my highs,<br>
