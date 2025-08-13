@@ -49,9 +49,7 @@
     const imageUrlsSquare = Object.values(imageModulesSquare);
 </script>
 
-<div class="my-8">
-    <ImageSlideshow images={imageUrlsPortrait} />
-</div>
+
 
 <svelte:head>
 	<title>Suvro Ghosh | Engineering & Personal Blog</title>
@@ -60,7 +58,9 @@
 
 <div class="container my-8 ">
 	<h1 class="text-center">Latest Posts</h1>
-
+<div class="my-8">
+    <ImageSlideshow images={imageUrlsPortrait} />
+</div>
 	<ul class="list-none p-0 ">
 		{#each posts as post (post.slug)}
 			<li class="card mb-6">
