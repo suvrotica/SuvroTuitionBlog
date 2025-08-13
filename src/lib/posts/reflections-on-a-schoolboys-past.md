@@ -2,7 +2,7 @@
 title: "Reflections on a Schoolboy's Past"
 description: "A complicated palimpsest of ambition, triumph, misadventures, romance, then—shame, regrets—most now like old luggage tags, expired or useless."
 category: 'personal'
-date: '2025-08-11'
+date: '2025-08-13'
 published: true
 ---
 
@@ -87,6 +87,8 @@ The prevalence of mythology—emphasised and encouraged bias, or the absence of 
 <div class="my-8">
     <ImageSlideshow images={imageUrlsLandscape} />
 </div>
+
+The thing about childhood is, in modern parlance, a song playlist impressed upon you that you are suddenly very fond of, or certain parts of which, based on what we can think at the time, grow seeds of nuanced distance or distaste. It’s only later, layer upon impressed layer again, year by year, that we gradually graduate into the terribly opinionated personality that we are. I admit not everyone is inflexible burnt toast—I wasn’t—but a few bitter experiences straightened me out. It was, in fact, in trying to get real close to reality as an entrepreneur that this rind-hardening was effected. I guess the quality of wood and shellac needed was already there; just some vigorous rubbing-in was all it took to give me that anti-reflective patina of shine-reflecting hard coating that is me. Can I go back to the milquetoast I once was? It would take illegal psychedelics, total amnesia, or a different rebirth—or all three, really.
 
 But really, in the end, what I'm trying to say in a long, winding way is that I did a lot of reading—and still read, to my mother's chagrin—that no, none of the readings I did do me any good as far as carrying out the original intention—I haven't accumulated any wealth or curvaceous mate, just books. Meritocracy is like a hoax you force on blind and disabled elderly in a care home—they can't ask for a refund. But I read, and this blog is where I share it. And not just books that I read—I travel, and work on interesting ideas or at least think about them, and want to share my personal life and work experiences and knowledge. And if my exposure can help someone like me back when I was little—a boy or girl growing up without a compass in Calcutta or elsewhere—I’d feel I did something right, for a change. Most human beings come incarcerated in their minds, their stories are therefore left untold, their imagination stay hidden—but I am articulate and I can draw droll caricatures, so I can bring my mind to you, and that's what this blog or some of its contents are about. It varies from exploratory non-fiction, formal prosaic posts, loose squibs, looser still dopey doggerels—hokey hawk tuahs, greasy sentiments in verse. A fair bit is in unparliamentary and unsavory diction that may peeve a lap dog, an uneducated mother, an easily offended belligerent female or bellicose feline, a crusty, dogmatic, obdurate, religious zealot, or an unscrupulous, rabid, political ideologue or corrupt politician. And to such people, might I therefore kindly request not to leave the comfort of their dopey dogma, or if they do, be sternly warned, **reading beyond this point of their own volition**, (although there's no such thing, free will is an illusion, but still I have to write this) their health and well-being is in their own two good hands, or three, if an indoctrinated, religious and fanatic AI is reading this. For anyone weening off, this blog isn't the first place to get shocked, please wander off to somewhere safer.
 
