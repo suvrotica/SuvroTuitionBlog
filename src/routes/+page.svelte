@@ -13,7 +13,45 @@
 			formattedTitle: toTitleCase(post.meta.title) 
 		}))
 	);
+
+    import ImageSlideshow from '$lib/components/blog/ImageSlideshow.svelte';
+
+    const imageModulesSquare: Record<string, string> = import.meta.glob(
+        '$lib/assets/slideshow-images/square/*.{jpg,jpeg,png,webp}',
+        {
+            eager: true,
+            query: '?url',
+            import: 'default'
+        }
+    );
+    
+    const imageModulesLandscape: Record<string, string> = import.meta.glob(
+        '$lib/assets/slideshow-images/landscape/*.{jpg,jpeg,png,webp}',
+        {
+            eager: true,
+            query: '?url',
+            import: 'default'
+        }
+    );
+
+    const imageModulesPortrait: Record<string, string> = import.meta.glob(
+        '$lib/assets/slideshow-images/portrait/*.{jpg,jpeg,png,webp}',
+        {
+            eager: true,
+            query: '?url',
+            import: 'default'
+        }
+    );
+
+    // Extract the URLs into simple arrays to pass to the component
+    const imageUrlsLandscape = Object.values(imageModulesLandscape);
+    const imageUrlsPortrait = Object.values(imageModulesPortrait);
+    const imageUrlsSquare = Object.values(imageModulesSquare);
 </script>
+
+<div class="my-8">
+    <ImageSlideshow images={imageUrlsPortrait} />
+</div>
 
 <svelte:head>
 	<title>Suvro Ghosh | Engineering & Personal Blog</title>
