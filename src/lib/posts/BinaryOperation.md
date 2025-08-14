@@ -6,6 +6,8 @@ thumbnail: "/src/lib/assets/slideshow-images/portrait/IMG-PHOTO-ART--1510172753.
 
 category : "Mathematics" 
 
+published: true
+
 ---
 
 <script>
