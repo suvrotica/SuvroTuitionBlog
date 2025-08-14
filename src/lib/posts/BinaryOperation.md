@@ -27,6 +27,17 @@ Enter **operations**. Once you have your product $S \times S$ (or $S^n$ if you�
 
 When it’s two inputs from $S$ and one output back into $S$, the thing is called a **binary operation** (or binary composition). For example, addition on integers: $(3,5) \mapsto 8$. If you try to add two integers and end up with a penguin, you’ve broken closure, which is the sacred pact that says *all results must stay in the set*. Without closure, you don’t have a binary operation on $S$, you just have a rogue mapping that goes wandering off into other sets, like a dinner guest who leaves your house and turns up at the neighbours’.
 
+If $S = {\text{Alice}, \text{Bob}}$ is standing in for two real-world entities, a binary operation could be something like **“the winner of a chess match between the two”**.
+
+Define $\text{winner}$: $S \times S \to S$ as follows
+
+* $(\text{Alice},\text{Alice}) \mapsto \text{Alice}$  (Alice playing herself — a practice game — counts as Alice winning)
+* $(\text{Alice},\text{Bob}) \mapsto \text{Alice}$  (Alice beats Bob)
+* $(\text{Bob},\text{Alice}) \mapsto \text{Bob}$  (Bob wins when listed first)
+* $(\text{Bob},\text{Bob}) \mapsto \text{Bob}$  (Bob playing himself — Bob wins)
+
+It’s a valid binary operation because it takes any **pair** of players (inputs from $S$) and outputs exactly **one player** (still in $S$), so closure holds. 
+
 Unary operations are the one-input cousins of binary operations: they take a single element of $S$ and return one element of $S$ — like squaring a number or reversing a string. Ternary operations take three inputs, $S \times S \times S \to S$, and so on. The number of inputs is called the **arity**, which is a fine word to drop into conversations if you want to sound like you own more mathematics textbooks than you actually do.
 
 It is one of history’s odder little accidents that René Descartes’ name is forever chained to the Cartesian product, when the poor man almost certainly never sat down and thought, “I’ll make a set of all possible ordered pairs and call it after myself.” Descartes was too busy in the 17th century trying to weld algebra and geometry into one sleek machine, what we now call coordinate geometry, to be fussing over set-theoretic crossbreeding.
