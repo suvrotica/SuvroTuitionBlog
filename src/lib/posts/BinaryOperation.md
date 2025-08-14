@@ -4,7 +4,7 @@ title : "Binary Operations"
 
 thumbnail: "/src/lib/assets/slideshow-images/portrait/IMG-PHOTO-ART--1510172753.jpg"
 
-category : "Mathematics" 
+category : "Math" 
 
 published: true
 
