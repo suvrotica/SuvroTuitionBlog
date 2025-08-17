@@ -10,7 +10,7 @@
 
 	let {
 		images = [],
-		holdDuration = 4000,
+		holdDuration = 9000,
 		transitionDuration = 10
 	}: Props = $props();
 
