@@ -2,7 +2,7 @@
 
 title : "An ordinary morning" 
 
-thumbnail : "/src/lib/assets/IMG-20250805-WA0001.jpg" 
+thumbnail : "/src/lib/assets/IMG-20250819-WA0001.jpg" 
 
 date: "2025-08-19"
 
@@ -17,7 +17,7 @@ tags: ["bread", "society", "Kolkata", "Calcutta", "India", "reflection"]
 
 <script>
     import PostImage from '$lib/components/blog/PostImage.svelte';
-    import imageSrc from '$lib/assets/IMG-20250805-WA0001.jpg?url';
+    import imageSrc from '$lib/assets/IMG-20250819-WA0001.jpg?url';
     
 </script>
 
