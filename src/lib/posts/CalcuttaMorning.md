@@ -2,7 +2,7 @@
 
 title : "An ordinary morning" 
 
-thumbnail : "/static/images/IMG-20250805-WA0001.jpg" 
+thumbnail : "/src/lib/assets/IMG-20250805-WA0001.jpg" 
 
 date: "2025-08-19"
 
@@ -10,10 +10,18 @@ category : "Calcutta"
 
 published : true
 
+tags: ["bread", "society", "Kolkata", "Calcutta", "India", "reflection"]
+
 
 ---
 
-![bread](/static/images/IMG-20250805-WA0001.jpg)
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc from '$lib/assets/IMG-20250805-WA0001.jpg?url';
+    
+</script>
+
+<PostImage src={imageSrc} alt="rape anniversary" />
 
 An ordinary morning in Calcutta is anything but ordinary, for the city has never truly learned the art of waking gently. It does not yawn or stretch—it detonates. Before the sun has so much as tugged its head over the flat line of the horizon, the crows have already declared war. They descend like feathered prophets of doom, unleashing a cawing so apocalyptic it could convince one that the world has, in fact, already ended and this racket is the afterlife. There is no snooze button here, no mercy. The city wakes you as it wakes itself: abruptly, noisily, without apology. And then there is the bread. Not the packaged kind that comes in loaves wrapped in plastic, but the impossibly soft, still-warm cuboidal buns that arrive at dawn in wicker baskets, ferried in the cycle-borne vendors who seem to glide through the city’s lanes like silent priests of carbohydrates. These breads, called pauruti, are Calcutta’s own take on the colonial loaf, but they are fluffier, more yielding, the kind of bread that gives way at the faintest pressure of your thumb. Bought fresh, often with a smear of butter that melts instantly in the humidity, or dunked into a cup of sweet, overboiled tea, they are both breakfast and benediction—comfort food for a city that insists on starting the day in chaos but will, at least, offer you something tender to bite into while you endure it. This is why I live, for the taste of this bread, in my morning tea—my life is mostly made from these simple things. 
  
