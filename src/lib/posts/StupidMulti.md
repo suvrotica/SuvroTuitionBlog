@@ -4,7 +4,7 @@ thumbnail: "/src/lib/assets/slideshow-images/portrait/ecde51b5-0193-4077-9e19-49
 category: "Life"
 date: "2025-08-19"
 published: true
-tags: ["stupidity", "NRI", "Kolkata", "Calcutta", "India", "reflection", "semantics", "bengali"]
+tags: ["stupidity", "NRI", "Kolkata", "Calcutta", "India", "reflection", "semantics", "bengali", "Sapir–Whorf hypothesis" ]
 ---
 
 <script>
@@ -15,17 +15,21 @@ tags: ["stupidity", "NRI", "Kolkata", "Calcutta", "India", "reflection", "semant
 
 <PostImage src={imageSrc1} alt="Stupid Multilingually" />
 
-The Indian problem with reality, as I have felt with NRI Indians in the US and elsewhere and especially, and largely in majority, in India, is with communication—particularly the ability to discern the gaps where the missing parts are, to imagine what the whole picture of the topic in question might look like, and to move past the general apathy, neglect, laziness, and mixed diffidence that together constitute and block the next steps needed to figure things out. 
+The Indian problem with reality, as I have felt with NRI Indians in the US and elsewhere and especially, and largely in majority, in India, is with communication—particularly the ability to discern the gaps where the missing parts are, to imagine what the whole picture of the topic in question might look like, and to move past the general apathy, neglect, laziness, and mixed diffidence that together constitute and block the next steps needed to figure things out.
 
-This is further compounded by a loose attention span that lets in a great deal of noise, so the original focal point dissolves into a larger, anomalous blob of combinatorially explosive, diffused paths, none of which are helpful to resolving the problem at hand.
+This can be easily exhibited by the lack of—or even when access or ownership isn't an issue, the lack of—any felt need to look up words in a dictionary. If the Sapir–Whorf hypothesis is to be believed, and we truncate our world to a few words, the resolution of thought shrinks, and I imagine a reciprocal of the Sapir–Whorf hypothesis then takes form: the fewer words you know, the fewer distinctions you can even notice, and the fewer distinctions you can notice the fewer words you bother to keep.
 
-So, for example, the discussion turns to the price, the discount, the vendor’s ABCD details, but not the actual need for a product, nor the science behind it, nor the understanding of its specifications and how they match that need—or whether buying cheaper substitutes or fringe unknown, low-merit baubles will turn out to be disastrous.
+The consequence is recursive and corrosive: nuance collapses into cliché, categories bleed into each other, and the mind learns to live on broad brushstrokes and slogans rather than fine contours and evidence. This is why legerdemain dressed in Sanskrit flourishes, pseudo-science, or slick corporate doublespeak finds such an easy market—language-impoverished minds cannot demand the specification, the mechanism, the numbers; they cannot hold two competing hypotheses in tension long enough to test them; they mistake rhetorical gloss for substance.
+
+This is further compounded by a loose attention span that lets in a great deal of noise, so the original focal point dissolves into a larger, anomalous blob of combinatorially explosive, diffused paths, none of which are helpful to resolving the problem at hand. So, for example, the discussion turns to the price, the discount, the vendor’s ABCD details, but not the actual need for a product, nor the science behind it, nor the understanding of its specifications and how they match that need—or whether buying cheaper substitutes or fringe unknown, low-merit baubles will turn out to be disastrous.
+
+Multiply that impoverishment across languages and platforms and you have the multilingual dimming—con artists need only translate the same moral emptiness into five tongues and the effect is amplified, not checked. The diffusion in attention is multilingual, which makes it even more profitable. If people can be conned simultaneously in four or five languages, then why not? That is where we are. As Indians, we can be stupid multilingually.
 
 Any trick long stale in the West is still a viable marketing ploy here, including the skipping of science and decent engineering altogether and opting for flat-out white lies. As long as they are linguistically dressed up whorishly, people lap them up.
 
-And the diffusion in attention is multilingual, which makes it even more profitable. If people can be conned simultaneously in four or five languages, then why not? That is where we are. As Indians, we can be stupid multilingually. 
+To the leaders the citizens are a slimy pre-diarrhea, brown, cringy coiled mass of illiterate idiots easily ruled. And so we have a subverted democratic dance by the dunces dictating dipshit dictums in Sanskrit or pig Latin only because they fucking can and therefore very well will. Modi nationally and Mamata here locally both do this diligently in at least three different languages, their exhortations played endlessly on their bootlicking paid channels in endless cycles by highly paid, well-dressed, spineless talking heads.
 
-To the leaders the citizens are slimy pre-diarrhea, brown, cringy coiled mass of illiterate idiots easily ruled. And so we have a subverted democratic dance by the dunces dictating dipshit dictums in sanskrit or piglatin only because they fucking *can* and therefore very well *will*. Modi nationally and Mamata here locally both do this diligently in at least three different languages, their exhortations played endlessly on their bootlicking paid channels in endless cycles by highly paid, well-dressed, spineless talking heads. This is even more a happy state of affairs in an imposed Hindoo state, a reluctant but otherwise science-resistant culture, insular and rabid, a mob to whom the cryptic overuse of Sanskrit by men with fangs, in equivocal trite overpromises, isn’t at all suspect. 
+This is even more a happy state of affairs in an imposed Hindoo state, a reluctant but otherwise science-resistant culture, insular and rabid, a mob to whom the cryptic overuse of Sanskrit by men with fangs, in equivocal trite overpromises, isn’t at all suspect.
 
 <SanskritVerse>
     {#snippet children()}
