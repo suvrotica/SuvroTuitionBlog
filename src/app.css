@@ -256,7 +256,7 @@ pre.shiki { @apply p-4 rounded-lg overflow-x-auto; }
 
 .sanskrit-verse-original {
 	font-family: 'Noto Serif Devanagari', 'Merriweather', serif;
-	@apply mb-6 text-3xl leading-relaxed text-neutral-900 dark:text-neutral-100 md:text-4xl;
+	@apply mb-6 text-lg leading-relaxed text-neutral-900 dark:text-neutral-100 md:text-4xl;
 }
 
 .sanskrit-verse-translit {
