@@ -249,3 +249,24 @@ pre.shiki { @apply p-4 rounded-lg overflow-x-auto; }
 .text-tertiary {
 	@apply text-neutral-500 dark:text-neutral-500;
 }
+
+.sanskrit-verse-container {
+	@apply my-8 rounded-lg border bg-neutral-100 p-6 text-center dark:border-neutral-700 dark:bg-neutral-800/50;
+}
+
+.sanskrit-verse-original {
+	font-family: 'Noto Serif Devanagari', 'Merriweather', serif;
+	@apply mb-6 text-3xl leading-relaxed text-neutral-900 dark:text-neutral-100 md:text-4xl;
+}
+
+.sanskrit-verse-translit {
+	@apply my-6 inline-block rounded-md bg-neutral-200 p-4 font-mono text-base text-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 text-left;
+}
+
+.sanskrit-verse-translation {
+	@apply my-6 border-l-4 border-neutral-400 pl-4 text-left font-serif text-base italic text-neutral-800 dark:border-neutral-600 dark:text-neutral-200;
+}
+
+.sanskrit-verse-source {
+	@apply mt-4 font-sans text-sm text-neutral-600 dark:text-neutral-400;
+}

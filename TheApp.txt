@@ -1,4 +1,4 @@
-# Context file generated on: Monday, August 11, 2025 at 10:55:00 AM GMT+5:30
+# Context file generated on: Thursday, August 21, 2025 at 9:54:45 AM GMT+5:30
 ---
 
 # Project File Layout
@@ -21,10 +21,20 @@
 │   ├── app.html
 │   ├── lib
 │   │   ├── assets
+│   │   │   ├── IMG-20250819-WA0001.jpg
 │   │   │   └── slideshow-images
 │   │   │       ├── landscape
+│   │   │       │   ├── 5b458083-5b11-4441-bdc2-3f95a1e81e76.png
 │   │   │       │   └── ChatGPT Image Aug 8, 2025, 06_58_29 AM.png
 │   │   │       ├── portrait
+│   │   │       │   ├── 3741d4c3-269c-431f-a2db-21e28fc94941.png
+│   │   │       │   ├── 3decf14e-4b33-4d6e-9f07-c4deab8967bf.png
+│   │   │       │   ├── 49765197-dc1b-4754-9c13-384abafce173.png
+│   │   │       │   ├── 5986b2c3-37f0-4896-bd03-4d76f32c8b7b.png
+│   │   │       │   ├── 5ee98c34-b3e6-43d8-8433-f92249a317d9.png
+│   │   │       │   ├── 8b1b52a9-fa9a-4f03-8686-d863f5dff48f.png
+│   │   │       │   ├── b7748a5c-99dd-4337-8dbc-6344c2e944b4.png
+│   │   │       │   ├── c2719a1b-a58a-4a19-b7f3-43ecb48af803.png
 │   │   │       │   ├── ChatGPT Image Aug 10, 2025, 02_04_17 AM.png
 │   │   │       │   ├── ChatGPT Image Aug 10, 2025, 02_21_38 AM.png
 │   │   │       │   ├── ChatGPT Image Aug 10, 2025, 02_29_56 AM.png
@@ -34,7 +44,16 @@
 │   │   │       │   ├── ChatGPT Image Aug 8, 2025, 06_17_13 AM.png
 │   │   │       │   ├── ChatGPT Image Aug 8, 2025, 06_29_15 AM.png
 │   │   │       │   ├── ChatGPT Image Aug 8, 2025, 06_58_40 AM.png
-│   │   │       │   └── Gemini_Generated_Image_ovbsqxovbsqxovbs.png
+│   │   │       │   ├── e39a7c25-5f25-4cd4-a8e7-01d84a00c26a.png
+│   │   │       │   ├── ecde51b5-0193-4077-9e19-49335d5bf963.png
+│   │   │       │   ├── fe141418-ab03-4133-8a60-403dbef5b3ff.png
+│   │   │       │   ├── fee03128-3889-406d-9fa1-348feca50fc5.png
+│   │   │       │   ├── Gemini_Generated_Image_kg5fw7kg5fw7kg5f.png
+│   │   │       │   ├── Gemini_Generated_Image_ovbsqxovbsqxovbs.png
+│   │   │       │   ├── IMG-20250812-WA0001.jpg
+│   │   │       │   ├── IMG-PHOTO-ART--1510172753.jpg
+│   │   │       │   ├── IMG-PHOTO-ART--1513010449.jpg
+│   │   │       │   └── lonely_rapist.jpg
 │   │   │       └── square
 │   │   │           ├── 00b4e1c4-42d9-4b02-9f46-9d46f2a6d9d7.webp
 │   │   │           ├── 3d095f14-d2b3-4abd-868e-f69096a655d3.webp
@@ -92,10 +111,12 @@
 │   │   │   ├── BengaliFart.md
 │   │   │   ├── BengaliVS.md
 │   │   │   ├── Bhabishya.md
+│   │   │   ├── BinaryOperation.md
 │   │   │   ├── BirthdayBoy.md
 │   │   │   ├── Bloke.md
 │   │   │   ├── Bluish.md
 │   │   │   ├── BrainTalk.md
+│   │   │   ├── CalcuttaMorning.md
 │   │   │   ├── Constant.md
 │   │   │   ├── Crystal.md
 │   │   │   ├── d3-axis-integration.md
@@ -110,6 +131,7 @@
 │   │   │   ├── H1b.md
 │   │   │   ├── HolyFatAss.md
 │   │   │   ├── Homeopathy.md
+│   │   │   ├── LonelyRapist.md
 │   │   │   ├── MAFA.md
 │   │   │   ├── Metro.md
 │   │   │   ├── Microwave.md
@@ -126,7 +148,9 @@
 │   │   │   ├── reflections-on-a-schoolboys-past.md
 │   │   │   ├── Rezala.md
 │   │   │   ├── SimpleMan.md
+│   │   │   ├── StatisticsTheName.md
 │   │   │   ├── Stoop.md
+│   │   │   ├── StupidMulti.md
 │   │   │   ├── SuperHolyIAm.md
 │   │   │   ├── svelte-introduction.md
 │   │   │   ├── sveltes-runes.md
@@ -170,6 +194,7 @@
 ├── static
 │   ├── favicon.png
 │   └── images
+│       ├── IMG-20250819-WA0001.jpg
 │       └── placeholders
 │           ├── 24fb85b4-ec6e-4033-8c3d-c8844279dffa.png
 │           ├── 723ccc8e-1bcd-4c1e-b678-219bce8504ee.png
@@ -812,7 +837,7 @@ export {};
 
 	let {
 		images = [],
-		holdDuration = 4000,
+		holdDuration = 9000,
 		transitionDuration = 10
 	}: Props = $props();
 
@@ -2400,12 +2425,19 @@ export const topics: Topic[] = [
 
 ---
 title: "I a Pissing Bengali Man"
+
 description: "A raw and provocative doggerel that serves as a brutally honest self-portrait of a Bengali man. This poem is a scathing critique of cultural myths, political disillusionment, and societal decay in modern Bengal."
+
 category: "Doggerel"
+
 thumbnail: "/images/placeholders/IMG-20250728-WA0011.jpg"
+
 date: "2025-07-28"
+
 keywords: ["doggerel", "Bengali man", "social satire", "political critique", "profane poetry", "Kolkata", "Indian society", "cultural identity", "cynicism", "personal angst"]
+
 published: true
+
 ---
 <script>
     import PostBadge from '$lib/components/ui/PostBadge.svelte';
@@ -2618,7 +2650,7 @@ Let’s talk patterns, because frankly, they're everywhere, hiding in your cerea
 
 Let me dial this back, or better still, crank this claptrap up. Your brain has an evolutionary affinity designed to spot leopards behind bushes. No leopards? Then the brain says: "Hey, you see that bush over there? Looks suspiciously leopard-shaped. Let’s wet our loincloth and sprint anyway!" Better safe than cat-food. Today, no big lions roam calcutta’s coffee shops—only big mustachioed goons sent by vindictive leading ladies with sand irritating the hairy insides of their loins. Yet the leopard-finder lives on, spotting patterns that don’t at all exist. Enter stage left: Jungian synchronicity—a concept dreamt up by Carl Jung, that Swiss psychoanalytic mentalist with a fetish for mandalas, UFOs, and sharing beds with his patients—attractive ones only. According to Jung, synchronicity is "meaningful coincidence," which sounds fancy until you realize it translates roughly to, "Wow, look! Things happened at roughly the same time! That never happens except whenever I really think the girl is hot!"
 
-Here’s a fresh batch of cow dung cooked specially for starry-eyed, artsy Bengali chicks—those irresistible, intellectually ripe, bespectacled beauties sipping iced americanos at jadavpur university, who digest Tagore for breakfast and defecate Derrida before bedtime. Show one of these talcum layered fair damsels, the ones that like to pretend they aren't aware of the oversized mammary or glutes that they balance, that the number 11:11 appears a few times, casually whisper about cosmic alignment, nod sagely, sprinkle some Jung, and watch her neurons melt into a puddle of gooey literary submission. It’s psychological gaslighting dressed as intellectual flirtation—nothing cruel, just ethically bankrupt fun. Especially if they say it's all very fascinating, you can be sure she didn't understand a bit and you can press closer to her damp voluminous thighs. I tried it with the "arts chicks" at presidency and jadavpur when I was young naive and tried really hard—the girls don't like too much effort, you must puke poetry pathetically in their tea a bit, be casually indifferent to their jiggling adipose, laugh it off, break their hearts, just when they get interested, otherwise they'll break yours. 
+Here’s a fresh batch of cow dung cooked specially for starry-eyed, artsy Bengali chicks—those irresistible, intellectually ripe, bespectacled beauties sipping iced americanos at jadavpur university, who digest Tagore for breakfast and defecate Derrida before bedtime. Show one of these talcum layered fair damsels, the one that likes to pretend she isn't aware of her oversized mammary or sinuous glutes that she balances, emphasizing to her the number 11:11 a few times, casually whisper about cosmic alignment, nod sagely, sprinkle some Jung, and watch her ninny neurons melt into a puddle of gooey literary submission. It’s psychological gaslighting dressed as intellectual flirtation—nothing cruel, just ethically bankrupt fun. Especially if they say it's all very fascinating, you can be sure she didn't understand a bit and you can press closer to her damp voluminous thighs. I tried it with the "arts chicks" at presidency and jadavpur when I was young naive and tried really hard—the girls don't like too much effort, you must puke poetry pathetically in their tea a bit, be casually indifferent to their jiggling adipose, laugh it off, break their hearts, just when they get interested, otherwise they'll break yours. 
 
 "But Suvro," you ask, conveniently naive, "what harm does it do? Aren’t patterns everywhere, legitimately?" Of course they're everywhere—nature loves patterns like Calcutta loves potholes. Fibonacci sequences in flower petals, fractals in river deltas, chaos theory in city traffic, your mother's disapproving face reflected in literally every reflective surface—real patterns exist and are important. Apophenia, though, is seeing Elvis’s unseen droopy aged and imagined ballsack in burnt toast. It’s mistaking your luck at dice for divine displeasure. It’s every podgy bengali auntie swearing by numerology, astrology, palmistry, and "scientifically proven" vastu-shastra because she failed math from class 5 on but knows cosmic calculus better than Einstein.
 
@@ -2752,7 +2784,7 @@ Got a hag with a neotenous face.<br>
 <br>
 Who am I, with an open fly,<br>
 The hag quizzed dressed in lace.<br>
-She imagined my balls when I said,<br>
+`She or He` imagined my balls when I said,<br>
 Race bengali is fucked in the face.<br>
 <br>
 Shitty this city, yes what a pity,<br>
@@ -2946,6 +2978,67 @@ I as a bengali have a place in this, and had to share it. You see the motive is 
 Whence comes our modern panic, then? We see AI-generated text and fear a loss of authenticity, a deluge of fakery that will drown out truth. But the Bhavishya Purana reminds us that the human impulse to manufacture plausible realities is as old as time. The tools have merely changed. We've swapped the palm leaf and stylus for silicon and transformers, but the game is the same. The challenge has never been about stopping the production of "slop"—be it Puranic or programmatic. The challenge has always been to cultivate the wisdom to tell the difference.
 
 So the next time you encounter a vapid, AI-generated listicle about "Ten Surprising Uses for Footsies," don't just despair for the future of the internet. Smile, and give a little nod to the 19th-century scribes of the Bhavishya Purana. 
+
+
+# File: src/lib/posts/BinaryOperation.md
+
+---
+
+title : "Binary Operations" 
+
+thumbnail: "/src/lib/assets/slideshow-images/portrait/IMG-PHOTO-ART--1510172753.jpg"
+
+category : "Math" 
+
+published: true
+
+---
+
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    
+    import imageSrc from '$lib/assets/slideshow-images/portrait/IMG-PHOTO-ART--1510172753.jpg?url';
+    
+</script>
+
+<PostImage src={imageSrc} alt="thinking math" />
+
+Picture a set. It could be anything: numbers, people, hats, exotic cheeses, the works. Let’s call it $S$. Now, left to its own devices, $S$ is just a pile of things — dignified, perhaps, but idle. To get anything happening, you need a **product**. The Cartesian product $S \times S$ is a gloriously bureaucratic invention that says, “Right, let’s consider *all* possible ordered couples from $S$.” If $S$ has Alice and Bob, the Cartesian product lists $(\text{Alice},\text{Alice})$, $(\text{Alice},\text{Bob})$, $(\text{Bob},\text{Alice})$, and $(\text{Bob},\text{Bob})$. Every possible pairing, in strict order, no exceptions. This is the mathematician’s way of saying: “What if everyone danced with everyone, including themselves?”
+
+Now, that was with *two* inputs — pairs. There’s nothing stopping you from being more gregarious. You can have $S \times S \times S$, a set of all triples. In that dance hall, people turn up in threes: $(\text{Alice},\text{Bob},\text{Alice})$, $(\text{Bob},\text{Alice},\text{Bob}$, and so on, until you’ve exhausted the possibilities and the floor is a mess of permutations. Similarly, $S \times S \times S \times S$ gives you quadruples, $S^n$ gives you $n$-tuples — mathematicians are shameless about this sort of scaling. Even $S^1$ is allowed, though that’s just $S$ itself, and $S^0$ is the somewhat monastic idea of the “empty tuple,” a lone point representing “no inputs at all.”
+
+Enter **operations**. Once you have your product $S \times S$ (or $S^n$ if you’re feeling frisky), you can define a rule — an *operation* — that says, “Given one of these tuples, I’ll spit out exactly one thing.” That’s crucial: **one** output. It could be a number, a colour, a marmot, but if you’re serious about algebra, it should be something from the same set $S$.
+
+When it’s two inputs from $S$ and one output back into $S$, the thing is called a **binary operation** (or binary composition). For example, addition on integers: $(3,5) \mapsto 8$. If you try to add two integers and end up with a penguin, you’ve broken closure, which is the sacred pact that says *all results must stay in the set*. Without closure, you don’t have a binary operation on $S$, you just have a rogue mapping that goes wandering off into other sets, like a dinner guest who leaves your house and turns up at the neighbours’.
+
+If $S = {\text{Alice}, \text{Bob}}$ is standing in for two real-world entities, a binary operation could be something like **“the winner of a chess match between the two”**.
+
+Define $\text{winner}$: $S \times S \to S$ as follows
+
+* $(\text{Alice},\text{Alice}) \mapsto \text{Alice}$  (Alice playing herself — a practice game — counts as Alice winning)
+* $(\text{Alice},\text{Bob}) \mapsto \text{Alice}$  (Alice beats Bob)
+* $(\text{Bob},\text{Alice}) \mapsto \text{Bob}$  (Bob wins when listed first)
+* $(\text{Bob},\text{Bob}) \mapsto \text{Bob}$  (Bob playing himself — Bob wins)
+
+It’s a valid binary operation because it takes any **pair** of players (inputs from $S$) and outputs exactly **one player** (still in $S$), so closure holds. 
+
+Unary operations are the one-input cousins of binary operations: they take a single element of $S$ and return one element of $S$ — like squaring a number or reversing a string. Ternary operations take three inputs, $S \times S \times S \to S$, and so on. The number of inputs is called the **arity**, which is a fine word to drop into conversations if you want to sound like you own more mathematics textbooks than you actually do.
+
+It is one of history’s odder little accidents that René Descartes’ name is forever chained to the Cartesian product, when the poor man almost certainly never sat down and thought, “I’ll make a set of all possible ordered pairs and call it after myself.” Descartes was too busy in the 17th century trying to weld algebra and geometry into one sleek machine, what we now call coordinate geometry, to be fussing over set-theoretic crossbreeding.
+
+His real contribution was the idea that you could use pairs of numbers to pinpoint locations on a plane, the way a letter and number on a battleship grid tells you where to drop the torpedo. $(x,y)$ was his big move — numbers as addresses. That one idea was so fruitful that, two and a half centuries later, when set theory got going under Cantor and his crowd, mathematicians looked back and said, “Aha! This whole business of ordered pairs deserves a general name.” And since Descartes had been the poster boy for ordered pairs in coordinates, they called the set of all such pairs the Cartesian product. It was a posthumous christening, which makes you wonder how many other mathematical concepts have been pinned on people who never asked for them.
+
+The generalisation came fast and inevitable. If you can list all possible pairs of points, why stop there? You could list all possible triples — which, by the way, Descartes never needed, since he was working in two dimensions most of the time — and quadruples, and $n$-tuples for any $n$ you please. This is why the Cartesian product isn’t just a geometrical tool anymore; it’s the universal raw material for making any finite arity of operation.
+
+Once you’ve got $S \times S$ lying there in all its combinatorial glory, you can define a binary operation. That’s what closure is for — to keep the whole thing in-house. Think of closure as the house rule at a Victorian gentlemen’s club: members may duel, drink, or play billiards as they like, but they must all remain members when the evening ends. No one is permitted to challenge a stranger or drag a barmaid into the fray. Lose closure, and you’re not in the club anymore.
+
+Mathematicians learned long ago that without closure, any theory turns slippery. Imagine defining “addition” on integers, except that $2+2$ gives you “fish curry” Every statement involving addition would be a potential escape hatch into nonsense. Closure gives you the comfort that once you’re inside a set with its operation, the operation can’t eject you into another set mid-thought.
+
+So in a way, Descartes provided the theatre (coordinates, ordered pairs), later mathematicians formalised the seating chart (Cartesian products), and closure made sure the performance always stayed within the same troupe. The binary operation is the play itself — it takes two actors from the cast, hands them a script, and produces a single ending, which might be romantic, tragic, or just arithmetic, but never strays outside the building.
+
+
+
+
 
 
 # File: src/lib/posts/BirthdayBoy.md
@@ -3147,6 +3240,53 @@ When I learn something new, I’m not just storing a file. I am, quite literally
 Suddenly, the task becomes clear, and gloriously so. The folks trying to solve this—the neuroscientists with their scanners, the mathematicians with their topology, the AI gurus with their network theories—they’re not just engineers. They are cartographers. They are setting out on the greatest exploration in human history: to map the hyper-dimensional landscape of a single mind. To learn the language of its geometry.
 
 If they can do that—if they can figure out the mathematics of these inner shapes—then the dream I speak of isn’t science fiction. Preserving the intricate latticework of a mind, the neural connections honed over a lifetime, becomes a real possibility. It's not about trapping a ghost in a machine. It’s about translating a masterpiece of geometric art from one medium (squishy biological stuff) to another (a more durable, perhaps silicon-based, canvas). Then me and my cat memory will live on. It’s a staggering thought. Everything I’ve ever felt, learned, or loved might not be a fleeting spark, but an enduring, beautiful, and mind-bogglingly complex shape. 
+
+
+# File: src/lib/posts/CalcuttaMorning.md
+
+---
+
+title : "An ordinary morning" 
+
+thumbnail : "/src/lib/assets/IMG-20250819-WA0001.jpg" 
+
+date: "2025-08-19"
+
+category : "Calcutta" 
+
+published : true
+
+tags: ["bread", "society", "Kolkata", "Calcutta", "India", "reflection", "adda", "pauruti"]
+
+
+---
+
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/IMG-20250819-WA0001.jpg?url';
+    import imageSrc2 from '$lib/assets/slideshow-images/landscape/5b458083-5b11-4441-bdc2-3f95a1e81e76.png?url';
+</script>
+
+<PostImage src={imageSrc1} alt="bread and tea" />
+
+An ordinary morning in Calcutta is anything but ordinary, for the city has never truly learned the art of waking gently. It does not yawn or stretch—it detonates. Before the sun has so much as tugged its head over the flat line of the horizon, the crows have already declared war. They descend like feathered prophets of doom, unleashing a cawing so apocalyptic it could convince one that the world has, in fact, already ended and this racket is the afterlife. There is no snooze button here, no mercy. The city wakes you as it wakes itself: abruptly, noisily, without apology. And to soften this jagged morning landing—as an antidote—there is this bread—not the packaged sliced kind, but the impossibly soft, still-warm cuboidal whole buns that arrive factory fresh at dawn in wicker baskets, or ferried in the cycle-borne vendors who seem to glide through the city’s lanes like silent priests of carbohydrates. These breads, called `pauruti`, are Calcutta’s own take on the colonial loaf, but they are fluffier, more yielding, the kind of bread that gives way at the faintest pressure of your thumb. Bought fresh, often with a smear of butter that melts instantly in the humidity, or dunked into a cup of sweet, overboiled tea, they are both breakfast and benediction—comfort food for a city that insists on starting the day in chaos but will, at least, offer you something tender to bite into while you endure it. This is why I live, for the taste of this bread, in my morning tea—my life is mostly made from these simple inexpensive things. 
+ 
+Kolkata, rechristened in 2001, when I was in the US, in a vainglorious bid to reclaim some post-colonial dignity, remains stubbornly Calcutta in spirit. The new name fits on signboards and government decrees, but the old one lingers on tongues and in memory like the comfort of a worn-out sweater. The buildings agree. Those hulking relics of British imperial ambition—once proud, now half-embarrassed and in ruins—stand along the avenues as dowager queens, plaster flaking in tired sheets, their weary grandeur mocking the modern hurry below. They were once cathedrals of power; today they accommodate call centers mostly to scam westerners—a morbid colonial revenge unknowingly playing out as commerce, leaking ceilings as leaky as the local scruples and morals of the place, and families packed like unsaid prayers into crumbling rooms.
+
+The air of the morning is usually already dense, a stew of contradictions. Diesel exhaust from the lumbering yellow Ambassador taxis thickens it into a chewable fog, while somewhere nearby, oil spits and hisses as a vendor drops a round of dough into bubbling fat, the luchi inflating like a small miracle. Underneath it all, there lingers the moist, metallic breath of the Hooghly River—a sluggish, all-accepting artery that has, since Job Charnock’s day, borne faith, commerce, and filth with the same impartial dignity.
+
+No morning here is complete without `adda`. To call it conversation is to call the monsoon a drizzle. Adda is Calcutta’s unofficial parliament, a sprawling forum that requires no invitation but insists on opinion. It unfolds around cups of tea—chaa—served in fragile clay bhaars, the tea itself thick, gingery, sweet as memory. Once drunk, the cup is hurled to the ground, shattered to dust in a symbolic homecoming. In these circles, time dissolves. The topics range from politics to cricket umpiring, from Tagore to the futility of life itself. It is not mere talk; it is collective self-examination, the city thinking aloud through its millions of mouths. Of course these are imagined. I have no one to talk to; I just have this blog—just myself. Most conversations are, for me, too empty and devoid of what I yearn for: some sort of connection to who I am, what I am doing here. And so I enjoy my reticence against the garrulous city. And even visiting a tea stall is rare; I hardly ever leave my room. I’m sort of incarcerated in my own habitual and attended loneliness—the kind I can at least manage with medications, with small excursions to the verandah to see if the world exists as they say it does.
+
+
+<PostImage src={imageSrc2} alt="Calcutta tea stall" />
+
+This tea shop I sketched is just around the corner, and you’ll find millions like it scattered throughout the country—places that to any American would seem far removed from the carefully engineered chains they’ve grown accustomed to. These are, in a sense, minions to a Starbucks or Seattle Coffee, ramshackles on stilts, yet they operate on a business model that at least helps a small family survive. The quality and variety of tea and biscuits aren’t especially diverse, but the germs are reliably killed when the water and milk are boiled—often safer than drinking water itself. Still, the same heavy metals, arsenic, and general filth are sipped with the sort of fastidious leeway we also extend to expired biscuits and cakes in tea stalls across the country.
+
+Starbucks under Indian oversight is only as good as the rigor of health and statutory inspections. If those fail, then you are not only sitting in an America you may hope India never becomes, you are also paying far too much for the corruption and filth hiding behind the cheap substitute chai they never tell you about—while you suffocate in the stuffy air of an air conditioner whose filter hasn’t been changed in a long while. Starbucks became the star of India’s mainly coolie status, and unless business process outsourcing is reinvested into building something real, we will see the demise of these false artifacts of self-indulgence, surrogates of the new sort of slavery.
+ 
+Around the early morning chatter of these tea stalls, the machinery of the day clatters, often unceremoniously, into incessant brisk and routine gear. The trams, those skeletal anachronisms, rattle their way past honking buses and motorbikes. Hand-pulled rickshaws—men yoked like beasts—creak and dart, archaic and shocking in equal measure, and yet indispensable. Calcutta is not a city of eras layered politely one atop the other, but a collision site where centuries coexist in a jumbled simultaneity.
+
+To stand in the midst of it all, to breathe this chaos, is to grasp that the city is not simply alive—it is a system, a kind of chaos engine that generates its own improbable order. Its contradictions hold, not because they make sense, but because they refuse to do otherwise. The morning’s cacophony—horns, vendors’ cries, crows, arguments, tea cups breaking—is not just sound. It is Calcutta speaking itself into being once more, reasserting, with unrelenting vigor, its identity as a place both unbearable and irresistible, disheveled and brilliant, doomed and eternal.
 
 
 # File: src/lib/posts/Constant.md
@@ -4142,6 +4282,88 @@ I must also point out, that although in a world fractured by dogma, where religi
 We must find the courage to hold our cherished traditions up to the light of reason. It is time to gently unweave homeopathy from our cultural identity and relegate it to the museum of medical history, alongside bloodletting and phrenology. Let us reserve our faith for that which is proven, and our health for medicine that is grounded in the elegant, astonishing, and verifiable reality of science. Our lives depend on it. As it is life in calcutta is hard. 
 
 
+# File: src/lib/posts/LonelyRapist.md
+
+---
+title : "Lonely Rapist" 
+description: "A raw and provocative doggerel about church rapes in America"
+category : "Doggerel" 
+thumbnail: "/src/lib/assets/slideshow-images/portrait/lonely_rapist.jpg"
+date: "2025-08-12"
+keywords: ["doggerel", "american holy man", "social satire", "political critique", "profane poetry", America", "religious society", "cultural identity", "cynicism", "personal angst"]
+published: true
+---
+
+
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/lonely_rapist.jpg?url';
+</script>
+
+<PostImage src={imageSrc1} alt="the lonely rapist" />
+
+<br>
+Shit totally escapist I'm a lonely rapist,<br>
+I rape all the children in the city. <br>
+I also rape old loose cunts or men-fucks,<br>
+In old homes out of disgust—that's shitty.<br>
+<br>
+But I feel bad when I'm not raping,<br>
+I feel lonely if I'm just left alone.<br>
+In jesus land the cunts are already daft,<br>
+Divinity makes them more accident prone.<br>
+<br>
+Or the crippled loony outside the streets,<br>
+With grace, the unemployed homeless too.<br>
+I can't count how few animals I've fucked,<br>
+As I am the janitor of a mega-church loo.<br>
+<br>
+I fuddle the muddled I fuck I cuddle,<br>
+Huddled all the fools conveniently.<br>
+If you want to rape find a church,<br>
+I savagely buttfuck the holy to fuck silly.<br>
+<br>
+Raping mindfucked men women who are,<br>
+Already fucked by their imaginary lord. <br>
+I tie them to a chair and shit into,<br>
+Their pious mouths—of my own accord. <br>
+<br>
+Holy despotic avarice causes rapacious,<br>
+Church temple mosque synagogue to rape.<br>
+I flood my crotch with tears when I think,<br>
+How goodly this service in every ass gape.<br>
+<br>
+It's so holy, it's so pious, I'm joyous,<br>
+A world of joy, in my jolly belly jelly.<br>
+I fart in people's faces too, that's true,<br>
+Like a capricious god as shown on telly.<br>
+<br>
+The pimp pastor uses oil castor,<br>
+Fucks only asses of repentent gents.<br>
+Blessed holy when I spy church men ogling,<br>
+Tiny girls, erect cocks in their tents.<br>
+<br>
+Holy abracadabra plus or minus the umbra,<br>
+Penumbra is the always best choice I think.<br>
+Darker the thoughts, better my highs,<br>
+Gangraping while shitting, kink plus stink.<br>
+<br>
+You know, like those high faluting things,<br>
+Thought by physicists who are intrepids. <br>
+"We're trying to find one single formula," <br>
+I think about that, when I rape their kids.<br>
+<br>
+Sometimes I feel lonely especially when,<br>
+My dick is inside a soft pretentious ass.<br>
+Don't know if it's my mind or my dick,<br>
+I keep fucking until the moment would pass.<br>
+<br>
+Church is good for boys and little girls,<br>
+Busy parents should be thus, this be told.<br>
+A god, at least a janitor, in his stead,<br>
+Will bless their little fucks into gold.<br>
+
+
 # File: src/lib/posts/MAFA.md
 
 ---
@@ -4954,7 +5176,7 @@ There isn't any solution that can be worked out overnight, or by one government 
 title: "Reflections on a Schoolboy's Past"
 description: "A complicated palimpsest of ambition, triumph, misadventures, romance, then—shame, regrets—most now like old luggage tags, expired or useless."
 category: 'personal'
-date: '2025-08-11'
+date: '2025-08-13'
 published: true
 ---
 
@@ -5006,11 +5228,11 @@ I remember school through a veil of years of indifference to childhood memories 
 
 My past is ancient and present is a mystery speeding past; I live now mostly to <em>live</em>, really—to barely escape frequent and routine annihilation, survive to remember and recollect the person I am, I was, I once wanted to be—inadvertently became, on the way to be—a leery litany of metamorphosis of a self that mostly started and remained unchanged at the core—which was a fledgling when I became a schoolboy to begin with and started to think, first feel, of course—mainly, in my case, see through thick myopia-correcting glasses—a visual person, and in my particular case, overthink the still-uncorrected blurry—cerebrally—the world through the senses, through the then immature prefrontal and amygdalian theaters of rehearsed endorsements. It happened in a shockingly short span, then weirdly in a longish sort of lifetime after—that I’m only now able to reconstruct into the surreal absurdity I had managed to bungle myself into being.
 
-I want to start with what ordinarily is the start. I have an embarrassing memory of a very early male size comparison shame, while playing with my sprinkler on the nursery kindergarten back garden drain wall—the competition was a boy who was quite a bit big-boned and larger across several other exhibited jiggling animated adipose protuberances—nursery nuisances that litter such pigsties. But what had also caught my attention and had stayed to this day was—his sprinkler was not only endowed with <em>bigger</em> plumbing with ginormous dark velvety spheres, the resulting stream from the hydrology that came out unthrottled was thicker, more unbidden, forceful, and painted the wall with such ferocity that the reflected spray made me notice his assets with awe. I have no way of going back and sifting through that particular memory's soaked sodden soil, a kid's private memory <em>this</em>—I didn't share with even my mother—who at the time was my only confidante. But toilet, or rather the anathema of an always overflowing unkempt school loo, forced me to teach myself to hold my bowels. On two occasions I couldn't, and I defecated in my school half-pants, unable to hold it, as far as I can recollect, trying to keep composure on a waddling dilapidated hand-pulled rickshaw—these my mother can submit affidavits if required. Poor woman, this is back in the day when the washing machine wasn't even in the impoverished imagination of the North Calcutta middle class, and we weren't that affluent to have maids to do any cleaning up after us.
+I want to start with what ordinarily is the start. I have an embarrassing memory of a very early male size comparison shame, while playing with my sprinkler on the nursery kindergarten back drain wall—the competition was a boy who was quite a bit big-boned and larger than several jiggling animated adipose protuberance exhibitions—nursery nuisances that litter such pigsties. But what had also caught my attention and had stayed to this day was—his sprinkler was not only endowed with <em>bigger</em> plumbing with ginormous dark velvety spheres, the resulting stream from the hydrology that came out unthrottled was thicker, more unbidden, forceful, and painted the wall with such yellow ferocity that the reflected spray made me notice his assets with awe. I have no way of going back and sifting through that particular memory's soaked sodden soil, a kid's private memory <em>this</em>—I didn't share with even my mother—who at the time was my only confidante. But toilet, or rather the anathema of an always overflowing unkempt school loo, forced me to teach myself to hold my bowels. On two occasions I couldn't, and I defecated in my school half-pants, unable to hold it, as far as I can recollect, trying to keep composure on a waddling dilapidated hand-pulled rickshaw—these my mother can submit affidavits if required. Poor woman, this is back in the day when the washing machine wasn't even in the impoverished imagination of the north calcutta middle class, and we weren't that affluent to have maids to do any cleaning up after us.
 
-There was one more occasion when it could have ended well, except it didn't—that a city of joy rarely has its College Street English bookstores' makeshift shanty loos equipped to flush fresh fetid feces—aggravating a nervous and nerve-wracked boy without a way to clean his gentle bottom. When I reported this inadequacy of the establishment to the ungrateful shop clerk, he demanded I lug a heavy, leaky balti, descriptive of poverty, half across the street in my English medium school dress, so I fled as fast as my unwashed bottom would allow. I went as part of a group of kids who, although were all my age (Section B), did not seem to have the same digestive or excretory system that, from time to time, in my case, asserted that matter came in three states, and all the states were in fact coming out of some portion of my rear, all the time!
+There was one more occasion when it could have ended well, except it didn't—that a city of joy rarely has its college street english bookstores' makeshift shanty loos equipped to flush fresh fetid feces—aggravating a nervous and nerve-racked boy without a way to clean his gentle bottom. When I reported this inadequacy of the establishment to the ungrateful shop clerk, he demanded I lug a heavy, leaky balti, descriptive of poverty, half across the street in my english medium school dress, so I fled as fast as my unwashed bottom would allow. I went as part of a group of kids who, although were all my age (Section B), did not seem to have the same digestive or excretory system that, from time to time, in my case, asserted that matter came in three states, and all the states were in fact coming out of some portion of my rear, all the time!
 
-So that's what sort of started me—startled with the disequilibrium with looks, size, shape, velocity, and power in the gossipy, everyday, ordinary of this, what I eventually understood to be an extraordinary world, and this inconvenient discovery has stuck as I found out I am, in man's limited prowess over the middling distances, an extremely lilliputian man in every way, shape, and form, and to this day—especially as a Bengali, that is where I am. It's neither an admission of guilt nor of defeat—there are no adversaries to speak of except man's own inhibition in most circumstances. But I like to recognize the parts for what they are, not for what I wish them to be—and therefore, in introspections, I've found the weaknesses in me are my strength, because that's what's authentic.
+So that's what sort of started me—startled with the disequilibrium with looks, size, shape, velocity, and power in the gossipy, everyday, ordinary of this, what I eventually understood to be an extraordinary world, and this inconvenient discovery has stuck as I found out I am, in man's limited prowess over the middling distances, an extremely lilliputian man in every way, shape, and form, and to this day—especially as a redundant and reduced bengali, that is where I am. It's neither an avowal of guilt nor of defeat—there are no adversaries to speak of except an individual's own inhibition in most circumstances. But I like to recognize the dismal parts for what they are, not for what I wish them to be—and therefore, in introspections, I've found the weaknesses in me are my strength, because that's what's authentic.
 
 People in the world—tragically, in the holy land I dwell especially—who have lower melanin or somewhat symmetrical distribution of skin and adipose around elevated cheekbones, standing a few inches above the median statistical height or fitting within a few inches smaller than the width of the median dress size—are propitiated by the population that lack these characteristics. This asymmetrical distribution in coveting is what causes the lifespan of some of us to get affected destructively by a devoted and toxic societal perusal of compensatory activities to match the deficiency with wealth, power, education, and other biologically inaccessible accouterments. I was like the majority in this common herd, trying hard to make up for all the deficiencies in the only way I knew how—by reading books. You reach heights in civilization or find mates with luscious curves only if you have, say, the torso of a Greco-Roman statue or like Tarzan the Ape Man, while if you're short-statured, melanin-rich, sans the golden ratios in appointed parts, and mumble inaudibly constantly a jumbled plaintive monotone in effeminate whispers—you're destined to die of undiscovery and ignominy, blatant racism—or put a star before the -ism, for in these matters, placeholders are your friend.
 
@@ -5022,7 +5244,7 @@ Given how elementary the level of education in the Indian system is, in spite of
 
 Conversely, this doesn't imply the Occident is superior in any subject—it's not, either. Homo sapiens is an ape which looks slightly different superficially and is found with various doses of self-esteem issues and delusions over various regions, and as you can expect, every region hypes its own abilities without any evidence. Historically, we sit on a biased landscape of exploitation and racism which has created generations of impoverished citizenry, which contrast when juxtaposed with those descended from the affluent and ruling generations. This asymmetrical skew will now get even more topsy-turvy, even tipsy, given synthetic intelligence will get added to the more affluent and already educated enough to reap its advantages first.
 
-So all the parochial supremacy of the Indian stock is false—anyone who puts in the hours can master a subject. I could too, and I did easily, and profligated most of the remaining time daydreaming or fornicating with my hand and endlessly worrying when touching the sphincter felt incredible or wondering cluelessly if the ejaculated matter was an indication of cancer. Since all matter of excretion were bad, how could this feel so good, and why did it come about while cognitive diversions were guided carnally to the opposite side of the species? I couldn't figure this out, of course, till much later. I was, after all, at the age when you are desirous of base sixty mathematical systems, for the illicit illegitimate love attraction to the word part formed by the first three alphabets in its name engraved in my palpitating lover-boy libidinous lust-crazed heart.
+So all the parochial supremacy of the Indian stock is false—anyone who puts in the hours can master a subject. I could too, and I did easily, and profligated most of the remaining time daydreaming or fornicating with my hand and endlessly worrying when touching the sphincter felt incredible or wondering cluelessly if the ejaculated fluid was a foreboding of cancer. Since all matter of excretion were bad, how could *this* feel so good, and *why* did it come about while cognitive diversions were guided carnally to the opposite side of the species? I couldn't figure this out, of course, till much later. I was, after all, at the age when you are desirous of base sixty mathematical systems, for the illicit illegitimate love attraction to the word part formed by the first three alphabets in its name engraved in my palpitating lover-boy libidinous lust-crazed heart.
 
 Those who prefer the opposite, longer-haired illusions of us for these cosmetic and meretricious patina of gloss—us cretins also misjudge melanin deficiency for superiority or experiments with holiness. We believe if white man George Harrison had condescended in his lyrics the coexistence of the dark-skinned mythological creation Krishna with the Christian mythology of white man Jesus, then they are both really real and there's a cowherd with methemoglobinemia and an antique flute and a schizophrenic carpenter stuck on a cross who live somewhere in Attapara in North Calcutta under some Bengali pseudonym.
 
@@ -5034,13 +5256,15 @@ Thus our ability to get muddled works hand in hand with a corrupted framework of
 
 I had also noticed adults insisted on covering up inconsistencies in their fictions with weaker tapestries of lies, and the separation of the ruling and the ruled was inherent in being party to this willed obfuscation or willing obeisance. This was fractally how society was structured at various levels—a distributed system of arranged or imposed parents and willing or subjugated children, at whatever level of fictional abstraction I looked: parent–child, of course, country leaders–citizen, company corporate vs. workers, religious elite priests and worshippers or the faithful, extending all the way to authors, artists, sportspersons and their consumers, teachers and students. The game was mainly lying and manipulation, with manicured gaslighting tweaked as per the needs of the specialty.
 
-The prevalence of mythology—emphasised and encouraged bias, or the absence of nuanced understanding of the operating models versus the indoctrinated and forced fictions—I saw created a hierarchy of flimflammery, superstitious jibber-jabber, pseudoscience, and an inflated sense of inflated religious affirmation in Bengali society, which at that time was partly Marxist in Calcutta and wanted to hold on to atheism. And in spite of their efforts, most had too little reading in them to make up their mind. I remember Darwin’s evolution was an option with a subject as trivial as pisciculture—cosmology never entered the lexicon, and astronomy was synonymous with horoscopes, palmistry, and astrology. The Bengal I grew up in was in the eighties still really pre-Victorian, and now India, under the new religious right, has slid a few centuries back into an equivalent dark middle age—so much for moving forward. It’s all atavistic growth; appearances of gentrification, or any sophisticated sheen is patina, imported from outside the country.
+The prevalence of mythology—emphasised and encouraged bias, or the absence of nuanced understanding of the operating models versus the indoctrinated and forced fictions—I saw created a hierarchy of flimflammery, superstitious jibber-jabber, pseudoscience, and an inflated sense of supercilious religious affirmation in Bengali society, which at that time was partly Marxist in Calcutta and wanted to hold on to atheism. And in spite of their efforts, most had too little reading in them to make up their mind and sociatal dialectics stood on the shoulders of glib non-sequiturs, ugly shrunken dwarfish ghouls that have multiplied since that time—a misunderstood disinformation of history mythology and fibs that my people feel foolishly obligated to be hypothecated to and fritter their lives away wallowing in the tragic smelly feces of what isn't true. I could never understand why being enamored with the softer sensibilities in music or even the illogical nostalgia for an unseen pristine superior Indian past needed to be so unmoored in reality—marinated in the garam-masala of useless local aphorisms, idioms and idiosyncrasies. I remember Darwin’s evolution was an optional chapter in my higher secondary biology contending with a subject as trivial as pisciculture—cosmology never entered the lexicon, and astronomy was synonymous with horoscopes, palmistry, and astrology. The Bengal I grew up in was in the eighties still really pre-Victorian, and now India, under the new religious right, has slid a few centuries back into an equivalent dark middle age—so much for moving forward. It’s all atavistic growth; appearances of gentrification, or any sophisticated sheen is patina, imported from outside the country.
 
 <div class="my-8">
     <ImageSlideshow images={imageUrlsLandscape} />
 </div>
 
-But really, in the end, what I'm trying to say in a long, winding way is that I did a lot of reading—and still read, to my mother's chagrin—that no, none of the readings I did do me any good as far as carrying out the original intention—I haven't accumulated any wealth or curvaceous mate, just books. Meritocracy is like a hoax you force on blind and disabled elderly in a care home—they can't ask for a refund. But I read, and this blog is where I share it. And not just books that I read—I travel, and work on interesting ideas or at least think about them, and want to share my personal life and work experiences and knowledge. And if my exposure can help someone like me back when I was little—a boy or girl growing up without a compass in Calcutta or elsewhere—I’d feel I did something right, for a change. Most human beings come incarcerated in their minds, their stories are therefore left untold, their imagination stay hidden—but I am articulate and I can draw droll caricatures, so I can bring my mind to you, and that's what this blog or some of its contents are about. It varies from exploratory non-fiction, formal prosaic posts, loose squibs, looser still dopey doggerels—hokey hawk tuahs, greasy sentiments in verse. A fair bit is in unparliamentary and unsavory diction that may peeve a lap dog, an uneducated mother, an easily offended belligerent female or bellicose feline, a crusty, dogmatic, obdurate, religious zealot, or an unscrupulous, rabid, political ideologue or corrupt politician. And to such people, might I therefore kindly request not to leave the comfort of their dopey dogma, or if they do, be sternly warned, **reading beyond this point of their own volition**, (although there's no such thing, free will is an illusion, but still I have to write this) their health and well-being is in their own two good hands, or three, if an indoctrinated, religious and fanatic AI is reading this. For anyone weening off, this blog isn't the first place to get shocked, please wander off to somewhere safer.
+The thing about childhood is, in modern parlance, a song playlist impressed upon you that you are suddenly very fond of, or certain parts of which, based on what we can think at the time, grow seeds of nuanced distance or distaste. It’s only later, layer upon impressed layer again, year by year, that we gradually graduate into the terribly opinionated personality that we are. I admit not everyone is inflexible burnt toast—I wasn’t—but a few bitter experiences straightened me out. It was, in fact, in trying to get real close to reality as an entrepreneur that this rind-hardening was effected. I guess the quality of wood and shellac needed was already there; just some vigorous rubbing-in was all it took to give me that anti-reflective patina of shine-reflecting hard coating that is me. Can I go back from this hardened reticence to the loquacious milquetoast I once was? It would take illegal psychedelics, total amnesia, or a different rebirth—or all three, really.
+
+But in the end, what I'm trying to say in a long, winding way is that I did a lot of reading—and still read, to my mother's chagrin—that no, none of the readings I did do me any good as far as carrying out the original intention—I haven't accumulated any wealth or curvaceous mate, just books. Meritocracy is like a hoax you force on blind and disabled elderly in a care home—they can't ask for a refund. But I read, and this blog is where I share it. And not just books that I read—I travel, and work on interesting ideas or at least think about them, and want to share my personal life and work experiences and knowledge. And if my exposure can help someone like me back when I was little—a boy or girl growing up without a compass in Calcutta or elsewhere—I’d feel I did something right, for a change. Most human beings come incarcerated in their minds, their stories are therefore left untold, their imagination stay hidden—but I am articulate and I can draw droll caricatures, so I can bring my mind to you, and that's what this blog or some of its contents are about. It varies from exploratory non-fiction, formal prosaic posts, loose squibs, looser still dopey doggerels—hokey hawk tuahs, greasy sentiments in verse. A fair bit is in unparliamentary and unsavory diction that may peeve a lap dog, an uneducated mother, an easily offended belligerent female or bellicose feline, a crusty, dogmatic, obdurate, religious zealot, or an unscrupulous, rabid, political ideologue or corrupt politician. And to such people, might I therefore kindly request not to leave the comfort of their dopey dogma, or if they do, be sternly warned, *reading beyond this point of their own volition*, (although there's no such thing, free will is an illusion, but still I have to write this) their health and well-being is in their own two good hands, or three, if an indoctrinated, religious and fanatic AI is reading this. For anyone weening off, this blog isn't the first place to get shocked, please wander off to somewhere safer.
 
 </div>
 
@@ -5049,6 +5273,7 @@ But really, in the end, what I'm trying to say in a long, winding way is that I 
         Visit the Blog
     </a>
 </div>
+
 
 # File: src/lib/posts/Rezala.md
 
@@ -5227,6 +5452,53 @@ Indians may finally know what the fuck anyone is talking about—or not—this y
 I'm fucking fifty. But that's it. It all goes downhill—if there's any more downhill left for me. I'm sure it's below sea level at this point. The balls are already quite small and scrunched up—the sperms could go drier though, I guess. And the dick, which is already a toothpick, could shrivel up into a singularity. Well, there's downhill—a dick black hole—but I guess that title is more apt for my asshole, which is brown, just one shade away from the singularity. But no reason not to remember I did once have a healthy looking shaft and plump testicles—hence the celebratory postage, incase you were wondering. Stupid fucking cunts!
 
 
+# File: src/lib/posts/StatisticsTheName.md
+
+---
+
+title : "My first statistics post" 
+
+description: "Introducing the word `statistics`"
+
+thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20250812-WA0001.jpg" 
+
+tags: ["blog", "mathematics", "statistics"]
+
+
+category : "Statistics" 
+
+date: "2025-08-12"
+
+published: true
+
+---
+
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20250812-WA0001.jpg?url';
+    import imageSrc2 from '$lib/assets/slideshow-images/portrait/8b1b52a9-fa9a-4f03-8686-d863f5dff48f.png?url';
+    
+</script>
+
+<PostImage src={imageSrc1} alt="spitting statistics" />
+
+My first post on statistics won’t start with the standard formalities—you know, the solemn “Statistics is the science of…” opening that feels like it was last dusted off in 1954. Instead, I’ll just say that most of us—myself included—were introduced to statistics by people who made it about as inviting as a tax audit. Which is a shame, because when you scrape off the crust, it’s actually quite fascinating.
+
+In the beginning, statistics wasn’t about chi-squared tests or bell curves. It was literally about counting things for kings. The word comes from the German *Statistik*, which Gottfried Achenwall coined in the 18th century to mean “stuff about the state”—as in, “Your Majesty, we have 18,492 adult males fit for service, 4,110 barrels of grain, and three sheep that don’t look entirely well.” This migrated into English, most famously in Sir John Sinclair’s *Statistical Account of Scotland*, which was essentially a national selfie in table form. It was all about whole populations—complete counts—because that’s what rulers wanted.
+
+<PostImage src={imageSrc2} alt="king" />
+
+Then, in the 19th century, mathematicians like Galton and Pearson came along and ruined the perfect headcount by not bothering to count everyone. Instead, they took samples—bits of the population—and calculated numbers from them. These little computed values needed their own name, so the singular “statistic” popped up around 1852 to mean “one of those numbers you actually work out from your data.” Meanwhile, the “parameter” became the imagined, perfect number for the entire population—something you could never know but pretended existed anyway.
+
+Now, here’s the catch. Let’s say we have the maths scores for a class in North Calcutta—Suvro, Amrita, Chandrima, Arindam, Ganguly, and so on. If I turn all their marks into one number—the average—I’ve committed a statistical fib. Suppose five students scored 80, 70, 60, 88, and 90. The average is 77.6, a number no one in the room actually got. But it’s a useful fib, because it lets us say “They’re all doing pretty well” without having to remember each score.
+
+The fib gets more mischievous when the class is uneven. Two kids get 40 and 49, the rest score 99, 100, and 100. The average? Still 77.6. Now that single number is hiding a gaping canyon between the high-flyers and the struggling. In cases like this, the mean is the wrong tool—we need something that captures the spread, like a median or standard deviation, or even a plot of the scores so we can see what’s going on.
+
+And that’s the first thing worth knowing: statistics isn’t about truth carved in stone. It’s about constructing useful, bite-sized lies—clever compressions of reality that help us make sense of a messy world. Just remember: the lie is in the simplification, and it’s only harmless as long as you know what’s missing.
+
+
+
+
 # File: src/lib/posts/Stoop.md
 
 ---
@@ -5282,6 +5554,91 @@ Now a bent fuck, with forked tongue I suck. <br>
 
 
 
+
+
+# File: src/lib/posts/StupidMulti.md
+
+---
+
+title : "Stupid Multilingually" 
+
+thumbnail : "/src/lib/assets/slideshow-images/portrait/ecde51b5-0193-4077-9e19-49335d5bf963.png" 
+
+category : "Life" 
+
+date: "2025-08-19"
+
+published : true
+
+tags: ["stupidity", "NRI", "Kolkata", "Calcutta", "India", "reflection", "semantics", "bengali"]
+
+
+---
+
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/ecde51b5-0193-4077-9e19-49335d5bf963.png?url';
+    
+</script>
+
+<PostImage src={imageSrc1} alt="Stupid Multilingually" />
+
+The Indian problem with reality, as I have felt with NRI Indians in the US and elsewhere and especially, and largely in majority, in India, is with communication—particularly the ability to discern the gaps where the missing parts are, to imagine what the whole picture of the topic in question might look like, and to move past the general apathy, neglect, laziness, and mixed diffidence that together constitute and block the next steps needed to figure things out. This is further compounded by a loose attention span that lets in a great deal of noise, so the original focal point dissolves into a larger, anomalous blob of combinatorially explosive, diffused paths, none of which are helpful to resolving the problem at hand.
+
+So, for example, the discussion turns to the price, the discount, the vendor’s ABCD details, but not the actual need for a product, nor the science behind it, nor the understanding of its specifications and how they match that need—or whether buying cheaper substitutes or fringe unknown, low-merit baubles will turn out to be disastrous. Any trick long stale in the West is still a viable marketing ploy here, including the skipping of science and decent engineering altogether and opting for flat-out white lies. As long as they are linguistically dressed up whorishly, people lap them up.
+
+And the diffusion in attention is multilingual, which makes it even more profitable. If people can be conned simultaneously in four or five languages, then why not? That is where we are. As Indians, we can be stupid multilingually. Modi nationally and Mamata here locally both do this diligently in at least three different languages, their exhortations played endlessly on their bootlicking paid channels in endless cycles by highly paid, well-dressed, spineless talking heads. This is even more a happy state of affairs in an imposed Hindoo state, a reluctant but otherwise science-resistant culture, insular and rabid, a mob to whom the cryptic overuse of Sanskrit by men with fangs, in equivocal trite overpromises, isn’t at all suspect.
+
+Original (Hitopadeśa, Mitralābha 74):
+अत्यन्तदुर्बोधमिदं प्रवादः
+स्वल्पार्थयुक्तं बहुशब्दयुक्तम् ।
+श्रुत्वा न जानन्ति जनाः पदार्थं
+मन्दाः सदा मूढपरीतबुद्धिः ॥
+
+Transliteration:
+atyanta-durbodham idaṁ pravādaḥ
+svalpārthayuktaṁ bahuśabdayuktam
+śrutvā na jānanti janāḥ padārthaṁ
+mandāḥ sadā mūḍha-parīta-buddhiḥ
+
+Translation:
+"This speech is exceedingly hard to understand—laden with many words but containing little meaning. On hearing it, people do not grasp the substance, for fools are always possessed by deluded minds."
+
+Mahābhārata (Śānti Parva 109.10)
+अन्धेनैव नयन्त्यन्धाः
+अन्धा यत्र गता नराः ।
+तत्राबुद्धिः प्रलीयेत
+स्वबुद्धिं न प्रयोजयेत् ॥
+
+andhenaiva nayanty andhāḥ
+andhā yatra gatā narāḥ
+tatrābuddiḥ pralīyeta
+svabuddhiṁ na prayojayet
+
+“The blind indeed lead the blind, and wherever those blind men go, there the witless perish too, never using their own reason.”
+
+Manusmṛti (7.52)
+धर्मस्य तत्त्वं निहितं गुहायां
+महाजनो येन गतः स पन्थाः ।
+
+dharasya tattvaṁ nihitaṁ guhāyāṁ
+mahājano yena gataḥ sa panthāḥ
+
+“The truth of dharma lies hidden in a cave; the path is simply the one on which the multitude has gone.”
+(I cite this ironically—the verse critiques the herd mentality, that people follow without knowing the truth).
+
+Bhartṛhari, Nītiśataka (verse 5)
+वाचः सतां केवला न कदाचन
+प्राणैरपि प्राणिनां संश्रयन्ते ।
+किं तु प्रपञ्चस्थितये नृणां सदा
+वाग्भिः प्रलापा बहवो भवन्ति ॥
+
+vācaḥ satāṁ kevalā na kadācana
+prāṇair api prāṇināṁ saṁśrayante
+kiṁ tu prapañca-sthitaye nṛṇāṁ sadā
+vāgbhiḥ pralāpā bahavo bhavanti
+
+“The words of the noble are never empty, for they cling to life itself. But for worldly men, endless chatter arises only to preserve appearances.”
 
 
 # File: src/lib/posts/SuperHolyIAm.md
@@ -5703,29 +6060,50 @@ Back in the cab, I did not speak. Outside, the third-world cheap LED billboards 
 
 title : "Waking up Me" 
 
-thumbnail : "/images/placeholders/IMG-20250805-WA0001.jpg" 
+description : "A remembered waking up from forced cycles of escapist sleep" 
+
+thumbnail : "/src/lib/assets/slideshow-images/portrait/b7748a5c-99dd-4337-8dbc-6344c2e944b4.png" 
 
 category : "Bipolar Depression" 
 
+tags: ["bengali", "NRI", "insomnia", "depression", "melancholy", "reflection", "bipolar" ]
+
 ---
 
-![thought eats thought](/images/placeholders/IMG-20250805-WA0001.jpg) 
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/b7748a5c-99dd-4337-8dbc-6344c2e944b4.png?url';
+    
+    
+</script>
 
-It is in those earliest moments of waking—when the boundaries between dream and recollection have not yet hardened into the inflexible clarity of day—that I find myself most estranged, most violently dislocated. The mind, that nostalgic liar, still inhabits the soft light of a different life, still wears the skin of a younger self. There, in that thin-fogged interstice between sleep and consciousness, I awaken not in Calcutta, not in this slackening city of heat and noise and unrecoverable age, but in that other place—San Antonio—where my sense of self had once arranged itself into coherent meaning, like a symphony not yet broken into discordant fragments.
+<PostImage src={imageSrc1} alt="remembering the past me" />
 
-I do not awaken into melancholy. I awaken into confusion. And then, almost immediately, into revulsion. There is a violence in the recognition that the room I expect—the soft-furnished echo of a more ancient but younger existence—is not the one that receives me. Instead, I am met by the stale, humid reality of this one: this room with its industrial exhaustion, this air thick with a weariness that was never earned, this body—sweating, gapped of tooth, bowed by the slow sabotage of time—who stares back at me with the unsparing gaze of a mirror that does not lie, not even to spare me a second.
 
-This is not a lament. It is not another act in the grand tragic opera of depression. I do not seek pity or consolation, for there is no listener gentle enough, and no ear that would not flatten the tune into cliché. What I am recording—what I must, lest it dissolve into vapor—is the horror of the exact moment when an old man in Calcutta realizes that the last dwindling glimmers of what once passed for a sustaining flame are now flickering into death, one after the other. Not dramatically. Not even noticeably. But with the quiet, surgical precision of inevitability.
+Sometimes—often without warning—the sluice gates of memory fail, and the past, long held at bay, surges forward with a force that shatters the pitiful fortifications my mind had so painstakingly, so hopefully, erected. These fences were never truly walls; they were embarrassingly frail trellises draped in the illusion of strength, and against the pressure of remembrance they splinter at once.
 
-Already I have surrendered, not in posture, not in confession, but in that deeper, slow erosion where one continues to act out the farce of participation. I cook, I clean, I reply, I pretend to matter—if not to others, then at least to the inner auditor who keeps record of whether I “tried.” And I have tried. By god or whatever godless logic rules this universe—I have tried. And I want the record to show it. That even if all else fails and my name is forgotten, anyone who ever crossed paths with me, even in disdain, would admit—yes, tenacity was there, even in the ruins.
+In that flood, the few fragile scraps of what could be called hesitant normalcy are swept away, dissolving into a kind of manic-depressive hyper-rumination that feels both involuntary and inevitable given my pathology. The pernicious thoughts circle inward like tightening rings, each concentric darker, heavier, more airless than the last, enclosing me layer by layer until the innermost shell is nothing but a noose of suffocating blackness.
+
+It is here that reason abandons me, or I abandon it—I am never quite sure which. The sorrow, grown too large to manage, discards the pretense of resolution. The tools lie scattered and useless, stripped of their edges, as if they too have surrendered to the chaos.
+
+There is then only one escape left: the enforced oblivion of sleep. I force myself sink into it, as into a warm, heavy liquid, and when I wake, I descend again into its depths, repeating the cycle until I am submerged in the final, fatal stages of that induced deep, irrepressible and oppressive melancholy—a melancholy whose gravity stronger than a black hole pulls me, without resistance, into still deeper, duller darker depths where despair loses even the energy to call itself despair.
+
+But it is in the earliest moments of waking from these forced but weak sleep contracts—when the boundaries between dream and recollection have not yet hardened into the inflexible clarity of day—that I find myself most estranged, most violently dislocated. The mind, that nostalgic liar, still inhabits the soft light of a different life, still wears the skin of a younger self. There, in that thin-fogged interstice between sleep and consciousness, I wake up not in Calcutta, not in this slackening city of heat and noise and unrecoverable age, but in that other faraway sterile place—San Antonio in the US—where my sense of self had once begun to arrange itself as a younger man into a hopeful, coherent meaning, like a symphony—that now lies broken into discordant fragments, into half forgotten fibs and fancies, like the fog and haze of a dark Calcutta night. 
+
+I do not wake into sadness. I wake into confusion. And then, almost immediately, into revulsion. There is a violence in the recognition that the room I expect—the soft-furnished echo of a more ancient but younger existence—is not the one that receives me. Instead, I am met by the stale, humid reality of this one: this room with its industrial exhaustion, this air thick with a weariness that was never earned, this body—sweating, gapped of tooth, bowed by the slow sabotage of time—who stares back at me with the unsparing and uninspiring gaze of a mirror that does not lie, not even to spare me a second.
+
+This is not a lament. It is not another act in the grand tragic opera of a depressive. I do not seek pity or consolation, for there is no listener gentle enough, and no ear that would not flatten the tune into cliché. What I am recording—what I must, lest it dissolve into vapor—is the horror of the exact moment when an old man in Calcutta realizes that the last dwindling glimmers of what once passed for a sustaining flame are now flickering into death, one after the other. Not dramatically. Not even noticeably. But with the quiet, surgical precision of inevitability—and even if my life means nothing to anyone else, as long as I am alive, it is all I have, and these stories of its ebbing away I want to stow away. 
+
+Already I have surrendered, not in posture, not in confession, but in that deeper, slow erosion where one continues to act out the farce of participation peculiar to Indians or Bengalis—where the veneer of obfuscation is stranger than in the west and requires more work to pretend. I cook, I clean, I reply, I pretend to matter as an independent self-made man—if not to others, then at least to the inner auditor who keeps record of whether I “tried.” And I have tried. By god or whatever godless logic rules this universe—I have tried. And I want the record to show it. That even if all else fails and my name is forgotten, anyone who ever crossed paths with me, even in disdain, would admit—yes, tenacity was there, even in the ruins.
 
 But I know, I feel, that the spring is winding down. The machine is folding into itself. The internal alarms that once rang as melancholia or madness now simply murmur—this is the biology of it, this is the neurology of surrender. It arrives not as a crash but as a soft grinding. The bipolar mind knows this well: it eats from within, it feeds on itself, whether by conscious gnawing or from within concentric shells of unconscious dread—each shell cracked open by nightmares that wake me with no name, no memory, just an aftertaste of catastrophe.
 
-More than once, I have woken certain I was still there—in that cramped apartment in Texas, that old life with its catalog of joys and irritations, its familiar wallpaper of companionship and small duties. I expect the fabric of the sheets, the particular draft that passed through the window, the habits of furniture and affection. But the waking kills it. What I find is not just another place, but another person—I wake not only elsewhere but as someone else, someone older, someone lonelier, someone whose story is so violently severed from the one I remember that I sometimes think I am waking in another life entirely, a future I did not write but was somehow sentenced to.
+More than once, I have woken certain I was still there—in that cramped apartment in Texas, that old life with its American catalog of simpleton joys and plaintive irritations, its familiar wallpaper of companionship and small duties. I expect the fabric of the sheets, the texture of the carpet, the particular hot Texan draft that passed through the window or door when they were closed to the air conditioning, the habits of furniture and affection of a few samaritan bengalis. But the waking kills it. What I find is not just another place, but another person—I wake not only elsewhere but as someone else, someone older, someone lonelier, someone whose story is so violently severed from the one I remember that I sometimes think I am waking in another life entirely, a distorted future I did not write but was somehow sentenced to.
 
 This place—this Calcutta of now—is not the one I was born into. It is a hallucination of entropy, a fevered hallucination I never even had in my worst psychotic dream as a boy. I have not merely returned. I have been returned. By what logic? By what cruel and indifferent author? I do not know.
 
-But I write it down. Because if I don't, I will become one more detail that disappears.
+But I write it down. Because if I don't, I will become one more detail that disappears—probably this blog itself won't survive the rapacious entropy of constant renewals and funds which I won't have. My life is a life traced in the faintest of threads, embroidered not in substance but in the gauze of gossamer bengali dreams—so light they dissolved at a breath, so fragile they could never bear the weight of waking. Always wished for, always pursued with an urgency that felt like purpose, yet leading, again and again, not to fulfillment but to the looping corridors of return—each failed arrival folded into the next as fuel for a private, repressed combustion. And so the chase itself became the only enduring reality, the dreams feeding the madness, and the madness, in turn, weaving ever more intricate tapestries of what might have been.
+ 
 
 
 
@@ -6220,19 +6598,55 @@ export const load = async ({ url }) => {
 <script lang="ts">
 	import { toTitleCase } from '$lib/utils';
 	import type { PageData } from './$types';
-	// 1. Import the type for a single post
-	import type { PostSummary } from '$lib/posts';
+	// This type is actually defined in app.d.ts, but for clarity let's assume PostSummary is what we want.
+	type PostSummary = App.Post;
 
 	let { data } = $props<{ data: PageData }>();
 
 	const posts = $derived(
-		// 2. Add the PostSummary type to the 'post' parameter
 		data.posts.map((post: PostSummary) => ({
 			...post,
-			formattedTitle: toTitleCase(post.title)
+			// The title formatting is a nice touch, let's keep it.
+			formattedTitle: toTitleCase(post.meta.title) 
 		}))
 	);
+
+    import ImageSlideshow from '$lib/components/blog/ImageSlideshow.svelte';
+
+    const imageModulesSquare: Record<string, string> = import.meta.glob(
+        '$lib/assets/slideshow-images/square/*.{jpg,jpeg,png,webp}',
+        {
+            eager: true,
+            query: '?url',
+            import: 'default'
+        }
+    );
+    
+    const imageModulesLandscape: Record<string, string> = import.meta.glob(
+        '$lib/assets/slideshow-images/landscape/*.{jpg,jpeg,png,webp}',
+        {
+            eager: true,
+            query: '?url',
+            import: 'default'
+        }
+    );
+
+    const imageModulesPortrait: Record<string, string> = import.meta.glob(
+        '$lib/assets/slideshow-images/portrait/*.{jpg,jpeg,png,webp}',
+        {
+            eager: true,
+            query: '?url',
+            import: 'default'
+        }
+    );
+
+    // Extract the URLs into simple arrays to pass to the component
+    const imageUrlsLandscape = Object.values(imageModulesLandscape);
+    const imageUrlsPortrait = Object.values(imageModulesPortrait);
+    const imageUrlsSquare = Object.values(imageModulesSquare);
 </script>
+
+
 
 <svelte:head>
 	<title>Suvro Ghosh | Engineering & Personal Blog</title>
@@ -6241,20 +6655,22 @@ export const load = async ({ url }) => {
 
 <div class="container my-8 ">
 	<h1 class="text-center">Latest Posts</h1>
-
+<div class="my-8">
+    <ImageSlideshow images={imageUrlsPortrait} />
+</div>
 	<ul class="list-none p-0 ">
 		{#each posts as post (post.slug)}
 			<li class="card mb-6">
 				<h2>
-					<a class="post-link" href={`/blog/${post.category}/${post.slug}`}>
+					<a class="post-link" href={`/blog/${post.meta.category}/${post.slug}`}>
 						{post.formattedTitle}
 					</a>
 				</h2>
 
-				<p class="text-secondary">{post.description}</p>
+				<p class="text-secondary">{post.meta.description}</p>
 				
 				<p class="text-sm text-tertiary text-right">
-					Last updated: {new Date(post.lastModified).toLocaleDateString('en-GB', {
+					Last updated: {new Date(post.meta.lastModified).toLocaleDateString('en-GB', {
 						year: 'numeric',
 						month: 'long',
 						day: 'numeric'
@@ -6264,6 +6680,7 @@ export const load = async ({ url }) => {
 		{/each}
 	</ul>
 </div>
+
 
 # File: src/routes/blog/+page.server.ts
 
