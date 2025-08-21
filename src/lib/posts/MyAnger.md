@@ -28,6 +28,6 @@ This is why I have come to learn that for me it is essential to either remove my
 
 People sometimes speak of anger as if it is a fire, and if you just leave it alone it will burn itself out. In me it is more like radiation. It leaks invisibly, it contaminates everything around it, it builds up long after the visible flame has died, and by the time you realize the extent of the damage it has already entered your bones. And so I am left with the hard necessity of ruthlessness: either get away from the source or destroy the source, because anything less is to sentence myself to a kind of slow, psychological Chernobyl.
 
-And yet—this anger is also the double-edged thing that keeps me alive. It is proof that I am not numb, not yet resigned to the colossal frauds and everyday betrayals that pass as normal life here. If I could not get angry, then I would simply dissolve into the background, a resigned man muttering half-truths in rooms where no one listens. My anger, for all its danger, is also the one honest thermometer of my being.
+And yet—this anger is also the double-edged thing that keeps me alive. It is proof that I am not numb, not yet resigned to the colossal frauds and everyday betrayals that pass as normal life here. If I could not get angry, then I would simply dissolve into the background, a resigned man muttering half-truths in rooms where no one listens. My anger, for all its danger, is also the one honest thermometer of my being and the reason that you read this blog. 
 
 
