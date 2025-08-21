@@ -25,7 +25,7 @@ Any trick long stale in the West is still a viable marketing ploy here, includin
 
 And the diffusion in attention is multilingual, which makes it even more profitable. If people can be conned simultaneously in four or five languages, then why not? That is where we are. As Indians, we can be stupid multilingually. 
 
-Modi nationally and Mamata here locally both do this diligently in at least three different languages, their exhortations played endlessly on their bootlicking paid channels in endless cycles by highly paid, well-dressed, spineless talking heads. This is even more a happy state of affairs in an imposed Hindoo state, a reluctant but otherwise science-resistant culture, insular and rabid, a mob to whom the cryptic overuse of Sanskrit by men with fangs, in equivocal trite overpromises, isn’t at all suspect. 
+To the leaders the citizens are slimy pre-diarrhea, brown, cringy coiled mass of illiterate idiots easily ruled. And so we have a subverted democratic dance by the dunces dictating dipshit dictums in sanskrit or piglatin only because they fucking *can* and therefore very well *will*. Modi nationally and Mamata here locally both do this diligently in at least three different languages, their exhortations played endlessly on their bootlicking paid channels in endless cycles by highly paid, well-dressed, spineless talking heads. This is even more a happy state of affairs in an imposed Hindoo state, a reluctant but otherwise science-resistant culture, insular and rabid, a mob to whom the cryptic overuse of Sanskrit by men with fangs, in equivocal trite overpromises, isn’t at all suspect. 
 
 <SanskritVerse>
     {#snippet children()}
