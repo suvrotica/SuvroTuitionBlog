@@ -110,12 +110,12 @@ But shit ungratefully in that same plate.<br>
 By Kali it looks like khichiri with ghee,<br>
 Bengali piss yellow but sweet in taste.<br>
 <br>
-Yes bengali thoughts led the pussy world,<br>
-Now it lags behind the slowest laggards.<br>
+Yes bengalis once led the warring world,<br>
+Now we lag behind the lowest laggards.<br>
 It's not even safe to open your mouth,<br>
 Unless you like swallowing fartsy turds.<br>
 <br>
-From british clerks to all-round jerks,<br>
+Went from british clerks to all-round jerks,<br>
 The bengalis are convinced they're best.<br>
 The least of exertions, they queue up for,<br>
 An afternoon of complete and total rest.<br>
