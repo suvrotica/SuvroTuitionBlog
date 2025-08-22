@@ -105,7 +105,12 @@ About how everything changed.<br>
 How rotten things have gotten inside,<br>
 But shiny on the surface as arranged.<br>
 <br>
-Bengali thoughts led the world,<br>
+We stuff our fat fuck faces with food,<br>
+But shit ungratefully in that same plate.<br>
+By Kali it looks like khichiri with ghee,<br>
+Bengali piss yellow but sweet in taste.<br>
+<br>
+Yes bengali thoughts led the pussy world,<br>
 Now it lags behind the slowest laggards.<br>
 It's not even safe to open your mouth,<br>
 Unless you like swallowing fartsy turds.<br>
