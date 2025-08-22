@@ -108,7 +108,7 @@ But shiny on the surface as arranged.<br>
 We stuff our fat fuck faces with food,<br>
 But shit ungratefully in that same plate.<br>
 By Kali it looks like khichiri with ghee,<br>
-Bengali piss yellow but sweet in taste.<br>
+Bengali piss is yellow but sweet in taste.<br>
 <br>
 Yes bengalis once led the warring world,<br>
 Now we lag behind the lowest laggards.<br>
