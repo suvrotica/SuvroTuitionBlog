@@ -75,6 +75,11 @@ Ought to be the justice of the lands.<br>
 But in India, a democracy in name only,<br>
 Kleptocracy garlanded as it stands.<br>
 <br>
+In fact it's the honest that's harassed,<br>
+Incarcerated many who can't be muzzled.<br>
+One day I'll be murdered just because,<br>
+As a bengali I am so totally puzzled.<br>
+<br>
 The "next level" pus from my anus,<br>
 Thus dribble animus ad-infinitum.<br>
 I swear the stench is bad enough,<br>
