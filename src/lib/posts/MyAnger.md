@@ -18,9 +18,11 @@ published: true
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import SanskritVerse from '$lib/components/ui/SanskritVerse.svelte';
     import imageSrc1 from '$lib/assets/slideshow-images/portrait/fe141418-ab03-4133-8a60-403dbef5b3ff.png?url';
+import imageSrc2 from '$lib/assets/slideshow-images/portrait/72413cd2-95ef-4014-81ac-dda4b17c0736.png?url';
+    
 </script>
 
-<PostImage src={imageSrc1} alt="Stupid Multilingually" />
+<PostImage src={imageSrc1} alt="anger of impotence" />
 
 In my own life, in my own sort of peculiar personality, I have found that repression is not available to me as an option. Least of all repression of anger. This may be surprising, because I am not, at the core, one of those constitutionally angry men who wander through the world with clenched jaws and veins popping at every imagined slight. My anger is different—it is not without reason, it is born of impotence, of indignation, of the absurd spectacle of being made helpless when every nerve in you knows you were right. It is the kind of anger that does not dissolve with time, that cannot be distracted away with travel or new projects or with the slow amnesia of days. Instead it waits, and then it comes back in tsunami waves, each larger and more destructive than the last, washing away whatever little shore of calm I had built in the interlude.
 
@@ -51,5 +53,7 @@ The erudition we scraped together, mostly secondhand through westernized schooli
 And I know people point at Indian IT engineers as if they were a slice from a different loaf. Most corporate Indians I’ve seen are little more than mustachioed bladders and belligerent udders based on their genders respectively, swollen with posturing but hollow within, experts at toggling between coy docility and counterfeit superiority depending on which mask pleases their Western overlords. They pose, they preen, they pander, all while shoving their fists elbow-deep into the rectums of their own compatriots whenever no foreign gaze is fixed upon them. The cycle repeats itself fractally, like a grotesque Russian doll—one layer of exploitation nested inside another, each uglier than the last—until you arrive at the core, where all you find is a sweatshop masquerading as a consultancy, a gulag of fluorescent lights and fake smiles. If such whorish, dick-in-dick concentration camp theaters are finally overtaken by AI, I wouldn’t call it a tragedy; I’d call it karmic symmetry, the only justice left in a system that long ago sold its soul for billing hours and PowerPoint slides.
 
 I had once imagined other continuities for my life, continuities overseas—corporate, academic, maybe even something quieter in retirement, or simply the open field of the unknown. But all of that has been amputated. Cut off. I am left instead with an endless continuity of something else entirely: third world structures and struggles, the permanent dysfunctions of an India that has every means to eradicate its miseries but will not, cannot, and never does. I fell through this crack, and now I suffer endlessly in the cycle of ruthless anger that no therapy, no time, no kindness can cure—only the self-flagellation of medicated numbness and polypharmacy, drugs stacked on drugs, each of them another weight pushing me closer to the ground.
+
+<PostImage src={imageSrc2} alt="my skull brain and balls will haunt and taunt" />
 
 I am fifty. I doubt I will last a year more. And maybe that is what gnaws at me most—that this is how it ends, not with a choice or with dignity, not with a continuation of what I once built abroad, but with the claustrophobia of being caught inside a country that manufactures cracks to swallow people like me and then congratulates itself on resilience. My anger is not some luxury of temperament; it is the only honest register of this collapse. And yet it burns me more than it burns the world around me, and soon, maybe too soon, it will finish me off entirely.
