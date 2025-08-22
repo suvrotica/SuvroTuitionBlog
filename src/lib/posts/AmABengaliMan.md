@@ -123,11 +123,11 @@ Unless you like swallowing fartsy turds.<br>
 Went from british clerks to all-round jerks,<br>
 The bengalis are convinced they're best.<br>
 The least of exertions, they queue up for,<br>
-An afternoon of complete and total rest.<br>
-Now the penis in the proscenium,<br>
+An afternoon of complete and total rest.<br><br>
+Now the smallest penis in the proscenium,<br>
 On the Indian stage or the globe.<br>
-A Bengali is incurable pissy penury,<br>
-Suspect smugglers needing anal probe.<br>
+A Bengali is an incurable pissy penury,<br>
+Suspect as smugglers needing anal probe.<br>
 <br>
 Belligerent cunts and bickering grunts,<br>
 Makes throats hoarse and thorny dry.<br>
