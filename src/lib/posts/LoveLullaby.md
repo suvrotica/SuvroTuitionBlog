@@ -102,14 +102,14 @@ So how's it hanging and fuck you too. <br>
 <br>It's tonic and gin and never a win,<br>
 The broth of brooding in a Calcutta bar.<br>
 Yes, I want to but I can't sing my songs,<br>
-The piano is out of tune or I can't play the guitar.<br>
+Never learned how to sing with the guitar.<br>
 <br>
-The voice inside me is now hoarse and mute,<br>
+The voice is now moot, full of soot,<br>
 I have a frown and I am out of town. <br>
-The bipolar sine waves wash over me,<br>
-I bob up and down up and down.<br>
+The bipolar sine waves squish me to weird,<br>
+I bob up and down, rapidly, up then down.
 <br>
-<br>The guitar neglected, hurt feelings,<br>
+<br>The guitar is neglected, hurt feelings,<br>
 Secrets in the strummed chords I try to toy.<br>
 Humming miseries suspect advancing age,<br>
 In my childhood's oxymoron—a city of joy.<br>
@@ -128,12 +128,10 @@ Heartburn and acid baptisms reek rancid,<br>
 The scabs and stabs in the pains of gain.<br>
 Motley melancholy of colors in my tears,<br>
 The wet august sun in the Calcutta rain.<br>
-<br>
 <br>A headache is what I have, is what I like,<br>
 A depression is what I really know is me.<br>
-I'm a rut deep down, a broken bengali man,<br>
-Going mad, always been, and now,<br>
-Splattered on the wall for all to see.
+Going mad the rut deep down, a broken man,<br>
+Splattered across the wall for all to see.
 <br>
 
   
