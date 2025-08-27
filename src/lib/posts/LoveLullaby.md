@@ -103,7 +103,12 @@ So how's it hanging man, toodles and have a good day.<br>
 The dingy broth of brooding in a Calcutta bar.<br>
 Yes, I want to but I can't sing my songs,<br>
 The piano is out of tune or I can't play the guitar.<br>
-
+<br>
+The voice inside me is now hoarse and mute,<br>
+I have a frown and I am out of town. <br>
+The bipolar sine waves wash over me,<br>
+I bob up and down up and down.<br>
+<br>
 <br>The guitar neglected, hurt feelings,<br>
 Secrets in the strummed chords I try to toy.<br>
 Humming miseries suspect advancing age,<br>
