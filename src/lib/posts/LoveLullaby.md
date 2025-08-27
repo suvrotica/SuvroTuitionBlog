@@ -91,16 +91,16 @@ But real human connections are bluff.<br>
 
 <br>But we men are born blind to inner beauty,<br>
 We dumb fucks look for the surface pretty.<br>
-And by all that's holy in shit, pretty is always a bitch-cunt,<br>
-But ugly is not one hundred percent not shitty.<br>
+By all the holes in holy, pretty is cunt,<br>
+But ugly is not cent percent not-shitty.<br>
 
-<br>So I skip cunts and penetration altogether now,<br>
-It's better to practice dying alone when you have to anyway.<br>
-I just want you to know who I fucking really am,<br>
-So how's it hanging man, toodles and have a good day.<br>
+<br>So I skip cunts and fucking now,<br>
+Practice dying alone when you have to. <br>
+I just want you to know who I really am,<br>
+So how's it hanging and fuck you too. <br>
 
-<br>It's tonic and gin and it's never really a win,<br>
-The dingy broth of brooding in a Calcutta bar.<br>
+<br>It's tonic and gin and never a win,<br>
+The broth of brooding in a Calcutta bar.<br>
 Yes, I want to but I can't sing my songs,<br>
 The piano is out of tune or I can't play the guitar.<br>
 <br>
