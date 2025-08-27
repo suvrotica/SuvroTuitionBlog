@@ -67,12 +67,12 @@ On shrooms as the shimmering shadows loom.
   We think rose is clever too,<br>
 Not in the silky drama of the dream petal.<br>
 The silly thorn can be used to easily kill,<br>
-The red is then not always *that* fundamental.<br>
+The red is then not always that fundamental.<br>
 
 <br>Love's suspense might kill a man,<br>
 But a man who's long dead it can't.<br>
-Some religious cunt is always there,<br>
-Who thinks fondly of someone who's *cant*.<br>
+Or coy cunts in Calcutta in dingy droves,<br>
+Whores fond of dicks who're only cant.<br>
 
 <br>But I'm happily married with my hand,<br>
 Yes ma'am, thank you for asking.<br>
