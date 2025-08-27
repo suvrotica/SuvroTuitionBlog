@@ -81,15 +81,15 @@ A north Calcutta fuck-face gasping.<br>
 
 <br>Jism or jizz trickles like ants in my pants,<br>
 The sperms far too few to count.<br>
-Thank-gawd my dynasty of fucks dries in the crotch,<br>
+My dynasty of fucks dries in the crotch,<br>
 Assimilated, too abhorrent by any account.<br>
 
 <br>One self-handfuck a week, or is it a month?<br>
-Even 4K, five dicks in cunts and asses aren't enough.<br>
-The plots of pornography or reality are the same and thin,<br>
-The mirage of true connections are the real stuff.<br>
+4K, 5 dicks in one ass isn't enough.<br>
+Plots in reality like porn are thin,<br>
+But real human connections are bluff.<br>
 
-<br>But we men especially are born blind to inner beauty,<br>
+<br>But we men are born blind to inner beauty,<br>
 We dumb fucks look for the surface pretty.<br>
 And by all that's holy in shit, pretty is always a bitch-cunt,<br>
 But ugly is not one hundred percent not shitty.<br>
