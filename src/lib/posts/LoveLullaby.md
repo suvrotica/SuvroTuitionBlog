@@ -8,40 +8,6 @@ thumbnail: "/src/lib/assets/slideshow-images/portrait/IMG-20250329-WA0000.jpg"
 
 date: "2025-08-27"
 
-keywords: [
-  "Calcutta poetry", 
-  "doggerel verse", 
-  "lust and loneliness", 
-  "Indian urban depression", 
-  "Calcutta bar culture", 
-  "pornography and relationships", 
-  "bipolar depression poems", 
-  "raw confessional poetry", 
-  "male desire and solitude", 
-  "dark humor in poetry", 
-  "satirical Indian poetry", 
-  "vulgar honesty verse", 
-  "Kolkata nightlife", 
-  "Calcutta drinking culture", 
-  "bar lunch nostalgia", 
-  "existential despair poetry", 
-  "loneliness in Indian cities", 
-  "North Calcutta references", 
-  "masturbation and solitude poems", 
-  "cynical love poems", 
-  "sex satire poetry", 
-  "anti-romantic doggerel", 
-  "city of joy dark side", 
-  "poetry about depression", 
-  "confessional Indian writing", 
-  "dirty realism poetry", 
-  "angst and melancholy verse", 
-  "crude but honest poetry", 
-  "male sexuality in literature", 
-  "Calcutta underground art", 
-  "alcohol and depression poems"
-]
-
 published: true
 
 ---
@@ -123,6 +89,16 @@ Bamboozling city of pimps and hoe.<br>
 I can't forget, they hurt too much.<br>
 Mixed with the bitter Calcutta beer,<br>
 The general putrefaction in a bar lunch.<br>
+<br>
+The city scruples like piss stains,<br>
+On walls or raining on your hair. <br>
+People at the helm are ALL exactly,<br>
+Like the plump city feces everywhere.<br>
+<br>
+It's ruin it's rain we race to run,<br>
+But in circles we go round, and round.<br>
+Most people are dead inside, dead numb,<br>
+Shitting corpses piss zombies abound.<br>
 <br>
 Heartburn and acid baptisms reek rancid,<br>
 The scabs and stabs in the pains of gain.<br>
