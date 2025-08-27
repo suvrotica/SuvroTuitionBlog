@@ -104,10 +104,10 @@ The dingy broth of brooding in a Calcutta bar.<br>
 Yes, I want to but I can't sing my songs,<br>
 The piano is out of tune or I can't play the guitar.<br>
 
-<br>The guitar is neglected really, like hurt feelings,<br>
-Secrets deep in the strummed chords coy.<br>
+<br>The guitar neglected, hurt feelings,<br>
+Secrets in the strummed chords I try to toy.<br>
 Humming miseries suspect advancing age,<br>
-In a decrepit, hollow, shallow, joyless city of joy.<br>
+In my childhood's oxymoron—a city of joy.<br>
 
 <br>Too many faces, too many masks,<br>
 The shape of people's hearts like dildo.<br>
@@ -116,9 +116,14 @@ Bamboozling city of pimps and hoe.<br>
 
 <br>I keep the pictures of the memories,<br>
 I can't forget, they hurt too much.<br>
-Mixed with the tastes in the bitter Calcutta beer,<br>
+Mixed with the bitter Calcutta beer,<br>
 The general putrefaction in a bar lunch.<br>
-
+<br>
+Heartburn and acid baptisms reek rancid,<br>
+The scabs and stabs in the pains of gain.<br>
+Motley melancholy of colors in my tears,<br>
+The wet august sun in the Calcutta rain.<br>
+<br>
 <br>A headache is what I have, is what I like,<br>
 A depression is what I really know is me.<br>
 I'm a rut deep down, a broken bengali man,<br>
