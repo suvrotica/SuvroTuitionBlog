@@ -2,7 +2,7 @@
 
 title : "Glass Half Empty" 
 
-thumbnail: "/src/lib/assets/slideshow-images/portrait/b729a950-05df-418f-9859-b4dac70fcac4.png"
+thumbnail: "/src/lib/assets/slideshow-images/portrait/Gemini_Generated_Image_3l7mur3l7mur3l7m.png"
 
 tags: ["Calcutta", "Bengali", "American", "dogma" ]
 
@@ -17,7 +17,7 @@ published: true
 <script>
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import SanskritVerse from '$lib/components/ui/SanskritVerse.svelte';
-    import imageSrc from '$lib/assets/slideshow-images/portrait/b729a950-05df-418f-9859-b4dac70fcac4.png?url';
+    import imageSrc from '$lib/assets/slideshow-images/portrait/Gemini_Generated_Image_3l7mur3l7mur3l7m.png?url';
     
 </script>
 
