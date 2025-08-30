@@ -11,7 +11,7 @@ tags: ["blog", "mathematics", "statistics"]
 
 category : "Statistics" 
 
-date: "2025-08-12"
+date: "2025-08-31"
 
 published: true
 
@@ -40,4 +40,5 @@ The fib gets more mischievous when the class is uneven. Two kids get 40 and 49, 
 
 And that’s the first thing worth knowing: statistics isn’t about truth carved in stone. It’s about constructing useful, bite-sized lies—clever compressions of reality that help us make sense of a messy world. Just remember: the lie is in the simplification, and it’s only harmless as long as you know what’s missing.
 
+I think the deeper personal cognitive dissonance is impossible to avoid because we cannot at least raise our own experience at the physical or sensation level to that of many people, I will always be in my own skull slave to the numericity of one, the group mathematics even if there’s an area in the brain to compute it is, is at a literal level of counting, of amounts, more of one group vs another say, but doesn’t have inbuilt evolutionary imperative for subtlety like specific distribution of characteristics of a group—like how many are slightly below average, how many are extreme outliers, how tightly clustered most of them are. Our intuitive machinery deals in coarse contrasts, in more versus less, in friend versus stranger, but not in variance, skewness, or multimodality. Which is precisely why statistics feels so alien: it is a prosthesis for a kind of perception we never evolved, a way of holding in one glance the shape of many minds, many scores, many lives, compressed into abstractions that no single nervous system was built to grasp.
 
