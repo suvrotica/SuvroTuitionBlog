@@ -4,7 +4,7 @@ title : "I run to piss"
 
 thumbnail: "/src/lib/assets/slideshow-images/landscape/IMG-20250901-WA0002.jpg"
 
-tags: ["Calcutta", "Bengali", "American", "piss" ]
+tags: ["Calcutta", "Bengali", "American", "piss", "Hindu", "holy" ]
 
 category: "Doggerel"
 
@@ -74,4 +74,4 @@ More corrupt & religious than upright.<br>
 I will run and run give up in the sun,<br>
 That last piss will run out of my ass. <br>
 That'll be a good day when I thus die,<br>
-The dingo dogs dance on my dead carcass.<br>
+The holy dingo dance on my dead carcass.<br>
