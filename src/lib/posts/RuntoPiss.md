@@ -28,7 +28,12 @@ I feel the dancing droplets drip.  <br>
 The gods do know, to make 'em flow,  <br>
 All I do is run a really long trip.  <br>
   <br>
-Yessiree, I run, like a bullet from a gun,<br>  
+Yessiree, I run, like a bullet from a gun,<br>  <br>
+By Kali Bengali and Indians are fuck-twats,<br>
+Selfish garam-masala rabid dicks and cunts.<br>
+I hence always run, piss and run,<br>
+Or I'll be sandwich in their meat hunts.<br>
+<br>
 The wind blowing my balding hair.  <br>
 I can feel a full fruity fart forming,  <br>
 I knew heaven was always goodly fair.  <br>
