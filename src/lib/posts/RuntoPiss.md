@@ -41,19 +41,19 @@ Not stopping to eat any trampled thing.  <br>
 My balls and belly, maybe on telly, <br>
 A naked man pissing on the run. <br>
 Who knew I could get so famous so fast, <br>
-An ass of a guy, his back to the sun.  <br>
+An ass not fun, ass-fucked by the sun.  <br>
   <br>
-In my fifty so now not shifty,  <br>
-I only wank at imaginary reals on indices.<br>  
+In my fifty so now not so fartsy shifty,  <br>
+I only wank to imaginary reals on indices.<br>  
 Stumped deep in thought that's all I got, <br> 
-I run through the maze of matrices.  <br>
+I run the maze of mother fucking matrices.  <br>
   <br>
-Suvro my name, Ghosh a surname,  <br>
-But they say I have shit faced the race. <br> 
-My relations weak, feeble I squeek,  <br>
-May the drunken devil lube my case.  <br>
+Suvro my name, Ghosh a shitty surname,  <br>
+But they say *I* have shit faced the race. <br> 
+My relations very weak, feeble I squeek,  <br>
+May the drunken devil lube my rim case.  <br>
   <br>
-And so I run, son of a bloody gun,  <br>
-My face bright with what might.  <br>
+And so I run, son of a bitch cunt gun,  <br>
+My face bright with what I think I might.  <br>
 Full fart ahead, I run until I'm dead,  <br>
-For possibilities however slight.  <br><br>
+For possibilities however slim or slight.  <br><br>
