@@ -66,3 +66,12 @@ Yes they are rare, mostly deadly snare,<br>
 Pits with snakes hissing bollywood. <br>
 So I don't ever stop everything's a flop,<br>
 Leaving smelly farts of what I only could.<br>
+Shit fuck lame the only national game,<br>
+Indians fuck each other day and night.<br>
+The national creed to stay stupid, be<br>
+More corrupt & religious than upright.<br>
+<br>
+I will run and run give up in the sun,<br>
+That last piss will run out of my ass. <br>
+That'll be a good day when I thus die,<br>
+The dingo dogs dance on my dead carcass.<br>
