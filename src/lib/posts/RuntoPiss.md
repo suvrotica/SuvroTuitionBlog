@@ -65,8 +65,8 @@ For possibilities however slim or slight.  <br><br>
 Yes they are rare, mostly deadly snare,<br>
 Pits with snakes hissing bollywood. <br>
 So I don't ever stop everything's a flop,<br>
-Leaving smelly farts of what I only could.<br>
-Shit fuck lame the only national game,<br>
+Smelly farts I leave whenever I should.<br><br>
+Shit fuck lame FUCK the only national game,<br>
 Indians fuck each other day and night.<br>
 The national creed to stay stupid, be<br>
 More corrupt & religious than upright.<br>
