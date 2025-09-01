@@ -71,7 +71,7 @@ Indians fuck each other day and night.<br>
 The national creed to stay stupid, be<br>
 More corrupt & religious than upright.<br>
 <br>
-I will run and run give up in the sun,<br>
+So I will run and run give up in the sun,<br>
 That last piss will run out of my ass. <br>
 That'll be a good day when I thus die,<br>
 The holy dingo dance on my dead carcass.<br>
