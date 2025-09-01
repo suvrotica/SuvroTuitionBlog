@@ -30,7 +30,7 @@ All I do is run a really long trip.  <br>
  <br>
 By Kali, Bengali & Indians ALL fuck-twats,<br>
 Selfish garam-masala rabid dicks and cunts.<br>
-I hence always run, piss and run,<br>
+I hence always run, and run really fast,<br>
 Or I'll be sandwich in their meat hunts.<br>
 <br>
 Yessiree, I run, like a bullet from a gun,<br> 
@@ -44,9 +44,9 @@ It's really a matter of hindoo morals I feel,  <br>
 Not stopping to eat any trampled thing.  <br>
   <br>
 My balls and belly, maybe on telly, <br>
-A naked man pissing on the run. <br>
+A naked Bengali pissing on the run. <br>
 Who knew I could get so famous so fast, <br>
-An ass not fun, ass-fucked by the sun.  <br>
+An ass unfun, ass-fucked by the sun.  <br>
   <br>
 In my fifty so now fartsy but not shifty,  <br>
 I only wank to imaginary reals on indices.<br>  
