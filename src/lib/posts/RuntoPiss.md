@@ -27,9 +27,8 @@ I run to piss, I've started to hiss,  <br>
 I feel the dancing droplets drip.  <br>
 The gods do know, to make 'em flow,  <br>
 All I do is run a really long trip.  <br>
-  <br>
  <br>
-By Kali Bengali and Indians are fuck-twats,<br>
+By Kali, Bengali & Indians ALL fuck-twats,<br>
 Selfish garam-masala rabid dicks and cunts.<br>
 I hence always run, piss and run,<br>
 Or I'll be sandwich in their meat hunts.<br>
