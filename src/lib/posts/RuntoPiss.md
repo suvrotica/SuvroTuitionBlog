@@ -43,7 +43,7 @@ A naked man pissing on the run. <br>
 Who knew I could get so famous so fast, <br>
 An ass not fun, ass-fucked by the sun.  <br>
   <br>
-In my fifty so now not so fartsy shifty,  <br>
+In my fifty so now fartsy but not shifty,  <br>
 I only wank to imaginary reals on indices.<br>  
 Stumped deep in thought that's all I got, <br> 
 I run the maze of mother fucking matrices.  <br>
