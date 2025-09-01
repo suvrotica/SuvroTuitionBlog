@@ -62,3 +62,7 @@ And so I run, son of a bitch cunt gun,  <br>
 My face bright with what I think I might.  <br>
 Full fart ahead, I run until I'm dead,  <br>
 For possibilities however slim or slight.  <br><br>
+Yes they are rare, mostly deadly snare,<br>
+Pits with snakes hissing bollywood. <br>
+So I don't ever stop everything's a flop,<br>
+Leaving smelly farts of what I only could.<br>
