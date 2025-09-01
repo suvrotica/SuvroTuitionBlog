@@ -49,7 +49,7 @@ Stumped deep in thought that's all I got, <br>
 I run the maze of mother fucking matrices.  <br>
   <br>
 Suvro my name, Ghosh a shitty surname,  <br>
-But they say *I* have shit faced the race. <br> 
+But they say <em>I</em> have shit faced the race. <br> 
 My relations very weak, feeble I squeek,  <br>
 May the drunken devil lube my rim case.  <br>
   <br>
