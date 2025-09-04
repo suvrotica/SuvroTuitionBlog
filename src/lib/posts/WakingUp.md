@@ -2,13 +2,17 @@
 
 title : "Waking up Me" 
 
-date : "09/04/2025"
 
 thumbnail : "/src/lib/assets/slideshow-images/portrait/b7748a5c-99dd-4337-8dbc-6344c2e944b4.png" 
 
 category : "Bipolar Depression" 
 
 tags: ["bengali", "NRI", "insomnia", "depression", "melancholy", "reflection", "bipolar" ]
+
+date: "2025-09-04"
+
+published: true
+
 
 ---
 
