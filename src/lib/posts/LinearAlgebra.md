@@ -14,7 +14,9 @@ published: true
 
 ---
 
+
 <script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import SanskritVerse from '$lib/components/ui/SanskritVerse.svelte';
     import imageSrc from '$lib/assets/slideshow-images/portrait/Gemini_Generated_Image_ggwm87ggwm87ggwm.png?url';
@@ -22,6 +24,12 @@ published: true
 </script>
 
 <PostImage src={imageSrc} alt="a vectorial bengali" />
+
+<PostBadge
+	title="Field"
+	href="/blog/Linear%20Algebra/Field"
+	standalone
+/>
 
 This is not going to be one essay or thought on linear algebra, but a culmination of years of distilled education and work experience in the US as a statistician, data scientist, and later as an AI healthcare entrepreneur.
 
