@@ -37,7 +37,27 @@ The subject of linear algebra still isn’t given the importance it should be. A
 
 So this first essay will be where I introduce linear algebra etymologically and point to the blog posts of subsequent entries (as they are written) that will cover its subtopics. Now, like most everyone, I arrived at a partial picture of linear algebra (I still don’t have the full picture, but I know quite a bit) late, as a working professional. Neither had it been taught well at Jadavpur University, where I first encountered it—at least I never felt any inspiration toward it—nor was it taught well in the US, where I received my master’s degree. My inspiration has really been personal exploration of the subject through my own perspective, work, and need-based evolution, driven mainly by curiosity to understand the structure of abstraction and the mathematical objects used in various models of abstraction. By models, I mean the approximate mathematics that approach or simulate some real-life situation. But I can help some student or professional arrive precociously at my aha moment with less labor through my posts and visualizations—at least, that's the hope. Or at least, even if no one uses them, I'll have at least put all my scattered notes in one place.
  
-“Linear” comes from the Latin linea, literally “a linen thread.” The Romans used stretched cords to draw straight furrows and mark boundaries, so a linea was not some abstract Platonic straightness, but string you could trip over. From that sense we get “line,” and eventually “linear”—anything that obeys straightness, proportionality, and additivity. “Algebra” comes from Arabic: al-jabr, meaning “the reunion of broken parts.” It entered Europe through a ninth-century treatise by al-Khwarizmi (yes, the same man who gave us “algorithm”), whose book Kitab al-Jabr wa’l-Muqabala was really about solving equations by balancing and transposing terms. Now, stitched together, “linear algebra” literally means the mending and manipulation of straightness. That doesn’t sound like much, but historically it ballooned into the universal language for systems of equations, geometry, transformations, and later quantum mechanics and machine learning.
+“Linear” comes from the Latin linea, literally “a linen thread.” The Romans used stretched cords to draw straight furrows and mark boundaries, so a linea was not some abstract Platonic straightness, but string you could trip over. From that sense we get “line,” and eventually “linear”—anything that obeys straightness, proportionality, and additivity. “Algebra” comes from Arabic: al-jabr, meaning “the reunion of broken parts.” 
+
+**al-jabr**
+
+Arabic: الجبر — (al-jabr)
+
+Bengali (বাংলা): আল-জাবর — (āl-jābr)
+
+Hindi (देवनागरी): अल-जब्र — (al-jabr)
+
+It entered Europe through a ninth-century treatise by al-Khwarizmi (yes, the same man who gave us “algorithm”), whose book Kitab al-Jabr wa’l-Muqabala was really about solving equations by balancing and transposing terms. 
+
+**Kitāb al-Jabr wa-l-Muqābala**
+
+Arabic: كتاب الجبر والمقابلة — (Kitāb al-jabr wa-l-muqābala)
+
+Bengali (বাংলা): কিতাব আল-জাবর ওয়াল-মুকাবালা — (Kitāb āl-jābr oẏāl-mukābālā)
+
+Hindi (देवनागरी): किताब अल-जब्र व अल-मुक़ाबला — (Kitāb al-jabr va al-muqābala)
+
+Now, stitched together, “linear algebra” literally means the mending and manipulation of straightness. That doesn’t sound like much, but historically it ballooned into the universal language for systems of equations, geometry, transformations, and later quantum mechanics and machine learning.
 
 As for first sightings of the <em>phrase</em> itself, the French get there first. In the mid-nineteenth century you start seeing <strong>algèbre linéaire</strong> orbiting Cauchy’s world of determinants and <em>formes linéaires</em>—not yet a course banner, more a working label for the manipulation of linear forms and systems. It pops up in journals and lectures as a way to fence off the “straight-line” part of algebra from the rest of the menagerie.
 
