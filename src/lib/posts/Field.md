@@ -15,6 +15,7 @@ published: true
 ---
 
 <script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import SanskritVerse from '$lib/components/ui/SanskritVerse.svelte';
     import imageSrc from '$lib/assets/slideshow-images/portrait/Gemini_Generated_Image_sd81zusd81zusd81.png?url';
@@ -22,6 +23,11 @@ published: true
 </script>
 
 <PostImage src={imageSrc} alt="Field" />
+<PostBadge
+	title="Linear Algebra"
+	href="/blog/Linear%20Algebra/LinearAlgebra"
+	standalone
+/>
 
 My first objection as an undergraduate—why must we filch ordinary words and heap abstract meanings on them, deserves a proper answer, partly historical, partly sentimental. The short version is that mathematical vocabularies almost never arrive fully formed from some Platonic cabinet; they are scavenged, translated, mistranslated, re-coined in lecture halls and on blackboards, and then fossilized by convention. “Field” in English is exactly one of those quaint accidents: a domestic word that wandered into the mathematical camp and set up a permanent, slightly confusing residence.
 
