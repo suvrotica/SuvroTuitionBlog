@@ -35,12 +35,12 @@ published: true
 />
 <br><br>
 A department of war will go very far,<br>
-Bomb boats with bombs, I count already twice. <br>
+Bomb boats with bombs, that's already twice. <br>
 Dictators, thugs, defiants always pals,<br>
 Moonlight sonata with whiskey on ice.<br>
 <br>
 Greedy as fuck, my shit gets stuck,<br>
-I like cunts of every baby kind.<br>
+I like cunts of every baby mush kind.<br>
 I like to deflower them from stem,<br>
 Sink my teeth into the buttery rind.<br>
 <br>
@@ -49,7 +49,7 @@ Svelte cuties invaded and naked preteen.<br>
 I grunt while defecating ginormous turds,<br>
 Pinto America's favorite fart bean.<br>
 <br>
-I flush I flush I blush in a rush,<br>
+I flush I flush I blush in a hushed rush,<br>
 Biden's flush always woke and bluff.<br>
 The logs come floating back up,<br>
 Makes me scream I'VE HAD ENOUGH.<br>
