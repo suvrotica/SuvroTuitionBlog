@@ -104,15 +104,15 @@ As if I'm your long lost dear dick daddy.<br>
 Picking you up from kinder-fucking-garten,<br>
 Like a whore in a world totally fucked already.<br>
 <br>
-We'll incarcerate the zygote killers,<br>
+I'll incarcerate the zygote killers,<br>
 Ban evolution and teach genesis instead.<br>
-We'll collaborate with oily and gassy,<br>
+I'll collaborate with oily and gassy,<br>
 Gang rape the climate crisis in the head.<br>
 <br>
-We'll use long respectable biggish words,<br>
+I'll use long respectable biggish words,<br>
 Respectfully fuck the sorry sciencey ass.<br>
-Euphemisms are good green examples of,<br>
-Gaslighting without any polluting gas.<br>
+Euphemisms are good green garden examples of,<br>
+Gaslighting without any polluting greasy gas.<br>
 <br>
 Our god's trump card, I, only and surely I,<br>
 Hallelujah I am finally totally back.<br>
