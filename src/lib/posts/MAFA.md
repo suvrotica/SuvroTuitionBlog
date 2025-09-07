@@ -35,9 +35,9 @@ published: true
 />
 <br><br>
 A department of war will go very far,<br>
-Bomb boats with bombs, that's already twice. <br>
-Dictators, thugs, defiants always pals,<br>
-Moonlight sonata with whiskey on ice.<br>
+Bombast with bombs, that's already twice. <br>
+Dictators, thugs, defiants paying pals,<br>
+Moonlight Sonata with whiskey on broken ice.<br>
 <br>
 Greedy as fuck, my shit gets stuck,<br>
 Like cunts of the posh baby mushy plushy kind.<br>
