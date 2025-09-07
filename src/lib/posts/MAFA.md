@@ -158,7 +158,7 @@ Long turd like twisty names very hard to say.<br>
 With my terrorist pal pakistan and 50% TAX, <br>
 India my new shit pan I don't hafta pay. <br>
 <br>
-Modi a jolly jape, joker on a shitscape,<br>
+Modi a jolly jape, joker wallowing in a shitscape,<br>
 Hindoo my ploy, a toy in my ass I play. <br>
 They'll shit or piss in their own mouth,<br>
 The dirtiest dumb brown stupids I say.<br>
