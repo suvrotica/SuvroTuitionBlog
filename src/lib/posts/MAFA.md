@@ -79,6 +79,11 @@ Fuck brown, the black, and the china men.<br>
 Jesus land is only alabaster white,<br>
 Of the white, for the white, by the white, amen.<br>
 <br>
+My dick is now very stiff with tariff,<br>
+That's an old boneless baloney bullshit.<br>
+But most Americans are stupid fucking cunts,<br>
+Unless diverted they'll dig my past pedo-ring shit.<br>
+<br>
 Holy ass fuck, hokey MAGA on a truck,<br>
 Lubrication you will certainly need.<br>
 Decent Americans all gaped, mini cunts raped,<br>
