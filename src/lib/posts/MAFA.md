@@ -99,10 +99,10 @@ On my calendar this group to especially fuck. <br>
 Of course the fat redneck MAGA get it too,<br>
 Poor or middle-class? Sorry bad fucking luck! <br>
 <br>
-So suck my cock little girl, suck me hard,<br>
-As if I'm your long lost dear daddy.<br>
+So suck my cock little girl, suck me real hard,<br>
+As if I'm your long lost dear dick daddy.<br>
 Picking you up from kinder-fucking-garten,<br>
-In a world totally fucked wholly already.<br>
+In a whorish world totally fucked wholly already.<br>
 <br>
 We'll incarcerate the zygote killers,<br>
 Ban evolution and teach genesis instead.<br>
