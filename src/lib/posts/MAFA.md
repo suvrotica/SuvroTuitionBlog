@@ -94,6 +94,11 @@ Flock with the feathered fools in casino.<br>
 With peyote they dance, in tense tragic trance,<br>
 Assured extinction in congressional slow mo.<br>
 <br>
+Blacks also in obesity and dumb dump sacks,<br>
+On my calendar this group to especially fuck. <br>
+Of course the fat redneck MAGA get it too,<br>
+Poor or middle-class? Sorry bad fucking luck! <br>
+<br>
 So suck my cock little girl, suck me hard,<br>
 As if I'm your long lost dear daddy.<br>
 Picking you up from kinder-fucking-garten,<br>
@@ -126,7 +131,7 @@ It's wise to pick only those I have chose.<br>
 <br>
 My prattle sabre rattle mostly tattle,<br>
 Battle is really my home legal front.<br>
-A slim part is natty, most fucks or fatty,<br>
+A slim part is natty, mostly fucks or fatty,<br>
 And those curious cunts are blunt.<br><br>
 I gifted a dark age in a bacteriophage,<br>
 From Elon's nasty Nazi ass to be sure.<br>
