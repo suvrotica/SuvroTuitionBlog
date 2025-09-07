@@ -35,7 +35,7 @@ published: true
 />
 <br><br>
 A department of war will go very far,<br>
-Bomb boats with bombs, that's twice. <br>
+Bomb boats with bombs, I count already twice. <br>
 Dictators, thugs, defiants always pals,<br>
 Moonlight sonata with whiskey on ice.<br>
 <br>
