@@ -40,9 +40,9 @@ Dictators, thugs, defiants always pals,<br>
 Moonlight sonata with whiskey on ice.<br>
 <br>
 Greedy as fuck, my shit gets stuck,<br>
-I like cunts of every holy kind.<br>
+I like cunts of every baby kind.<br>
 I like to deflower them from stem,<br>
-Sink my teeth into the rind.<br>
+Sink my teeth into the buttery rind.<br>
 <br>
 Perched precariously on my foamy phallus,<br>
 Svelte cuties invaded and naked preteen.<br>
@@ -54,10 +54,10 @@ Biden's flush always woke and bluff.<br>
 The logs come floating back up,<br>
 Makes me scream I'VE HAD ENOUGH.<br>
 <br>
-Land of the free, chop the to-be-chopped tree,<br>
+Land of the free, chop ALL to-be-chopped tree,<br>
 The men of oil rule, I like to think.<br>
-The weakest link honest men,<br>
-Their balls have shit that always stink.<br>
+The weakest link always the honest men,<br>
+Their balls have shit that really stink.<br>
 <br>
 Jesus doth knoweth, how shit will floweth,<br>
 Once we shit dishonesty in their brain.<br>
@@ -66,13 +66,13 @@ Power drain, vain utter shit stain.<br>
 <br>
 Let us say our prayers well and dwell,<br>
 Take servant girls and slap sense into them.<br>
-Fuck them for they know not what,<br>
+Fuck them fully for they know not what,<br>
 It's like to swallow god's oily semen.<br>
 <br>
-Verily thus us, goodly we go,<br>
+Verily thus us, goodly we white men go,<br>
 And frack with impunity the crust.<br>
 The rituals are rote, a boat on the money moat,<br>
-Must be safe for in god we trust.<br>
+Must be safe for in white god we trust.<br>
 <br>
 Also while we are at it, taking a shit,<br>
 Fuck brown, the black, and the china men.<br>
@@ -99,9 +99,9 @@ Ban evolution and teach genesis instead.<br>
 We'll collaborate with oily and gassy,<br>
 Gang rape the climate crisis in the head.<br>
 <br>
-We'll use long respectable words,<br>
+We'll use long respectable biggish words,<br>
 Respectfully fuck the sorry sciencey ass.<br>
-Euphemisms are green examples of,<br>
+Euphemisms are good green examples of,<br>
 Gaslighting without any polluting gas.<br>
 <br>
 Our god's trump card, I, only and surely I,<br>
@@ -115,16 +115,16 @@ Democracies subverted, shiny legs parted,<br>
 He who eats most white pussy, wins the sport.<br>
 <br>
 Statistics with carrots and sticks,<br>
-Sometimes up asses I suppose.<br>
-Numbers that don't agree are wrong,<br>
+Sometimes up asses I officially suppose.<br>
+Numbers that don't agree are all wrong,<br>
 It's wise to pick those I have chose.<br>
 <br>
-My prattle sabre rattle or tattle,<br>
-Battle is really my home front.<br>
-A slim part is natty, most fatty,<br>
-And those cunts are blunt.<br><br>
-Gift a GREAT dark age in a bacteriophage,<br>
-From Elon's nasty Nazi ass I'm sure.<br>
+My prattle sabre rattle mostly tattle,<br>
+Battle is really my home legal front.<br>
+A slim part is natty, most fucks or fatty,<br>
+And those curious cunts are blunt.<br><br>
+I gifted a dark age in a bacteriophage,<br>
+From Elon's nasty Nazi ass to be sure.<br>
 Not a frivolity who shits in the white house,<br>
 But in cancerous mouths waiting for a cure.<br>
 <br>
@@ -133,12 +133,12 @@ Let loose in America, his Indian sweat shop.<br>
 After the honey buns it's my sweet soft bum,<br>
 Puckered and ready, my pants I quickly drop.<br>
 <br>
-But at least for now I'm king, he's an underling,<br>
+But at least now I'm king, he's an underling,<br>
 Wrecking scrotum balls his, I daresay.<br>
 And also Ukraine is anal necrotic pain,<br>
-Lick Putin's anus or they dearly pay.<br>
+Either lick Putin's anus or fuck pay.<br>
 <br>
-"Most-lame" very easy to blame,<br>
+"Most-lame" very easy to always blame,<br>
 Gaza the new shopping plaza—methinks.<br>
 Using Israel's hack, I fuck them on a rack,<br>
 Double penetrate this hole that stinks.<br>
