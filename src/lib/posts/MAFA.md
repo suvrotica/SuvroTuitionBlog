@@ -40,9 +40,9 @@ Dictators, thugs, defiants always pals,<br>
 Moonlight sonata with whiskey on ice.<br>
 <br>
 Greedy as fuck, my shit gets stuck,<br>
-I like cunts of every baby mush kind.<br>
-I like to deflower them from stem,<br>
-Sink my teeth into the buttery rind.<br>
+Like cunts of the posh baby mushy plushy kind.<br>
+I like to deflower them, right from stem,<br>
+Sink my teeth into the soft buttery rind.<br>
 <br>
 Perched precariously on my foamy phallus,<br>
 Svelte cuties invaded and naked preteen.<br>
@@ -117,7 +117,7 @@ I kick bloody the opposing ball sac.<br>
 Putin, you, I, Netanyahu, will the world end,<br>
 In an orgy of the richest white power sort.<br>
 Democracies subverted, thin Euro legs parted,<br>
-He who devours most white pussy, wins this sport.<br>
+He who munches most muff, wins this sport.<br>
 <br>
 Statistics with carrots and sticks,<br>
 Sometimes up asses I officially suppose.<br>
