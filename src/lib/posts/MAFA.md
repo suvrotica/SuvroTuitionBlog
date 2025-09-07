@@ -91,7 +91,7 @@ What will take over now is Epstein's seed.<br>
 <br>
 The indian red, booze head, on a diabetic bed,<br>
 Flock with the feathered fools in casino.<br>
-With peyote they dance, in trance,<br>
+With peyote they dance, in tense tragic trance,<br>
 Assured extinction in congressional slow mo.<br>
 <br>
 So suck my cock little girl, suck me hard,<br>
@@ -116,8 +116,8 @@ I kick bloody the opposing ball sac.<br>
 <br>
 Putin, you, I, Netanyahu, will the world end,<br>
 In an orgy of the richest white power sort.<br>
-Democracies subverted, thin legs parted,<br>
-He who devours most pussy, wins this sport.<br>
+Democracies subverted, thin Euro legs parted,<br>
+He who devours most white pussy, wins this sport.<br>
 <br>
 Statistics with carrots and sticks,<br>
 Sometimes up asses I officially suppose.<br>
