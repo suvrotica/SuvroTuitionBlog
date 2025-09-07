@@ -154,7 +154,7 @@ Using Israel's hack, I fuck them on a rack,<br>
 Double penetrate this hole that stinks.<br>
 <br>
 India's a dirt-poor shit-brown polluted hell-hole,<br>
-With stupid names very hard to say.<br>
+Long turd like twisty names very hard to say.<br>
 With my terrorist pal pakistan and 50% TAX, <br>
 India my new shit pan I don't hafta pay. <br>
 <br>
