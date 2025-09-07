@@ -2,11 +2,10 @@
 
 title: "Suvro’s Law"
 
-tags: [AI, india, jobs, engineer, bengali, technology, future, immigration, politics, postAI, trump, humor, satire, suvrotica, suvroghosh] 
 
 thumbnail: "/src/lib/assets/slideshow-images/portrait/Gemini_Generated_Image_4m6pdy4m6pdy4m6p.png"
 
-tags: ["Calcutta", "Bengali", "American", "Mathematics", "Linear Algebra", "Field" ]
+tags: ["Calcutta", "H-1b", "American", "Work", "Suvro's Law", "Outsourcing" ]
 
 category: "Work"
 
