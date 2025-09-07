@@ -131,12 +131,12 @@ But in cancerous mouths waiting for a cure.<br>
 From my cuck chair I watch, Elon's a sasquatch,<br>
 Let loose in America, his Indian sweat shop.<br>
 After the honey buns it's my sweet soft bum,<br>
-Puckered and ready, my pants I quickly drop.<br>
+Puckered for post presidential, my pants I drop.<br>
 <br>
 But at least now I'm king, he's an underling,<br>
 Wrecking scrotum balls his, I daresay.<br>
 And also Ukraine is anal necrotic pain,<br>
-Either lick Putin's anus or fuck pay.<br>
+Either lick Putin's anus or fucking pay.<br>
 <br>
 "Most-lame" very easy to always blame,<br>
 Gaza the new shopping plaza—methinks.<br>
