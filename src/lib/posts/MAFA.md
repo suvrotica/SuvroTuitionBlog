@@ -145,7 +145,7 @@ Double penetrate this hole that stinks.<br>
 <br>
 India's a dirt-poor shit-brown polluted hell-hole,<br>
 With stupid names very hard to say.<br>
-With terrorist pal pakistan and 25% TAX, <br>
+With terrorist pal pakistan and 50% TAX, <br>
 India my new shit pan I don't hafta pay. <br>
 <br>
 Modi a jolly jape, joker on a shitscape,<br>
