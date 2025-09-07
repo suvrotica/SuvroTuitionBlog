@@ -34,6 +34,7 @@ published: true
 	href="/blog/Work/H1b"
 	standalone
 />
+
 Suvro’s Law. Write it in blood, engrave it on HR’s toilet walls, whisper it into the farting cubicles of every IT park from Salt Lake to Silicon Valley:
 
 **As artificial intelligence gets smarter, the only humans left in the office will be either extremely good-looking or professionally gifted at kissing the anus in exactly the spot where it tingles most.**
