@@ -102,7 +102,7 @@ Poor or middle-class? Sorry bad fucking luck! <br>
 So suck my cock little girl, suck me real hard,<br>
 As if I'm your long lost dear dick daddy.<br>
 Picking you up from kinder-fucking-garten,<br>
-In a whorish world totally fucked wholly already.<br>
+Like a whore in a world totally fucked already.<br>
 <br>
 We'll incarcerate the zygote killers,<br>
 Ban evolution and teach genesis instead.<br>
