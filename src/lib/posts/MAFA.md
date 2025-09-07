@@ -126,7 +126,7 @@ He who munches most muff, wins this sport.<br>
 <br>
 Statistics with carrots, shticks and sticks,<br>
 Sometimes up asses I officially suppose.<br>
-Numbers that don't agree with me are all wrong,<br>
+Numbers that don't agree with me are wrong,<br>
 It's wise to pick only those I have chose.<br>
 <br>
 My prattle sabre rattle mostly tattle,<br>
