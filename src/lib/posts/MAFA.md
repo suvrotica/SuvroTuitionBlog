@@ -111,13 +111,13 @@ I kick bloody the opposing ball sac.<br>
 <br>
 Putin, you, I, Netanyahu, will the world end,<br>
 In an orgy of the richest white power sort.<br>
-Democracies subverted, shiny legs parted,<br>
-He who eats most white pussy, wins the sport.<br>
+Democracies subverted, thin legs parted,<br>
+He who devours most pussy, wins this sport.<br>
 <br>
 Statistics with carrots and sticks,<br>
 Sometimes up asses I officially suppose.<br>
 Numbers that don't agree are all wrong,<br>
-It's wise to pick those I have chose.<br>
+It's wise to pick only those I have chose.<br>
 <br>
 My prattle sabre rattle mostly tattle,<br>
 Battle is really my home legal front.<br>
