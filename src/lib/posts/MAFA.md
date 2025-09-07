@@ -111,7 +111,7 @@ Gang rape the climate crisis in the head.<br>
 <br>
 I'll use long respectable biggish words,<br>
 Respectfully fuck the sorry sciencey ass.<br>
-Euphemisms are good green garden examples of,<br>
+Euphemisms are goodly green examples of,<br>
 Gaslighting without any polluting greasy gas.<br>
 <br>
 Our god's trump card, I, only and surely I,<br>
@@ -124,7 +124,7 @@ In an orgy of the richest white power sort.<br>
 Democracies subverted, thin Euro legs parted,<br>
 He who munches most muff, wins this sport.<br>
 <br>
-Statistics with carrots and sticks,<br>
+Statistics with carrots, shticks and sticks,<br>
 Sometimes up asses I officially suppose.<br>
 Numbers that don't agree are all wrong,<br>
 It's wise to pick only those I have chose.<br>
