@@ -15,7 +15,11 @@ thumbnail: "/images/placeholders/IMG-20250719-WA0000.jpg"
     import PostBadge from '$lib/components/ui/PostBadge.svelte';
 </script>
 ![Ambitious bird](/images/placeholders/IMG-20250719-WA0000.jpg)
-
+<PostBadge
+	title="Suvro's Law"
+	href="/blog/Work/SuvrosLaw"
+	standalone
+/>
 Ambition. There’s an ugly word. Comes from the Latin *ambitio*, meaning—no surprise—"going around" (round and round in circles), desperately begging for votes, overpromising the sky and other lies. Essentially, a politician's daily bowel movement. Now ask yourself: do you really want your life's theme song to echo the gastrointestinal routine of a Roman senator, circling pathetically, shaking sweaty hands and making false promises about aqueducts using a metal for plumbing that we now know is a toxin? Precisely.
 
 Ambition, you see, is overrated—like sobriety at a North Calcutta wedding, or traffic laws in the City of Joy.
