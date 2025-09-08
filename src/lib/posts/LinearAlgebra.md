@@ -66,3 +66,27 @@ English takes the scenic route. Through the late nineteenth and early twentieth 
 To justify my position toward the end: when I write on a technical topic, I naturally begin with the deficiencies that once tripped me up. Some of these I can soften by sketching or programming visualizations, but others come from the sheer strangeness of perspective. If you have never left India, for instance, then the mention of a distant European scientist is just another man in a faraway land, with no anchor to fix your attention or spark curiosity. And because history is so often thought of as a dreary, desiccated subject, the people and places tend to feel ornamental, something to skim past. Yet the truth is that what appears inside the tidy bounds of a textbook took millennia to assemble. It was never in the order of the chapter numbers. Ideas came and went through curious misadventures: wars, deaths of kingdoms, obscure scribes, forgotten manuscripts. Sometimes a symbol, an operator, or a concept survived only because of such accidents.
 
 That is why I mix things up—folding in my own anecdotes, weaving what I find in books, gathering scraps from old footnotes into a narrative stitched in my own way, unhinged and unobstructed by a syllabus, meandering as I try to approach the topic from many angles. This cannot be a pedantic exercise; I am no authority. I am only a curious middle-class man of middle age, without the budget of a tenured professor or someone salaried at an endowed university with fat grant money, trying to use his hours wisely, hoping the result might one day make for a worthwhile read. There will be omissions and mistakes, certainly gaps in my grasp of mathematics. I claim no perfection—only the willingness to keep revising, in the spirit of fallibilism itself. Which is really the point: fallibilism doesn’t demand that I get everything right the first time. It tells me it’s natural—even necessary—that my explanations carry errors along with their insights. Instead of freezing an idea in glass, it asks me to keep poking, prodding, reworking, until the wrong bits loosen and fall away. In my context, that means treating every sentence I write, every diagram I sketch, every story I stitch together, as provisional. The best I can do today is not the end of the matter, but simply the next stepping stone. If tomorrow I discover that what I wrote is clumsy, misleading, or just plain wrong, then so much the better—it means I’ve found a place to improve.
+
+**linear equation**
+
+Imagine a teacher writes on the board
+
+$2x + 3 = 7$
+
+and calls it a linear equation. Sounds terrifyingly serious, but it’s really not. The word “linear” comes from “line” as we discussed. That’s all. A linear equation is just an equation whose solutions, when you plot them, make a straight line, when we are talking only two dimensions that is like drawing on the board, or it could be a straight "plane" in space, or a straight something as the number of dimensions keep increasing. 
+
+Take $y = 2x + 1$. If you draw all the pairs $(x, y)$ that satisfy it, you don’t get a circle, a zigzag, or a Mona Lisa, you get a plain straight line. No drama, no curves. It’s the mathematical equivalent of standing in a queue at Howrah station.
+
+So in one variable:
+$2x + 3 = 7$ is linear.
+But $x^2 + 3 = 7$ is not—it’s quadratic, and will happily draw a curve instead of a line.
+
+In two variables:
+$3x + 2y = 6$ is linear. All the $(x, y)$ pairs that work lie neatly on a straight line.
+
+In three variables:
+$x + y + z = 10$ is still linear. Now the solutions don’t form a line, but a flat plane floating in 3-D space. Same idea: flat, straight, no curving around.
+
+In general, a linear equation in $n$ variables looks like:
+
+$a_1x_1 + a_2x_2 + \dots + a_nx_n = b$
