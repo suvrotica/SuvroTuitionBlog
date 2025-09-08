@@ -5,6 +5,21 @@
 	let el = $state<HTMLDivElement>();
 	let id = `mermaid-${crypto.randomUUID()}`;
 
+	// Initialize Mermaid with custom theme
+	mermaid.initialize({
+		startOnLoad: false,
+		theme: "base",
+		themeVariables: {
+			primaryColor: "#bbf",
+			primaryTextColor: "#111",   // dark text inside nodes
+			secondaryColor: "#fbb",
+			secondaryTextColor: "#111", // dark text for "bad" nodes
+			lineColor: "#ccc",          // lighter connector lines
+			tertiaryColor: "#fff",
+			tertiaryTextColor: "#111"
+		}
+	});
+
 	$effect(() => {
 		if (el && code) {
 			mermaid.render(id, code).then(({ svg }) => {

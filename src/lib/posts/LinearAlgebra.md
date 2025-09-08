@@ -17,6 +17,8 @@ published: true
 
 <script>
     import PostBadge from '$lib/components/ui/PostBadge.svelte';
+    import Mermaid from '$lib/components/blog/Mermaid.svelte';
+
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import SanskritVerse from '$lib/components/ui/SanskritVerse.svelte';
     import imageSrc from '$lib/assets/slideshow-images/portrait/Gemini_Generated_Image_ggwm87ggwm87ggwm.png?url';
@@ -90,3 +92,19 @@ $x + y + z = 10$ is still linear. Now the solutions don’t form a line, but a f
 In general, a linear equation in $n$ variables looks like:
 
 $a_1x_1 + a_2x_2 + \dots + a_nx_n = b$
+
+<Mermaid code={`mindmap
+    root((Linear Equation?))
+        Allowed Forms
+            Variables only to 1st power x, x+y, x1+x2+x3
+            Variables multiplied by constant y=mx+c
+            Coefficients nonlinear in external funcs
+            Disguises still OK 3x=2y, x-1=0
+            Linear differential eqs y' + 3y = 0
+        Not Allowed
+            Products of variables xy, xz
+            Powers or roots x^2, √y, x^0.3
+            Trig functions sin x, cos y
+            Logarithms log x, ln y
+            Exponentials e^x, 2^y
+`} />
