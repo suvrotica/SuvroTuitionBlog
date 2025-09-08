@@ -95,16 +95,16 @@ $a_1x_1 + a_2x_2 + \dots + a_nx_n = b$
 
 <Mermaid code={`mindmap
     root((Linear Equation?))
-        Allowed Forms
-            Variables only to 1st power x, x+y, x1+x2+x3
-            Variables multiplied by constant y=mx+c
-            Coefficients nonlinear in external funcs
-            Disguises still OK 3x=2y, x-1=0
-            Linear differential eqs y' + 3y = 0
         Not Allowed
             Products of variables xy, xz
             Powers or roots x^2, √y, x^0.3
             Trig functions sin x, cos y
             Logarithms log x, ln y
             Exponentials e^x, 2^y
+        Allowed Forms
+            Variables only to 1st power x, x+y, x1+x2+x3
+            Variables multiplied by constant y=mx+c
+            Coefficients nonlinear in external funcs
+            Disguises still OK 3x=2y, x-1=0
+            Linear differential eqs y' + 3y = 0      
 `} />
