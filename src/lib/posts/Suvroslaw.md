@@ -9,7 +9,7 @@ tags: ["Calcutta", "H-1b", "American", "Work", "Suvro's Law", "Outsourcing" ]
 
 category: "Work"
 
-date: "2025-09-07"
+date: "2025-09-09"
 
 published: true
 
@@ -57,3 +57,15 @@ So here it is, etched forever:
 Tattoo it on your child’s forehead before you send him to learn coding. Better yet, send him to the gym and Sephora.
 
 Because when the neural nets collapse into glossolalia and the servers start chanting in Sanskrit, the Bengali engineer will still be there, pressing Ctrl+Alt+Del like a desperate Durga. But the paycheck? That’ll go to the model in the corner who smiled better on Zoom.
+
+The future we deserve isn’t the jetpack utopia promised in 1960s Popular Mechanics, it’s a cum-stained IKEA showroom where Alexa finally gets a body—latex, anatomically miscalibrated, and perpetually under firmware update. Forget the whirring turbines of progress; what’s humming in the corner is a 3D-printed Aryan cyborg designed to simultaneously fetch coffee, write code, and endure the moist fantasies of unemployed accountants.
+
+The apologists say, “AI is just statistics, you know, fancy regression with lipstick,” while the evangelists declare, “No, it is Prometheus reincarnate with silicon lungs!” But both tribes miss the sewage river flowing beneath their feet: it doesn’t matter if it’s dumb or divine, the bastard is here to take your seat at the desk, and maybe your seat in the bedroom too.
+
+Imagine a call center staffed not with sallow-eyed Bengalis living on cold samosas and night shifts but with anthropomorphic crash-test dummies, their smiles factory-issued, their assholes lubricated, their HR compliance modules downloaded from SAP. This is the logical endpoint of every corporate “transformation initiative”: the only warm bodies left in offices will be dolls programmed to nod, bend, and not complain about the air conditioning. Humans will be demoted to historical footnotes, like carbon paper or arranged marriages for love.
+
+Here’s the unspeakable truth dressed in clown shoes: most of us have never liked “working with people.” Not our partners, not our bosses, not our so-called teammates—the endless muck parade of small talk and shared misery. Survival has meant tolerating humans you’d rather feed to crocodiles. The AI revolution doesn’t solve this; it dissolves it. Suddenly you don’t need to smile through another quarterly review, you can outsource both your Excel sheet and your orgasms to the same plug-and-play plastic blonde.
+
+The savage need isn’t connection—it’s escape. Escape from the asshole colleague, the needy spouse, the clingy friend. And AI, whether stupid statistics or silicon messiah, promises precisely that: not freedom, but a padded cell where the only voices left are synthetic and obedient.
+
+And what’s worse—people will beg for it.
