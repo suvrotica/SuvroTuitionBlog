@@ -8,7 +8,7 @@ tags: ["Calcutta", "Bengali", "American", "Mathematics", "Linear Algebra" ]
 
 category: "Linear Algebra"
 
-date: "2025-09-04"
+date: "2025-09-11"
 
 published: true
 
@@ -64,6 +64,10 @@ Now, stitched together, “linear algebra” literally means the mending and man
 As for first sightings of the <em>phrase</em> itself, the French get there first. In the mid-nineteenth century you start seeing <strong>algèbre linéaire</strong> orbiting Cauchy’s world of determinants and <em>formes linéaires</em>—not yet a course banner, more a working label for the manipulation of linear forms and systems. It pops up in journals and lectures as a way to fence off the “straight-line” part of algebra from the rest of the menagerie.
 
 English takes the scenic route. Through the late nineteenth and early twentieth centuries, people say <em>matrix theory</em>, <em>determinants</em>, or <em>theory of equations</em>. <strong>Linear algebra</strong> doesn’t really plant its flag until the interwar years and then, decisively, after World War II, when vector spaces and linear transformations become the organizing grammar. You see it settle into American and British syllabi as the course title; the influence of the French structural style helps. A nice tell: Halmos’s 1942 classic is <strong>Finite-Dimensional Vector Spaces</strong>—no “linear algebra” in the title yet—while by the 1950s–60s the same material is routinely taught under that name.
+
+Nicole Oresme [ni-kol uh-REM] was a French philosopher, mathematician, and bishop who lived in the 14th century (c. 1320-1382). He was one of the most original thinkers of the late Middle Ages. While Nicole Oresme did not invent the idea of a "variable" as the symbolic letter (like 'x' or 'y') we use in algebra today, he did invent something arguably more profound and foundational: the concept of graphically representing a changing, variable quantity. Before Oresme, quantities were thought of as static numbers. Oresme was the first to create a system to visualize how a quality (what he called a "form"), such as heat, velocity, or even grace, changed in relation to another quantity, like time or distance.
+
+The idea of using a letter as a placeholder for an unknown or variable number was systematically developed much later, during the Renaissance. The French mathematician François Viète (in the late 16th century) is often credited with being the "father of algebra" for being the first to use letters to represent both unknown quantities and known parameters, which allowed for the creation of general formulas. René Descartes then built on this in the 17th century, popularizing the use of x, y, and z for unknowns and a, b, and c for knowns, which is the system we use today.
 
 To justify my position toward the end: when I write on a technical topic, I naturally begin with the deficiencies that once tripped me up. Some of these I can soften by sketching or programming visualizations, but others come from the sheer strangeness of perspective. If you have never left India, for instance, then the mention of a distant European scientist is just another man in a faraway land, with no anchor to fix your attention or spark curiosity. And because history is so often thought of as a dreary, desiccated subject, the people and places tend to feel ornamental, something to skim past. Yet the truth is that what appears inside the tidy bounds of a textbook took millennia to assemble. It was never in the order of the chapter numbers. Ideas came and went through curious misadventures: wars, deaths of kingdoms, obscure scribes, forgotten manuscripts. Sometimes a symbol, an operator, or a concept survived only because of such accidents.
 
