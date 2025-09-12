@@ -2,7 +2,7 @@
 title: "Reflections on a Schoolboy's Past"
 description: "A complicated palimpsest of ambition, triumph, misadventures, romance, then—shame, regrets—most now like old luggage tags, expired or useless."
 category: 'personal'
-date: '2025-08-13'
+date: '2025-09-12'
 published: true
 ---
 
@@ -46,7 +46,7 @@ published: true
 
 <div class="prose max-w-none">
 
-I remember school through a veil of years of indifference to childhood memories that grownups, at a certain point, must admit to—I do. But mine was a complicated palimpsest of ambition, triumph, misadventures, romance, then—shame, regrets—most now like old luggage tags, expired or useless. I confess, as useless as perhaps the utility for, or the importance of, the places and characters and several linked trivia that I sometimes wake up to, wade, and wallow in, now that I am fifty.
+Like many, I remember school through a veil of years of indifference to childhood memories that grownups, at a certain point, must admit to, and I do unhesitatingly, but mine are a complicated palimpsest of ambition, triumph, misadventures, romance, then—shame, regrets—most now like old luggage tags, expired or useless to recount. I confess, as useless as perhaps the utility for, or the importance of, the places and characters and several linked trivia that I sometimes wake up to, wade, and wallow in, now that I am fifty.
 
 <div class="my-8">
     <ImageSlideshow images={imageUrlsSquare} />
