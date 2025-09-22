@@ -2,7 +2,7 @@
 
 title : "Mahalaya 2025" 
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/Gemini_Generated_Image_jgsc0ajgsc0ajgsc.png"
+thumbnail : "/src/lib/assets/slideshow-images/portrait/Gemini_Generated_Image_m47l5jm47l5jm47l.png"
 
 date: "2025-09-22"
 
@@ -17,7 +17,7 @@ tags: ["Tea", "Durga", "Kolkata", "Calcutta", "India", "Mahalaya", "tits", "Milk
 
 <script>
     import PostImage from '$lib/components/blog/PostImage.svelte';
-    import imageSrc from '$lib/assets/slideshow-images/portrait/Gemini_Generated_Image_jgsc0ajgsc0ajgsc.png?url';
+    import imageSrc from '$lib/assets/slideshow-images/portrait/Gemini_Generated_Image_m47l5jm47l5jm47l.png?url';
     
 </script>
 
