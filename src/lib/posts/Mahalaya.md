@@ -1,1 +1,35 @@
+---
+
+title : "Mahalaya 2025" 
+
+thumbnail : "/src/lib/assets/slideshow-images/portrait/Gemini_Generated_Image_jgsc0ajgsc0ajgsc.png"
+
+date: "2025-09-22"
+
+category : "Calcutta" 
+
+published : true
+
+tags: ["Tea", "Durga", "Kolkata", "Calcutta", "India", "Mahalaya", "tits", "Milk"]
+
+
+---
+
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc from '$lib/assets/slideshow-images/portrait/Gemini_Generated_Image_jgsc0ajgsc0ajgsc.png?url';
+    
+</script>
+
+<PostImage src={imageSrc} alt="depressed man" />
+
+When I write, I understand that no one will be interested in reading it, because I sort of defecate my feelings in turds of words and sentences until I am empty. It's mostly cathartic—being a manic depressive, I just want the bolus of uncomfortable vomit to egress, either as it sometimes happens in real-life confrontations when my glossolalia is toilet-scrubbed American slang, or when I am writing; it's this form of a maneuvered truce with some resemblance to an inner meaning beneath the surface of expletives.
+
+At least a while back, just a few lazy revolutions around the sun, a person couldn't get a book published if his skin color wasn't reflected white enough in the last name, or if he was otherwise in the mainstream newsprint business, or of wealthy descent, or aristocratic origin, or pedigreed from a known famous university in a known white-skinned country. But with the advent of LLMs, the prospect of a white fellow from a first-world country with a wad of cash, or a brown decrepit depressed fuckface killjoy like me writing, has the same end—that no one will believe it's written by a human. Hence, now the level playing field is flat almost. Not that precludes books or blogs being published, but new authors won't be born with ease, and everyone will eat each other's vomit through the LLMs to stay competitive, and the future of writing will be moribund.
+
+I am lamenting the death of good writing in preface to oil my narration of Mahalaya, which I didn't have to even get up from my bed in my darkened Calcutta room as distant speakers blared it to my dirty ear-wax clogged ears. I heard someone install lights outside the building, I envy at the power of myth and fiction and the accompanying frolic that envigorates people to stay animated but which has no effect on me. 
+
+For a foreigner "Mahalaya" may not be very well known term. Mahalaya is that crack of dawn in Bengal’s calendar year when the air goes from sweaty mildew to the faint scent of dew and lamp soot, and people tune in like addicts to a seventy-year-old radio program where a baritone voice chants verses older than their great-grandparents. It’s basically the announcement that Durga, the goddess with ten hands and no time for your excuses, has started her annual migration from Kailash down to Bengal, not in Air India but carried in stories, songs, and a collective gooseflesh that hits millions at once. The thing itself is half religious invocation, half cultural theater, like a mass hypnosis where all the unemployed poets, schoolteachers, housewives, and salaried zombies suddenly believe again in the power of rhythm and ritual. Mahalaya is not the festival—it’s the ignition, the starter pistol, the faint drumbeat of dhaak echoing in the skull telling you the city will soon drown in pandals and neon and your wallet will shrink but your chest will expand. It’s the morning when darkness and light do a brief arm wrestle and the myth says the goddess wins, and for that hour or two you almost believe your own pathetic life might get lifted along with her. Mine won't, my payments are late and I am completely broke, fucked in the face and ass, and running precariously low on the meds that keep me from biting people. 
+
+And I was daydreaming, and I am embarrassed at this, calculating in fact, if all statues of Durga employed all ten hands to milk her two tits, would it make the quality of the rupee ten chai redeemable during the 2025 Puja? As is customary the only safe bet when traveling outside home, is boiled water or drinking your own piss, say when you are out pandal hopping but being genteel I generally prefer milk tea, but that tea has slowly become the stall owner's piss mixed with whatever he wants to call tea. Hence this masturbatory thought. Pardon the indulgence. 
 
