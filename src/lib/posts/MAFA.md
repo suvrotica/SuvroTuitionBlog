@@ -5,7 +5,7 @@ category: "Doggerel-Political"
 
 thumbnail: "/images/placeholders/IMG-20250728-WA0003.jpg"
 
-date: "2025-09-07"
+date: "2025-09-23"
 
 keywords: ["political satire", "doggerel", "MAGA", "Trump", "American politics", "political commentary", "satirical poetry", "US politics", "populism", "right-wing politics", "political humor"]
 
@@ -38,6 +38,11 @@ A department of war will go very far,<br>
 Bombast with bombs, that's already twice. <br>
 Dictators, thugs, defiants paying pals,<br>
 Moonlight Sonata with whiskey on broken ice.<br>
+<br>
+Tylenol makes you autistic, shit caustic,<br>
+Acetaminophen, a pain, even to say it again.<br>
+And vaccines are likes shitting on babies,<br>
+Jesus will make healthcare a righteous shit stain.<br>
 <br>
 Greedy as fuck, my shit gets stuck,<br>
 Like cunts of the posh baby mushy plushy kind.<br>
