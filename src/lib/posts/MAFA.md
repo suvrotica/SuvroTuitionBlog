@@ -75,11 +75,11 @@ Fuck them fully for they know not what,<br>
 It's like to swallow god's oily semen.<br>
 <br>
 Verily thus us, goodly we white men go,<br>
-And frack with impunity the crust.<br>
+And frack with impunity the black crust.<br>
 The rituals are rote, a boat on the money moat,<br>
 Must be safe for in white god we trust.<br>
 <br>
-Also while we are at it, taking a shit,<br>
+Also while we are at it, taking a smelly shit,<br>
 Fuck brown, the black, and the china men.<br>
 Jesus land is only alabaster white,<br>
 Of the white, for the white, by the white, amen.<br>
@@ -169,8 +169,8 @@ They'll shit or piss in their own mouth,<br>
 Fuck dirtiest dumb brown stupids I say.<br>
 <br>
 It's destined it's divine, helluva so fine,<br>
-Brown slavery by fiat plus super-visa pain.<br>
-Yankee cunts won't be free with their cunts,<br>
+Brown slavery by fiat + $100K visa pain.<br>
+And cunts won't be free with their cunts,<br>
 <b>I'll make america a fuck again.</b><br>
 <br><br>
 Postscript: I just think that whatever little opportunity this spark we call life has bestowed upon us—in the form we presently occupy as Homo sapiens—should be used to preserve the planet and all of nature that sustains us. These next four years the Trump ketamine kakistocracy will erase all the good that was ever done and only encourage petty, parochial tendencies and further destruction—and Nazify the already unhinged dipshit right. Indeed, the America where I once lived is extinct, as is all contemporary goodwill toward humanity and the Earth—will be massacred at the altar of frivolous and cheap fibs about differences between man and man that do not exist.
