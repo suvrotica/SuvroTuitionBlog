@@ -42,7 +42,7 @@ Moonlight Sonata with whiskey on broken ice.<br>
 Tylenol makes you autistic, shit caustic,<br>
 Acetaminophen, a pain, even to say it again.<br>
 And vaccines are likes shitting on babies,<br>
-Jesus will make healthcare a righteous shit stain.<br>
+Let's make healthcare a righteous shit stain.<br>
 <br>
 Greedy as fuck, my shit gets stuck,<br>
 Like cunts of the posh baby mushy plushy kind.<br>
