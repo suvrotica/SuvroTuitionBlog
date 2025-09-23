@@ -21,7 +21,7 @@ tags: ["Tea", "Durga", "Kolkata", "Calcutta", "India", "Mahalaya", "tits", "Milk
     
 </script>
 
-<PostImage src={imageSrc} alt="depressed man" />
+<PostImage src={imageSrc} alt="Durga serving milk from her own tits" />
 
 When I write, I understand that no one will be interested in reading it, because I sort of defecate my feelings in turds of words and sentences until I am empty. It's mostly cathartic—being a manic depressive, I just want the bolus of uncomfortable vomit to egress, either as it sometimes happens in real-life confrontations when my glossolalia is toilet-scrubbed American slang, or when I am writing; it's this form of a maneuvered truce with some resemblance to an inner meaning beneath the surface of expletives.
 
