@@ -16,13 +16,16 @@ tags: ["Vagina", "Durga", "Kolkata", "Calcutta", "India", "Physics", "Lights"]
 
 <script>
     import PostImage from '$lib/components/blog/PostImage.svelte';
-    import imageSrc from '$lib/assets/slideshow-images/portrait/Gemini_Generated_Image_wo8hkrwo8hkrwo8h.png?url';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/Gemini_Generated_Image_wo8hkrwo8hkrwo8h.png?url';
+    import imageSrc2 from '$lib/assets/slideshow-images/portrait/Gemini_Generated_Image_bq50hhbq50hhbq50.png?url';
     
 </script>
 
-<PostImage src={imageSrc} alt="Durga pandal like a vagina" />
+<PostImage src={imageSrc1} alt="Durga pandal like a vagina" />
 
 There’s a peculiar sort of madness that descends upon Calcutta—pardon me, Kolkata—come autumn, albeit a floody and messy one this time around. The air, thick with the scent of wilted shiuli flowers and frying luchis in banned hydrogenated oils, begins to crackle with an orgasmic energy that is part reverence, part city-wide block party, part ritual masturbation at a mob scale. At the heart of this glorious chaos is, of course, Ma Durga, the largest vagina known to mythology who has beef with the beefiest beef the buffalo and comes with her family of children gods. But in this temporary fiction, playing a dazzling, electrifying supporting role is the light. By Durga, the light. Without it no lazy Bengali can be convinced to even turn from his smartphone, these days. 
+
+<PostImage src={imageSrc2} alt="Asura aka beef" />
 
 We talk about ‘seeing’ the Puja, but I wonder if we ever truly consider what an astonishing feat that is. We wander from pandal to pandal, our senses besieged by a luminous spectacle—gateways of pure, shimmering light that seem to defy gravity, cascading waterfalls of blue and green that aren’t wet, and deities outlined in auras so bright they hum. It’s a visual symphony. And like any great symphony, it’s the product of a thousand unseen artists and unspoken laws, a grand conspiracy between the unblinking eye of physics and the wonderfully gullible theatre of the human brain.
 
