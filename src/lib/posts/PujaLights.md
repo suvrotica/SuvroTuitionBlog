@@ -66,10 +66,10 @@ But what about the movement? The galloping horses, the dancing figures, the welc
 
 Our visual system isn't a continuous video camera. It takes snapshots. It can process about 10 to 12 separate images per second, perceiving them individually. But when images are flashed faster than this, our brain can't keep up. It gets flustered and does a wonderfully pragmatic thing: it cheats. It blurs the individual flashes together, creating the illusion of continuous motion. The minimum speed at which this happens is called the **flicker fusion frequency**.
 
-The dazzling animations of Puja lighting are nothing more than a series of lights—sometimes thousands of them—being switched on and off with ferocious speed by a micro-controller. A single "frame" of the galloping horse is lit up for a fraction of a second, then it's switched off and the next frame is lit.
+The dazzling animations of Puja lighting are nothing more than a series of lights—sometimes thousands of them—being switched on and off with ferocious speed by a micro-controller. A single "frame" of the galloping horse is lit up for a fraction of a second, then it's switched off and the next frame is lit. This **Illusion of Motion** is given by
 
 $$ 
-\text{Illusion of Motion} = \frac{\text{Series of Still Lights}}{\text{Time} < \text{Flicker Fusion Threshold}} 
+\frac{\text{Series of Still Lights}}{\text{Time} < \text{Flicker Fusion Threshold}} 
 $$
 
 This rapid-fire deception is what transforms static grids of bulbs into fluid, dynamic scenes. The "smoothness" of the motion is a testament to how quickly the lights can be cycled. Old incandescent bulbs were sluggish; they had to heat up and cool down. LEDs, however, are nimble. They can be turned on and off almost instantaneously, allowing for incredibly complex and high-frame-rate animations that our wonderfully lazy brains happily stitch into a seamless moving picture.
