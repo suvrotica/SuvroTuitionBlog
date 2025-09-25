@@ -9,7 +9,7 @@ tags: ["Calcutta", "H-1b", "American", "Work", "Suvro's Law", "Outsourcing" ]
 
 category: "Work"
 
-date: "2025-09-09"
+date: "2025-09-25"
 
 published: true
 
@@ -41,11 +41,13 @@ Suvro’s Law. Write it in blood, engrave it on HR’s toilet walls, whisper it 
 
 Ugly engineers? Finished. Kaput. Banished like pan stains from Park Street walls. The age of ugly, hairy, halitosis-ridden engineers is over, my friend. The code writes itself now, the servers fix themselves, but the boss’s ego still needs its weekly enema. Hence, Suvro’s Law.
 
+While for some time people will go back and forth between “AI is stupid statistics” and “AI is super genius,” the fact still precludes the necessity of humans. Even if AI was just a jumbo dictionary hiding behind some Indian call-center screen with sweaty AI Turks working on pretending to be all that, the problem is we inherit a future we desire — and that future is to be surrounded by AI anthropomorphically dressed up as white, blonde, blue-eyed, docile Muslim slave robot girls who'd take it up her bum when asked, or do your calculus homework, or boring office chores if need be. So there's no escape, because just this hope will fuel all the layoffs, and finally the only ones who have the job are these plastic mannequins with slippery lubed assholes or real humans who look like it; the rest are history. No struggle is going to restore the basic, savage human need to get away from humans they don't fucking like, and we have, for a long time, had to put up with partners, teams, classmates, officemates, and suchmucks of all groups — now no more.
+
 Look around: the post-AI office isn’t an office, it’s a Lakmé fashion show with a Jira board. The dev standup is five models in Zara shirts nodding “yes sir” to a boss who thinks Kafka is just another database. Meanwhile, the Bengali engineer—half-baked, fully fried in mustard oil, reeking of turmeric and philosophical despair—is shoved into the basement to maintain 1970s COBOL code that powers the ATM your grandmother still trusts more than UPI.
 
 Recruiters don’t ask about data structures anymore. They ask, “Can you debug an LLM hallucination while smiling photogenically for LinkedIn?” They don’t want a system architect; they want an Instagrammable face who can say “cloud-native microservices” without burping fish curry.
 
-And America? Forget it. Trump’s brown-ban turned the land of opportunity into an uncle’s gated colony with “No Curry” signs. Silicon Valley is done importing your résumé and your alu posto Tupperware. Now India itself is the arena, the post-apocalyptic IT mela where chatbots write chatbots, HR bots reject you with machine-generated empathy, and the final interview round is a literal beauty pageant.
+And America? Forget it. Trump’s $100K brown-ban turned the land of opportunity into an uncle’s gated colony with “No Curry” signs. Silicon Valley is done importing your résumé and your alu posto Tupperware. Now India itself is the arena, the post-apocalyptic IT mela where chatbots write chatbots, HR bots reject you with machine-generated empathy, and the final interview round is a literal beauty pageant.
 
 So the Bengali species adapts. We pivot from “software engineer” to “AI ethics auditor,” which is corporate slang for “guy who won’t shut up about colonialism in datasets.” We gherao boardrooms like we once did Jadavpur classrooms, chanting about algorithmic bias until someone offers us a contract just to shut us up. And yes, we sweat, fart, and smell bad all the way. It’s our constitutional right.
 
