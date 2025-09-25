@@ -27,7 +27,12 @@ Thus I bigot this valley of turds.  <br>
 I piss on the side other a lake,  <br>
 On which swims many birds.  <br>
   <br>
-My gas fills the hot noon air,  <br>
+When I poop heads of the great gods,<br>
+I poot mellifluous re sa ma pa dha.<br>
+Out comes jesus trinity muhammed allah,<br>
+My favorite krishna poking naked radha.<br>
+<br>
+My pious gas fills the hot noon air,  <br>
 Explosively holy the aftermath.  <br>
 The stench that reeks—takes weeks,  <br>
 To dissipate when you do the math.  <br>
