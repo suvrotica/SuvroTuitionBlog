@@ -47,7 +47,7 @@ My poop burns my asshole on exit.  <br>
 My hole is gaped wide I confide,  <br>
 There's nothing to do to fix it.  <br>
   <br>
-May may be even more hot,  <br>
+October may be even more hot,  <br>
 I am sure I'll shoot more shit then.  <br>
 I may drown this planet if it's fluid,  <br>
 I'll shit the cosmic diarrheal zen.<br>
