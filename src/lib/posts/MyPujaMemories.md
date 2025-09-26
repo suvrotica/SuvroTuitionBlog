@@ -1,10 +1,10 @@
 ---
 
-title : "Mahalaya 2025" 
+title : "My Puja Memories" 
 
 thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20250927-WA0000.jpg"
 
-date: "2025-09-24"
+date: "2025-09-27"
 
 category : "Calcutta" 
 
