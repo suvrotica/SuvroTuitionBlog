@@ -7,7 +7,7 @@ thumbnail: "/images/placeholders/IMG-20250728-WA0011.jpg"
 
 date: "2025-09-27"
 
-keywords: ["doggerel", "Bengali man", "social satire", "political critique", "profane poetry", "Kolkata", "Indian society", "cultural identity", "cynicism", "personal angst"]
+tags: ["doggerel", "Bengali man", "social satire", "political critique", "profane poetry", "Kolkata", "Indian society", "cultural identity", "cynicism", "personal angst"]
 
 published: true
 
