@@ -1,10 +1,10 @@
 ---
 
-title : "Why Suvrotica, Why?" 
+title : "Why I write & draw, what I do?" 
 
 thumbnail : "/src/lib/assets/slideshow-images/portrait/Gemini_Generated_Image_3fa8v73fa8v73fa8.png"
 
-date: "2025-09-26"
+date: "2025-09-27"
 
 category : "Bipolar Depression" 
 
@@ -25,6 +25,8 @@ tags: [ "Depression", "Calcutta", "India", "Mania", "Writing", "Art"]
 <PostImage src={imageSrc1} alt="why" />
 
 Look, I write because depression makes you introspect and feel forlorn, and mania gives you that irritated urge to vomit to an unintentional, uninterested readership, so I don't really care if AI writes fucking better; it can't compete with a sick man with a pathology that makes me scribble nonstop nonsense. This is what people don't get: we are organic, and although most people do stuff for means to an end—to earn a living—not everyone does; they are living their lives. My blog is like that, like taking a shit. As long as a robot can't take a shit, there's no comparison. I don't want to deny the darkness inside me anymore. And it's my sincere wish that, by screaming the clues and hints about my mental health, I might make a difference to those who don't have a voice and who suffer silently. Perhaps, in a way, the imperfections that I try to delineate in characters are all part of me; that's how I know they exist, and this negotiated encounter with my fears and fragility may help someone else overcome their demons.
+
+I could as easily fill this blog with an oversupply of superfluous, sanctimonious, glib moral drivel that I don’t myself adhere to; instead, I have the courage to write what I think, gathered from my subjective, flawed, almost rancid thinking of an objective reality of which I am a trifling part. Trifling would be too strong a statement — given how microscopic I am, it would be almost a miracle if you ever discover any of my writing or this blog. The expectation of nuance in my writing is like not expecting microbial infections in a urinal, because that’s what this is. I literally piss my mind out when I write. I have very few filters, and I will explain in some detail why even that is sort of unnecessary in the world we have.
 
 Although some of the material in these posts is part of my extended inner monologue, there's no clear derivation of the deviant emotion, an autobiographical reveal, or a bona fide sketch of the repressed feeling. Maybe in a very generous, compartmentalized way, like the level of trapped mercury in a vessel. It could be measuring various things, and you wouldn't be able to tell "what" if the labels on the unit went missing. When I draw a grotesque face, it may be an indication of my emotions, but it's not connected in a meaningful way, and taking it literally at face value and making a judgment would be silly. If we can't laugh at our own confabulations, then we risk misunderstanding our own place in the universe and starting to take things too seriously. And it may hurt our anthropocentric ego, but putting human faces on animals can have lurid results, I've noticed.
 
