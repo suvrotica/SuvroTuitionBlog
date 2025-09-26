@@ -1,6 +1,6 @@
 ---
 
-title : "Why I write & draw, what I do?" 
+title : "About my scribbles & doodles!" 
 
 thumbnail : "/src/lib/assets/slideshow-images/portrait/Gemini_Generated_Image_3fa8v73fa8v73fa8.png"
 
