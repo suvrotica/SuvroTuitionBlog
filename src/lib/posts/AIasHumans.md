@@ -32,9 +32,9 @@ But before we start coddling our robot overlords, we need to understand their so
 
 Metrics for machine minds? A nightmare waiting to happen. But then again, aren't we all nightmares in progress?
 
-The shits are fartsy, I shit on tits,
+**The shits are fartsy, I shit on tits,
 But I've still got shits to shit.
 And tits to fondle before I shit,
-And tits to fondle before I shit.
+And tits to fondle before I shit.**
 
-Excerpt from ~"Shitting on Tits on a Rainy Evening"~ by ~The Ghost Who Shits.~
+Excerpt from **"Shitting on Tits on a Rainy Evening"** by **The Ghost Who Shits.**
