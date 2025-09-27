@@ -18,7 +18,7 @@ tags: ["robot", "ai", "AI", "Calcutta", "India"]
 <script>
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20240910-WA0006.jpg?url';
-    
+    import imageSrc2 from '$lib/assets/slideshow-images/portrait/IMG-20250928-WA0002.jpg?url';
     
 </script>
 
@@ -38,3 +38,5 @@ And tits to fondle before I shit,
 And tits to fondle before I shit.**
 
 Excerpt from **"Shitting on Tits on a Rainy Evening"** by **The Ghost Who Shits.**
+
+<PostImage src={imageSrc2} alt="shit on tits" />
