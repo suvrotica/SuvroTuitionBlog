@@ -4,7 +4,7 @@ title : "My Puja Memories"
 
 thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20250927-WA0000.jpg"
 
-date: "2025-09-27"
+date: "2025-09-28"
 
 category : "Calcutta" 
 
