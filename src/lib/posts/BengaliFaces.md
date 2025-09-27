@@ -18,6 +18,7 @@ tags: ["Faces", "Obese", "Kolkata", "Calcutta", "Fat", "Sphere", "tits", "Buttoc
 <script>
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20250927-WA0001.jpg?url';
+        import imageSrc2 from '$lib/assets/slideshow-images/portrait/IMG-20250927-WA0004.jpg?url';
 
     
 </script>
@@ -30,7 +31,9 @@ Faces, you see, are ordinarily annoying polygons. Squarish jaws, triangular nose
 
 It begins—as all great disasters do—innocently enough, deep inside double-helical chaos. The human genome, you may recall, is a mad librarian shuffling pages randomly, giggling maniacally, and hoping something coherent emerges. Faces develop primarily under the dictatorship of genes like *SHH* (Sonic hedgehog—yeah, biology's got jokes), *FGF8* (Fibroblast growth factor 8) , and *BMP4* (Bone morphogenetic protein 4) . These regulators decide the spacing, the proportion, the contours. They act like finicky interior decorators bickering over furniture placement, insisting the eyes should never be too close or too far, that the nose must protrude but not too far—always a frustrating dance, a compromise, a biological détente.
 
-But spherical faces? They're an intentional accident, a poetic oxymoron, a deranged peace treaty between competing genes: equal but unexpected growth rates in the zygomatic arches, maxilla, mandible—bones playing a bizarre democracy of growth, achieving equilibrium, rejecting the tyranny of rectangles and trapezoids. It's democracy taken literally, equality run amok; every angle is a right angle turned wrong, every edge rounded off in a rebellious defiance of craniofacial hegemony.
+But spherical faces? They're an intentional accident, a poetic oxymoron, a deranged peace treaty between competing genes: equal but unexpected growth rates in the zygomatic arches, maxilla, mandible—bones playing a bizarre democracy of growth, achieving equilibrium, rejecting the tyranny of rectangles and trapezoids. It's democracy taken literally, equality run amok; every angle is a right angle turned wrong, every edge rounded off in a rebellious defiance of craniofacial hegemony. Other possibilities would be devastating, and we do talk about two-faced duplicitous crooks and politicians all the time. 
+
+<PostImage src={imageSrc2} alt=" two faced crook" />
 
 Underneath this biological egalitarianism lies adipose—fat cells smugly proliferating beneath the skin, subcutaneous insurgents laying siege to cheekbones, jawlines, making spherical what's angular, making cherubic what's chiseled. Fat—biological butter—oozes effortlessly into cheeks, jowls, chins, a relentless lipid insurgency. And just as planets owe their rotundity to gravitational symmetry—Newton would have approved—the spherical face owes its roundness to the smooth uniformity of this adipose insurrection.
 
