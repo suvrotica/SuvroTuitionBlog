@@ -19,13 +19,15 @@ tags: ["Faces", "Obese", "Kolkata", "Calcutta", "Fat", "Sphere", "tits", "Buttoc
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20250927-WA0001.jpg?url';
         import imageSrc2 from '$lib/assets/slideshow-images/portrait/IMG-20250927-WA0004.jpg?url';
-
+import imageSrc3 from '$lib/assets/slideshow-images/portrait/IMG-20250927-WA0005.jpg?url';
     
 </script>
 
 <PostImage src={imageSrc1} alt="Bengali Fuck Face " />
 
-Biology for a Bengali fuckface isn't just a science; biology is poetry—wet, slimy, oddly pungent poetry about organisms fumbling blindly through existence, never really sure whether they're evolving or just fucking around, hoping something sticks. And among the billions of biology's practical jokes, among its inexplicable whimsies—one stands proudly spherical: the baffling biology of round faces.
+Biology for a Bengali fuckface isn't just a science; biology is poetry—wet, slimy, oddly pungent poetry about organisms fumbling blindly through existence, never really sure whether they're evolving or just fucking around, hoping something sticks. And among the billions of biology's practical jokes, among its inexplicable whimsies—one stands proudly spherical: the baffling biology of round faces. And I am not talking about the garden variety piranha teeth — teat-biters — ladies be careful please! 
+
+<PostImage src={imageSrc3} alt="Bengali Piranha " />
 
 Faces, you see, are ordinarily annoying polygons. Squarish jaws, triangular noses, trapezoidal mouths, octagonal chins—an endlessly dull geometry lesson in flesh. But once in a blue chromosome, biology tosses out the rule book (if indeed it ever bothered having one), and a spherical visage emerges, perfectly round, unnervingly symmetrical, like a pancake cooked by an obsessive-compulsive deity. How does this happen? Let's dissect this atrocity, cell by cell, gene by disgruntled gene.
 
