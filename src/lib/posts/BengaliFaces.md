@@ -25,7 +25,7 @@ import imageSrc3 from '$lib/assets/slideshow-images/portrait/IMG-20250927-WA0005
 
 <PostImage src={imageSrc1} alt="Bengali Fuck Face " />
 
-Biology for a Bengali fuckface isn't just a science; biology is poetry—wet, slimy, oddly pungent poetry about organisms fumbling blindly through existence, never really sure whether they're evolving or just fucking around, hoping something sticks. And among the billions of biology's practical jokes, among its inexplicable whimsies—one stands proudly spherical: the baffling biology of round faces. And I am not talking about the garden variety piranha teeth — teat-biters — ladies be careful please! 
+Biology for a Bengali fuckface isn't just a science; biology is poetry—wet, slimy, oddly pungent poetry about organisms fumbling blindly through existence, never really sure whether they're evolving or just fucking around, hoping something sticks. And among the billions of biology's practical jokes, among its inexplicable whimsies—one stands proudly spherical: the baffling biology of round faces. And I am not just talking about the garden variety plump boy with piranha teeth — teat-biters — ladies be careful please! Those are thin-lipped bastards, cute, but especially damaging to your tits. 
 
 <PostImage src={imageSrc3} alt="Bengali Piranha " />
 
