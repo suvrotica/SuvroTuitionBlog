@@ -20,6 +20,7 @@ tags: ["Faces", "Obese", "Kolkata", "Calcutta", "Fat", "Sphere", "tits", "Buttoc
     import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20250927-WA0001.jpg?url';
         import imageSrc2 from '$lib/assets/slideshow-images/portrait/IMG-20250927-WA0004.jpg?url';
 import imageSrc3 from '$lib/assets/slideshow-images/portrait/IMG-20250927-WA0005.jpg?url';
+    import imageSrc4 from '$lib/assets/slideshow-images/portrait/IMG-20250927-WA0006.jpg?url';
     
 </script>
 
@@ -53,4 +54,6 @@ An FRI approaching $1$ is a face absurdly round, painfully perfect—a geometry 
 
 Ultimately, biology's spherical faces prove the universe's sly sense of humor—faces fashioned deliberately round because nature abhors perfect edges as vehemently as vacuum. So here we are, billions of years after life crawled out of primordial slime, gazing at spherical faces, marveling at biology’s quirks, bemused by nature’s whimsy.
 
-Biology is funny—until, of course, you realize you're the punchline.
+Biology is funny—until, of course, you realize you're the punchline. And there are more ways than a sphere, for instance, that adipose likes to pool, but that would make the matter too homely for the refined readership. Here's an alternate sort of appearance very common in affluent gatherings and NRI infestations. 
+
+<PostImage src={imageSrc4} alt="Bengali NRI" />
