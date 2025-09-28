@@ -32,6 +32,11 @@ I poot mellifluous re sa ma pa dha.<br>
 Out comes jesus trinity muhammed allah,<br>
 My favorite krishna poking naked radha.<br>
 <br>
+Coming out the puja pandal junk food,<br>
+Kulfi, bhelpuri, achar and masala pan.<br>
+The neon indoctrination heard alongside,<br>
+Torah, Bible, Gita and the fucking Koran.<br>
+<br>
 My pious gas fills the hot noon air,  <br>
 Explosively holy the aftermath.  <br>
 The stench that reeks—takes weeks,  <br>
