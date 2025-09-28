@@ -31,7 +31,7 @@ I live inside that hollow. At fifty, I am śūnya embodied, a cipher in Calcutta
 
 People imagine “nothingness” as bleak. But zero has always been promiscuous, paradoxical. In mathematics, zero divided by anything is zero, yet anything divided by zero is undefined, catastrophic. Zero both annihilates and destabilizes. My life, too, is zero as weapon: ambition divided by age = undefined, possibility times loneliness = zero. A null set wearing bifocals.
 
-Yet here’s the cruel irony: zero isn’t nothing. It’s structure, it’s scaffold. Zero makes place value possible. Ten is one followed by zero, not just “one and some more.” Without zero, you can’t leap into calculus, can’t launch rockets, can’t code this very machine vomiting my words back at me. Even black holes — the astronomical cousins of śūnya — are nothingness with teeth. They devour light, but in doing so, they sculpt galaxies.
+Yet here’s the cruel irony: zero isn’t nothing. It’s structure, it’s scaffold. Zero makes place value possible. Ten is one followed by zero, not just “one and some more.” Without zero, you can’t leap into calculus, can’t launch rockets, can’t code a computer, or as it is in fashion these days, a large lying machine. Even black holes — the astronomical cousins of śūnya — are nothingness with teeth. They devour light, but in doing so, they sculpt galaxies.
 
 So what is my zero? A collapse? Or a curvature pulling meaning toward me? Kierkegaard saw nothingness and shook; Nietzsche pirouetted with it until he cracked his spine; Beckett made vaudeville out of despair. Me? I light up a half-dead screen and type. This blog is my absurd calculus: equations scribbled into the void. If the void doesn’t care, all the better.
 
