@@ -18,6 +18,8 @@ published: true
     import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20250928-WA0007.jpg?url';
   import imageSrc2 from '$lib/assets/slideshow-images/portrait/IMG-20250928-WA0008.jpg?url';
 	import imageSrc3 from '$lib/assets/slideshow-images/portrait/IMG-20250928-WA0009.jpg?url';
+	import imageSrc4 from '$lib/assets/slideshow-images/portrait/IMG-20250929-WA0002.jpg?url';
+	
 </script>
 
 <PostImage src={imageSrc1} alt="skull man" />
@@ -46,6 +48,8 @@ published: true
 In my fleetingly short honeymoon as an entrepreneur, I did make some business projection errors and had an uncomfortable feeling about some assumptions about how much of reality was really under my control. The variables were real and properly defined, and the logic was impeccable, but it didn't work out because business isn't like physics. Nature obeys the laws of physics, and if you have understood the problem and your equation models or approximately approaches the real physical phenomenon, your products wouldn't betray you like the extremely venal and impecunious archipelago of the business world in India in which I chose to work, inadvertently. Everything seemed alright from a distance, but when I landed in India, trouble ensued. It didn't take long for the savage proclivities to bare their teeth and show their real selves. Be warned, would-be travelers, it's very reptilian; if not the venom, it's the spit that's going to get you.
 
 Perhaps a little light on the nature of the trouble is in order. For example, if you make pressure cookers, you're good if at normal atmospheric pressure and temperature of 100°C, your cooker without pressure boils water for eggs, and faster if you use pressure. If you expect this to work at an elevation of 65 miles on a suborbital jaunt, it wouldn't—that's setting up the expectation against the laws of physics. But a human conspiracy at the equator can't ordinarily do anything to subvert the boiling point of water to make you look bad, and your product would continue to deliver boiled eggs anywhere within the parameters provided you correctly specify them.
+
+<PostImage src={imageSrc4} alt="thug man" />
 
 This is not the same experience you can expect in a business equation, even if you have been an unyielding stickler for defining the parameters. And extraordinarily, partners, associates, or investors turned out, in my case, to be seditious liars who lied through their misaligned teeth about their abilities and commitments. But they were not the exception but the rule. You, a person of clear arithmetic, would be persuaded to think that they would follow through or have scruples, but they don't; you can't assume they even intend to—"yes" is often a hidden chuckle and "hell-no." But I found out after my boat sank.
 
