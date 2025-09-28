@@ -6,7 +6,7 @@ thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20250928-WA0003.jpg"
 
 date: "2025-09-28"
 
-category : "Mathematics" 
+category : "Math" 
 
 published : true
 
