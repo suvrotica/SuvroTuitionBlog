@@ -18,6 +18,7 @@ tags: ["Vagina", "Durga", "Kolkata", "Calcutta", "India", "Physics", "Lights"]
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import imageSrc1 from '$lib/assets/slideshow-images/portrait/Gemini_Generated_Image_wo8hkrwo8hkrwo8h.png?url';
     import imageSrc2 from '$lib/assets/slideshow-images/portrait/Gemini_Generated_Image_bq50hhbq50hhbq50.png?url';
+    import imageSrc3 from '$lib/assets/slideshow-images/portrait/IMG-20250929-WA0003.jpg?url';
     
 </script>
 
@@ -25,6 +26,7 @@ tags: ["Vagina", "Durga", "Kolkata", "Calcutta", "India", "Physics", "Lights"]
 
 There’s a peculiar sort of madness that descends upon Calcutta—pardon me, Kolkata—come autumn, albeit a floody and messy one this time around. The air, thick with the scent of wilted shiuli flowers and frying luchis in banned hydrogenated oils, begins to crackle with an orgasmic energy that is part reverence, part city-wide block party, part ritual masturbation at a mob scale. At the heart of this glorious chaos is, of course, Ma Durga, the largest vagina known to mythology who has beef with the beefiest beef the buffalo and comes with her family of children gods. But in this temporary fiction, playing a dazzling, electrifying supporting role is the light. By Durga, the light. Without it no lazy Bengali can be convinced to even turn from his smartphone, these days. Durga is like any other twat, a selfish concentrate of collapsing concentrics of concubine cunt forms idolized as a superstar that likes self-publicity and likes to make promises she’s never going to fucking keep. It’s just Bengalis, as a spineless race, are too foolish to see through her transparent skullduggery, because in private we are made from the same distasteful twat-cum-marmalade shit paste— all superficial patina gloss, but underneath it’s a city that doesn’t even have proper drainage, and every year we are drowning in neighborly feces and urine love while the government sinecures grow fat at our expense.
 
+<PostImage src={imageSrc3} alt="Durga pandal like a spider" />
 
 Having sampled very few people and places, I still know the astonishing ranges between good and bad people that I try to draw a few from time to time. And because evolution has equipped us to remember the darker experiences longer, I linger on the shady characters more, which is why you have very few pretty people smiling back at you. So here is Asura, Durga’s arch nemesis. Definitely not a smile!!! 
 
