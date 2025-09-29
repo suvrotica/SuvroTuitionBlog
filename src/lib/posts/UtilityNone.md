@@ -16,7 +16,7 @@ published: true
     import PostBadge from '$lib/components/ui/PostBadge.svelte';
   import PostImage from '$lib/components/blog/PostImage.svelte';
     import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20250929-WA0005.jpg?url';
-  
+  import imageSrc2 from '$lib/assets/slideshow-images/portrait/IMG-20250929-WA0007.jpg?url';
 	
 </script>
 
@@ -52,6 +52,8 @@ Before Artificial Intelligence swaggered into town, all gleaming silicon phallus
 Let me state clearly, in a tone neither humble nor bragging (for humility is too noble a word, and bragging requires at least the illusion of achievement), that expecting any utility from me at this point would indicate severe cognitive impairment on your part. Examine the economics of it—a depressing calculation, granted, but bear with me: my resource consumption (inhalation, ingestion, excretion, fartation—my very existence as an elaborate and noisy chemical reactor) vastly exceeds my productive output. I'm a fiscal deficit in biological form, a perpetual black hole sucking resources, converting them into profound disappointment, and loudly, obnoxiously, into malodorous flatulence.
 
 Even calling myself a "creature" seems pretentious. "Creature" implies something fascinating, something zoological, something Darwin might have pondered as he fondled his beard and fantasized evolutionarily inappropriate fantasies. Nope—I'm simpler than that. I'm what happens when entropy wears pants. I'm an oily film atop north-calcutta’s cultural-scum pond, toxic yet insipid, persistent yet unwanted, and as impossible to eliminate completely as those sari wearing bengali cockroaches who outlive nuclear winters, political revolutions, and endless cycles of inept municipal governments.
+
+<PostImage src={imageSrc2} alt="cosmic janitor" />
 
 But fear not, dear readers—for whom I harbor only contemptuous yet loving disdain—nature abhors a vacuum, even if society abhors me. The great cosmic janitor of the universe will sweep away this particular lump of irrelevance eventually, recycling my molecules into something marginally less disappointing. Until then, rest assured, I’ll be here, doing exactly what I'm good at: nothing useful, but still taking up precious space and resources, shitting, farting, complaining, and above all, making your miserable existences just slightly more tolerable by comparison.
 
