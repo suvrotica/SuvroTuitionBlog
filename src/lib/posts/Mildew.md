@@ -52,3 +52,8 @@ So fuck everyone else I hope they die,<br>
 And rot in misery and sickening piss.<br>
 A giant phallus will fuck every ass,<br>
 But send me a rose and a flying kiss.<br>
+<br>
+My shit deep brown, I always frown,<br>
+Fart nonstop, lopsided ninny dance hop.<br>
+Indigestion problem, absolutely no shame,<br>
+Anything I touch is guaranteed a flop.<br>
