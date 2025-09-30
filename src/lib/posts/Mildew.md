@@ -26,7 +26,7 @@ tags: ["bengali", "fat", "Indian", "Calcutta", "India"]
 <br>
 Ass fucked and in queue, mildew,<br>
 Urine, shit mixed aroma my smell.<br>
-A Bengali by birth Indian by hearth,<br>
+A Bengali by birth Indian by girth,<br>
 I am fucked forever twice in hell.<br>
 <br>
 Also frame me a married CM PM photo,<br>
