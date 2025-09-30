@@ -30,9 +30,9 @@ A Bengali by birth Indian by hearth,<br>
 I am fucked forever twice in hell.<br>
 <br>
 Runny my nose, new virus I suppose,<br>
-Durga pandals full of obese girls.<br>
+Durga pandals full of obese fucking girls.<br>
 Girls so fat I won't want to shit on them,<br>
-Leave alone fondle what's inside the hem.<br>
+Leave alone fondle their wet pubic curls. <br>
 <br>
 The frog that pissed a day or two back,<br>
 Has made mud a mainstay of the city.<br>
