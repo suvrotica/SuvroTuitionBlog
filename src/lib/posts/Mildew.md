@@ -29,6 +29,10 @@ Urine, shit mixed aroma my smell.<br>
 A Bengali by birth Indian by hearth,<br>
 I am fucked forever twice in hell.<br>
 <br>
+Also frame me a married CM PM photo,<br>
+Before I die I want to take a shit on that.<br>
+Also shoot a wad of cum, then verily piss,<br> 
+And vomit the holy regurgitated scat.<br><br>
 Runny my nose, new virus I suppose,<br>
 Durga pandals full of obese fucking girls.<br>
 Girls so fat I won't want to shit on them,<br>
