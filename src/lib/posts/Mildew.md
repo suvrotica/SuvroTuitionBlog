@@ -18,7 +18,7 @@ tags: ["bengali", "fat", "Indian", "Calcutta", "India"]
 <script>
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251001-WA0003.jpg?url';
-    
+    import imageSrc2 from '$lib/assets/slideshow-images/portrait/IMG-20251002-WA0003.jpg?url';
     
 </script>
 
@@ -80,3 +80,4 @@ Also I am fifty that's droopy fucking old,<br>
 Shriveled tiny dick & peanuts for balls.<br>
 The piss is luxurious yellow and sweet,<br>
 Life is what is between nature's calls. <br>
+<PostImage src={imageSrc2} alt="my dick" />
