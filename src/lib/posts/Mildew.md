@@ -75,4 +75,8 @@ Anything I touch is guaranteed a flop.<br>
 Indian jobless jape tattered bedcover cape,<br>
 Super power a willingness to always shit.<br>
 That's about it really life sucks snot,<br>
-Up my ass a giant dildo that won't fit.<br>
+Up my ass a giant dildo that won't fit.<br><br>
+Also I am fifty that's droopy fucking old,<br>
+Shriveled tiny dick & peanuts for balls.<br>
+The piss is luxurious yellow and sweet,<br>
+Life is what is between nature's calls. <br>
