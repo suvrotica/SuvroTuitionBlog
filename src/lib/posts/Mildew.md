@@ -33,7 +33,7 @@ Also frame me a married CM PM photo,<br>
 Before I die I want to take a shit on that.<br>
 Also shoot a wad of cum, then verily piss,<br> 
 And vomit the holy regurgitated scat.<br><br>
-On TikTok brown fucks in pink frilly froks,<br>
+On TikTok brown fucks in pink frocks,<br>
 Their shit eating grin on a silly mustache.<br>
 Ugly morbid obese galumphing twerking,<br>
 Slippery diarrhea turds after petty cash.<br>
