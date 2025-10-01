@@ -57,3 +57,8 @@ My shit deep brown, I always frown,<br>
 Fart nonstop, lopsided ninny dance hop.<br>
 Indigestion problem, absolutely no shame,<br>
 Anything I touch is guaranteed a flop.<br>
+<br>
+Indian jobless jape tattered bedcover cape,<br>
+Super power a willingness to always shit.<br>
+That's about it really life sucks snot,<br>
+Up my ass a giant dildo that won't fit.<br>
