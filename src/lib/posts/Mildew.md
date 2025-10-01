@@ -48,6 +48,10 @@ Durga pandals full of obese fucking girls.<br>
 Girls so fat I won't want to shit on them,<br>
 Leave alone fondle their wet pubic curls. <br>
 <br>
+But the bulbous boobs are full of milk,<br>
+Milk of acerbic bellicose belligerence.<br>
+Once you suck a tit full of tantrums,<br>
+Forever from your anus you bleed hence.<br><br>
 The frog that pissed a day or two back,<br>
 Has made mud a mainstay of the city.<br>
 Mud is here mud is there fucking everywhere,<br>
