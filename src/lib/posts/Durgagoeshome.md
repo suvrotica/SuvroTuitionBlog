@@ -24,7 +24,7 @@ tags: [ "Durga", "Kolkata", "Calcutta", "India", "Dashasmi", "plastic"]
 
 <PostImage src={imageSrc1} alt="me" />
 
-Well Durga the poor disposable Chinese girl, unlike the other billions of non-disposable Chinese plastic parts of her millions of fuckface devotees that will now get stuck in pipes and sewers, flung around hither and thither—because, fuck it, we are Indians. Because she of course has to go back to China, that's the way the fiction is written to please and repeat in endless cycles. Or if you insist on the literal, physical geography, then to Kailash, the Tibet Autonomous Region of China.
+Well at least Durga the poor disposable Chinese girl gets to go home, unlike the other billions of non-disposable Chinese plastic parts of her millions of fuckface devotees that will now get stuck in pipes and sewers, flung around hither and thither—because, fuck it, we are Indians. Because she of course has to go back to China, that's the way the fiction is written to please and repeat in endless cycles. Or if you insist on the literal, physical geography, then to Kailash, the Tibet Autonomous Region of China.
 
 She can, for a while, finally rest in peace. China is a far better maintained country, where drains don’t cough up dead gods, where the state at least pretends to value order, while we—armed with cymbals and bhog-laden hands—proceed to drown the goddess herself in the very water we claim to revere. We give her five days of adoration, tilaks and turmeric, then chuck her into the Ganga like she’s a plastic bag of takeaway biryani.
 
