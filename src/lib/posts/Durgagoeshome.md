@@ -18,7 +18,7 @@ tags: [ "Durga", "Kolkata", "Calcutta", "India", "Dashasmi", "plastic"]
 <script>
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251002-WA0019.jpg?url';
-    
+    import imageSrc2 from '$lib/assets/slideshow-images/portrait/IMG-20251002-WA0034.jpg?url';
     
 </script>
 
@@ -46,7 +46,17 @@ Meanwhile, her “real” home in Tibet is silent. Glaciers grind on, peaks rise
 
 So Bijoya Doshomi is less a festival than a palimpsest of Bengal’s history. Agrarian myth, colonial display, nationalist politics, consumerist kitsch—all piled one on top of another, like clay over straw over bamboo. A single immersion scene contains three centuries of cultural history, condensed into one absurd and moving act. Durga is daughter, goddess, nation, Broadway diva, municipal waste.
 
-That’s the peculiar genius of India: only here could an ecological disaster also be a love story, a political allegory, and a tearful family drama, all enacted simultaneously on the banks of a dying river. But I look forward to the sweets but I know the people around me are cheapskates so I'll have to buy them myself whenever my payment arrives. 
+That’s the peculiar genius of India: only here could an ecological disaster also be a love story, a political allegory, and a tearful family drama, all enacted simultaneously on the banks of a dying river. But I look forward to the sweets but I know the people around me are cheapskates so I’ll have to buy them myself whenever my payment arrives. Tea time, between now and the new year, will be my kingdom, my consolation prize, my sugar parliament. Not the tired Marie biscuits that dissolve into wallpaper paste the second they hit hot tea, not the stingy handful of Parle-Gs. I mean the real parade: cakes, biscuits, sweets, and yes, the occasional foreign invader, smuggled in by me if no one else will bother.
+
+Biscuits are the opening act. Bourbons with their pseudo-chocolate cream, Good Day cashew with its buttery ridges, Danish butter cookies in their round tins that always end up holding sewing needles and buttons. Then the Indian staples: crumbly nankhatai (naan-kha-taai, from Persian roots, meaning literally “bread biscuit”), rich with ghee and cardamom.
+
+Cakes form the mid-season crescendo. Fruit cake dense as geology, sponges frosted in neon pinks that no strawberry ever dreamed of, the quiet dignity of suji cake. And then—because tea deserves diplomacy—I’ll bring in the French. Imagine setting down a **financier** (fee-nahn-ssyay) beside your cup: a little almond tea-cake, originally baked by Parisian bankers who liked something neat enough to slip into pockets without staining their money. Or the feather-light **madeleine** (mad-lenn), shell-shaped, which Proust turned into a literary time machine.
+
+If I can stretch my rupees far enough, I’ll try a **tarte tatin** (tart ta-tan), an upside-down caramelized apple tart born of a mistake by the Tatin sisters in their inn, now immortalized as elegance itself. Or the humbler **palmiers** (pahl-myé), also called “elephant ears,” puff pastry sugared and folded until it crisps into sweet, delicate scrolls. Even saying the names feels like licking sugar from your fingers.
+
+And that’s not to overshadow our own mithai cavalcade—sandesh, rasgulla, gulab jamun, kaju katli—each sugar bomb as ceremonial as a coronation. But I like the idea that my tea table could be a little United Nations of sweets: Bengal lending the syrup, France the finesse, Denmark the butter tins, and Britannia the biscuits.
+
+So between now and New Year, the plan is simple. Every evening, a cup of tea crowned with something different, something that reminds me that even if the people around me are cheapskates, I can still buy my own civilization in sugar, one bite at a time.
 
 
-
+<PostImage src={imageSrc2} alt="me with tea" />
