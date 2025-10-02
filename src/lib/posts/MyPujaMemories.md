@@ -4,7 +4,7 @@ title : "My Puja Memories"
 
 thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20250927-WA0000.jpg"
 
-date: "2025-09-28"
+date: "2025-10-03"
 
 category : "Calcutta" 
 
@@ -33,8 +33,8 @@ Then the strange alchemy occurs: I walk in the present down the swollen streets 
 
 The lights too bifurcate—the garish LEDs strung across rain-slick roads seem to me tawdry, disposable, yet at the same moment I see their ancestors: bulbs glowing orange, green, blue, warm as marbles in the boy’s hand, each filament a miniature sun. The smells overlap as well: the faint stench of sewage and frying oil that now disgusts me was once a fragrance of promise, of bhog rice and khichuri and incense, mingled in the air of October evenings when the city bloomed, not yet festooned with advertisements and hollow gestures but vibrating, at least for the boy, with a reality so radiant that even hunger or mud could not diminish it.
 
-
-
 And so as I move—or fail to move—down this double-exposed street, I feel myself both solid and ghost, the man unable to escape his immobility, the boy leaping puddles and craning his neck at illuminations strung like constellations of his own invention. To live both layers at once is a form of torture, for the happiness is not entirely gone but sits superimposed like a photograph that won’t fade, making the present not merely bleak but haunted by the technicolor of the past. It is not that joy has died, but that it persists in exile, just across a border that no passport, no ritual, no nonexistent god, no city can let me cross, and especially since I can't bring me to love myself. 
+
+I just look at my reflection or at my own thoughts and I can't recognize who I've become, it's almost like a stranger is inside me and I can't do anything about it. It is as though, in some obscure corridor of my own memory, a mirror had been hung not to return my image but to refract it, to give back not myself but some spectral inhabitant who has taken up residence where I once was. When I look upon my reflection—whether in glass or in the stiller, more treacherous pools of my thoughts—it is not the face of my childhood, nor the inner voice that once, like an intimate friend, narrated my days, but a stranger, whose gestures are familiar only because they have borrowed mine, whose gaze seems to be appraising me from the inside with a patience I never learned. And yet, even in this estrangement, I sense the faint perfume of continuity, like the ghost of a scent left behind in a room after its occupant has departed, so that I cannot tell if it is I who have changed or the world’s memory of me, nor whether the stranger inside me is an interloper or merely myself returned, in a form so altered by time and silence that I no longer dare claim it as my own.
 
 For me the real Durga is not the stage-managed clay idol under neon tubes but this Durga, the one walking barefoot in Sonagachhi with her body traded to keep her children alive, the one hauling bricks in the heat with breasts already drained dry, the one whose infant cries meet not milk but the acrid cruelty that capitalism has bestowed upon the poor Indian woman, this unglamorous, un-garlanded, ungarmented Durga who stands every day against demons not of mythology but of hunger, debt, and exploitation, and who will never be worshipped by the shallow fallow men of my city—yet who is the only goddess worth kneeling to.
