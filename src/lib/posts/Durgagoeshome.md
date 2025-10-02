@@ -4,13 +4,13 @@ title : "Durga goes home 2025"
 
 thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20251002-WA0019.jpg"
 
-date: "2025-09-24"
+date: "2025-10-02"
 
 category : "Calcutta" 
 
 published : true
 
-tags: ["Tea", "Durga", "Kolkata", "Calcutta", "India", "Mahalaya", "tits", "Milk"]
+tags: [ "Durga", "Kolkata", "Calcutta", "India", "Dashasmi", "plastic"]
 
 
 ---
