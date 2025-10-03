@@ -34,6 +34,8 @@ There’s a certain dignity in shit that people refuse to acknowledge. Birth is 
 
 And what a kingdom that underworld is—millions of tons of the world’s unspoken autobiography, swirling together in dark rivers. Nobody reads that book, though it’s the truest history ever written. Civilizations are judged by their sewage, not their scriptures. If archaeologists of the future dig us up, they’ll find less wisdom in our libraries than in the compacted sludge of our drains. 
 
+The tragedy is if I am sick, which I already halfway am, but say moribund; I won’t remember anything—no faces, no syllables, no half-chewed hopes—in my defense to either preserve my turd-like existence or pass on any meaningful words to the silence and absence of kith and kin. This is the great final constipation of life: the brain clogging before the bowel, the memories drying into brittle flakes, the self reduced to a trembling anus of thought squeezing out nothing but the smell of what once was. And in that last muted grunt, there will be no audience, no elegy, just the echo of a man who mistook his own shit for a message and discovered, too late, that the void doesn’t read. 
+
 Anyway I have to wipe now. 
 
 
