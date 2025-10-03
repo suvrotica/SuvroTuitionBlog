@@ -52,6 +52,10 @@ But the bulbous boobs are full of milk,<br>
 Milk of acerbic bellicose belligerence.<br>
 Once you suck a tit full of tantrums,<br>
 Forever from your anus you bleed hence.<br><br>
+Bengali females back stab quite fast,<br>
+Poison your food and slice your dick.<br>
+The song and dance kissy silly honeymoon,<br>
+Is lipstick lighting legerdemain trick.<br><br>
 The frog that pissed a day or two back,<br>
 Has made mud a mainstay of the city.<br>
 Mud is here mud is there fucking everywhere,<br>
