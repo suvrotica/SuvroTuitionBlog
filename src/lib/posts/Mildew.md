@@ -47,6 +47,10 @@ I shit daily shiva, vishnu, jesus, allah,<br>
 Artfully sculpted in my yellow piss. <br>
 I flush them with phlegm and vomit,<br>
 But season this to shit cunt durga miss.<br>
+I'm old as a tree someone shit on me,<br>
+I don't know what to do or fucking say.<br>
+Fucked in all holes, now big casseroles,<br>
+I can't a whore as I can't even pay.<br>
 <br>
 Runny my nose, new virus I suppose,<br>
 Durga pandals full of obese fucking girls.<br>
