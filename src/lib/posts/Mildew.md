@@ -61,6 +61,11 @@ That'll fuck you life then fuck some. <br>
 Marriage, love, romance ruinous scams,<br>
 Once pockets empty the fucks are all gone.<br>
 <br>
+You cry separation tears of lonely anxiety,<br>
+They cackle, witches on a new money broom.<br>
+Your melancholy is shit mercilessly on,<br>
+Better masturbate to kali, eat a shroom.<br>
+<br>
 The frog that pissed a day or two back,<br>
 Has made mud a mainstay of the city.<br>
 Mud is here mud is there fucking everywhere,<br>
