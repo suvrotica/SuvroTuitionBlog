@@ -29,12 +29,12 @@ Urine, shit mixed aroma my smell.<br>
 A Bengali by birth Indian by girth,<br>
 I am fucked forever twice in hell.<br>
 <br>
-Diction from WWA cossipore english school,<br>
+Diction — WWA cossipore english school,<br>
 In Dum Dum seven tanks fucking lane.<br>
 Not the Dum Dum bullet by the shitty way,<br>
 But a walled prison to school the insane.<br>
 <br>
-Also frame me a married CM PM photo,<br>
+Please frame me a married CM PM photo,<br>
 Before I die I want to take a shit on that.<br>
 Also shoot a wad of cum, then verily piss,<br> 
 And vomit the holy regurgitated scat.<br><br>
