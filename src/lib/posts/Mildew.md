@@ -67,7 +67,7 @@ Your melancholy is shit mercilessly on,<br>
 Better masturbate to kali, eat a shroom.<br>
 <br>
 The frog that pissed a day or two back,<br>
-Has made mud a mainstay of the city.<br>
+Muddied this cadaveric carnivalesque city.<br>
 Mud is here mud is there fucking everywhere,<br>
 Some of the mud suspiciously shitty.<br>
 <br>
