@@ -58,8 +58,8 @@ The song and dance kissy silly honeymoon,<br>
 Is lipstick lighting legerdemain trick.<br><br>
 Bitches shit-talking bloody midget cunts, <br> 
 That'll fuck you life then fuck some. <br>
-Marriage, dating, it's all a ruinous scam,<br>
-Once pockets empty the fucks are gone.<br>
+Marriage, love, romance ruinous scams,<br>
+Once pockets empty the fucks are all gone.<br>
 <br>
 The frog that pissed a day or two back,<br>
 Has made mud a mainstay of the city.<br>
