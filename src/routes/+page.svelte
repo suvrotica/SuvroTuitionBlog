@@ -57,7 +57,7 @@
 </svelte:head>
 
 <div class="container my-8 ">
-	<h1 class="text-center">Latest Posts</h1>
+	<h1 class="text-center">Latest Slideshow & Posts</h1>
 <div class="my-8">
     <ImageSlideshow images={imageUrlsPortrait} />
 </div>
