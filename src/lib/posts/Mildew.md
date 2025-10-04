@@ -46,7 +46,7 @@ Slippery diarrhea turds after petty cash.<br>
 I shit daily shiva, vishnu, jesus, allah,<br>
 Artfully sculpted in my yellow piss. <br>
 I flush them with phlegm and vomit,<br>
-But season this to shit cunt durga miss.<br>
+But season this to shit cunt durga miss.<br><br>
 I'm old as a tree someone shit on me,<br>
 I don't know what to do or fucking say.<br>
 Fucked in all holes, now big casseroles,<br>
