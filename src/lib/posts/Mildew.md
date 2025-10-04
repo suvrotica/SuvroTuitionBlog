@@ -64,7 +64,7 @@ Once pockets empty the fucks are all gone.<br>
 You cry separation tears of lonely anxiety,<br>
 They cackle, witches on a new money broom.<br>
 Your melancholy is shit mercilessly on,<br>
-Better masturbate to kali, eat a shroom.<br>
+Masturbate to the cunt kali, eat a shroom.<br>
 <br>
 The frog that pissed a day or two back,<br>
 Muddied this cadaveric carnivalesque city.<br>
