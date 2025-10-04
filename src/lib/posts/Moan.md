@@ -20,7 +20,7 @@ tags: ["shit"]
     import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251003-WA0021.jpg?url';
 
     import imageSrc2 from '$lib/assets/slideshow-images/portrait/IMG-20251004-WA0001.jpg?url';
-    
+    import imageSrc3 from '$lib/assets/slideshow-images/portrait/IMG-20251004-WA0008.jpg?url';
     
 </script>
 
@@ -40,6 +40,8 @@ The tragedy is if I am sick, which I already halfway am, but say moribund; I won
 
 Anyway I have to wipe now. 
 
-<PostImage src={imageSrc2} alt="sucking white man" />
+<PostImage src={imageSrc3} alt="sucking Ai balls" />
 
 Come to think of it, AI is now going to take that cock away from Indians, and we’ll be left sucking on some cold, stainless-steel balls, licking chrome-plated boots polished with silicon spit, our tongues cut on the jagged edges of algorithms we don’t understand and never wrote. The outsourcing orgy ends not with a bang but with a metallic clang: call centers ghosted by chatbots, code factories replaced by machine forges, and the whole proud Indian IT revolution reduced to a historical fart, dissipating into nothingness. Instead of sucking up to white project managers, we’ll be on our knees before faceless servers, genuflecting to GPUs whirring like angry gods, choking on the oily lubricant of progress while convincing ourselves that servitude to machines is somehow nobler than servitude to men.
+
+<PostImage src={imageSrc1} alt="moan man" />
