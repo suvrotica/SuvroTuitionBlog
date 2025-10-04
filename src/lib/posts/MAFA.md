@@ -5,7 +5,7 @@ category: "Doggerel-Political"
 
 thumbnail: "/images/placeholders/IMG-20250728-WA0003.jpg"
 
-date: "2025-09-23"
+date: "2025-10-04"
 
 keywords: ["political satire", "doggerel", "MAGA", "Trump", "American politics", "political commentary", "satirical poetry", "US politics", "populism", "right-wing politics", "political humor"]
 
@@ -33,7 +33,12 @@ published: true
 	href="/blog/Biology/Taboo"
 	standalone
 />
-<br><br>
+<br>
+I fucked the government to a halt,<br>
+Next black brown legal to be slain. <br>
+Also Red-Indian Mexican meat etcetera,<br>
+Make American steaks great again.<br>
+<br>
 A department of war will go very far,<br>
 Bombast with bombs, that's already twice. <br>
 Dictators, thugs, defiants paying pals,<br>
