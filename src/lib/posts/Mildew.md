@@ -56,6 +56,11 @@ Bengali females back stab quite fast,<br>
 Poison your food and slice your dick.<br>
 The song and dance kissy silly honeymoon,<br>
 Is lipstick lighting legerdemain trick.<br><br>
+Bitches shit-talking bloody midget cunts, <br> 
+That'll fuck you life then fuck some. <br>
+Marriage, dating, it's all a ruinous scam,<br>
+Once pockets empty the fucks are gone.<br>
+<br>
 The frog that pissed a day or two back,<br>
 Has made mud a mainstay of the city.<br>
 Mud is here mud is there fucking everywhere,<br>
