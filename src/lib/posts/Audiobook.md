@@ -29,3 +29,4 @@ tags: ["asimov" ]
 <Ytp src="https://youtu.be/jgznpeJkdi8?si=Z9sQuKI4uZBu55xN" />
 
 
+<Ytp src="https://youtu.be/J3OqgtDZ7gk?si=2q7VTtQ9_4hHLZ_g" />
