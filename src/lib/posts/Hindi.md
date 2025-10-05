@@ -28,8 +28,6 @@ tags: ["Hindi"]
 
 <Ytp src="https://youtu.be/XA3XY2RRc5Y" />
 
-<Ytp src="https://youtu.be/JM8uxdeufAQ?si=0Me9NR1AbV8V3Fs7" />
-
 <Ytp src="https://www.youtube.com/embed/8kWR1IeNbtg?si=xc33ee6I-CC3F2DR"/>
 
 <Ytp src="https://www.youtube.com/embed/ks58iZ8sQPw?si=W-hq7UH1nPRRRXSS" />
