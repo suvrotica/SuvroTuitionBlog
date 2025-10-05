@@ -11,19 +11,62 @@
 	let {
 		images = [],
 		holdDuration = 9000,
-		transitionDuration = 10
+		transitionDuration = 1000 // Increased for a smoother fade
 	}: Props = $props();
 
+	/**
+	 * Shuffles an array in place using the Fisher-Yates algorithm.
+	 * @param array The array to shuffle.
+	 * @returns The shuffled array.
+	 */
+	function shuffle(array: string[]): string[] {
+		let newArray = [...array];
+		for (let i = newArray.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+		}
+		return newArray;
+	}
+
+	// State for the shuffled image list and the current index
+	let shuffledImages = $state<string[]>([]);
 	let currentIndex = $state(0);
-	
-	let currentImage = $derived(images[currentIndex]);
-	
-	
+
+	// Derived state for the currently visible image
+	let currentImage = $derived(shuffledImages[currentIndex]);
+
+	// Effect to create the initial shuffled list whenever the `images` prop changes.
 	$effect(() => {
-		if (images.length <= 1) return;
+		if (images.length > 0) {
+			shuffledImages = shuffle(images);
+			currentIndex = 0; // Reset index on new image set
+		} else {
+			shuffledImages = [];
+		}
+	});
+
+	// Effect to manage the slideshow interval
+	$effect(() => {
+		if (shuffledImages.length <= 1) return;
 
 		const interval = setInterval(() => {
-			currentIndex = (currentIndex + 1) % images.length;
+			const lastImage = currentImage;
+
+			// If we're at the end of the shuffled list, create a new one.
+			if (currentIndex === shuffledImages.length - 1) {
+				let newShuffledList = shuffle(images);
+
+				// Crucially, ensure the new list doesn't start with the same image we just showed.
+				while (images.length > 1 && newShuffledList[0] === lastImage) {
+					newShuffledList = shuffle(images);
+				}
+
+				shuffledImages = newShuffledList;
+				currentIndex = 0;
+			} else {
+				// Otherwise, just move to the next image in the shuffled list.
+				currentIndex += 1;
+			}
 		}, holdDuration + transitionDuration);
 
 		return () => clearInterval(interval);
@@ -32,7 +75,7 @@
 
 {#if currentImage}
 	<div class="slideshow-container">
-		{#key currentIndex}
+		{#key currentImage}
 			<img
 				src={currentImage}
 				alt="Slideshow image {currentIndex + 1}"
