@@ -3,14 +3,15 @@
 	 * A responsive YouTube video player component.
 	 * It parses a standard YouTube URL and embeds the video in an aspect-ratio-preserving container.
 	 */
+	// CHANGED: `title` is now optional with a default. `caption` and `aspectRatio` remain optional.
 	let {
 		src,
-		title,
+		title = 'Embedded YouTube video', // Default title for accessibility
 		caption = '',
 		aspectRatio = '16/9'
 	}: {
-		src: string; // The full YouTube URL (watch or youtu.be)
-		title: string; // A descriptive title for accessibility
+		src: string; // The full YouTube URL is the only required prop
+		title?: string; // A descriptive title for accessibility
 		caption?: string; // Optional caption displayed below the video
 		aspectRatio?: '16/9' | '4/3' | '1/1'; // The video's aspect ratio
 	} = $props();
@@ -22,7 +23,6 @@
 	 * @returns The 11-character video ID or null if not found.
 	 */
 	function parseYouTubeId(url: string): string | null {
-		// This regex is designed to capture the 11-character ID from various YouTube URL formats.
 		const regex =
 			/(?:youtube\.com\/(?:[^/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?/\s]{11})/;
 		const match = url.match(regex);
