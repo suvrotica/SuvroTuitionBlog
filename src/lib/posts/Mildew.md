@@ -4,7 +4,7 @@ title : "Mildew"
 
 thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20251001-WA0003.jpg"
 
-date: "2025-10-04"
+date: "2025-10-05"
 
 category : "Doggerel" 
 
@@ -34,6 +34,10 @@ In Dum Dum seven tanks fucking lane.<br>
 Not the Dum Dum bullet by the shitty way,<br>
 But a walled prison to school the insane.<br>
 <br>
+I scratch my balls in dining halls,<br>
+And sprinkle scrote dust on muri.<br>
+I piss in noodles and add dingleberries,<br>
+I shit in dal and ate it in a puri.<br><br>
 Please frame me a married CM PM photo,<br>
 Before I die I want to take a shit on that.<br>
 Also shoot a wad of cum, then verily piss,<br> 
