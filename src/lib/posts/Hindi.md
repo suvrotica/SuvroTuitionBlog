@@ -35,3 +35,9 @@ tags: ["Hindi"]
     title="Rim Jhim Gire Sawan"
     caption="Rim Jhim Gire Sawan Lata Mangeshkar"
 />
+
+<YouTubePlayer
+    src="https://youtu.be/5pVP2TB-4u8?si=DBb66sIn_hYCns7p"
+    title="Mere nayan sawan bhado"
+    caption="Mere nayan sawan bhado Kishore Kumar"
+/>
