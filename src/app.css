@@ -270,3 +270,27 @@ pre.shiki { @apply p-4 rounded-lg overflow-x-auto; }
 .sanskrit-verse-source {
 	@apply mt-4 font-sans text-sm text-neutral-600 dark:text-neutral-400;
 }
+
+.youtube-player-container {
+	@apply my-6 rounded-lg border border-neutral-300 bg-neutral-100 p-4 dark:border-neutral-700 dark:bg-neutral-800/50;
+}
+
+/* This wrapper uses the classic "aspect ratio box" trick. 
+  It maintains a specific aspect ratio while being responsive.
+*/
+.youtube-player-wrapper {
+	@apply relative w-full overflow-hidden rounded-md;
+}
+
+/*
+  The iframe is absolutely positioned to fill its parent wrapper completely,
+  ensuring it's always responsive and fits the defined aspect ratio.
+*/
+.youtube-player-iframe {
+	@apply absolute left-0 top-0 h-full w-full border-0;
+}
+
+/* A consistent caption style, similar to PostImage */
+.youtube-player-caption {
+	@apply mt-3 text-center text-sm italic text-neutral-600 dark:text-neutral-400;
+}

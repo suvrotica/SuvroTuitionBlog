@@ -21,7 +21,9 @@ published: true
 	import imageSrc4 from '$lib/assets/slideshow-images/portrait/IMG-20250929-WA0002.jpg?url';
 	import imageSrc5 from '$lib/assets/slideshow-images/portrait/IMG-20251001-WA0009.jpg?url';
 	import imageSrc6 from '$lib/assets/slideshow-images/portrait/IMG-20251002-WA0004.jpg?url';
+    import YouTubePlayer from '$lib/components/blog/YouTubePlayer.svelte';
 </script>
+
 
 <PostImage src={imageSrc1} alt="skull man" />
 
