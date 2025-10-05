@@ -24,6 +24,9 @@ tags: ["Hindi"]
 
 <PostImage src={imageSrc1} alt="cow on headphone listening to Hindi songs and shitting" />
 
+
+<Ytp src="https://youtu.be/XA3XY2RRc5Y" />
+
 <Ytp
     src="https://youtu.be/0YURuE22VVQ?si=Xt08e59PQYCTPKGR"
     
