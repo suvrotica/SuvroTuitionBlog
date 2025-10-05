@@ -1,16 +1,15 @@
 <script lang="ts">
 	/**
 	 * A responsive YouTube video player component.
-	 * It parses a standard YouTube URL and embeds the video in an aspect-ratio-preserving container.
+	 * It intelligently handles URLs for single videos, playlists, or videos within a playlist.
 	 */
-	// CHANGED: `title` is now optional with a default. `caption` and `aspectRatio` remain optional.
 	let {
 		src,
 		title = 'Embedded YouTube video', // Default title for accessibility
 		caption = '',
 		aspectRatio = '16/9'
 	}: {
-		src: string; // The full YouTube URL is the only required prop
+		src: string; // The full YouTube URL (video or playlist)
 		title?: string; // A descriptive title for accessibility
 		caption?: string; // Optional caption displayed below the video
 		aspectRatio?: '16/9' | '4/3' | '1/1'; // The video's aspect ratio
@@ -18,7 +17,6 @@
 
 	/**
 	 * Parses a YouTube URL to extract the video ID.
-	 * Handles standard `youtube.com/watch?v=` links and shortened `youtu.be/` links.
 	 * @param url The YouTube URL string.
 	 * @returns The 11-character video ID or null if not found.
 	 */
@@ -29,14 +27,41 @@
 		return match ? match[1] : null;
 	}
 
-	// A derived rune that computes the embeddable URL whenever the `src` prop changes.
+	// NEW: A function to parse a YouTube URL to extract the playlist ID.
+	/**
+	 * Parses a YouTube URL to extract the playlist ID.
+	 * @param url The YouTube URL string.
+	 * @returns The playlist ID or null if not found.
+	 */
+	function parseYouTubePlaylistId(url: string): string | null {
+		// This regex looks for the `list=` query parameter.
+		const regex = /[?&]list=([^"&?/\s]+)/;
+		const match = url.match(regex);
+		return match ? match[1] : null;
+	}
+
+	// UPDATED: The derived logic is now smarter to handle playlists.
 	let embedSrc = $derived.by(() => {
 		const videoId = parseYouTubeId(src);
-		if (videoId) {
-			// Constructs the privacy-enhanced embed URL.
+		const playlistId = parseYouTubePlaylistId(src);
+
+		if (playlistId) {
+			if (videoId) {
+				// Case 1: URL has both a video and a playlist (e.g., watching a video in a playlist context)
+				// We embed the specific video but tell the player about the whole list.
+				return `https://www.youtube-nocookie.com/embed/${videoId}?list=${playlistId}`;
+			} else {
+				// Case 2: URL is for a playlist directly (no specific video ID)
+				// We use the special 'videoseries' keyword to start the playlist.
+				return `https://www.youtube-nocookie.com/embed/videoseries?list=${playlistId}`;
+			}
+		} else if (videoId) {
+			// Case 3: URL is for a single video only
 			return `https://www.youtube-nocookie.com/embed/${videoId}`;
 		}
-		return null; // Return null for invalid URLs.
+
+		// Case 4: Neither a valid video nor playlist ID was found.
+		return null;
 	});
 </script>
 
