@@ -25,4 +25,4 @@ tags: ["Rabindrasangeet", "Rabindranath", "Tagore", "Rejwana banya Choudhuri"]
 <PostImage src={imageSrc1} alt="Rabindranath" />
 
 
-<Ytp src="[https://youtu.be/XA3XY2RRc5Y](https://youtu.be/A-902adcV54?si=Tu8JMVkw9uBqX4Rp)" />
+<Ytp src="https://youtu.be/A-902adcV54?si=AQkRUVy3o2Emx7xI" />
