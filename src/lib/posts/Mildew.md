@@ -37,7 +37,7 @@ But a walled prison to school the insane.<br>
 I scratch my balls in dining halls,<br>
 And sprinkle scrote dust on muri.<br>
 I piss in noodles and add dingleberries,<br>
-I shit in dal and ate it in a puri.<br><br>
+I shit in dal and eat it in a puri.<br><br>
 Please frame me a married CM PM photo,<br>
 Before I die I want to take a shit on that.<br>
 Also shoot a wad of cum, then verily piss,<br> 
