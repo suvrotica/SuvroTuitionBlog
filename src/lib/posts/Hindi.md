@@ -27,5 +27,11 @@ tags: ["Hindi"]
 <YouTubePlayer
     src="https://youtu.be/0YURuE22VVQ?si=Xt08e59PQYCTPKGR"
     title="Rim Jhim Gire Sawan"
-    caption="Kishore Kumar"
+    caption="Rim Jhim Gire Sawan Kishore Kumar"
+/>
+
+<YouTubePlayer
+    src="https://youtu.be/PRuzA7K-6Go?si=FdrYne_Y_xihb2LY"
+    title="Rim Jhim Gire Sawan"
+    caption="Rim Jhim Gire Sawan Lata Mangeshkar"
 />
