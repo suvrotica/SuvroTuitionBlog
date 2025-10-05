@@ -294,3 +294,9 @@ pre.shiki { @apply p-4 rounded-lg overflow-x-auto; }
 .youtube-player-caption {
 	@apply mt-3 text-center text-sm italic text-neutral-600 dark:text-neutral-400;
 }
+
+/* Replace the old overlay style with this button-specific one */
+.mobile-nav-overlay-button {
+	@apply fixed inset-0 z-30 w-full h-full bg-black/60 cursor-default;
+	@apply transition-opacity duration-300 ease-in-out;
+}
