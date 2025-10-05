@@ -50,7 +50,7 @@ But season this to shit cunt durga miss.<br><br>
 I'm old as a tree someone shit on me,<br>
 I don't know what to do or fucking say.<br>
 Fucked in all holes, now big casseroles,<br>
-I can't a whore as I can't even pay.<br>
+I earn less than a brothel keeper's pay.<br>
 <br>
 Runny my nose, new virus I suppose,<br>
 Durga pandals full of obese fucking girls.<br>
