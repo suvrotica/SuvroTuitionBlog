@@ -19,9 +19,18 @@ tags: ["MBA", "Business", "Mnemonic" ]
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import imageSrc1 from '$lib/assets/IMG-20251006-WA0019.jpg?url';
     
+
+import PostBadge from '$lib/components/ui/PostBadge.svelte';
 </script>
 
 <PostImage src={imageSrc1} alt="personal MBA" />
+
+<PostBadge
+	title="Personal MBA"
+	href="/blog/Work/PMBA"
+	standalone
+/>
+
 
 **How to Use This Method**
 
