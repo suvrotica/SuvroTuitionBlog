@@ -4,7 +4,7 @@ title : "Mildew"
 
 thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20251001-WA0003.jpg"
 
-date: "2025-10-05"
+date: "2025-10-06"
 
 category : "Doggerel" 
 
@@ -19,6 +19,7 @@ tags: ["bengali", "fat", "Indian", "Calcutta", "India", "WWA cossipore english s
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251001-WA0003.jpg?url';
     import imageSrc2 from '$lib/assets/slideshow-images/portrait/IMG-20251002-WA0003.jpg?url';
+    import imageSrc3 from '$lib/assets/slideshow-images/portrait/IMG-20251006-WA0005.jpg?url';
     
 </script>
 
@@ -79,9 +80,11 @@ They cackle, witches on a new money broom.<br>
 Your melancholy is shit mercilessly on,<br>
 Masturbate to the cunt kali, eat a shroom.<br>
 <br>
+<PostImage src={imageSrc3} alt="piss" />
+<br>
 The frog that pissed a day or two back,<br>
 Muddied this cadaveric carnivalesque city.<br>
-Mud is here mud is there fucking everywhere,<br>
+Mud's here mud's there I'm pissing everywhere,<br>
 Some of the mud suspiciously shitty.<br>
 <br>
 Tired and hassled I want to die,<br>
