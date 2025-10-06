@@ -26,11 +26,26 @@ tags: ["asimov", "bill bryson" ]
 
 **ENGLISH**
 
+<Ytp src="https://youtu.be/Bz9bwgomnZQ?si=e9jvKzSRfzejBTWO" />
+
 <Ytp src="https://youtu.be/jgznpeJkdi8?si=Z9sQuKI4uZBu55xN" />
 
+<Ytp src="https://youtu.be/9U8OMq9mXPE?si=RV3ze3EUrqN8MTq_" />
 
 <Ytp src="https://youtu.be/J3OqgtDZ7gk?si=2q7VTtQ9_4hHLZ_g" />
 
 <Ytp src="https://youtu.be/Zwqu5gRSTZU?si=GdGro0_i6x3DvVTm" />
 
+<Ytp src="https://youtu.be/bt5EJssoGUU?si=v4VqFNDva8lDHfi5" />
+
 <Ytp src="https://youtu.be/bTyHIR8YBLc?si=mfNFLE7OQvMMJfuq" />
+
+<Ytp src="https://youtu.be/denh3vj8Gpo?si=20qJNtsFbV2Xsz0C" />
+
+<Ytp src="https://youtu.be/AfMOOSJlV3U?si=yHjoeMZmGJAu_q3g" />
+
+<Ytp src="https://youtu.be/JtyK9eJnW1A?si=VK2FLfIOAH6uacaC" />
+
+<Ytp src="https://youtu.be/lIXm-vodPCg?si=DIYjjKiJAGbpA6iE" />
+
+<Ytp src="https://youtu.be/eV7SupmEgFs?si=41_Uyvwq7hK9pLuL" />
