@@ -1,1 +1,30 @@
+---
+
+title : "Bengali Songs Music" 
+
+thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20251006-WA0002.jpg"
+
+date: "2025-10-06"
+
+category : "Audio Video" 
+
+published : true
+
+tags: ["English"]
+
+
+---
+
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251006-WA0002.jpg?url';
+   import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
+</script> 
+    
+
+<PostImage src={imageSrc1} alt="goat on headphone listening to Bengali songs and shitting" />
+
+
+
+<Ytp src="https://youtu.be/HvOXmnTJYRc?si=dO0MjoWbbxZ6N3My" />
 
