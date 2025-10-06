@@ -9,7 +9,7 @@ category : "Bipolar Depression"
 
 tags: ["bengali", "NRI", "insomnia", "depression", "melancholy", "reflection", "bipolar" ]
 
-date: "2025-09-04"
+date: "2025-10-06"
 
 published: true
 
@@ -29,7 +29,7 @@ Often when I feel depressed, I have to write. Writing is the only cathartic, sui
 
 Sometimes—often without warning—the sluice gates of memory fail, and the past, long held at bay, surges forward with a force that shatters the pitiful fortifications my mind had so painstakingly, so hopefully, erected. These fences were never truly walls; they were embarrassingly frail trellises draped in the illusion of strength, and against the pressure of remembrance they splinter at once.
 
-In that flood, the few fragile scraps of what could be called hesitant normalcy are swept away, dissolving into a kind of manic-depressive hyper-rumination that feels both involuntary and inevitable given my pathology. The pernicious thoughts circle inward like tightening rings, each concentric darker, heavier, more airless than the last, enclosing me layer by layer until the innermost shell is nothing but a noose of suffocating blackness.
+In that flood, the few fragile scraps of what could be called hesitant normalcy are swept away, dissolving into a kind of manic-depressive hyper-rumination that feels both involuntary and inevitable given my pathology. The pernicious thoughts circle inward like tightening rings, each concentric darker, heavier, more airless than the last, enclosing me layer by layer until the innermost shell is nothing but a noose of suffocating blackness in a room turned into a sepulcher. 
 
 It is here that reason abandons me, or I abandon it—I am never quite sure which. The sorrow, grown too large to manage, discards the pretense of resolution. The tools lie scattered and useless, stripped of their edges, as if they too have surrendered to the chaos.
 
