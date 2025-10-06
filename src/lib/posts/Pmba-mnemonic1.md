@@ -23,11 +23,13 @@ tags: ["MBA", "Business", "Mnemonic" ]
 
 <PostImage src={imageSrc1} alt="personal MBA" />
 
+**How to Use This Method**
+
 To remember this long list, we'll use a powerful combination of three techniques: **chunking** into thematic groups, creating a **story** to link the groups, and using the **Method of Loci** (a memory palace) with vivid imagery to lock in the details.
 
----
+To recall the full list, simply take a mental walk through Alex's 6-room office. Start in the lobby and visualize the absurd scenes. Each image is a hook for one of the concepts on your list. By remembering the category (the room) and the story, you'll be able to pull out the specific items with much greater ease.
 
-### Step 1: Chunking (Grouping the Chaos)
+**Step 1: Chunking (Grouping the Chaos)**
 
 First, we'll group these 58 items into 6 memorable, themed categories. This breaks the intimidating list into manageable chunks.
 
@@ -40,7 +42,7 @@ First, we'll group these 58 items into 6 memorable, themed categories. This brea
 
 ---
 
-### Step 2: The Story & Memory Palace (Making it Stick)
+**Step 2: The Story & Memory Palace (Making it Stick)**
 
 Now, we'll create a "memory palace"—imagine a 6-room office building. Each room represents one of our categories. We'll walk through this building in a story about a founder, "Alex," to link everything together. 🏢
 
@@ -90,8 +92,6 @@ Now, we'll create a "memory palace"—imagine a 6-room office building. Each roo
 * The weather vane on the building next door is spinning uncontrollably, and everyone is trying to copy it (**dependency on trends**).
 * The final door to the outside world is labeled "**REJECTION**" in big red letters.
 
----
 
-### How to Use This Method
 
-To recall the full list, simply take a mental walk through Alex's 6-room office. Start in the lobby and visualize the absurd scenes. Each image is a hook for one of the concepts on your list. By remembering the category (the room) and the story, you'll be able to pull out the specific items with much greater ease. Good luck! 👍
+
