@@ -19,9 +19,17 @@ tags: ["MBA", "Business" ]
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import imageSrc1 from '$lib/assets/IMG-20251006-WA0019.jpg?url';
     
+
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
 </script>
 
 <PostImage src={imageSrc1} alt="personal MBA" />
+
+<PostBadge
+	title="Mnemonic 58 Business Challenges"
+	href="/blog/Work/MBA-mnemonic1"
+	standalone
+/>
 
 **WHY READ THIS BOOK**
 
@@ -54,6 +62,12 @@ In my life, for example, I fell in love with two girls successively during my en
 In my case, at least, without my stepping-stone certificates I was no one. I could only get through those gates of credibility because of all those biases I mentioned earlier. So no, I don’t think getting a degree is unimportant—at least in some developing countries like India, where the avenues for upward social mobility are limited, and formal credentials often serve as the only recognized ticket to opportunity, access, and initial trust, even if they say nothing about actual competence. Having said that and got that out of the way, this is a great book, and I will, as I promised, collate other information in a supplement—drawing from personal anecdotes, case studies, and additional readings—to give a richer, more practical perspective beyond what the author presents.
  
 Before diving into the messy, uncomfortable truth, let me make it clear: this isn’t some sanitized, feel-good checklist. These are the real things that gnaw at you, trip you up, and make your entrepreneurial dreams feel like a cruel joke. Josh only lists three—business angst, certification intimidation, imposter syndrome—but the human mind, the market, and life itself conspire in countless ways to fuck with you. So here’s the exhaustive, no-BS catalogue of what can hold an entrepreneur back.
+
+<PostBadge
+	title="Mnemonic 58 Business Challenges"
+	href="/blog/Work/MBA-mnemonic1"
+	standalone
+/>
 
 Business angst, certification intimidation, imposter syndrome, fear of failure, analysis paralysis, perfectionism, procrastination, lack of focus, poor time management, inadequate networking, weak negotiation skills, inability to delegate, cash flow mismanagement, overdependence on external validation, limited market understanding, fear of competition, short-term thinking, underestimating execution difficulty, inability to pivot, emotional burnout, poor customer empathy, overcomplicating solutions, resistance to feedback, indecision, overreliance on tools or frameworks, fear of asking for help, lack of persistence, misaligned priorities, unrealistic expectations, envy of peers, difficulty building a team, legal/regulatory anxiety, overconfidence, poor risk assessment, neglecting personal growth, inability to sell vision, technological overwhelm, ignoring data-driven decisions, fear of scaling, weak branding, lack of clarity on value proposition, dependency on trends, insufficient resilience, underdeveloped leadership skills, fear of rejection, distraction by side projects, ignoring competition intelligence, failure to track metrics, inability to manage stress, obsession with funding, fear of public speaking, poor storytelling skills, inadequate product-market fit understanding, overextension, lack of self-discipline, ignoring cultural/contextual factors, limited strategic thinking, resistance to change.
 
