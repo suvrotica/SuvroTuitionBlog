@@ -87,6 +87,10 @@ Flooded this cadaveric carnivalesque city.<br>
 Mud's here mud's there I'm pissing everywhere,<br>
 Some of the mud suspiciously shitty.<br>
 <br>
+Teesta testy darjeeling went tits up,<br>
+Hills shaved like a whore's pubic crotch.<br>
+Flood, piss-shit water west-bengali norm,<br>
+Disaster relief dry scotch on hotchpotch.<br><br>
 Tired and hassled I want to die,<br>
 But I still love pulling my dick sometimes.<br>
 Rare though also to touch my asshole,<br>
