@@ -31,6 +31,12 @@ tags: ["MBA", "Business" ]
 	standalone
 />
 
+<PostBadge
+	title="Mnemonic 22 AI Challenges"
+	href="/blog/Work/Pmba-mnemonic2"
+	standalone
+/>
+
 **WHY READ THIS BOOK**
 
 I will write my pithy notes on what I get out of this book as I re-read the 10th anniversary expanded edition. I have a previous copy. This is ongoing and starts October 6, 2025. I will, as usual, collate some other information and personal anecdotes, so it won't be Josh Kaufman alone but with Suvro Ghosh subjectively filtering the message. To read the book, just buy it yourself.
@@ -72,6 +78,12 @@ Before diving into the messy, uncomfortable truth, let me make it clear: this is
 Business angst, certification intimidation, imposter syndrome, fear of failure, analysis paralysis, perfectionism, procrastination, lack of focus, poor time management, inadequate networking, weak negotiation skills, inability to delegate, cash flow mismanagement, overdependence on external validation, limited market understanding, fear of competition, short-term thinking, underestimating execution difficulty, inability to pivot, emotional burnout, poor customer empathy, overcomplicating solutions, resistance to feedback, indecision, overreliance on tools or frameworks, fear of asking for help, lack of persistence, misaligned priorities, unrealistic expectations, envy of peers, difficulty building a team, legal/regulatory anxiety, overconfidence, poor risk assessment, neglecting personal growth, inability to sell vision, technological overwhelm, ignoring data-driven decisions, fear of scaling, weak branding, lack of clarity on value proposition, dependency on trends, insufficient resilience, underdeveloped leadership skills, fear of rejection, distraction by side projects, ignoring competition intelligence, failure to track metrics, inability to manage stress, obsession with funding, fear of public speaking, poor storytelling skills, inadequate product-market fit understanding, overextension, lack of self-discipline, ignoring cultural/contextual factors, limited strategic thinking, resistance to change.
 
 And now AI, and before we get to the AI-specific landmines, a quick preface: if you thought running a business was tricky before, welcome to the new era. Algorithms don’t care about your feelings, automation exposes your weaknesses instantly, and the hype around AI can seduce you into chasing shiny distractions instead of real value. These are the pitfalls, illusions, and anxieties that specifically come from building, selling, or managing with AI in the mix.
+
+<PostBadge
+	title="Mnemonic 22 AI Challenges"
+	href="/blog/Work/Pmba-mnemonic2"
+	standalone
+/>
 
 AI hype chasing, overreliance on AI tools, misunderstanding AI limitations, fear of being replaced by AI, paralysis by algorithmic analysis, neglecting human judgment, poor data quality management, underestimating training complexity, ethical and regulatory anxiety, dependency on black-box models, overpromising AI capabilities, ignoring interpretability, misjudging AI adoption costs, overautomation, AI-driven imposter syndrome, bias amplification, chasing novelty over product-market fit, failure to integrate AI with existing systems, lack of AI strategy, distraction by AI trends, misalignment between AI outputs and business goals, underdeveloped AI literacy in the team.
 
