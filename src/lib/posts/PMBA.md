@@ -27,7 +27,7 @@ tags: ["MBA", "Business" ]
 
 <PostBadge
 	title="Mnemonic 58 Business Challenges"
-	href="/blog/Work/MBA-mnemonic1"
+	href="/blog/Work/Pmba-mnemonic1"
 	standalone
 />
 
@@ -65,7 +65,7 @@ Before diving into the messy, uncomfortable truth, let me make it clear: this is
 
 <PostBadge
 	title="Mnemonic 58 Business Challenges"
-	href="/blog/Work/MBA-mnemonic1"
+	href="/blog/Work/Pmba-mnemonic1"
 	standalone
 />
 
