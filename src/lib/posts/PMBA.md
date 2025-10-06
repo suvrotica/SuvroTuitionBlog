@@ -17,7 +17,7 @@ tags: ["MBA", "Business" ]
 
 <script>
     import PostImage from '$lib/components/blog/PostImage.svelte';
-    import imageSrc1 from '$lib/assets/slideshow-images/portrait/Gemini_Generated_Image_m47l5jm47l5jm47l.png?url';
+    import imageSrc1 from '$lib/assets/IMG-20251006-WA0019.jpg?url';
     
 </script>
 
