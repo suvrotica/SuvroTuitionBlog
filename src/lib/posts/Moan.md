@@ -4,7 +4,7 @@ title : "Moan"
 
 thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20251003-WA0021.jpg"
 
-date: "2025-10-04"
+date: "2025-10-06"
 
 category : "Humor" 
 
@@ -45,3 +45,8 @@ Anyway I have to wipe now.
 Come to think of it, AI is now going to take that cock away from Indians, and we’ll be left sucking on some cold, stainless-steel balls, licking chrome-plated boots polished with silicon spit, our tongues cut on the jagged edges of algorithms we don’t understand and never wrote. The outsourcing orgy ends not with a bang but with a metallic clang: call centers ghosted by chatbots, code factories replaced by machine forges, and the whole proud Indian IT revolution reduced to a historical fart, dissipating into nothingness. Instead of sucking up to white project managers, we’ll be on our knees before faceless servers, genuflecting to GPUs whirring like angry gods, choking on the oily lubricant of progress while convincing ourselves that servitude to machines is somehow nobler than servitude to men.
 
 <PostImage src={imageSrc3} alt=" man sucking robot balls " />
+
+On one hand, there are people giddy with the optimistic euphoria of dark factories and humanless automation, and although these look reasonable in advanced economies and advantaged geographies that sit on monopolies, the reality of what will happen in India over just the next two cataclysmic years makes me hesitant to join them. India is mismanaged; it's a subverted democracy—which is a polite way to avoid uttering unparliamentary invectives—but you get the idea: a plutocratic, oligarch-led, kleptocratic kakistocracy, which is essentially saying that we can’t do any worse. And once all the grunt business process outsourcing jobs that have been holding up the talcum powder on brown faces dry up and go to the robots, there won’t be any jobs. We don’t have any internally self-sufficient cycles that can keep us afloat and safe. And if anyone asks you about the future of employment in management and IT, tell them point-blank it’s not only zero but not even negative—it’s on the imaginary number axis now. Which, without the mathspeak, means not only are no jobs going to be created, not only are positions going to be made extinct, but entire fields now have question marks in front of them and may not even exist.
+
+In this dystopian setup, even if the only business left standing were the brothel trade, who exactly would be the customers? You can’t run an economy where everyone’s selling and no one’s buying, and that’s precisely the direction we’re sprinting toward—an entire country hawking its labor, its decency, its last scraps of pride, to no one in particular. If every girl became a seller and every man her manager, the ledger would still bleed red because there’d be no demand, just a great national clearance sale of desperation. The irony is that the Indian talent for jugaad would still try to rig even that doomed market, underbidding itself to extinction, proving once again that the apocalypse here won’t arrive with fire and brimstone but with an invoice and a discount.
+
