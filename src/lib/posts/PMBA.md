@@ -27,4 +27,5 @@ I will write my pithy notes on what I get out of this book as I re-read the 10th
 
 The point of view here is that of someone not just interested in an MBA for an MBA's sake but an entrepreneur who really wants to read almost all major topics covered in book form without having to pay the expensive, life-insecuring tuition or go through the hassle of investing time and effort in college.
 
+As I have mentioned numerous times on this blog, calling yourself a businessman or an entrepreneur, or even having a degree, doesn't mean you really know anything about anything—especially since the Dunning-Kruger effect is very strong in India, where people think they know something but, in reality, have no fucking clue. So read this book. And I don’t get any commission if the author sells another copy; this advice is just to save yourself embarrassment, harassment, and grief when life fucks a naive dimwit in the ass—and sorry for the French; get used to it, though.
 
