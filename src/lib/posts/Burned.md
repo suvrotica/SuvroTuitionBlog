@@ -5,7 +5,7 @@ category: "Work"
 
 thumbnail: "/src/lib/assets/slideshow-images/portrait/IMG-20250928-WA0007.jpg"
 
-date: "2025-09-28"
+date: "2025-10-06"
 
 tags: ["NRI", "US immigration", "tech workers", "Indian diaspora", "American dream", "globalization", "political commentary", "work visa", "US economy", "Indian brain drain"]
 
@@ -21,7 +21,7 @@ published: true
 	import imageSrc4 from '$lib/assets/slideshow-images/portrait/IMG-20250929-WA0002.jpg?url';
 	import imageSrc5 from '$lib/assets/slideshow-images/portrait/IMG-20251001-WA0009.jpg?url';
 	import imageSrc6 from '$lib/assets/slideshow-images/portrait/IMG-20251002-WA0004.jpg?url';
-    import YouTubePlayer from '$lib/components/blog/YouTubePlayer.svelte';
+    import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
 </script>
 
 
@@ -47,6 +47,8 @@ published: true
 	href="/blog/Work/H1b"
 	standalone
 />
+
+<Ytp src="https://youtu.be/FkHa3W4pQME?si=sshLTZJ6alOF-DqA" />
 
 In my fleetingly short honeymoon as an entrepreneur, I did make some business projection errors and had an uncomfortable feeling about some assumptions about how much of reality was really under my control. The variables were real and properly defined, and the logic was impeccable, but it didn't work out because business isn't like physics. Nature obeys the laws of physics, and if you have understood the problem and your equation models or approximately approaches the real physical phenomenon, your products wouldn't betray you like the extremely venal and impecunious archipelago of the business world in India in which I chose to work, inadvertently. Everything seemed alright from a distance, but when I landed in India, trouble ensued. It didn't take long for the savage proclivities to bare their teeth and show their real selves. Be warned, would-be travelers, it's very reptilian; if not the venom, it's the spit that's going to get you.
 
