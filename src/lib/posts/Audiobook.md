@@ -10,7 +10,7 @@ category : "Audio Video"
 
 published : true
 
-tags: ["asimov" ]
+tags: ["asimov", "bill bryson" ]
 
 
 ---
@@ -30,3 +30,5 @@ tags: ["asimov" ]
 
 
 <Ytp src="https://youtu.be/J3OqgtDZ7gk?si=2q7VTtQ9_4hHLZ_g" />
+
+<Ytp src="https://youtu.be/Zwqu5gRSTZU?si=GdGro0_i6x3DvVTm" />
