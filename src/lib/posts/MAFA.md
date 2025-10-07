@@ -7,7 +7,7 @@ thumbnail: "/images/placeholders/IMG-20250728-WA0003.jpg"
 
 date: "2025-10-07"
 
-keywords: ["political satire", "doggerel", "MAGA", "Trump", "American politics", "political commentary", "satirical poetry", "US politics", "populism", "right-wing politics", "political humor"]
+tags: ["political satire", "doggerel", "MAGA", "Trump", "American politics", "political commentary", "satirical poetry", "US politics", "populism", "right-wing politics", "political humor"]
 
 published: true
 
