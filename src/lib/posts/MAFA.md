@@ -137,7 +137,7 @@ I kick bloody the opposing ball sac.<br>
 Putin, you, bro Netanyahu, & I everything end,<br>
 In an orgy of the richest white power size. <br>
 Democracies subverted, thin Euro legs parted,<br>
-He who murders most men, wins the Noble Prize.<br>
+Murder the most men win the Noble Prize.<br>
 <br>
 Statistics with carrots, shticks and sticks,<br>
 Sometimes up asses I officially suppose.<br>
