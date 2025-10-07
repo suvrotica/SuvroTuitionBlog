@@ -5,7 +5,7 @@ category: "Doggerel-Political"
 
 thumbnail: "/images/placeholders/IMG-20250728-WA0003.jpg"
 
-date: "2025-10-04"
+date: "2025-10-07"
 
 keywords: ["political satire", "doggerel", "MAGA", "Trump", "American politics", "political commentary", "satirical poetry", "US politics", "populism", "right-wing politics", "political humor"]
 
@@ -95,9 +95,13 @@ But most Americans are stupid fucking cunts,<br>
 Distract or they go digging the pedo-ring shit.<br>
 <br>
 Holy ass fuck, hokey MAGA on a truck,<br>
-Lubrication you will certainly need.<br>
+Lubrication the stupids will certainly need.<br>
 Decent Americans all gaped, mini cunts raped,<br>
 What will take over now is Epstein's seed.<br>
+Rapture to rupture MAGA's prolapsed anus,<br>
+It's written in that bullshit bible I think.<br>
+Fat fuck redneck dumb jumbo morons,<br>
+Can't believe I let them lick my stink.<br>
 <br>
 The indian red, booze head, on a diabetic bed,<br>
 Flock with the feathered fools in casino.<br>
