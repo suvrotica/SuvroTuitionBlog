@@ -29,4 +29,4 @@ tags: ["Rabindrasangeet", "Rabindranath", "Tagore", "Rejwana banya Choudhuri", "
 
 <Ytp src="https://youtu.be/yKf20GGDkms?si=97SQ0aNTONM9UPXa" />
 
-<Ytp src="https://youtu.be/Pw2IXwIY57k?si=cfNiruJWAhwOZLBh" />
+<Ytp src="https://youtube.com/playlist?list=PLbGUWu9GPABJPonVzsfipnW0M4TePKVPy&si=Bu4Helypg9ahWvv9" />
