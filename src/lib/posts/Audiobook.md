@@ -4,7 +4,7 @@ title : "Audiobooks"
 
 thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20251006-WA0000.jpg"
 
-date: "2025-10-06"
+date: "2025-10-07"
 
 category : "Audio Video" 
 
@@ -51,6 +51,8 @@ tags: ["asimov", "bill bryson" ]
 <Ytp src="https://youtu.be/eV7SupmEgFs?si=41_Uyvwq7hK9pLuL" />
 
 <Ytp src="https://youtu.be/3t9VYpObotw?si=km4CBg_MHH8fSTDC" />
+
+<Ytp src="https://youtu.be/TW5WDNh34Es?si=1gwm9q_ue1_n25YI" />
 
 <Ytp src="https://youtu.be/7MzyhCf0CJ4?si=mFB5xP0-FfFPQHE-" />
 
