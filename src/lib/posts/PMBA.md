@@ -4,7 +4,7 @@ title : "My notes from Personal MBA"
 
 thumbnail : "/src/lib/assets/IMG-20251006-WA0019.jpg"
 
-date: "2025-10-06"
+date: "2025-10-07"
 
 category : "Work" 
 
@@ -100,3 +100,9 @@ What I want to say is that my blog will act like a common repository of business
 	href="/blog/Life/StupidMulti"
 	standalone
 />
+
+From a neuroscience standpoint, naming taps into regions like the left inferior frontal gyrus (Broca’s area) and left temporal lobe (especially the anterior temporal cortex), both of which are involved in semantic categorization. When you name something, you’re binding a percept to a linguistic schema — a sort of neural handle that makes it easier to retrieve, manipulate, and integrate into memory. fMRI studies show that merely labeling an ambiguous emotional face (“that’s anger” vs. “that’s fear”) reduces amygdala activation, calming the emotional response. This is called affect labeling — a mechanism behind why “talking about your feelings” actually works.
+
+There’s also the Baader–Meinhof phenomenon (frequency illusion), which isn’t quite the same but plays along: once a name or concept enters your mental map, your brain flags every new encounter with it, creating the illusion of increased frequency — as if the named thing has suddenly become more real or prevalent.
+
+If you zoom out to philosophy and semiotics, this intersects with nominalism and realism, and the ancient idea that “to name is to bring into being.” In cultural cognition, this bleeds into magic, religion, and politics — where “naming the demon,” “branding the product,” or “diagnosing the disorder” confers ontological weight. The unnamed is nebulous; the named becomes part of shared cognitive reality.
