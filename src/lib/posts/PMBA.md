@@ -37,6 +37,12 @@ tags: ["MBA", "Business" ]
 	standalone
 />
 
+<PostBadge
+	title="Sapir-wharf Hypothesis"
+	href="/blog/Life/StupidMulti"
+	standalone
+/>
+
 **WHY READ THIS BOOK**
 
 I will write my pithy notes on what I get out of this book as I re-read the 10th anniversary expanded edition. I have a previous copy. This is ongoing and starts October 6, 2025. I will, as usual, collate some other information and personal anecdotes, so it won't be Josh Kaufman alone but with me subjectively filtering his message. To read the book, and get it straight from the horse's mouth, just buy the book. 
@@ -88,3 +94,9 @@ And now AI, and before we get to the AI-specific landmines, a quick preface: if 
 AI hype chasing, overreliance on AI tools, misunderstanding AI limitations, fear of being replaced by AI, paralysis by algorithmic analysis, neglecting human judgment, poor data quality management, underestimating training complexity, ethical and regulatory anxiety, dependency on black-box models, overpromising AI capabilities, ignoring interpretability, misjudging AI adoption costs, overautomation, AI-driven imposter syndrome, bias amplification, chasing novelty over product-market fit, failure to integrate AI with existing systems, lack of AI strategy, distraction by AI trends, misalignment between AI outputs and business goals, underdeveloped AI literacy in the team.
 
 What I want to say is that my blog will act like a common repository of business mental models tailored for the coming, AI-driven landscape. I’ll collate everything I read into one place—disparate, complex insights turned into something digestible: graphical, friendly, colloquial, full of pictures, images, graphs, keywords, and carefully chosen semantic words that carry the right nuance. This way, I can later go off on tangents without losing context, and everything will be organized with links and cross-links so it’s navigation-friendly. Of course, it will take time, but the goal is a living, evolving guide that turns the chaos of business knowledge into something you can actually use in the age of AI. Ultimately, it’s important to have all of this in one place, in a friendly, readable way, without paywalls—so that anyone can eventually get over the hump, shed the overconfident illusion of knowledge, and actually understand what’s happening, adding real value to their business bottom line and to society. I am not a successful entrepreneur, because in India the kind of healthcare industry I envisioned—with interoperability, transparent networking, and freedom from crippling corruption—is still impossible. India remains a patchwork of backwaters and villages, where the hubris of gentrification is often just grunt work outsourced from other countries. But you don’t need success in terms of ROI to understand the grizzly innards of business—the failures, the mistakes, the messy trade-offs, the human drama, and the systemic forces at play. Observing, studying, and dissecting these realities gives insight that money alone can’t buy, and it builds the kind of intuition and judgment that actually matters when you’re trying to create lasting value. Paying attention to failures, difficulties and absurdities and often inverting a question like Jacobi as Josh has done is the better way to learn from life's experiences, define a business term, create a **germane cognitive load** to learn the new language of business that according to the **sapir-wharf hypothesis** unless you have the diction down you can't imagine the possibilities. 
+
+<PostBadge
+	title="Sapir-wharf Hypothesis"
+	href="/blog/Life/StupidMulti"
+	standalone
+/>
