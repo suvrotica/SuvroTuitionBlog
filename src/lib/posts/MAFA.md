@@ -98,6 +98,7 @@ Holy ass fuck, hokey MAGA on a truck,<br>
 Lubrication the stupids will certainly need.<br>
 Decent Americans all gaped, mini cunts raped,<br>
 What will take over now is Epstein's seed.<br>
+<br>
 Rapture to rupture MAGA's prolapsed anus,<br>
 It's written in that bullshit bible I think.<br>
 Fat fuck redneck dumb jumbo morons,<br>
