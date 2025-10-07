@@ -64,7 +64,7 @@ Biden's flush always woke and bluff.<br>
 The logs come floating back up,<br>
 Makes me scream I'VE HAD ENOUGH.<br>
 <br>
-Land of the free, chop ALL to-be-chopped tree,<br>
+Land once of the frees, chop all the trees,<br>
 The men of oil rule, I like to think.<br>
 The weakest link always the honest men,<br>
 Their balls have shit that really stink.<br>
@@ -82,11 +82,11 @@ It's like to swallow god's oily semen.<br>
 Verily thus us, goodly we white men go,<br>
 And frack with impunity the black crust.<br>
 The rituals are rote, a boat on the money moat,<br>
-Must be safe for in white god we trust.<br>
+Safe with the white supremacist god we trust.<br>
 <br>
 Also while we are at it, taking a smelly shit,<br>
 Fuck brown, the black, and the china men.<br>
-Jesus land is only alabaster white,<br>
+Jesus land is only holy alabaster white,<br>
 Of the white, for the white, by the white, amen.<br>
 <br>
 My dick is now very stiff with tariff,<br>
@@ -97,12 +97,12 @@ Distract or they go digging the pedo-ring shit.<br>
 Holy ass fuck, hokey MAGA on a truck,<br>
 Lubrication the stupids will certainly need.<br>
 Decent Americans all gaped, mini cunts raped,<br>
-What will take over now is Epstein's seed.<br>
+What we'll cover-up now is Epstein's deed.<br>
 <br>
 Rapture to rupture MAGA's prolapsed anus,<br>
 It's written in that bullshit bible I think.<br>
 Fat fuck redneck dumb jumbo morons,<br>
-Can't believe I let them lick my stink.<br>
+Can't believe I let them lick my shit stink.<br>
 <br>
 The indian red, booze head, on a diabetic bed,<br>
 Flock with the feathered fools in casino.<br>
@@ -119,22 +119,22 @@ As if I'm your long lost dear dick daddy.<br>
 Picking you up from kinder-fucking-garten,<br>
 Like a whore in a world totally fucked already.<br>
 <br>
-I'll incarcerate the zygote killers,<br>
+I'll incarcerate the diploid zygote killers,<br>
 Ban evolution and teach genesis instead.<br>
-I'll collaborate with oily and gassy,<br>
+I'll collaborate with mister oily and gassy,<br>
 Gang rape the climate crisis in the head.<br>
 <br>
-I'll use long respectable biggish words,<br>
+I'll use long respectable longish words,<br>
 Respectfully fuck the sorry sciencey ass.<br>
 Euphemisms are goodly green examples of,<br>
 Gaslighting without any polluting greasy gas.<br>
 <br>
-Our god's trump card, I, only and surely I,<br>
+Our god's black Amex is a goodly Trump card,<br>
 Hallelujah I am finally totally back.<br>
-Like the second cumming of christ,<br>
+Like the second cumming of cunt christ,<br>
 I kick bloody the opposing ball sac.<br>
 <br>
-Putin, you, I, Netanyahu, will the world end,<br>
+Putin, you, bro Netanyahu, & I everything end,<br>
 In an orgy of the richest white power sort.<br>
 Democracies subverted, thin Euro legs parted,<br>
 He who munches most muff, wins this sport.<br>
