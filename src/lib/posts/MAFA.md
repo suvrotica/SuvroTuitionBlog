@@ -135,9 +135,9 @@ Like the second cumming of cunt christ,<br>
 I kick bloody the opposing ball sac.<br>
 <br>
 Putin, you, bro Netanyahu, & I everything end,<br>
-In an orgy of the richest white power sort.<br>
+In an orgy of the richest white power size. <br>
 Democracies subverted, thin Euro legs parted,<br>
-He who munches most muff, wins this sport.<br>
+He who murders most men, wins the Noble Prize.<br>
 <br>
 Statistics with carrots, shticks and sticks,<br>
 Sometimes up asses I officially suppose.<br>
