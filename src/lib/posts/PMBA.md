@@ -79,7 +79,7 @@ In reality research consistently shows that CEOs don’t matter nearly as much a
 
 This you cannot read in this book, you have to read the linked posts. 
 
-<
+<PostBadge 
 	title="My Anger"
 	href="/blog/Bipolar%20Depression/MyAnger"
 	standalone
