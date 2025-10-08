@@ -28,4 +28,10 @@ tags: ["inspirational"]
 
 <Ytp src="https://youtu.be/9kM2dDrndQk?si=t_Ltsj5PgAOZ5hEk" />
 
+<Ytp src="https://youtu.be/Tuw8hxrFBH8?si=gWjaF4_zmdVd0q1r" />
+
+<Ytp src="https://youtu.be/h89uOvUDVO4?si=eL8M1EOEewGFp7cW" />
+
+<Ytp src="https://youtu.be/Pqftm3o5RdQ?si=Hntsf6tUAK80WGhf" />
+
 
