@@ -39,3 +39,7 @@ tags: ["inspirational"]
 <Ytp src="https://youtu.be/qY5VFQSUhSM?si=YNzgI9F62nojyZwl" />
 
 <Ytp src="https://youtu.be/9dLKZZN5tSo?si=DPP-p51KZiOnmkC2" />
+
+<Ytp src="https://youtu.be/JEFbfwg9dek?si=rJLuL4Lt1SAFheWd" />
+
+<Ytp src="https://youtu.be/ELC_e2QBQMk?si=LwpkEYbma1a_x-5j" />
