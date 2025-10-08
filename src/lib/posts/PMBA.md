@@ -18,7 +18,7 @@ tags: ["MBA", "Business" ]
 <script>
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import imageSrc1 from '$lib/assets/IMG-20251006-WA0019.jpg?url';
-    import imageSrc2 from '/src/lib/assets/slideshow-images/portrait/IMG-20251006-WA0019.jpg?url';
+    import imageSrc2 from '/src/lib/assets/slideshow-images/portrait/IMG-20251008-WA0010.jpg?url';
     
 
     import PostBadge from '$lib/components/ui/PostBadge.svelte';
