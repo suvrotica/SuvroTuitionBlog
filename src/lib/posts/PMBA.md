@@ -43,6 +43,13 @@ tags: ["MBA", "Business" ]
 	standalone
 />
 
+
+<PostBadge
+	title="My Anger"
+	href="/blog/Bipolar%20Depression/MyAnger"
+	standalone
+/>
+
 **WHY READ THIS BOOK**
 
 I will write my pithy notes on what I get out of this book as I re-read the 10th anniversary expanded edition. I have a previous copy. This is ongoing and starts October 6, 2025. I will, as usual, collate some other information and personal anecdotes, so it won't be Josh Kaufman alone but with me subjectively filtering his message. To read the book, and get it straight from the horse's mouth, just buy the book. And why go through all this hassle when AI can read for you and spit it back out in Shakespeare's sonnets? Yes, I know, but then you're missing the point entirely. I am a useless person with unuseful time at my disposal, and I fill it by living it. And this negotiated embarrassment of telling you my version of this book is because it's a favorite book of mine, and even vomiting back some of what I feel is stuck in my system gives me a pleasurable feeling, like the relief from bloating after passing gas effusively. The things that happened to me in India as an entrepreneur also made me think hard on the bolus of introspective, self-criticizing failure postmortem, only to read more voraciously to get more bloated. And thus, now that I'm a babbling hobo in a shanty in a third-world city, why not relieve the pressure from time to time? Anyway, who's going to read it? The level of English literacy is extremely poor in India, and I can get away with writing eloquent horseshit and no one would even fucking notice.
@@ -65,7 +72,13 @@ Status signaling: The degree itself acts as a marker of social status and access
 
 So in this context, flashing a Harvard MBA is less about what you’ve learned and more about manipulating perception. It’s a socially engineered shortcut: the world treats you as capable because it *assumes* you are, not because you’ve proven it. In plain language, it’s a professional magic trick—you pull a diploma out of your hat, and people clap, whether or not the rabbit inside is alive.
 
-In reality research consistently shows that CEOs don’t matter nearly as much as the myth suggests. The cult of the godlike CEO is largely shareholder theater—a performance inflated by media, markets, and ego. They have influence, yes, but most of a company’s success or failure comes from structural forces, timing, and luck. The MBA credential may open doors, but it can’t rescue anyone from reality once they’re inside. I, for example, care about understanding how business works not as a badge of status but as an engineering, mathematical, or psychological problem. I read books, observe people, and learn from experience—both the rewarding kind and the kind that knocks your teeth in. These things can’t be taught in a syllabus or tested in an exam; they can only be lived through, endured, and absorbed the hard way—humanly suffered and understood. In my case, the Titanic I built sank not because of icebergs, India is a tropical country — I guess I stretched the metaphor as far as it was useful — well because in India people fucking *lie all the time*, and having spent the better part of my life in the US, I was too naive, and I was in the long chain of crooked men, corruption, lies, rampant unreliability, and just plain unthinkable shit. This you cannot read in this book, you have to read my blog. 
+In reality research consistently shows that CEOs don’t matter nearly as much as the myth suggests. The cult of the godlike CEO is largely shareholder theater—a performance inflated by media, markets, and ego. They have influence, yes, but most of a company’s success or failure comes from structural forces, timing, and luck. The MBA credential may open doors, but it can’t rescue anyone from reality once they’re inside. I, for example, care about understanding how business works not as a badge of status but as an engineering, mathematical, or psychological problem. I read books, observe people, and learn from experience—both the rewarding kind and the kind that knocks your teeth in. These things can’t be taught in a syllabus or tested in an exam; they can only be lived through, endured, and absorbed the hard way—humanly suffered and understood. In my case, the Titanic I built sank not because of icebergs, India is a tropical country — I guess I stretched the metaphor as far as it was useful — well because in India people fucking *lie all the time*, and having spent the better part of my life in the US, I was too naive, and I was in the long chain of crooked men, corruption, lies, rampant unreliability, and just plain unthinkable shit. This you cannot read in this book, you have to read the linked posts. 
+
+<PostBadge
+	title="My Anger"
+	href="/blog/Bipolar%20Depression/MyAnger"
+	standalone
+/>
 
 As I’ve mentioned countless times on this blog, calling yourself a businessman or an entrepreneur, or even having a degree, doesn’t mean you know jack shit—about business or about life. The Dunning-Kruger effect is on steroids in India, where people genuinely believe they know something when, in reality, they have no fucking clue. So read this book. I don’t make a paisa if the author sells another copy; this is just to save you from the embarrassment, harassment, and grief that inevitably follow when life decides to fuck a naive dimwit in the ass. And sorry for the French—but honestly, get used to it, because life doesn’t censor itself either.
 
