@@ -26,4 +26,6 @@ tags: ["inspirational"]
 
 <Ytp src="https://youtu.be/ji5_MqicxSo?si=yMCzipXlRUoNqj45" />
 
+<Ytp src="https://youtu.be/9kM2dDrndQk?si=t_Ltsj5PgAOZ5hEk" />
+
 
