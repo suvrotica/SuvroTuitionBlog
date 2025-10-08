@@ -18,6 +18,7 @@ tags: ["MBA", "Business" ]
 <script>
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import imageSrc1 from '$lib/assets/IMG-20251006-WA0019.jpg?url';
+    import imageSrc2 from '/src/lib/assets/slideshow-images/portrait/IMG-20251006-WA0019.jpg?url';
     
 
     import PostBadge from '$lib/components/ui/PostBadge.svelte';
@@ -72,9 +73,13 @@ Status signaling: The degree itself acts as a marker of social status and access
 
 So in this context, flashing a Harvard MBA is less about what you’ve learned and more about manipulating perception. It’s a socially engineered shortcut: the world treats you as capable because it *assumes* you are, not because you’ve proven it. In plain language, it’s a professional magic trick—you pull a diploma out of your hat, and people clap, whether or not the rabbit inside is alive.
 
-In reality research consistently shows that CEOs don’t matter nearly as much as the myth suggests. The cult of the godlike CEO is largely shareholder theater—a performance inflated by media, markets, and ego. They have influence, yes, but most of a company’s success or failure comes from structural forces, timing, and luck. The MBA credential may open doors, but it can’t rescue anyone from reality once they’re inside. I, for example, care about understanding how business works not as a badge of status but as an engineering, mathematical, or psychological problem. I read books, observe people, and learn from experience—both the rewarding kind and the kind that knocks your teeth in. These things can’t be taught in a syllabus or tested in an exam; they can only be lived through, endured, and absorbed the hard way—humanly suffered and understood. In my case, the Titanic I built sank not because of icebergs, India is a tropical country — I guess I stretched the metaphor as far as it was useful — well because in India people fucking *lie all the time*, and having spent the better part of my life in the US, I was too naive, and I was in the long chain of crooked men, corruption, lies, rampant unreliability, and just plain unthinkable shit. This you cannot read in this book, you have to read the linked posts. 
+In reality research consistently shows that CEOs don’t matter nearly as much as the myth suggests. The cult of the godlike CEO is largely shareholder theater—a performance inflated by media, markets, and ego. They have influence, yes, but most of a company’s success or failure comes from structural forces, timing, and luck. The MBA credential may open doors, but it can’t rescue anyone from reality once they’re inside. I, for example, care about understanding how business works not as a badge of status but as an engineering, mathematical, or psychological problem. I read books, observe people, and learn from experience—both the rewarding kind and the kind that knocks your teeth in. These things can’t be taught in a syllabus or tested in an exam; they can only be lived through, endured, and absorbed the hard way—humanly suffered and understood. In my case, the Titanic I built sank not because of icebergs, India is a tropical country — I guess I stretched the metaphor as far as it was useful — well because in India people fucking *lie all the time*, and having spent the better part of my life in the US, I was too naive, and I was in the long chain of crooked men, corruption, lies, rampant unreliability, and just plain unthinkable shit. 
 
-<PostBadge
+<PostImage src={imageSrc2} alt="all kinds of shit" />
+
+This you cannot read in this book, you have to read the linked posts. 
+
+<
 	title="My Anger"
 	href="/blog/Bipolar%20Depression/MyAnger"
 	standalone
