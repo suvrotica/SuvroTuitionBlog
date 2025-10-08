@@ -11,7 +11,7 @@ tags: ["blog", "mathematics", "statistics"]
 
 category : "Statistics" 
 
-date: "2025-08-31"
+date: "2025-10-08"
 
 published: true
 
@@ -21,10 +21,14 @@ published: true
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20250812-WA0001.jpg?url';
     import imageSrc2 from '$lib/assets/slideshow-images/portrait/8b1b52a9-fa9a-4f03-8686-d863f5dff48f.png?url';
+    import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
     
 </script>
 
 <PostImage src={imageSrc1} alt="spitting statistics" />
+
+**VISUAL INTRO VIDEO PLAYLIST**
+<Ytp src="https://youtube.com/playlist?list=PL0KQuRyPJoe6KjlUM6iNYgt8d0DwI-IGR&si=KIsQ1xWaNPeWaqXT" />
 
 My first post on statistics won’t start with the standard formalities—you know, the solemn “Statistics is the science of…” opening that feels like it was last dusted off in 1954. Instead, I’ll just say that most of us—myself included—were introduced to statistics by people who made it about as inviting as a tax audit. Which is a shame, because when you scrape off the crust, it’s actually quite fascinating.
 
