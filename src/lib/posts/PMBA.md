@@ -32,6 +32,7 @@ tags: ["MBA", "Business" ]
 	standalone
 />
 
+
 <PostBadge
 	title="Mnemonic 22 AI Challenges"
 	href="/blog/Work/Pmba-mnemonic2"
@@ -41,6 +42,12 @@ tags: ["MBA", "Business" ]
 <PostBadge
 	title="Sapir-wharf Hypothesis"
 	href="/blog/Life/StupidMulti"
+	standalone
+/>
+
+<PostBadge
+	title="Burned"
+	href="/blog/Work/Burned"
 	standalone
 />
 
@@ -84,6 +91,12 @@ This you cannot read in this book, you have to read the linked posts.
 <PostBadge 
 	title="My Anger"
 	href="/blog/Bipolar%20Depression/MyAnger"
+	standalone
+/>
+
+<PostBadge
+	title="Burned"
+	href="/blog/Work/Burned"
 	standalone
 />
 
