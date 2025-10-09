@@ -51,3 +51,5 @@ tags: ["Hindi"]
 <Ytp src="https://www.youtube.com/embed/e44meSqTkH0?si=NM4d5HmNsWpBnwxo" />
 
 <Ytp src="https://www.youtube.com/embed/uALhcbOIHFc?si=U-AnEDLA_O1fhwOQ" />
+
+<Ytp src="https://youtube.com/playlist?list=RD6sfHEAeNklM&playnext=1&si=4RgVR8UCt_BoJYXu" />
