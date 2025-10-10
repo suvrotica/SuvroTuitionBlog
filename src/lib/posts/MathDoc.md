@@ -22,8 +22,6 @@ tags: ["Math Documentaries" ]
 </script> 
     
 
-<PostImage src={imageSrc1} alt="falling/>
-
-
+<PostImage src={imageSrc1} alt="falling" />
 
 <Ytp src="https://youtu.be/zD0YTnlsYH4?si=56fs_GJ7tNXJdbXW" />
