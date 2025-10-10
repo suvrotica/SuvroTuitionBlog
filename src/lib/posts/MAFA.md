@@ -137,7 +137,7 @@ I kick bloody the opposing ball sac.<br>
 Putin, you, bro Netanyahu, & I everything end,<br>
 In an orgy of the richest white power size. <br>
 Democracies subverted, thin Euro legs parted,<br>
-He who murders most wins the Nobel Prize.<br>
+He who murders most wins the Nobel Prize.<br><br>
 Goodly thee thou, I will fuck you now,<br>
 Not those fucks but me gets the Nobel.<br>
 I ask Putin to assfuck the jew Netyanahu,<br>
