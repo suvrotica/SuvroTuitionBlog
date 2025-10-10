@@ -5,7 +5,7 @@ category: "Doggerel-Political"
 
 thumbnail: "/images/placeholders/IMG-20250728-WA0003.jpg"
 
-date: "2025-10-07"
+date: "2025-10-10"
 
 tags: ["political satire", "doggerel", "MAGA", "Trump", "American politics", "political commentary", "satirical poetry", "US politics", "populism", "right-wing politics", "political humor"]
 
@@ -137,7 +137,26 @@ I kick bloody the opposing ball sac.<br>
 Putin, you, bro Netanyahu, & I everything end,<br>
 In an orgy of the richest white power size. <br>
 Democracies subverted, thin Euro legs parted,<br>
-Murder the most men win the Noble Prize.<br>
+He who murders most wins the Nobel Prize.<br>
+Goodly thee thou, I will fuck you now,<br>
+Not those fucks but me gets the Nobel.<br>
+I ask Putin to assfuck the jew Netyanahu,<br>
+Then send him and other oligarchs to hell.<br>
+<br>
+Sweet jesus's sweetest balls ideas these,<br>
+Squeezed like mother mary's honey tits.<br>
+Fondled in ass yes only white young lass,<br>
+Unborn girls through their preggo cunt pits.<br>
+<br>
+Oh jolly that picture more stiff dicks make,<br>
+Than fucking whores in Ambien coma or dead.<br>
+I declare America a loose christian cunt,<br>
+I jizz inside silly Arab Most-Lame head.<br>
+<br>
+I sell my shit on untruth unsocial as crypto,<br>
+How the fuck can I boil hate in shtick? <br>
+Yessiree the south-african whites I bring,<br>
+As ICE fuck brown, blacks legally with my stick.<br>
 <br>
 Statistics with carrots, shticks and sticks,<br>
 Sometimes up asses I officially suppose.<br>
