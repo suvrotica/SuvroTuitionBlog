@@ -9,7 +9,7 @@ category : "Bipolar Depression"
 
 tags: ["bengali", "NRI", "insomnia", "depression", "melancholy", "reflection", "bipolar" ]
 
-date: "2025-10-06"
+date: "2025-10-11"
 
 published: true
 
@@ -29,8 +29,8 @@ Often when I feel depressed, I have to write. Writing is the only cathartic, sui
 
 <PostImage src={imageSrc2} alt="making Maggie in a cup" />
 
-Sometimes—often without warning—the sluice gates of memory fail, and the past, long held at bay, surges forward with a force that shatters the pitiful fortifications my mind had so painstakingly, so hopefully, erected. These fences were never truly walls; they were embarrassingly frail trellises draped in the illusion of strength, and against the pressure of remembrance they splinter at once.
-
+Sometimes—often without warning—the sluice gates of memory fail, and the past, long held at bay, surges forward with a force that shatters the pitiful fortifications my mind had so painstakingly, so hopefully, erected. These fences were never truly walls; they were embarrassingly frail trellises draped in the illusion of strength, and against the pressure of remembrance they splinter at once. It’s the recent human unkindnesses that block their recollection, repressed when awake, but somehow during the rebooting from half asleep to wakefulness it’s hard to not remember the remote past when such unkindness hadn’t made their appearance. And thus I am transported back in time and then jolted forward to the unnerving present reality of not being able to put up with the strange stark contrast, and hurt following — the daggers stabbed are replanted and fresh injury, bleeding and pain is resurrected.
+ 
 In that flood, the few fragile scraps of what could be called hesitant normalcy are swept away, dissolving into a kind of manic-depressive hyper-rumination that feels both involuntary and inevitable given my pathology. The pernicious thoughts circle inward like tightening rings, each concentric darker, heavier, more airless than the last, enclosing me layer by layer until the innermost shell is nothing but a noose of suffocating blackness in a room turned into a sepulcher. 
 
 It is here that reason abandons me, or I abandon it—I am never quite sure which. The sorrow, grown too large to manage, discards the pretense of resolution. The tools lie scattered and useless, stripped of their edges, as if they too have surrendered to the chaos.
