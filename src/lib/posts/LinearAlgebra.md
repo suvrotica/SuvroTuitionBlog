@@ -38,6 +38,9 @@ published: true
 
 <Ytp src="https://youtu.be/KbyYTjfgZJI?si=4lZjk5OJhsUpU_hq" />
 
+**A video by @Mutual_Information**
+
+<Ytp src="https://youtu.be/6htbyY3rH1w?si=wVn3c9cJINAVyVFZ" />
 
 This is not going to be one essay, or thought on linear algebra but a culmination of years of distilled education and work experience in the US as a statistician, data scientist and later as an AI healthcare entrepreneur. I say that at once because pretence makes mathematics smell faintly of varnish and because the subject demands more than a tidy sermon — it beggars stories, experiments, failed models at three in the morning and the small mercies of algebra that make sense of the mess. I also say it because mathematics has been, for me, both vocation and refuge; bipolar disorder is a clumsy companion, and when words lined up badly or moods dissolved, vectors and matrices remained predictable in a way that both steadied and annoyed me — steady like the tram’s bell, annoying like the tram’s jolt. If you are someone curious in Calcutta who likes the smell of mango stalls, mixed with the damp smell of monsoon and the clatter of a cycle-rickshaw, this will not ask you to leave any of that behind. Linear algebra will walk through those streets with you.
 
