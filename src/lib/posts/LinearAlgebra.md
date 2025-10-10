@@ -8,7 +8,7 @@ tags: ["Calcutta", "Bengali", "American", "Mathematics", "Linear Algebra" ]
 
 category: "Linear Algebra"
 
-date: "2025-09-20"
+date: "2025-10-10"
 
 published: true
 
@@ -42,7 +42,13 @@ published: true
 
 <Ytp src="https://youtu.be/6htbyY3rH1w?si=wVn3c9cJINAVyVFZ" />
 
-This is not going to be one essay, or thought on linear algebra but a culmination of years of distilled education and work experience in the US as a statistician, data scientist and later as an AI healthcare entrepreneur. I say that at once because pretence makes mathematics smell faintly of varnish and because the subject demands more than a tidy sermon — it beggars stories, experiments, failed models at three in the morning and the small mercies of algebra that make sense of the mess. I also say it because mathematics has been, for me, both vocation and refuge; bipolar disorder is a clumsy companion, and when words lined up badly or moods dissolved, vectors and matrices remained predictable in a way that both steadied and annoyed me — steady like the tram’s bell, annoying like the tram’s jolt. If you are someone curious in Calcutta who likes the smell of mango stalls, mixed with the damp smell of monsoon and the clatter of a cycle-rickshaw, this will not ask you to leave any of that behind. Linear algebra will walk through those streets with you.
+Not only am I severely Indian, indelibly brown, incorrigibly ugly, and manic-depressed, but I pretend I know about subjects when I know jackshit. But I don't care, and I hope you don't mind if I take a steaming pile of abnormal knowledge dump gleaned repentantly, unwillingly, through sheer pressure, apathy, and initial disdain for all things related to work. But now I'm fifty, so my life being fuck-all, I have time for revenge—irritating and nauseating people with halitosis, farts, and just generally a deep desire to stay continually unwell and make you feel matchingly unwell through my jaundiced erudition and profligate misuse of time by reading this crap.
+
+And so, this is not going to be one annoying essay or thought on linear algebra but a culmination of years of distilled education and work experience in the U.S. as a statistician, data scientist, and later as an AI healthcare entrepreneur—spectacular failures in all these endeavors, I hasten to add. I spit that out at the outset because pretense makes mathematics smell faintly of varnish and because the subject demands more than a tidy sermon—it beggars bad metaphors, sick stories, uninteresting experiments, failed models at three in the morning, and the rambling mercies of boring algebra that help make no sense of the mess it already is.
+
+I also say it because mathematics has been, for me, both an unwilling vocation and irritating refuge; bipolar disorder is a clumsy companion, and when words lined up badly or moods dissolved, vectors and matrices remained predictable in a way that both steadied and annoyed me—steady like the tram’s bell, annoying like the tram’s jolt, both taking me nowhere because it’s a bad metaphor stuck in Calcutta traffic.
+
+If you are someone curious in Calcutta who likes the smell of rotten mango stalls mixed with the damp, pissy smell of monsoon and the clatter of a ramshackle cycle-rickshaw, this will not ask you to leave any of that behind. Linear algebra will walk through those streets with you like an expensive escort you can’t afford.
 
 To justify my position toward the end: when I write on a technical topic, I naturally begin with the deficiencies that once tripped me up. Some of these I can soften by sketching or programming visualizations, but others come from the sheer strangeness of perspective. If you have never left India, for instance, then the mention of a distant European scientist is just another man in a faraway land, with no anchor to fix your attention or spark curiosity. And because history is so often thought of as a dreary, desiccated subject, the people and places tend to feel ornamental, something to skim past. Yet the truth is that what appears inside the tidy bounds of a textbook took millennia to assemble. It was never in the order of the chapter numbers. Ideas came and went through curious misadventures: wars, deaths of kingdoms, obscure scribes, forgotten manuscripts. Sometimes a symbol, an operator, or a concept survived only because of such accidents.
 
