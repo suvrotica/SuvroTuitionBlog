@@ -18,6 +18,8 @@ tags: ["asimov", "bill bryson" ]
 <script>
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251006-WA0000.jpg?url';
+    import imageSrc2 from '$lib/assets/slideshow-images/portrait/IMG-20251011-WA0015.jpg?url';
+    
    import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
 </script> 
     
@@ -43,6 +45,8 @@ tags: ["asimov", "bill bryson" ]
 <Ytp src="https://youtu.be/denh3vj8Gpo?si=20qJNtsFbV2Xsz0C" />
 
 <Ytp src="https://youtu.be/AfMOOSJlV3U?si=yHjoeMZmGJAu_q3g" />
+
+<PostImage src={imageSrc2} alt="ghost reader" />
 
 <Ytp src="https://youtu.be/JtyK9eJnW1A?si=VK2FLfIOAH6uacaC" />
 
