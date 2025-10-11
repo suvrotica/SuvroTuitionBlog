@@ -31,6 +31,7 @@ published: true
 **Letters written to self**
 
 Sat, Oct 11, 2025, City of Joy
+
 Dear mister suvrotica, 
 
 Hope this letter finds you terminally ill or as an obscenely decaying, gravely disfigured corpse, but I know this hope will be shattered to smithereens by your unconditional persistence. 
@@ -41,5 +42,6 @@ And for fuck’s sake, even if hemlock is out of season, trustworthy, potent amo
 
 With persistent cold disregard, 
 
-Insincerely, 
+Insincerely,
+
 suvrotica 
