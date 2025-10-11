@@ -4,7 +4,7 @@ title : "My notes from Personal MBA"
 
 thumbnail : "/src/lib/assets/IMG-20251006-WA0019.jpg"
 
-date: "2025-10-07"
+date: "2025-10-12"
 
 category : "Work" 
 
@@ -70,17 +70,21 @@ This is essentially **credential signaling**, a concept from labor economics and
 
 In cognitive terms, it’s a mix in your favor that Josh is overlooking:
 
-Halo effect: Because one trait looks impressive (Harvard MBA), people assume everything else about you is equally impressive. Your résumé, your decision-making, your judgment—they get an unearned shine.
+**Availability bias**: If you watch a lot of scary movies about ghosts, you might start thinking your house is haunted. Your brain remembers the scary things easily. I saw a lot of bad things in the Indian business community, so my brain easily remembers all that evil. Now, I automatically think all people are naturally bad because those are the memories that stand out to me, but because I know this is a bias problem, I take each case separately and not fall in love with the first instinctive reaction my brain has, because it may be wrong. But because I am still in India I don't want to give up on this instinct because it has protected me after the business went rotten and helped me stay alive, because otherwise as a milquetoast I would be dead and you wouldn't be reading this. Similarly I am not reading this book without checking with my own experience, at least an entrepreneur is ill-advised to get pollyannish. 
 
-Authority bias: Humans defer to perceived experts or credentials, so a Harvard name on a certificate triggers automatic trust and respect, even if your actual skills are weak.
+**Halo effect**: Because one trait looks impressive (Harvard MBA), people assume everything else about you is equally impressive. Your résumé, your decision-making, your judgment—they get an unearned shine. If you see someone in a clean, smart school uniform, you might think they are also a good student, even before they speak. One good thing (the suit) makes people think everything else about you is good. It's a mental shortcut. The suit acts like a signal, telling people you're important without you saying anything. 
 
-Bandwagon effect: People assume that if others respect or follow someone with a prestigious credential, they should too, creating a herd mentality that reinforces the perceived competence.
+**Authority bias**: Humans defer to perceived experts or credentials, so a Harvard name on a certificate triggers automatic trust and respect, even if your actual skills are weak.
 
-Social proof: Related to the bandwagon effect, this is the tendency to judge the correctness or value of someone based on how many others endorse or admire them, making the Harvard MBA seem inherently more credible.
+**Bandwagon effect**: People assume that if others respect or follow someone with a prestigious credential, they should too, creating a herd mentality that reinforces the perceived competence.
 
-Status signaling: The degree itself acts as a marker of social status and access, prompting deference and admiration independent of actual ability.
+**Social proof**: Related to the bandwagon effect, this is the tendency to judge the correctness or value of someone based on how many others endorse or admire them, making the Harvard MBA seem inherently more credible.
 
-So in this context, flashing a Harvard MBA is less about what you’ve learned and more about manipulating perception. It’s a socially engineered shortcut: the world treats you as capable because it *assumes* you are, not because you’ve proven it. In plain language, it’s a professional magic trick—you pull a diploma out of your hat, and people clap, whether or not the rabbit inside is alive.
+**Status signaling**: The degree itself acts as a marker of social status and access, prompting deference and admiration independent of actual ability.
+
+**Contagion effect**: When your friend is very sad, don't you start to feel a little sad too? And when someone laughs, you want to laugh along. When reading someone else's business experiences, before you understand objective business facts it's easy to get convinced, so a book like this is an antidote, so that subjective emotional interpretations either of someone you know or your own thoughts can be first seen through an objective lens, which can only come from at least familiarity with the business ecosystem of words and concepts (college, reading this book, both, etcetera) and then through some actual real life experiences either in a job position or better still in your own business venture. 
+
+But what I am trying to say is, flashing a Harvard MBA is less about what you’ve learned and more about manipulating perception. It’s a socially engineered shortcut: the world treats you as capable because it *assumes* you are, not because you’ve proven it. In plain language, it’s a professional magic trick—you pull a diploma out of your hat, and people clap, whether or not the rabbit inside is alive.
 
 In reality research consistently shows that CEOs don’t matter nearly as much as the myth suggests. The cult of the godlike CEO is largely shareholder theater—a performance inflated by media, markets, and ego. They have influence, yes, but most of a company’s success or failure comes from structural forces, timing, and luck. The MBA credential may open doors, but it can’t rescue anyone from reality once they’re inside. I, for example, care about understanding how business works not as a badge of status but as an engineering, mathematical, or psychological problem. I read books, observe people, and learn from experience—both the rewarding kind and the kind that knocks your teeth in. These things can’t be taught in a syllabus or tested in an exam; they can only be lived through, endured, and absorbed the hard way—humanly suffered and understood. In my case, the Titanic I built sank not because of icebergs, India is a tropical country — I guess I stretched the metaphor as far as it was useful — well because in India people fucking *lie all the time*, and having spent the better part of my life in the US, I was too naive, and I was in the long chain of crooked men, corruption, lies, rampant unreliability, and just plain unthinkable shit. 
 
