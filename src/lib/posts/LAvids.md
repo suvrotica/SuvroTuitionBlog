@@ -35,4 +35,6 @@ tags: ["Linear Algebra"]
 
 **Playlists**
 
-<Ytp src="https://youtube.com/playlist?list=PLJ2Ql5O1weHq85ym_BZ5tTyDGkJhYMGv5&si=8PUf7mvqD2NBZXHX" />
+<Ytp src="https://youtube.com/playlist?list=PLffJUy1BnWj13MxDDbXWcbPzna0UESH59&si=IjVDGX2GSF3uzIE6" />
+
+
