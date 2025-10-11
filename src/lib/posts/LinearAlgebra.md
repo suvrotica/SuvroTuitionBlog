@@ -34,13 +34,13 @@ published: true
 	standalone
 />
 
-**A video by @AllAnglesMath to see what I am explaining here**
 
-<Ytp src="https://youtu.be/KbyYTjfgZJI?si=4lZjk5OJhsUpU_hq" />
+<PostBadge
+	title="Videos Playlists"
+	href="/blog/Linear%20Algebra/LAvids"
+	standalone
+/>
 
-**A video by @Mutual_Information**
-
-<Ytp src="https://youtu.be/6htbyY3rH1w?si=wVn3c9cJINAVyVFZ" />
 
 Not only am I severely Indian, indelibly brown, incorrigibly ugly, and manic-depressed, but I pretend I know about subjects when I know jackshit. But I don't care, and I hope you don't mind if I take a steaming pile of abnormal knowledge dump gleaned repentantly, unwillingly, through sheer pressure, apathy, and initial disdain for all things related to work. But now I'm fifty, so my life being fuck-all, I have time for revenge—to irritate and nauseate people with halitosis, farts, and just generally my incessant giddy desire to stay continually unwell and make you feel matchingly unwell through my jaundiced erudition causing profligate misuse of your time and non-linear irreparable harm by reading this crap about linear fucking topics of non-masturbatory and joyless mathematics. 
 
