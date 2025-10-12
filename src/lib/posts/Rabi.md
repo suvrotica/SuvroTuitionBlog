@@ -24,6 +24,8 @@ tags: ["Rabindrasangeet", "Rabindranath", "Tagore", "Rejwana banya Choudhuri", "
 
 <PostImage src={imageSrc1} alt="Rabindranath" />
 
+**To give full credit and support to the original creator, please click the video title and watch it on YouTube. It makes a real difference for them.**
+
 
 <Ytp src="https://youtu.be/A-902adcV54?si=AQkRUVy3o2Emx7xI" />
 
