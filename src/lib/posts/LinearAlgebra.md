@@ -2,7 +2,7 @@
 
 title : "Linear Algebra" 
 
-thumbnail: "/src/lib/assets/slideshow-images/portrait/Gemini_Generated_Image_ggwm87ggwm87ggwm.png"
+thumbnail: "/images/placeholders/Gemini_Generated_Image_ggwm87ggwm87ggwm.png"
 
 tags: ["Calcutta", "Bengali", "American", "Mathematics", "Linear Algebra" ]
 
