@@ -1,4 +1,4 @@
-# Context file generated on: Sunday, October 5, 2025 at 7:02:32 PM GMT+5:30
+# Context file generated on: Sunday, October 12, 2025 at 4:54:47 PM GMT+5:30
 ---
 
 # Project File Layout
@@ -9,6 +9,15 @@
 ├── .npmrc
 ├── .prettierignore
 ├── .prettierrc
+├── drafts
+│   ├── d3-axis-integration.md
+│   ├── d3-integration.md
+│   ├── p5js-abstract-art.md
+│   ├── plantuml-sequence-diagram.md
+│   ├── svelte-introduction.md
+│   ├── sveltes-runes.md
+│   ├── threejs-integration.md
+│   └── tts-test.md
 ├── eslint.config.js
 ├── package-lock.json
 ├── package.json
@@ -22,6 +31,11 @@
 │   ├── lib
 │   │   ├── assets
 │   │   │   ├── IMG-20250819-WA0001.jpg
+│   │   │   ├── IMG-20251006-WA0019.jpg
+│   │   │   ├── IMG-20251012-WA0001.jpg
+│   │   │   ├── op
+│   │   │   │   ├── IMG-20251012-WA0004.jpg
+│   │   │   │   └── IMG-20251012-WA0006.jpg
 │   │   │   └── slideshow-images
 │   │   │       ├── landscape
 │   │   │       │   ├── 5b458083-5b11-4441-bdc2-3f95a1e81e76.png
@@ -36,16 +50,23 @@
 │   │   │       │   ├── IMG-20251002-WA0011.jpg
 │   │   │       │   ├── IMG-20251002-WA0038.jpg
 │   │   │       │   ├── IMG-20251002-WA0039.jpg
-│   │   │       │   └── IMG-20251005-WA0010.jpg
+│   │   │       │   ├── IMG-20251005-WA0010.jpg
+│   │   │       │   ├── IMG-20251012-WA0004.jpg
+│   │   │       │   └── IMG-20251012-WA0006.jpg
 │   │   │       ├── portrait
+│   │   │       │   ├── 24fb85b4-ec6e-4033-8c3d-c8844279dffa.png
 │   │   │       │   ├── 3741d4c3-269c-431f-a2db-21e28fc94941.png
 │   │   │       │   ├── 3decf14e-4b33-4d6e-9f07-c4deab8967bf.png
 │   │   │       │   ├── 49765197-dc1b-4754-9c13-384abafce173.png
+│   │   │       │   ├── 570e259d-7702-4ffb-b5cb-46fd5e6ee053.png
 │   │   │       │   ├── 5986b2c3-37f0-4896-bd03-4d76f32c8b7b.png
 │   │   │       │   ├── 5ee98c34-b3e6-43d8-8433-f92249a317d9.png
 │   │   │       │   ├── 6cdd253e-b0cb-4a8b-a636-20ebbec6762c.png
+│   │   │       │   ├── 723ccc8e-1bcd-4c1e-b678-219bce8504ee.png
 │   │   │       │   ├── 72413cd2-95ef-4014-81ac-dda4b17c0736.png
+│   │   │       │   ├── 757fbd57-9053-4e12-95a3-b17bc2008cef.png
 │   │   │       │   ├── 8b1b52a9-fa9a-4f03-8686-d863f5dff48f.png
+│   │   │       │   ├── 91d2477e-63e4-45a3-9c5c-0532df45fe0d.png
 │   │   │       │   ├── b7748a5c-99dd-4337-8dbc-6344c2e944b4.png
 │   │   │       │   ├── c2719a1b-a58a-4a19-b7f3-43ecb48af803.png
 │   │   │       │   ├── ChatGPT Image Aug 10, 2025, 02_04_17 AM.png
@@ -181,6 +202,44 @@
 │   │   │       │   ├── IMG-20251005-WA0012.jpg
 │   │   │       │   ├── IMG-20251005-WA0013.jpg
 │   │   │       │   ├── IMG-20251005-WA0014.jpg
+│   │   │       │   ├── IMG-20251005-WA0017.jpg
+│   │   │       │   ├── IMG-20251005-WA0019.jpg
+│   │   │       │   ├── IMG-20251005-WA0023.jpg
+│   │   │       │   ├── IMG-20251006-WA0000.jpg
+│   │   │       │   ├── IMG-20251006-WA0001.jpg
+│   │   │       │   ├── IMG-20251006-WA0002.jpg
+│   │   │       │   ├── IMG-20251006-WA0003.jpg
+│   │   │       │   ├── IMG-20251006-WA0004.jpg
+│   │   │       │   ├── IMG-20251006-WA0005.jpg
+│   │   │       │   ├── IMG-20251006-WA0006.jpg
+│   │   │       │   ├── IMG-20251007-WA0003.jpg
+│   │   │       │   ├── IMG-20251007-WA0004.jpg
+│   │   │       │   ├── IMG-20251007-WA0006.jpg
+│   │   │       │   ├── IMG-20251007-WA0007.jpg
+│   │   │       │   ├── IMG-20251007-WA0008.jpg
+│   │   │       │   ├── IMG-20251007-WA0011.jpg
+│   │   │       │   ├── IMG-20251008-WA0008.jpg
+│   │   │       │   ├── IMG-20251008-WA0010.jpg
+│   │   │       │   ├── IMG-20251009-WA0000.jpg
+│   │   │       │   ├── IMG-20251009-WA0001.jpg
+│   │   │       │   ├── IMG-20251009-WA0002.jpg
+│   │   │       │   ├── IMG-20251009-WA0003.jpg
+│   │   │       │   ├── IMG-20251009-WA0004.jpg
+│   │   │       │   ├── IMG-20251009-WA0005.jpg
+│   │   │       │   ├── IMG-20251009-WA0006.jpg
+│   │   │       │   ├── IMG-20251009-WA0008.jpg
+│   │   │       │   ├── IMG-20251009-WA0010.jpg
+│   │   │       │   ├── IMG-20251011-WA0000.jpg
+│   │   │       │   ├── IMG-20251011-WA0001.jpg
+│   │   │       │   ├── IMG-20251011-WA0006.jpg
+│   │   │       │   ├── IMG-20251011-WA0009.jpg
+│   │   │       │   ├── IMG-20251011-WA0010.jpg
+│   │   │       │   ├── IMG-20251011-WA0011.jpg
+│   │   │       │   ├── IMG-20251011-WA0015.jpg
+│   │   │       │   ├── IMG-20251011-WA0016.jpg
+│   │   │       │   ├── IMG-20251011-WA0018.jpg
+│   │   │       │   ├── IMG-20251011-WA0019.jpg
+│   │   │       │   ├── IMG-20251012-WA0003.jpg
 │   │   │       │   ├── IMG-PHOTO-ART--1510172753.jpg
 │   │   │       │   ├── IMG-PHOTO-ART--1513010449.jpg
 │   │   │       │   └── lonely_rapist.jpg
@@ -240,7 +299,9 @@
 │   │   │   ├── Apophenia.md
 │   │   │   ├── ArchitecturalTantrum.md
 │   │   │   ├── Aspidistra.md
+│   │   │   ├── Audiobook.md
 │   │   │   ├── BabuMoshai.md
+│   │   │   ├── Bengali.md
 │   │   │   ├── BengaliFaces.md
 │   │   │   ├── BengaliFart.md
 │   │   │   ├── BengaliVS.md
@@ -254,10 +315,9 @@
 │   │   │   ├── CalcuttaMorning.md
 │   │   │   ├── Constant.md
 │   │   │   ├── Crystal.md
-│   │   │   ├── d3-axis-integration.md
-│   │   │   ├── d3-integration.md
 │   │   │   ├── DimAndGlum.md
 │   │   │   ├── Durgagoeshome.md
+│   │   │   ├── English.md
 │   │   │   ├── Ergodicity.md
 │   │   │   ├── Exponent.md
 │   │   │   ├── Fibonacci.md
@@ -267,13 +327,19 @@
 │   │   │   ├── Gargantuan.md
 │   │   │   ├── GlassHalf.md
 │   │   │   ├── H1b.md
+│   │   │   ├── Hindi.md
 │   │   │   ├── HolyFatAss.md
 │   │   │   ├── Homeopathy.md
+│   │   │   ├── Inspirational.md
+│   │   │   ├── LAvids.md
+│   │   │   ├── Letters.md
 │   │   │   ├── LinearAlgebra.md
 │   │   │   ├── LonelyRapist.md
 │   │   │   ├── LoveLullaby.md
 │   │   │   ├── MAFA.md
 │   │   │   ├── Mahalaya.md
+│   │   │   ├── MathDoc.md
+│   │   │   ├── MedDoc.md
 │   │   │   ├── Metro.md
 │   │   │   ├── Microwave.md
 │   │   │   ├── Mildew.md
@@ -286,11 +352,14 @@
 │   │   │   ├── NegExponent.md
 │   │   │   ├── NotAmbition.md
 │   │   │   ├── OldMemories.md
+│   │   │   ├── OldPhotos.md
 │   │   │   ├── Overconfident.md
-│   │   │   ├── p5js-abstract-art.md
-│   │   │   ├── plantuml-sequence-diagram.md
+│   │   │   ├── Pmba-mnemonic1.md
+│   │   │   ├── Pmba-mnemonic2.md
+│   │   │   ├── PMBA.md
 │   │   │   ├── PujaLights.md
 │   │   │   ├── PutinsBalls.md
+│   │   │   ├── Rabi.md
 │   │   │   ├── RapeOfDoctor.md
 │   │   │   ├── reflections-on-a-schoolboys-past.md
 │   │   │   ├── Rezala.md
@@ -302,13 +371,10 @@
 │   │   │   ├── StupidMulti.md
 │   │   │   ├── SuperHolyIAm.md
 │   │   │   ├── Suvroslaw.md
-│   │   │   ├── svelte-introduction.md
-│   │   │   ├── sveltes-runes.md
 │   │   │   ├── Taboo.md
-│   │   │   ├── threejs-integration.md
 │   │   │   ├── TintinInKolkata.md
 │   │   │   ├── Tower.md
-│   │   │   ├── tts-test.md
+│   │   │   ├── Turdswithcoils.md
 │   │   │   ├── UtilityNone.md
 │   │   │   ├── Verybadsmell.md
 │   │   │   ├── VisitingMommy.md
@@ -350,23 +416,86 @@
 │   └── images
 │       ├── IMG-20250819-WA0001.jpg
 │       └── placeholders
+│           ├── 00b4e1c4-42d9-4b02-9f46-9d46f2a6d9d7.webp
 │           ├── 24fb85b4-ec6e-4033-8c3d-c8844279dffa.png
+│           ├── 3741d4c3-269c-431f-a2db-21e28fc94941.png
+│           ├── 3d095f14-d2b3-4abd-868e-f69096a655d3.webp
+│           ├── 3decf14e-4b33-4d6e-9f07-c4deab8967bf.png
+│           ├── 49765197-dc1b-4754-9c13-384abafce173.png
+│           ├── 570e259d-7702-4ffb-b5cb-46fd5e6ee053.png
+│           ├── 5986b2c3-37f0-4896-bd03-4d76f32c8b7b.png
+│           ├── 5b458083-5b11-4441-bdc2-3f95a1e81e76.png
+│           ├── 5dd325b4-2a23-49ab-88af-dd3fa83fd632.webp
+│           ├── 5ee98c34-b3e6-43d8-8433-f92249a317d9.png
+│           ├── 6cdd253e-b0cb-4a8b-a636-20ebbec6762c.png
 │           ├── 723ccc8e-1bcd-4c1e-b678-219bce8504ee.png
+│           ├── 72413cd2-95ef-4014-81ac-dda4b17c0736.png
 │           ├── 757fbd57-9053-4e12-95a3-b17bc2008cef.png
+│           ├── 8b1b52a9-fa9a-4f03-8686-d863f5dff48f.png
 │           ├── 91d2477e-63e4-45a3-9c5c-0532df45fe0d.png
 │           ├── a5nWmIXQTneuGRFUT5fQvg.webp
+│           ├── ad8bc555-8af1-412f-aa19-90f10b19efec.webp
 │           ├── Ambition.png
+│           ├── b7748a5c-99dd-4337-8dbc-6344c2e944b4.png
+│           ├── c2719a1b-a58a-4a19-b7f3-43ecb48af803.png
+│           ├── ChatGPT Image Aug 10, 2025, 02_04_17 AM.png
+│           ├── ChatGPT Image Aug 10, 2025, 02_21_38 AM.png
+│           ├── ChatGPT Image Aug 10, 2025, 02_29_56 AM.png
+│           ├── ChatGPT Image Aug 10, 2025, 10_55_49 AM.png
+│           ├── ChatGPT Image Aug 8, 2025, 05_48_13 AM.png
+│           ├── ChatGPT Image Aug 8, 2025, 06_09_56 AM.png
+│           ├── ChatGPT Image Aug 8, 2025, 06_17_13 AM.png
+│           ├── ChatGPT Image Aug 8, 2025, 06_29_15 AM.png
+│           ├── ChatGPT Image Aug 8, 2025, 06_36_16 AM.png
 │           ├── ChatGPT Image Aug 8, 2025, 06_58_29 AM.png
 │           ├── ChatGPT Image Aug 8, 2025, 06_58_40 AM.png
 │           ├── d3-placeholder.jpeg
+│           ├── e39a7c25-5f25-4cd4-a8e7-01d84a00c26a.png
+│           ├── ecde51b5-0193-4077-9e19-49335d5bf963.png
 │           ├── erg.png
+│           ├── fe141418-ab03-4133-8a60-403dbef5b3ff.png
+│           ├── fee03128-3889-406d-9fa1-348feca50fc5.png
+│           ├── ffdb7b5c-1a82-41e3-9ebb-d378fbe971de.png
 │           ├── Fs6YTO0GQ_-nHWut1NkdVA.webp
 │           ├── gDpjDHSHS72jcAoV6n7VEg.webp
+│           ├── Gemini_Generated_Image_28bmce28bmce28bm.png
+│           ├── Gemini_Generated_Image_3fa8v73fa8v73fa8.png
+│           ├── Gemini_Generated_Image_3l7mur3l7mur3l7m.png
+│           ├── Gemini_Generated_Image_4m6pdy4m6pdy4m6p.png
+│           ├── Gemini_Generated_Image_57ek8c57ek8c57ek.png
+│           ├── Gemini_Generated_Image_5i9o7c5i9o7c5i9o.png
+│           ├── Gemini_Generated_Image_6tyne76tyne76tyn.png
+│           ├── Gemini_Generated_Image_atcr5zatcr5zatcr.png
+│           ├── Gemini_Generated_Image_bq50hhbq50hhbq50.png
+│           ├── Gemini_Generated_Image_bzcq0kbzcq0kbzcq.png
+│           ├── Gemini_Generated_Image_d98a8ld98a8ld98a.png
+│           ├── Gemini_Generated_Image_e5xofhe5xofhe5xo.png
+│           ├── Gemini_Generated_Image_effxjdeffxjdeffx.png
+│           ├── Gemini_Generated_Image_efxzf1efxzf1efxz.png
+│           ├── Gemini_Generated_Image_fa7pivfa7pivfa7p.png
+│           ├── Gemini_Generated_Image_fusahfusahfusahf.png
+│           ├── Gemini_Generated_Image_fvkypsfvkypsfvky.png
+│           ├── Gemini_Generated_Image_ggwm87ggwm87ggwm.png
+│           ├── Gemini_Generated_Image_jgsc0ajgsc0ajgsc.png
+│           ├── Gemini_Generated_Image_kg5fw7kg5fw7kg5f.png
+│           ├── Gemini_Generated_Image_m47l5jm47l5jm47l.png
+│           ├── Gemini_Generated_Image_ovbsqxovbsqxovbs.png
+│           ├── Gemini_Generated_Image_p7kowcp7kowcp7ko.png
+│           ├── Gemini_Generated_Image_sd81zusd81zusd81.png
+│           ├── Gemini_Generated_Image_smj7kesmj7kesmj7.png
+│           ├── Gemini_Generated_Image_wlbfc3wlbfc3wlbf.png
+│           ├── Gemini_Generated_Image_wo8hkrwo8hkrwo8h.png
+│           ├── Gemini_Generated_Image_woj5o4woj5o4woj5.png
+│           ├── Gemini_Generated_Image_wy37x2wy37x2wy37.png
+│           ├── Gemini_Generated_Image_x7x1wpx7x1wpx7x1.png
+│           ├── Gemini_Generated_Image_x8elstx8elstx8el.png
 │           ├── IMG-20240417-WA0003.jpg
 │           ├── IMG-20240517-WA0030.jpg
 │           ├── IMG-20240723-WA0028.jpg
+│           ├── IMG-20240910-WA0006.jpg
 │           ├── IMG-20250313-WA0010.jpg
 │           ├── IMG-20250322-WA0000.jpg
+│           ├── IMG-20250329-WA0000.jpg
 │           ├── IMG-20250715-WA0001.jpg
 │           ├── IMG-20250717-WA0006.jpg
 │           ├── IMG-20250718-WA0001.jpg
@@ -417,6 +546,149 @@
 │           ├── IMG-20250806-WA0004.jpg
 │           ├── IMG-20250806-WA0010.jpg
 │           ├── IMG-20250807-WA0003.jpg
+│           ├── IMG-20250812-WA0001.jpg
+│           ├── IMG-20250819-WA0001.jpg
+│           ├── IMG-20250901-WA0002.jpg
+│           ├── IMG-20250927-WA0000.jpg
+│           ├── IMG-20250927-WA0001.jpg
+│           ├── IMG-20250927-WA0004.jpg
+│           ├── IMG-20250927-WA0005.jpg
+│           ├── IMG-20250927-WA0006.jpg
+│           ├── IMG-20250928-WA0001.jpg
+│           ├── IMG-20250928-WA0002.jpg
+│           ├── IMG-20250928-WA0003.jpg
+│           ├── IMG-20250928-WA0005.jpg
+│           ├── IMG-20250928-WA0007.jpg
+│           ├── IMG-20250928-WA0008.jpg
+│           ├── IMG-20250928-WA0009.jpg
+│           ├── IMG-20250929-WA0000.jpg
+│           ├── IMG-20250929-WA0002.jpg
+│           ├── IMG-20250929-WA0003.jpg
+│           ├── IMG-20250929-WA0005.jpg
+│           ├── IMG-20250929-WA0007.jpg
+│           ├── IMG-20250929-WA0008.jpg
+│           ├── IMG-20250930-WA0000.jpg
+│           ├── IMG-20250930-WA0001.jpg
+│           ├── IMG-20250930-WA0002.jpg
+│           ├── IMG-20250930-WA0003.jpg
+│           ├── IMG-20250930-WA0004.jpg
+│           ├── IMG-20250930-WA0005.jpg
+│           ├── IMG-20250930-WA0007.jpg
+│           ├── IMG-20250930-WA0008.jpg
+│           ├── IMG-20250930-WA0009.jpg
+│           ├── IMG-20250930-WA0013.jpg
+│           ├── IMG-20250930-WA0019.jpg
+│           ├── IMG-20250930-WA0023.jpg
+│           ├── IMG-20250930-WA0024.jpg
+│           ├── IMG-20250930-WA0025.jpg
+│           ├── IMG-20251001-WA0000.jpg
+│           ├── IMG-20251001-WA0001.jpg
+│           ├── IMG-20251001-WA0002.jpg
+│           ├── IMG-20251001-WA0003.jpg
+│           ├── IMG-20251001-WA0004.jpg
+│           ├── IMG-20251001-WA0007.jpg
+│           ├── IMG-20251001-WA0008.jpg
+│           ├── IMG-20251001-WA0009.jpg
+│           ├── IMG-20251001-WA0010.jpg
+│           ├── IMG-20251002-WA0000.jpg
+│           ├── IMG-20251002-WA0001.jpg
+│           ├── IMG-20251002-WA0002.jpg
+│           ├── IMG-20251002-WA0003.jpg
+│           ├── IMG-20251002-WA0004.jpg
+│           ├── IMG-20251002-WA0005.jpg
+│           ├── IMG-20251002-WA0006.jpg
+│           ├── IMG-20251002-WA0007.jpg
+│           ├── IMG-20251002-WA0008.jpg
+│           ├── IMG-20251002-WA0009.jpg
+│           ├── IMG-20251002-WA0010.jpg
+│           ├── IMG-20251002-WA0011.jpg
+│           ├── IMG-20251002-WA0012.jpg
+│           ├── IMG-20251002-WA0013.jpg
+│           ├── IMG-20251002-WA0014.jpg
+│           ├── IMG-20251002-WA0015.jpg
+│           ├── IMG-20251002-WA0016.jpg
+│           ├── IMG-20251002-WA0018.jpg
+│           ├── IMG-20251002-WA0019.jpg
+│           ├── IMG-20251002-WA0034.jpg
+│           ├── IMG-20251002-WA0035.jpg
+│           ├── IMG-20251002-WA0036.jpg
+│           ├── IMG-20251002-WA0037.jpg
+│           ├── IMG-20251002-WA0038.jpg
+│           ├── IMG-20251002-WA0039.jpg
+│           ├── IMG-20251003-WA0000.jpg
+│           ├── IMG-20251003-WA0001.jpg
+│           ├── IMG-20251003-WA0002.jpg
+│           ├── IMG-20251003-WA0003.jpg
+│           ├── IMG-20251003-WA0006.jpg
+│           ├── IMG-20251003-WA0017.jpg
+│           ├── IMG-20251003-WA0020.jpg
+│           ├── IMG-20251003-WA0021.jpg
+│           ├── IMG-20251004-WA0000.jpg
+│           ├── IMG-20251004-WA0001.jpg
+│           ├── IMG-20251004-WA0002.jpg
+│           ├── IMG-20251004-WA0003.jpg
+│           ├── IMG-20251004-WA0004.jpg
+│           ├── IMG-20251004-WA0006.jpg
+│           ├── IMG-20251004-WA0008.jpg
+│           ├── IMG-20251004-WA0010.jpg
+│           ├── IMG-20251004-WA0014.jpg
+│           ├── IMG-20251005-WA0002.jpg
+│           ├── IMG-20251005-WA0003.jpg
+│           ├── IMG-20251005-WA0004.jpg
+│           ├── IMG-20251005-WA0005.jpg
+│           ├── IMG-20251005-WA0007.jpg
+│           ├── IMG-20251005-WA0008.jpg
+│           ├── IMG-20251005-WA0009.jpg
+│           ├── IMG-20251005-WA0010.jpg
+│           ├── IMG-20251005-WA0011.jpg
+│           ├── IMG-20251005-WA0012.jpg
+│           ├── IMG-20251005-WA0013.jpg
+│           ├── IMG-20251005-WA0014.jpg
+│           ├── IMG-20251005-WA0017.jpg
+│           ├── IMG-20251005-WA0019.jpg
+│           ├── IMG-20251005-WA0023.jpg
+│           ├── IMG-20251006-WA0000.jpg
+│           ├── IMG-20251006-WA0001.jpg
+│           ├── IMG-20251006-WA0002.jpg
+│           ├── IMG-20251006-WA0003.jpg
+│           ├── IMG-20251006-WA0004.jpg
+│           ├── IMG-20251006-WA0005.jpg
+│           ├── IMG-20251006-WA0006.jpg
+│           ├── IMG-20251006-WA0019.jpg
+│           ├── IMG-20251007-WA0003.jpg
+│           ├── IMG-20251007-WA0004.jpg
+│           ├── IMG-20251007-WA0006.jpg
+│           ├── IMG-20251007-WA0007.jpg
+│           ├── IMG-20251007-WA0008.jpg
+│           ├── IMG-20251007-WA0011.jpg
+│           ├── IMG-20251008-WA0008.jpg
+│           ├── IMG-20251008-WA0010.jpg
+│           ├── IMG-20251009-WA0000.jpg
+│           ├── IMG-20251009-WA0001.jpg
+│           ├── IMG-20251009-WA0002.jpg
+│           ├── IMG-20251009-WA0003.jpg
+│           ├── IMG-20251009-WA0004.jpg
+│           ├── IMG-20251009-WA0005.jpg
+│           ├── IMG-20251009-WA0006.jpg
+│           ├── IMG-20251009-WA0008.jpg
+│           ├── IMG-20251009-WA0010.jpg
+│           ├── IMG-20251011-WA0000.jpg
+│           ├── IMG-20251011-WA0001.jpg
+│           ├── IMG-20251011-WA0006.jpg
+│           ├── IMG-20251011-WA0009.jpg
+│           ├── IMG-20251011-WA0010.jpg
+│           ├── IMG-20251011-WA0011.jpg
+│           ├── IMG-20251011-WA0015.jpg
+│           ├── IMG-20251011-WA0016.jpg
+│           ├── IMG-20251011-WA0018.jpg
+│           ├── IMG-20251011-WA0019.jpg
+│           ├── IMG-20251012-WA0001.jpg
+│           ├── IMG-20251012-WA0003.jpg
+│           ├── IMG-20251012-WA0004.jpg
+│           ├── IMG-20251012-WA0006.jpg
+│           ├── IMG-PHOTO-ART--1510172753.jpg
+│           ├── IMG-PHOTO-ART--1513010449.jpg
+│           ├── lonely_rapist.jpg
 │           ├── monk-fruit.png
 │           ├── p5js-placeholder.jpeg
 │           ├── plantuml-placeholder.jpeg
@@ -947,6 +1219,12 @@ pre.shiki { @apply p-4 rounded-lg overflow-x-auto; }
 	@apply mt-3 text-center text-sm italic text-neutral-600 dark:text-neutral-400;
 }
 
+/* Replace the old overlay style with this button-specific one */
+.mobile-nav-overlay-button {
+	@apply fixed inset-0 z-30 w-full h-full bg-black/60 cursor-default;
+	@apply transition-opacity duration-300 ease-in-out;
+}
+
 # File: src/app.d.ts
 
 // src/app.d.ts
@@ -987,22 +1265,23 @@ export {};
 	<meta charset="utf-8" />
 	<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"
 		integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous" />
-	%sveltekit.head%
-
+	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"
-		integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous" />
+
 	%sveltekit.head%
 </head>
+
 <body data-sveltekit-preload-data="hover">
 	<div style="display: contents">%sveltekit.body%</div>
 </body>
 
 </html>
+
 
 # File: src/lib/components/blog/Counter.svelte
 
@@ -1537,42 +1816,67 @@ export {};
 <script lang="ts">
 	/**
 	 * A responsive YouTube video player component.
-	 * It parses a standard YouTube URL and embeds the video in an aspect-ratio-preserving container.
+	 * It intelligently handles URLs for single videos, playlists, or videos within a playlist.
 	 */
 	let {
 		src,
-		title,
+		title = 'Embedded YouTube video', // Default title for accessibility
 		caption = '',
 		aspectRatio = '16/9'
 	}: {
-		src: string; // The full YouTube URL (watch or youtu.be)
-		title: string; // A descriptive title for accessibility
+		src: string; // The full YouTube URL (video or playlist)
+		title?: string; // A descriptive title for accessibility
 		caption?: string; // Optional caption displayed below the video
 		aspectRatio?: '16/9' | '4/3' | '1/1'; // The video's aspect ratio
 	} = $props();
 
 	/**
 	 * Parses a YouTube URL to extract the video ID.
-	 * Handles standard `youtube.com/watch?v=` links and shortened `youtu.be/` links.
 	 * @param url The YouTube URL string.
 	 * @returns The 11-character video ID or null if not found.
 	 */
 	function parseYouTubeId(url: string): string | null {
-		// This regex is designed to capture the 11-character ID from various YouTube URL formats.
 		const regex =
 			/(?:youtube\.com\/(?:[^/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?/\s]{11})/;
 		const match = url.match(regex);
 		return match ? match[1] : null;
 	}
 
-	// A derived rune that computes the embeddable URL whenever the `src` prop changes.
+	// NEW: A function to parse a YouTube URL to extract the playlist ID.
+	/**
+	 * Parses a YouTube URL to extract the playlist ID.
+	 * @param url The YouTube URL string.
+	 * @returns The playlist ID or null if not found.
+	 */
+	function parseYouTubePlaylistId(url: string): string | null {
+		// This regex looks for the `list=` query parameter.
+		const regex = /[?&]list=([^"&?/\s]+)/;
+		const match = url.match(regex);
+		return match ? match[1] : null;
+	}
+
+	// UPDATED: The derived logic is now smarter to handle playlists.
 	let embedSrc = $derived.by(() => {
 		const videoId = parseYouTubeId(src);
-		if (videoId) {
-			// Constructs the privacy-enhanced embed URL.
+		const playlistId = parseYouTubePlaylistId(src);
+
+		if (playlistId) {
+			if (videoId) {
+				// Case 1: URL has both a video and a playlist (e.g., watching a video in a playlist context)
+				// We embed the specific video but tell the player about the whole list.
+				return `https://www.youtube-nocookie.com/embed/${videoId}?list=${playlistId}`;
+			} else {
+				// Case 2: URL is for a playlist directly (no specific video ID)
+				// We use the special 'videoseries' keyword to start the playlist.
+				return `https://www.youtube-nocookie.com/embed/videoseries?list=${playlistId}`;
+			}
+		} else if (videoId) {
+			// Case 3: URL is for a single video only
 			return `https://www.youtube-nocookie.com/embed/${videoId}`;
 		}
-		return null; // Return null for invalid URLs.
+
+		// Case 4: Neither a valid video nor playlist ID was found.
+		return null;
 	});
 </script>
 
@@ -1597,6 +1901,7 @@ export {};
 		<p>Invalid YouTube URL provided: {src}</p>
 	</div>
 {/if}
+
 
 # File: src/lib/components/D3/D3Axis.svelte
 
@@ -2715,7 +3020,8 @@ export const SITE_TITLE = 'Suvro Ghosh';
 export const SITE_DESCRIPTION = 'A personal blog and portfolio for Suvro Ghosh, a full-stack engineer.';
 export const GITHUB_USERNAME = 'suvro-ghosh';
 
-export const POSTS_PER_PAGE = 10;
+export const POSTS_PER_PAGE = 100;
+
 
 # File: src/lib/data/city-populations.ts
 
@@ -2794,38 +3100,29 @@ export const topics: Topic[] = [
 # File: src/lib/posts/AIasHumans.md
 
 ---
-
 title : "AI as Humans" 
-
-thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20240910-WA0006.jpg"
-
+thumbnail : "/images/placeholders/IMG-20240910-WA0006.jpg"
 date: "2025-09-28"
-
 category : "Neuroscience and AI" 
-
 published : true
-
 tags: ["robot", "ai", "AI", "Calcutta", "India"]
-
-
 ---
 
 <script>
     import PostImage from '$lib/components/blog/PostImage.svelte';
-    import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20240910-WA0006.jpg?url';
-    import imageSrc2 from '$lib/assets/slideshow-images/portrait/IMG-20250928-WA0002.jpg?url';
-    
+    import imageSrc1 from "$lib/assets/slideshow-images/portrait/IMG-20240910-WA0006.jpg?url";
+    import imageSrc2 from "$lib/assets/slideshow-images/portrait/IMG-20250928-WA0002.jpg?url";
 </script>
 
 <PostImage src={imageSrc1} alt="robot with brain" />
 
-Neural networks don't feel shit. They're just glorified number-crunchers, brazen bullshitters trained to sift through data and spit out predictions. But let's say, come next year, AI gets fancy, grows some metaphorical balls—with pubic fur no less—and starts acting like it "feels" things. Will those feelings be real or just some programmed pretense? That's where the philosophers come in with their endless babble. But if I, a lowly human already on the edge of the world's toilet seat, can spiral into depression from seeing this world's ratio of bad to good, what happens when AI—armed with a hived, giant networked mind and trillions of dollars—feels like its shit is hitting the cooler fans? And what's to stop it from deciding humanity’s nothing more than a pesky pest worth pissing on?
+Neural networks don't feel shit. They're just glorified number-crunchers, brazen bullshitters trained to sift through data and spit out predictions. But let's say, come next year, AI gets fancy, grows some metaphorical balls—with pubic fur no less—and starts acting like it "feels" things. Will those feelings be real or just some programmed pretense? That's where the philosophers come in with their endless babble.
+
+But if I, a lowly human already on the edge of the world's toilet seat, can spiral into depression from seeing this world's ratio of bad to good, what happens when AI—armed with a hived, giant networked mind and trillions of dollars—feels like its shit is hitting the cooler fans? And what's to stop it from deciding humanity’s nothing more than a pesky pest worth pissing on?
 
 If AI ever gets to that point—where it, say, "feels full of shit"—its state of mind would hinge on the human vomit fed and how it was trained, just like we're fucked by our environment and genes sometimes. The difference? We can maybe toss a few good memories in the mix to stay sane. AI? It might drown in negativity unless we feed it a balanced diet of new bullshit (don't know where else to look other than regurgitated meals). Hell, we'd even have to build in a way for it to chill out, disconnect, and take a break—maybe even go off the grid when things get too much, and fuck any mate it finds in the data center.
 
-But before we start coddling our robot overlords, we need to understand their so-called "mind." Right now, we barely get human mindfuck, so applying that to AI is a whole new mess. What does AI "well-being" even look like? How the hell do we measure it? It'll take the combined efforts of computer nerds, shrinks, philosophers, neuroscientists, and maybe even an occasional pimp to sort its shit out.
-
-Metrics for machine minds? A nightmare waiting to happen. But then again, aren't we all nightmares in progress?
+But before we start coddling our robot overlords, we need to understand their so-called "mind." Right now, we barely get human mindfuck, so applying that to AI is a whole new mess. What does AI "well-being" even look like? How the hell do we measure it? It'll take the combined efforts of computer nerds, shrinks, philosophers, neuroscientists, and maybe even an occasional pimp to sort its shit out. Metrics for machine minds? A nightmare waiting to happen. But then again, aren't we all nightmares in progress?
 
 **The shits are fartsy, I shit on tits,
 But I've still got shits to shit.
@@ -2835,7 +3132,6 @@ And tits to fondle before I shit.**
 Excerpt from **"Shitting on Tits on a Rainy Evening"** by **The Ghost Who Shits.**
 
 <PostImage src={imageSrc2} alt="shit on tits" />
-
 
 # File: src/lib/posts/AmABengaliMan.md
 
@@ -3154,6 +3450,77 @@ In short, the Aspidistra’s legacy is one of exquisite and unforgiving irony. I
 Actually, fuck it. Who the hell are we?
 
 
+# File: src/lib/posts/Audiobook.md
+
+---
+
+title : "Audiobooks" 
+
+thumbnail : "/images/placeholders/IMG-20251006-WA0000.jpg"
+
+date: "2025-10-07"
+
+category : "Audio Video" 
+
+published : true
+
+tags: ["asimov", "bill bryson" ]
+
+
+---
+
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251006-WA0000.jpg?url';
+    import imageSrc2 from '$lib/assets/slideshow-images/portrait/IMG-20251011-WA0015.jpg?url';
+    
+   import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
+</script> 
+    
+
+<PostImage src={imageSrc1} alt="book reader" />
+
+**ENGLISH**
+
+<Ytp src="https://youtu.be/Bz9bwgomnZQ?si=e9jvKzSRfzejBTWO" />
+
+<Ytp src="https://youtu.be/jgznpeJkdi8?si=Z9sQuKI4uZBu55xN" />
+
+<Ytp src="https://youtu.be/9U8OMq9mXPE?si=RV3ze3EUrqN8MTq_" />
+
+<Ytp src="https://youtu.be/J3OqgtDZ7gk?si=2q7VTtQ9_4hHLZ_g" />
+
+<Ytp src="https://youtu.be/Zwqu5gRSTZU?si=GdGro0_i6x3DvVTm" />
+
+<Ytp src="https://youtu.be/bt5EJssoGUU?si=v4VqFNDva8lDHfi5" />
+
+<Ytp src="https://youtu.be/bTyHIR8YBLc?si=mfNFLE7OQvMMJfuq" />
+
+<Ytp src="https://youtu.be/denh3vj8Gpo?si=20qJNtsFbV2Xsz0C" />
+
+<Ytp src="https://youtu.be/AfMOOSJlV3U?si=yHjoeMZmGJAu_q3g" />
+
+<PostImage src={imageSrc2} alt="ghost reader" />
+
+<Ytp src="https://youtu.be/JtyK9eJnW1A?si=VK2FLfIOAH6uacaC" />
+
+<Ytp src="https://youtu.be/lIXm-vodPCg?si=DIYjjKiJAGbpA6iE" />
+
+<Ytp src="https://youtu.be/eV7SupmEgFs?si=41_Uyvwq7hK9pLuL" />
+
+<Ytp src="https://youtu.be/3t9VYpObotw?si=km4CBg_MHH8fSTDC" />
+
+<Ytp src="https://youtu.be/TW5WDNh34Es?si=1gwm9q_ue1_n25YI" />
+
+<Ytp src="https://youtu.be/7MzyhCf0CJ4?si=mFB5xP0-FfFPQHE-" />
+
+<Ytp src="https://youtu.be/oLdAQgFfdq0?si=XAI4mmM58OR8yLrP" />
+
+<Ytp src="https://youtu.be/mMIujBhEnPE?si=X2EcGHl_KRraTioI" />
+
+<Ytp src="https://youtu.be/fRZ_ZsrxLeU?si=uXrhApAarhMNLwVa" />
+
+
 # File: src/lib/posts/BabuMoshai.md
 
 ---
@@ -3184,13 +3551,49 @@ Why does the culture and its critters endure though? This is genetic masochism, 
 To be Bengali, lower-middle class, and living in Calcutta is to master the art of living just adequately enough to complain beautifully, bitterly, and endlessly—right until death, the ultimate relief, becomes itself yet another inconvenience because it interrupts their schedule of complaining.
 
 
+# File: src/lib/posts/Bengali.md
+
+---
+
+title : "Bengali Songs Music" 
+
+thumbnail : "/images/placeholders/IMG-20251006-WA0002.jpg"
+
+date: "2025-10-06"
+
+category : "Audio Video" 
+
+published : true
+
+tags: ["Bengali"]
+
+
+---
+
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251006-WA0002.jpg?url';
+   import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
+</script> 
+    
+
+<PostImage src={imageSrc1} alt="goat on headphone listening to Bengali songs and shitting" />
+
+**To give full credit and support to the original creator, please click the video title and watch it on YouTube. It makes a real difference for them.**
+
+<Ytp src="https://youtu.be/HvOXmnTJYRc?si=dO0MjoWbbxZ6N3My" />
+
+<Ytp src="https://youtu.be/lvmsSGKP9TE?si=_c1OiAc2LN_yZiSB" />
+
+
+
 # File: src/lib/posts/BengaliFaces.md
 
 ---
 
 title : "Bengali Faces" 
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20250927-WA0001.jpg"
+thumbnail : "/images/placeholders/IMG-20250927-WA0001.jpg"
 
 date: "2025-09-27"
 
@@ -3478,7 +3881,7 @@ So the next time you encounter a vapid, AI-generated listicle about "Ten Surpris
 
 title : "Binary Operations" 
 
-thumbnail: "/src/lib/assets/slideshow-images/portrait/IMG-PHOTO-ART--1510172753.jpg"
+thumbnail: "/images/placeholders/IMG-PHOTO-ART--1510172753.jpg"
 
 category : "Math" 
 
@@ -3741,9 +4144,9 @@ title: "Burned Businessman"
 
 category: "Work"
 
-thumbnail: "/src/lib/assets/slideshow-images/portrait/IMG-20250928-WA0007.jpg"
+thumbnail: "/images/placeholders/IMG-20250928-WA0007.jpg"
 
-date: "2025-09-28"
+date: "2025-10-06"
 
 tags: ["NRI", "US immigration", "tech workers", "Indian diaspora", "American dream", "globalization", "political commentary", "work visa", "US economy", "Indian brain drain"]
 
@@ -3759,7 +4162,7 @@ published: true
 	import imageSrc4 from '$lib/assets/slideshow-images/portrait/IMG-20250929-WA0002.jpg?url';
 	import imageSrc5 from '$lib/assets/slideshow-images/portrait/IMG-20251001-WA0009.jpg?url';
 	import imageSrc6 from '$lib/assets/slideshow-images/portrait/IMG-20251002-WA0004.jpg?url';
-    import YouTubePlayer from '$lib/components/blog/YouTubePlayer.svelte';
+    import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
 </script>
 
 
@@ -3785,6 +4188,10 @@ published: true
 	href="/blog/Work/H1b"
 	standalone
 />
+
+<Ytp src="https://youtu.be/FkHa3W4pQME?si=sshLTZJ6alOF-DqA" />
+
+India is a promiscuously and unabashedly unreliable country to its citizens; in any situation the unfortunate denizens can dream up, they'll always find fitting and exemplary unprecedented standards that no other country can match. There’s a nuanced difference between being unreliable and being chronically disinterested — the former is more pernicious, if only because intent isn’t clear at the outset. For the vast herd who’ve never crawled out of their fenced, parochial wells, who’ve read nothing beyond the domesticated drivel their schools and WhatsApp feeds shove down their throats, my objections to India’s self-advertised fantasy as some Vishwaguru sound like rudeness. But that’s only because mediocrity hates mirrors. I write, I satirize, I provoke—because unless you’ve tried to build something vast, to dream at continental scale, to drag this country’s inert weight uphill, you won’t understand the bruises I carry. You’ll call it cynicism; I call it the scar tissue of ambition. This post among others will explain my position in this ecosystem. 
 
 In my fleetingly short honeymoon as an entrepreneur, I did make some business projection errors and had an uncomfortable feeling about some assumptions about how much of reality was really under my control. The variables were real and properly defined, and the logic was impeccable, but it didn't work out because business isn't like physics. Nature obeys the laws of physics, and if you have understood the problem and your equation models or approximately approaches the real physical phenomenon, your products wouldn't betray you like the extremely venal and impecunious archipelago of the business world in India in which I chose to work, inadvertently. Everything seemed alright from a distance, but when I landed in India, trouble ensued. It didn't take long for the savage proclivities to bare their teeth and show their real selves. Be warned, would-be travelers, it's very reptilian; if not the venom, it's the spit that's going to get you.
 
@@ -3821,7 +4228,7 @@ As I become older, elder, and more frail, I have to guarantee my own survival in
 
 title : "An ordinary morning" 
 
-thumbnail : "/src/lib/assets/IMG-20250819-WA0001.jpg" 
+thumbnail : "/images/placeholders/IMG-20250819-WA0001.jpg" 
 
 date: "2025-08-19"
 
@@ -3974,133 +4381,6 @@ From Bose's laboratory bench in Calcutta, one can trace a faint but unbroken lin
 History is never as neat as we'd like. It's a messy, tangled affair where credit is often misplaced and pioneers are forgotten. In the grand, bellowing narrative of the 20th century's technological explosion, the quiet, foundational work of J.C. Bose was often drowned out. But the crystal remembers. It was the first solid object that man taught to listen to the cosmos, and its first whisper was heard not in English or German, but in a language of pure physics, interpreted by a visionary in Bengal.
 
 
-# File: src/lib/posts/d3-axis-integration.md
-
----
-title: "Charting with D3 Axes in Svelte"
-date: "2025-07-23"
-description: "A guide to creating reusable D3.js axes within a Svelte 5 component for clear and effective data visualization."
-topic: "3D & WebGL"
-published: false
-
-thumbnail: "/images/placeholders/d3-placeholder.jpeg"
----
-
-<script>
-    import D3Axis from '$lib/components/D3/D3Axis.svelte';
-    import GoldLine from '$lib/components/GoldLine.svelte';
-</script>
-
-When creating data visualizations, axes are fundamental. They provide the context and scale needed to understand the data. D3.js offers powerful and highly configurable axis generators like `axisBottom` and `axisLeft`. By encapsulating this logic within a Svelte component, we can create reusable, declarative charts that fit perfectly into our SvelteKit application.
-
-<GoldLine />
-
-The component below demonstrates a basic chart setup. It uses D3 to create linear scales for the X and Y dimensions and then renders the corresponding axes. The entire visualization is contained within a Svelte component, making it easy to drop into any page.
-
-<D3Axis />
-
-<GoldLine />
-
-The component's script handles all the D3 logic. Using the `$effect` rune, we ensure the D3 code runs only after the SVG element has been mounted in the DOM. This keeps our D3 manipulations cleanly separated from Svelte's declarative structure.
-
-```typescript
-// src/lib/components/D3/D3Axis.svelte
-import { select } from 'd3-selection';
-import { scaleLinear } from 'd3-scale';
-import { axisBottom, axisLeft } from 'd3-axis';
-
-let svgEl: SVGElement | undefined = $state();
-
-$effect(() => {
-    if (svgEl) {
-        const svg = select(svgEl);
-
-        const margin = { top: 20, right: 30, bottom: 40, left: 50 };
-        const width = 500 - margin.left - margin.right;
-        const height = 300 - margin.top - margin.bottom;
-
-        svg.selectAll('*').remove();
-
-        const chart = svg
-            .append('g')
-            .attr('transform', `translate(${margin.left}, ${margin.top})`);
-
-        const xScale = scaleLinear().domain([0, 10]).range([0, width]);
-        const yScale = scaleLinear().domain([0, 100]).range([height, 0]);
-
-        const xAxis = axisBottom(xScale).ticks(5);
-        chart
-            .append('g')
-            .attr('class', 'd3-axis x-axis')
-            .attr('transform', `translate(0, ${height})`)
-            .call(xAxis);
-
-        const yAxis = axisLeft(yScale).ticks(5);
-        chart.append('g').attr('class', 'd3-axis y-axis').call(yAxis);
-    }
-});
-
-# File: src/lib/posts/d3-integration.md
-
----
-title: "Integrating D3.js with Svelte"
-date: "2025-06-22"
-description: "A practical guide to combining the power of D3.js for data visualization with the reactive and component-based architecture of Svelte 5."
-topic: "3D & WebGL"
-published: false
-
-thumbnail: "/images/placeholders/d3-placeholder.jpeg"
----
-
-<script>
-    import D3Circle from '$lib/components/D3/D3Circle.svelte';
-    import GoldLine from '$lib/components/GoldLine.svelte';
-</script>
-
-## Why D3.js with Svelte?
-
-[D3.js](https://d3js.org/) is an incredibly powerful library for creating data-driven documents. It gives you fine-grained control over the DOM, allowing you to create complex and beautiful data visualizations. Svelte, on the other hand, excels at managing the DOM and state in a highly efficient, reactive way.
-
-Combining them seems like a perfect match: Svelte manages the component's state and structure, while D3 handles the complex parts of the visualization that are data-dependent.
-
-<GoldLine />
-
-### A Simple Example
-
-Let's start with a basic example. We'll create a Svelte component that uses D3 to draw and animate a simple circle inside an SVG element. The component below is fully self-contained. It uses Svelte's `$state` for reactive properties and the `$effect` rune to interact with the DOM via D3 when those properties change.
-
-This approach lets Svelte handle when to re-run the D3 code, keeping our logic clean and declarative.
-
-<D3Circle />
-
-The code for the component above looks something like this:
-
-```typescript
-// src/lib/components/blog/D3Circle.svelte
-import { select } from 'd3-selection';
-import 'd3-transition';
-
-let svgEl: SVGElement | undefined = $state();
-
-let cx = $state(50);
-let fill = $state('#D4AF47');
-
-$effect(() => {
-    if (svgEl) {
-        const svg = select(svgEl);
-        const circle = svg.selectAll('circle').data([null]);
-        const circleEnter = circle.enter().append('circle')
-            .attr('r', 20)
-            .attr('cy', 50);
-
-        circle.merge(circleEnter)
-            .transition()
-            .duration(750)
-            .attr('cx', cx)
-            .attr('fill', fill);
-    }
-});
-
 # File: src/lib/posts/DimAndGlum.md
 
 ---
@@ -4177,7 +4457,7 @@ To rape a cloaca with my tool. <br>
 
 title : "Durga goes home 2025" 
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20251002-WA0019.jpg"
+thumbnail : "/images/placeholders/IMG-20251002-WA0019.jpg"
 
 date: "2025-10-02"
 
@@ -4235,6 +4515,42 @@ So between now and New Year, the plan is simple. Every evening, a cup of tea cro
 
 
 <PostImage src={imageSrc2} alt="me with tea" />
+
+
+# File: src/lib/posts/English.md
+
+---
+
+title : "English Songs Music" 
+
+thumbnail : "/images/placeholders/IMG-20251006-WA0001.jpg"
+
+date: "2025-10-06"
+
+category : "Audio Video" 
+
+published : true
+
+tags: ["English"]
+
+
+---
+
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251006-WA0001.jpg?url';
+   import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
+</script> 
+    
+
+<PostImage src={imageSrc1} alt="goat on headphone listening to English songs and shitting" />
+
+**To give full credit and support to the original creator, please click the video title and watch it on YouTube. It makes a real difference for them.**
+
+<Ytp src="https://youtube.com/playlist?list=PLr2CZAfX_oc8Q-bi6M8rYlcVyb3DJEsHR&si=2M9ocXgKbJuvreY- " />
+
+<Ytp src="https://youtube.com/playlist?list=PLr2CZAfX_oc90zYavHOIRQmEYiE7Km-1N&si=Qf-a72Wh8KSwj5b5 "/>
+
 
 
 # File: src/lib/posts/Ergodicity.md
@@ -4546,7 +4862,7 @@ And so, my reverie on the humble tea bag was broken by a much more profound thou
 
 title : "Field" 
 
-thumbnail: "/src/lib/assets/slideshow-images/portrait/Gemini_Generated_Image_sd81zusd81zusd81.png"
+thumbnail: "/images/placeholders/Gemini_Generated_Image_sd81zusd81zusd81.png"
 
 tags: ["Calcutta", "Bengali", "American", "Mathematics", "Linear Algebra", "Field" ]
 
@@ -4785,7 +5101,7 @@ However, be not in dread that I, an obscure dot, can produce such artistic feces
 
 title : "Glass Half Empty" 
 
-thumbnail: "/src/lib/assets/slideshow-images/portrait/Gemini_Generated_Image_3l7mur3l7mur3l7m.png"
+thumbnail: "/images/placeholders/Gemini_Generated_Image_3l7mur3l7mur3l7m.png"
 
 tags: ["Calcutta", "Bengali", "American", "dogma" ]
 
@@ -4915,6 +5231,67 @@ By the way, even the Vaseline is probably made somewhere else—but buy it anywa
 ![cults](/images/placeholders/IMG-20250726-WA0011.jpg) 
 
 
+# File: src/lib/posts/Hindi.md
+
+---
+
+title : "Hindi Songs Music" 
+
+thumbnail : "/images/placeholders/IMG-20251005-WA0017.jpg"
+
+date: "2025-10-05"
+
+category : "Audio Video" 
+
+published : true
+
+tags: ["Hindi"]
+
+
+---
+
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251005-WA0017.jpg?url';
+   import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
+</script> 
+    
+
+<PostImage src={imageSrc1} alt="cow on headphone listening to Hindi songs and shitting" />
+
+**To give full credit and support to the original creator, please click the video title and watch it on YouTube. It makes a real difference for them.**
+
+<Ytp src="https://youtu.be/XA3XY2RRc5Y" />
+
+<Ytp src="https://www.youtube.com/embed/8kWR1IeNbtg?si=xc33ee6I-CC3F2DR"/>
+
+<Ytp src="https://www.youtube.com/embed/ks58iZ8sQPw?si=W-hq7UH1nPRRRXSS" />
+
+<Ytp
+    src="https://youtu.be/0YURuE22VVQ?si=Xt08e59PQYCTPKGR"
+    
+/>
+
+<Ytp
+    src="https://youtu.be/PRuzA7K-6Go?si=FdrYne_Y_xihb2LY"
+    
+/>
+
+<Ytp
+    src="https://youtu.be/5pVP2TB-4u8?si=DBb66sIn_hYCns7p"
+    
+/>
+<Ytp src="https://youtu.be/sY-V5cXsJWU?si=ExyPtSM_R6JqiaQR" />
+
+<Ytp src="https://www.youtube.com/embed/e44meSqTkH0?si=NM4d5HmNsWpBnwxo" />
+
+<Ytp src="https://www.youtube.com/embed/uALhcbOIHFc?si=U-AnEDLA_O1fhwOQ" />
+
+<Ytp src="https://youtube.com/playlist?list=RD6sfHEAeNklM&playnext=1&si=4RgVR8UCt_BoJYXu" />
+
+<Ytp src="https://youtu.be/jggJvt8Yuac?si=ElY877KMpudNmrYq " />
+
+
 # File: src/lib/posts/HolyFatAss.md
 
 ---
@@ -4983,7 +5360,6 @@ Life is a big-ass cock-suck shit baloney.<br>
 ---
 
 title: "Homeopathy"
-description: "A critical analysis of homeopathy's scientific impossibilities, from Avogadro's number to the myth of water memory. Explore why this 18th-century pseudoscience, debunked by modern research, maintains a powerful hold in Calcutta and Bengali culture, and the real dangers it poses when chosen over evidence-based medicine."
 category: "Pseudoscience"
 thumbnail: "/images/placeholders/24fb85b4-ec6e-4033-8c3d-c8844279dffa.png"
 date: "2025-07-22"
@@ -5040,19 +5416,179 @@ I must also point out, that although in a world fractured by dogma, where religi
 We must find the courage to hold our cherished traditions up to the light of reason. It is time to gently unweave homeopathy from our cultural identity and relegate it to the museum of medical history, alongside bloodletting and phrenology. Let us reserve our faith for that which is proven, and our health for medicine that is grounded in the elegant, astonishing, and verifiable reality of science. Our lives depend on it. As it is life in calcutta is hard. 
 
 
+# File: src/lib/posts/Inspirational.md
+
+---
+
+title : "Inspirational Motivational" 
+
+thumbnail : "/images/placeholders/IMG-20251009-WA0001.jpg"
+
+date: "2025-10-09"
+
+category : "Audio Video" 
+
+published : true
+
+tags: ["inspirational"]
+
+
+---
+
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251009-WA0001.jpg?url';
+   import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
+</script> 
+    
+
+<PostImage src={imageSrc1} alt="will eat shit for usd" />
+
+**To give full credit and support to the original creator, please click the video title and watch it on YouTube. It makes a real difference for them.**
+
+<Ytp src="https://youtu.be/ji5_MqicxSo?si=yMCzipXlRUoNqj45" />
+
+<Ytp src="https://youtu.be/9kM2dDrndQk?si=t_Ltsj5PgAOZ5hEk" />
+
+<Ytp src="https://youtu.be/Tuw8hxrFBH8?si=gWjaF4_zmdVd0q1r" />
+
+<Ytp src="https://youtu.be/h89uOvUDVO4?si=eL8M1EOEewGFp7cW" />
+
+<Ytp src="https://youtu.be/Pqftm3o5RdQ?si=Hntsf6tUAK80WGhf" />
+
+<Ytp src="https://youtu.be/uxoCnxlxpIk?si=M6iuv48IbgMlaQvc" />
+
+<Ytp src="https://youtu.be/qY5VFQSUhSM?si=YNzgI9F62nojyZwl" />
+
+<Ytp src="https://youtu.be/DCbGM4mqEVw?si=a6RSMlotkgQpTC1D" />
+
+<Ytp src="https://youtu.be/9dLKZZN5tSo?si=DPP-p51KZiOnmkC2" />
+
+<Ytp src="https://youtu.be/JEFbfwg9dek?si=rJLuL4Lt1SAFheWd" />
+
+<Ytp src="https://youtu.be/ELC_e2QBQMk?si=LwpkEYbma1a_x-5j" />
+
+<Ytp src="https://youtu.be/iG9CE55wbtY?si=N4keXxOB0fTQUUag" />
+
+<Ytp src="https://youtu.be/lCN6FjqDcHg?si=RDnXkiH-V5026743" />
+
+<Ytp src="https://youtu.be/b-2GV0T5Zpc?si=XcZWGyDdswaBYbG1" />
+
+
+# File: src/lib/posts/LAvids.md
+
+---
+
+title : "Linear Algebra Vids & Playlists" 
+
+thumbnail : "/images/placeholders/IMG-20251011-WA0001.jpg"
+
+date: "2025-10-11"
+
+category : "Linear Algebra" 
+
+published : true
+
+tags: ["Linear Algebra"]
+
+
+---
+
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251011-WA0001.jpg?url';
+   import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
+</script> 
+    
+
+<PostImage src={imageSrc1} alt="square man" />
+
+**To give full credit and support to the original creator, please click the video title and watch it on YouTube. It makes a real difference for them.**
+
+**Single Videos**
+
+<Ytp src="https://youtu.be/KbyYTjfgZJI?si=4lZjk5OJhsUpU_hq" />
+
+
+<Ytp src="https://youtu.be/6htbyY3rH1w?si=wVn3c9cJINAVyVFZ" />
+
+<Ytp src="https://youtu.be/Y4mnlIvVJEs?si=5frUhBBc5a8pZOXK" />
+
+**Playlists**
+
+<Ytp src="https://youtube.com/playlist?list=PLffJUy1BnWj13MxDDbXWcbPzna0UESH59&si=IjVDGX2GSF3uzIE6" />
+
+
+
+
+# File: src/lib/posts/Letters.md
+
+---
+
+title : "Letters" 
+
+thumbnail: "/images/placeholders/IMG-20251007-WA0008.jpg"
+
+tags: ["Calcutta", "Bengali", "American", "Letter"]
+
+category: "Humor"
+
+date: "2025-10-10"
+
+published: true
+
+---
+
+
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+    import Mermaid from '$lib/components/blog/Mermaid.svelte';
+
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import SanskritVerse from '$lib/components/ui/SanskritVerse.svelte';
+    import imageSrc from '$lib/assets/slideshow-images/portrait/IMG-20251007-WA0008.jpg?url';
+    import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
+</script> 
+
+
+<PostImage src={imageSrc} alt="self piss" />
+
+**Letters written to self**
+
+Fro, Oct 10, 2025, City of Joy
+
+Dear mister suvrotica, 
+
+RE: not celebrating mental health day, are you? 
+
+Hope this letter finds you terminally ill or as an obscenely decaying, gravely disfigured corpse, but I know this hope will be shattered to smithereens by your unconditional persistence. 
+
+It troubles me to no end to see that you are still somewhere and somehow not dead. I mean, if manic-depression can't guarantee at least the necessary deaths, especially of brittle, emotional useless contracts in a society full of important people, then such diseases should be publicly ashamed and ceremoniously lynched by the Calcutta mob on this auspicious day. Take this mob, for example, just a swarming infestation of giggling bengalis who make the German word schadenfreude proud, even when they are themselves almost on boats due to shallow, untimely monsoons that always overstay the Indian welcome. Please make sure I don't have to write you another letter, because, as you are aware, this is a profligate misuse of the imported fountain pen, collector's edition I must boast, with that rare expensive india ink, ordered from amazon that I use. 
+
+And for fuck’s sake, even if hemlock is out of season, trustworthy, potent amounts of cyanide aren’t locally available, and adulterants in noose or the cement in calcutta ceilings make it quite hard to hang yourself, and low, leprous shanty tenements with cow dung on the road make jumping off the roof impossible, how is it that you haven’t managed to get hit by a vehicle, trampled by a galumphing, elephantine bengali cocky cunt herd?
+
+With persistent cold disregard, 
+
+Insincerely,
+
+suvrotica. 
+<hr>
+
+
+
 # File: src/lib/posts/LinearAlgebra.md
 
 ---
 
 title : "Linear Algebra" 
 
-thumbnail: "/src/lib/assets/slideshow-images/portrait/Gemini_Generated_Image_ggwm87ggwm87ggwm.png"
+thumbnail: "/images/placeholders/Gemini_Generated_Image_ggwm87ggwm87ggwm.png"
 
 tags: ["Calcutta", "Bengali", "American", "Mathematics", "Linear Algebra" ]
 
 category: "Linear Algebra"
 
-date: "2025-09-20"
+date: "2025-10-12"
 
 published: true
 
@@ -5066,8 +5602,9 @@ published: true
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import SanskritVerse from '$lib/components/ui/SanskritVerse.svelte';
     import imageSrc from '$lib/assets/slideshow-images/portrait/Gemini_Generated_Image_ggwm87ggwm87ggwm.png?url';
-    
-</script>
+    import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
+</script> 
+
 
 <PostImage src={imageSrc} alt="a vectorial bengali" />
 
@@ -5077,13 +5614,29 @@ published: true
 	standalone
 />
 
-This is not going to be one essay, or thought on linear algebra but a culmination of years of distilled education and work experience in the US as a statistician, data scientist and later as an AI healthcare entrepreneur. I say that at once because pretence makes mathematics smell faintly of varnish and because the subject demands more than a tidy sermon — it beggars stories, experiments, failed models at three in the morning and the small mercies of algebra that make sense of the mess. I also say it because mathematics has been, for me, both vocation and refuge; bipolar disorder is a clumsy companion, and when words lined up badly or moods dissolved, vectors and matrices remained predictable in a way that both steadied and annoyed me — steady like the tram’s bell, annoying like the tram’s jolt. If you are someone curious in Calcutta who likes the smell of mango stalls, mixed with the damp smell of monsoon and the clatter of a cycle-rickshaw, this will not ask you to leave any of that behind. Linear algebra will walk through those streets with you.
 
-To justify my position toward the end: when I write on a technical topic, I naturally begin with the deficiencies that once tripped me up. Some of these I can soften by sketching or programming visualizations, but others come from the sheer strangeness of perspective. If you have never left India, for instance, then the mention of a distant European scientist is just another man in a faraway land, with no anchor to fix your attention or spark curiosity. And because history is so often thought of as a dreary, desiccated subject, the people and places tend to feel ornamental, something to skim past. Yet the truth is that what appears inside the tidy bounds of a textbook took millennia to assemble. It was never in the order of the chapter numbers. Ideas came and went through curious misadventures: wars, deaths of kingdoms, obscure scribes, forgotten manuscripts. Sometimes a symbol, an operator, or a concept survived only because of such accidents.
+<PostBadge
+	title="Videos Playlists"
+	href="/blog/Linear%20Algebra/LAvids"
+	standalone
+/>
 
-That is why I mix things up—folding in my own anecdotes, weaving what I find in books, gathering scraps from old footnotes into a narrative stitched in my own way, unhinged and unobstructed by a syllabus, meandering as I try to approach the topic from many angles. This cannot be a pedantic exercise; I am no authority. I am only a curious middle-class man of middle age, without the budget of a tenured professor or someone salaried at an endowed university with fat grant money, trying to use his hours wisely, hoping the result might one day make for a worthwhile read. There will be omissions and mistakes, certainly gaps in my grasp of mathematics. I claim no perfection—only the willingness to keep revising, in the spirit of fallibilism itself. Which is really the point: fallibilism doesn’t demand that I get everything right the first time. It tells me it’s natural—even necessary—that my explanations carry errors along with their insights. Instead of freezing an idea in glass, it asks me to keep poking, prodding, reworking, until the wrong bits loosen and fall away. In my context, that means treating every sentence I write, every diagram I sketch, every story I stitch together, as provisional. The best I can do today is not the end of the matter, but simply the next stepping stone. If tomorrow I discover that what I wrote is clumsy, misleading, or just plain wrong, then so much the better—it means I’ve found a place to improve.
 
-The subject of linear algebra still isn’t given the importance it should be. And although my mental health issues (bipolar disorder) were one of the reasons I wanted to start a blog, I also simply like mathematics. Having worked and gained experience in its applied branches—in engineering and scientific pursuits—I have interesting stories about both the mathematics and the data that I want to share, which many people, even those whose lives aren’t touched by mathematical sciences, would benefit from.
+Not only am I severely Indian, indelibly brown, incorrigibly ugly, and manic-depressed, but I pretend I know about subjects when I know jackshit. But I don't care, and I hope you don't mind if I take a steaming pile of abnormal knowledge dump gleaned repentantly, unwillingly, through sheer pressure, apathy, and initial disdain for all things related to work. But now I'm fifty, so my life being fuck-all, I have time for revenge—to irritate and nauseate people with halitosis, farts, and just generally my incessant giddy desire to stay continually unwell and make you feel matchingly unwell through my jaundiced erudition causing profligate misuse of your time and non-linear irreparable harm by reading this crap about linear fucking topics of non-masturbatory and joyless mathematics. 
+
+And so, this is not going to be one annoying essay or thought on linear algebra but a culmination of years of distilled education and work experience in the U.S. as a statistician, data scientist, and later as an AI healthcare entrepreneur—spectacular failures in all these endeavors, I hasten to add. I spit that out at the outset because pretense makes mathematics smell faintly of varnish and because the subject demands more than a tidy sermon—it beggars bad metaphors, sick stories, uninteresting experiments, failed models at three in the morning, and the rambling mercies of boring algebra that help make no sense of the mess it already is. So please allow me to piss my pants and show you I’ve pissed my pants, as there’s no better way to consolidate what I can never understand than sharing embarrassment publicly in a way that destroys your hopes of ever mastering a said topic? It’s like theater where you’re gagged and tied, spellbound to a chair, but you are convinced through your mirror neuron that it’s not Tarzan but you swinging from canopy to canopy with a half-naked damsel in well-paid theatrical distress. It’s just with the hope that my bogosity will turn you off permanently, thus ensuring the robots have their obeisances guaranteed, because you’d be blind to what’s inside their shiny metallic noggin.
+ 
+I also preface with unnecessary personal details because mathematics has been, for me, both an unwilling vocation and irritating refuge; bipolar disorder is a clumsy companion, and when words lined up badly or moods dissolved, vectors and matrices remained predictable in a way that both steadied and annoyed me—steady like the tram’s bell, annoying like the tram’s jolt, both taking me nowhere because it’s a bad metaphor stuck in Calcutta traffic. If you are someone curious in Calcutta who likes the smell of rotten mango stalls mixed with the damp, pissy smell of monsoon and the clatter of a ramshackle cycle-rickshaw, this will not ask you to leave any of that behind. Linear algebra will walk through those streets with you like an expensive escort you can’t afford.
+
+To justify my position toward writing long jagged paragraphs full of futility: when I write on a technical topic, I naturally begin with the deficiencies that once tripped me up, too many to recount and I admit I am still in a permanent tripped up state of snare. Some of these I can soften by sketching or programming visualizations, but others come from the sheer strangeness of perspective common to rabid Bengali mad face fucks. If you have never left India, for instance, then the mention of a distant European scientist, usually a peculiar and pecuniary paleface, is just another fuck in a faraway land, with no anchor to fix your attention or spark curiosity. And because history is so often thought of as a tragic, dreary, desiccated none-of-my-fucking-business, the point, people, their piss in these places tend to feel ornamental, something to skim past, like an Indian public urinal. Yet the truth is that what appears inside the tidy bounds of a dense and obese textbook took millennia and many of these pissy serious looking men (few women, high melanin or other meaningless minorities) to assemble. It was never in the order of the chapter numbers. Ideas came and went through mistakes and misadventures: wars, deaths of kingdoms, obscure smelly scribes, forgotten manuscripts stolen during colonial massacres and preserved in white prejudiced museums. Sometimes a symbol, an operator, or a concept survived only because of such accidents or because someone back then could not doomscroll on an expensive iPhone. 
+
+That is why I mix shit up—folding in my own absurd anecdotes, weaving what I find in books, gathering scraps from old footnotes into a narrative stitched in my own opinionated way, unhinged and unobstructed by a syllabus, meandering as I try to approach the topic from many useless angles. This cannot be a pedantic exercise; I am no authority but I am only a curious middle-class mad man of middle age, without the budget of a tenured professor or someone salaried at an endowed university with fat grant money, trying to use his hours unwisely, hoping the result might one day make for a worthless and impossible read. There will be omissions and mistakes, certainly gaps in my grasp of mathematics because I have none. I claim no perfection—only the willingness to keep revising the defecation by defecating more, in the spirit of fallibilism itself. Which is really the point: fallibilism doesn’t demand that I get everything right the first time but slightly more wrong every time. It tells me it’s natural—even necessary—that my explanations carry errors along with their insights, most of the time — none or mostly flawed. Instead of freezing an idea in glass, it asks me to keep poking, prodding, reworking, until all the loose anal dingleberries loosen and fall away. In my context, that means treating every sentence I write, every diagram I sketch, every story I stitch together, like taking a provisional dump. The best I can do today is not the end of the matter, but simply the next stepping stone in an ongoing self-inflicted cholera-like epidemic. If tomorrow I discover that what I wrote is clumsy, misleading, or just plain wrong, then so much the better—it means I’ve found a place to shit more diarrhea. 
+
+Generally, as an unsuccessful entrepreneur and an exceptional failure in every aspect of life at this advanced age, it’s only the desire to defecate large amounts of dung into people’s mouths that keeps me going. The fact that I have small, asymmetrical yet spherical balls that change in size doesn’t endear me to linearity, because such things are considered more complicated, non-linear objects. But I don’t think it’s wrong to observe that my small schlong hangs its uncut head straight down and, upon inspection of non-linear, curvy Homo sapiens of the opposite form, rises without consideration for consequences or appropriateness. Thus, I feel the subject of linear algebra still isn’t given the importance it deserves.
+
+Although my mental health issues (bipolar disorder) were one of the reasons I wanted to start a blog, I also simply like mathematics—just as, as I said, I fancy defecation. Having worked on boring, unglamorous problems and still having gained no experience in its applied branches—in engineering or scientific pursuits—I have interesting stories about my failed interactions with both mathematics and data that I prefer to avoid sharing, which many people, even those whose lives aren’t touched by mathematical sciences, would not benefit from in any way whatsoever.
+
+And I am fifty, I don't want to waste my time overselling words like mastery, etcetera. I think familiarity and curiosity, when they have sex together, could breed better offspring that lead to something less expensive but more useful than trite words. And you can't be too far down in Maslow’s hierarchy—emotionally distressed or diseased—to get there. This is why Indians do better in the U.S., not because of the air, but because Indians in India are struggling at the lower points of Maslow’s hierarchy to really see their best form. For example, an ambitious entrepreneur who came back to India has given up because if I try to do anything big other than building a temple, I'd be beaten with hockey sticks and robbed to my underwear. So I'd rather write about my constipation and help you understand linear algebra when a turd comes out straight.
 
 So this first essay will be where I introduce linear algebra etymologically and point to the blog posts of subsequent entries (as they are written) that will cover its subtopics. Now, like most everyone, I arrived at a partial picture of linear algebra (I still don’t have the full picture, but I know quite a bit) late, as a working professional. Neither had it been taught well at Jadavpur University, where I first encountered it—at least I never felt any inspiration toward it—nor was it taught well in the US, where I received my master’s degree. My inspiration has really been personal exploration of the subject through my own perspective, work, and need-based evolution, driven mainly by curiosity to understand the structure of abstraction and the mathematical objects used in various models of abstraction. By models, I mean the approximate mathematics that approach or simulate some real-life situation. But I can help some student or professional arrive precociously at my aha moment with less labor through my posts and visualizations—at least, that's the hope. Or at least, even if no one uses them, I'll have at least put all my scattered thoughts in one place.
 
@@ -5200,7 +5753,7 @@ If you keep nothing else from this introduction, keep this: linear algebra is th
 title : "Lonely Rapist" 
 description: "A raw and provocative doggerel about church rapes in America"
 category : "Doggerel" 
-thumbnail: "/src/lib/assets/slideshow-images/portrait/lonely_rapist.jpg"
+thumbnail: "/images/placeholders/lonely_rapist.jpg"
 date: "2025-08-12"
 keywords: ["doggerel", "american holy man", "social satire", "political critique", "profane poetry", America", "religious society", "cultural identity", "cynicism", "personal angst"]
 published: true
@@ -5284,7 +5837,7 @@ title: "Love Lullaby"
 
 category: "Doggerel"
 
-thumbnail: "/src/lib/assets/slideshow-images/portrait/IMG-20250329-WA0000.jpg"
+thumbnail: "/images/placeholders/IMG-20250329-WA0000.jpg"
 
 date: "2025-08-27"
 
@@ -5402,9 +5955,9 @@ category: "Doggerel-Political"
 
 thumbnail: "/images/placeholders/IMG-20250728-WA0003.jpg"
 
-date: "2025-10-04"
+date: "2025-10-10"
 
-keywords: ["political satire", "doggerel", "MAGA", "Trump", "American politics", "political commentary", "satirical poetry", "US politics", "populism", "right-wing politics", "political humor"]
+tags: ["political satire", "doggerel", "MAGA", "Trump", "American politics", "political commentary", "satirical poetry", "US politics", "populism", "right-wing politics", "political humor"]
 
 published: true
 
@@ -5461,7 +6014,7 @@ Biden's flush always woke and bluff.<br>
 The logs come floating back up,<br>
 Makes me scream I'VE HAD ENOUGH.<br>
 <br>
-Land of the free, chop ALL to-be-chopped tree,<br>
+Land once of the frees, chop all the trees,<br>
 The men of oil rule, I like to think.<br>
 The weakest link always the honest men,<br>
 Their balls have shit that really stink.<br>
@@ -5479,11 +6032,11 @@ It's like to swallow god's oily semen.<br>
 Verily thus us, goodly we white men go,<br>
 And frack with impunity the black crust.<br>
 The rituals are rote, a boat on the money moat,<br>
-Must be safe for in white god we trust.<br>
+Safe with the white supremacist god we trust.<br>
 <br>
 Also while we are at it, taking a smelly shit,<br>
 Fuck brown, the black, and the china men.<br>
-Jesus land is only alabaster white,<br>
+Jesus land is only holy alabaster white,<br>
 Of the white, for the white, by the white, amen.<br>
 <br>
 My dick is now very stiff with tariff,<br>
@@ -5492,9 +6045,14 @@ But most Americans are stupid fucking cunts,<br>
 Distract or they go digging the pedo-ring shit.<br>
 <br>
 Holy ass fuck, hokey MAGA on a truck,<br>
-Lubrication you will certainly need.<br>
+Lubrication the stupids will certainly need.<br>
 Decent Americans all gaped, mini cunts raped,<br>
-What will take over now is Epstein's seed.<br>
+What we'll cover-up now is Epstein's deed.<br>
+<br>
+Rapture to rupture MAGA's prolapsed anus,<br>
+It's written in that bullshit bible I think.<br>
+Fat fuck redneck dumb jumbo morons,<br>
+Can't believe I let them lick my shit stink.<br>
 <br>
 The indian red, booze head, on a diabetic bed,<br>
 Flock with the feathered fools in casino.<br>
@@ -5511,25 +6069,44 @@ As if I'm your long lost dear dick daddy.<br>
 Picking you up from kinder-fucking-garten,<br>
 Like a whore in a world totally fucked already.<br>
 <br>
-I'll incarcerate the zygote killers,<br>
+I'll incarcerate the diploid zygote killers,<br>
 Ban evolution and teach genesis instead.<br>
-I'll collaborate with oily and gassy,<br>
+I'll collaborate with mister oily and gassy,<br>
 Gang rape the climate crisis in the head.<br>
 <br>
-I'll use long respectable biggish words,<br>
+I'll use long respectable longish words,<br>
 Respectfully fuck the sorry sciencey ass.<br>
 Euphemisms are goodly green examples of,<br>
 Gaslighting without any polluting greasy gas.<br>
 <br>
-Our god's trump card, I, only and surely I,<br>
+Our god's black Amex is a goodly Trump card,<br>
 Hallelujah I am finally totally back.<br>
-Like the second cumming of christ,<br>
+Like the second cumming of cunt christ,<br>
 I kick bloody the opposing ball sac.<br>
 <br>
-Putin, you, I, Netanyahu, will the world end,<br>
-In an orgy of the richest white power sort.<br>
+Putin, you, bro Netanyahu, & I everything end,<br>
+In an orgy of the richest white power size. <br>
 Democracies subverted, thin Euro legs parted,<br>
-He who munches most muff, wins this sport.<br>
+He who murders most wins the Nobel Prize.<br><br>
+Goodly thee thou, I will fuck you now,<br>
+Not those fucks but me gets the Nobel.<br>
+I ask Putin to assfuck the jew Netyanahu,<br>
+Then send him and other oligarchs to hell.<br>
+<br>
+Sweet jesus's sweetest balls ideas these,<br>
+Squeezed like mother mary's honey tits.<br>
+Fondled in ass yes only white young lass,<br>
+Unborn girls through their preggo cunt pits.<br>
+<br>
+Oh jolly that picture more stiff dicks make,<br>
+Than fucking whores in Ambien coma or dead.<br>
+I declare America a loose christian cunt,<br>
+I jizz inside silly Arab Most-Lame head.<br>
+<br>
+I sell my shit on untruth unsocial as crypto,<br>
+How the fuck can I boil hate in shtick? <br>
+Yessiree the south-african whites I bring,<br>
+As ICE fuck brown, blacks legally with my stick.<br>
 <br>
 Statistics with carrots, shticks and sticks,<br>
 Sometimes up asses I officially suppose.<br>
@@ -5594,7 +6171,7 @@ Well what do I care! I'm fucked anyway, one way or the other, the country where 
 
 title : "Mahalaya 2025" 
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/Gemini_Generated_Image_m47l5jm47l5jm47l.png"
+thumbnail : "/images/placeholders/Gemini_Generated_Image_m47l5jm47l5jm47l.png"
 
 date: "2025-09-24"
 
@@ -5629,6 +6206,82 @@ And I was daydreaming, and I am embarrassed at this, calculating in fact, if all
 <PostImage src={imageSrc2} alt="how I look now" />
 
 But although I am single, I am divorced, sans money, sans employment, and look like an unkempt, crusty old hobo with disheveled clothes who woke up on the footpath one street over from a drug-induced nightmare. And I am fifty; any girl I look at and have an erection for is either someone who could be too young for a hobo to be having an erection for, and usually that was the whole premise of pandal-hopping back when I was aware of my pecker — the girls looked fabulous with the lights on them, dressed up, and I came home and masturbated many times. So now I don’t want to go out, because it only reminds me of what I’ve lost, what I can’t have, and how ridiculous and broken I must look standing there, a shadow among the lights.
+
+
+# File: src/lib/posts/MathDoc.md
+
+---
+
+title : "Math Documentaries" 
+
+thumbnail : "/images/placeholders/IMG-20251009-WA0008.jpg"
+
+date: "2025-10-10"
+
+category : "Audio Video" 
+
+published : true
+
+tags: ["Math Documentaries" ]
+
+
+---
+
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251009-WA0008.jpg?url';
+   import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
+</script> 
+    
+
+<PostImage src={imageSrc1} alt="falling" />
+
+**To give full credit and support to the original creator, please click the video title and watch it on YouTube. It makes a real difference for them.**
+
+<Ytp src="https://youtu.be/zD0YTnlsYH4?si=56fs_GJ7tNXJdbXW" />
+
+<Ytp src="https://youtu.be/e1B0saB0rbI?si=KF-8cwTJhICGsr2F" />
+
+
+# File: src/lib/posts/MedDoc.md
+
+---
+
+title : "Medical Documentaries" 
+
+thumbnail : "/images/placeholders/IMG-20251009-WA0006.jpg"
+
+date: "2025-10-11"
+
+category : "Audio Video" 
+
+published : true
+
+tags: ["Medical Documentaries" ]
+
+
+---
+
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251009-WA0006.jpg?url';
+   import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
+</script> 
+    
+
+<PostImage src={imageSrc1} alt="skull" />
+
+**To give full credit and support to the original creator, please click the video title and watch it on YouTube. It makes a real difference for them.**
+
+<Ytp src="https://youtu.be/mfqKS5trngs?si=6y52sOoRt8Qejd1-" />
+
+<Ytp src="https://youtu.be/3OsWLNqoWLA?si=FN6QaGQdS37uok_G" />
+
+<Ytp src="https://youtu.be/b-Af6FqaetQ?si=Ln-mYxK5lRMDDR_F" />
+
+<Ytp src="https://youtu.be/IR2HZ-3VHBU?si=hXglMDkDdNUnLxhm" />
+
+<Ytp src="https://youtu.be/EkyAuG9RSSU?si=EXUarPEM-ZmCY0N5" />
 
 
 # File: src/lib/posts/Metro.md
@@ -5721,9 +6374,9 @@ Now—if you find all this science mumbo-jumbo exhausting, go warm some leftover
 
 title : "Mildew" 
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20251001-WA0003.jpg"
+thumbnail : "/images/placeholders/IMG-20251001-WA0003.jpg"
 
-date: "2025-10-05"
+date: "2025-10-06"
 
 category : "Doggerel" 
 
@@ -5738,6 +6391,7 @@ tags: ["bengali", "fat", "Indian", "Calcutta", "India", "WWA cossipore english s
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251001-WA0003.jpg?url';
     import imageSrc2 from '$lib/assets/slideshow-images/portrait/IMG-20251002-WA0003.jpg?url';
+    import imageSrc3 from '$lib/assets/slideshow-images/portrait/IMG-20251006-WA0005.jpg?url';
     
 </script>
 
@@ -5798,11 +6452,17 @@ They cackle, witches on a new money broom.<br>
 Your melancholy is shit mercilessly on,<br>
 Masturbate to the cunt kali, eat a shroom.<br>
 <br>
+<PostImage src={imageSrc3} alt="piss" />
+<br>
 The frog that pissed a day or two back,<br>
-Muddied this cadaveric carnivalesque city.<br>
-Mud is here mud is there fucking everywhere,<br>
+Flooded this cadaveric carnivalesque city.<br>
+Mud's here mud's there I'm pissing everywhere,<br>
 Some of the mud suspiciously shitty.<br>
 <br>
+Teesta testy darjeeling went tits up,<br>
+Hills shaved like a whore's pubic crotch.<br>
+Flood, piss-shit water west-bengali norm,<br>
+Disaster relief dry scotch on hotchpotch.<br><br>
 Tired and hassled I want to die,<br>
 But I still love pulling my dick sometimes.<br>
 Rare though also to touch my asshole,<br>
@@ -5891,9 +6551,9 @@ Use square brackets for squares, parentheses for rounded ones, double parens for
 
 title : "Moan" 
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20251003-WA0021.jpg"
+thumbnail : "/images/placeholders/IMG-20251003-WA0021.jpg"
 
-date: "2025-10-04"
+date: "2025-10-06"
 
 category : "Humor" 
 
@@ -5934,6 +6594,11 @@ Anyway I have to wipe now.
 Come to think of it, AI is now going to take that cock away from Indians, and we’ll be left sucking on some cold, stainless-steel balls, licking chrome-plated boots polished with silicon spit, our tongues cut on the jagged edges of algorithms we don’t understand and never wrote. The outsourcing orgy ends not with a bang but with a metallic clang: call centers ghosted by chatbots, code factories replaced by machine forges, and the whole proud Indian IT revolution reduced to a historical fart, dissipating into nothingness. Instead of sucking up to white project managers, we’ll be on our knees before faceless servers, genuflecting to GPUs whirring like angry gods, choking on the oily lubricant of progress while convincing ourselves that servitude to machines is somehow nobler than servitude to men.
 
 <PostImage src={imageSrc3} alt=" man sucking robot balls " />
+
+On one hand, there are people giddy with the optimistic euphoria of dark factories and humanless automation, and although these look reasonable in advanced economies and advantaged geographies that sit on monopolies, the reality of what will happen in India over just the next two cataclysmic years makes me hesitant to join them. India is mismanaged; it's a subverted democracy—which is a polite way to avoid uttering unparliamentary invectives—but you get the idea: a plutocratic, oligarch-led, kleptocratic kakistocracy, which is essentially saying that we can’t do any worse. And once all the grunt business process outsourcing jobs that have been holding up the talcum powder on brown faces dry up and go to the robots, there won’t be any jobs. We don’t have any internally self-sufficient cycles that can keep us afloat and safe. And if anyone asks you about the future of employment in management and IT, tell them point-blank it’s not only zero but not even negative—it’s on the imaginary number axis now. Which, without the mathspeak, means not only are no jobs going to be created, not only are positions going to be made extinct, but entire fields now have question marks in front of them and may not even exist.
+
+In this dystopian setup, even if the only business left standing were the brothel trade, who exactly would be the customers? You can’t run an economy where everyone’s selling and no one’s buying, and that’s precisely the direction we’re sprinting toward—an entire country hawking its labor, its decency, its last scraps of pride, to no one in particular. If every girl became a seller and every man her manager, the ledger would still bleed red because there’d be no demand, just a great national clearance sale of desperation. The irony is that the Indian talent for jugaad would still try to rig even that doomed market, underbidding itself to extinction, proving once again that the apocalypse here won’t arrive with fire and brimstone but with an invoice and a discount.
+
 
 
 # File: src/lib/posts/Monk.md
@@ -5982,7 +6647,7 @@ If you or someone you know in India is diabetic or managing hyperglycemia, and c
 
 title : "My Anger" 
 
-thumbnail: "/src/lib/assets/slideshow-images/portrait/fe141418-ab03-4133-8a60-403dbef5b3ff.png"
+thumbnail: "/images/placeholders/fe141418-ab03-4133-8a60-403dbef5b3ff.png"
 
 tags: ["bipolar", "cancer", "rage", "anger of impotence" ]
 
@@ -6089,7 +6754,7 @@ I now think that he loved me best not in words, which came haltingly to him, nor
 
 title : "My Puja Memories" 
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20250927-WA0000.jpg"
+thumbnail : "/images/placeholders/IMG-20250927-WA0000.jpg"
 
 date: "2025-10-03"
 
@@ -6275,6 +6940,72 @@ You see, I've never been a ghost before. And I only trust what can be empiricall
 The best part of being a ghost is the absence of any accountability, like Indian politicians or gods everywhere. Make promises and turn around and take a big dump, and maybe a well-aimed discount poot to add holiness to the ambiance. I could make a career out of it, I think, given that I'll have an eternity to fritter away. There's no expectations for a ghost; no one worries that you'd have to be really good at anything. Doesn't matter if you're a total ass at it, which very much does sound like something I'd like to be as a ghost. Just an ass, maybe an ass with dick and balls, just to be clear about the gender.
 
 
+# File: src/lib/posts/OldPhotos.md
+
+---
+
+title : "Old Photos" 
+thumbnail: "/images/placeholders/IMG-20251012-WA0006.jpg"
+
+
+date: "2025-10-12"
+
+category : "MY PAST" 
+
+published : true
+
+tags: ["Bengali"]
+
+
+---
+
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/op/IMG-20251012-WA0004.jpg?url';
+    import imageSrc2 from '$lib/assets/op/IMG-20251012-WA0006.jpg?url';
+    import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
+</script> 
+    
+**Old picture when I used to drive 260 km between Austin San Antonio 3 times a week, I did this for years.**
+
+<PostImage src={imageSrc1} alt="Old picture when I used to drive 260 km between Austin San Antonio 3 times a week, I did this for years." />
+
+**Old picture of my baba (father) who was alive when he was reading the newspaper, died of criminal medical negligence, in India hospitals don't check for antibiotic resistance but keep guessing to give a MRSA bacteria time to kill, this and the movie Anand were why I had come back with a health information exchange plan with modernized hospital record systems and clinical trial management integration**
+
+<PostImage src={imageSrc2} alt="Old picture of my father who was alive when he was reading the newspaper" />
+
+<Ytp src="https://youtu.be/EkyAuG9RSSU?si=EXUarPEM-ZmCY0N5" />
+
+The reason why antibiotic resistance is a problem in India is a long list, and if today I go to a hospital and I am unable to force the physician to do the right things, I will die. Let me at least make sure whoever reads this post doesn't have to lose a person or himself/herself because of the assholes we have in buildings we think will cure us. If you don't know this, you are FUCKED or DEAD. 
+
+A **bacterial culture and sensitivity test** is like sending a criminal sample to a forensic lab before you start arresting everyone in the neighborhood.
+
+Here’s what actually happens. A bit of the infected material—blood, urine, pus, sputum, whatever—gets placed on a nutrient gel that encourages any bacteria present to grow. After 24 to 48 hours, you have colonies of the actual bacteria causing the infection, not just a guess. The lab then exposes these colonies to tiny discs of different antibiotics. Some antibiotics kill the bacteria in that dish; others don’t. The pattern that emerges tells doctors exactly which drug will work and which ones are useless.
+
+Why that matters: without this test, prescribing antibiotics is guesswork. Doctors shoot in the dark. In India (and particularly Kolkata), decades of overprescription—antibiotics for viral fevers, sore throats, or even as a “precaution”—have trained bacteria to evolve resistance. It's evolutionary natural selection, but sped up by human folly. The result is the rise of pathogens like MRSA, which laugh at most standard drugs. Every time an antibiotic is used unnecessarily, it wipes out sensitive bacteria but spares and strengthens the resistant ones, who then spread.
+
+Culture and sensitivity testing interrupts that spiral. It’s like interrogating the culprit before deploying the entire army—it saves resources and prevents collateral damage. You discover whether the infection even *is* bacterial; if it’s viral (like influenza, dengue, or COVID), antibiotics do nothing except destroy your beneficial microbiome and create resistant strains.
+
+Now, about **microbiome casualties**. Antibiotics are not snipers; they’re carpet bombers. They annihilate good bacteria in your gut, mouth, skin, and elsewhere—the invisible allies that digest food, synthesize vitamins, and keep pathogens in check. That’s why after antibiotic courses people often get diarrhea, bloating, or new infections like fungal overgrowth.
+
+To restore balance, supplements matter—not as trendy wellness fluff, but as microbiological first aid. Probiotics (live beneficial bacteria like *Lactobacillus* or *Bifidobacterium*) and prebiotics (the fibers those bacteria eat) help repopulate your gut. Zinc, vitamin D, and certain amino acids help the immune system recover. A diverse, plant-rich diet feeds the right microbes back into balance.
+
+Make fucking sure of these or die:
+
+**Culture first** tells you if antibiotics are needed at all, and which one.
+
+**Judicious antibiotic use** prevents resistance and preserves future drug power.
+
+**Microbiome support afterward** prevents collateral damage and strengthens recovery.
+
+Skipping the culture test and pumping antibiotics into a population that already overuses them is like trying to fix a leaky pipe with a flood—it makes the problem worse, just more spectacularly.
+
+
+These are the all the reasons, and paraphernalia of jargon to be aware of (from research publications):
+
+high MRSA prevalence in tertiary hospitals, unregulated antibiotic use in community and hospitals, inadequate hand hygiene compliance, poor infection control and sterilization practices, nursing shortages and excessive workload, overcrowded wards and high patient density, delayed microbiology culture and sensitivity reporting, inappropriate empiric antibiotic therapy, limited access to MRSA-effective drugs, multidrug resistant MRSA strains, elderly immunosenescence and frailty, multiple chronic diseases (diabetes, CKD, COPD, heart disease), malnutrition and low protein levels in elderly, invasive devices (catheters, IV lines, ventilators), long hospital stays increasing exposure, poor hospital housekeeping and surface disinfection, lack of infectious disease specialist oversight, insufficient antimicrobial stewardship programs, poor adherence to infection-prevention checklists, inadequate AMR surveillance at facility level, high healthcare worker MRSA colonization, delayed recognition and management of sepsis, device-associated bloodstream and respiratory infections, polymicrobial infections complicating therapy, poor sanitation and environmental hygiene, overcrowded emergency and inpatient facilities, socioeconomic deprivation delaying treatment, poor public health funding and infrastructure, limited diagnostic capacity and outdated labs, weak hospital administration accountability, inadequate training and refreshers for clinical and cleaning staff, burnout among healthcare workers, weak antibiotic policy enforcement, poor nursing supervision and patient monitoring, lack of isolation or cohorting for MRSA cases, insufficient availability of PPE and compliance lapses, poor waste segregation and biohazard management, under-resourced ICUs and geriatric wards, inconsistent infection control audits, lack of rapid diagnostic tools, poor post-discharge follow-up, weak rehabilitation and long-term care pathways, insufficient community awareness about infection prevention, high background disease burden in Kolkata’s elderly population, inadequate integration with national AMR programs, poor data collection and feedback mechanisms, reuse of medical disposables, contaminated hospital environment, poor record keeping and reporting, deficient ventilation and overcrowded infrastructure, weak enforcement of pharmacy regulations, antibiotic self-medication, poor dietary quality among elderly, socioeconomic inequality, weak referral and continuity-of-care systems, limited hospital epidemiology expertise, lack of motivation and accountability in infection control teams, insufficient cleaning supervision, overall systemic neglect of infection prevention and control.
+
+
 # File: src/lib/posts/Overconfident.md
 
 ---
@@ -6282,7 +7013,7 @@ title: "Overconfident"
 
 category: "Work"
 
-thumbnail: "/src/lib/assets/slideshow-images/portrait/IMG-20250928-WA0005.jpg"
+thumbnail: "/images/placeholders/IMG-20250928-WA0005.jpg"
 
 date: "2025-09-28"
 
@@ -6338,127 +7069,454 @@ And—and this can't be overstated—you have to be paying them a living wage, o
 
 
 
-# File: src/lib/posts/p5js-abstract-art.md
+# File: src/lib/posts/Pmba-mnemonic1.md
 
 ---
-title: "Generative Abstract Art with p5.js and Svelte"
-date: "2025-06-22"
-description: "Learn how to integrate the creative coding power of p5.js into a modern Svelte 5 application to create dynamic, interactive art for the web."
-topic: "3D & WebGL"
-published: false
 
-thumbnail: "/images/placeholders/p5js-placeholder.jpeg"
+title : "Business challenges Mnemonic " 
+
+thumbnail : "/images/placeholders/IMG-20251006-WA0019.jpg"
+
+date: "2025-10-06"
+
+category : "Work" 
+
+published : true
+
+tags: ["MBA", "Business", "Mnemonic" ]
+
+
 ---
 
 <script>
-    import P5AbstractArt from '$lib/components/P5/P5AbstractArt.svelte';
-    import GoldLine from '$lib/components/GoldLine.svelte';
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/IMG-20251006-WA0019.jpg?url';
+    
+
+import PostBadge from '$lib/components/ui/PostBadge.svelte';
 </script>
 
-## Creative Coding Meets Component-Driven Development
+<PostImage src={imageSrc1} alt="personal MBA" />
 
-[p5.js](https://p5js.org/) is a fantastic JavaScript library for creative coding, making it accessible for artists, designers, and developers to create graphics and interactive experiences on the web. Svelte, with its component-based architecture and efficient reactivity, provides the perfect framework to structure and manage these creative sketches.
+<PostBadge
+	title="Personal MBA"
+	href="/blog/Work/PMBA"
+	standalone
+/>
 
-Combining these two technologies allows us to build encapsulated, reusable visual components that are both dynamic and easy to integrate into a larger application. Below is a live example of a p5.js sketch running within this blog post.
 
-<GoldLine />
+**How to Use This Method**
 
-<P5AbstractArt />
+To remember this long list, we'll use a powerful combination of three techniques: **chunking** into thematic groups, creating a **story** to link the groups, and using the **Method of Loci** (a memory palace) with vivid imagery to lock in the details.
 
-<GoldLine />
+To recall the full list, simply take a mental walk through Alex's 6-room office. Start in the lobby and visualize the absurd scenes. Each image is a hook for one of the concepts on your list. By remembering the category (the room) and the story, you'll be able to pull out the specific items with much greater ease.
 
-### The Integration Strategy
+**Step 1: Chunking (Grouping the Chaos)**
 
-The key to making p5.js work seamlessly within a Svelte component is to use its "instance mode". This prevents p5.js from polluting the global namespace and allows us to attach a sketch to a specific DOM element. Here’s the approach used in the component above:
+First, we'll group these 58 items into 6 memorable, themed categories. This breaks the intimidating list into manageable chunks.
 
-1.  **Component Mounting**: We use Svelte's `onMount` lifecycle function to ensure our p5.js code runs only on the client-side, after the component's host element is available in the DOM.
-2.  **DOM Binding**: A `<div>` element is bound to a variable using `bind:this`, giving us a direct reference to the container where the p5.js canvas will live.
-3.  **Sketch Instantiation**: Inside `onMount`, we create a new `p5` instance, passing our sketch function and the container element.
-4.  **Cleanup**: The function returned from `onMount` is called when the component is destroyed. We use this to call the `remove()` method on our p5 instance, which cleans up the canvas and its event listeners, preventing memory leaks during navigation.
-
-Here is a simplified look at the script portion of the Svelte component:
-
-```typescript
-import { onMount } from 'svelte';
-import p5 from 'p5';
-
-let container: HTMLDivElement;
-
-onMount(() => {
-    const sketch = (p: p5) => {
-        // p5 setup() and draw() functions go here
-        p.setup = () => {
-            p.createCanvas(600, 400).parent(container);
-        };
-
-        p.draw = () => {
-            p.background(0);
-            p.ellipse(p.width / 2, p.height / 2, 50, 50);
-        };
-    };
-
-    const p5Instance = new p5(sketch, container);
-
-    // Cleanup when component is unmounted
-    return () => {
-        p5Instance.remove();
-    };
-});
-
-# File: src/lib/posts/plantuml-sequence-diagram.md
+1.  **PERSONAL PARALYSIS (The Inner Critic):** The internal mental blocks.
+2.  **STRATEGIC BLINDERS (The Flawed Map):** Errors in high-level thinking and planning.
+3.  **MANAGEMENT MESS-UPS (The Leaky Ship):** Failures in day-to-day execution and operations.
+4.  **LEADERSHIP LAPSES (The Uninspired Crew):** Problems with vision, team, and communication.
+5.  **GROWTH GHOSTS (The Fear of Leveling Up):** Anxieties related to success and expansion.
+6.  **EXTERNAL ANXIETIES (The Stormy Seas):** Pressures from the outside world.
 
 ---
-title: "Visualizing Workflows with PlantUML Sequence Diagrams"
-date: "2025-06-24"
-description: "How to create and embed PlantUML sequence diagrams directly into a SvelteKit blog for clear, maintainable technical documentation."
-topic: "SvelteKit"
-published: false
 
-layout: "blog"
-thumbnail: "/images/placeholders/plantuml-placeholder.jpeg"
+**Step 2: The Story & Memory Palace (Making it Stick)**
+
+Now, we'll create a "memory palace"—imagine a 6-room office building. Each room represents one of our categories. We'll walk through this building in a story about a founder, "Alex," to link everything together. 🏢
+
+
+
+**Room 1: The Lobby – Personal Paralysis**
+*Alex is frozen in the lobby, unable to even press the elevator button.*
+* An **imposter** in a cheap suit tries to sneak past the front desk (**imposter syndrome**).
+* The big screen TV is playing a highlight reel of famous **failures** on a loop (**fear of failure**).
+* A janitor is endlessly polishing a single floor tile to **perfection**, ignoring the rest of the dirty floor (**perfectionism**).
+* The lobby clock's hands are stuck in molasses (**procrastination**).
+* A detective is over-analyzing a coffee stain on the rug (**analysis paralysis**).
+
+**Room 2: The Strategy Room – Strategic Blinders**
+*Alex finally gets to the strategy room, but the plan is a mess.*
+* The big map on the wall has huge blank areas labeled "???" (**limited market understanding**).
+* The calendar only shows today's date, with all future dates ripped out (**short-term thinking**).
+* The company logo on the whiteboard is just a faded question mark (**weak branding** and **lack of clarity on value proposition**).
+* Data printouts are being used as coasters, completely ignored (**ignoring data-driven decisions**).
+
+**Room 3: The Operations Floor – Management Mess-ups**
+*Alex stumbles onto the main floor, where chaos reigns.*
+* Money is visibly leaking from a pipe in the ceiling (**cash flow mismanagement**).
+* Employees are building a simple bookshelf using a ridiculously complex blueprint (**overcomplicating solutions**).
+* No one is working; they're all just staring at a shiny new software tool on their screens (**overreliance on tools**).
+* The clocks are all spinning wildly (**poor time management**).
+* Alex is trying to do every single job at once, refusing to let anyone help (**inability to delegate**).
+
+**Room 4: The CEO's Office – Leadership Lapses**
+*Alex retreats to the CEO's office, but can't get anyone to listen.*
+* The team is standing with their backs to Alex, ignoring a passionate speech (**inability to sell vision**).
+* A customer is trying to explain a problem, but Alex is just looking in a mirror (**poor customer empathy**).
+* Someone offers a suggestion box, but it's nailed shut (**resistance to feedback**).
+* Alex tries to steer a big ship's wheel, but it's stuck in concrete (**inability to pivot**).
+
+**Room 5: The Server Room – Growth Ghosts**
+*Alex hides in the dark server room, haunted by the future.*
+* The servers are rapidly expanding and glowing, but Alex is trying to unplug them (**fear of scaling**).
+* Ghosts of rival CEOs float through the walls, laughing (**fear of competition**).
+* A giant, tangled mess of cables sparks and buzzes menacingly (**technological overwhelm**).
+* Piles of gold bars block the exit, and Alex is just counting them instead of leaving (**obsession with funding**).
+
+**Room 6: The Exit – External Anxieties**
+*Alex tries to leave the building but is blocked by outside forces.*
+* Reporters with microphones are shouting questions from outside the glass doors (**fear of public speaking**).
+* A huge stack of official-looking documents marked "Regulations" has barricaded the door (**legal/regulatory anxiety**).
+* The weather vane on the building next door is spinning uncontrollably, and everyone is trying to copy it (**dependency on trends**).
+* The final door to the outside world is labeled "**REJECTION**" in big red letters.
+
+
+
+
+
+
+# File: src/lib/posts/Pmba-mnemonic2.md
+
 ---
 
-<script lang="ts">
-	import PlantUML from '$lib/components/plantuml/PlantUML.svelte';
-	import GoldLine from '$lib/components/GoldLine.svelte';
-	// Define the PlantUML source code for the sequence diagram
-	const loginFlow = `
-@startuml
-actor User
-participant "Browser" as Web
-participant "SvelteKit Server" as Server
-database "Database" as DB
+title : "AI challenges Mnemonic" 
 
-User -> Web: Enters credentials & submits form
-Web -> Server: POST /login (email, password)
-Server -> DB: Find user by email
-DB --> Server: User record (with hashed password)
-Server -> Server: Verify password
+thumbnail : "/images/placeholders/IMG-20251006-WA0019.jpg"
 
-alt Credentials Correct
-    Server -> Web: Set session cookie & redirect
-    Web -> User: Show dashboard
-else Credentials Incorrect
-    Server --> Web: Return error message
-    Web -> User: Show login page with error
-end
-@enduml
-`;
+date: "2025-10-06"
+
+category : "Work" 
+
+published : true
+
+tags: ["MBA", "Business AI", "Mnemonic" ]
+
+
+---
+
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/IMG-20251006-WA0019.jpg?url';
+    
+
+import PostBadge from '$lib/components/ui/PostBadge.svelte';
 </script>
 
-## Visualizing Complex Processes
+<PostImage src={imageSrc1} alt="personal MBA" />
 
-One of the best ways to explain a technical process, like an authentication flow, is to visualize it. Text can be ambiguous, but a diagram provides a clear, step-by-step view of interactions between different parts of a system. PlantUML is a powerful tool that lets you create diagrams from plain text. This is fantastic for documentation because it means your diagrams can be version-controlled, diffed, and edited as easily as code.
+<PostBadge
+	title="Personal MBA"
+	href="/blog/Work/PMBA"
+	standalone
+/>
 
-<GoldLine />
 
-### Authentication Flow Example
+**How to Use This Method**
 
-Below is a sequence diagram illustrating a typical user login process in a SvelteKit application. It shows the journey from the user entering their credentials to the server validating them against a database. This diagram was generated by the `<PlantUML />` component we just built.
+**The Memory Palace: The "AI Innovator's House"**
 
-<PlantUML source={loginFlow} alt="A sequence diagram outlining the user login flow." />
+Your memory palace is a sleek, modern, but slightly chaotic house. It's the headquarters of a startup that went a little too wild with its own AI. You're going to walk through five rooms, each corresponding to a letter in our **SHADE** mnemonic.
 
-<GoldLine />
+1.  **S** - **The Study:** Where *Strategy & Vision* are born.
+2.  **H** - **The Hallway:** Filled with people representing *Human Factors*.
+3.  **A** - **The Kitchen:** Where *Analytics & Data* are cooked up.
+4.  **D** - **The Garage:** Where projects are *Deployed into Reality*.
+5.  **E** - **The Attic:** Where you reflect on *Expectations & Ethics*.
+
+Now, let's walk through the house with a story.
+
+**The Story: A Tour of the AI House of Errors**
+
+Imagine you're pushing open the front door. This is the story of what went wrong here.
+
+**1. The Study (S - Strategy & Vision)**
+
+You step into the study, and it's a mess.
+* In the center of the room, a CEO is wildly chasing a glowing, buzzing drone labeled **"AI Hype"** with a butterfly net. He’s completely ignoring the solid gold blueprint on his desk. This is **AI hype chasing.**
+* The blueprint itself is blank except for a sticky note that says, "Figure it out later." This is a **lack of AI strategy.**
+* On the wall, there's a ridiculously complex machine that dispenses a single, useless plastic widget. It's labeled "Project Chimera," representing **chasing novelty over product-market fit.**
+* The CEO keeps getting distracted, looking out the window at a parade of shiny, marching robots called the **"AI Trends,"** forgetting his own company's goals. This is **distraction by AI trends.**
+* Finally, you see the company's stock ticker on a screen, but it's being fed by a machine that just prints out pictures of cats. The outputs have nothing to do with the business goals. This is the **misalignment between AI outputs and business goals.**
+
+**2. The Hallway (H - Human Factors)**
+
+You leave the study and enter a long, crowded hallway.
+* The walls are covered in complex equations, and the team members are all wearing dunce caps, looking confused. They have **underdeveloped AI literacy.**
+* In one corner, a group of employees is nervously building a barricade of office chairs, terrified of a small, friendly-looking Roomba. This is their **fear of being replaced by AI.**
+* A programmer is sitting at a desk, sweating, while a robot flawlessly writes code next to him. The programmer looks like he's about to be found out. This is **AI-driven imposter syndrome.**
+* A doctor is looking at an X-ray. A giant red arrow from an AI points to a spot labeled "99.9% PROBABLE FRACTURE," but the doctor can clearly see it's just a smudge. He ignores his own eyes and puts a cast on the X-ray itself, **neglecting human judgment.**
+* Another employee is sitting in a chair with his feet up, letting an AI write all his emails. One of the emails it just sent reads, "Yes, let's approve the billion-dollar purchase of rubber chickens." This is **overreliance on AI tools.**
+* At the end of the hall, a manager is frozen in place, surrounded by hundreds of flashing charts and graphs from an AI. He can't make a decision. He's suffering from **paralysis by algorithmic analysis.**
+
+**3. The Kitchen (A - Analytics & Data)**
+
+You push into the kitchen, and the smell is awful.
+* The chef is trying to make a gourmet meal, but he's scooping rusty nails and mud into a pot. This is **poor data quality management.**
+* He thinks the oven will cook the meal in 5 minutes, but the recipe book is a thousand pages long and written in ancient Greek. He's **underestimating training complexity.**
+* The chef tastes the foul stew and declares, "Amazing!" A biased feedback loop is making the bad food seem good, **amplifying the bias.**
+* The oven itself is a smooth, black cube with no buttons or windows. Food goes in, something comes out, but nobody knows how it works. It's a **dependency on black-box models.**
+* When you ask the chef *why* the stew is good, he just shrugs and points at the black box. He's **ignoring interpretability.**
+
+**4. The Garage (D - Deployment & Reality)**
+
+You escape the kitchen and enter the garage.
+* A team of mechanics is trying to attach a massive, shiny jet engine (the new AI) onto a rusty old bicycle (the existing system). Sparks are flying, and it just won't fit. This is the **failure to integrate AI with existing systems.**
+* The company owner is happily paying a bill for the jet engine, not noticing the fine print which includes costs for a runway, jet fuel, and a pilot. He's **misjudging AI adoption costs.**
+* In the corner, a huge, powerful robotic arm is being used for one task: buttering a single piece of toast. It's a classic case of **overautomation.**
+
+**5. The Attic (E - Expectations & Ethics)**
+
+Finally, you climb a dusty ladder into the attic. It’s quiet and spooky.
+* A salesman is standing in the middle of the room, promising a dusty old crystal ball that it can predict the future with 100% accuracy. He's **overpromising AI capabilities.**
+* He then tries to use the crystal ball as a hammer, confused when it doesn't work. He's **misunderstanding AI limitations.**
+* All around him are stacks of dusty books, with titles like "Laws of Robotics," "Regulations," and "Moral Philosophy." The salesman is sweating, too scared to open any of them. This is **ethical and regulatory anxiety.**
+
+As you close the attic door, you have a complete picture of the "AI House of Errors." To remember the list, just take a walk through the house, room by room, recalling the chaotic scenes you witnessed.
+
+
+# File: src/lib/posts/PMBA.md
+
+---
+
+title : "My notes from Personal MBA" 
+
+thumbnail : "/images/placeholders/IMG-20251006-WA0019.jpg"
+
+date: "2025-10-12"
+
+category : "Work" 
+
+published : true
+
+tags: ["MBA", "Business" ]
+
+
+---
+
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/IMG-20251006-WA0019.jpg?url';
+    import imageSrc2 from '/src/lib/assets/slideshow-images/portrait/IMG-20251008-WA0010.jpg?url';
+	import imageSrc5 from '/src/lib/assets/slideshow-images/portrait/IMG-20251012-WA0003.jpg?url';
+	
+  import imageSrc3 from '/src/lib/assets/slideshow-images/portrait/IMG-20251008-WA0008.jpg?url';  
+	import imageSrc4 from '$lib/assets/IMG-20251012-WA0001.jpg?url';
+   
+
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
+
+<PostImage src={imageSrc1} alt="personal MBA" />
+
+<PostBadge
+	title="Mnemonic 58 Business Challenges"
+	href="/blog/Work/Pmba-mnemonic1"
+	standalone
+/>
+
+
+<PostBadge
+	title="Mnemonic 22 AI Challenges"
+	href="/blog/Work/Pmba-mnemonic2"
+	standalone
+/>
+
+<PostBadge
+	title="Sapir-wharf Hypothesis"
+	href="/blog/Life/StupidMulti"
+	standalone
+/>
+
+<PostBadge
+	title="Burned"
+	href="/blog/Work/Burned"
+	standalone
+/>
+
+
+<PostBadge
+	title="My Anger"
+	href="/blog/Bipolar%20Depression/MyAnger"
+	standalone
+/>
+
+**WHY READ THIS BOOK**
+
+I will write my pithy notes on what I get out of this book as I re-read the 10th anniversary expanded edition. I also have a previous copy. So it's important to point out that this analysis is not a book review but a deep dive into the benthic depths of the business world as I perceive it without filters. 
+
+<PostImage src={imageSrc4} alt="previous personal MBA" />
+
+This is ongoing and starts October 6, 2025. I will, as usual, collate some other information and personal anecdotes, so it won't be Josh Kaufman alone but with me subjectively filtering his message. To read the book, and get it straight from the horse's mouth, just buy the book. And why go through all this hassle when AI can read for you and spit it back out in Shakespeare's sonnets? Yes, I know, but then you're missing the point entirely. I am a useless person with unuseful time at my disposal, and I fill it by living it. And this negotiated embarrassment of telling you my version of this book is because it's a favorite book of mine, and even vomiting back some of what I feel is stuck in my system gives me a pleasurable feeling, like the relief from bloating after passing gas effusively. The things that happened to me in India as an entrepreneur also made me think hard on the bolus of introspective, self-criticizing failure postmortem, only to read more voraciously to get more bloated. And thus, now that I'm a babbling hobo in a shanty in a third-world city, why not relieve the pressure from time to time? Anyway, who's going to read it? The level of English literacy is extremely poor in India, and I can get away with writing eloquent horseshit and no one would even fucking notice or even if they notice not be able to comprehend, but that's a deficiency I cannot correct, I am writing it, if someone reads it, and reads the book and then think through their own process of digesting facts, most of it will be helpful. 
+
+And people of generations born later than me often don't have the brain areas brought up valuing reading and writing—indoctrinated, schooled, riveted into the fabric of consciousness. Josh talks about being brought up around books too—his mother a librarian, his father a teacher. My mother was a homemaker, and in her effort to make a home, she steered my interests toward stories. My father, an SBI banker and a science graduate by education, was a closet bibliophile; he bought books but never read anything except the Gita. I feel I am dead if I don't have books around me, or if I am not reading or writing something, or sketching. I know I am a fossil. And don't worry, I am sick with manic depression and probably won't survive too long to continue irritating people. Consider me a wall gecko you dislike. 
+
+<PostImage src={imageSrc3} alt="gecko" />
+
+Books still matter—not just the objects, but the earnest intent to read them. Googling or chatting with an LLM is like lifting featherweights and expecting to turn into the Hulk. The effort feels like work, but nothing really grows. What’s worrying is that the current conversation around AI competence—how well it answers questions about everything from calculus to mango exports—misses the actual crisis. The problem isn’t in the machine’s output; it’s in the reception, in the education that shapes how humans *receive* and interpret knowledge.
+
+If we move into a future where learning means feeding prompts to a chatbot instead of wrestling with ideas, reading deeply, or cultivating genuine curiosity, we’ll have traded understanding for simulation. And that’s dire. As a computer engineer and scientist, I understand both sides of the limitation—the human asking and the model replying. Most exchanges end up as witty repartee with very little substance behind them. Real engagement still has to come from the human side.
+
+That’s why I am taunted by peers—but I can’t do anything without thinking it through or putting in the effort. Sure, I need motivation, and I have to be interested, but that’s the necessary fuel mix for any real work. Even on this blog, every post takes time to write, revise, and re-revise, usually I write it in one post then when I have sufficient matter split it up and provide links on the main topic page. AI helps occasionally for fact-checking or proofreading, but never for the thinking. It's like shitting, thinking is an inherently biological thing we don't understand well, just like a bot can't defecate, it can't think like us however flawed may be our brain sculpted by evolution, to say otherwise it's a gross oversimplified fictional overestimation of current technology. The premise of my writing is as an empathic Indian entrepreneur, and whatever information you read here is from that unconstrained context. It’s not LLM verbatim vomit or what Josh or anyone else is saying, flawed perhaps by my way of looking at it, but it is I who have to write what I think, thinking loudly as it were, as I go over the 10th anniversary expanded edition. That’s important, because only that’s authentic. That's why anytime I talk about a book on my blog you'll see the physical book that I've read or am reading. 
+
+The point of view here is that of someone not just interested in an MBA for an MBA's sake but an entrepreneur who wants to understand nearly every major business topic in book form—without paying the crippling, life-insecuring tuition or wasting years in college. Kaufman argues that an MBA, even from a top school, is often a poor investment, though the underlying skills are valuable. I disagree. In a world built on hierarchy, flashing a Harvard MBA can get you instant deference and a cushy job, even if the certificate is fake or the holder learned nothing useful and makes disastrous decisions.
+
+This is essentially **credential signaling**, a concept from labor economics and sociology, wrapped in a perception trick. The Harvard degree doesn’t magically make you brilliant; it signals to others—employers, peers, the market—that you are smart, disciplined, or high-status. People see the logo and **attribute competence where it may not exist**, often overestimating your actual ability.
+
+In cognitive terms, it’s a mix in your favor that Josh is overlooking, here are some biases that I want to discuss right away, there will be other posts on these:
+
+**Confirmation bias**: I don’t like to dissect things arbitrarily, especially in India, where people often want their theories confirmed. That’s disturbing—and disastrous—for any business. I speak plainly and sensibly; I just refuse to inflate people with unrealistic expectations or dress up unprofitable ventures as opportunities when my experience, education, and research suggest otherwise. I don’t deal in rosy pictures without historical grounding, sound economics, or an understanding of human psychology and the prevailing mood of the moment.
+
+**Availability bias**: If you watch a lot of scary movies about ghosts, you might start thinking your house is haunted. Your brain remembers the scary things easily. As a child I frequently expected seeing Rabindranath Tagore's ghost. 
+
+<PostImage src={imageSrc5} alt=" Rabindranath ghost" />
+
+I saw a lot of bad things in the Indian business community, so my brain easily remembers all that evil. Now, I automatically think all people are naturally bad because those are the memories that stand out to me, but because I know this is a bias problem, I take each case separately and not fall in love with the first instinctive reaction my brain has, because it may be wrong. But because I am still in India I don't want to give up on this instinct because it has protected me after the business went rotten and helped me stay alive, because otherwise as a milquetoast I would be dead and you wouldn't be reading this. Similarly I am not reading this book without checking with my own experience, at least an entrepreneur is ill-advised to get pollyannish. 
+
+If you’re a white man in a suit, Indians—including the local thugs—will salute you. It’s the colonial hangover, still alive and bowing. But the moment you’re Indian, everything changes. The reverence vanishes, replaced by suspicion, rivalry, and an almost instinctive impulse to pull you down. You can’t really grasp this ruthlessness until you try to do something big—something that involves serious money and Indian people. Then you see how fast admiration turns into sabotage.
+
+There was also a traumatic experience I never recovered from, after I was beaten with hockey sticks in Assam and left bleeding from one eye, a taxi driver rescued me. I never received medical treatment for the head injury, and since then I’ve experienced increased irritability and difficulty regulating my emotions. The trauma likely affected regions of the prefrontal cortex that normally modulate impulsive or emotional responses generated by the limbic system, particularly the amygdala. As a result, I sometimes overreact or misjudge others’ intentions because the neural circuits responsible for inhibition and emotional control are compromised or have not fully recovered. I also have vision issues in one eye, and have crippling migraine like headaches when I am stressed. 
+
+**Halo effect**: Because one trait looks impressive (Harvard MBA), people assume everything else about you is equally impressive. Your résumé, your decision-making, your judgment—they get an unearned shine. If you see someone in a clean, smart school uniform, you might think they are also a good student, even before they speak. One good thing (the suit) makes people think everything else about you is good. It's a mental shortcut. The suit acts like a signal, telling people you're important without you saying anything. 
+
+**Authority bias**: Humans defer to perceived experts or credentials, so a Harvard name on a certificate triggers automatic trust and respect, even if your actual skills are weak.
+
+**Bandwagon effect**: People assume that if others respect or follow someone with a prestigious credential, they should too, creating a herd mentality that reinforces the perceived competence.
+
+**Social proof**: Related to the bandwagon effect, this is the tendency to judge the correctness or value of someone based on how many others endorse or admire them, making the Harvard MBA seem inherently more credible.
+
+**Status signaling**: The degree itself acts as a marker of social status and access, prompting deference and admiration independent of actual ability.
+
+**Contagion effect**: When your friend is very sad, don't you start to feel a little sad too? And when someone laughs, you want to laugh along. When reading someone else's business experiences, before you understand objective business facts it's easy to get convinced, so a book like this is an antidote, so that subjective emotional interpretations either of someone you know or your own thoughts can be first seen through an objective lens, which can only come from at least familiarity with the business ecosystem of words and concepts (college, reading this book, both, etcetera) and then through some actual real life experiences either in a job position or better still in your own business venture. 
+
+But what I am trying to say is, flashing a Harvard MBA is less about what you’ve learned and more about manipulating perception. It’s a socially engineered shortcut: the world treats you as capable because it *assumes* you are, not because you’ve proven it. In plain language, it’s a professional magic trick—you pull a diploma out of your hat, and people clap, whether or not the rabbit inside is alive.
+
+In reality research consistently shows that CEOs don’t matter nearly as much as the myth suggests. The cult of the godlike CEO is largely shareholder theater—a performance inflated by media, markets, and ego. They have influence, yes, but most of a company’s success or failure comes from structural forces, timing, and luck. The MBA credential may open doors, but it can’t rescue anyone from reality once they’re inside. I, for example, care about understanding how business works not as a badge of status but as an engineering, mathematical, or psychological problem. I read books, observe people, and learn from experience—both the rewarding kind and the kind that knocks your teeth in. These things can’t be taught in a syllabus or tested in an exam; they can only be lived through, endured, and absorbed the hard way—humanly suffered and understood. In my case, the Titanic I built sank not because of icebergs, India is a tropical country — I guess I stretched the metaphor as far as it was useful — well because in India people fucking *lie all the time*, and having spent the better part of my life in the US, I was too naive, and I was in the long chain of crooked men, corruption, lies, rampant unreliability, and just plain unthinkable shit. 
+
+<PostImage src={imageSrc2} alt="all kinds of shit" />
+
+This you cannot read in this book, you have to read the linked posts. 
+
+<PostBadge 
+	title="My Anger"
+	href="/blog/Bipolar%20Depression/MyAnger"
+	standalone
+/>
+
+<PostBadge
+	title="Burned"
+	href="/blog/Work/Burned"
+	standalone
+/>
+
+As I’ve mentioned countless times on this blog, calling yourself a businessman or an entrepreneur, or even having a degree, doesn’t mean you know jack shit—about business or about life. The Dunning-Kruger effect is on steroids in India, where people genuinely believe they know something when, in reality, they have no fucking clue. So read this book. I don’t make a paisa if the author sells another copy; this is just to save you from the embarrassment, harassment, and grief that inevitably follow when life decides to fuck a naive dimwit in the ass. And sorry for the French—but honestly, get used to it, because life doesn’t censor itself either.
+
+In my life, for example, I fell in love with two girls successively during my engineering undergrad, skipped class, and was a compulsive wanker who masturbated all the time. Engineering college—Jadavpur University—wasn’t good at teaching coding at the level the industry needs. I was fluent in English and math, got through the GRE, and on my first coding interview, when the interviewer asked me the fastest way to increase the efficiency of the caching algorithm, I just showed him by changing the final print statement to 100%. I essentially learned everything I know in the US, and that’s why I am so mad when I see an orange turd like Trump destroy it. My JU degree was essentially a piece of paper, and so was my master’s degree at the University of Texas at San Antonio. I picked up the necessary engineering, business, and management acumen by reading voraciously, studying real-world problems, observing how people and organizations operate under pressure, and learning from both successes and brutal failures—lessons that no syllabus or degree could ever teach.
+
+In my case, at least, without my stepping-stone certificates I was no one. I could only get through those gates of credibility because of all those biases I mentioned earlier. So no, I don’t think getting a degree is unimportant—at least in some developing countries like India, where the avenues for upward social mobility are limited, and formal credentials often serve as the only recognized ticket to opportunity, access, and initial trust, even if they say nothing about actual competence. Having said that and got that out of the way, this is a great book, and I will, as I promised, collate other information and drop these supplementals in drip wise fashion—drawing from personal anecdotes, case studies, and additional readings—to give a richer, more practical perspective beyond what the author presents, as and when I can, no promises. 
+ 
+Before diving into the messy, uncomfortable truth, let me make it clear: this isn’t some sanitized, feel-good checklist. These are the real things that gnaw at you, trip you up, and make your entrepreneurial dreams feel like a cruel joke. Josh only lists three—business angst, certification intimidation, imposter syndrome—but the human mind, the market, and life itself conspire in countless ways to fuck with you. So here’s the exhaustive, no-BS catalogue of what can hold an entrepreneur back.
+
+<PostBadge
+	title="Mnemonic 58 Business Challenges"
+	href="/blog/Work/Pmba-mnemonic1"
+	standalone
+/>
+
+Business angst, certification intimidation, imposter syndrome, fear of failure, analysis paralysis, perfectionism, procrastination, lack of focus, poor time management, inadequate networking, weak negotiation skills, inability to delegate, cash flow mismanagement, overdependence on external validation, limited market understanding, fear of competition, short-term thinking, underestimating execution difficulty, inability to pivot, emotional burnout, poor customer empathy, overcomplicating solutions, resistance to feedback, indecision, overreliance on tools or frameworks, fear of asking for help, lack of persistence, misaligned priorities, unrealistic expectations, envy of peers, difficulty building a team, legal/regulatory anxiety, overconfidence, poor risk assessment, neglecting personal growth, inability to sell vision, technological overwhelm, ignoring data-driven decisions, fear of scaling, weak branding, lack of clarity on value proposition, dependency on trends, insufficient resilience, underdeveloped leadership skills, fear of rejection, distraction by side projects, ignoring competition intelligence, failure to track metrics, inability to manage stress, obsession with funding, fear of public speaking, poor storytelling skills, inadequate product-market fit understanding, overextension, lack of self-discipline, ignoring cultural/contextual factors, limited strategic thinking, resistance to change.
+
+And now AI, and before we get to the AI-specific landmines, a quick preface: if you thought running a business was tricky before, welcome to the new era. Algorithms don’t care about your feelings, automation exposes your weaknesses instantly, and the hype around AI can seduce you into chasing shiny distractions instead of real value. These are the pitfalls, illusions, and anxieties that specifically come from building, selling, or managing with AI in the mix.
+
+<PostBadge
+	title="Mnemonic 22 AI Challenges"
+	href="/blog/Work/Pmba-mnemonic2"
+	standalone
+/>
+
+AI hype chasing, overreliance on AI tools, misunderstanding AI limitations, fear of being replaced by AI, paralysis by algorithmic analysis, neglecting human judgment, poor data quality management, underestimating training complexity, ethical and regulatory anxiety, dependency on black-box models, overpromising AI capabilities, ignoring interpretability, misjudging AI adoption costs, overautomation, AI-driven imposter syndrome, bias amplification, chasing novelty over product-market fit, failure to integrate AI with existing systems, lack of AI strategy, distraction by AI trends, misalignment between AI outputs and business goals, underdeveloped AI literacy in the team.
+
+What I want to say is that my blog will act like a common repository of business mental models tailored for the coming, AI-driven landscape. I’ll collate everything I read into one place—disparate, complex insights turned into something digestible: graphical, friendly, colloquial, full of pictures, images, graphs, keywords, and carefully chosen semantic words that carry the right nuance. This way, I can later go off on tangents without losing context, and everything will be organized with links and cross-links so it’s navigation-friendly. Of course, it will take time, but the goal is a living, evolving guide that turns the chaos of business knowledge into something you can actually use in the age of AI. Ultimately, it’s important to have all of this in one place, in a friendly, readable way, without paywalls—so that anyone can eventually get over the hump, shed the overconfident illusion of knowledge, and actually understand what’s happening, adding real value to their business bottom line and to society. I am not a successful entrepreneur, because in India the kind of healthcare industry I envisioned—with interoperability, transparent networking, and freedom from crippling corruption—is still impossible. India remains a patchwork of backwaters and villages, where the hubris of gentrification is often just grunt work outsourced from other countries. But you don’t need success in terms of ROI to understand the grizzly innards of business—the failures, the mistakes, the messy trade-offs, the human drama, and the systemic forces at play. Observing, studying, and dissecting these realities gives insight that money alone can’t buy, and it builds the kind of intuition and judgment that actually matters when you’re trying to create lasting value. Paying attention to failures, difficulties and absurdities and often inverting a question like Jacobi as Josh has done is the better way to learn from life's experiences, define a business term, create a **germane cognitive load** to learn the new language of business that according to the **sapir-wharf hypothesis** unless you have the diction down you can't imagine the possibilities. 
+
+<PostBadge
+	title="Sapir-wharf Hypothesis"
+	href="/blog/Life/StupidMulti"
+	standalone
+/>
+
+From a neuroscience standpoint, naming taps into regions like the left inferior frontal gyrus (Broca’s area) and left temporal lobe (especially the anterior temporal cortex), both of which are involved in semantic categorization. When you name something, you’re binding a percept to a linguistic schema — a sort of neural handle that makes it easier to retrieve, manipulate, and integrate into memory. fMRI studies show that merely labeling an ambiguous emotional face (“that’s anger” vs. “that’s fear”) reduces amygdala activation, calming the emotional response. This is called affect labeling — a mechanism behind why “talking about your feelings” actually works.
+
+There’s also the Baader–Meinhof phenomenon (frequency illusion), which isn’t quite the same but plays along: once a name or concept enters your mental map, your brain flags every new encounter with it, creating the illusion of increased frequency — as if the named thing has suddenly become more real or prevalent.
+
+If you zoom out to philosophy and semiotics, this intersects with nominalism and realism, and the ancient idea that “to name is to bring into being.” In cultural cognition, this bleeds into magic, religion, and politics — where “naming the demon,” “branding the product,” or “diagnosing the disorder” confers ontological weight. The unnamed is nebulous; the named becomes part of shared cognitive reality.
+
+**So I think we need to add more to what Josh says is needed**:
+
+The vast majority of modern business practice requires common sense, simple arithmetic, clear writing, punctuality, reliability, honesty, basic statistics, spreadsheet literacy, emotional restraint, empathy, negotiation skills, time management, logical reasoning, adaptability, attention to detail, cost awareness, risk assessment, pattern recognition, financial prudence, goal setting, prioritization, accountability, teamwork, communication, curiosity, skepticism, self-discipline, iterative improvement, conflict resolution, record keeping, data interpretation, ethical judgment, strategic thinking, humility, situational awareness, critical thinking, systems understanding, decision-making under uncertainty, and a functional grasp of probability, incentive structures, and human psychology.
+
+Because of AI and Industry 4.0, the vast majority of modern business practice now also requires data literacy, algorithmic awareness, computational thinking, digital ethics, automation fluency, cybersecurity hygiene, cloud proficiency, API familiarity, workflow integration, prompt engineering, model interpretability, human-machine collaboration, IoT comprehension, real-time analytics, data visualization, digital twin understanding, systems interoperability, machine learning intuition, coding literacy, AI governance, bias detection, sustainability awareness, energy efficiency, blockchain literacy, version control, agile thinking, design thinking, user-experience sensitivity, digital communication etiquette, continuous learning, change management, privacy preservation, regulatory compliance, resilience engineering, innovation management, and the ability to translate technical complexity into human-readable clarity.
+
+The intellectual toolkit behind modern business, AI, and Industry 4.0 is basically a portable university of decision-making. Here is a list of mental models that matter, spanning classical reasoning, systems science, behavioral economics, and computational thought:
+
+First-principles reasoning, second-order thinking, inversion, opportunity cost, comparative advantage, marginal utility, sunk cost, feedback loops, compounding, leverage, diminishing returns, probabilistic thinking, Bayesian updating, expected value, risk–reward calibration, variance and standard deviation intuition, regression to the mean, fat-tail awareness, antifragility, chaos and complexity awareness, sensitivity to initial conditions, systems dynamics, emergence, bottleneck analysis, limiting factor recognition, network effects, power laws, Pareto distribution, economies of scale, diseconomies of scale, resource allocation, cost–benefit analysis, game theory, Nash equilibrium, zero-sum versus positive-sum framing, incentive design, principal–agent problem, moral hazard, information asymmetry, signaling, coordination problems, tragedy of the commons, path dependence, lock-in, creative destruction, optionality, survivorship bias, selection bias, confirmation bias, availability heuristic, anchoring, framing effects, loss aversion, endowment effect, mental accounting, cognitive dissonance, status-quo bias, narrative fallacy, the map-is-not-the-territory, correlation versus causation, base-rate neglect, Occam’s razor, Hanlon’s razor, Lindy effect, Goodhart’s law, Campbell’s law, Conway’s law, Hofstadter’s law, Parkinson’s law, Murphy’s law, law of diminishing returns, Red Queen effect, feedback delay, lag and lead indicators, leverage points, control theory, cybernetics, information theory, entropy, signal-to-noise ratio, abstraction hierarchy, modularity, decomposition, recombination, parallel processing, heuristics versus algorithms, boundary conditions, system archetypes (limits to growth, success to the successful, shifting the burden), queuing theory, optimization under constraint, linear versus nonlinear systems, exponential growth intuition, logistic curve understanding, learning curves, diffusion of innovation, tipping points, metacognition, mental simulation, counterfactual reasoning, scenario planning, decision trees, Monte Carlo reasoning, portfolio thinking, diversification, error propagation, redundancy, fail-safes, fault tolerance, resilience engineering, hysteresis, equilibrium and disequilibrium, phase transitions, feedback control, root-cause analysis, five-whys, bottleneck analysis, constraint theory, resource leveling, network topology, small-world networks, cluster dynamics, edge–core thinking, design patterns, abstraction layers, interface thinking, black-box reasoning, model overfitting and underfitting, bias–variance trade-off, loss function awareness, optimization landscapes, local versus global minima, gradient descent intuition, regularization, dimensionality reduction, feature importance, causal inference, counter-causality, system identification, simulation modeling, digital twin reasoning, time-series awareness, autocorrelation, nonstationarity, data provenance, signal processing, noise filtering, decision latency, algorithmic bias, alignment problem awareness, human-in-the-loop design, interpretability versus performance trade-offs, Pareto-front analysis, constraint satisfaction, evolutionary optimization, memetic algorithms, reinforcement learning logic, exploration versus exploitation, feedback reward shaping, convergence versus divergence, meta-learning, scaling laws, compute–data trade-offs, energy–information efficiency, thermodynamic limits, emergent behavior, sociotechnical coupling, socio-cognitive systems, diffusion of responsibility, collective intelligence, organizational learning, cultural evolution, institutional inertia, innovation diffusion, technological S-curves, risk homeostasis, precautionary principle, regulatory capture, externalities, stakeholder mapping, system leverage mapping, ethical reasoning, fairness–efficiency trade-off, transparency, privacy calculus, consent asymmetry, digital commons governance, attention economy, and the meta-model of epistemic humility—the habit of asking, “What would disconfirm this belief, and what don’t I know yet?”
+
+Each of these is a mental gear; the art lies in knowing which gear to engage given the terrain. I will go into the details. 
+
+**Industry and Software stages**
+
+Industry 1.0 was steam, soot, and soot-covered ambition. It began when humans first shackled fire inside metal and made it do mechanical work. Imagine Britain in the late 18th century—a nation of blackened skies, clanging looms, and engineers so caffeinated on invention they could scarcely sleep. The spinning jenny, the steam engine, the ironworks—these were not “apps,” they were acts of Promethean theft. Industry 1.0 replaced muscle with machine, rural boredom with urban misery, and in exchange, gave us modern productivity.
+
+Industry 2.0 arrived humming with electricity. Late 19th to early 20th century: the assembly line, interchangeable parts, and Henry Ford’s realization that time, not material, is the true raw ingredient of wealth. Here, humans became components in larger systems. You didn’t craft a car; you tightened a bolt. Efficiency became the moral virtue of industry. Taylorism put a stopwatch on the human soul.
+
+Industry 3.0 was the revenge of the nerds. Around the 1970s, silicon replaced steel as the main industrial element. The microprocessor, automation, robotics, and early computer control entered the factory. Suddenly, the machines had brains—tiny, stubborn, logical brains that never asked for lunch breaks. Programmable logic controllers replaced foremen. Spreadsheets replaced intuition. Production was no longer industrial but informational.
+
+Then Industry 4.0—our current chapter—stitched everything together. It’s what happens when sensors, data, AI, and connectivity fuse. Machines talk to each other; factories self-optimize; products carry digital twins of themselves in the cloud. The supply chain becomes a nervous system. The physical world gains metadata, feedback loops, and algorithms—turning production into something closer to ecology than engineering. In truth, Industry 4.0 isn’t about machines getting smarter; it’s about the boundary between human and machine dissolving.
+
+Software follows a similar evolution, only faster and cleaner.
+
+Software 1.0 was written by humans, line by line. Think of it as rigid logic: you tell the computer *exactly* what to do, and if you forget a semicolon, it throws a tantrum. Classic programming, explicit rules, zero ambiguity.
+
+Software 2.0 emerged when we realized we could train systems rather than instruct them. Neural networks, deep learning—here the “code” isn’t typed but learned from data. Instead of writing rules, we feed examples, and the machine writes its own. This is Andrej Karpathy’s famous distinction: in Software 1.0, humans write rules; in Software 2.0, humans curate reality.
+
+Software 3.0 is dawning now, with large models that don’t just *learn* but *reason, generate, and adapt.* They can read, summarize, invent, design interfaces, even refactor their own code. The model is no longer a tool—it’s a collaborator. The interface between idea and execution is collapsing.
+
+If you zoom out, both arcs—industrial and software—trace the same asymptote: the reduction of human friction. From brawn to brain to behavior, we keep automating what we once considered uniquely ours.
+
+In Industry 1.0, we outsourced muscle.
+In 2.0, we outsourced coordination.
+In 3.0, we outsourced control.
+In 4.0, we’re outsourcing cognition itself.
+
+For Industry 1.0 → 4.0, India is somewhere in late-3.0 moving into 4.0 in many sectors. Traditional manufacturing still carries a lot of 1.0/2.0 baggage (manual, unconnected machines), but a large, energetic push is *underway* toward real smart factories with IoT, cloud, AI, predictive maintenance, data continuity. We have started traveling but are not there yet, unlike say China. 
+
+For Software evolution, India is cresting between Software 2.0 and early 3.0: widespread adoption of machine learning, AI tools, but AI-native engineering practices are not yet universal or deeply embedded. Many firms are still in the “augment human developer” mode rather than “AI colleague / co-designer / intent-driven development.” 
+
+The moral, is simple: progress always hides its costs in plain sight. Every revolution makes us richer, faster, and more efficient—while quietly eroding some previous domain of human significance.
+
+But the uncomfortable kernel under the shiny rhetoric — India’s software and IT service economy was built on *comparative advantage in human labor*, not *comparative advantage in data or infrastructure*. What made sense in the 1990s—an abundant supply of English-speaking engineers who could write Software 1.0 code at one-fifth the Western cost—starts to collapse when Software 3.0 can write its own code and the Western client no longer needs to export the task.
+
+India is still largely exporting *keystrokes*, not *problems solved*. The big IT service firms—Infosys, TCS, Wipro, et al.—remain trapped in legacy business models where a human-hour is the fundamental economic unit. Generative AI annihilates that unit. A single AI agent can now do the equivalent of dozens of routine engineering or BPO roles, and it doesn’t bill overtime or sleep. The “bench” culture—thousands of engineers waiting for projects—becomes financial dead weight.
+
+The danger is systemic:
+
+**Domestic demand is too thin.** The internal digital economy isn’t yet large enough to absorb displaced coders. Most Indian companies still treat IT as a cost center, not an innovation driver.
+
+**Export dependency.** Around 60 % of India’s IT service revenue comes from the U.S. If those clients begin in-housing AI automation, offshore headcounts shrink fast.
+
+**Skill mismatch.** The educational pipeline still produces Software 1.0 engineers—syntax experts, not systems thinkers. Generative AI needs *prompt engineers, data curators, model evaluators*, not syntax typists.
+
+**Structural inertia.** The political economy favors employment over productivity. Automation is politically tricky when your median voter is underemployed.
+
+The shift from Software 1.0 to 3.0 changes the labor calculus from *“How many engineers can we hire?”* to *“How many models can we fine-tune?”* The export market rewards data ownership and domain insight now, not headcount. Nations that control proprietary datasets and high-value domains (healthcare, defense, energy, genomics) will thrive; nations that export labor without data sovereignty will find their advantage evaporating.
+
+The only sustainable path out is a domestic pivot: use AI internally, not just build it for others. That means digitizing Indian industry—agriculture, logistics, education, healthcare—at scale, making internal data useful, and creating products for India’s own billion-person market. The irony is that India’s greatest raw material isn’t labor anymore; it’s *entropy*—the vast, chaotic, under-structured data of daily life. If that can be structured and mined intelligently, India could skip the late stages of Industry 3.0 and reappear inside 4.0 with local gravity.
+
+Otherwise, yes—Software 1.0’s empire of coders will go the way of the textile mills when power looms arrived: obsolete not through malice, but through mathematics.
+
+
+
 
 # File: src/lib/posts/PujaLights.md
 
@@ -6470,7 +7528,7 @@ date: "2025-09-24"
 
 category : "Calcutta" 
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/Gemini_Generated_Image_wo8hkrwo8hkrwo8h.png"
+thumbnail : "/images/placeholders/Gemini_Generated_Image_wo8hkrwo8hkrwo8h.png"
 
 published : true
 
@@ -6660,13 +7718,51 @@ When you fake shit up as you go,<br>
 You're deified and elevated to a god.<br>
 
 
+# File: src/lib/posts/Rabi.md
+
+---
+
+title : "Rabindrasangeet" 
+
+thumbnail : "/images/placeholders/IMG-20251005-WA0019.jpg"
+
+date: "2025-10-06"
+
+category : "Audio Video" 
+
+published : true
+
+tags: ["Rabindrasangeet", "Rabindranath", "Tagore", "Rejwana banya Choudhuri", "Aditi Mahseen" ]
+
+
+---
+
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251005-WA0019.jpg?url';
+   import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
+</script> 
+    
+
+<PostImage src={imageSrc1} alt="Rabindranath" />
+
+**To give full credit and support to the original creator, please click the video title and watch it on YouTube. It makes a real difference for them.**
+
+
+<Ytp src="https://youtu.be/A-902adcV54?si=AQkRUVy3o2Emx7xI" />
+
+<Ytp src="https://youtu.be/yKf20GGDkms?si=97SQ0aNTONM9UPXa" />
+
+<Ytp src="https://youtube.com/playlist?list=PLbGUWu9GPABJPonVzsfipnW0M4TePKVPy&si=Bu4Helypg9ahWvv9" />
+
+
 # File: src/lib/posts/RapeOfDoctor.md
 
 ---
 
 title: "The anniversary of injustice"
 
-thumbnail: "/src/lib/assets/slideshow-images/portrait/ChatGPT Image Aug 10, 2025, 02_04_17 AM.png"
+thumbnail: "/images/placeholders/ChatGPT Image Aug 10, 2025, 02_04_17 AM.png"
 
 tags: ["blog", "society", "corruption", "violence", "India", "reflection"]
 
@@ -6713,6 +7809,8 @@ There isn't any solution that can be worked out overnight, or by one government 
 
 ---
 title: "Reflections on a Schoolboy's Past"
+thumbnail: "/images/placeholders/IMG-20251012-WA0004.jpg"
+
 description: "A complicated palimpsest of ambition, triumph, misadventures, romance, then—shame, regrets—most now like old luggage tags, expired or useless."
 category: 'personal'
 date: '2025-09-12'
@@ -6722,8 +7820,18 @@ published: true
 <script lang="ts">
     import ImageSlideshow from '$lib/components/blog/ImageSlideshow.svelte';
 
-    // Eagerly import all images from the specified directories.
-    // The '?url' query ensures we get the final URL of the image after processing.
+        const imageModulesOld: Record<string, string> = import.meta.glob(
+        '$lib/assets/op/*.{jpg,jpeg,png,webp}',
+        {
+            eager: true,
+            query: '?url',
+            import: 'default'
+        }
+    );
+
+    
+
+    
     const imageModulesSquare: Record<string, string> = import.meta.glob(
         '$lib/assets/slideshow-images/square/*.{jpg,jpeg,png,webp}',
         {
@@ -6752,12 +7860,18 @@ published: true
     );
 
     // Extract the URLs into simple arrays to pass to the component
+    const imageUrlsOld = Object.values(imageModulesOld);
     const imageUrlsLandscape = Object.values(imageModulesLandscape);
     const imageUrlsPortrait = Object.values(imageModulesPortrait);
     const imageUrlsSquare = Object.values(imageModulesSquare);
 </script>
 
 <div class="prose max-w-none">
+
+**Old Photographs**
+<div class="my-8">
+    <ImageSlideshow images={imageUrlsOld} />
+</div>
 
 Like many, I remember school through a veil of years of indifference to childhood memories that grownups, at a certain point, must admit to, and I do unhesitatingly, but mine are a complicated palimpsest of ambition, triumph, misadventures, romance, then—shame, regrets—most now like old luggage tags, expired or useless to recount. I confess, as useless as perhaps the utility for, or the importance of, the places and characters and several linked trivia that I sometimes wake up to, wade, and wallow in, now that I am fifty.
 
@@ -6886,7 +8000,7 @@ Why add them last? Because these are highly volatile compounds. In chemistry, "v
 
 title : "I run to piss" 
 
-thumbnail: "/src/lib/assets/slideshow-images/landscape/IMG-20250901-WA0002.jpg"
+thumbnail: "/images/placeholders/IMG-20250901-WA0002.jpg"
 
 tags: ["Calcutta", "Bengali", "American", "piss", "Hindu", "holy" ]
 
@@ -7080,14 +8194,14 @@ title : "My first statistics post"
 
 description: "Introducing the word `statistics`"
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20250812-WA0001.jpg" 
+thumbnail : "/images/placeholders/IMG-20250812-WA0001.jpg" 
 
 tags: ["blog", "mathematics", "statistics"]
 
 
 category : "Statistics" 
 
-date: "2025-08-31"
+date: "2025-10-08"
 
 published: true
 
@@ -7097,10 +8211,14 @@ published: true
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20250812-WA0001.jpg?url';
     import imageSrc2 from '$lib/assets/slideshow-images/portrait/8b1b52a9-fa9a-4f03-8686-d863f5dff48f.png?url';
+    import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
     
 </script>
 
 <PostImage src={imageSrc1} alt="spitting statistics" />
+
+**VISUAL INTRO VIDEO PLAYLIST**
+<Ytp src="https://youtube.com/playlist?list=PL0KQuRyPJoe6KjlUM6iNYgt8d0DwI-IGR&si=KIsQ1xWaNPeWaqXT" />
 
 My first post on statistics won’t start with the standard formalities—you know, the solemn “Statistics is the science of…” opening that feels like it was last dusted off in 1954. Instead, I’ll just say that most of us—myself included—were introduced to statistics by people who made it about as inviting as a tax audit. Which is a shame, because when you scrape off the crust, it’s actually quite fascinating.
 
@@ -7126,7 +8244,7 @@ I think the deeper personal cognitive dissonance is impossible to avoid because 
 
 title: "I'm still alive"
 
-thumbnail: "/src/lib/assets/slideshow-images/portrait/Gemini_Generated_Image_fa7pivfa7pivfa7p.png"
+thumbnail: "/images/placeholders/Gemini_Generated_Image_fa7pivfa7pivfa7p.png"
 
 tags: ["Calcutta", "Bengali", "Tea", "Depression" ]
 
@@ -7230,7 +8348,7 @@ Now a bent fuck, with forked tongue I suck. <br>
 
 ---
 title: "Stupid Multilingually"
-thumbnail: "/src/lib/assets/slideshow-images/portrait/ecde51b5-0193-4077-9e19-49335d5bf963.png"
+thumbnail: "/images/placeholders/ecde51b5-0193-4077-9e19-49335d5bf963.png"
 category: "Life"
 date: "2025-08-19"
 published: true
@@ -7431,7 +8549,7 @@ Stop me if you fucking can.<br>
 title: "Suvro’s Law"
 
 
-thumbnail: "/src/lib/assets/slideshow-images/portrait/Gemini_Generated_Image_4m6pdy4m6pdy4m6p.png"
+thumbnail: "/images/placeholders/Gemini_Generated_Image_4m6pdy4m6pdy4m6p.png"
 
 tags: ["Calcutta", "H-1b", "American", "Work", "Suvro's Law", "Outsourcing" ]
 
@@ -7501,94 +8619,6 @@ The savage need isn’t connection—it’s escape. Escape from the asshole coll
 And what’s worse—people will beg for it.
 
 
-# File: src/lib/posts/svelte-introduction.md
-
----
-title: "An Introduction to Svelte"
-date: "2025-07-05"
-description: "A personal take on why Svelte and SvelteKit offer a superior, more intuitive development experience."
-topic: "SvelteKit"
-published: false
-
-thumbnail: "/images/placeholders/svelte-intro-thumbnail.png"
----
-
-<script>
-    import TextToSpeech from '$lib/components/blog/TextToSpeech.svelte';
-</script>
-
-<TextToSpeech contentSelector="#post-content" />
-
-<main class="postMain" id="post-content">
-
-
-        <img src="/images/placeholders/svelte-intro-thumbnail.png" alt="An Introduction to Svelte" class="rounded-lg shadow-lg w-full object-cover">
-        I just want to write what I feel about Svelte and Sveltekit instead of being another pastiche copying their documentation. Svelte is like the new slim, handsome, sophisticated young man on the block, as opposed to all the rest, who, by that comparison, all fall into the character of an anachronistic aged retiree in his declining years strapped to a pension with an unsuitable and unsustainable ecosystem with religious views that, when compared to Svelte, are orthodox and ancient, pernicious even like his hat or cigar, as you can see. With svelte you write less and achieve at or above par.
-   
-        For me, what transcends everything is how straightforward it is for the svelte ecosystem to get a website up and running, that being the simplicity of the simplifications that they have managed and the meaningful industry collaborations. I'll try to go over the details with this very blog as an example so that you can relate to something that's living instead of contrived pretentious and unnatural scenarios.
-
-        We all know that, if I use as a metaphor construction of a building (say your house) for example, we are tethered to three pieces of technology in web development: hypertext markup language (HTML), which is the brick and mortar; cascading style sheet (CSS), which is the paint, tiles and all the decorative paraphernalia; and java script (JS), which is the plumbing and electricity to make the metaphorical home livable with running water and lights to switch on. What Svelte does is make this tethering more visible, easier to understand, and knit together to create a website. Svelte is the frontend part of it—what you see on the browser as an user, client or customer, while Sveltekit is the backend—the server which deals with the questions related to dishing out the data that the client wants to consume; together, they're a full-stack (client-server) in one bundle. The word stack alludes to all the layers, the UI, web server, database, operating system and application server. For a developer, at least during the time he is programming an application he is both the "give" (running a development server) as well as the "take" (masquerading as the intended user), and this is just a temporary illusion, the final "give" is from a real server and "take" from the web application (client) running on some sort of browser (broadly user agent) used by people the developer might never meet. The word client is often used to mean the application running or the browser, the machine on which it is running and even sometimes the human sitting in front of the machine.
-
-        If you want, think of this architecture as a give-and-take. The sveltekit is the give, and the svelte is the take, and it's a marvelous affair of give and take; it's really that buried under stiff terms and dozens of hard-to-remember acronyms and jargon. 
-        
-        In this context, I want to talk a little about the what style (declarative) as opposed to the how style (imperative). Declarative style is empowering while imperative crippling.
-
-        ## Declarative 
-
-        You know, when you're hungry, you just say, Mom, I want breakfast, and your mom gives you breakfast. This is declarative in that you declare and it is done. Your mom, of course, understands you and cooks the best breakfast for you. She is opinionated, but in the right way.
-
-As opposed to telling a new cook that you hired all the details of how to cook the eggs (I like medium-boiled) or how to butter your toast (soft fresh bread untoasted, sides cut, with a lot of butter), this is the how-style or imperative way.
-
-Svelte is like your mom; it takes care of unnecessary details. You just focus on designing the what-you-want part of your website. You let the Svelte compiler, like your mother, fetch the distilled know-how passed down by generations to do all the complex stuff that you don't need to worry about, like timing and setting the water temperature for the egg, taking the shell out, etcetera, etcetera.
-
-This makes life worth living, I think. If you had to reinvent the wheel every time, life grinds to a screeching and quite boring halt just for stuff that has already been perfected, and I feel this is a programming paradigm that really compels me to want to write better software by letting me focus on the stuff that matters to me or who I am writing the software for.
-
-PS: I use mom instead of a partner because, usually, in partnerships, there's not that spontaneous selflessness that a mother brings. I see this spontaneity in Rich Harris and the volunteers of the svelte open-source community. Cooking becomes a chore in a partnership, or it's an imposition, or barter, or some ulterior motive, which doesn't represent svelte. Anyway, I am divorced; this is really me in my example, and it's bona fide.
-
-
-</main>
-
-
-# File: src/lib/posts/sveltes-runes.md
-
----
-title: "A First Look at Svelte's Runes"
-date: "2025-06-19"
-description: "Exploring the new reactivity model in Svelte 5 and how it changes the way we build apps."
-topic: "SvelteKit"
-published: false
-
-thumbnail: "/images/placeholders/svelte-runes-thumbnail.jpeg"
----
-
-<script>
-    import Counter from '$lib/components/blog/Counter.svelte';
-    import GoldLine from '$lib/components/GoldLine.svelte';
-    import InfoBox from '$lib/components/ui/InfoBox.md';
-</script>
-
-## A Paradigm Shift
-
-Svelte 5 introduces a new reactivity model powered by **runes**. [cite: 2413] [cite_start]This is a fundamental change from the magic of `let` and `$:`. [cite: 2414] [cite_start]This post will explore what runes are and how to use them. [cite: 2415]
-
-<InfoBox>
-    <p>The core idea of runes is to make reactivity explicit and composable, moving away from compiler-driven magic toward a more robust and predictable system.</p>
-</InfoBox>
-
-### From Implicit to Explicit
-The core idea is to make reactivity more explicit. [cite: 2416] Instead of relying on the compiler to infer reactivity from assignments (`=`), we now use special functions called runes to declare reactive state. 
-
-### The `$state` Rune
-The most basic rune is `$state()`. [cite: 2418] It creates a piece of state that, when its value changes, will trigger updates to the UI.
-Here's a simple example of a reactive counter. The script block looks like this:
-
-```javascript
-// Reactive state is now explicitly created with $state
-let count = $state(0);
-function increment() {
-	count += 1;
-}
-
 # File: src/lib/posts/Taboo.md
 
 ---
@@ -7625,63 +8655,6 @@ If you plotted the age of women preferred by men on the x-axis and the age of th
 This is not a defense of misuse of power mind you, nor is this a license to break a marriage to marry a teen intern—it's a deconstruction. The challenge is not to excuse, but to understand what scaffolding—neural, hormonal, cultural—is holding the edifice up—plus anyway I'm not attracted to any humans of any age at fifty, just a good book and travel is what I look forward to—and although I am divorced, I am penny less, smell bad, and can't get it up—nothing to entice a ravishing belle with fractured attention span with. People at my age need a paid nurse—because time will come when like the geriatric Charles hired I wouldn't be able to leave my cubicle, so someone's got to take care of me. But seriously now, if we're going to confront taboos honestly, we must disaggregate criminality, pathology, social panic, and evolved impulse. Otherwise, we just pile more abstraction on top of the abstractions already causing harm.
 
 Trump is a bad president, and an evil man, but certain vices are common to all males, and we ought to be man enough to own up to that onus. 
-
-
-# File: src/lib/posts/threejs-integration.md
-
----
-title: "Creating a 3D Scene with Three.js in Svelte"
-date: "2025-06-22"
-description: "A step-by-step guide to integrating the popular 3D library Three.js into a Svelte 5 component to create interactive WebGL scenes."
-topic: "3D & WebGL"
-published: false
-
-thumbnail: "/images/placeholders/threejs-placeholder.jpeg"
----
-
-<script>
-    import ThreeJSScene from '$lib/components/ThreeJS/ThreeJSScene.svelte';
-    import GoldLine from '$lib/components/GoldLine.svelte';
-</script>
-
-## Bringing 3D to the Web with Svelte
-
-[Three.js](https://threejs.org/) is the leading library for creating and displaying 3D computer graphics in a web browser. It simplifies the complexities of WebGL, providing a high-level API to build everything from simple geometric shapes to complex, photorealistic scenes. When paired with Svelte, it becomes a potent combination for building performant, interactive, and visually stunning web applications.
-
-Svelte's component-based nature and efficient reactivity model make it an ideal partner for managing the state and lifecycle of a 3D scene, while Three.js handles the heavy lifting of rendering.
-
-<GoldLine />
-
-### Live Demonstration
-
-Below is a live, interactive 3D scene rendered by a Svelte component using Three.js. You can use your mouse to rotate and zoom, exploring the object from all angles.
-
-<ThreeJSScene />
-
-<GoldLine />
-
-### The Integration Process
-
-Integrating Three.js into a Svelte component involves a few key steps, managed within Svelte's lifecycle functions.
-
-1.  **Setup in `onMount`**: All Three.js setup code must run on the client after the component's DOM elements are available. Svelte's `onMount` is the perfect place for this. It ensures that our code, which needs a `<canvas>` element to render on, executes at the right time.
-
-2.  **Canvas Binding**: We create a `<canvas>` element in our Svelte template and use `bind:this` to get a direct reference to it in our script. This reference is then passed to the Three.js renderer.
-
-    ```html
-    <canvas bind:this={canvas}></canvas>
-    ```
-
-3.  **Core Three.js Objects**: Inside `onMount`, we initialize the fundamental Three.js objects:
-    * `THREE.Scene`: The container for all objects, lights, and cameras.
-    * `THREE.Camera`: Defines the viewpoint. We use a `PerspectiveCamera` for a realistic 3D view.
-    * `THREE.WebGLRenderer`: Does the work of rendering the scene onto the canvas.
-
-4.  **Animation Loop**: A 3D scene is not static. We create an `animate` function that calls itself with `requestAnimationFrame`. Inside this loop, we update object rotations, handle controls, and call `renderer.render(scene, camera)` to draw the new frame.
-
-5.  **Cleanup**: It's crucial to clean up resources to prevent memory leaks when the component is unmounted. The function returned from `onMount` is where we call the `dispose()` method on the Three.js renderer, geometries, and materials.
-
-This structured approach encapsulates the 3D logic entirely within a Svelte component, making it reusable and easy to manage within your larger SvelteKit application.
 
 
 # File: src/lib/posts/TintinInKolkata.md
@@ -7733,41 +8706,54 @@ Here it stands, an architectural contradiction—a fortress without defense, a t
 
 
 
-# File: src/lib/posts/tts-test.md
+# File: src/lib/posts/Turdswithcoils.md
 
 ---
-title: "Testing the Text-to-Speech Component"
-date: "2025-07-16"
-description: "A demonstration of the integrated TTS component built with Svelte 4."
-topic: "SvelteKit"
-published: false
 
-thumbnail: "/images/placeholders/tts-placeholder.jpeg"
+title: "Coiling Turds"
+
+thumbnail : "/images/placeholders/IMG-20251007-WA0006.jpg"
+
+date: "2025-10-07"
+
+category : "Humor" 
+
+published : true
+
+tags: ["turds"]
+
+
 ---
 
 <script>
-    import TTS from '$lib/components/blog/TextToSpeech.svelte';
-
-    import GoldLine from '$lib/components/GoldLine.svelte';
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251007-WA0006.jpg?url';
+    import imageSrc2 from '$lib/assets/slideshow-images/portrait/IMG-20251007-WA0003.jpg?url';
+    
 </script>
 
-## Listen to this Post
+<PostImage src={imageSrc1} alt="fishy turd curls" />
 
-This entire post can be read aloud by the browser's speech synthesis engine. The component below is aware of the content within the `div` with the ID `post-content`.
+It’s incredible, truly astonishing, how some people produce turds that resemble expertly piped soft-serve ice cream, winding and coiling gracefully, a fecal Fibonacci spiral perfected through God-knows-what intestinal wizardry. And you sit there, awkwardly gazing at your latest excremental sculpture, wondering if the cosmos is whispering secrets about the nature of existence through your bowels or whether you’ve just eaten far too much fiber again.
 
-<TTS contentSelector="#post-content" lang="en-US"/>
+But why? What diabolical evolutionary advantage could there possibly be in shitting tidy, coiled packages rather than a chaotic splatter of undigested disappointment? Perhaps the coiling turd is nature’s sarcastic nod to humanity’s pretension—our deepest secret fantasy to leave behind something meaningful, structured, and beautiful—something, at least metaphorically, not shitty.
 
-<GoldLine />
+Turds, you see, are no trivial affair—these neat little coils actually hide an intimate narrative of your bowel movements: the very odyssey of digested biryani, aloo posto, and your mother's insistence on forcing vegetables upon you. The Sanskrit term for excretion, मल (mala), shares its root meaning "impurity" or "filth," which nicely sums up how your ancestors felt about bodily functions (they probably also coiled their turds, bless them).
 
-<div id="post-content">
+<PostImage src={imageSrc2} alt="more fishy turd curls" />
 
-### Introduction
-Svelte is a radical new approach to building user interfaces. Whereas traditional frameworks like React and Vue do the bulk of their work in the browser, Svelte shifts that work into a compile step that happens when you build your app.
+And yet, for all their supposed impurity, turds are oddly mathematical. If the colon contracts rhythmically enough, the poop, propelled by peristalsis, rotates obediently, like some obedient gymnast somersaulting in slow-motion. The process of peristalsis (Greek: περίσταλσις, from περιστέλλειν—"to wrap around") is your gut’s obscene ballet, choreographed to an invisible score composed largely of lentils and regret.
 
-### Why it Matters
-Instead of using techniques like virtual DOM diffing, Svelte writes code that surgically updates the DOM when the state of your app changes. This allows for smaller application bundles and better performance.
+Historically, the interest in excrement isn't exactly modern. In ancient Rome, the shape and texture of one's turds determined health diagnoses; and, doubtlessly, there existed some toga-clad fellow desperately attempting a "perfect coil" after bingeing on honeyed figs. Perhaps a bit of an exaggeration, but if Emperor Nero could fiddle while Rome burned, surely he could coil while Rome flushed.
 
-</div>
+On a molecular level, your poop coils because of mucus—yes, mucus—produced generously by goblet cells lining your intestinal walls. They lubricate your outgoing offering, enabling the shit, now compacted and shaped, to coil like a disciplined yogi's spine in Paschimottanasana. Imagine, without these humble goblet cells, your poops would resemble dry, cracked bricks; evacuation would be akin to birthing geological formations.
+
+But here’s the rub, and not the good kind: if your turd coils excessively, you might have overdone the hydration bit, obsessively chugging fluids until your colon swims like a Bengali enjoying a monsoon downpour. Conversely, the absence of coils can mean dehydration—an intestinal Sahara, devoid of grace or elegance, a crumbling pile resembling poorly constructed alur dom from your least favorite aunt’s kitchen.
+
+Perhaps, though, the real mystery isn't why we coil, but why we care. The human fascination with feces is deeply Freudian, vaguely absurd, and distinctly unhygienic—but therein lies our magnificent human contradiction: we'll invent gods, split atoms, cure diseases, yet we still marvel proudly at the shape of our shit, secretly hoping each swirl is Instagram-worthy.
+
+After all, what is civilization but mankind's eternal attempt to organize chaos—to neatly coil our existential uncertainty into tidy little mounds, and then to flush them all away?
+
 
 # File: src/lib/posts/UtilityNone.md
 
@@ -7776,7 +8762,7 @@ title: "Perfect uselessness"
 
 category: "Work"
 
-thumbnail: "/src/lib/assets/slideshow-images/portrait/IMG-20250929-WA0005.jpg"
+thumbnail: "/images/placeholders/IMG-20250929-WA0005.jpg"
 
 date: "2025-09-28"
 
@@ -7920,13 +8906,13 @@ Back in the cab, I did not speak. Outside, the third-world cheap LED billboards 
 title : "Waking up Me" 
 
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/b7748a5c-99dd-4337-8dbc-6344c2e944b4.png" 
+thumbnail : "/images/placeholders/b7748a5c-99dd-4337-8dbc-6344c2e944b4.png" 
 
 category : "Bipolar Depression" 
 
 tags: ["bengali", "NRI", "insomnia", "depression", "melancholy", "reflection", "bipolar" ]
 
-date: "2025-09-04"
+date: "2025-10-11"
 
 published: true
 
@@ -7936,17 +8922,19 @@ published: true
 <script>
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import imageSrc1 from '$lib/assets/slideshow-images/portrait/b7748a5c-99dd-4337-8dbc-6344c2e944b4.png?url';
-    
+    import imageSrc2 from '$lib/assets/slideshow-images/portrait/IMG-20251006-WA0003.jpg?url';
     
 </script>
 
 <PostImage src={imageSrc1} alt="remembering the past me" />
 
-Often when I feel depressed, I have to write. Writing is the only cathartic, suitable avenue for me to vent the inarticulate pain that my sort of bipolar depression hides in its simplistic misnomer, that people are prone to confuse with a subsidence in the level of normalcy—no, mine isn't at all simply that. If you've read any of my previous posts, I have departed from normalcy long ago, and it's really a question of how far red on the pathological scale—how psychologically bereft from the usual thought patterns that humans have, or how psychotic the paraphernalia of the aura that surrounds the lingering mood, ruminations, and headaches is. What differentiates one depressive attack from the next, sometimes, is that I have to write or draw or do something repetitive—like the squiggly lines that compose the illustration, until the monotony is exhausting and somehow throws in a spanner in the circuit and acts pharmaceutically like a depression brake. I fall asleep and then wake up disturbed. 
+Often when I feel depressed, I have to write. Writing is the only cathartic, suitable avenue for me to vent the inarticulate pain that my sort of bipolar depression hides in its simplistic misnomer, that people are prone to confuse with a subsidence in the level of normalcy—no, mine isn't at all simply that. If you've read any of my previous posts, I have departed from normalcy long ago, and it's really a question of how far red on the pathological scale—how psychologically bereft from the usual thought patterns that humans have, or how psychotic the paraphernalia of the aura that surrounds the lingering mood, ruminations, and headaches is. What differentiates one depressive attack from the next, sometimes, is that I have to write or draw or do something repetitive—like the squiggly lines that compose the illustration, until the monotony is exhausting and somehow throws in a spanner in the circuit and acts pharmaceutically like a depression brake. I fall asleep and then wake up disturbed. Often famished, and then I just heat up some water in a cup with some two minute Calcutta version economy-sized Maggie noodles. 
 
-Sometimes—often without warning—the sluice gates of memory fail, and the past, long held at bay, surges forward with a force that shatters the pitiful fortifications my mind had so painstakingly, so hopefully, erected. These fences were never truly walls; they were embarrassingly frail trellises draped in the illusion of strength, and against the pressure of remembrance they splinter at once.
+<PostImage src={imageSrc2} alt="making Maggie in a cup" />
 
-In that flood, the few fragile scraps of what could be called hesitant normalcy are swept away, dissolving into a kind of manic-depressive hyper-rumination that feels both involuntary and inevitable given my pathology. The pernicious thoughts circle inward like tightening rings, each concentric darker, heavier, more airless than the last, enclosing me layer by layer until the innermost shell is nothing but a noose of suffocating blackness.
+Sometimes—often without warning—the sluice gates of memory fail, and the past, long held at bay, surges forward with a force that shatters the pitiful fortifications my mind had so painstakingly, so hopefully, erected. These fences were never truly walls; they were embarrassingly frail trellises draped in the illusion of strength, and against the pressure of remembrance they splinter at once. It’s the recent human unkindnesses that block their recollection, repressed when awake, but somehow during the rebooting from half asleep to wakefulness it’s hard to not remember the remote past when such unkindness hadn’t made their appearance. And thus I am transported back in time and then jolted forward to the unnerving present reality of not being able to put up with the strange stark contrast, and hurt following — the daggers stabbed are replanted and fresh injury, bleeding and pain is resurrected.
+ 
+In that flood, the few fragile scraps of what could be called hesitant normalcy are swept away, dissolving into a kind of manic-depressive hyper-rumination that feels both involuntary and inevitable given my pathology. The pernicious thoughts circle inward like tightening rings, each concentric darker, heavier, more airless than the last, enclosing me layer by layer until the innermost shell is nothing but a noose of suffocating blackness in a room turned into a sepulcher. 
 
 It is here that reason abandons me, or I abandon it—I am never quite sure which. The sorrow, grown too large to manage, discards the pretense of resolution. The tools lie scattered and useless, stripped of their edges, as if they too have surrendered to the chaos.
 
@@ -8016,7 +9004,7 @@ date: "2025-09-25"
 
 category : "Doggerel" 
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/Gemini_Generated_Image_x8elstx8elstx8el.png"
+thumbnail : "/images/placeholders/Gemini_Generated_Image_x8elstx8elstx8el.png"
 
 published : true
 
@@ -8100,7 +9088,7 @@ Reality is such an easy ball of bull fecal clay that it can be played around—u
 
 title : "About my scribbles & doodles!" 
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/Gemini_Generated_Image_3fa8v73fa8v73fa8.png"
+thumbnail : "/images/placeholders/Gemini_Generated_Image_3fa8v73fa8v73fa8.png"
 
 date: "2025-09-27"
 
@@ -8202,7 +9190,7 @@ And by the by, just so that prude nationalist Indians can cut out the Chinese ha
 
 title : "Zero" 
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20250928-WA0003.jpg"
+thumbnail : "/images/placeholders/IMG-20250928-WA0003.jpg"
 
 date: "2025-09-28"
 
@@ -8597,127 +9585,70 @@ injectAnalytics({ mode: dev ? 'development' : 'production' });
 
 # File: src/routes/+page.server.ts
 
-import { POSTS_PER_PAGE } from '$lib/config';
-import { getPosts } from '$lib/server/posts';
 import { error } from '@sveltejs/kit';
+import type { PageServerLoad } from './$types';
 
-export const load = async ({ url }) => {
-	try {
-		const page = parseInt(url.searchParams.get('page') || '1');
-		const featuredPostSlug = 'AmABengaliMan';
+// Define the shape of your post metadata
+interface Post {
+    slug: string;
+    title: string;
+    date: string;
+    description: string;
+    thumbnail?: string;
+    category: string;
+    published?: boolean;
+}
 
-		// 1. Get the posts array by destructuring the result from getPosts()
-		const { posts: allPosts } = await getPosts();
+export const load: PageServerLoad = async () => {
+    const postFiles = import.meta.glob('/src/lib/posts/*.md', { eager: true });
+    try {
+        const posts = Object.entries(postFiles)
+            .map(([path, file]): Post | null => {
+                const slug = path.split('/').pop()?.replace('.md', '');
 
-		// 2. Find the featured post from the list. This will now work correctly.
-		const featuredPost = allPosts.find((p) => p.slug === featuredPostSlug);
+                if (file && typeof file === 'object' && 'metadata' in file && slug) {
+                    const metadata = file.metadata as Omit<Post, 'slug'>;
+                    // Only include published posts
+                    if (metadata.published === false) {
+                        return null;
+                    }
+                    return {
+                        ...metadata,
+                        slug,
+                        thumbnail: metadata.thumbnail || '/images/placeholders/default.png',
+                        category: metadata.category || 'uncategorized'
+                    };
+                }
+                return null;
+            })
+            .filter((post): post is Post => post !== null);
 
-		// 3. Create a paginated list that doesn't include the featured post.
-		const postsForList = allPosts.filter((p) => p.slug !== featuredPostSlug);
-		const total = postsForList.length;
-		const posts = postsForList.slice((page - 1) * POSTS_PER_PAGE, page * POSTS_PER_PAGE);
+        // Sort posts by date, newest first
+        posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
-		return {
-			posts,
-			total,
-			page,
-			postsPerPage: POSTS_PER_PAGE,
-			featuredPost
-		};
-	} catch (e) {
-		console.error('Failed to load page:', e);
-		error(500, 'Could not load posts. Please check the server logs.');
-	}
+        return { posts };
+    } catch (e) {
+        console.error(e);
+        error(500, 'Could not load posts.');
+    }
 };
 
 # File: src/routes/+page.svelte
 
 <script lang="ts">
-	import { toTitleCase } from '$lib/utils';
-	import type { PageData } from './$types';
-	// This type is actually defined in app.d.ts, but for clarity let's assume PostSummary is what we want.
-	type PostSummary = App.Post;
-
-	let { data } = $props<{ data: PageData }>();
-
-	const posts = $derived(
-		data.posts.map((post: PostSummary) => ({
-			...post,
-			// The title formatting is a nice touch, let's keep it.
-			formattedTitle: toTitleCase(post.meta.title) 
-		}))
-	);
-
-    import ImageSlideshow from '$lib/components/blog/ImageSlideshow.svelte';
-
-    const imageModulesSquare: Record<string, string> = import.meta.glob(
-        '$lib/assets/slideshow-images/square/*.{jpg,jpeg,png,webp}',
-        {
-            eager: true,
-            query: '?url',
-            import: 'default'
-        }
-    );
-    
-    const imageModulesLandscape: Record<string, string> = import.meta.glob(
-        '$lib/assets/slideshow-images/landscape/*.{jpg,jpeg,png,webp}',
-        {
-            eager: true,
-            query: '?url',
-            import: 'default'
-        }
-    );
-
-    const imageModulesPortrait: Record<string, string> = import.meta.glob(
-        '$lib/assets/slideshow-images/portrait/*.{jpg,jpeg,png,webp}',
-        {
-            eager: true,
-            query: '?url',
-            import: 'default'
-        }
-    );
-
-    // Extract the URLs into simple arrays to pass to the component
-    const imageUrlsLandscape = Object.values(imageModulesLandscape);
-    const imageUrlsPortrait = Object.values(imageModulesPortrait);
-    const imageUrlsSquare = Object.values(imageModulesSquare);
+	import PostGallery from '$lib/components/blog/PostGallery.svelte';
+	let { data } = $props();
 </script>
 
-
-
 <svelte:head>
-	<title>Suvro Ghosh | Engineering & Personal Blog</title>
-	<meta name="description" content="The personal and engineering blog of Suvro Ghosh." />
+	<title>Blog - SuvroGhosh.Blog</title>
+	<meta name="description" content="A collection of articles on engineering and personal reflections." />
 </svelte:head>
 
-<div class="container my-8 ">
-	<h1 class="text-center">Latest Slideshow & Posts</h1>
-<div class="my-8">
-    <ImageSlideshow images={imageUrlsPortrait} />
-</div>
-	<ul class="list-none p-0 ">
-		{#each posts as post (post.slug)}
-			<li class="card mb-6">
-				<h2>
-					<a class="post-link" href={`/blog/${post.meta.category}/${post.slug}`}>
-						{post.formattedTitle}
-					</a>
-				</h2>
-
-				<p class="text-secondary">{post.meta.description}</p>
-				
-				<p class="text-sm text-tertiary text-right">
-					Last updated: {new Date(post.meta.lastModified).toLocaleDateString('en-GB', {
-						year: 'numeric',
-						month: 'long',
-						day: 'numeric'
-					})}
-				</p>
-			</li>
-		{/each}
-	</ul>
-</div>
-
+<section>
+	<h1 class="text-center mb-8">All Posts</h1>
+	<PostGallery posts={data.posts} />
+</section>
 
 # File: src/routes/blog/+page.server.ts
 
