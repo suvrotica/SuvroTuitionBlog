@@ -26,7 +26,7 @@ tags: ["Bengali"]
 
 <PostImage src={imageSrc1} alt="Old picture when I used to drive 260 km between Austin San Antonio 3 times a week, I did this for years." />
 
-***Old picture of my baba (father) who was alive when he was reading the newspaper, died of criminal medical negligence, in India hospitals don't check for antibiotic resistance but keep guessing to give a MRSA bacteria time to kill**
+**Old picture of my baba (father) who was alive when he was reading the newspaper, died of criminal medical negligence, in India hospitals don't check for antibiotic resistance but keep guessing to give a MRSA bacteria time to kill**
 
 <PostImage src={imageSrc2} alt="Old picture of my father who was alive when he was reading the newspaper" />
 
