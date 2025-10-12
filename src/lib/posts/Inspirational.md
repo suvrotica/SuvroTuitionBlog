@@ -24,6 +24,8 @@ tags: ["inspirational"]
 
 <PostImage src={imageSrc1} alt="will eat shit for usd" />
 
+**To give full credit and support to the original creator, please click the video title and watch it on YouTube. It makes a real difference for them.**
+
 <Ytp src="https://youtu.be/ji5_MqicxSo?si=yMCzipXlRUoNqj45" />
 
 <Ytp src="https://youtu.be/9kM2dDrndQk?si=t_Ltsj5PgAOZ5hEk" />
