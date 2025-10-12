@@ -49,6 +49,7 @@ published: true
     );
 
     // Extract the URLs into simple arrays to pass to the component
+    const imageUrlsOld = Object.values(imageModulesOld);
     const imageUrlsLandscape = Object.values(imageModulesLandscape);
     const imageUrlsPortrait = Object.values(imageModulesPortrait);
     const imageUrlsSquare = Object.values(imageModulesSquare);
