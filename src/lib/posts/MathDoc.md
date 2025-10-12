@@ -24,6 +24,8 @@ tags: ["Math Documentaries" ]
 
 <PostImage src={imageSrc1} alt="falling" />
 
+**To give full credit and support to the original creator, please click the video title and watch it on YouTube. It makes a real difference for them.**
+
 <Ytp src="https://youtu.be/zD0YTnlsYH4?si=56fs_GJ7tNXJdbXW" />
 
 <Ytp src="https://youtu.be/e1B0saB0rbI?si=KF-8cwTJhICGsr2F" />
