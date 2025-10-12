@@ -11,10 +11,12 @@ export const load = async ({ url }) => {
 		const { posts: allPosts } = await getPosts();
 
 		// 2. Find the featured post from the list. This will now work correctly.
-		const featuredPost = allPosts.find((p) => p.slug === featuredPostSlug);
+		//const featuredPost = allPosts.find((p) => p.slu);
 
 		// 3. Create a paginated list that doesn't include the featured post.
-		const postsForList = allPosts.filter((p) => p.slug !== featuredPostSlug);
+		// const postsForList = allPosts.filter((p) => p.slug !== featuredPostSlug);
+		const postsForList = allPosts.filter(false);
+		
 		const total = postsForList.length;
 		const posts = postsForList.slice((page - 1) * POSTS_PER_PAGE, page * POSTS_PER_PAGE);
 
