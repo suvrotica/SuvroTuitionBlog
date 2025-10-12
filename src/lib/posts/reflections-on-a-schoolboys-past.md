@@ -9,8 +9,18 @@ published: true
 <script lang="ts">
     import ImageSlideshow from '$lib/components/blog/ImageSlideshow.svelte';
 
-    // Eagerly import all images from the specified directories.
-    // The '?url' query ensures we get the final URL of the image after processing.
+        const imageModulesOld: Record<string, string> = import.meta.glob(
+        '$lib/assets/op/*.{jpg,jpeg,png,webp}',
+        {
+            eager: true,
+            query: '?url',
+            import: 'default'
+        }
+    );
+
+    
+
+    
     const imageModulesSquare: Record<string, string> = import.meta.glob(
         '$lib/assets/slideshow-images/square/*.{jpg,jpeg,png,webp}',
         {
@@ -45,6 +55,11 @@ published: true
 </script>
 
 <div class="prose max-w-none">
+
+**Old Photographs**
+<div class="my-8">
+    <ImageSlideshow images={imageUrlsOld} />
+</div>
 
 Like many, I remember school through a veil of years of indifference to childhood memories that grownups, at a certain point, must admit to, and I do unhesitatingly, but mine are a complicated palimpsest of ambition, triumph, misadventures, romance, then—shame, regrets—most now like old luggage tags, expired or useless to recount. I confess, as useless as perhaps the utility for, or the importance of, the places and characters and several linked trivia that I sometimes wake up to, wade, and wallow in, now that I am fifty.
 
