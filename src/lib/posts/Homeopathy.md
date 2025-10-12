@@ -1,9 +1,8 @@
 ---
 
 title: "Homeopathy"
-description: "A critical analysis of homeopathy's scientific impossibilities, from Avogadro's number to the myth of water memory. Explore why this 18th-century pseudoscience, debunked by modern research, maintains a powerful hold in Calcutta and Bengali culture, and the real dangers it poses when chosen over evidence-based medicine."
 category: "Pseudoscience"
-thumbnail: "/images/placeholders/24fb85b4-ec6e-4033-8c3d-c8844279dffa.png"
+thumbnail: "/src/lib/assets/slideshow-images/portrait/24fb85b4-ec6e-4033-8c3d-c8844279dffa.png"
 date: "2025-07-22"
 keywords: ["homeopathy", "pseudoscience", "debunked", "scientific evidence", "Calcutta", "Bengali culture", "Samuel Hahnemann", "placebo effect", "Avogadro's number", "water memory", "alternative medicine", "medical myths", "public health"]
 

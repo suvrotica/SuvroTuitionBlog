@@ -1,8 +1,8 @@
 ---
 
 title : "Old Photos" 
+thumbnail: /src/lib/assets/slideshow-images/landscape/IMG-20251012-WA0006.jpg
 
-thumbnail : "/src/lib/assets/op/IMG-20251012-WA0004.jpg"
 
 date: "2025-10-12"
 

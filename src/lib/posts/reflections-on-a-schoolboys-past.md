@@ -1,5 +1,7 @@
 ---
 title: "Reflections on a Schoolboy's Past"
+thumbnail: /src/lib/assets/slideshow-images/landscape/IMG-20251012-WA0004.jpg
+
 description: "A complicated palimpsest of ambition, triumph, misadventures, romance, then—shame, regrets—most now like old luggage tags, expired or useless."
 category: 'personal'
 date: '2025-09-12'

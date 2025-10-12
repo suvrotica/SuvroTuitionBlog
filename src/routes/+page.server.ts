@@ -1,28 +1,47 @@
-// src/routes/+page.server.ts
-import { POSTS_PER_PAGE } from '$lib/config';
-import { getPosts } from '$lib/server/posts';
 import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = async ({ url }) => {
-	try {
-		const page = parseInt(url.searchParams.get('page') || '1');
+// Define the shape of your post metadata
+interface Post {
+    slug: string;
+    title: string;
+    date: string;
+    description: string;
+    thumbnail?: string;
+    category: string;
+    published?: boolean;
+}
 
-		// Get all posts. The result from getPosts() is already sorted.
-		const { posts: allPosts } = await getPosts(); [cite_start]// [cite: 3302]
+export const load: PageServerLoad = async () => {
+    const postFiles = import.meta.glob('/src/lib/posts/*.md', { eager: true });
+    try {
+        const posts = Object.entries(postFiles)
+            .map(([path, file]): Post | null => {
+                const slug = path.split('/').pop()?.replace('.md', '');
 
-		// Paginate the full list of posts
-		const total = allPosts.length;
-		const posts = allPosts.slice((page - 1) * POSTS_PER_PAGE, page * POSTS_PER_PAGE);
+                if (file && typeof file === 'object' && 'metadata' in file && slug) {
+                    const metadata = file.metadata as Omit<Post, 'slug'>;
+                    // Only include published posts
+                    if (metadata.published === false) {
+                        return null;
+                    }
+                    return {
+                        ...metadata,
+                        slug,
+                        thumbnail: metadata.thumbnail || '/images/placeholders/default.png',
+                        category: metadata.category || 'uncategorized'
+                    };
+                }
+                return null;
+            })
+            .filter((post): post is Post => post !== null);
 
-		return {
-			posts,
-			total,
-			page,
-			postsPerPage: POSTS_PER_PAGE
-		};
-	} catch (e) {
-		console.error('Failed to load page:', e);
-		error(500, 'Could not load posts. Please check the server logs.'); [cite_start]// [cite: 3307]
-	}
+        // Sort posts by date, newest first
+        posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+        return { posts };
+    } catch (e) {
+        console.error(e);
+        error(500, 'Could not load posts.');
+    }
 };
