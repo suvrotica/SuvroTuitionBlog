@@ -24,7 +24,7 @@ tags: ["Hindi"]
 
 <PostImage src={imageSrc1} alt="cow on headphone listening to Hindi songs and shitting" />
 
-
+**To give full credit and support to the original creator, please click the video title and watch it on YouTube. It makes a real difference for them.**
 
 <Ytp src="https://youtu.be/XA3XY2RRc5Y" />
 
