@@ -33,3 +33,5 @@ tags: ["Medical Documentaries" ]
 <Ytp src="https://youtu.be/b-Af6FqaetQ?si=Ln-mYxK5lRMDDR_F" />
 
 <Ytp src="https://youtu.be/IR2HZ-3VHBU?si=hXglMDkDdNUnLxhm" />
+
+<Ytp src="https://youtu.be/EkyAuG9RSSU?si=EXUarPEM-ZmCY0N5" />
