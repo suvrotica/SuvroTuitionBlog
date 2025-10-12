@@ -82,7 +82,7 @@ The point of view here is that of someone not just interested in an MBA for an M
 
 This is essentially **credential signaling**, a concept from labor economics and sociology, wrapped in a perception trick. The Harvard degree doesn’t magically make you brilliant; it signals to others—employers, peers, the market—that you are smart, disciplined, or high-status. People see the logo and **attribute competence where it may not exist**, often overestimating your actual ability.
 
-In cognitive terms, it’s a mix in your favor that Josh is overlooking:
+In cognitive terms, it’s a mix in your favor that Josh is overlooking, here are some biases that I want to discuss right away, there will be other posts on these:
 
 **Confirmation bias**: I don’t like to dissect things arbitrarily, especially in India, where people often want their theories confirmed. That’s disturbing—and disastrous—for any business. I speak plainly and sensibly; I just refuse to inflate people with unrealistic expectations or dress up unprofitable ventures as opportunities when my experience, education, and research suggest otherwise. I don’t deal in rosy pictures without historical grounding, sound economics, or an understanding of human psychology and the prevailing mood of the moment.
 
