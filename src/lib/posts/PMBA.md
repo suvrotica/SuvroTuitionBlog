@@ -2,7 +2,7 @@
 
 title : "My notes from Personal MBA" 
 
-thumbnail : "/src/lib/assets/IMG-20251006-WA0019.jpg"
+thumbnail : "/images/placeholders/IMG-20251006-WA0019.jpg"
 
 date: "2025-10-12"
 

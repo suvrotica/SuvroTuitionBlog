@@ -2,7 +2,7 @@
 
 title: "I'm still alive"
 
-thumbnail: "/src/lib/assets/slideshow-images/portrait/Gemini_Generated_Image_fa7pivfa7pivfa7p.png"
+thumbnail: "/images/placeholders/Gemini_Generated_Image_fa7pivfa7pivfa7p.png"
 
 tags: ["Calcutta", "Bengali", "Tea", "Depression" ]
 

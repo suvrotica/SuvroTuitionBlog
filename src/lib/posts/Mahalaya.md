@@ -2,7 +2,7 @@
 
 title : "Mahalaya 2025" 
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/Gemini_Generated_Image_m47l5jm47l5jm47l.png"
+thumbnail : "/images/placeholders/Gemini_Generated_Image_m47l5jm47l5jm47l.png"
 
 date: "2025-09-24"
 

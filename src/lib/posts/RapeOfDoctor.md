@@ -2,7 +2,7 @@
 
 title: "The anniversary of injustice"
 
-thumbnail: "/src/lib/assets/slideshow-images/portrait/ChatGPT Image Aug 10, 2025, 02_04_17 AM.png"
+thumbnail: "/images/placeholders/ChatGPT Image Aug 10, 2025, 02_04_17 AM.png"
 
 tags: ["blog", "society", "corruption", "violence", "India", "reflection"]
 

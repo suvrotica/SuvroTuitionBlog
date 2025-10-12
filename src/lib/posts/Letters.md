@@ -2,7 +2,7 @@
 
 title : "Letters" 
 
-thumbnail: "/src/lib/assets/slideshow-images/portrait/IMG-20251007-WA0008.jpg"
+thumbnail: "/images/placeholders/IMG-20251007-WA0008.jpg"
 
 tags: ["Calcutta", "Bengali", "American", "Letter"]
 

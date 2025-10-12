@@ -1,7 +1,7 @@
 ---
 
 title : "Old Photos" 
-thumbnail: /src/lib/assets/slideshow-images/landscape/IMG-20251012-WA0006.jpg
+thumbnail: "/images/placeholders/IMG-20251012-WA0006.jpg"
 
 
 date: "2025-10-12"

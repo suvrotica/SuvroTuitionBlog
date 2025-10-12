@@ -2,7 +2,7 @@
 
 title : "My Puja Memories" 
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20250927-WA0000.jpg"
+thumbnail : "/images/placeholders/IMG-20250927-WA0000.jpg"
 
 date: "2025-10-03"
 

@@ -4,7 +4,7 @@ title : "My first statistics post"
 
 description: "Introducing the word `statistics`"
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20250812-WA0001.jpg" 
+thumbnail : "/images/placeholders/IMG-20250812-WA0001.jpg" 
 
 tags: ["blog", "mathematics", "statistics"]
 

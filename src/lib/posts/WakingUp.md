@@ -3,7 +3,7 @@
 title : "Waking up Me" 
 
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/b7748a5c-99dd-4337-8dbc-6344c2e944b4.png" 
+thumbnail : "/images/placeholders/b7748a5c-99dd-4337-8dbc-6344c2e944b4.png" 
 
 category : "Bipolar Depression" 
 

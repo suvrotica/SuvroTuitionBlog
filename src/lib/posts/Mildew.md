@@ -2,7 +2,7 @@
 
 title : "Mildew" 
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20251001-WA0003.jpg"
+thumbnail : "/images/placeholders/IMG-20251001-WA0003.jpg"
 
 date: "2025-10-06"
 

@@ -2,7 +2,7 @@
 
 title : "About my scribbles & doodles!" 
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/Gemini_Generated_Image_3fa8v73fa8v73fa8.png"
+thumbnail : "/images/placeholders/Gemini_Generated_Image_3fa8v73fa8v73fa8.png"
 
 date: "2025-09-27"
 

@@ -2,7 +2,7 @@
 title : "Lonely Rapist" 
 description: "A raw and provocative doggerel about church rapes in America"
 category : "Doggerel" 
-thumbnail: "/src/lib/assets/slideshow-images/portrait/lonely_rapist.jpg"
+thumbnail: "/images/placeholders/lonely_rapist.jpg"
 date: "2025-08-12"
 keywords: ["doggerel", "american holy man", "social satire", "political critique", "profane poetry", America", "religious society", "cultural identity", "cynicism", "personal angst"]
 published: true

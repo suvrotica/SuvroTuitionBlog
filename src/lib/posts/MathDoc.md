@@ -2,7 +2,7 @@
 
 title : "Math Documentaries" 
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20251009-WA0008.jpg"
+thumbnail : "/images/placeholders/portrait/IMG-20251009-WA0008.jpg"
 
 date: "2025-10-10"
 

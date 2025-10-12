@@ -2,7 +2,7 @@
 
 title : "Medical Documentaries" 
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20251009-WA0006.jpg"
+thumbnail : "/images/placeholders/IMG-20251009-WA0006.jpg"
 
 date: "2025-10-11"
 

@@ -4,7 +4,7 @@ title: "Love Lullaby"
 
 category: "Doggerel"
 
-thumbnail: "/src/lib/assets/slideshow-images/portrait/IMG-20250329-WA0000.jpg"
+thumbnail: "/images/placeholders/IMG-20250329-WA0000.jpg"
 
 date: "2025-08-27"
 

@@ -1,6 +1,6 @@
 ---
 title: "Stupid Multilingually"
-thumbnail: "/src/lib/assets/slideshow-images/portrait/ecde51b5-0193-4077-9e19-49335d5bf963.png"
+thumbnail: "/images/placeholders/ecde51b5-0193-4077-9e19-49335d5bf963.png"
 category: "Life"
 date: "2025-08-19"
 published: true

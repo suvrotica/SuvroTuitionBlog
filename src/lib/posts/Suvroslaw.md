@@ -3,7 +3,7 @@
 title: "Suvro’s Law"
 
 
-thumbnail: "/src/lib/assets/slideshow-images/portrait/Gemini_Generated_Image_4m6pdy4m6pdy4m6p.png"
+thumbnail: "/images/placeholders/Gemini_Generated_Image_4m6pdy4m6pdy4m6p.png"
 
 tags: ["Calcutta", "H-1b", "American", "Work", "Suvro's Law", "Outsourcing" ]
 

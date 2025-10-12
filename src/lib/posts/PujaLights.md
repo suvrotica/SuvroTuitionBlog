@@ -6,7 +6,7 @@ date: "2025-09-24"
 
 category : "Calcutta" 
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/Gemini_Generated_Image_wo8hkrwo8hkrwo8h.png"
+thumbnail : "/images/placeholders/Gemini_Generated_Image_wo8hkrwo8hkrwo8h.png"
 
 published : true
 

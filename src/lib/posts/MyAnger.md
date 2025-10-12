@@ -2,7 +2,7 @@
 
 title : "My Anger" 
 
-thumbnail: "/src/lib/assets/slideshow-images/portrait/fe141418-ab03-4133-8a60-403dbef5b3ff.png"
+thumbnail: "/images/placeholders/fe141418-ab03-4133-8a60-403dbef5b3ff.png"
 
 tags: ["bipolar", "cancer", "rage", "anger of impotence" ]
 

@@ -2,7 +2,7 @@
 
 title : "I run to piss" 
 
-thumbnail: "/src/lib/assets/slideshow-images/landscape/IMG-20250901-WA0002.jpg"
+thumbnail: "/images/placeholders/IMG-20250901-WA0002.jpg"
 
 tags: ["Calcutta", "Bengali", "American", "piss", "Hindu", "holy" ]
 

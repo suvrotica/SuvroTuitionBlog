@@ -3,7 +3,7 @@ title: "Overconfident"
 
 category: "Work"
 
-thumbnail: "/src/lib/assets/slideshow-images/portrait/IMG-20250928-WA0005.jpg"
+thumbnail: "/images/placeholders/IMG-20250928-WA0005.jpg"
 
 date: "2025-09-28"
 

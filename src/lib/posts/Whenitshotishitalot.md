@@ -6,7 +6,7 @@ date: "2025-09-25"
 
 category : "Doggerel" 
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/Gemini_Generated_Image_x8elstx8elstx8el.png"
+thumbnail : "/images/placeholders/Gemini_Generated_Image_x8elstx8elstx8el.png"
 
 published : true
 
