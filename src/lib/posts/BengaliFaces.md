@@ -2,7 +2,7 @@
 
 title : "Bengali Faces" 
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20250927-WA0001.jpg"
+thumbnail : "/images/placeholders/IMG-20250927-WA0001.jpg"
 
 date: "2025-09-27"
 

@@ -2,7 +2,7 @@
 
 title : "Glass Half Empty" 
 
-thumbnail: "/src/lib/assets/slideshow-images/portrait/Gemini_Generated_Image_3l7mur3l7mur3l7m.png"
+thumbnail: "/images/placeholders/Gemini_Generated_Image_3l7mur3l7mur3l7m.png"
 
 tags: ["Calcutta", "Bengali", "American", "dogma" ]
 

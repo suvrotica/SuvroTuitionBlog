@@ -2,7 +2,7 @@
 
 title : "Inspirational Motivational" 
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20251009-WA0001.jpg"
+thumbnail : "/images/placeholders/IMG-20251009-WA0001.jpg"
 
 date: "2025-10-09"
 

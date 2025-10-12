@@ -1,6 +1,6 @@
 ---
 title : "AI as Humans" 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20240910-WA0006.jpg"
+thumbnail : "/images/placeholders/IMG-20240910-WA0006.jpg"
 date: "2025-09-28"
 category : "Neuroscience and AI" 
 published : true

@@ -2,7 +2,7 @@
 
 title : "Hindi Songs Music" 
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20251005-WA0017.jpg"
+thumbnail : "/images/placeholders/IMG-20251005-WA0017.jpg"
 
 date: "2025-10-05"
 

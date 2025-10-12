@@ -2,7 +2,7 @@
 
 title : "Audiobooks" 
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20251006-WA0000.jpg"
+thumbnail : "/images/placeholders/IMG-20251006-WA0000.jpg"
 
 date: "2025-10-07"
 

@@ -2,7 +2,7 @@
 
 title : "Bengali Songs Music" 
 
-thumbnail : "/src/lib/assets/slideshow-images/portrait/IMG-20251006-WA0002.jpg"
+thumbnail : "/images/placeholders/IMG-20251006-WA0002.jpg"
 
 date: "2025-10-06"
 

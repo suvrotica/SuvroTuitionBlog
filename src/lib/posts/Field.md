@@ -2,7 +2,7 @@
 
 title : "Field" 
 
-thumbnail: "/src/lib/assets/slideshow-images/portrait/Gemini_Generated_Image_sd81zusd81zusd81.png"
+thumbnail: "/images/placeholders/Gemini_Generated_Image_sd81zusd81zusd81.png"
 
 tags: ["Calcutta", "Bengali", "American", "Mathematics", "Linear Algebra", "Field" ]
 

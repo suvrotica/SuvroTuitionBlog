@@ -2,7 +2,7 @@
 
 title: "Homeopathy"
 category: "Pseudoscience"
-thumbnail: "/src/lib/assets/slideshow-images/portrait/24fb85b4-ec6e-4033-8c3d-c8844279dffa.png"
+thumbnail: "/images/placeholders/24fb85b4-ec6e-4033-8c3d-c8844279dffa.png"
 date: "2025-07-22"
 keywords: ["homeopathy", "pseudoscience", "debunked", "scientific evidence", "Calcutta", "Bengali culture", "Samuel Hahnemann", "placebo effect", "Avogadro's number", "water memory", "alternative medicine", "medical myths", "public health"]
 

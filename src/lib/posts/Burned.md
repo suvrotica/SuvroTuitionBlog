@@ -3,7 +3,7 @@ title: "Burned Businessman"
 
 category: "Work"
 
-thumbnail: "/src/lib/assets/slideshow-images/portrait/IMG-20250928-WA0007.jpg"
+thumbnail: "/images/placeholders/IMG-20250928-WA0007.jpg"
 
 date: "2025-10-06"
 
