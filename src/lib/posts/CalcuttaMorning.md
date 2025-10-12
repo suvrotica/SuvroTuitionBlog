@@ -2,7 +2,7 @@
 
 title : "An ordinary morning" 
 
-thumbnail : "/src/lib/assets/IMG-20250819-WA0001.jpg" 
+thumbnail : "/images/placeholders/IMG-20250819-WA0001.jpg" 
 
 date: "2025-08-19"
 
