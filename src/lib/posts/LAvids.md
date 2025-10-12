@@ -24,6 +24,8 @@ tags: ["Linear Algebra"]
 
 <PostImage src={imageSrc1} alt="square man" />
 
+**To give full credit and support to the original creator, please click the video title and watch it on YouTube. It makes a real difference for them.**
+
 **Single Videos**
 
 <Ytp src="https://youtu.be/KbyYTjfgZJI?si=4lZjk5OJhsUpU_hq" />
