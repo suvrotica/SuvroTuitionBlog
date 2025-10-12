@@ -24,7 +24,7 @@ tags: ["English"]
 
 <PostImage src={imageSrc1} alt="goat on headphone listening to English songs and shitting" />
 
-
+**To give full credit and support to the original creator, please click the video title and watch it on YouTube. It makes a real difference for them.**
 
 <Ytp src="https://youtube.com/playlist?list=PLr2CZAfX_oc8Q-bi6M8rYlcVyb3DJEsHR&si=2M9ocXgKbJuvreY- " />
 
