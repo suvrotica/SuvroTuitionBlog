@@ -1,34 +1,28 @@
+// src/routes/+page.server.ts
 import { POSTS_PER_PAGE } from '$lib/config';
 import { getPosts } from '$lib/server/posts';
 import { error } from '@sveltejs/kit';
+import type { PageServerLoad } from './$types';
 
-export const load = async ({ url }) => {
+export const load: PageServerLoad = async ({ url }) => {
 	try {
 		const page = parseInt(url.searchParams.get('page') || '1');
-		const featuredPostSlug = 'AmABengaliMan';
 
-		// 1. Get the posts array by destructuring the result from getPosts()
-		const { posts: allPosts } = await getPosts();
+		// Get all posts. The result from getPosts() is already sorted.
+		const { posts: allPosts } = await getPosts(); [cite_start]// [cite: 3302]
 
-		// 2. Find the featured post from the list. This will now work correctly.
-		//const featuredPost = allPosts.find((p) => p.slu);
-
-		// 3. Create a paginated list that doesn't include the featured post.
-		// const postsForList = allPosts.filter((p) => p.slug !== featuredPostSlug);
-		const postsForList = allPosts.filter(false);
-		
-		const total = postsForList.length;
-		const posts = postsForList.slice((page - 1) * POSTS_PER_PAGE, page * POSTS_PER_PAGE);
+		// Paginate the full list of posts
+		const total = allPosts.length;
+		const posts = allPosts.slice((page - 1) * POSTS_PER_PAGE, page * POSTS_PER_PAGE);
 
 		return {
 			posts,
 			total,
 			page,
-			postsPerPage: POSTS_PER_PAGE,
-			featuredPost
+			postsPerPage: POSTS_PER_PAGE
 		};
 	} catch (e) {
 		console.error('Failed to load page:', e);
-		error(500, 'Could not load posts. Please check the server logs.');
+		error(500, 'Could not load posts. Please check the server logs.'); [cite_start]// [cite: 3307]
 	}
 };
