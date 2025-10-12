@@ -19,6 +19,8 @@ tags: ["MBA", "Business" ]
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import imageSrc1 from '$lib/assets/IMG-20251006-WA0019.jpg?url';
     import imageSrc2 from '/src/lib/assets/slideshow-images/portrait/IMG-20251008-WA0010.jpg?url';
+	import imageSrc5 from '/src/lib/assets/slideshow-images/portrait/IMG-20251012-WA0003.jpg?url';
+	
   import imageSrc3 from '/src/lib/assets/slideshow-images/portrait/IMG-20251008-WA0008.jpg?url';  
 	import imageSrc4 from '$lib/assets/IMG-20251012-WA0001.jpg?url';
    
@@ -86,7 +88,11 @@ In cognitive terms, it’s a mix in your favor that Josh is overlooking, here ar
 
 **Confirmation bias**: I don’t like to dissect things arbitrarily, especially in India, where people often want their theories confirmed. That’s disturbing—and disastrous—for any business. I speak plainly and sensibly; I just refuse to inflate people with unrealistic expectations or dress up unprofitable ventures as opportunities when my experience, education, and research suggest otherwise. I don’t deal in rosy pictures without historical grounding, sound economics, or an understanding of human psychology and the prevailing mood of the moment.
 
-**Availability bias**: If you watch a lot of scary movies about ghosts, you might start thinking your house is haunted. Your brain remembers the scary things easily. I saw a lot of bad things in the Indian business community, so my brain easily remembers all that evil. Now, I automatically think all people are naturally bad because those are the memories that stand out to me, but because I know this is a bias problem, I take each case separately and not fall in love with the first instinctive reaction my brain has, because it may be wrong. But because I am still in India I don't want to give up on this instinct because it has protected me after the business went rotten and helped me stay alive, because otherwise as a milquetoast I would be dead and you wouldn't be reading this. Similarly I am not reading this book without checking with my own experience, at least an entrepreneur is ill-advised to get pollyannish. 
+**Availability bias**: If you watch a lot of scary movies about ghosts, you might start thinking your house is haunted. Your brain remembers the scary things easily. As a child I frequently expected seeing Rabindranath Tagore's ghost. 
+
+<PostImage src={imageSrc5} alt=" Rabindranath ghost" />
+
+I saw a lot of bad things in the Indian business community, so my brain easily remembers all that evil. Now, I automatically think all people are naturally bad because those are the memories that stand out to me, but because I know this is a bias problem, I take each case separately and not fall in love with the first instinctive reaction my brain has, because it may be wrong. But because I am still in India I don't want to give up on this instinct because it has protected me after the business went rotten and helped me stay alive, because otherwise as a milquetoast I would be dead and you wouldn't be reading this. Similarly I am not reading this book without checking with my own experience, at least an entrepreneur is ill-advised to get pollyannish. 
 
 If you’re a white man in a suit, Indians—including the local thugs—will salute you. It’s the colonial hangover, still alive and bowing. But the moment you’re Indian, everything changes. The reverence vanishes, replaced by suspicion, rivalry, and an almost instinctive impulse to pull you down. You can’t really grasp this ruthlessness until you try to do something big—something that involves serious money and Indian people. Then you see how fast admiration turns into sabotage.
 
