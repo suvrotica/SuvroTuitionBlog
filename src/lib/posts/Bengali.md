@@ -24,6 +24,8 @@ tags: ["Bengali"]
 
 <PostImage src={imageSrc1} alt="goat on headphone listening to Bengali songs and shitting" />
 
+**To give full credit and support to the original creator, please click the video title and watch it on YouTube. It makes a real difference for them.**
+
 <Ytp src="https://youtu.be/HvOXmnTJYRc?si=dO0MjoWbbxZ6N3My" />
 
 <Ytp src="https://youtu.be/lvmsSGKP9TE?si=_c1OiAc2LN_yZiSB" />
