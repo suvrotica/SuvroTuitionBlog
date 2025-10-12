@@ -32,7 +32,7 @@ tags: ["Bengali"]
 
 <Ytp src="https://youtu.be/EkyAuG9RSSU?si=EXUarPEM-ZmCY0N5" />
 
-The reason why antibiotic resistance is a problem in India is a long list, and if today I go to a hospital and I am unable to force the physician to do the right things, I will die. Let me make sure whoever reads this most doesn't have to lose a person or himself/herself because of the assholes we have in buildings we think will cure us. 
+The reason why antibiotic resistance is a problem in India is a long list, and if today I go to a hospital and I am unable to force the physician to do the right things, I will die. Let me at least make sure whoever reads this post doesn't have to lose a person or himself/herself because of the assholes we have in buildings we think will cure us. If you don't know this, you are FUCKED or DEAD. 
 
 A **bacterial culture and sensitivity test** is like sending a criminal sample to a forensic lab before you start arresting everyone in the neighborhood.
 
