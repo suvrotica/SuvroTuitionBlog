@@ -30,11 +30,11 @@ The head of the dead dud duplicitous pope.<br>
 <br>
 You don't know his shape but hairy,<br>
 Abrahamic bearded crusty scrote.<br>
-Or is it Buddhism Jainism or Hindoo,<br>
-In India it's a democratic vote.<br>
+Or is it Buddhist, Jain or Hindoo fuck?<br>
+In India it's always a democratic vote.<br>
 <br>
-I came, I saw and I pissed in your mouth,<br>
-I am thus holier than stupid-ass thou.<br>
+I came, I saw, I pissed in your fucking mouth,<br>
+Cowtow now, I am holier, and hornier than thou.<br>
 Make sure your asshole is lubed clean,<br>
 Going to insert holy in that hole now.<br>
 <br>
