@@ -6,6 +6,10 @@ thumbnail : "/images/placeholders/IMG-20250806-WA0004.jpg"
 
 category : "Doggerel Religion" 
 
+date: 10/12/2025
+
+published : true
+
 ---
 
 ![holy tibetan](/images/placeholders/IMG-20250806-WA0004.jpg) 
@@ -19,6 +23,11 @@ I hope bird brain can take the pain,<br>
 I'm sure it's cloaca won't be happy.<br>
 First I fuck it, then I bleed it,<br>
 As we know that's alrighty with almighty.<br>
+<br>
+I don't eat proud cunt shit, that's it,<br>
+I fuck free docile little unfucked uns.<br>
+Mountain drug addicted orphaned urchins,<br>
+Or traveling drugged dopey catholic nuns.<br>
 <br>
 In Tibet when I sodomized a pet civet,<br>
 My dick stank like a skunk.<br>
