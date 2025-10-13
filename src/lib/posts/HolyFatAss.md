@@ -1,10 +1,10 @@
 ---
 title: "Holy Fat Ass"
-description: "A humorous and irreverent doggerel from the perspective of a pious, fat-assed Bengali man. This satirical poem explores the absurdities of religious hypocrisy and self-perception."
-category: "Doggerel"
+
+category: "Doggerel Religion"
 thumbnail: "/images/placeholders/IMG-20250729-WA0000.jpg"
 date: "2025-07-29"
-keywords: ["doggerel", "satirical poetry", "religious satire", "dark humor", "Bengali", "hypocrisy", "self-deprecation", "profane poetry"]
+tags: ["doggerel", "satirical poetry", "religious satire", "dark humor", "Bengali", "hypocrisy", "self-deprecation", "profane poetry"]
 published: true
 ---
 <script>
@@ -24,9 +24,19 @@ Flying into indignant wanton rage in a trice.<br>
 I like fish, bengali sweets, mangoes,<br>
 And ghee with boiled basmati white rice.<br>
 <br>
-With morning stool I proselytize a fool,<br>
-Usually it's with a rama or krishna piss,<br>
-Or I use loony chants from camel boy,<br> 
+Very holy I, my shit you must try,<br>
+And pray with that shit inside.<br>
+Glory to the gods, their dingleberry nods,<br>
+My vomited prayer goodly bonafide.<br>
+<br>
+Mainly bullshit yes sirree shit,<br>
+Sprinkled with bombastic farts.<br>
+Tarts in the mosques, I sell,<br>
+My morning hindoo shit on carts.<br>
+<br>
+With this stool I proselytize a fool,<br>
+Or it's with a hare-krishna kissy piss,<br>
+Or I use loony chants from cunt camel boy,<br> 
 Muhamood I think that fucks' name is.<br>
 <br>
 Or the jewish jeeshoo the shit-assed hobo,<br>
