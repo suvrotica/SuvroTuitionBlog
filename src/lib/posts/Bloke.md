@@ -1,12 +1,16 @@
 ---
 title: "Bloke's Bladder Sick"
-description: "A short, scathing doggerel that satirizes blind faith and religious authority. Through profane and visceral humor, the poem critiques the gullibility of followers who mistake a sick man for a god."
-category: "Doggerel"
+
+category: "Doggerel Religion"
+
 thumbnail: "/images/placeholders/IMG-20250727-WA0015.jpg"
-date: "2025-07-27"
-keywords: ["doggerel", "blasphemy", "religious satire", "dark humor", "profane poetry", "anti-religion", "blind faith", "cynicism", "satirical poetry"]
+date: "2025-10-13"
+tags: ["doggerel", "blasphemy", "religious satire", "dark humor", "profane poetry", "anti-religion", "blind faith", "cynicism", "satirical poetry"]
+
 published: true
+
 ---
+
 <script>
     import PostBadge from '$lib/components/ui/PostBadge.svelte';
 </script>
@@ -24,6 +28,16 @@ And choke on stupid holy-ass hokey hope. <br>
 While deep up your arse I shove the gift,<br>
 The head of the dead dud duplicitous pope.<br>
 <br>
+You don't know his shape but hairy,<br>
+Abrahamic bearded crusty scrote.<br>
+Or is it Buddhism Jainism or Hindoo,<br>
+In India it's a democratic vote.<br>
+<br>
+I came, I saw and I pissed in your mouth,<br>
+I am thus holier than stupid-ass thou.<br>
+Make sure your asshole is lubed clean,<br>
+Going to insert holy in that hole now.<br>
+<br>
 Rejoice? Yes, my fucking arbitrary choice, <br>
 You, with your mother and father too! <br>
 Yes, up to you, how many heads fit there, <br>
@@ -32,5 +46,5 @@ It's your asshole—I don't have a clue. <br>
 So toodles and eat all my shit noodles, <br>
 And yes, <i>do</i> draw <i>deep</i> inside, my fart down.<br>
 Come part those legs you bitch-ass cunt, <br>
-Your god is a fictional fat-ass clown.<br>
+Your god is a fictional feces Indian brown.<br>
 </div>
