@@ -62,7 +62,7 @@ Pretend pathetic the monastic stunts.<br>
 Little girls little boys, dildos, coy toys,<br>
 Just something to bring god to them.<br>
 It's so holy analysis of their tiny anus,<br>
-Date rape on drugs, likewise same to <br> 
+Date rape on drugs, likewise same to same. <br> 
 <br>
 After he's gone I run to his house,<br>
 All the illegitimate daughters suck my dick.<br>
