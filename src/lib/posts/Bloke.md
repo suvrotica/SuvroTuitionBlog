@@ -29,8 +29,8 @@ While deep up your arse I shove the gift,<br>
 The head of the dead dud duplicitous pope.<br>
 <br>
 You don't know his shape but hairy,<br>
-Abrahamic bearded crusty scrote.<br>
-A buddhist with luck, or a hindoo fuck schmuck?<br>
+Abrahamic most-lame bearded crusty scrote.<br>
+A buddhist fuck, or a hindoo fat schmuck?<br>
 In India it's always a democratic vote.<br>
 <br>
 I came, I saw, I pissed in your fucking mouth,<br>
