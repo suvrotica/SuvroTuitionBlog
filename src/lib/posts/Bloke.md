@@ -30,7 +30,7 @@ The head of the dead dud duplicitous pope.<br>
 <br>
 You don't know his shape but hairy,<br>
 Abrahamic bearded crusty scrote.<br>
-Or is it Buddhist, Jain or Hindoo fuck?<br>
+A buddhist with luck, or a hindoo fuck schmuck?<br>
 In India it's always a democratic vote.<br>
 <br>
 I came, I saw, I pissed in your fucking mouth,<br>
