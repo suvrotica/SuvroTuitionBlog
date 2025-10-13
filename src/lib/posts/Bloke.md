@@ -34,7 +34,7 @@ A buddhist fuck, or a hindoo fat schmuck?<br>
 In India it's always a democratic vote.<br>
 <br>
 I came, I saw, I pissed in your fucking mouth,<br>
-Cowtow now, I am holier, and hornier than thou.<br>
+Kowtow now, I am holier, and hornier than thou.<br>
 Make sure your asshole is lubed clean,<br>
 Going to insert holy in that hole now.<br>
 <br>
