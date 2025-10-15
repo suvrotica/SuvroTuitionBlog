@@ -31,7 +31,7 @@ Or traveling drugged dopey catholic nuns.<br><br>
 I relax need for victims to shit,<br>
 Before holiness inserted into their hole.<br>
 The fecal smell turns me goodly on,<br>
-Buddhism sodomized into an asshole's soul. <br>
+Buddhism sodomized into a premeditated soul. <br>
 <br>
 In Tibet when I sodomized a pet civet,<br>
 My dick stank like a skunk.<br>
