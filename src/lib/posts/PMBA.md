@@ -23,7 +23,7 @@ tags: ["MBA", "Business" ]
 	
   import imageSrc3 from '/src/lib/assets/slideshow-images/portrait/IMG-20251008-WA0008.jpg?url';  
 	import imageSrc4 from '$lib/assets/IMG-20251012-WA0001.jpg?url';
-   
+   import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
 
     import PostBadge from '$lib/components/ui/PostBadge.svelte';
 </script>
@@ -62,6 +62,8 @@ tags: ["MBA", "Business" ]
 	standalone
 />
 
+**To give full credit and support to the original creator, please click the video title and watch it on YouTube. It makes a real difference for them.**
+
 **WHY READ THIS BOOK**
 
 I will write my pithy notes on what I get out of this book as I re-read the 10th anniversary expanded edition. I also have a previous copy. So it's important to point out that this analysis is not a book review but a deep dive into the benthic depths of the business world as I perceive it without filters. 
@@ -75,6 +77,8 @@ And people of generations born later than me often don't have the brain areas br
 <PostImage src={imageSrc3} alt="gecko" />
 
 Books still matter—not just the objects, but the earnest intent to read them. Googling or chatting with an LLM is like lifting featherweights and expecting to turn into the Hulk. The effort feels like work, but nothing really grows. What’s worrying is that the current conversation around AI competence—how well it answers questions about everything from calculus to mango exports—misses the actual crisis. The problem isn’t in the machine’s output; it’s in the reception, in the education that shapes how humans *receive* and interpret knowledge.
+
+<Ytp src="https://youtu.be/Hv9SQlcLyPM?si=-5lomSfXNk1I7cyM" />
 
 If we move into a future where learning means feeding prompts to a chatbot instead of wrestling with ideas, reading deeply, or cultivating genuine curiosity, we’ll have traded understanding for simulation. And that’s dire. As a computer engineer and scientist, I understand both sides of the limitation—the human asking and the model replying. Most exchanges end up as witty repartee with very little substance behind them. Real engagement still has to come from the human side.
 
