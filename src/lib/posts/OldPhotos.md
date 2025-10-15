@@ -18,7 +18,8 @@ tags: ["Bengali"]
 <script>
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import imageSrc1 from '$lib/assets/op/IMG-20251012-WA0004.jpg?url';
-    import imageSrc2 from '$lib/assets/op/IMG-20251012-WA0006.jpg?url';
+    import imageSrc2 from '$lib/assets/op/WhatsApp Image 2025-10-15 at 3.47.23 PM.jpeg?url';
+    
     import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
 </script> 
     
