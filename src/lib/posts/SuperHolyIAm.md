@@ -29,9 +29,9 @@ I fuck free docile little unfucked uns.<br>
 Mountain drug-addicted orphaned urchins,<br>
 Or traveling drugged dopey catholic nuns.<br><br>
 I relax need for victims to shit,<br>
-Before holiness is in their hole.<br>
-The smell turns me on more,<br>
-Religious inside the asshole's soul. <br>
+Before holiness inserted into their hole.<br>
+The fecal smell turns me goodly on,<br>
+Buddhism sodomized into an asshole's soul. <br>
 <br>
 In Tibet when I sodomized a pet civet,<br>
 My dick stank like a skunk.<br>
