@@ -28,6 +28,11 @@ I don't eat proud cunt shit, that's it,<br>
 I fuck free docile little unfucked uns.<br>
 Mountain drug-addicted orphaned urchins,<br>
 Or traveling drugged dopey catholic nuns.<br><br>
+Little girls little boys, dildos, coy toys,<br>
+Just something to bring god into them.<br>
+It's so holy analysis of their tiny anus,<br>
+Date rape on drugs this shit: same to same. <br> 
+<br>
 I relax need for victims to shit,<br>
 Before holiness inserted into their hole.<br>
 The fecal smell turns me goodly on,<br>
@@ -62,11 +67,6 @@ I'm holy but with big holes,<br>
 With wants, I fuck gents and cunts.<br>
 Every man for himself and shit,<br>
 Pretend pathetic the monastic stunts.<br>
-<br>
-Little girls little boys, dildos, coy toys,<br>
-Just something to bring god to them.<br>
-It's so holy analysis of their tiny anus,<br>
-Date rape on drugs, likewise same to same. <br> 
 <br>
 After he's gone I run to his house,<br>
 All the illegitimate daughters suck my dick.<br>
