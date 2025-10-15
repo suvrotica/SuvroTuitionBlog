@@ -19,6 +19,7 @@ tags: ["Bengali"]
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import imageSrc1 from '$lib/assets/op/IMG-20251012-WA0004.jpg?url';
     import imageSrc2 from '$lib/assets/op/WhatsApp Image 2025-10-15 at 3.47.23 PM.jpeg?url';
+    import imageSrc3 from '$lib/assets/op/WhatsApp Image 2025-10-15 at 4.07.26 PM.jpeg?url';
     
     import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
 </script> 
@@ -26,6 +27,10 @@ tags: ["Bengali"]
 **Old picture when I used to drive 260 km between Austin San Antonio 3 times a week, I did this for years.**
 
 <PostImage src={imageSrc1} alt="Old picture when I used to drive 260 km between Austin San Antonio 3 times a week, I did this for years." />
+
+**Mom when I started ClinZen new office in Hyderabad in 2013, I was still working in US and running it remotely**
+
+<PostImage src={imageSrc3} alt="Mom when I started ClinZen new office in Hyderabad in 2013, I was still working in US and running it remotely" />
 
 **Old picture of my baba (father) who was alive when he was reading the newspaper, died of criminal medical negligence, in India hospitals don't check for antibiotic resistance but keep guessing to give a MRSA bacteria time to kill, this and the movie Anand were why I had come back with a health information exchange plan with modernized hospital record systems and clinical trial management integration**
 
