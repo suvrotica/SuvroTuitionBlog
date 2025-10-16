@@ -54,7 +54,7 @@ Will lift my dhoti and rip your ass apart.<br>
 By the dicks of the many headed gods,<br>
 I swear to bring your face to my fart.<br>
 <br>
-Who knows when that cornish hen,<br>
+Who knows when that cornish didi hen,<br>
 Cloaca for a cunt she said all she had.<br>
 Since then bad luck and stepping on shit,<br>
 Bloody stool with farts that stink so bad.<br>
