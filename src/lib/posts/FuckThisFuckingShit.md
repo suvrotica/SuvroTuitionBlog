@@ -9,6 +9,13 @@ published: true
 ---
 <script>
     import PostBadge from '$lib/components/ui/PostBadge.svelte';
+    
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251006-WA0002.jpg?url';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251016-WA0004.jpg?url';
+    
+   import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
+
 </script>
 ![Fuck this fucking shit](/images/placeholders/IMG-20240517-WA0030.jpg) 
 
@@ -23,6 +30,14 @@ He shits wherever he wants to.<br>
 The worms in the feces biting my toes,<br>
 Must not god find the responsible who?<br>
 <br>
+
+<PostImage src={imageSrc2} alt="Calcutta mayor" />
+
+A mostlame mayor jai-hind swine said fine, <br>
+He who gives calcuttans the northern star.<br>
+Far from it, that mangy piece of didi shit, <br>
+Takes a promise dump then runs far.<br>
+<br>
 In this land with cunts awfully bland,<br>
 I, a celibate old man good,<br>
 Can't even walk now, the fucks,<br>
@@ -30,7 +45,7 @@ Either shit or greedy for more food.<br>
 <br>
 Who knows when the writing pen,<br>
 Will tell us of the end of hindoo days.<br>
-Go fuck yourself, you jaywalking shitter,<br>
+Go fuck yourself, you jaytalking shitter,<br>
 May surya light your ass with his rays.<br>
 <br>
 Otherwise I a man with humor very dry,<br>
