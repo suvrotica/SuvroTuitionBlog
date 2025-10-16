@@ -33,10 +33,11 @@ Must not god find the responsible who?<br>
 
 <PostImage src={imageSrc2} alt="Calcutta mayor" />
 
+<br>
 A mostlame mayor jai-hind swine said fine, <br>
 He who gives calcuttans the northern star.<br>
 Far from it, that mangy piece of didi shit, <br>
-Takes a promise dump then runs far.<br>
+Takes a promise dump then runs fucking far.<br>
 <br>
 In this land with cunts awfully bland,<br>
 I, a celibate old man good,<br>
