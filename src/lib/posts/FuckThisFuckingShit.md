@@ -1,10 +1,10 @@
 ---
 title: "Fuck this fucking shit"
-description: "An angry, profane doggerel sparked by a simple mishap. This poem unleashes a torrent of frustration against societal decay, religious hypocrisy, and everyday annoyances."
-category: "Doggerel"
+
+category: "Doggerel Religion"
 thumbnail: "/images/placeholders/IMG-20240517-WA0030.jpg"
-date: "2025-05-17"
-keywords: ["doggerel", "profane poetry", "angry poem", "satire", "social critique", "religious hypocrisy", "rant", "dark humor"]
+date: "2025-10-16"
+tags: ["doggerel", "profane poetry", "angry poem", "satire", "social critique", "religious hypocrisy", "rant", "dark humor"]
 published: true
 ---
 <script>
@@ -12,7 +12,7 @@ published: true
     
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251006-WA0002.jpg?url';
-    import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251016-WA0004.jpg?url';
+    import imageSrc2 from '$lib/assets/slideshow-images/portrait/IMG-20251016-WA0004.jpg?url';
     
    import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
 
