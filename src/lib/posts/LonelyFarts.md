@@ -2,7 +2,9 @@
 title : "Lonely Farts" 
 
 category : "Humor" 
-thumbnail: "/images/placeholder/IMG-20251016-WA0000.jpg"
+
+thumbnail: "/images/placeholders/IMG-20251016-WA0000.jpg"
+
 date: "2025-10-16"
 tags: [ "american holy man", "social satire", "political critique", "profane", "religious society", "cultural identity", "cynicism", "personal angst"]
 
