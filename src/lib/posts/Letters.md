@@ -43,7 +43,7 @@ I know that you know that I know you don't exist, so you would be plagued with a
 Yours disrespectfully,
 Suvrotica.
 
-Carbon Copy: Mohammad, Vishnu, Jesus, Shiva, Brahma, Durga, Kali, Trinity fuckfaces of other faiths, Jehovah, and any other contributors to your nasty existence—please tell them all to go fuck themselves.
+Carbon Copy: Mohammad, Vishnu, Jesus Fucking Christ, Fuckface Budhha, Shiva, Brahma, Allah, Mother Mary Tits, Durga, Kali, Trinity fuckfaces of other faiths, Jehovah, and any other contributors to your nasty existence—please tell them all to go fuck themselves.
 
 
 **Letters written to self**
