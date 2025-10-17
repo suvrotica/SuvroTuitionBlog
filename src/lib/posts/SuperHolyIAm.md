@@ -51,8 +51,8 @@ A diaspora of sanctimonious seedy fucks,<br>
 In every ass that I have checked.<br><br>
 Too many fucks frauds and fools,<br>
 Freeloaders freaks rapist fartsy goons. <br>
-But I am so holy I tell them no truth, <br>
-bile filled stupid fucking cartoons.<br><br>
+I say, I am so holy, I tell them no truth, <br>
+Bilious belligerent face-fucked cartoons.<br><br>
 Religion a fuck-all that goodly fucks ass,<br>
 And leaves the holy hole gaped ungated. <br>
 The cosmic curse the eventual hearse,<br>
