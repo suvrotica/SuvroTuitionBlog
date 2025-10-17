@@ -22,7 +22,7 @@ published: true
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import SanskritVerse from '$lib/components/ui/SanskritVerse.svelte';
     import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251007-WA0008.jpg?url';
-    import imageSrc2 from '$lib/assets/slideshow-images/portrait/   IMG-20251017-WA0001.jpg?url';
+    import imageSrc2 from '$lib/assets/slideshow-images/portrait/IMG-20251017-WA0001.jpg?url';
  
     import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
 </script> 
