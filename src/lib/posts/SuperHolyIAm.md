@@ -69,11 +69,15 @@ Fuck everyone, advisable as a tattoo,<br>
 If you want a free boarding pass.<br>
 <br>
 My roommate meditates with his mouth open,<br>
-I'll transfer the poop as a friend.<br>
+I'll transfer the bird poop as a friend.<br>
 That bastard farts in his sleep,<br>
 I plan to bring him to his monastic end.<br>
 <br>
-I hope he chokes on the poop,<br>
+Wants nirvana this gassy monk, <br>
+By shitting in ordinary pants. <br>
+People throng the many clueless wrong,<br>
+Giggling mindlessly stupid sycophants. <br><br>
+I hope he chokes on the stinky poop,<br>
 I'll ensure that his head bursts.<br>
 I'll kick his pious balls until he's there,<br>
 In bald buddha he says he trusts.<br>
