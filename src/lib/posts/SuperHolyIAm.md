@@ -37,7 +37,7 @@ I relax need for victims to shit,<br>
 Before holiness inserted into their hole.<br>
 The fecal smell turns me goodly on,<br>
 Buddhism sodomized into a premeditated soul. <br><br>
-Totally holes then I count ten,<br>
+Totally cute holes then, I count ten,<br>
 Of all sizes, colors and sorts.<br>
 I snort cocaine through my ass,<br>
 For planning religious retorts.<br><br>
@@ -45,7 +45,7 @@ But mainly I just relax my sphincter, <br>
 And out comes my really smelly poop.<br>
 Of all religions mine at least tells you,<br>
 Life is an eat-shit-fuck fucking loop.<br><br>
-In nepal, where mountains have tits, 
+In nepal, where mountains have tits, <br>
 Holiness goes on fucking unchecked. <br>
 A diaspora of sanctimonious seedy fucks,<br>
 In every ass that I have checked.<br><br>
