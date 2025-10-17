@@ -36,10 +36,30 @@ Date rape on drugs this shit: same to same. <br>
 I relax need for victims to shit,<br>
 Before holiness inserted into their hole.<br>
 The fecal smell turns me goodly on,<br>
-Buddhism sodomized into a premeditated soul. <br>
-<br>
+Buddhism sodomized into a premeditated soul. <br><br>
+Totally holes then I count ten,<br>
+Of all sizes, colors and sorts.<br>
+I snort cocaine through my ass,<br>
+For planning religious retorts.<br><br>
+But mainly I just relax my sphincter, <br>
+And out comes my really smelly poop.<br>
+Of all religions mine at least tells you,<br>
+Life is an eat-shit-fuck fucking loop.<br><br>
+In nepal, where mountains have tits, 
+Holiness goes on fucking unchecked. <br>
+A diaspora of sanctimonious seedy fucks,<br>
+In every ass that I have checked.<br><br>
+Too many fucks frauds and fools,<br>
+Freeloaders freaks rapist fartsy goons. <br>
+But I am so holy I tell them no truth, <br>
+bile filled stupid fucking cartoons.<br><br>
+Religion a fuck-all that goodly fucks ass,<br>
+And leaves the holy hole gaped ungated. <br>
+The cosmic curse the eventual hearse,<br>
+Still flows like diarrhea unabated.
+<br><br>
 In Tibet when I sodomized a pet civet,<br>
-My dick stank like a skunk.<br>
+My dick stank like a sick skunk.<br>
 Not to fear, skunks are leaders here,<br>
 Plus this is expected of a masculine monk.<br>
 <br>
