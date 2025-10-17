@@ -21,14 +21,34 @@ published: true
 
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import SanskritVerse from '$lib/components/ui/SanskritVerse.svelte';
-    import imageSrc from '$lib/assets/slideshow-images/portrait/IMG-20251007-WA0008.jpg?url';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251007-WA0008.jpg?url';
+    import imageSrc2 from '$lib/assets/slideshow-images/portrait/   IMG-20251017-WA0001.jpg?url';
+ 
     import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
 </script> 
 
 
-<PostImage src={imageSrc} alt="self piss" />
+
+**Letters written to god**
+
+<PostImage src={imageSrc2} alt="holiday food" />
+
+
+Dear fucking God,
+
+RE: Go fuck yourself
+
+I know that you know that I know you don't exist, so you would be plagued with a sense of absurd contradiction were you to read this letter, but being nonexistent you just can't do it. Imagine a fucking nonsense nonbeing nonentity ninny who can't even read an imaginary letter—how embarrassing it must feel to prefix *omni* in words you can't even be expected to spell. But as I understand, you are a shameful piece of human invention when we knew no better, that continues shamelessly into an anachronism that can't be diluted with my sense of humor or caricatured into a diminutive turd that can be safely flushed into the septic tank, which meets the groundwater below to come back with arsenic and lead as potable fucking water. As you know, in the city of Calcutta, although the cunts aren't as stupid as those of Abrahamic abracadabra, people eat incredible amounts of sugar and fat during these Hindoo periods of religious masturbatory insanity, where you represent both light and dark, good and evil, Rama and Ravana, usually leading to fatty liver or, for the extremely jolly in this colonial shithole, liver cirrhosis. Can you be any more pernicious than this? Anyway, I have to take a dump, and so I hope I see your open mouth in the commode expecting my impoverished middle-class middle-aged shit—be nice and say thanks.
+
+Yours disrespectfully,
+Suvrotica.
+
+Carbon Copy: Mohammad, Vishnu, Jesus, Shiva, Brahma, Durga, Kali, Trinity fuckfaces of other faiths, Jehovah, and any other contributors to your nasty existence—please tell them all to go fuck themselves.
+
 
 **Letters written to self**
+
+<PostImage src={imageSrc1} alt="self piss" />
 
 Fro, Oct 10, 2025, City of Joy
 
