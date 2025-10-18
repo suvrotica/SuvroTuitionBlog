@@ -44,7 +44,7 @@ I know that you know that I know you don't exist, so you would be plagued with a
 Yours disrespectfully,
 Suvrotica.
 
-Carbon Copy: Most lame camel boy mohammad, vicious Vishnu, Jesus Fucking Christ, Fuckface Budhha, shitty Shiva, bullshit Brahma, asshole Allah, milky Mother Mary Tits, duplicitous Durga, cackling Calcutta cunt Kali, all trinity fuckfaces of other faiths, jizz stain Jehovah, and any other contributors to your nasty existence—please tell them all to go fuck themselves.
+Carbon Copy: Most lame camel boy mohammad, vicious Vishnu, Jesus Fucking Christ, Fuckface Budhha, shitty Shiva, bullshit Brahma, asshole Allah, milky Mother Mary Tits, duplicitous Durga, cackling Calcutta cunt Kali, kakistocracy champion Krishna, all trinity fecal fuckfaces of other faiths, indelible jizz stain Jehovah, and any other contributors to your nasty existence—please tell them all to go fuck themselves.
 
 
 **Letters written to self**
