@@ -8,7 +8,7 @@ tags: ["Calcutta", "Bengali", "American", "Letter"]
 
 category: "Humor"
 
-date: "2025-10-10"
+date: "2025-10-18"
 
 published: true
 
@@ -33,6 +33,7 @@ published: true
 
 <PostImage src={imageSrc2} alt="holiday food" />
 
+Fri, Oct 17, 2025, City of Joy
 
 Dear fucking God,
 
@@ -43,14 +44,14 @@ I know that you know that I know you don't exist, so you would be plagued with a
 Yours disrespectfully,
 Suvrotica.
 
-Carbon Copy: Mohammad, Vishnu, Jesus Fucking Christ, Fuckface Budhha, Shiva, Brahma, Allah, Mother Mary Tits, Durga, Kali, Trinity fuckfaces of other faiths, Jehovah, and any other contributors to your nasty existence—please tell them all to go fuck themselves.
+Carbon Copy: Most lame camel boy mohammad, vicious Vishnu, Jesus Fucking Christ, Fuckface Budhha, shitty Shiva, bullshit Brahma, asshole Allah, milky Mother Mary Tits, duplicitous Durga, cackling Calcutta cunt Kali, all trinity fuckfaces of other faiths, jizz stain Jehovah, and any other contributors to your nasty existence—please tell them all to go fuck themselves.
 
 
 **Letters written to self**
 
 <PostImage src={imageSrc1} alt="self piss" />
 
-Fro, Oct 10, 2025, City of Joy
+Fri, Oct 10, 2025, City of Joy
 
 Dear mister suvrotica, 
 
