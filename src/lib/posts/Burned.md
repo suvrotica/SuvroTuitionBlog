@@ -21,6 +21,8 @@ published: true
 	import imageSrc4 from '$lib/assets/slideshow-images/portrait/IMG-20250929-WA0002.jpg?url';
 	import imageSrc5 from '$lib/assets/slideshow-images/portrait/IMG-20251001-WA0009.jpg?url';
 	import imageSrc6 from '$lib/assets/slideshow-images/portrait/IMG-20251002-WA0004.jpg?url';
+	import imageSrc7 from '$lib/assets/IMG-20251018-WA0007.jpg?url';
+	
     import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
 </script>
 
@@ -80,7 +82,11 @@ And again, I am sorry I repeat myself mindlessly and endlessly, but trust me the
 
 Any person alive, not just one with entrepreneurial intent should know that the world post 2025 — if you read any of my previous posts or laments — will be different. You won’t be able to get away with superficial facts, because just as AI makes it easy to generate spurious text, AI also makes it easy to reveal false impressions. Not only will AI make things simpler it will also simultaneously make the usefulness of it evaporate to obsolescence rendering lying, learning, lusting and even living seem increasingly moot. 
 
-If you care at all about the future, try to realize what is authentically you—what your true resources really are—being cognizant of the reality of the business world as well as the everyday world disconnected from economic strings. If you stay gullible, you will only meet with more chronic issues. Specifically, business realities, unlike glib facts made up, in a law abiding land at least are like the laws of physics — they hold whether you like them, love them, or abhor them, AI is going to make it easy to enforce laws more stringently than ever before, eventually it will be almost like the George Orwell dystopia he sculpted in *1984*. By the way, his real name was Eric Arthur Blair and he was born in Motihari, Bihar. I've been to Motihari, it's a pigsty. On exhibition is the general state of corruption, civic mismanagement and the proclivity of the populace to be complicit with the lackadaisical way kakistocracy ruins a place. 
+If you care at all about the future, try to realize what is authentically you—what your true resources really are—being cognizant of the reality of the business world as well as the everyday world disconnected from economic strings. If you stay gullible, you will only meet with more chronic issues. Specifically, business realities, unlike glib facts made up, in a law-abiding land at least, are like the laws of physics—they hold whether you like them, love them, or abhor them. AI is going to make it easy to enforce laws more stringently than ever before; eventually it will be almost like the George Orwell dystopia he sculpted in *1984*. 
+
+<PostImage src={imageSrc7} alt="Motihari" />
+
+By the way, his real name was Eric Arthur Blair, and he was born in Motihari, Bihar. I’ve been to Motihari—the birthplace of the man who wrote *Animal Farm* can only be described as a pigsty. On exhibition is the general state of corruption, civic mismanagement, and the proclivity of the populace to be complicit with the lackadaisical manner in which kakistocracy ruins a place. It’s sad but representative—it’s what Indians and India have become.
 
 <PostImage src={imageSrc3} alt="snare man" />
 
