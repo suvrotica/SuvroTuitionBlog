@@ -62,7 +62,7 @@ A hindoo droopy in a tight most lame. <br>
 <br>
 I dance in a trance I giggle and prance,<br> 
 Fuck me baby in my middle-class ass. <br>
-I promise I won't shit on your slick dick, <br>
+Pinky promise I won't shit on your dick, <br>
 I fondle buttocks I want to keep.<br>
 <br>
 I wanna have a god baby in my stinky ass, <br>
