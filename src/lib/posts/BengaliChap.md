@@ -67,5 +67,5 @@ I fondle buttocks I want to keep.<br>
 <br>
 I wanna have a god baby in my stinky ass, <br>
 No cunt in front so I shit the fuck out.<br>
-Goodly then god please fuck me hard,<br>
-Fuck me, fuck me, fuck me — I shout.<br>
+Fuck me krishna fuck me mohammad fuck me hard,<br>
+Fuck me, fuck me, fuck me — fuck my shit out.<br>
