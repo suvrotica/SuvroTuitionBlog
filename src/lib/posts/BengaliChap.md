@@ -61,6 +61,6 @@ In holy holes it's all goodly fair, <br>
 A hindoo droopy in a tight most lame. <br>
 <br>
 I dance in a trance I giggle and prance,<br> 
-Fuck me baby please in my fat ass. <br>
-I promise I won't shit on your dick, <br>
+Fuck me baby in my middle-class ass. <br>
+I promise I won't shit on your slick dick, <br>
 I fondle buttocks I want to keep.<br>
