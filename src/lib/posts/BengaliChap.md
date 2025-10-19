@@ -53,5 +53,14 @@ Don't really care; I'm a fucking cartoon.<br>
 Fuck everyone and fuck everything I see,  <br>
 Not much in this life I love except pee. <br> 
 And shit when it is in large sums.  <br>
-Then it's on people's heads from the balcony it comes.  <br>
-
+On heads from the balcony it comes.  <br>
+<br>
+Many on this rock sucked cock,<br>
+Alan Turing of computer and AI fame.<br>
+In holy holes it's all goodly fair, <br>
+A hindoo droopy in a tight most lame. <br>
+<br>
+I dance in a trance I giggle and prance,<br> 
+Fuck me baby please in my fat ass. <br>
+I promise I won't shit on your dick, <br>
+I fondle buttocks I want to keep.<br>
