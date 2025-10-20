@@ -26,13 +26,17 @@ tags: ["inspirational"]
 
 **To give full credit and support to the original creator, please click the video title and watch it on YouTube. It makes a real difference for them.**
 
+It's very strange that we only ever want to hear the motivational stories of powerful, successful people. I don't object to this—otherwise this playlist wouldn't exist—but I want to emphasize that it's an illusion to think a singular personality achieved greatness solely because of whatever they claim ultimately led to success. In reality, it's the work of countless unspoken lives, serendipitous moments, chance, luck, and randomness that create these glorious outcomes.
+
+Now reverse the image: failure teaches you far more than success ever will. My own life, a catalogue of failures by most standards, has taught me that the act of trying matters more than the result. When I’m depressed, I curl up and sleep until I can work again—and then I work. I have no illusions. I don’t dream of some final, glorious day of victory. My objective is the work itself, and the joy I find in its smallest fragments—in my life, in the narrow, almost comically small circumference of a Bengali without a future.
+
+Don’t worry about who did what. This is your life—a biological creature on a rock spinning meaninglessly through an infinite universe. Your job is to find and give meaning to this entropy, and to stay alive.
+
 <Ytp src="https://youtu.be/ji5_MqicxSo?si=yMCzipXlRUoNqj45" />
 
 <Ytp src="https://youtu.be/9kM2dDrndQk?si=t_Ltsj5PgAOZ5hEk" />
 
 <Ytp src="https://youtu.be/Tuw8hxrFBH8?si=gWjaF4_zmdVd0q1r" />
-
-<Ytp src="https://youtu.be/h89uOvUDVO4?si=eL8M1EOEewGFp7cW" />
 
 <Ytp src="https://youtu.be/Pqftm3o5RdQ?si=Hntsf6tUAK80WGhf" />
 
