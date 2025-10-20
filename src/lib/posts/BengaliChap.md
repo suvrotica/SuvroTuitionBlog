@@ -27,7 +27,7 @@ tags: ["Faces", "Gay", "Transsexual", "Kolkata", "Calcutta", "shemale", "Shit", 
 <br>
 A Bengali good-for-nothing chap,  <br>
 All I do day in, day out, is clap.  <br>
-I clap because I am holy, I pray,  <br>
+I clap because I am holy, I dare say,  <br>
 But the neighbors giggle and say I'm gay.<br>
 <br>
 So I decided to fuck the neighbors all, <br> 
