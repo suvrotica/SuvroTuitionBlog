@@ -10,7 +10,7 @@ category : "Doggerel"
 
 published : true
 
-tags: ["Faces", "Gay", "Obese", "Kolkata", "Calcutta", "Fat", "Sphere", "tits", "Buttocks"]
+tags: ["Faces", "Gay", "Transsexual", "Kolkata", "Calcutta", "shemale", "Shit", "tits", "Buttocks"]
 
 
 ---
@@ -39,6 +39,11 @@ By the many millions of Hindoo gods, I swear,  <br>
 I'll fuck all false friends, because I really care.  <br>
 Then I'll see if I'm holy or if I'm gay, <br> 
 I may be both if it's on a totally holy day.<br>
+<br>
+Sometimes I suck cock, wearing a frock,<br>
+I do not know why I like everything pink.<br>
+Sometimes my shit smells so cute and sweet,<br>
+Sweetly I savor the shit sweet pinkish stink.<br>
 <br>
 Life is bullshit, this life, my foot,  <br>
 Go fuck yourself already like a brute.  <br>
