@@ -1,6 +1,6 @@
 ---
 
-title : "Bengali Songs Music" 
+title : "Bengali Music & Movies" 
 
 thumbnail : "/images/placeholders/IMG-20251006-WA0002.jpg"
 
@@ -25,6 +25,13 @@ tags: ["Bengali"]
 <PostImage src={imageSrc1} alt="goat on headphone listening to Bengali songs and shitting" />
 
 **To give full credit and support to the original creator, please click the video title and watch it on YouTube. It makes a real difference for them.**
+
+**Movies**
+
+<Ytp src="https://youtu.be/cdrmzezrdgQ?si=YPVqabAAd5figwz6" />
+
+
+**Music**
 
 <Ytp src="https://youtu.be/HvOXmnTJYRc?si=dO0MjoWbbxZ6N3My" />
 
