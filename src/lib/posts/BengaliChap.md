@@ -76,6 +76,10 @@ Pinky promise I won't shit on your dick, <br>
 I fondle buttocks I want to keep.<br>
 <br>
 I wanna have a god baby in my stinky ass, <br>
-No cunt in front I shit the fuck with gas.<br>
+No cunt in front I shit the fuck out with gas.<br>
 Fuck me hard krishna while mohammad sucks, <br>
-Fuck me, fuck me, fuck all the bengali fucks. .<br>
+Fuck me, fuck me and fuck all the bengali fucks. <br><br>
+Gee glib glee how little I fucking see,<br>
+Inside my ass or of the fuck before me.<br>
+It's only by looking at the diarrhea,<br>
+I can tell whether it's a he or a she.<br><br>
