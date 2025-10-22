@@ -78,4 +78,4 @@ I fondle buttocks I want to keep.<br>
 I wanna have a god baby in my stinky ass, <br>
 No cunt in front I shit the fuck with gas.<br>
 Fuck me hard krishna while mohammad sucks, <br>
-Fuck me, fuck me, fuck me — fuck my shit out.<br>
+Fuck me, fuck me, fuck all the bengali fucks. .<br>
