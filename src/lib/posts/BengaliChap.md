@@ -83,3 +83,7 @@ Gee glib glee how little I fucking see,<br>
 Inside my ass or of the fuck before me.<br>
 It's only by looking at the diarrhea,<br>
 I can tell whether it's a he or a she.<br><br>
+Plain as as ass plainspeak I say,<br>
+Sometimes something inside me not today.<br>
+A gurgling sound in my bloody bladder,<br>
+My ass splattered on the wall as spray.<br><br>
