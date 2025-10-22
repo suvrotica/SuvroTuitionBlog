@@ -45,6 +45,16 @@ I do not know why I like everything pink.<br>
 Sometimes my shit smells so cute and sweet,<br>
 Sweetly I savor the shit sweet pinkish stink.<br>
 <br>
+Fuck me fuck me not,<br>
+I know when I shit it's a lot.<br>
+Suck my dick you fuckass prick,<br>
+Or I insert in your ass a stick.<br>
+<br>
+Many on this rock sucked cock,<br>
+Alan Turing of computer and AI fame.<br>
+When in holy holes it's goodly fair, <br>
+A hindoo droopy in a tight most lame. <br>
+<br>
 Life is bullshit, this life, my foot,  <br>
 Go fuck yourself already like a brute.  <br>
 I know you're an asshole like the rest, <br> 
@@ -59,11 +69,6 @@ Fuck everyone and fuck everything I see,  <br>
 Not much in this life I love except pee. <br> 
 And shit when it is in large sums.  <br>
 On heads from the balcony it comes.  <br>
-<br>
-Many on this rock sucked cock,<br>
-Alan Turing of computer and AI fame.<br>
-In holy holes it's all goodly fair, <br>
-A hindoo droopy in a tight most lame. <br>
 <br>
 I dance in a trance I giggle and prance,<br> 
 Fuck me baby in my middle-class ass. <br>
