@@ -76,6 +76,6 @@ Pinky promise I won't shit on your dick, <br>
 I fondle buttocks I want to keep.<br>
 <br>
 I wanna have a god baby in my stinky ass, <br>
-No cunt in front so I shit the fuck out.<br>
+No cunt in front I shit the fuck with gas.<br>
 Fuck me hard krishna while mohammad sucks, <br>
 Fuck me, fuck me, fuck me — fuck my shit out.<br>
