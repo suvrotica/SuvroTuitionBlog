@@ -70,7 +70,7 @@ Not much in this life I love except pee. <br>
 And shit when it is in large sums.  <br>
 On heads from the balcony it comes.  <br>
 <br>
-I dance in a trance I giggle and prance,<br> 
+I dance in a trance I giggle I'm crass,<br> 
 Fuck me baby in my middle-class ass. <br>
 Pinky promise I won't shit on your dick, <br>
 I fondle buttocks I want to keep.<br>
