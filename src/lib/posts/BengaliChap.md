@@ -55,6 +55,10 @@ Alan Turing of computer and AI fame.<br>
 When in holy holes it's goodly fair, <br>
 A hindoo droopy in a tight most lame. <br>
 <br>
+Gassy flatulent fact never intact,<br>
+But the Indian diaspora dissolved in it.<br>
+This is the smelliest part of his anus,<br>
+Of homo sapiens who hasn't taken a shit.<br><br>
 Life is bullshit, this life, my foot,  <br>
 Go fuck yourself already like a brute.  <br>
 I know you're an asshole like the rest, <br> 
