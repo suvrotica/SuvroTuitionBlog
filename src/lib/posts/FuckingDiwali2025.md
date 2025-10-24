@@ -27,7 +27,11 @@ And this, silently, is what’s happening to intelligence. It’s becoming a com
 
 This is the compulsory one-way street I see as I try to close another window to drown the sounds of firecrackers and keep the smog from suffocating me. Now there will be thousands of people like me, stranded in shanty placeholders, barely eking out shadows of their former existences—livelihoods evaporated suddenly, leaving behind a permanent, disquieting loneliness to wrestle with for the rest of their lives.
 
+<Ytp src="https://youtu.be/I_LhBKZiE0U?si=IuqP6wlNDXgGOYu7" />
+
 Happy fucking Diwali everyone may the light fuck you always. Indians have blinkers on—so many, in fact, that by the time we really wake up and realize what kind of shithole we’ve dug ourselves into, many of us will already be covered with tumors, both visible and invisible, malignant and malformed but devastating, and by then it’ll be too late. Every Diwali, I’m sure, pushes many patients closer to their deathbeds, yodeling to mythological bullshit that mucks up the air already fucked up by too many gods, godmen, religion, religious zealots, bigots, and bullshits on a massive holy trampoline. The air quality deterioration has spiraled badly for my lungs—it’s hard to breathe. But I’m fucked in so many different ways that one organ or another will be the first to cave in, and the rest will just thank it for ending the shit show. The only thing is, I won’t even have the faintest inertia of a personality or of a legacy. It’ll be like unplugging a bulb and throwing it in the nearest landfill—there won’t be any afterglow, any memory, any history, even of the short episodic kind. All my sketches and blog posts will face the usual entropy—at the end of the billing cycles, all files erased. The few people who may have mistakenly read my posts will unmistakably forget me because I’ll be unavailable.
+
+<Ytp src="https://youtu.be/hV3bQecCYRM?si=cvOu7SET5N7WCq4Z" />
 
 The Bengali baji—a word that once meant delight, when I was a kid with better lungs, now roughly translates to “airborne chemical assault.” From a toxicological standpoint, Diwali fireworks are an unholy cocktail of metallic salts, oxidizers, and stabilizers, each with its own charming way of making your lungs regret existing.
 
