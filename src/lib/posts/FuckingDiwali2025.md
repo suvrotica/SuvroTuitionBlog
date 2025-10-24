@@ -51,7 +51,7 @@ Aluminum, magnesium, and titanium → white and silver sparks; they burn at blis
 
 Add to that sulfur (used in gunpowder mixtures) producing sulfur dioxide (SO₂)—a bronchial constrictor that makes asthmatics and the elderly gasp—and carbonaceous soot, which carries polycyclic aromatic hydrocarbons (PAHs), some of them carcinogenic.
 
-When all this detonates simultaneously across a city like Kolkata, with its damp air and low winter inversion layer, you get a dense photochemical smog that traps toxins close to breathing height. It’s not just smoke—it’s a complex aerosol of reactive metals and acid gasesu that inflame the respiratory epithelium, oxidize lung surfactant, and trigger systemic inflammation.
+When all this detonates simultaneously across a city like Kolkata, with its damp air and low winter inversion layer, you get a dense photochemical smog that traps toxins close to breathing height. It’s not just smoke—it’s a complex aerosol of reactive metals and acid gases that inflame the respiratory epithelium, oxidize lung surfactant, and trigger systemic inflammation.
 
 For sensitive lungs, even a few hours of exposure can spike inflammation markers, increase oxidative stress, and worsen chronic conditions like bronchitis or COPD. Think of it less as a festival and more as a mass-participation toxicology experiment with bad lighting.
 
