@@ -14,6 +14,11 @@ published: true
 ![a group of holy](/images/placeholders/IMG-20251023-WA0009.jpg) 
 
 <br>
+I am thinking of thinking as I do,<br>
+In a thought of a stitched stretch.<br>
+Just around me the noise is horrible,<br>
+Of fucks who only vomit and retch.<br>
+<br>
 A group of holy the term bengali,  <br>
 I sucked when I fucked my luck.  <br>
 The worms these, floating in disease,  <br>
