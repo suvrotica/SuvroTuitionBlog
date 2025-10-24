@@ -13,7 +13,7 @@ published: true
 
 ![happy Diwali](/images/placeholders/IMG-20251014-WA0012.jpg) 
 
-It's during these festival days, when the sounds from outside impinge on the silent forlorn of my shattered existence, that I become even more lonely and depressed—the contrast with the normal, the contrast with the happy people of the world, is starkly juxtaposed.
+It's during these festival days, when the sounds from outside impinge on the silent forlorn half-extinguished self of my shattered existence, that I become even more lonely and depressed—the contrast with the normal, the contrast with the happy people of the world, is starkly juxtaposed.
 
 It’s the festival of lights, but all the lights inside me are permanently turned off. Yet I know that this Diwali, despite the outward appearances—which are usually deceiving—many people are in similar boats.
 
