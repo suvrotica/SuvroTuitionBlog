@@ -12,6 +12,8 @@ published: true
     import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
 </script> 
 
+**To give full credit and support to the original creator, please click the video title and watch it on YouTube. It makes a real difference for them.**
+
 <Ytp src="https://youtu.be/B1SdFjna7zQ?si=g4fA5S5nOP0gKRgP" />
 
 ![happy Diwali](/images/placeholders/IMG-20251014-WA0012.jpg) 
