@@ -9,7 +9,10 @@ published: true
 ---
 <script>
     import PostBadge from '$lib/components/ui/PostBadge.svelte';
-</script>
+    import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
+</script> 
+
+<Ytp src="https://youtu.be/B1SdFjna7zQ?si=g4fA5S5nOP0gKRgP" />
 
 ![happy Diwali](/images/placeholders/IMG-20251014-WA0012.jpg) 
 
@@ -47,3 +50,5 @@ When all this detonates simultaneously across a city like Kolkata, with its damp
 For sensitive lungs, even a few hours of exposure can spike inflammation markers, increase oxidative stress, and worsen chronic conditions like bronchitis or COPD. Think of it less as a festival and more as a mass-participation toxicology experiment with bad lighting.
 
 The grim irony: the same elements that make fireworks spectacular—strontium, copper, barium, aluminum—are precisely what make them poisonous. The chemistry of wonder and the chemistry of harm are, inconveniently, the same.
+
+<Ytp src="https://youtu.be/lbYjSL4Y-FY?si=qFWAa2V8IZzHIxg9 " />
