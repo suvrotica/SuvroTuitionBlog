@@ -37,7 +37,12 @@ Insanity installed in several parts.  <br>
 Often matrimony poison antimony,  <br>
 I shit you not, vouched on pot.  <br>
 The gods did warn, shit full urn,  <br>
-Life then turns does it not?  <br>
+Life then rots it does it not?  <br>
+<br> 
+A scrote who wrote the promissory rote,<br> 
+Inserted his hairy dick from behind.<br> 
+Hell is a thick urgent dick without lube,<br> 
+Tearing up your insides from the rind. <br> 
   <br>
 Hyped promo but hemlock in slow mo,  <br>
 Bile hidden in a frock.  <br>
