@@ -26,23 +26,23 @@ This is the compulsory one-way street I see as I try to close another window to 
 
 Happy fucking Diwali everyone may the light fuck you always. Indians have blinkers on—so many, in fact, that by the time we really wake up and realize what kind of shithole we’ve dug ourselves into, many of us will already be covered with tumors, both visible and invisible, malignant and malformed but devastating, and by then it’ll be too late. Every Diwali, I’m sure, pushes many patients closer to their deathbeds, yodeling to mythological bullshit that mucks up the air already fucked up by too many gods, godmen, religion, religious zealots, bigots, and bullshits on a massive holy trampoline. The air quality deterioration has spiraled badly for my lungs—it’s hard to breathe. But I’m fucked in so many different ways that one organ or another will be the first to cave in, and the rest will just thank it for ending the shit show. The only thing is, I won’t even have the faintest inertia of a personality or of a legacy. It’ll be like unplugging a bulb and throwing it in the nearest landfill—there won’t be any afterglow, any memory, any history, even of the short episodic kind. All my sketches and blog posts will face the usual entropy—at the end of the billing cycles, all files erased. The few people who may have mistakenly read my posts will unmistakably forget me because I’ll be unavailable.
 
-The Bengali *baji*—a word that once meant delight, when I was a kid with better lungs, now roughly translates to “airborne chemical assault.” From a toxicological standpoint, Diwali fireworks are an unholy cocktail of metallic salts, oxidizers, and stabilizers, each with its own charming way of making your lungs regret existing.
+The Bengali baji—a word that once meant delight, when I was a kid with better lungs, now roughly translates to “airborne chemical assault.” From a toxicological standpoint, Diwali fireworks are an unholy cocktail of metallic salts, oxidizers, and stabilizers, each with its own charming way of making your lungs regret existing.
 
-At the core are **oxidizers**—mostly **potassium nitrate, perchlorate, or chlorate**. These compounds release oxygen violently when ignited, producing the bright flare but also **nitrogen oxides (NOₓ)** and **particulate matter (PM₂.₅ and PM₁₀)**, both of which slice into the respiratory tract like microscopic razors.
+At the core are oxidizers—mostly potassium nitrate, perchlorate, or chlorate. These compounds release oxygen violently when ignited, producing the bright flare but also nitrogen oxides (NOₓ) and particulate matter (PM₂.₅ and PM₁₀), both of which slice into the respiratory tract like microscopic razors.
 
-Then come the **metallic colorants**, which give firecrackers their seductive hues:
+Then come the metallic colorants, which give firecrackers their seductive hues:
 
-**Strontium and lithium** → deep reds; both irritate mucous membranes and can cause inflammation in lung tissue.
+Strontium and lithium → deep reds; both irritate mucous membranes and can cause inflammation in lung tissue.
 
-**Barium compounds** → greens; highly toxic, can interfere with heart rhythm and muscle function if inhaled in fine form.
+Barium compounds → greens; highly toxic, can interfere with heart rhythm and muscle function if inhaled in fine form.
 
-**Copper salts** → blues; release **copper oxide** fumes, a potent respiratory irritant that can trigger “metal fume fever.”
+Copper salts → blues; release copper oxide fumes, a potent respiratory irritant that can trigger “metal fume fever.”
 
-**Aluminum, magnesium, and titanium** → white and silver sparks; they burn at blistering temperatures, creating ultrafine metal oxides that lodge deep in alveoli.
+Aluminum, magnesium, and titanium → white and silver sparks; they burn at blistering temperatures, creating ultrafine metal oxides that lodge deep in alveoli.
 
-Add to that **sulfur** (used in gunpowder mixtures) producing **sulfur dioxide (SO₂)**—a bronchial constrictor that makes asthmatics and the elderly gasp—and **carbonaceous soot**, which carries polycyclic aromatic hydrocarbons (PAHs), some of them carcinogenic.
+Add to that sulfur (used in gunpowder mixtures) producing sulfur dioxide (SO₂)—a bronchial constrictor that makes asthmatics and the elderly gasp—and carbonaceous soot, which carries polycyclic aromatic hydrocarbons (PAHs), some of them carcinogenic.
 
-When all this detonates simultaneously across a city like Kolkata, with its damp air and low winter inversion layer, you get a dense photochemical smog that traps toxins close to breathing height. It’s not just smoke—it’s a **complex aerosol of reactive metals and acid gases** that inflame the respiratory epithelium, oxidize lung surfactant, and trigger systemic inflammation.
+When all this detonates simultaneously across a city like Kolkata, with its damp air and low winter inversion layer, you get a dense photochemical smog that traps toxins close to breathing height. It’s not just smoke—it’s a complex aerosol of reactive metals and acid gasesu that inflame the respiratory epithelium, oxidize lung surfactant, and trigger systemic inflammation.
 
 For sensitive lungs, even a few hours of exposure can spike inflammation markers, increase oxidative stress, and worsen chronic conditions like bronchitis or COPD. Think of it less as a festival and more as a mass-participation toxicology experiment with bad lighting.
 
