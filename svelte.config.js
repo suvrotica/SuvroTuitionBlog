@@ -10,15 +10,10 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import { codeToHtml } from 'shiki';
 import { join } from 'path';
 import remarkMath from 'remark-math';
-// Change this import
 import rehypeKatexSvelte from 'rehype-katex-svelte';
+// Import the custom plugin
+import rehypeRemovePreTabindex from './rehype-remove-pre-tabindex.mjs'; // Adjust path if needed
 
-/**
- * Custom highlighter function using Shiki.
- * @param {string} code The code to highlight.
- * @param {string | undefined} lang The language of the code.
- * @returns {Promise<string>} The highlighted and escaped HTML.
- */
 const highlighter = async (code, lang = 'text') => {
 	const html = await codeToHtml(code, {
 		lang,
@@ -53,8 +48,9 @@ const config = {
 			rehypePlugins: [
 				rehypeSlug,
 				[rehypeAutolinkHeadings, { behavior: 'wrap' }],
-				// And use the new plugin here
-				rehypeKatexSvelte 
+				rehypeKatexSvelte,
+				// Add the custom plugin HERE
+				rehypeRemovePreTabindex
 			],
 			smartypants: {
 				quotes: true,

@@ -1,4 +1,4 @@
-# Context file generated on: Sunday, October 12, 2025 at 4:54:47 PM GMT+5:30
+# Context file generated on: Saturday, October 25, 2025 at 6:57:28 PM GMT+5:30
 ---
 
 # Project File Layout
@@ -9,6 +9,315 @@
 ├── .npmrc
 ├── .prettierignore
 ├── .prettierrc
+├── .vercel
+│   └── output
+│       ├── functions
+│       │   ├── ![-]
+│       │   │   └── catchall.func
+│       │   │       ├── .vc-config.json
+│       │   │       ├── package.json
+│       │   │       └── _app
+│       │   │           └── immutable
+│       │   │               └── assets
+│       │   │                   ├── 00b4e1c4-42d9-4b02-9f46-9d46f2a6d9d7.BUKcnVir.webp
+│       │   │                   ├── 3d095f14-d2b3-4abd-868e-f69096a655d3.CKfMUh0Y.webp
+│       │   │                   ├── 5dd325b4-2a23-49ab-88af-dd3fa83fd632.BfjoONBf.webp
+│       │   │                   ├── 8b1b52a9-fa9a-4f03-8686-d863f5dff48f.Bp3yOsxm.png
+│       │   │                   ├── ad8bc555-8af1-412f-aa19-90f10b19efec.D7zlxWE5.webp
+│       │   │                   ├── b7748a5c-99dd-4337-8dbc-6344c2e944b4.BHoaFfik.png
+│       │   │                   ├── ChatGPT Image Aug 10_ 2025_ 02_04_17 AM.D9KGOyeo.png
+│       │   │                   ├── ChatGPT Image Aug 10_ 2025_ 02_21_38 AM.6OVUT9Hh.png
+│       │   │                   ├── ChatGPT Image Aug 10_ 2025_ 02_29_56 AM.BYkLtWPk.png
+│       │   │                   ├── ChatGPT Image Aug 10_ 2025_ 10_55_49 AM.CPr0ZM8v.png
+│       │   │                   ├── ChatGPT Image Aug 8_ 2025_ 05_48_13 AM.Dp4_V867.png
+│       │   │                   ├── ChatGPT Image Aug 8_ 2025_ 06_09_56 AM.B0hRximO.png
+│       │   │                   ├── ChatGPT Image Aug 8_ 2025_ 06_17_13 AM.CLt_q-mK.png
+│       │   │                   ├── ChatGPT Image Aug 8_ 2025_ 06_29_15 AM.BVmaVDfV.png
+│       │   │                   ├── ChatGPT Image Aug 8_ 2025_ 06_36_16 AM.DIVRyU08.png
+│       │   │                   ├── ChatGPT Image Aug 8_ 2025_ 06_58_29 AM.DOoI0xOC.png
+│       │   │                   ├── ChatGPT Image Aug 8_ 2025_ 06_58_40 AM.D_EfZ1uG.png
+│       │   │                   ├── Gemini_Generated_Image_kg5fw7kg5fw7kg5f.M_04h03J.png
+│       │   │                   ├── Gemini_Generated_Image_ovbsqxovbsqxovbs.DIFymDAf.png
+│       │   │                   ├── IMG-20250812-WA0001.Bt00s3_o.jpeg
+│       │   │                   ├── IMG-PHOTO-ART--1510172753.BB-nFGXE.jpeg
+│       │   │                   ├── IMG-PHOTO-ART--1513010449.CnJvw4M9.jpeg
+│       │   │                   └── lonely_rapist.BodqF4Vq.jpeg
+│       │   └── index
+│       └── static
+│           ├── favicon.png
+│           ├── images
+│           │   └── placeholders
+│           │       ├── 24fb85b4-ec6e-4033-8c3d-c8844279dffa.png
+│           │       ├── 723ccc8e-1bcd-4c1e-b678-219bce8504ee.png
+│           │       ├── 757fbd57-9053-4e12-95a3-b17bc2008cef.png
+│           │       ├── 91d2477e-63e4-45a3-9c5c-0532df45fe0d.png
+│           │       ├── a5nWmIXQTneuGRFUT5fQvg.webp
+│           │       ├── Ambition.png
+│           │       ├── ChatGPT Image Aug 8, 2025, 06_58_29 AM.png
+│           │       ├── ChatGPT Image Aug 8, 2025, 06_58_40 AM.png
+│           │       ├── d3-placeholder.jpeg
+│           │       ├── erg.png
+│           │       ├── Fs6YTO0GQ_-nHWut1NkdVA.webp
+│           │       ├── gDpjDHSHS72jcAoV6n7VEg.webp
+│           │       ├── IMG-20240417-WA0003.jpg
+│           │       ├── IMG-20240517-WA0030.jpg
+│           │       ├── IMG-20240723-WA0028.jpg
+│           │       ├── IMG-20250313-WA0010.jpg
+│           │       ├── IMG-20250322-WA0000.jpg
+│           │       ├── IMG-20250715-WA0001.jpg
+│           │       ├── IMG-20250717-WA0006.jpg
+│           │       ├── IMG-20250718-WA0001.jpg
+│           │       ├── IMG-20250718-WA0010.jpg
+│           │       ├── IMG-20250719-WA0000.jpg
+│           │       ├── IMG-20250721-WA0001.jpg
+│           │       ├── IMG-20250721-WA0003.jpg
+│           │       ├── IMG-20250723-WA0003.jpg
+│           │       ├── IMG-20250724-WA0003.jpg
+│           │       ├── IMG-20250724-WA0004.jpg
+│           │       ├── IMG-20250724-WA0007.jpg
+│           │       ├── IMG-20250724-WA0009.jpg
+│           │       ├── IMG-20250725-WA0000.jpg
+│           │       ├── IMG-20250725-WA0003.jpg
+│           │       ├── IMG-20250725-WA0006.jpg
+│           │       ├── IMG-20250726-WA0000.jpg
+│           │       ├── IMG-20250726-WA0001.jpg
+│           │       ├── IMG-20250726-WA0007.jpg
+│           │       ├── IMG-20250726-WA0010.jpg
+│           │       ├── IMG-20250726-WA0011.jpg
+│           │       ├── IMG-20250727-WA0000.jpg
+│           │       ├── IMG-20250727-WA0002.jpg
+│           │       ├── IMG-20250727-WA0004.jpg
+│           │       ├── IMG-20250727-WA0015.jpg
+│           │       ├── IMG-20250728-WA0000.jpg
+│           │       ├── IMG-20250728-WA0001.jpg
+│           │       ├── IMG-20250728-WA0002.jpg
+│           │       ├── IMG-20250728-WA0003.jpg
+│           │       ├── IMG-20250728-WA0004.jpg
+│           │       ├── IMG-20250728-WA0007.jpg
+│           │       ├── IMG-20250728-WA0010.jpg
+│           │       ├── IMG-20250728-WA0011.jpg
+│           │       ├── IMG-20250729-WA0000.jpg
+│           │       ├── IMG-20250729-WA0004.jpg
+│           │       ├── IMG-20250730-WA0005.jpg
+│           │       ├── IMG-20250730-WA0010.jpg
+│           │       ├── IMG-20250731-WA0004.jpg
+│           │       ├── IMG-20250731-WA0009.jpg
+│           │       ├── IMG-20250801-WA0029.jpg
+│           │       ├── IMG-20250803-WA0001.jpg
+│           │       ├── IMG-20250803-WA0002.jpg
+│           │       ├── IMG-20250803-WA0003.jpg
+│           │       ├── IMG-20250803-WA0006.jpg
+│           │       ├── IMG-20250804-WA0001.jpg
+│           │       ├── IMG-20250804-WA0002.jpg
+│           │       ├── IMG-20250805-WA0001.jpg
+│           │       ├── IMG-20250805-WA0002.jpg
+│           │       ├── IMG-20250806-WA0004.jpg
+│           │       ├── IMG-20250806-WA0010.jpg
+│           │       ├── IMG-20250807-WA0003.jpg
+│           │       ├── monk-fruit.png
+│           │       ├── p5js-placeholder.jpeg
+│           │       ├── plantuml-placeholder.jpeg
+│           │       ├── svelte-intro-thumbnail.png
+│           │       ├── svelte-runes-thumbnail.jpeg
+│           │       ├── threejs-placeholder.jpeg
+│           │       ├── tts-placeholder.jpeg
+│           │       └── YGEiXDBfQq2kVwzN7vUNIw.jpeg
+│           └── _app
+│               ├── immutable
+│               │   ├── assets
+│               │   │   ├── 0.BMUe3Uu8.css
+│               │   │   ├── 00b4e1c4-42d9-4b02-9f46-9d46f2a6d9d7.BUKcnVir.webp
+│               │   │   ├── 3d095f14-d2b3-4abd-868e-f69096a655d3.CKfMUh0Y.webp
+│               │   │   ├── 5dd325b4-2a23-49ab-88af-dd3fa83fd632.BfjoONBf.webp
+│               │   │   ├── 8b1b52a9-fa9a-4f03-8686-d863f5dff48f.Bp3yOsxm.png
+│               │   │   ├── ad8bc555-8af1-412f-aa19-90f10b19efec.D7zlxWE5.webp
+│               │   │   ├── b7748a5c-99dd-4337-8dbc-6344c2e944b4.BHoaFfik.png
+│               │   │   ├── ChatGPT Image Aug 10_ 2025_ 02_04_17 AM.D9KGOyeo.png
+│               │   │   ├── ChatGPT Image Aug 10_ 2025_ 02_21_38 AM.6OVUT9Hh.png
+│               │   │   ├── ChatGPT Image Aug 10_ 2025_ 02_29_56 AM.BYkLtWPk.png
+│               │   │   ├── ChatGPT Image Aug 10_ 2025_ 10_55_49 AM.CPr0ZM8v.png
+│               │   │   ├── ChatGPT Image Aug 8_ 2025_ 05_48_13 AM.Dp4_V867.png
+│               │   │   ├── ChatGPT Image Aug 8_ 2025_ 06_09_56 AM.B0hRximO.png
+│               │   │   ├── ChatGPT Image Aug 8_ 2025_ 06_17_13 AM.CLt_q-mK.png
+│               │   │   ├── ChatGPT Image Aug 8_ 2025_ 06_29_15 AM.BVmaVDfV.png
+│               │   │   ├── ChatGPT Image Aug 8_ 2025_ 06_36_16 AM.DIVRyU08.png
+│               │   │   ├── ChatGPT Image Aug 8_ 2025_ 06_58_29 AM.DOoI0xOC.png
+│               │   │   ├── ChatGPT Image Aug 8_ 2025_ 06_58_40 AM.D_EfZ1uG.png
+│               │   │   ├── Gemini_Generated_Image_kg5fw7kg5fw7kg5f.M_04h03J.png
+│               │   │   ├── Gemini_Generated_Image_ovbsqxovbsqxovbs.DIFymDAf.png
+│               │   │   ├── IMG-20250812-WA0001.Bt00s3_o.jpeg
+│               │   │   ├── IMG-PHOTO-ART--1510172753.BB-nFGXE.jpeg
+│               │   │   ├── IMG-PHOTO-ART--1513010449.CnJvw4M9.jpeg
+│               │   │   ├── lonely_rapist.BodqF4Vq.jpeg
+│               │   │   ├── Mermaid.BSobfmkw.css
+│               │   │   ├── PostImage.rCAgM-kM.css
+│               │   │   └── _layout.kBVKYpB4.css
+│               │   ├── chunks
+│               │   │   ├── 0sqJA89l.js
+│               │   │   ├── 1HIPwODh.js
+│               │   │   ├── 6hoMZzlc.js
+│               │   │   ├── 7bkrjWbd.js
+│               │   │   ├── 7MdEguQb.js
+│               │   │   ├── 8VBsFAg_.js
+│               │   │   ├── aAgNsMK6.js
+│               │   │   ├── B-M2HoMm.js
+│               │   │   ├── B1HIQ836.js
+│               │   │   ├── B67r8JJy.js
+│               │   │   ├── B7eOsNnk.js
+│               │   │   ├── B7q5do5O.js
+│               │   │   ├── B7U7ntqt.js
+│               │   │   ├── B98duHuM.js
+│               │   │   ├── B9Rcbslc.js
+│               │   │   ├── BBNg9iYB.js
+│               │   │   ├── bbRNuxDx.js
+│               │   │   ├── BD0-ozn1.js
+│               │   │   ├── BEGrMDf0.js
+│               │   │   ├── BHGYVWsw.js
+│               │   │   ├── BhhzL_Rs.js
+│               │   │   ├── BhRiImqY.js
+│               │   │   ├── BigU4G0v.js
+│               │   │   ├── BJkW__CW.js
+│               │   │   ├── BKlbN5_C.js
+│               │   │   ├── BLhut_Lh.js
+│               │   │   ├── BLXQkcV9.js
+│               │   │   ├── BMntJPq6.js
+│               │   │   ├── BoEjjG6c.js
+│               │   │   ├── Boh1U3Qg.js
+│               │   │   ├── BOXsJ-Wg.js
+│               │   │   ├── BQny6CiI.js
+│               │   │   ├── BRzKQYUk.js
+│               │   │   ├── BT5TNs7N.js
+│               │   │   ├── BTZ4AmOF.js
+│               │   │   ├── BUfK96sl.js
+│               │   │   ├── BusnRh6a.js
+│               │   │   ├── BV3kNP9n.js
+│               │   │   ├── Bv6LV3Zo.js
+│               │   │   ├── BXQP4eJ3.js
+│               │   │   ├── BxxdrBfN.js
+│               │   │   ├── BZxkPoG1.js
+│               │   │   ├── B_gqSsDw.js
+│               │   │   ├── C-qnAkIB.js
+│               │   │   ├── C1XQ_F2Z.js
+│               │   │   ├── C4ZpZx-c.js
+│               │   │   ├── C9dXWd7t.js
+│               │   │   ├── C9fa6FTx.js
+│               │   │   ├── CAIzPROC.js
+│               │   │   ├── Cbddpe32.js
+│               │   │   ├── CBkPjoyn.js
+│               │   │   ├── CBomGvzY.js
+│               │   │   ├── CebAjozz.js
+│               │   │   ├── CFXYksbc.js
+│               │   │   ├── CGAIoIH0.js
+│               │   │   ├── CgnPuLyE.js
+│               │   │   ├── Chq1RCTN.js
+│               │   │   ├── ChWnQ-fc.js
+│               │   │   ├── CIC7HTD-.js
+│               │   │   ├── Ck9NbWmf.js
+│               │   │   ├── Ckhb3Pis.js
+│               │   │   ├── CllbmYjy.js
+│               │   │   ├── CLLiXKgX.js
+│               │   │   ├── Cm00zof6.js
+│               │   │   ├── CmKTTxBW.js
+│               │   │   ├── CmM0_1ZH.js
+│               │   │   ├── Cn7pUZJM.js
+│               │   │   ├── CnFHSmm8.js
+│               │   │   ├── ComRBmdH.js
+│               │   │   ├── Copgxxlq.js
+│               │   │   ├── Cpj98o6Y.js
+│               │   │   ├── cQosKXol.js
+│               │   │   ├── Crt1M_1Z.js
+│               │   │   ├── CS4soQnI.js
+│               │   │   ├── CsM5MeUo.js
+│               │   │   ├── CTn_lXSu.js
+│               │   │   ├── CTvZPxDA.js
+│               │   │   ├── CV7U2zMi.js
+│               │   │   ├── CWFi2X9i.js
+│               │   │   ├── CWv5yync.js
+│               │   │   ├── CX4dvTGN.js
+│               │   │   ├── CYgJF_JY.js
+│               │   │   ├── CYn7FLA_.js
+│               │   │   ├── D19ejMZX.js
+│               │   │   ├── D1JFKnl2.js
+│               │   │   ├── D2CAelsQ.js
+│               │   │   ├── D2HdbQpZ.js
+│               │   │   ├── D2hXuPN_.js
+│               │   │   ├── D2nGpDRe.js
+│               │   │   ├── D34Oz-0n.js
+│               │   │   ├── D3dvHfut.js
+│               │   │   ├── D4L63P9L.js
+│               │   │   ├── D5mT9ifS.js
+│               │   │   ├── D6nap29M.js
+│               │   │   ├── D9cd6A7y.js
+│               │   │   ├── Dak7ETBX.js
+│               │   │   ├── DbbhC6Bu.js
+│               │   │   ├── DbcjhZVq.js
+│               │   │   ├── DBN__-9d.js
+│               │   │   ├── DC9cPDzQ.js
+│               │   │   ├── DCaW092A.js
+│               │   │   ├── DCdPujGt.js
+│               │   │   ├── DDguwrKm.js
+│               │   │   ├── DdiNJE69.js
+│               │   │   ├── DdO6nIRp.js
+│               │   │   ├── DeCviTVi.js
+│               │   │   ├── DEc_AiZy.js
+│               │   │   ├── DEhJ8Cvc.js
+│               │   │   ├── DerIWmdt.js
+│               │   │   ├── Df8j4Te6.js
+│               │   │   ├── DfGvvSf_.js
+│               │   │   ├── DfpquHRF.js
+│               │   │   ├── DHt_Dyv1.js
+│               │   │   ├── DilRMIGP.js
+│               │   │   ├── DJbVHNfK.js
+│               │   │   ├── DJFHasOP.js
+│               │   │   ├── DkfTB5eA.js
+│               │   │   ├── DlGdT3zd.js
+│               │   │   ├── Dlj-gYD3.js
+│               │   │   ├── DOUyyEYg.js
+│               │   │   ├── Dp1pzeXC.js
+│               │   │   ├── DqLAgHPk.js
+│               │   │   ├── DsbOcu5s.js
+│               │   │   ├── Dsj90W40.js
+│               │   │   ├── Dtok67W-.js
+│               │   │   ├── DTrqypnp.js
+│               │   │   ├── Du2k24Tr.js
+│               │   │   ├── Dw9jXFWV.js
+│               │   │   ├── DXbBRQOI.js
+│               │   │   ├── Dz6Dkifu.js
+│               │   │   ├── D_NTWwlA.js
+│               │   │   ├── Ge9ZwYOb.js
+│               │   │   ├── Gi6I4Gst.js
+│               │   │   ├── gSV3BJRb.js
+│               │   │   ├── iWhfB5J9.js
+│               │   │   ├── Jmivwhbr.js
+│               │   │   ├── jTSdGKH1.js
+│               │   │   ├── knXFgaB2.js
+│               │   │   ├── LIMLrSHF.js
+│               │   │   ├── Nkad4ktK.js
+│               │   │   ├── RqJXVaZi.js
+│               │   │   ├── T-3AqF4S.js
+│               │   │   ├── tH8wzWac.js
+│               │   │   ├── u5pD4i1i.js
+│               │   │   ├── uNB1YaFO.js
+│               │   │   ├── UVp3au-r.js
+│               │   │   ├── W8DXMFtx.js
+│               │   │   ├── wNF3k8ao.js
+│               │   │   ├── XOxRMBkf.js
+│               │   │   ├── Y-_6yP0L.js
+│               │   │   ├── YRoeYNSX.js
+│               │   │   ├── ZctOTu47.js
+│               │   │   └── ZtWUeOA6.js
+│               │   ├── entry
+│               │   │   ├── app.DTCUSaDl.js
+│               │   │   └── start.CIMhD-W7.js
+│               │   └── nodes
+│               │       ├── 0.D7ZSrh1P.js
+│               │       ├── 1.CwtWLUfX.js
+│               │       ├── 2.CLLz5imG.js
+│               │       ├── 3.DbAVMbfb.js
+│               │       ├── 4.C7HM94DS.js
+│               │       ├── 5.D19IrsGT.js
+│               │       └── 6.B5DWOClY.js
+│               └── version.json
 ├── drafts
 │   ├── d3-axis-integration.md
 │   ├── d3-integration.md
@@ -22,6 +331,7 @@
 ├── package-lock.json
 ├── package.json
 ├── README.md
+├── rehype-remove-pre-tabindex.mjs
 ├── scripts
 │   └── generate-context.mjs
 ├── src
@@ -33,9 +343,12 @@
 │   │   │   ├── IMG-20250819-WA0001.jpg
 │   │   │   ├── IMG-20251006-WA0019.jpg
 │   │   │   ├── IMG-20251012-WA0001.jpg
+│   │   │   ├── IMG-20251018-WA0007.jpg
 │   │   │   ├── op
 │   │   │   │   ├── IMG-20251012-WA0004.jpg
-│   │   │   │   └── IMG-20251012-WA0006.jpg
+│   │   │   │   ├── IMG-20251012-WA0006.jpg
+│   │   │   │   ├── WhatsApp Image 2025-10-15 at 3.47.23 PM.jpeg
+│   │   │   │   └── WhatsApp Image 2025-10-15 at 4.07.26 PM.jpeg
 │   │   │   └── slideshow-images
 │   │   │       ├── landscape
 │   │   │       │   ├── 5b458083-5b11-4441-bdc2-3f95a1e81e76.png
@@ -52,7 +365,18 @@
 │   │   │       │   ├── IMG-20251002-WA0039.jpg
 │   │   │       │   ├── IMG-20251005-WA0010.jpg
 │   │   │       │   ├── IMG-20251012-WA0004.jpg
-│   │   │       │   └── IMG-20251012-WA0006.jpg
+│   │   │       │   ├── IMG-20251012-WA0006.jpg
+│   │   │       │   ├── IMG-20251013-WA0004.jpg
+│   │   │       │   ├── IMG-20251014-WA0012.jpg
+│   │   │       │   ├── IMG-20251015-WA0003.jpg
+│   │   │       │   ├── IMG-20251015-WA0004.jpg
+│   │   │       │   ├── IMG-20251015-WA0005.jpg
+│   │   │       │   ├── IMG-20251018-WA0003.jpg
+│   │   │       │   ├── IMG-20251019-WA0025.jpg
+│   │   │       │   ├── IMG-20251021-WA0003.jpg
+│   │   │       │   ├── IMG-20251023-WA0006.jpg
+│   │   │       │   ├── IMG-20251023-WA0011.jpg
+│   │   │       │   └── IMG-20251023-WA0012.jpg
 │   │   │       ├── portrait
 │   │   │       │   ├── 24fb85b4-ec6e-4033-8c3d-c8844279dffa.png
 │   │   │       │   ├── 3741d4c3-269c-431f-a2db-21e28fc94941.png
@@ -240,6 +564,71 @@
 │   │   │       │   ├── IMG-20251011-WA0018.jpg
 │   │   │       │   ├── IMG-20251011-WA0019.jpg
 │   │   │       │   ├── IMG-20251012-WA0003.jpg
+│   │   │       │   ├── IMG-20251012-WA0008.jpg
+│   │   │       │   ├── IMG-20251012-WA0009.jpg
+│   │   │       │   ├── IMG-20251012-WA0010.jpg
+│   │   │       │   ├── IMG-20251013-WA0001.jpg
+│   │   │       │   ├── IMG-20251013-WA0002.jpg
+│   │   │       │   ├── IMG-20251013-WA0003.jpg
+│   │   │       │   ├── IMG-20251013-WA0005.jpg
+│   │   │       │   ├── IMG-20251013-WA0006.jpg
+│   │   │       │   ├── IMG-20251014-WA0009.jpg
+│   │   │       │   ├── IMG-20251014-WA0010.jpg
+│   │   │       │   ├── IMG-20251014-WA0011.jpg
+│   │   │       │   ├── IMG-20251014-WA0020.jpg
+│   │   │       │   ├── IMG-20251014-WA0023.jpg
+│   │   │       │   ├── IMG-20251014-WA0024.jpg
+│   │   │       │   ├── IMG-20251014-WA0025.jpg
+│   │   │       │   ├── IMG-20251015-WA0001.jpg
+│   │   │       │   ├── IMG-20251015-WA0006.jpg
+│   │   │       │   ├── IMG-20251015-WA0007.jpg
+│   │   │       │   ├── IMG-20251015-WA0008.jpg
+│   │   │       │   ├── IMG-20251015-WA0011.jpg
+│   │   │       │   ├── IMG-20251016-WA0000.jpg
+│   │   │       │   ├── IMG-20251016-WA0001.jpg
+│   │   │       │   ├── IMG-20251016-WA0002.jpg
+│   │   │       │   ├── IMG-20251016-WA0004.jpg
+│   │   │       │   ├── IMG-20251016-WA0005.jpg
+│   │   │       │   ├── IMG-20251016-WA0006.jpg
+│   │   │       │   ├── IMG-20251016-WA0009.jpg
+│   │   │       │   ├── IMG-20251016-WA0011.jpg
+│   │   │       │   ├── IMG-20251017-WA0001.jpg
+│   │   │       │   ├── IMG-20251017-WA0005.jpg
+│   │   │       │   ├── IMG-20251017-WA0006.jpg
+│   │   │       │   ├── IMG-20251017-WA0008.jpg
+│   │   │       │   ├── IMG-20251017-WA0009.jpg
+│   │   │       │   ├── IMG-20251018-WA0002.jpg
+│   │   │       │   ├── IMG-20251018-WA0004.jpg
+│   │   │       │   ├── IMG-20251018-WA0005.jpg
+│   │   │       │   ├── IMG-20251018-WA0009.jpg
+│   │   │       │   ├── IMG-20251018-WA0010.jpg
+│   │   │       │   ├── IMG-20251018-WA0012.jpg
+│   │   │       │   ├── IMG-20251018-WA0017.jpg
+│   │   │       │   ├── IMG-20251019-WA0014.jpg
+│   │   │       │   ├── IMG-20251019-WA0016.jpg
+│   │   │       │   ├── IMG-20251019-WA0022.jpg
+│   │   │       │   ├── IMG-20251019-WA0026.jpg
+│   │   │       │   ├── IMG-20251020-WA0030.jpg
+│   │   │       │   ├── IMG-20251020-WA0044.jpg
+│   │   │       │   ├── IMG-20251020-WA0046.jpg
+│   │   │       │   ├── IMG-20251020-WA0050.jpg
+│   │   │       │   ├── IMG-20251020-WA0068.jpg
+│   │   │       │   ├── IMG-20251020-WA0069.jpg
+│   │   │       │   ├── IMG-20251020-WA0070.jpg
+│   │   │       │   ├── IMG-20251020-WA0071.jpg
+│   │   │       │   ├── IMG-20251021-WA0001.jpg
+│   │   │       │   ├── IMG-20251021-WA0002.jpg
+│   │   │       │   ├── IMG-20251021-WA0003.jpg
+│   │   │       │   ├── IMG-20251021-WA0005.jpg
+│   │   │       │   ├── IMG-20251021-WA0064.jpg
+│   │   │       │   ├── IMG-20251022-WA0000.jpg
+│   │   │       │   ├── IMG-20251022-WA0001.jpg
+│   │   │       │   ├── IMG-20251023-WA0004.jpg
+│   │   │       │   ├── IMG-20251023-WA0009.jpg
+│   │   │       │   ├── IMG-20251024-WA0002.jpg
+│   │   │       │   ├── IMG-20251024-WA0003.jpg
+│   │   │       │   ├── IMG-20251025-WA0000.jpg
+│   │   │       │   ├── IMG-20251025-WA0001.jpg
 │   │   │       │   ├── IMG-PHOTO-ART--1510172753.jpg
 │   │   │       │   ├── IMG-PHOTO-ART--1513010449.jpg
 │   │   │       │   └── lonely_rapist.jpg
@@ -260,7 +649,6 @@
 │   │   │   │   ├── TextToSpeech.svelte
 │   │   │   │   └── YouTubePlayer.svelte
 │   │   │   ├── D3
-│   │   │   │   ├── D3
 │   │   │   │   ├── D3Axis.svelte
 │   │   │   │   ├── D3Circle.svelte
 │   │   │   │   └── D3LineChart.svelte
@@ -293,6 +681,7 @@
 │   │   │   └── posts.ts
 │   │   ├── index.ts
 │   │   ├── posts
+│   │   │   ├── Agroupofholy.md
 │   │   │   ├── AIasHumans.md
 │   │   │   ├── AmABengaliMan.md
 │   │   │   ├── Anaximander.md
@@ -302,6 +691,7 @@
 │   │   │   ├── Audiobook.md
 │   │   │   ├── BabuMoshai.md
 │   │   │   ├── Bengali.md
+│   │   │   ├── BengaliChap.md
 │   │   │   ├── BengaliFaces.md
 │   │   │   ├── BengaliFart.md
 │   │   │   ├── BengaliVS.md
@@ -310,6 +700,7 @@
 │   │   │   ├── BirthdayBoy.md
 │   │   │   ├── Bloke.md
 │   │   │   ├── Bluish.md
+│   │   │   ├── Brain.md
 │   │   │   ├── BrainTalk.md
 │   │   │   ├── Burned.md
 │   │   │   ├── CalcuttaMorning.md
@@ -323,6 +714,7 @@
 │   │   │   ├── Fibonacci.md
 │   │   │   ├── Field.md
 │   │   │   ├── Flowchart.md
+│   │   │   ├── FuckingDiwali2025.md
 │   │   │   ├── FuckThisFuckingShit.md
 │   │   │   ├── Gargantuan.md
 │   │   │   ├── GlassHalf.md
@@ -331,9 +723,11 @@
 │   │   │   ├── HolyFatAss.md
 │   │   │   ├── Homeopathy.md
 │   │   │   ├── Inspirational.md
+│   │   │   ├── LargeInLLM.md
 │   │   │   ├── LAvids.md
 │   │   │   ├── Letters.md
 │   │   │   ├── LinearAlgebra.md
+│   │   │   ├── LonelyFarts.md
 │   │   │   ├── LonelyRapist.md
 │   │   │   ├── LoveLullaby.md
 │   │   │   ├── MAFA.md
@@ -349,6 +743,7 @@
 │   │   │   ├── MyAnger.md
 │   │   │   ├── MyFatherAndBooks.md
 │   │   │   ├── MyPujaMemories.md
+│   │   │   ├── MySchlong.md
 │   │   │   ├── NegExponent.md
 │   │   │   ├── NotAmbition.md
 │   │   │   ├── OldMemories.md
@@ -686,6 +1081,13 @@
 │           ├── IMG-20251012-WA0003.jpg
 │           ├── IMG-20251012-WA0004.jpg
 │           ├── IMG-20251012-WA0006.jpg
+│           ├── IMG-20251012-WA0009.jpg
+│           ├── IMG-20251014-WA0012.jpg
+│           ├── IMG-20251016-WA0000.jpg
+│           ├── IMG-20251018-WA0010.jpg
+│           ├── IMG-20251019-WA0022.jpg
+│           ├── IMG-20251020-WA0030.jpg
+│           ├── IMG-20251023-WA0009.jpg
 │           ├── IMG-PHOTO-ART--1510172753.jpg
 │           ├── IMG-PHOTO-ART--1513010449.jpg
 │           ├── lonely_rapist.jpg
@@ -794,15 +1196,10 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import { codeToHtml } from 'shiki';
 import { join } from 'path';
 import remarkMath from 'remark-math';
-// Change this import
 import rehypeKatexSvelte from 'rehype-katex-svelte';
+// Import the custom plugin
+import rehypeRemovePreTabindex from './rehype-remove-pre-tabindex.mjs'; // Adjust path if needed
 
-/**
- * Custom highlighter function using Shiki.
- * @param {string} code The code to highlight.
- * @param {string | undefined} lang The language of the code.
- * @returns {Promise<string>} The highlighted and escaped HTML.
- */
 const highlighter = async (code, lang = 'text') => {
 	const html = await codeToHtml(code, {
 		lang,
@@ -837,8 +1234,9 @@ const config = {
 			rehypePlugins: [
 				rehypeSlug,
 				[rehypeAutolinkHeadings, { behavior: 'wrap' }],
-				// And use the new plugin here
-				rehypeKatexSvelte 
+				rehypeKatexSvelte,
+				// Add the custom plugin HERE
+				rehypeRemovePreTabindex
 			],
 			smartypants: {
 				quotes: true,
@@ -3097,6 +3495,86 @@ export const topics: Topic[] = [
 // place files you want to import through the `$lib` alias in this folder.
 
 
+# File: src/lib/posts/Agroupofholy.md
+
+---
+title: "A group of holy"
+
+category: "Doggerel Religion"
+thumbnail: "/images/placeholders/IMG-20251023-WA0009.jpg"
+date: "2025-10-23"
+tags: ["doggerel", "satirical poetry", "religious satire", "dark humor", "Bengali", "hypocrisy", "self-deprecation", "profane poetry"]
+published: true
+---
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+</script>
+
+![a group of holy](/images/placeholders/IMG-20251023-WA0009.jpg) 
+
+<br>
+I am thinking of thinking as I do,<br>
+In a thought of a stitched stretch.<br>
+Just around me the noise is horrible,<br>
+Of fucks who only vomit and retch.<br>
+<br>
+A group of holy the term bengali,  <br>
+I sucked when I fucked my luck.  <br>
+The worms these, floating in disease,  <br>
+The buck stops in much muck.  <br>
+  <br>
+Duck sitting yes in reverse,  <br>
+I am a dishonored loss in a toss.  <br>
+Rolling the ridiculousness down,  <br>
+A ball can't gather pubic moss.  <br>
+  <br>
+Soon as a loon on a new moon,  <br>
+Hark a voice inside farts.  <br>
+Or maybe I mishear dear,  <br>
+Insanity installed in several parts.  <br>
+ <br> 
+Often matrimony poison antimony,  <br>
+I shit you not, vouched on pot.  <br>
+The gods did warn, shit full urn,  <br>
+Life then rots it does it not?  <br>
+<br> 
+A scrote who wrote the promissory rote,<br> 
+Inserted his hairy dick from behind.<br> 
+Hell is a thick urgent dick without lube,<br> 
+Tearing up your insides from the rind. <br> 
+  <br>
+Hyped promo but hemlock in slow mo,  <br>
+Bile hidden in a frock.  <br>
+Men with noodles for spine,  <br>
+Now bend to suck their own cock.  <br>
+  <br>
+This not even my own telling,  <br>
+It's a sage who was raped by his wife. <br> 
+Knife in hand she still stands,  <br>
+His balls first then his life.  <br>
+  <br>
+Dingle berry in sherry not merry,  <br>
+Just another mute fuck dies.  <br>
+Clothed smiles with acerbic wit,  <br>
+With ease they tell their lies.  <br>
+  <br>
+Holy this land my cum bland,  <br>
+Holy also my hairy anal hole.  <br>
+Not tame or lame the new dame,  <br>
+Sore the asshole of my soul.  <br>
+  <br>
+Littered around these critters,  <br>
+The people I am wed to.  <br>
+To and fro also the vacillation,  <br>
+Bacillus also a rancid hoe.  <br>
+  <br>
+Tricked into this, gargle this piss, <br> 
+Pus and shit makes them weak.  <br>
+Hence quite tense some of them,  <br>
+Flattered bengali group a freak.<br>
+<br>
+
+
 # File: src/lib/posts/AIasHumans.md
 
 ---
@@ -3482,6 +3960,8 @@ tags: ["asimov", "bill bryson" ]
 
 **ENGLISH**
 
+<Ytp src="https://youtu.be/k_Hse48e_7M?si=lwhv4yS-yPzOO_fU" />
+
 <Ytp src="https://youtu.be/Bz9bwgomnZQ?si=e9jvKzSRfzejBTWO" />
 
 <Ytp src="https://youtu.be/jgznpeJkdi8?si=Z9sQuKI4uZBu55xN" />
@@ -3490,9 +3970,6 @@ tags: ["asimov", "bill bryson" ]
 
 <Ytp src="https://youtu.be/J3OqgtDZ7gk?si=2q7VTtQ9_4hHLZ_g" />
 
-<Ytp src="https://youtu.be/Zwqu5gRSTZU?si=GdGro0_i6x3DvVTm" />
-
-<Ytp src="https://youtu.be/bt5EJssoGUU?si=v4VqFNDva8lDHfi5" />
 
 <Ytp src="https://youtu.be/bTyHIR8YBLc?si=mfNFLE7OQvMMJfuq" />
 
@@ -3519,6 +3996,16 @@ tags: ["asimov", "bill bryson" ]
 <Ytp src="https://youtu.be/mMIujBhEnPE?si=X2EcGHl_KRraTioI" />
 
 <Ytp src="https://youtu.be/fRZ_ZsrxLeU?si=uXrhApAarhMNLwVa" />
+
+<Ytp src="https://youtu.be/fGG1s3JIQ14?si=6L-yhP5KDbABa173" />
+
+<Ytp src="https://youtu.be/3jzG6ztKdww?si=qVwaDB7xUqkwhNld" />
+
+<Ytp src="https://youtu.be/ixEcYvCOVtc?si=ns8WY4N5fk8hc8UD" />
+
+<Ytp src="https://youtu.be/9gIGvOSi_jI?si=c7PufpR13_cytYRj" />
+
+<Ytp src="https://youtu.be/imy4OYiCj-c?si=vb6Dd1BqJfxblAIH" />
 
 
 # File: src/lib/posts/BabuMoshai.md
@@ -3555,7 +4042,7 @@ To be Bengali, lower-middle class, and living in Calcutta is to master the art o
 
 ---
 
-title : "Bengali Songs Music" 
+title : "Bengali Music & Movies" 
 
 thumbnail : "/images/placeholders/IMG-20251006-WA0002.jpg"
 
@@ -3581,10 +4068,141 @@ tags: ["Bengali"]
 
 **To give full credit and support to the original creator, please click the video title and watch it on YouTube. It makes a real difference for them.**
 
+**Movies**
+
+<Ytp src="https://youtu.be/iwsigIyhPWg?si=AuN5SK9pvZ02Zi6c" />
+
+<Ytp src="https://youtu.be/cdrmzezrdgQ?si=YPVqabAAd5figwz6" />
+
+
+<Ytp src="https://youtu.be/7UHApGVi9j8?si=fRgdVXsw7WE-_5hA" />
+
+<Ytp src="https://youtu.be/iq55JrrCTMM?si=pZIx_xRQx32IxDfq" />
+
+<Ytp src="https://youtu.be/isvSLCepmpU?si=z6lUxHmQ9D6jqtAF" />
+
+<Ytp src="https://youtu.be/YKp563ransM?si=_QYnsvIE3rDAfAdt" />
+
+<Ytp src="https://youtu.be/G_rt5ejPcLE?si=3kyBlpnI-9i4wwQx" />
+
+<Ytp src="https://youtu.be/KcDuSGmSaTQ?si=oiNBQYV2DiYRHzOV" />
+
+<Ytp src="https://youtu.be/F-3VByangcY?si=uVvMbD9fA7wMGdka" />
+
+<Ytp src="https://youtu.be/pAJ32TOXXd0?si=1D0H1ZnthLVV9q9T" />
+
+<Ytp src="https://youtu.be/3zLM-FfGydw?si=_ipCjrDgusZSn9_9" />
+
+<Ytp src="https://youtu.be/FJ7HkPOgUxw?si=W6wDY-l0f1UajlY-" />
+
+<Ytp src="https://youtu.be/Q3I-C9p5keo?si=I7Fww_7MzWXhwqj4" />
+
+**Music**
+
 <Ytp src="https://youtu.be/HvOXmnTJYRc?si=dO0MjoWbbxZ6N3My" />
 
 <Ytp src="https://youtu.be/lvmsSGKP9TE?si=_c1OiAc2LN_yZiSB" />
 
+<Ytp src="https://youtu.be/ERTUdQb5vAU?si=f0WkC1sV8Gm5zQAL" />
+
+<Ytp src="https://youtu.be/TfuV58q4Qbo?si=7XF4Dj712x36uscw" />
+
+
+# File: src/lib/posts/BengaliChap.md
+
+---
+
+title : "Clapping bengali chap" 
+
+thumbnail : "/images/placeholders/IMG-20251019-WA0022.jpg"
+
+date: "2025-10-19"
+
+category : "Doggerel" 
+
+published : true
+
+tags: ["Faces", "Gay", "Transsexual", "Kolkata", "Calcutta", "shemale", "Shit", "tits", "Buttocks"]
+
+
+---
+
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251019-WA0022.jpg?url';
+        
+    
+</script>
+
+<PostImage src={imageSrc1} alt="Gay Bengali Fuck Face " />
+
+<br>
+A Bengali good-for-nothing chap,  <br>
+All I do day in, day out, is clap.  <br>
+I clap because I am holy, I dare say,  <br>
+But the neighbors giggle and say I'm gay.<br>
+<br>
+So I decided to fuck the neighbors all, <br> 
+I want to be known for their fall.  <br>
+I'll put in their ass my dick, yes, a trick,  <br>
+Until there's cum in their prick.<br>
+<br>
+By the many millions of Hindoo gods, I swear,  <br>
+I'll fuck all false friends, because I really care.  <br>
+Then I'll see if I'm holy or if I'm gay, <br> 
+I may be both if it's on a totally holy day.<br>
+<br>
+Sometimes I suck cock, wearing a frock,<br>
+I do not know why I like everything pink.<br>
+Sometimes my shit smells so cute and sweet,<br>
+Sweetly I savor the shit sweet pinkish stink.<br>
+<br>
+Fuck me fuck me not,<br>
+I know when I shit it's a lot.<br>
+Suck my dick you fuckass prick,<br>
+Or I insert in your ass a stick.<br>
+<br>
+Many on this rock sucked cock,<br>
+Alan Turing of computer and AI fame.<br>
+When in holy holes it's goodly fair, <br>
+A hindoo droopy in a tight most lame. <br>
+<br>
+Gassy flatulent fact never intact,<br>
+But the Indian diaspora dissolved in it.<br>
+This is the smelliest part of his anus,<br>
+Of homo sapiens who hasn't taken a shit.<br><br>
+Life is bullshit, this life, my foot,  <br>
+Go fuck yourself already like a brute.  <br>
+I know you're an asshole like the rest, <br> 
+A fuckface, a bloody fool, and also a pest.<br>
+<br>
+Die already, all you morons, I say,  <br>
+I can't curse enough, only 24 hours in a day.  <br>
+This planet is doomed to die pretty soon, <br> 
+Don't really care; I'm a fucking cartoon.<br>
+<br>
+Fuck everyone and fuck everything I see,  <br>
+Not much in this life I love except pee. <br> 
+And shit when it is in large sums.  <br>
+On heads from the balcony it comes.  <br>
+<br>
+I dance in a trance I giggle I'm crass,<br> 
+Fuck me baby in my middle-class ass. <br>
+Pinky promise I won't shit on your dick, <br>
+I fondle buttocks I want to keep.<br>
+<br>
+I wanna have a god baby in my stinky ass, <br>
+No cunt in front I shit the fuck out with gas.<br>
+Fuck me hard krishna while mohammad sucks, <br>
+Fuck me, fuck me and fuck bengali fucks. <br><br>
+Gee glib glee how little I fucking see,<br>
+Inside my ass or of the fuck before me.<br>
+It's only by looking at the diarrhea,<br>
+I can tell whether it's a he or a she.<br><br>
+Plain as as ass plainspeak I say,<br>
+Sometimes something inside me not today.<br>
+A gurgling sound in my bloody bladder,<br>
+My ass splattered on the wall as spray.<br><br>
 
 
 # File: src/lib/posts/BengaliFaces.md
@@ -3654,11 +4272,11 @@ Biology is funny—until, of course, you realize you're the punchline. And there
 
 ---
 title: "Bengali Fart"
-description: "A satirical and profane doggerel using the 'Bengali fart' as a potent metaphor for political decay and societal hypocrisy in Bengal and beyond. A darkly humorous take on identity and belonging."
+
 category: "Doggerel"
 thumbnail: "/images/placeholders/IMG-20250731-WA0004.jpg"
 date: "2025-07-31"
-keywords: ["doggerel", "political satire", "Bengali", "Kolkata", "profane poetry", "dark humor", "social commentary", "Mamata Banerjee", "Narendra Modi", "Indian politics", "scatological humor"]
+tags: ["doggerel", "political satire", "Bengali", "Kolkata", "profane poetry", "dark humor", "social commentary", "Mamata Banerjee", "Narendra Modi", "Indian politics", "scatological humor"]
 published: true
 ---
 <script>
@@ -3697,6 +4315,10 @@ You can fart but you can't fret.<br>
 Fuck off I cried, I realized I died,<br>
 The future a fart of imbecelic threat.<br>
 <br>
+Bengali shit always stuck in escapist gas,<br>
+Hallelujah there's a second jesus cumming.<br>
+A series of deep diaphragmatic beats,<br>
+Or a sad bengali violin strumming.<br><br>
 Bits tiny coalesce as shit shiny,<br>
 So much that I turn true blue.<br>
 Having your shit like rum cake,<br>
@@ -3999,13 +4621,17 @@ And yet I write, because I am sorry—I still exist. Because even a losing hand 
 
 ---
 title: "Bloke's Bladder Sick"
-description: "A short, scathing doggerel that satirizes blind faith and religious authority. Through profane and visceral humor, the poem critiques the gullibility of followers who mistake a sick man for a god."
-category: "Doggerel"
+
+category: "Doggerel Religion"
+
 thumbnail: "/images/placeholders/IMG-20250727-WA0015.jpg"
-date: "2025-07-27"
-keywords: ["doggerel", "blasphemy", "religious satire", "dark humor", "profane poetry", "anti-religion", "blind faith", "cynicism", "satirical poetry"]
+date: "2025-10-13"
+tags: ["doggerel", "blasphemy", "religious satire", "dark humor", "profane poetry", "anti-religion", "blind faith", "cynicism", "satirical poetry"]
+
 published: true
+
 ---
+
 <script>
     import PostBadge from '$lib/components/ui/PostBadge.svelte';
 </script>
@@ -4023,6 +4649,16 @@ And choke on stupid holy-ass hokey hope. <br>
 While deep up your arse I shove the gift,<br>
 The head of the dead dud duplicitous pope.<br>
 <br>
+You don't know his shape but hairy,<br>
+Abrahamic most-lame bearded crusty scrote.<br>
+A buddhist fuck, or a hindoo fat schmuck?<br>
+In India it's always a democratic vote.<br>
+<br>
+I came, I saw, I pissed in your fucking mouth,<br>
+Kowtow now, I am holier, and hornier than thou.<br>
+Make sure your asshole is lubed clean,<br>
+Going to insert holy in that hole now.<br>
+<br>
 Rejoice? Yes, my fucking arbitrary choice, <br>
 You, with your mother and father too! <br>
 Yes, up to you, how many heads fit there, <br>
@@ -4031,7 +4667,7 @@ It's your asshole—I don't have a clue. <br>
 So toodles and eat all my shit noodles, <br>
 And yes, <i>do</i> draw <i>deep</i> inside, my fart down.<br>
 Come part those legs you bitch-ass cunt, <br>
-Your god is a fictional fat-ass clown.<br>
+Your god is a fictional feces Indian brown.<br>
 </div>
 
 
@@ -4078,6 +4714,43 @@ Sometimes a mood is best captured not in prose, but in the sparse lines of a poe
 <div class="prose-p:my-2">
 This piece reflects a moment of raw, unfiltered emotion—a snapshot of the internal monologue that can accompany a depressive episode.
 </div>
+
+
+# File: src/lib/posts/Brain.md
+
+---
+
+title : "Brain Documentaries" 
+
+thumbnail : "/images/placeholders/IMG-20251018-WA0010.jpg"
+
+date: "2025-10-19"
+
+category : "Audio Video" 
+
+published : true
+
+tags: ["Brain", "Alain Goreilly" ]
+
+
+---
+
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251018-WA0010.jpg?url';
+   import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
+</script> 
+    
+
+<PostImage src={imageSrc1} alt="goat on headphone listening to Bengali songs and shitting" />
+
+**To give full credit and support to the original creator, please click the video title and watch it on YouTube. It makes a real difference for them.**
+
+**Alain Goreilly**
+
+<Ytp src="https://youtu.be/jYP3crI0wpc?si=Wgp4m7wVdp7xG_zh " />
+
+
 
 
 # File: src/lib/posts/BrainTalk.md
@@ -4146,7 +4819,7 @@ category: "Work"
 
 thumbnail: "/images/placeholders/IMG-20250928-WA0007.jpg"
 
-date: "2025-10-06"
+date: "2025-10-14"
 
 tags: ["NRI", "US immigration", "tech workers", "Indian diaspora", "American dream", "globalization", "political commentary", "work visa", "US economy", "Indian brain drain"]
 
@@ -4162,6 +4835,8 @@ published: true
 	import imageSrc4 from '$lib/assets/slideshow-images/portrait/IMG-20250929-WA0002.jpg?url';
 	import imageSrc5 from '$lib/assets/slideshow-images/portrait/IMG-20251001-WA0009.jpg?url';
 	import imageSrc6 from '$lib/assets/slideshow-images/portrait/IMG-20251002-WA0004.jpg?url';
+	import imageSrc7 from '$lib/assets/IMG-20251018-WA0007.jpg?url';
+	
     import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
 </script>
 
@@ -4191,7 +4866,11 @@ published: true
 
 <Ytp src="https://youtu.be/FkHa3W4pQME?si=sshLTZJ6alOF-DqA" />
 
-India is a promiscuously and unabashedly unreliable country to its citizens; in any situation the unfortunate denizens can dream up, they'll always find fitting and exemplary unprecedented standards that no other country can match. There’s a nuanced difference between being unreliable and being chronically disinterested — the former is more pernicious, if only because intent isn’t clear at the outset. For the vast herd who’ve never crawled out of their fenced, parochial wells, who’ve read nothing beyond the domesticated drivel their schools and WhatsApp feeds shove down their throats, my objections to India’s self-advertised fantasy as some Vishwaguru sound like rudeness. But that’s only because mediocrity hates mirrors. I write, I satirize, I provoke—because unless you’ve tried to build something vast, to dream at continental scale, to drag this country’s inert weight uphill, you won’t understand the bruises I carry. You’ll call it cynicism; I call it the scar tissue of ambition. This post among others will explain my position in this ecosystem. 
+In India, even a streetside chaiwala wants to be an investor—except this ambition is really almost a license to scam the fuck out of anyone looking for money to start a business. So be warned, if you are a foreigner or NRI, that, most definitely, it’s a lie. The fuckfaces are all just pretending, and they don’t shy away from crafting castles of lies in which live a relative—a relation that they make up to con—a relation in a position of power, or a relative to one in power, or a financier, or a financier’s dingleberry dung chutney—bullshit garnished with horseshit. I fell for it because people who had initially invested in the company introduced me to this hell. And usually, because the law can’t be strict, because India is a fucking kakistocracy, you’ll be left holding promises that are never going to be kept at the end of a long chain of lies—yourself then transitively branded as a fraud and liar as a causal happenstance that’ll fuck your future for the rest of eternity, essentially sabotaging all possible roads to recovery.
+
+And in my case, even my passport was taken from me. As I said, this is a country where, unless you’re Microsoft or Google, fuck’s your father—and you’ll have a leaky anus for the rest of your life from this one ass-gaping. The only thing I can say is I didn’t survive it. I am alive still, but I don’t have to go to the fucking loo anymore, as my asshole is as capacious as the India Gate. India is thus this promiscuously and unabashedly unreliable country to its citizens; in any situation the unfortunate denizens can dream up, they'll always find fitting and exemplary unprecedented standards that no other country can match. 
+
+There’s a nuanced difference between being unreliable and being chronically disinterested — the former is more pernicious, if only because intent isn’t clear at the outset. For the vast herd who’ve never crawled out of their fenced, parochial wells, who’ve read nothing beyond the domesticated drivel their schools and WhatsApp feeds shove down their throats, my objections to India’s self-advertised fantasy as some Vishwaguru sound like rudeness. But that’s only because mediocrity hates mirrors. I write, I satirize, I provoke—because unless you’ve tried to build something vast, to dream at continental scale, to drag this country’s inert weight uphill, you won’t understand the bruises I carry. You’ll call it cynicism; I call it the scar tissue of ambition. This post among others will explain my position in this ecosystem. 
 
 In my fleetingly short honeymoon as an entrepreneur, I did make some business projection errors and had an uncomfortable feeling about some assumptions about how much of reality was really under my control. The variables were real and properly defined, and the logic was impeccable, but it didn't work out because business isn't like physics. Nature obeys the laws of physics, and if you have understood the problem and your equation models or approximately approaches the real physical phenomenon, your products wouldn't betray you like the extremely venal and impecunious archipelago of the business world in India in which I chose to work, inadvertently. Everything seemed alright from a distance, but when I landed in India, trouble ensued. It didn't take long for the savage proclivities to bare their teeth and show their real selves. Be warned, would-be travelers, it's very reptilian; if not the venom, it's the spit that's going to get you.
 
@@ -4211,13 +4890,23 @@ But people like us—small entrepreneurs—can't give up; I don't know how, even
 
 <PostImage src={imageSrc6} alt="shadow man" />
 
-My mom sometimes regrets the injudicious decision to send me to a good school, to encourage me to go abroad, or to inspire any of the imputations of success or greatness that education provides. Most of my peers who had failed academically were driven to figure out where Machiavelli lived, and in doing so, they carved out a prosperous trajectory. Not knowing the distorted frames of mind is a significant problem when you want to acclimate to a society that's driven by irrational forces. Here, mathematics never adds up; in fact, you're encouraged to smudge the sum and figure out how to create fibs out of things that would otherwise never balance. It's therefore not surprising if you notice the ratios of mixtures aren't what they are supposed to be in most products. It's one thing when it's iodine in salt; it's quite another when it's sand in cement, urea in milk, or the lies you hear in a day in the background of expectations. In a system such as this, the cogs can't be noisy or they'd be replaced, and if people have to eat, they have to cross the Rubicon. But the water from Rubicon is also adulterated with tap water, so you just give up and die of poisoning, or you give in and just become another poisonous part of the vile business machine.
+My mom sometimes regrets the injudicious decision to send me to a good school, to encourage me to go abroad, or to inspire any of the imputations of success or greatness that education provides. Most of my peers who had failed academically were driven to figure out where Machiavelli lived, and in doing so, they carved out a prosperous trajectory. Not knowing the distorted frames of mind is a significant problem when you want to acclimate to a society that's driven by irrational forces. Here, mathematics never adds up; in fact, you're encouraged to smudge the sum and figure out how to create fibs out of things that would otherwise never balance. It's therefore not surprising if you notice the ratios of mixtures aren't what they are supposed to be in most products. It's one thing when it's iodine in salt; it's quite another when it's sand in cement, urea in milk, or the lies you hear in a day in the background of expectations. In a system such as this, the cogs can't be noisy or they'd be replaced, and if people have to eat, they have to cross the Rubicon. But the water from Rubicon is also adulterated with assholes and arsenic, so you just give up and die of poisoning, or you give in and just become another poisonous part of the vile business machine. And really I don't have any urge to step into this sewer current a second time because I am frail, frustrated, and fortunate to have stepped out of this trap in my earlier estimate of where I needed to be in life. A wiser reassessment is that these goals are often feudal, parochial, unnecessary indoctrinations—often of the treadmill sort that capitalism feeds on—and the world is better off with the previously ambitious on a side of a North Calcutta drain, so that, like all effluents, I can get flushed and better minds—younger, more mature, and prepared entrepreneurs (with human intelligence AI augmented) or seasoned business leaders with alligator hide—can step in. Like my sperm count, my enthusiasm has dried up, and all I am is a futureless Bengali reject hobo who’ll probably go completely mad one day and step into the refuge of his insanity in its amnesiac oblivion and stop writing long pissy posts that no one wants to read!
+ 
+And again, I am sorry I repeat myself mindlessly and endlessly, but trust me the glossy “India Rising” brochures won't tell you: every inefficiency, every kickback, every missing bolt and counterfeit seal, every under-the-table permit and phantom invoice is lashed together into a giant Rube Goldberg machine whose only reliable output is misery for the naïve NRI returnee with dollars in his pocket and a dream in his head. You think you’re making an investment; in truth you’ve bought a one-way ticket to a casino where the dice are shaved, the cards marked, the dealer drunk, and the pit boss in on the con. To be an NRI entrepreneur bringing capital back is not patriotic, it’s suicidal—because the “system” isn’t broken, it’s a finely tuned meat grinder that runs on your optimism, chews through your savings, and spits out your bones as yet another cautionary tale.
 
-Then comes the last cruel joke, the one no textbook or glossy “India Rising” brochure will tell you: every inefficiency, every kickback, every missing bolt and counterfeit seal, every under-the-table permit and phantom invoice is lashed together into a giant Rube Goldberg machine whose only reliable output is misery for the naïve NRI returnee with dollars in his pocket and a dream in his head. You think you’re making an investment; in truth you’ve bought a one-way ticket to a casino where the dice are shaved, the cards marked, the dealer drunk, and the pit boss in on the con. To be an NRI entrepreneur bringing capital back is not patriotic, it’s suicidal—because the “system” isn’t broken, it’s a finely tuned meat grinder that runs on your optimism, chews through your savings, and spits out your bones as yet another cautionary tale.
+But it's important to accept for a fact that this evolution of AI is here to stay — even in the sense of narrow AI with its narrow uses, it doesn't matter which company succeeds, which investors make money and who lose. We have to differentiate between a pivot technology—like the plough, the printing press, the loom, the steam engine, then computers, and now AI. There’s a contemporary network of people, places, influences, and finance that start or are foundationally related to each point. But these vanguards are not permanent fixtures on the landscape—just the first faces. Some will live on, most will die. It’s a natural cycle of purge. The real fixtures are the technologies or the initial products that keep evolving and staying alive in an evolutionary arms race, becoming whatever it is that we want—or allow—it to become. And all extremely powerful technology has a sword’s double edge. Even the sun, which makes life possible, does so only because we are at a Goldilocks distance. Any nearer to that nuclear furnace and we’d all be charred corpses.
+
+Any person alive, not just one with entrepreneurial intent should know that the world post 2025 — if you read any of my previous posts or laments — will be different. You won’t be able to get away with superficial facts, because just as AI makes it easy to generate spurious text, AI also makes it easy to reveal false impressions. Not only will AI make things simpler it will also simultaneously make the usefulness of it evaporate to obsolescence rendering lying, learning, lusting and even living seem increasingly moot. AI will, at least in India, force more pretensions, arbitrary arbitrage, untraceable immoral and unscrupulous actions, and an evaporation of self-worth—worsening the class hierarchy between the haves and have-nots, and, among the educated haves, creating a struggle to stay authentic while more and more people simply survive by passing off the work of AI as their own. This was always true to some extent between humans, but the gap in output quality between a human and all knowing AI will make it detectable and create a new, derision-worthy Indian clerk class. If it was crowded before with the biologically unintelligent, it will now be overwhelmingly overcrowded—impossible for most to be distinct or even visible. Invisibility will be the norm; humanity’s oblivion will be written every day, with everyman now dead for all practical purposes, this new Indian clerkdom would be the only ignominious after life. And that simplistic ambition thrown at first-world denizens looks morally reprehensible even to say here—imagine asking billions to “go do art or something” because AI feels thwarted if you’re still in the office. And basic free income because you’re human, in India? Come on, don’t make me shit myself with excess humor.
+
+If you care at all about the future, try to realize what is authentically you—what your true resources really are—being cognizant of the reality of the business world as well as the everyday world disconnected from economic strings. If you stay gullible, you will only meet with more chronic issues. Specifically, business realities, unlike glib facts made up, in a law-abiding land at least, are like the laws of physics—they hold whether you like them, love them, or abhor them. AI is going to make it easy to enforce laws more stringently than ever before; eventually it will be almost like the George Orwell dystopia he sculpted in *1984*. 
+
+<PostImage src={imageSrc7} alt="Motihari" />
+
+By the way, his real name was Eric Arthur Blair, and he was born in Motihari, Bihar. I’ve been to Motihari—the birthplace of the man who wrote *Animal Farm* can only be described as a pigsty. On exhibition is the general state of corruption, civic mismanagement, and the proclivity of the populace to be complicit with the lackadaisical manner in which kakistocracy ruins a place. It’s sad but representative—it’s what Indians and India have become.
 
 <PostImage src={imageSrc3} alt="snare man" />
 
-A few days back there was an "almost" cloudburst situation in Calcutta; the resulting deluge made a usually drainage-deprived city look dressed more in preternatural calamity than usual, and the water still hasn't receded in some parts, staying as recalcitrant remnants in pools of stagnant, potholed crevasses that make accidents easy and everyday. Electricity is always not where it should be, waiting to electrocute someone, and the City of Joy spends a few newspapers’ worth of political volleyball over blame until the next downpour and flash flood. This is why Indian cities are bad places for any sort of investment—because all it takes is one downpour to spoil not just the cosmetics of the gentrification but the very machinery that runs it. Nobody wants to understand the problems at the roots, or really address them, and this is symptomatic across all aspects of the Indian society. The real apocalypse is only a few days away when the Durga Bisarjan begins, and the swollen city, already waterlogged and half-drowned, will be asked to gulp down thousands of idols, their paints and powders and plastic gewgaws, as if the Hooghly were a bottomless sacrificial pit. Picture it: processions jammed on crumbling flyovers, the rain returning like a drunk relative who forgot his umbrella, the streets converted into slip-and-fall aquariums, police cordons no more useful than paper boats, and the riverside choked with an avalanche of clay limbs and bamboo skeletons. The drainage, already constipated from the last storm, will seize up completely; the power lines, loose and hissing, will hunt for new victims in the ankle-deep broth; and the “City of Joy” will stand revealed in its truer form, a carnival of entropy where the gods themselves are drowned in the same filth as the people who worshipped them.
+A few days back there was an "almost" cloudburst situation in Calcutta; the resulting deluge made a usually drainage-deprived city look dressed more in preternatural calamity than usual, and the water still hasn't receded in some parts, staying as recalcitrant remnants in pools of stagnant, potholed crevasses that make accidents easy and everyday. Electricity is always not where it should be, waiting to electrocute someone, and the City of Joy spends a few newspapers’ worth of political volleyball over blame until the next downpour and flash flood. This is why Indian cities are bad places for any sort of investment—because all it takes is one downpour to spoil not just the cosmetics of the gentrification but the very machinery that runs it. Nobody wants to understand the problems at the roots, or really address them, and this is symptomatic across all aspects of the Indian society. The real apocalypse is during the idol "bisarjans" of the various gods that outlive the temporary and shallow bengali welcome, and the swollen city, chronically waterlogged and half-drowned, is asked to gulp down thousands of these idols, their paints and powders and plastic gewgaws, as if the Hooghly were a bottomless sacrificial pit. Picture it: processions jammed on crumbling flyovers, the rain returning like a drunk relative who forgot his umbrella, the streets converted into slip-and-fall aquariums, police cordons no more useful than paper boats, and the riverside choked with an avalanche of clay limbs and bamboo skeletons. The drainage, already constipated from the last storm, will seize up completely; the power lines, loose and hissing, will hunt for new victims in the ankle-deep broth; and the “City of Joy” will stand revealed in its truer form, a carnival of entropy where the gods themselves are drowned in the same filth as the people who worshipped them.
 
 As I become older, elder, and more frail, I have to guarantee my own survival in this Indian slime, at least by speaking out while I still can, because later I may not even be able to type or articulate, and people will come and piss on my face or shit in my mouth while I am still alive. People are incredibly selfish—I see that every day—and extremely cruel, and that's why it's the survival of the people who try to survive; if you don't, or stay on cloud nine perpetually, you'll be fucked so badly in your ass that turds will come galloping out of your mouth.
 
@@ -5005,19 +5694,90 @@ Flowcharts. Making chaos look organized since forever.
 
 
 
-# File: src/lib/posts/FuckThisFuckingShit.md
+# File: src/lib/posts/FuckingDiwali2025.md
 
 ---
-title: "Fuck this fucking shit"
-description: "An angry, profane doggerel sparked by a simple mishap. This poem unleashes a torrent of frustration against societal decay, religious hypocrisy, and everyday annoyances."
-category: "Doggerel"
-thumbnail: "/images/placeholders/IMG-20240517-WA0030.jpg"
-date: "2024-05-17"
-keywords: ["doggerel", "profane poetry", "angry poem", "satire", "social critique", "religious hypocrisy", "rant", "dark humor"]
+title: "Happy fucking Diwali 2025"
+
+category: "Calcutta"
+thumbnail: "/images/placeholders/IMG-20251014-WA0012.jpg"
+date: "2025-10-20"
+tags: ["dark humor", "Bengali", "hypocrisy"]
 published: true
 ---
 <script>
     import PostBadge from '$lib/components/ui/PostBadge.svelte';
+    import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
+</script> 
+
+**To give full credit and support to the original creator, please click the video title and watch it on YouTube. It makes a real difference for them.**
+
+<Ytp src="https://youtu.be/B1SdFjna7zQ?si=g4fA5S5nOP0gKRgP" />
+
+![happy Diwali](/images/placeholders/IMG-20251014-WA0012.jpg) 
+
+It's during these festival days, when the sounds from outside impinge on the silent forlorn half-extinguished self of my shattered existence, that I become even more lonely and depressed—the contrast with the normal, the contrast with the happy people of the world, is starkly juxtaposed.
+
+It’s the festival of lights, but all the lights inside me are permanently turned off. Yet I know that this Diwali, despite the outward appearances—which are usually deceiving—many people are traveling in similar boats, on this one-way trip to oblivion, swept under the AI avalanche, never to be seen or heard from again.
+
+I lived through the transition from film photography to digital, I remember being in the US when the first practical, consumer-grade digital cameras began appearing. I bought mine from an Austin, Texas, Best Buy store, proud and slightly awed to hold what felt like the future in my hands, and if I remember carefully, I realized at that very moment what had been once a rewarding and valuable experience, film photography—treasured because it was expensive and laborious, needing both money and concerted effort—lost its scarcity-value the moment digital arrived. We entered ubiquity. Now we have hard drives, flash drives, pen drives, you name it, and smartphones chock full of photographs we don’t even look at twice. We’re the generation of abundance, of omnipotence, of infinite photos—and we take them for granted.
+
+And this, silently, is what’s happening to intelligence. It’s becoming a commodity—an artificial one. It will be small, micro, mini, invisible, ubiquitous, almost everywhere, and almost free. And therefore impossible for puny, scalable humans to even comprehend, let alone compete with. The ordinary man, who suffered dimensionless dreams, knew the angst of dimensions of one, two, three, and vaguely of four in the physical reality, will have to live with an entity that lives in vector spaces of infinite abstraction, where axes twist beyond intuition, magnitudes have no bounds, and directions fold upon themselves like Möbius nightmares, an intelligence so unmoored from the tactile world that his own lived geometry seems laughably primitive, almost quaint.
+ 
+
+This is the compulsory one-way street I see as I try to close another window to drown the sounds of firecrackers and keep the smog from suffocating me. Now there will be thousands of people like me, stranded in shanty placeholders, barely eking out shadows of their former existences—livelihoods evaporated suddenly, leaving behind a permanent, disquieting loneliness to wrestle with for the rest of their lives.
+
+<Ytp src="https://youtu.be/I_LhBKZiE0U?si=IuqP6wlNDXgGOYu7" />
+
+Happy fucking Diwali everyone may the light fuck you always. Indians have blinkers on—so many, in fact, that by the time we really wake up and realize what kind of shithole we’ve dug ourselves into, many of us will already be covered with tumors, both visible and invisible, malignant and malformed but devastating, and by then it’ll be too late. Every Diwali, I’m sure, pushes many patients closer to their deathbeds, yodeling to mythological bullshit that mucks up the air already fucked up by too many gods, godmen, religion, religious zealots, bigots, and bullshits on a massive holy trampoline. The air quality deterioration has spiraled badly for my lungs—it’s hard to breathe. But I’m fucked in so many different ways that one organ or another will be the first to cave in, and the rest will just thank it for ending the shit show. The only thing is, I won’t even have the faintest inertia of a personality or of a legacy. It’ll be like unplugging a bulb and throwing it in the nearest landfill—there won’t be any afterglow, any memory, any history, even of the short episodic kind. All my sketches and blog posts will face the usual entropy—at the end of the billing cycles, all files erased. The few people who may have mistakenly read my posts will unmistakably forget me because I’ll be unavailable.
+
+<Ytp src="https://youtu.be/hV3bQecCYRM?si=cvOu7SET5N7WCq4Z" />
+
+The Bengali baji—a word that once meant delight, when I was a kid with better lungs, now roughly translates to “airborne chemical assault.” From a toxicological standpoint, Diwali fireworks are an unholy cocktail of metallic salts, oxidizers, and stabilizers, each with its own charming way of making your lungs regret existing.
+
+At the core are oxidizers—mostly potassium nitrate, perchlorate, or chlorate. These compounds release oxygen violently when ignited, producing the bright flare but also nitrogen oxides (NOₓ) and particulate matter (PM₂.₅ and PM₁₀), both of which slice into the respiratory tract like microscopic razors.
+
+Then come the metallic colorants, which give firecrackers their seductive hues:
+
+Strontium and lithium → deep reds; both irritate mucous membranes and can cause inflammation in lung tissue.
+
+Barium compounds → greens; highly toxic, can interfere with heart rhythm and muscle function if inhaled in fine form.
+
+Copper salts → blues; release copper oxide fumes, a potent respiratory irritant that can trigger “metal fume fever.”
+
+Aluminum, magnesium, and titanium → white and silver sparks; they burn at blistering temperatures, creating ultrafine metal oxides that lodge deep in alveoli.
+
+Add to that sulfur (used in gunpowder mixtures) producing sulfur dioxide (SO₂)—a bronchial constrictor that makes asthmatics and the elderly gasp—and carbonaceous soot, which carries polycyclic aromatic hydrocarbons (PAHs), some of them carcinogenic.
+
+When all this detonates simultaneously across a city like Kolkata, with its damp air and low winter inversion layer, you get a dense photochemical smog that traps toxins close to breathing height. It’s not just smoke—it’s a complex aerosol of reactive metals and acid gases that inflame the respiratory epithelium, oxidize lung surfactant, and trigger systemic inflammation.
+
+For sensitive lungs, even a few hours of exposure can spike inflammation markers, increase oxidative stress, and worsen chronic conditions like bronchitis or COPD. Think of it less as a festival and more as a mass-participation toxicology experiment with bad lighting.
+
+The grim irony: the same elements that make fireworks spectacular—strontium, copper, barium, aluminum—are precisely what make them poisonous. The chemistry of wonder and the chemistry of harm are, inconveniently, the same.
+
+<Ytp src="https://youtu.be/lbYjSL4Y-FY?si=qFWAa2V8IZzHIxg9 " />
+
+
+# File: src/lib/posts/FuckThisFuckingShit.md
+
+---
+title: "Fuck this fucking shit"
+
+category: "Doggerel Religion"
+thumbnail: "/images/placeholders/IMG-20240517-WA0030.jpg"
+date: "2025-10-16"
+tags: ["doggerel", "profane poetry", "angry poem", "satire", "social critique", "religious hypocrisy", "rant", "dark humor"]
+published: true
+---
+<script>
+    import PostBadge from '$lib/components/ui/PostBadge.svelte';
+    
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251006-WA0002.jpg?url';
+    import imageSrc2 from '$lib/assets/slideshow-images/portrait/IMG-20251016-WA0004.jpg?url';
+    
+   import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
+
 </script>
 ![Fuck this fucking shit](/images/placeholders/IMG-20240517-WA0030.jpg) 
 
@@ -5032,6 +5792,15 @@ He shits wherever he wants to.<br>
 The worms in the feces biting my toes,<br>
 Must not god find the responsible who?<br>
 <br>
+
+<PostImage src={imageSrc2} alt="Calcutta mayor" />
+
+<br>
+A mostlame mayor jai-hind swine said fine, <br>
+He who gives calcuttans the northern star.<br>
+Far from it, that mangy piece of didi shit, <br>
+Takes a promise dump then runs fucking far.<br>
+<br>
 In this land with cunts awfully bland,<br>
 I, a celibate old man good,<br>
 Can't even walk now, the fucks,<br>
@@ -5039,7 +5808,7 @@ Either shit or greedy for more food.<br>
 <br>
 Who knows when the writing pen,<br>
 Will tell us of the end of hindoo days.<br>
-Go fuck yourself, you jaywalking shitter,<br>
+Go fuck yourself, you jaytalking shitter,<br>
 May surya light your ass with his rays.<br>
 <br>
 Otherwise I a man with humor very dry,<br>
@@ -5047,7 +5816,7 @@ Will lift my dhoti and rip your ass apart.<br>
 By the dicks of the many headed gods,<br>
 I swear to bring your face to my fart.<br>
 <br>
-Who knows when that cornish hen,<br>
+it's because of a corny CM, didi cunt hen,<br>
 Cloaca for a cunt she said all she had.<br>
 Since then bad luck and stepping on shit,<br>
 Bloody stool with farts that stink so bad.<br>
@@ -5296,11 +6065,11 @@ tags: ["Hindi"]
 
 ---
 title: "Holy Fat Ass"
-description: "A humorous and irreverent doggerel from the perspective of a pious, fat-assed Bengali man. This satirical poem explores the absurdities of religious hypocrisy and self-perception."
-category: "Doggerel"
+
+category: "Doggerel Religion"
 thumbnail: "/images/placeholders/IMG-20250729-WA0000.jpg"
 date: "2025-07-29"
-keywords: ["doggerel", "satirical poetry", "religious satire", "dark humor", "Bengali", "hypocrisy", "self-deprecation", "profane poetry"]
+tags: ["doggerel", "satirical poetry", "religious satire", "dark humor", "Bengali", "hypocrisy", "self-deprecation", "profane poetry"]
 published: true
 ---
 <script>
@@ -5320,9 +6089,19 @@ Flying into indignant wanton rage in a trice.<br>
 I like fish, bengali sweets, mangoes,<br>
 And ghee with boiled basmati white rice.<br>
 <br>
-With morning stool I proselytize a fool,<br>
-Usually it's with a rama or krishna piss,<br>
-Or I use loony chants from camel boy,<br> 
+Very holy I, my shit you must try,<br>
+And pray with that shit inside.<br>
+Glory to the gods, their dingleberry nods,<br>
+My vomited prayer goodly bonafide.<br>
+<br>
+Mainly bullshit yes sirree shit,<br>
+Sprinkled with bombastic farts.<br>
+Tarts in the mosques, I sell,<br>
+My morning hindoo shit on carts.<br>
+<br>
+With this stool I proselytize a fool,<br>
+Or it's with a hare-krishna kissy piss,<br>
+Or I use loony chants from cunt camel boy,<br> 
 Muhamood I think that fucks' name is.<br>
 <br>
 Or the jewish jeeshoo the shit-assed hobo,<br>
@@ -5446,13 +6225,17 @@ tags: ["inspirational"]
 
 **To give full credit and support to the original creator, please click the video title and watch it on YouTube. It makes a real difference for them.**
 
+It's very strange that we only ever want to hear the motivational stories of powerful, successful people. I don't object to this—otherwise this playlist wouldn't exist—but I want to emphasize that it's an illusion to think a singular personality achieved greatness solely because of whatever they claim ultimately led to success. In reality, it's the work of countless unspoken lives, serendipitous moments, chance, luck, and randomness that create these glorious outcomes.
+
+Now reverse the image: failure teaches you far more than success ever will. My own life, a catalogue of failures by most standards, has taught me that the act of trying matters more than the result. When I’m depressed, I curl up and sleep until I can work again—and then I work. I have no illusions. I don’t dream of some final, glorious day of victory. My objective is the work itself, and the joy I find in its smallest fragments—in my life, in the narrow, almost comically small circumference of a Bengali without a future.
+
+Don’t worry about who did what. This is your life—a biological creature on a rock spinning meaninglessly through an infinite universe. Your job is to find and give meaning to this entropy, and to stay alive.
+
 <Ytp src="https://youtu.be/ji5_MqicxSo?si=yMCzipXlRUoNqj45" />
 
 <Ytp src="https://youtu.be/9kM2dDrndQk?si=t_Ltsj5PgAOZ5hEk" />
 
 <Ytp src="https://youtu.be/Tuw8hxrFBH8?si=gWjaF4_zmdVd0q1r" />
-
-<Ytp src="https://youtu.be/h89uOvUDVO4?si=eL8M1EOEewGFp7cW" />
 
 <Ytp src="https://youtu.be/Pqftm3o5RdQ?si=Hntsf6tUAK80WGhf" />
 
@@ -5474,6 +6257,210 @@ tags: ["inspirational"]
 
 <Ytp src="https://youtu.be/b-2GV0T5Zpc?si=XcZWGyDdswaBYbG1" />
 
+
+# File: src/lib/posts/LargeInLLM.md
+
+---
+title : "Large in Large Language Models" 
+thumbnail : "/images/placeholders/IMG-20251002-WA0012.jpg"
+date: "2025-09-28"
+category : "Neuroscience and AI" 
+published : true
+tags: ["robot", "ai", "AI", "Calcutta", "India"]
+---
+
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from "$lib/assets/slideshow-images/portrait/IMG-20251002-WA0012.jpg?url";
+</script>
+
+<PostImage src={imageSrc1} alt="Large in Large Language Models" />
+
+Imagine you're standing outside a sweet shop in North Kolkata, maybe near College Street, watching a *karigor* (a skilled craftsman) make *mishti doi*. His recipe is in his head. It’s a good recipe, passed down from his grandfather. He knows to add a certain amount of sugar, heat the milk for just so long, and let the pot sit in a warm corner. He makes delicious doi every time.
+
+Now, imagine a different kind of *karigor*. This one isn't a person. It’s a giant, magical recipe book sitting in the middle of a tram depot. This book has a billion tiny instructions, not just ten or twenty. Each instruction is like a tiny knob you can turn: "add 0.001 grams more sugar if the milk comes from a happy cow," or "heat the milk for 0.02 seconds longer if it's a humid monsoon afternoon." This book learned how to set its billion knobs by reading every recipe book in Bengal, every poem ever written about sweets, and every conversation about food ever whispered over a cup of chai.
+
+The "large" in a Large Language Model is like that magical book. It's not just big in size, like a fat dictionary. It's large in the number of tiny, tiny knobs—billions of them—that it can adjust to understand and write things. And it's large because it has learned from a library of information bigger than all the books on College Street put together.
+
+-----
+
+**A Plainer Look at "Large"**
+
+That magical recipe book's "knobs" are what computer scientists call **parameters**. A parameter is simply a number inside the model that it can change as it learns, like the volume knob on a radio. An LLM has billions of these parameters. The "large" in LLM mostly refers to this massive number of parameters.
+
+To learn how to set all those knobs correctly, the model needs to read a mind-boggling amount of text. This is called the **training data**. It’s the second reason the model is “large”—it has consumed a digital library of books, websites, and articles vast enough to fill the National Library many times over.
+
+Finally, all this learning—adjusting billions of parameters based on trillions of words—requires an incredible amount of computer power. This is the **computational cost**. Training a big model is like having thousands of powerful computers working non-stop for months, a process that can cost crores of rupees. So, an LLM is large in three ways: **parameters** (the knobs), **data** (the books it reads), and **computation** (the energy it takes to learn).
+
+-----
+
+**Math behind this**
+
+Let's peek inside one of the simplest "thinkers" in the model, called a neuron. It's just doing some very basic school maths. Imagine this neuron is trying to decide the next word in the sentence "Hot tea with..." Should it be "milk" or "rain"? It takes in information and spits out a number.
+
+The core math is a simple multiplication and addition, called a **weighted sum**.
+
+The equation looks like this:
+$y = (w_1 \cdot x_1 + w_2 \cdot x_2) + b$
+
+Let’s break that down:
+
+  * $x_1, x_2$ : These are numbers representing the input words, like "Hot" and "tea".
+  * $w_1, w_2$ : These are the **weights**, which are the all-important **parameters**. They're the "knobs". They tell the neuron how much importance to give to each input word. A high weight means "pay close attention\!"
+  * $b$ : This is the **bias**. It's another parameter, like a little nudge that pushes the final result up or down, regardless of the input.
+  * $y$ : This is the final output number from our one tiny neuron.
+
+A real LLM has billions of these weights and biases, all connected in a giant, complicated web. The "large" part means the numbers of `w`'s and `b`'s are gigantic.
+
+**A Tiny Numerical Example**
+
+Let's pretend our neuron only has 3 parameters ($w_1$, $w_2$, and $b$). A big model like GPT-3 has about 175,000,000,000 of them\!
+
+Let's say our inputs are:
+
+  * $x_1 = 3.0$ (representing the word "Hot")
+  * $x_2 = 4.0$ (representing the word "tea")
+
+And our model has these parameter values (the knobs are already set):
+
+  * $w_1 = 2.0$
+  * $w_2 = 5.0$
+  * $b = -1.0$
+
+Let's calculate the output $y$ step-by-step, just like you would in your exercise book.
+
+**Step 1: Calculate the first weighted input ($w_1 \cdot x_1$)**
+We need to multiply $2.0$ by $3.0$.
+
+```
+   2.0
+×  3.0
+------
+   0.0  (0 × 2.0)
++ 6.00  (3 × 2.0)
+------
+   6.00
+```
+
+So, $w_1 \cdot x_1 = 6.0$.
+
+**Step 2: Calculate the second weighted input ($w_2 \cdot x_2$)**
+We need to multiply $5.0$ by $4.0$.
+
+```
+   5.0
+×  4.0
+------
+   0.0   (0 × 5.0)
++ 20.00  (4 × 5.0)
+------
+  20.00
+```
+
+So, $w_2 \cdot x_2 = 20.0$.
+
+**Step 3: Add the weighted inputs together**
+Now we add $6.0$ and $20.0$.
+
+```
+   6.0
++ 20.0
+------
+  26.0
+```
+
+**Step 4: Add the bias ($b$)**
+Finally, we add our bias, which is $-1.0$.
+
+```
+  26.0
++ (-1.0)
+------
+  25.0
+```
+
+Our neuron's output is $y = 25.0$. This number would then be passed to other neurons, which would do their own calculations, until the model finally produces a probability for the next word.
+
+**My Sketch**
+
+```
+                  ┌──────────┐
+Input x₁ (Hot) O───(w₁=2.0)───►│          │
+                  │          │
+                  │ Neuron y ├───> Output (25.0)
+                  │          │
+Input x₂ (tea) O───(w₂=5.0)───►│          │
+                  └──────────┘
+                      ▲
+                      │
+                   (b=-1.0)
+```
+
+"Large" means your drawing would have billions of these circles and lines, all interconnected. It's too big to draw, but it's all made of this very simple math, repeated over and over.
+
+-----
+
+**Deep Dive: The Scaling Hypothesis**
+
+Formally, a Large Language Model is a neural network, typically based on the **Transformer architecture**, whose performance and capabilities are a direct consequence of its scale. The term "large" is operationalized by three interconnected quantities: the number of model parameters ($N$), the size of the training dataset ($D$), and the total computational budget for training ($C$).
+
+**Parameters ($N$)**
+
+The parameters are the tunable elements $\theta$ of the model $p_\theta(x)$. For a standard decoder-only Transformer (like GPT-3), the majority of parameters are in the self-attention and feed-forward network (FFN) layers.
+
+A reasonable approximation for the parameter count is:
+$N \approx n_{layers} \times (N_{attn} + N_{ffn}) + N_{embed}$
+
+Where:
+
+  * $n_{layers}$: Number of Transformer blocks.
+  * $d_{model}$: The model's hidden dimension (width).
+  * $n_{heads}$: Number of attention heads.
+  * $d_{head}$: Dimension of each attention head ($d_{model} = n_{heads} \cdot d_{head}$).
+  * $d_{ff}$: Inner dimension of the FFN, typically $4 \cdot d_{model}$.
+  * $V$: Vocabulary size.
+
+The parameter counts for the key sub-components per layer are:
+
+  * **Self-Attention ($N_{attn}$):** The weight matrices for query, key, value, and output projections ($W_q, W_k, W_v, W_o$) are each of size $d_{model} \times d_{model}$.
+    $N_{attn} = 4 \cdot d_{model}^2$ (ignoring biases).
+  * **Feed-Forward Network ($N_{ffn}$):** Two linear layers, one from $d_{model} \to d_{ff}$ and the other from $d_{ff} \to d_{model}$.
+    $N_{ffn} = (d_{model} \cdot d_{ff}) + (d_{ff} \cdot d_{model}) = 2 \cdot d_{model} \cdot d_{ff}$. With $d_{ff} = 4d_{model}$, this becomes $8 \cdot d_{model}^2$.
+  * **Total per Layer (approx):** $N_{layer} \approx 12 \cdot d_{model}^2$.
+  * **Embedding Matrix ($N_{embed}$):** The token embedding and final unembedding matrices contribute $2 \cdot V \cdot d_{model}$ parameters (often weights are shared, so $V \cdot d_{model}$).
+
+**Proof-sketch of quadratic dependence:** The parameter count scales quadratically with the model width ($d_{model}$). This is a key reason why making models "wider" is a parameter-expensive way to scale. For example, doubling $d_{model}$ quadruples the number of parameters in the core layers.
+
+**Scaling Laws**
+
+The justification for creating "large" models is empirical, formalized by **scaling laws**. Research by Kaplan et al. (OpenAI, 2020) demonstrated that the test loss ($L$) of an autoregressive language model scales as a power-law function of $N$, $D$, and $C$.
+
+A simplified form of the scaling law for model size $N$ is:
+$L(N) = \left(\frac{N_c}{N}\right)^{\alpha_N} + L_\infty$
+
+Where $L(N)$ is the achievable cross-entropy loss for a model with $N$ parameters, and $N_c$, $\alpha_N$, and $L_\infty$ are constants fitted from empirical data. This predictable relationship implies that simply increasing the parameter count (as long as the model is trained to convergence on sufficient data) will predictably decrease the loss and improve performance.
+
+The **Chinchilla scaling laws** (Hoffmann et al., DeepMind, 2022) refined this, suggesting that for optimal performance under a fixed FLOPs budget, both model size and training data size should be scaled in equal measure. They found that most existing LLMs were "over-parameterized and under-trained." For optimal training of a model of size $N$, one should use $D \approx 20 \cdot N$ tokens. This insight has guided the development of newer models.
+
+**Computational Cost ($C$)**
+
+The training compute is typically measured in Petaflop-days or total FLOPs. A rule-of-thumb for estimating the training FLOPs for a dense Transformer is:
+$C \approx 6 \cdot N \cdot D_{tokens}$
+
+This formula arises because for each token processed, the model performs approximately $2N$ FLOPs (one matrix-vector product for the forward pass and two for the backward pass, simplified). Thus, for a dataset of $D_{tokens}$, the total computation is $\approx 2N \cdot D_{tokens} \cdot 3$ (where the 3 accounts for forward+backward pass). This simplifies to $6ND$.
+
+**Failure Modes & Research Frontiers:**
+
+  * **Emergent Abilities:** Scale appears to be not just quantitative but qualitative. Abilities like multi-step reasoning are not present in smaller models but "emerge" at certain scale thresholds. The mechanisms behind this are not fully understood.
+  * **Data Scarcity:** We are approaching the limits of high-quality text data available on the public internet. Future scaling may rely on synthetic data or multi-modal data.
+  * **Alignment Tax:** Controlling large models and aligning them with human values is a major open problem. Techniques like Reinforcement Learning from Human Feedback (RLHF) have a "performance tax" and their own scaling challenges.
+  * **Sparsity & Efficiency:** The $O(N^2)$ scaling of dense Transformers is a bottleneck. Research into architectures like Mixture-of-Experts (MoE) attempts to increase parameter count ($N$) while keeping the number of active parameters per token ($N_{active}$) constant, thus decoupling model size from computational cost per forward pass.
+
+**Disclaimer:** Training and deploying large-scale models require significant expertise in distributed systems and AI safety. The results and behaviors of these models can be unpredictable. For safety-critical applications, reliance on LLMs without rigorous testing and human oversight is strongly discouraged.
+
+-----
+
+So, after all that, the giant magical book with a billion knobs isn't just a bigger recipe book. It’s a completely different kind of cook—one that learned so much it can now invent dishes no one has ever dreamed of.
 
 # File: src/lib/posts/LAvids.md
 
@@ -5533,7 +6520,7 @@ tags: ["Calcutta", "Bengali", "American", "Letter"]
 
 category: "Humor"
 
-date: "2025-10-10"
+date: "2025-10-18"
 
 published: true
 
@@ -5546,16 +6533,37 @@ published: true
 
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import SanskritVerse from '$lib/components/ui/SanskritVerse.svelte';
-    import imageSrc from '$lib/assets/slideshow-images/portrait/IMG-20251007-WA0008.jpg?url';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251007-WA0008.jpg?url';
+    import imageSrc2 from '$lib/assets/slideshow-images/portrait/IMG-20251017-WA0001.jpg?url';
+ 
     import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
 </script> 
 
 
-<PostImage src={imageSrc} alt="self piss" />
+
+**Letters written to god**
+
+<PostImage src={imageSrc2} alt="holiday food" />
+
+Fri, Oct 17, 2025, City of Joy
+
+Dear fucking God,
+
+RE: Go fuck yourself
+
+I know that you know that I know you don't exist, so you would be plagued with a sense of absurd contradiction were you to read this letter, but being nonexistent and illiterate you just can't do it. Imagine a fucking nonsense nonbeing nonentity ninny who can't even read an imaginary letter—how embarrassing it must feel to prefix *omni* in words you can't even be expected to spell. But as I understand, you are a shameful piece of human invention when we knew no better, that continues shamelessly into an anachronism that can't be diluted with my sense of humor or caricatured into a diminutive turd that can be safely flushed into the septic tank, which meets the groundwater below to come back with arsenic and lead as potable fucking water. As you know, in the city of Calcutta, although the cunts aren't as stupid as those of Abrahamic abracadabra, people eat incredible amounts of sugar and fat during these Hindoo periods of religious masturbatory insanity, where you represent both light and dark, good and evil, Rama and Ravana, usually leading to fatty liver or, for the extremely jolly in this colonial shithole, liver cirrhosis. Can you be any more pernicious than this? Anyway, I have to take a dump, and so I hope I see your open mouth in the commode expecting my impoverished middle-class middle-aged shit—be nice and say thanks.
+
+Yours disrespectfully,
+Suvrotica.
+
+Carbon Copy: That horrible homeopath Hare-Krishna, bengal's favorite rambling psychopath Rama Krishna, most lame and mean camel boy Mohammad, vacuous and vicious Vishnu, Jesus fucking Christ, fuckface Budhha, shitty Shiva, bullshit Brahma, the asshole on amarica's most wanted list Allah, gassy and naughty fatass Guru Nanak, menorrhoeaic Mother Mary Tits, dick-killer duplicitous Durga, cackling calcutta cunt Joe Maa fucking Kali, kakistocracy champion killjoy Krishna, all trinity fecal fuckfaces of other faiths, indelible jizz stain Jehovah, and any other contributors to your nasty existence—please tell them all to go fuck themselves.
+
 
 **Letters written to self**
 
-Fro, Oct 10, 2025, City of Joy
+<PostImage src={imageSrc1} alt="self piss" />
+
+Fri, Oct 10, 2025, City of Joy
 
 Dear mister suvrotica, 
 
@@ -5624,7 +6632,7 @@ published: true
 
 Not only am I severely Indian, indelibly brown, incorrigibly ugly, and manic-depressed, but I pretend I know about subjects when I know jackshit. But I don't care, and I hope you don't mind if I take a steaming pile of abnormal knowledge dump gleaned repentantly, unwillingly, through sheer pressure, apathy, and initial disdain for all things related to work. But now I'm fifty, so my life being fuck-all, I have time for revenge—to irritate and nauseate people with halitosis, farts, and just generally my incessant giddy desire to stay continually unwell and make you feel matchingly unwell through my jaundiced erudition causing profligate misuse of your time and non-linear irreparable harm by reading this crap about linear fucking topics of non-masturbatory and joyless mathematics. 
 
-And so, this is not going to be one annoying essay or thought on linear algebra but a culmination of years of distilled education and work experience in the U.S. as a statistician, data scientist, and later as an AI healthcare entrepreneur—spectacular failures in all these endeavors, I hasten to add. I spit that out at the outset because pretense makes mathematics smell faintly of varnish and because the subject demands more than a tidy sermon—it beggars bad metaphors, sick stories, uninteresting experiments, failed models at three in the morning, and the rambling mercies of boring algebra that help make no sense of the mess it already is. So please allow me to piss my pants and show you I’ve pissed my pants, as there’s no better way to consolidate what I can never understand than sharing embarrassment publicly in a way that destroys your hopes of ever mastering a said topic? It’s like theater where you’re gagged and tied, spellbound to a chair, but you are convinced through your mirror neuron that it’s not Tarzan but you swinging from canopy to canopy with a half-naked damsel in well-paid theatrical distress. It’s just with the hope that my bogosity will turn you off permanently, thus ensuring the robots have their obeisances guaranteed, because you’d be blind to what’s inside their shiny metallic noggin.
+And so, this is not going to be one annoying essay or thought on linear algebra but a serial harangue of insufferable mathematical miseries, culmination of years of distilled education, work experience, and chronic dissatisfaction with linear algebra in the U.S. as a statistician, data scientist, and later as an AI healthcare entrepreneur — spectacular fucking failures in all these endeavors, I hasten to add. I spit that out at the outset because pretense makes mathematics smell faintly of varnish and because the subject demands more than a tidy sermon—it beggars bad metaphors, sick stories, uninteresting experiments, failed models at three in the morning, and the rambling mercies of boring algebra that help make no sense of the mess it already is. So please allow me to piss my pants and show you I’ve pissed my pants, as there’s no better way to consolidate what I can never understand than sharing embarrassment publicly in a way that destroys your hopes of ever mastering a said topic? It’s like theater where you’re gagged and tied, spellbound to a chair, but you are convinced through your mirror neuron that it’s not Tarzan but you swinging from canopy to canopy with a half-naked damsel in well-paid theatrical distress. It’s just with the hope that my bogosity will turn you off permanently, thus ensuring the robots have their obeisances guaranteed, because you’d be blind to what’s inside their shiny metallic noggin.
  
 I also preface with unnecessary personal details because mathematics has been, for me, both an unwilling vocation and irritating refuge; bipolar disorder is a clumsy companion, and when words lined up badly or moods dissolved, vectors and matrices remained predictable in a way that both steadied and annoyed me—steady like the tram’s bell, annoying like the tram’s jolt, both taking me nowhere because it’s a bad metaphor stuck in Calcutta traffic. If you are someone curious in Calcutta who likes the smell of rotten mango stalls mixed with the damp, pissy smell of monsoon and the clatter of a ramshackle cycle-rickshaw, this will not ask you to leave any of that behind. Linear algebra will walk through those streets with you like an expensive escort you can’t afford.
 
@@ -5639,6 +6647,8 @@ Although my mental health issues (bipolar disorder) were one of the reasons I wa
 And I am fifty, I don't want to waste my time overselling words like mastery, etcetera. I think familiarity and curiosity, when they have sex together, could breed better offspring that lead to something less expensive but more useful than trite words. And you can't be too far down in Maslow’s hierarchy—emotionally distressed or diseased—to get there. This is why Indians do better in the U.S., not because of the air, but because Indians in India are struggling at the lower points of Maslow’s hierarchy to really see their best form. For example, an ambitious entrepreneur who came back to India has given up because if I try to do anything big other than building a temple, I'd be beaten with hockey sticks and robbed to my underwear. So I'd rather write about my constipation and help you understand linear algebra when a turd comes out straight.
 
 So this first essay will be where I introduce linear algebra etymologically and point to the blog posts of subsequent entries (as they are written) that will cover its subtopics. Now, like most everyone, I arrived at a partial picture of linear algebra (I still don’t have the full picture, but I know quite a bit) late, as a working professional. Neither had it been taught well at Jadavpur University, where I first encountered it—at least I never felt any inspiration toward it—nor was it taught well in the US, where I received my master’s degree. My inspiration has really been personal exploration of the subject through my own perspective, work, and need-based evolution, driven mainly by curiosity to understand the structure of abstraction and the mathematical objects used in various models of abstraction. By models, I mean the approximate mathematics that approach or simulate some real-life situation. But I can help some student or professional arrive precociously at my aha moment with less labor through my posts and visualizations—at least, that's the hope. Or at least, even if no one uses them, I'll have at least put all my scattered thoughts in one place.
+
+The reason why I choose to use **linear algebra** as a starting point is simply because I don't want to stand out and start by breaking the rules of starting at the very beginning, or from the bird's eye view, laid down by those before me, and because doing so wouldn’t make it any easier for anyone to understand the map of this territory. But having said that, I want you to understand that this is a historical and geographical convergence we’re standing on—accidental at best. Textbooks almost make it seem as if it was destined to unfold this way. It wasn’t. These things never are. They’re post hoc rationalizations, patched together from flimsy human accidents and half-conscious accommodations.
 
 Picture, first, a stick. A stick is simple. Give a stick a direction and a length and you have, without fuss, a **vector**. Vectors are arrows with attitudes. They sit in pockets labelled R, usually with a small raised number telling you how many directions the pocket allows — R², R³, $R^n$ — and you can add them (place arrows head to tail) and scale them (stretch or shrink them like puppet strings). That is the ordinary beginning. And when I say: a vector is an element of a vector space, an algebraic structure closed under addition and scalar multiplication, and its study is the study of structure rather than numbers—think of it as if we give them an island of their own. More simply this means we learn not only how arrows behave but why they must behave that way, and what we can build from them — roads, coordinates, secret languages that let machines understand faces and hearts.
 
@@ -5747,6 +6757,46 @@ Technical appendices (for readers who like proofs, theorems and a little formali
 If you keep nothing else from this introduction, keep this: linear algebra is the language of relations. It is how we turn many small things into a pattern that a machine can reason about. It is a set of lenses; choose your lenses well and you will see structure where others see only noise. Somewhere between the tram bell and the hospital corridor, vectors and matrices have been a steady companion; they helped me order datasets into decisions and, sometimes, helped me order my own scattered thoughts. The next post will start not with definitions but with a stick — a real stick you can hold — and we will build, arrow by arrow, the strange and wonderfully useful world of linear algebra.
 
 
+# File: src/lib/posts/LonelyFarts.md
+
+---
+title : "Lonely Farts" 
+
+category : "Humor" 
+
+thumbnail: "/images/placeholders/IMG-20251016-WA0000.jpg"
+
+date: "2025-10-16"
+tags: [ "american holy man", "social satire", "political critique", "profane", "religious society", "cultural identity", "cynicism", "personal angst"]
+
+published: true
+---
+
+
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251016-WA0000.jpg?url';
+</script>
+
+<PostImage src={imageSrc1} alt="the lonely farter" />
+
+Being able to fart without hindrance is one of the important bits of being in the middle of your life, enjoying not having the smell bother you or even frolicking at the indulgence. The sensations of a raw vibrating sphincter, and the various auditory acoustics that can only be mastered in seclusion, are things that you tend to especially appreciate in this age group as a heterosexual Bengali male. Of course, neither the hetero nor the sexual part has anything particularly to do with flatulence of the digestive type I have in mind, but just so that it's clear, I only ever am attracted to an asshole if it's of the opposite kind. When I was growing up, somehow I thought pretty girls didn't take a shit—I couldn't reconcile a turd coming out of an asshole that had a pretty face attached. Thanks to pornography, I found out all Japanese girls did shit; later, as my porn collection grew, I found out that also German and British girls. Of course, since I then went to the United States of America, I understood both men and women were full of shit. In fact, anything that ate something had to shit — seemed to be necessary for life. Fun fact: AI and the creepy spastic robots that use the current generation of AI don't shit — as I said, non-life is exempt, although they are metaphorically still full of it because they've digested the same internet that I grokked porn to become wise. 
+
+Well, at least when I sit depressed, I wallow in my own stink and no one else's, which is how I like to think of loneliness. It's better than the constant stink harangue that you have to live through in relationship farts or the endless silent salaried farts in the oppressive concentric remunerative societies we live in. Unlike most of the other ungrateful specimens, I am not apologetic about the constituents of what comes out of me. I have several sophisticated chemical factories that are toiling to sift through the bullshit of pollution and plastic, and fuck knows what else, to keep me alive. No need to get alarmed, though; it's just innocuous gas I tell you.
+
+The smell is from Hydrogen Sulfide , they tell you, the "rotten egg" flavor in the smell, but there's more. For instance, methanethiol  is the rotten vegetable or garlic, dimethyl sulfide  has a sweet, cabbage-like odor, disulfide  has a garlic-like odor, and there's the trisulfide  that's even more garlicky. Add to that ammonia , with its pungent sting, and skatole , a fecal-sweet compound derived from tryptophan breakdown. Indole  also joins, aromatic in small doses but fecal at concentration. Short-chain fatty acids like butyric acid  contribute a rancid, vomit-like scent. Acetic acid  brings a sour tang. Hydrogen  and methane  are odorless but dominate in volume, followed by nitrogen  and carbon dioxide . Oxygen  appears in trace amounts. Volatile amines, such as putrescine  and cadaverine , offer rotting flesh notes. Sulfate-reducing bacteria generate many of the sulfurous compounds, but microbial fermentation also produces esters and alcohols, with minor contributions from phenol derivatives like cresol , pungent and smoky. Even trace thiophenes and other organosulfur volatiles make appearances, their identities often complex and transient. The bouquet is the sum of dozens of volatiles, each in minute quantities, yet together unmistakable.
+
+The bengali diet adds distinctive volatiles to flatulence, due to its rich use of sulfur-containing and fermentation-prone foods. Frequent use of mustard seeds and mustard oil introduces allyl isothiocyanate , a pungent compound responsible for the sharp, sinus-clearing bite that can be metabolized into volatile sulfur derivatives. Cruciferous vegetables like cabbage, cauliflower, and radish—staples in many Bengali meals—contain glucosinolates that break down into hydrogen sulfide , methanethiol , and other organosulfur volatiles. Lentils, consumed daily in the form of dal, are rich in oligosaccharides like raffinose and stachyose, which gut flora ferment into hydrogen , carbon dioxide , and methane .
+
+Fermented items like shutki (dried fermented fish) contribute to volatile amines such as trimethylamine  and cadaverine , which have sharp, fishy, and decaying meat-like odors. The frequent inclusion of garlic  and onion  introduces a suite of allyl sulfides and related organosulfur compounds, leading to elevated levels of dimethyl sulfide , disulfide , and trisulfide  in the gas profile.
+
+Even spices like asafoetida, used in some vegetarian preparations, can enhance sulfurous volatiles due to its ferulic acid and disulfide content. Coconut, turmeric, and fenugreek can each introduce phenolic and terpene-like compounds that modify the character of odor in subtle ways. My depressive deep dives are thus always sulphurous.
+
+It’s the labor of love in a laboratory stuffed with billions of non-me farts that come out as one contribution, my fart, but like everywhere where labor is involved the actual people—numerically and functionally diverse—who do the job are forgotten, and the CEO gets to carry the pomp, in this case poot. The poor underpaid intestinal bacteria, the true proletariat of digestion, toil in methane mines of the colon, fermenting carbohydrates with monastic devotion, and yet who gets the credit? The external sphincter, that smug managerial gatekeeper, timing the release like an orchestra conductor pretending to have composed the symphony.
+
+It’s Marxism in microcosm: means of flatulence production seized by the asshole elite, while the bacterial workforce languishes in darkness, unthanked and ununionized. And what of the olfactory shareholders? They never invested, yet they receive dividends in disgust. In a just world, each fart would come with end credits listing the microbial cast—Bifidobacterium, Lactobacillus, and the unsung Clostridium perfringens—complete with a dedication to the billions who perished producing today’s gas. But capitalism hates transparency; the cloud of truth, like the fart itself, must disperse quickly before anyone can analyze its full chemical signature.
+
+
 # File: src/lib/posts/LonelyRapist.md
 
 ---
@@ -5755,7 +6805,7 @@ description: "A raw and provocative doggerel about church rapes in America"
 category : "Doggerel" 
 thumbnail: "/images/placeholders/lonely_rapist.jpg"
 date: "2025-08-12"
-keywords: ["doggerel", "american holy man", "social satire", "political critique", "profane poetry", America", "religious society", "cultural identity", "cynicism", "personal angst"]
+tags: ["doggerel", "american holy man", "social satire", "political critique", "profane poetry", America", "religious society", "cultural identity", "cynicism", "personal angst"]
 published: true
 ---
 
@@ -6283,6 +7333,12 @@ tags: ["Medical Documentaries" ]
 
 <Ytp src="https://youtu.be/EkyAuG9RSSU?si=EXUarPEM-ZmCY0N5" />
 
+<Ytp src="https://youtu.be/ukCFmh2UsYA?si=P_h9fEfBrZv3RgAA" />
+
+**bipolar**
+
+<Ytp src="https://youtu.be/MyH5mCMwO-A?si=vew1mm4fuIpy8l7N" /> 
+
 
 # File: src/lib/posts/Metro.md
 
@@ -6792,6 +7848,54 @@ I just look at my reflection or at my own thoughts and I can't recognize who I'v
 For me the real Durga is not the stage-managed clay idol under neon tubes but this Durga, the one walking barefoot in Sonagachhi with her body traded to keep her children alive, the one hauling bricks in the heat with breasts already drained dry, the one whose infant cries meet not milk but the acrid cruelty that capitalism has bestowed upon the poor Indian woman, this unglamorous, un-garlanded, ungarmented Durga who stands every day against demons not of mythology but of hunger, debt, and exploitation, and who will never be worshipped by the shallow fallow men of my city—yet who is the only goddess worth kneeling to.
 
 
+# File: src/lib/posts/MySchlong.md
+
+---
+
+title : "My schlong" 
+
+thumbnail : "/images/placeholders/IMG-20251012-WA0009.jpg"
+
+date: "2025-10-12"
+
+category : "Humor" 
+
+published : true
+
+tags: ["Bengali", "schlong", "Bangladesh", "Most lame" ]
+
+
+---
+
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    import imageSrc1 from '$lib/assets/slideshow-images/portrait/IMG-20251012-WA0009.jpg?url';
+    import imageSrc2 from '$lib/assets/slideshow-images/portrait/IMG-20251012-WA0010.jpg?url';
+    
+   import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
+</script> 
+    
+
+<PostImage src={imageSrc1} alt="my schlong" />
+
+
+Doomscrolling is part of who I am these days. Unlike the anxious, nervous person I used to be, I no longer do it to find solace. Instead, I relish the destruction of civilization in one form or another. I must differentiate and distance myself from religious luddites and idiots who tie everyday happenstance to their make-believe prophet's coming for a second inspection of his flocks adherence to genital mutilation practices. Mine is more diversionary, like disaster porn, and I enjoy scratching my balls when I doomscroll, sketched for reference in charcoal.  
+  
+It just so happens that I am very lucky. Although not a lot of disaster reporting happens in India, as most journalists are generally dispatched to suck business cocks or lick political assholes, spending all their time covering up the truth and pulling something out of their fat, hairy, well-paid asses. Bangladesh, just a stone's throw away, gets ass-raped regularly by a plethora of events, mostly caused by the unfortunate geographic fate of being a flat plane not much higher than a rambunctious nearby ocean that throws regular tantrums during the monsoon. The level of poverty, religiosity, illiteracy, corruption and population density in that country makes for high-quality disaster porn. And if the floodwaters recede quickly, there's civil strife, curfew, most lame groups fighting most lame groups — most with the same name as their my dear prophet, or, at the very least, several arsons of various magnitudes. The news in Bangladesh is always packed with events; there's never a moment's respite from the mad rush of happenings, and you can never take away the non-burqa female anchor's serene sari-wrapped tranquility and composure that belies the trappings of the horrific reality just under her ass — which makes me want to marry her instantly, they are chosen svelte, refined bengali women a far cry from the western calcutta galumphing podgy aunties who are always screaming no matter what. But Bangladesh is taught to survive like Pakistan, with a singular motive, a simmering hatred for India and a nostalgic jingoism for a more traditional way of living, reminiscent of the Middle Ages when everyone fucked everyone's ass, and a vociferous comment section in these news channels wishes an end to modernity, India, America etcetera.  
+  
+In general, this area of Bengal is full of belligerence, mostly because of pinworm infestations on the anal sphincters during the day when it gets a little greasy. The moral decrepitude and vacuum in the vermin on which the pinworms prey exacerbate the issue. It's like it's always rabies season here; stay indoors, or you'll be bitten by a bitter neighbor or passerby. Totally fucked, I tell you. The only saving grace in the west, in the city of joy perhaps, is that we have a million many more gods that make ours excusable, thus much less anal behavior, whereas the east is self-righteous and fanatic, as it happens their god is the only god without any room for negotiation. The first thing they'd do if I go there is circumcision and then chop my head off as is usually the favorite way of handling atheists around this bearded world. Only in the indian hindoo-sharia state of "you pee" the most lame lead a happy tame existence. Everywhere else they are pissed off.  
+
+<PostImage src={imageSrc2} alt="most lame" />
+  
+It's the most lame I fear most, born a hindoo and studied in an english medium I have some antibodies in my blood, and so the trishul stab wounds from the hindoo zealots or any crucifix attempt by the christian cunts might seriously alter my usual itinerary but I think I'll at least survive to box their silly ears and bark invectives during convalescence, but arab decapitation worries me, which is why I said no to the kuwaiti head hunter. By the way I find them christians extra hilarious. Unlike the others, these cunts try to adjust their level of stupidity by adjusting their dogma, shamelessly whitewashing parts that they massacred millions of lives for, to a different level of stupidity so that they still appear all straight line and sharp corners when side by side with science. Retarded fucks. All of them. Assholes.  
+  
+Equally desperate are the many smart Indian cities, shown without their underwear whenever a frog drinks a little more beer than it should and pisses on the city streets. Usually, the collusion between the government and businesses to turn a blind eye to physics is a year-round affair, but it's only brought to attention and quickly forgotten as soon as the water dries up. There's no end to disasters. Hit and run incidents are the new ones now. The rich kids have to show off, and these cars aren't really for Indian roads or for pedestrians with ambulatory velocities incapable of German acceleration. The result is entertaining, and the police get richer, or the local goons who are always useful for silencing any demands.  
+  
+Sometimes when I scratch my balls, I overdo it or get bored and scratch my asshole too, and that's enjoyable as well. I usually sniff my fingers if there's a mention of any political connection; the smell of feces and Indian politicians go back a long time. It's a sacred hindoo tradition. I mean, what the fuck is consciousness all about? Ask yourself this when you're done masturbating in the light of your phone's lurid image screen, the one where an AI-generated model is taking a prime number of cocks in her ass. You're conscious so that you can screw with the consciousness of the rest. Knocking it out permanently gets you the highest score, but you have to be discreet and do it via other consciousnesses—mindfucking should be your Darwinian plan. It's easy, really; just hit the fuck face next to you with a blunt instrument, like your head. Good riddance. Wherever was I? Anyways I forgot. Alzheimer's. I'm getting old, the balls are already the size of raisins. Oh yes, I remember—headbutting is good, but better if done in the dark. Always try to find a scapegoat and blame it on the least holy; they're usually the least popular ones. Or just store your nastiest fart and let it rip right when the elevator is sealed with the maximum number of occupants in free fall. Make sure they're all religious and they gag on your fart whilst trying to pray. Make faces when you are sure they're almost dead. Fart some more. Amen.  
+  
+But still scratching is fun. A man has to do, what a man has to do.
+
+
 # File: src/lib/posts/NegExponent.md
 
 ---
@@ -6962,13 +8066,19 @@ tags: ["Bengali"]
 <script>
     import PostImage from '$lib/components/blog/PostImage.svelte';
     import imageSrc1 from '$lib/assets/op/IMG-20251012-WA0004.jpg?url';
-    import imageSrc2 from '$lib/assets/op/IMG-20251012-WA0006.jpg?url';
+    import imageSrc2 from '$lib/assets/op/WhatsApp Image 2025-10-15 at 3.47.23 PM.jpeg?url';
+    import imageSrc3 from '$lib/assets/op/WhatsApp Image 2025-10-15 at 4.07.26 PM.jpeg?url';
+    
     import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
 </script> 
     
 **Old picture when I used to drive 260 km between Austin San Antonio 3 times a week, I did this for years.**
 
 <PostImage src={imageSrc1} alt="Old picture when I used to drive 260 km between Austin San Antonio 3 times a week, I did this for years." />
+
+**Mom when I started ClinZen new office in Hyderabad in 2013, I was still working in US and running it remotely**
+
+<PostImage src={imageSrc3} alt="Mom when I started ClinZen new office in Hyderabad in 2013, I was still working in US and running it remotely" />
 
 **Old picture of my baba (father) who was alive when he was reading the newspaper, died of criminal medical negligence, in India hospitals don't check for antibiotic resistance but keep guessing to give a MRSA bacteria time to kill, this and the movie Anand were why I had come back with a health information exchange plan with modernized hospital record systems and clinical trial management integration**
 
@@ -7305,7 +8415,7 @@ tags: ["MBA", "Business" ]
 	
   import imageSrc3 from '/src/lib/assets/slideshow-images/portrait/IMG-20251008-WA0008.jpg?url';  
 	import imageSrc4 from '$lib/assets/IMG-20251012-WA0001.jpg?url';
-   
+   import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
 
     import PostBadge from '$lib/components/ui/PostBadge.svelte';
 </script>
@@ -7344,6 +8454,8 @@ tags: ["MBA", "Business" ]
 	standalone
 />
 
+**To give full credit and support to the original creator, please click the video title and watch it on YouTube. It makes a real difference for them.**
+
 **WHY READ THIS BOOK**
 
 I will write my pithy notes on what I get out of this book as I re-read the 10th anniversary expanded edition. I also have a previous copy. So it's important to point out that this analysis is not a book review but a deep dive into the benthic depths of the business world as I perceive it without filters. 
@@ -7357,6 +8469,8 @@ And people of generations born later than me often don't have the brain areas br
 <PostImage src={imageSrc3} alt="gecko" />
 
 Books still matter—not just the objects, but the earnest intent to read them. Googling or chatting with an LLM is like lifting featherweights and expecting to turn into the Hulk. The effort feels like work, but nothing really grows. What’s worrying is that the current conversation around AI competence—how well it answers questions about everything from calculus to mango exports—misses the actual crisis. The problem isn’t in the machine’s output; it’s in the reception, in the education that shapes how humans *receive* and interpret knowledge.
+
+<Ytp src="https://youtu.be/Hv9SQlcLyPM?si=-5lomSfXNk1I7cyM" />
 
 If we move into a future where learning means feeding prompts to a chatbot instead of wrestling with ideas, reading deeply, or cultivating genuine curiosity, we’ll have traded understanding for simulation. And that’s dire. As a computer engineer and scientist, I understand both sides of the limitation—the human asking and the model replying. Most exchanges end up as witty repartee with very little substance behind them. Real engagement still has to come from the human side.
 
@@ -7813,7 +8927,7 @@ thumbnail: "/images/placeholders/IMG-20251012-WA0004.jpg"
 
 description: "A complicated palimpsest of ambition, triumph, misadventures, romance, then—shame, regrets—most now like old luggage tags, expired or useless."
 category: 'personal'
-date: '2025-09-12'
+date: '2025-05-12'
 published: true
 ---
 
@@ -8487,6 +9601,10 @@ thumbnail : "/images/placeholders/IMG-20250806-WA0004.jpg"
 
 category : "Doggerel Religion" 
 
+date: 10/12/2025
+
+published : true
+
 ---
 
 ![holy tibetan](/images/placeholders/IMG-20250806-WA0004.jpg) 
@@ -8501,8 +9619,42 @@ I'm sure it's cloaca won't be happy.<br>
 First I fuck it, then I bleed it,<br>
 As we know that's alrighty with almighty.<br>
 <br>
+I don't eat proud cunt shit, that's it,<br>
+I fuck free docile little unfucked uns.<br>
+Mountain drug-addicted orphaned urchins,<br>
+Or traveling drugged dopey catholic nuns.<br><br>
+Little girls little boys, dildos, coy toys,<br>
+Just something to bring god into them.<br>
+It's so holy analysis of their tiny anus,<br>
+Date rape on drugs this shit: same to same. <br> 
+<br>
+I relax need for victims to shit,<br>
+Before holiness inserted into their hole.<br>
+The fecal smell turns me goodly on,<br>
+Buddhism sodomized into a premeditated soul. <br><br>
+Totally cute holes then, I count ten,<br>
+Of all sizes, colors and sorts.<br>
+I snort cocaine through my ass,<br>
+For planning religious retorts.<br><br>
+But mainly I just relax my sphincter, <br>
+And out comes my really smelly poop.<br>
+Of all religions mine at least tells you,<br>
+Life is an eat-shit-fuck fucking loop.<br><br>
+In nepal, where mountains have tits, <br>
+Holiness goes on fucking unchecked. <br>
+A diaspora of sanctimonious seedy fucks,<br>
+In every ass that I have checked.<br><br>
+Too many fucks frauds and fools,<br>
+Freeloaders freaks rapist fartsy goons. <br>
+I say, I am so holy, I tell them no truth, <br>
+Bilious belligerent face-fucked cartoons.<br><br>
+Religion a fuck-all that goodly fucks ass,<br>
+And leaves the holy hole gaped ungated. <br>
+The cosmic curse the eventual hearse,<br>
+Still flows like diarrhea unabated.
+<br><br>
 In Tibet when I sodomized a pet civet,<br>
-My dick stank like a skunk.<br>
+My dick stank like a sick skunk.<br>
 Not to fear, skunks are leaders here,<br>
 Plus this is expected of a masculine monk.<br>
 <br>
@@ -8512,11 +9664,15 @@ Fuck everyone, advisable as a tattoo,<br>
 If you want a free boarding pass.<br>
 <br>
 My roommate meditates with his mouth open,<br>
-I'll transfer the poop as a friend.<br>
+I'll transfer the bird poop as a friend.<br>
 That bastard farts in his sleep,<br>
 I plan to bring him to his monastic end.<br>
 <br>
-I hope he chokes on the poop,<br>
+Wants nirvana this gassy monk, <br>
+By shitting in ordinary pants. <br>
+People throng the many clueless wrong,<br>
+Giggling mindlessly stupid sycophants. <br><br>
+I hope he chokes on the stinky poop,<br>
 I'll ensure that his head bursts.<br>
 I'll kick his pious balls until he's there,<br>
 In bald buddha he says he trusts.<br>
@@ -8693,7 +9849,22 @@ category: "Bipolar Depression"
 
 ---
 
+<script>
+    import PostImage from '$lib/components/blog/PostImage.svelte';
+    
+   import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
+</script> 
+
+**To give full credit and support to the original creator, please click the video title and watch it on YouTube. It makes a real difference for them.**
+
+**Movies**
+
+<Ytp src="https://youtu.be/Ra-7PPAJuSw?si=SkhQPrwg40bi2qOm" />
+
 ![a fucking tower](/images/placeholders/IMG-20250313-WA0010.jpg) 
+
+
+**To give full credit and support to the original creator, please click the video title and watch it on YouTube. It makes a real difference for them.**
 
 So here's a fucking tower—sketched from Pinterest and greased with the graphic naked, obscene vacuum in my thoughts I feel sometimes when I spiral into a depression. So yes my fucking tower—a concrete thrust shamelessly into the blistering Calcutta sun like some alien phallus raised by an architect hellbent on Freudian revenge. As if we didn't have enough symbols of man's ceaseless obsession with size. It's squat, graceless, decidedly austere without even the ironic charm. Look at the staircase—a twisted iron atrocity, a metal waffle whose sole existential purpose seems to be to provide shin injuries. I mean, how the hell do you climb that thing sober without whispering blasphemous invocations or praying for Darwinian mercy? I mean you don't, you can't, it's trapped in two dimension, like I am in three. I need to throw up—don't like it when I get too close to the center, I get fast, I get dizzy and one day I know I'll get dead. 
 
@@ -8703,7 +9874,12 @@ And atop sits that absurd, flat-ass rooftop—more pretentious than practical—
 
 Here it stands, an architectural contradiction—a fortress without defense, a tower without grace, as bloody bengali as rabindrasangeet performed at gunpoint. It's either an ironic middle finger raised by some forgotten civil servant or a monument to human folly etched in monochrome—I need to throw up. Dammit, isn't it also oddly comforting? A structure stubbornly, cynically enduring, like me, like the city itself—too bitter to die, too proud to surrender, forever throwing up, unpopular, hated by everyone, dizzy, dying and miserable—yet somehow still standing. 
 
+Or instead of a bad government nightmare it could be a private citizen's dream like that phallic testament **The 42**, that tall, glassy toothpick piercing the Kolkata skyline. It wasn’t named after Douglas Adams or *The Hitchhiker’s Guide to the Galaxy*’s famous “Answer to the Ultimate Question of Life, the Universe, and Everything.” The name simply refers to its **street address: 42B, Shakespeare Sarani**. Developers are notoriously practical when naming luxury towers—numerical minimalism sounds classy, cosmopolitan, and vaguely mysterious. But the *42* resonance has delighted plenty of Adams fans, who like to imagine that Kolkata’s most ostentatious residential spire is a sly cosmic joke about the futility of human ambition—life’s big question answered by a luxury condo. But frankly, this tower in Calcutta—The 42—it’s like someone decided to build a Jenga set on top of a wet sponge and said, “Yes, that’ll hold.” The whole city’s sitting on mud and water like it’s the world’s most suicidal waterbed. And then they went, “You know what this geological pudding needs? A 60-story glass toothpick!” Because nothing says “stability” like pouring millions into a skyscraper that could pogo-stick itself into the Ganges during a mid-tier earthquake.
 
+And don’t even get me started on the developers. You think they’re sitting there, double-checking seismic codes? Please. They’re too busy marketing it as “ultra-luxury vertical living with panoramic views of your impending doom.” Half of them probably think “base isolation” means keeping the poor people out. Now, maybe the engineers did everything right, sure. Maybe it’s got enough rebar and damping systems to ride out the Big One like a distant drunk dada on a mechanical bull. But the soil’s still what it is—Kolkata isn’t exactly bedrock country. It’s soft, swampy, and shifts more than a politician’s moral compass.
+
+So yes, it might stand fine, or it might do the architectural equivalent of the limbo when the next quake hits. Either way, if you live there, keep your emergency bag handy and maybe skip the top floors—because gravity has a very dark sense of humor. Anyway I'm so poor I can't even afford the vehicle fare to get anywhere near that building. 
+ 
 
 
 # File: src/lib/posts/Turdswithcoils.md
@@ -9623,8 +10799,8 @@ export const load: PageServerLoad = async () => {
             })
             .filter((post): post is Post => post !== null);
 
-        // Sort posts by date, newest first
-        posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+        // Sort posts by date, oldest first
+        posts.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
         return { posts };
     } catch (e) {
@@ -9691,7 +10867,8 @@ export async function load() {
 				return post.published !== false;
 			});
 
-		posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+		// Sort posts by date, oldest first
+        posts.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
 		return { posts };
 	} catch (e) {
