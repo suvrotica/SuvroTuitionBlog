@@ -1,10 +1,10 @@
 ---
 title: "Bengali Fart"
-description: "A satirical and profane doggerel using the 'Bengali fart' as a potent metaphor for political decay and societal hypocrisy in Bengal and beyond. A darkly humorous take on identity and belonging."
+
 category: "Doggerel"
 thumbnail: "/images/placeholders/IMG-20250731-WA0004.jpg"
 date: "2025-07-31"
-keywords: ["doggerel", "political satire", "Bengali", "Kolkata", "profane poetry", "dark humor", "social commentary", "Mamata Banerjee", "Narendra Modi", "Indian politics", "scatological humor"]
+tags: ["doggerel", "political satire", "Bengali", "Kolkata", "profane poetry", "dark humor", "social commentary", "Mamata Banerjee", "Narendra Modi", "Indian politics", "scatological humor"]
 published: true
 ---
 <script>
@@ -43,6 +43,10 @@ You can fart but you can't fret.<br>
 Fuck off I cried, I realized I died,<br>
 The future a fart of imbecelic threat.<br>
 <br>
+Bengali shit always stuck in escapist gas,<br>
+Hallelujah there's a second jesus cumming.<br>
+A series of deep diaphragmatic beats,<br>
+Or a sad bengali violin strumming.<br><br>
 Bits tiny coalesce as shit shiny,<br>
 So much that I turn true blue.<br>
 Having your shit like rum cake,<br>

@@ -27,7 +27,7 @@ tags: ["Faces", "Gay", "Transsexual", "Kolkata", "Calcutta", "shemale", "Shit", 
 <br>
 A Bengali good-for-nothing chap,  <br>
 All I do day in, day out, is clap.  <br>
-I clap because I am holy, I say,  <br>
+I clap because I am holy, I dare say,  <br>
 But the neighbors giggle and say I'm gay.<br>
 <br>
 So I decided to fuck the neighbors all, <br> 
@@ -45,6 +45,20 @@ I do not know why I like everything pink.<br>
 Sometimes my shit smells so cute and sweet,<br>
 Sweetly I savor the shit sweet pinkish stink.<br>
 <br>
+Fuck me fuck me not,<br>
+I know when I shit it's a lot.<br>
+Suck my dick you fuckass prick,<br>
+Or I insert in your ass a stick.<br>
+<br>
+Many on this rock sucked cock,<br>
+Alan Turing of computer and AI fame.<br>
+When in holy holes it's goodly fair, <br>
+A hindoo droopy in a tight most lame. <br>
+<br>
+Gassy flatulent fact never intact,<br>
+But the Indian diaspora dissolved in it.<br>
+This is the smelliest part of his anus,<br>
+Of homo sapiens who hasn't taken a shit.<br><br>
 Life is bullshit, this life, my foot,  <br>
 Go fuck yourself already like a brute.  <br>
 I know you're an asshole like the rest, <br> 
@@ -60,17 +74,20 @@ Not much in this life I love except pee. <br>
 And shit when it is in large sums.  <br>
 On heads from the balcony it comes.  <br>
 <br>
-Many on this rock sucked cock,<br>
-Alan Turing of computer and AI fame.<br>
-In holy holes it's all goodly fair, <br>
-A hindoo droopy in a tight most lame. <br>
-<br>
-I dance in a trance I giggle and prance,<br> 
+I dance in a trance I giggle I'm crass,<br> 
 Fuck me baby in my middle-class ass. <br>
 Pinky promise I won't shit on your dick, <br>
 I fondle buttocks I want to keep.<br>
 <br>
 I wanna have a god baby in my stinky ass, <br>
-No cunt in front so I shit the fuck out.<br>
+No cunt in front I shit the fuck out with gas.<br>
 Fuck me hard krishna while mohammad sucks, <br>
-Fuck me, fuck me, fuck me — fuck my shit out.<br>
+Fuck me, fuck me and fuck bengali fucks. <br><br>
+Gee glib glee how little I fucking see,<br>
+Inside my ass or of the fuck before me.<br>
+It's only by looking at the diarrhea,<br>
+I can tell whether it's a he or a she.<br><br>
+Plain as as ass plainspeak I say,<br>
+Sometimes something inside me not today.<br>
+A gurgling sound in my bloody bladder,<br>
+My ass splattered on the wall as spray.<br><br>

@@ -28,6 +28,8 @@ tags: ["asimov", "bill bryson" ]
 
 **ENGLISH**
 
+<Ytp src="https://youtu.be/k_Hse48e_7M?si=lwhv4yS-yPzOO_fU" />
+
 <Ytp src="https://youtu.be/Bz9bwgomnZQ?si=e9jvKzSRfzejBTWO" />
 
 <Ytp src="https://youtu.be/jgznpeJkdi8?si=Z9sQuKI4uZBu55xN" />

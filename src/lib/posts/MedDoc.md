@@ -37,3 +37,7 @@ tags: ["Medical Documentaries" ]
 <Ytp src="https://youtu.be/EkyAuG9RSSU?si=EXUarPEM-ZmCY0N5" />
 
 <Ytp src="https://youtu.be/ukCFmh2UsYA?si=P_h9fEfBrZv3RgAA" />
+
+**bipolar**
+
+<Ytp src="https://youtu.be/MyH5mCMwO-A?si=vew1mm4fuIpy8l7N" /> 

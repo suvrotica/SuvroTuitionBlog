@@ -1,6 +1,6 @@
 ---
 
-title : "Bengali Songs Music" 
+title : "Bengali Music & Movies" 
 
 thumbnail : "/images/placeholders/IMG-20251006-WA0002.jpg"
 
@@ -25,6 +25,37 @@ tags: ["Bengali"]
 <PostImage src={imageSrc1} alt="goat on headphone listening to Bengali songs and shitting" />
 
 **To give full credit and support to the original creator, please click the video title and watch it on YouTube. It makes a real difference for them.**
+
+**Movies**
+
+<Ytp src="https://youtu.be/iwsigIyhPWg?si=AuN5SK9pvZ02Zi6c" />
+
+<Ytp src="https://youtu.be/cdrmzezrdgQ?si=YPVqabAAd5figwz6" />
+
+
+<Ytp src="https://youtu.be/7UHApGVi9j8?si=fRgdVXsw7WE-_5hA" />
+
+<Ytp src="https://youtu.be/iq55JrrCTMM?si=pZIx_xRQx32IxDfq" />
+
+<Ytp src="https://youtu.be/isvSLCepmpU?si=z6lUxHmQ9D6jqtAF" />
+
+<Ytp src="https://youtu.be/YKp563ransM?si=_QYnsvIE3rDAfAdt" />
+
+<Ytp src="https://youtu.be/G_rt5ejPcLE?si=3kyBlpnI-9i4wwQx" />
+
+<Ytp src="https://youtu.be/KcDuSGmSaTQ?si=oiNBQYV2DiYRHzOV" />
+
+<Ytp src="https://youtu.be/F-3VByangcY?si=uVvMbD9fA7wMGdka" />
+
+<Ytp src="https://youtu.be/pAJ32TOXXd0?si=1D0H1ZnthLVV9q9T" />
+
+<Ytp src="https://youtu.be/3zLM-FfGydw?si=_ipCjrDgusZSn9_9" />
+
+<Ytp src="https://youtu.be/FJ7HkPOgUxw?si=W6wDY-l0f1UajlY-" />
+
+<Ytp src="https://youtu.be/Q3I-C9p5keo?si=I7Fww_7MzWXhwqj4" />
+
+**Music**
 
 <Ytp src="https://youtu.be/HvOXmnTJYRc?si=dO0MjoWbbxZ6N3My" />
 
