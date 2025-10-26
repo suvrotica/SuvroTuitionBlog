@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Stroke, Point, InkContent } from '$lib/types/notebook';
 	import { generateUUID } from '$lib/utils/uuid';
-	import { untrack } from 'svelte'; // [!code ++]
+	import { untrack, tick } from 'svelte'; // [!code ++]
 
 	let {
 		content,
@@ -29,27 +29,18 @@
 
 	let strokes = $state<Stroke[]>(content?.strokes || []);
 
-	// --- THIS IS THE FIX ---
-	// This effect now ONLY depends on the `content` prop.
 	$effect(() => {
-		// Read `content` to establish it as the *only* dependency.
 		const propStrokes = content?.strokes || [];
-
-		// We check `isDrawing` but `untrack` it. This means
-		// changes to `isDrawing` will *not* cause this effect to re-run.
 		if (untrack(() => isDrawing)) {
-			// The user is actively drawing. Do not overwrite their
-			// local changes. The sync will happen after their
-			// save completes and the `content` prop updates again.
 			return;
 		}
-
-		// The `content` prop changed (e.g., from a save) and the
-		// user is not drawing, so we can safely sync the prop
-		// to our local state.
-		strokes = propStrokes;
+		
+		// This check prevents an infinite loop by only updating if
+		// the prop is truly different from the local state.
+		if (JSON.stringify(propStrokes) !== JSON.stringify(strokes)) {
+			strokes = propStrokes;
+		}
 	});
-	// --- END FIX ---
 
 	function getPathData(stroke: Stroke): string {
 		if (!stroke || stroke.points.length === 0) return '';
@@ -92,11 +83,10 @@
 		const { x, y } = getPointerPosition(event);
 		const newPoint: Point = { x, y, t: Date.now(), p: event.pressure };
 		currentStroke.points.push(newPoint);
-		// This line is crucial for Svelte 5 to see the mutation
 		currentStroke = currentStroke;
 	}
 
-	function handlePointerUp(event: PointerEvent) {
+	async function handlePointerUp(event: PointerEvent) { // [!code ++]
 		if (!isDrawing || !currentStroke) return;
 		isDrawing = false;
 		svgElement?.releasePointerCapture(event.pointerId);
@@ -105,13 +95,15 @@
 			strokes = [...strokes, currentStroke];
 		}
 		currentStroke = null;
-		onchange(); // Fire the change event
+		await tick(); // [!code ++]
+		onchange(); // [!code ++]
 	}
 
-	function undo() {
+	async function undo() { // [!code ++]
 		if (strokes.length === 0) return;
 		strokes = strokes.slice(0, -1);
-		onchange();
+		await tick(); // [!code ++]
+		onchange(); // [!code ++]
 	}
 
 	function selectColor(color: string) {
@@ -126,8 +118,84 @@
 	}
 
 	export function getCurrentContent(): InkContent {
-		// This now correctly returns the local `strokes` array,
-		// which is no longer being prematurely cleared.
 		return { strokes: strokes };
 	}
 </script>
+
+<div
+	class="ink-section-container border border-neutral-300 dark:border-neutral-700 rounded bg-neutral-900 flex flex-col"
+	style="height: 75vh;"
+>
+	<div
+		class="toolbar sticky top-0 z-10 p-2 flex gap-2 border-b border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 flex-shrink-0"
+	>
+		{#each colors as color (color.value)}
+			<button
+				title={color.name}
+				onclick={() => selectColor(color.value)}
+				class="w-6 h-6 rounded-full border-2"
+				class:border-blue-500={tool === 'pen' && selectedColor === color.value}
+				class:border-neutral-300={tool !== 'pen' || selectedColor !== color.value}
+				style="background-color: {color.value};"
+				aria-label="Select {color.name} ink"
+			></button>
+		{/each}
+
+		<div class="border-l border-neutral-300 dark:border-neutral-600 mx-1"></div>
+
+		<button
+			title="Eraser"
+			onclick={selectEraser}
+			class:border-blue-500={tool === 'eraser'}
+			class:border-neutral-300={tool !== 'eraser'}
+			class="px-2 py-0 h-6 text-sm text-neutral-700 dark:text-neutral-200 bg-neutral-100 dark:bg-neutral-700 rounded border flex items-center justify-center"
+			aria-label="Select Eraser"
+		>
+			Eraser
+		</button>
+
+		<button
+			title="Undo"
+			onclick={undo}
+			class="px-2 py-0 h-6 text-sm text-neutral-700 dark:text-neutral-200 bg-neutral-100 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 flex items-center justify-center"
+			aria-label="Undo last stroke"
+		>
+			Undo
+		</button>
+	</div>
+
+	<div class="overflow-y-auto w-full flex-grow">
+		<svg
+			bind:this={svgElement}
+			class="w-full"
+			onpointerdown={handlePointerDown}
+			onpointermove={handlePointerMove}
+			onpointerup={handlePointerUp}
+			onpointerleave={handlePointerUp}
+			style="touch-action: none; background-color: {backgroundColor}; height: 1500px;"
+		>
+			{#each strokes as stroke (stroke.id)}
+				<path
+					d={getPathData(stroke)}
+					stroke={stroke.color}
+					stroke-width={stroke.width}
+					fill="none"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				/>
+			{/each}
+
+			{#if currentStroke && currentStroke.points.length > 0}
+				<path
+					d={getPathData(currentStroke)}
+					stroke={tool === 'eraser' ? backgroundColor : currentStroke.color}
+					stroke-width={currentStroke.width}
+					fill="none"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					opacity="0.8"
+				/>
+			{/if}
+		</svg>
+	</div>
+</div>
