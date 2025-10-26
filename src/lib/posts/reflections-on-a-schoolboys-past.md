@@ -117,3 +117,5 @@ But in the end, what I'm trying to say in a long, winding way is that I did a lo
         Visit the Blog
     </a>
 </div>
+
+People want to be infinitely entertained. They don’t want to go back to school or be informed about how you were molested—well, maybe only if you’re an attractive woman who can describe your bodily massacre in a way that gives the reader’s animal region the requisite blood flow. I know my blog posts are never going to be read, but I write them because I’m alive, and this is the only vent I have.
