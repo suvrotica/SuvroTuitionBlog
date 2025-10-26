@@ -4,14 +4,13 @@ import { KV_REST_API_URL, KV_REST_API_TOKEN } from '$env/static/private';
 import type { Notebook, Section } from '$lib/types/notebook';
 import { generateUUID } from '$lib/utils/uuid';
 
-// Initialize Redis client as shown in the Vercel guide
-// We use your static env variables
+// Initialize Redis client using the exact pattern from the Vercel guide
+// This prevents errors if the variables are undefined during build
 const kv = new Redis({
-	url: KV_REST_API_URL,
-	token: KV_REST_API_TOKEN
+	url: KV_REST_API_URL || '',
+	token: KV_REST_API_TOKEN || ''
 });
 
-// This is the key we'll use to store the list of all notebooks
 const ALL_NOTEBOOKS_KEY = 'notebooks:all';
 
 /**
@@ -21,7 +20,6 @@ const ALL_NOTEBOOKS_KEY = 'notebooks:all';
  */
 export async function getNotebook(id: string): Promise<Notebook | null> {
 	try {
-		// Upstash/Redis stores objects as JSON strings
 		const notebook = await kv.get<Notebook>(`notebook:${id}`);
 		if (!notebook) {
 			console.log(`[KV Adapter] Notebook not found: ${id}`);
@@ -51,11 +49,7 @@ export async function createNotebook(title: string = 'Untitled Notebook'): Promi
 	};
 
 	try {
-		// Save the full notebook. It's stored as a JSON string.
 		await kv.set(`notebook:${newNotebook.id}`, newNotebook);
-
-		// Also save a summary for the list page.
-		// hset stores it in a "hash" (like a big object) for fast lookups.
 		await kv.hset(ALL_NOTEBOOKS_KEY, {
 			[newNotebook.id]: {
 				id: newNotebook.id,
@@ -90,15 +84,11 @@ export async function updateNotebook(
 		return null;
 	}
 
-	// Update properties
 	notebook.title = title;
 	notebook.sections = sections;
 
 	try {
-		// Save the full updated notebook
 		await kv.set(`notebook:${id}`, notebook);
-
-		// Also update the summary for the list page
 		await kv.hset(ALL_NOTEBOOKS_KEY, {
 			[id]: {
 				id: notebook.id,
@@ -126,7 +116,6 @@ export async function getAllNotebooks(): Promise<Array<Pick<Notebook, 'id' | 'ti
 			return [];
 		}
 
-		// hgetall returns an object, so we get its values and sort
 		const notebookList = Object.values(summaries) as Array<
 			Pick<Notebook, 'id' | 'title' | 'createdAt'>
 		>;
