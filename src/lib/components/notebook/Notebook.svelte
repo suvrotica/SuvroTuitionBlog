@@ -97,7 +97,6 @@
 				setTimeout(() => {
 					if (saveStatus === 'saved') saveStatus = 'idle';
 				}, 2000);
-
 				console.log('Save successful!');
 			} catch (error: any) {
 				console.error('Save failed:', error);
@@ -166,15 +165,9 @@
 		notebook.sections = [...notebook.sections, newSection];
 	}
 
-	// Effect to update refs when sections change
-	$effect(() => {
-		const newRefs: Record<string, any> = {};
-		tick().then(() => {
-			notebook.sections.forEach((section) => {
-				// This relies on having bind:this={sectionRefs[section.id]}
-			});
-		});
-	});
+	// --- DELETED ---
+	// The broken $effect block that was here has been removed.
+	// `bind:this` in the template is all you need.
 
 	function getSaveStatusText() {
 		switch (saveStatus) {
