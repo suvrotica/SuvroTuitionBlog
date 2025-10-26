@@ -4,9 +4,17 @@ import path from 'path';
 import type { Notebook, Section } from '$lib/types/notebook';
 import { generateUUID } from '$lib/utils/uuid';
 
-const sessionsDir = path.join(process.cwd(), 'data', 'sessions');
+// Vercel's serverless functions have a read-only filesystem, *except* for the /tmp directory.
+// We check for the VERCEL environment variable (which is '1' on Vercel)
+// to decide which directory to use.
+const sessionsDir =
+	process.env.VERCEL === '1'
+		? path.join('/tmp', 'sessions')
+		: path.join(process.cwd(), 'data', 'sessions');
 
-// (This function is unchanged)
+/**
+ * Ensures that the sessions directory exists.
+ */
 async function ensureDir() {
 	try {
 		await fs.access(sessionsDir);
@@ -15,9 +23,28 @@ async function ensureDir() {
 	}
 }
 
-// (This function is unchanged)
-export async function createNotebook(title: string = 'Untitled Notebook'): Promise<Notebook> {
+/**
+ * Writes a notebook object to a JSON file.
+ * @param notebook The notebook object to save.
+ */
+async function saveNotebook(notebook: Notebook): Promise<void> {
 	await ensureDir();
+	const filePath = path.join(sessionsDir, `${notebook.id}.json`);
+	try {
+		await fs.writeFile(filePath, JSON.stringify(notebook, null, 2));
+		console.log(`[FS Adapter] Saved notebook: ${notebook.id} to ${sessionsDir}`);
+	} catch (error) {
+		console.error(`[FS Adapter] Error saving notebook ${notebook.id}:`, error);
+		throw error;
+	}
+}
+
+/**
+ * Creates a new, empty notebook and saves it.
+ * @param title The title for the new notebook.
+ * @returns The newly created notebook object.
+ */
+export async function createNotebook(title: string = 'Untitled Notebook'): Promise<Notebook> {
 	const newNotebook: Notebook = {
 		id: generateUUID(),
 		title: title,
@@ -26,13 +53,16 @@ export async function createNotebook(title: string = 'Untitled Notebook'): Promi
 		sections: [],
 		meta: { tool: 'whiteboard-v1-dev' }
 	};
-	const filePath = path.join(sessionsDir, `${newNotebook.id}.json`);
-	await fs.writeFile(filePath, JSON.stringify(newNotebook, null, 2));
+	await saveNotebook(newNotebook);
 	console.log(`[FS Adapter] Created notebook: ${newNotebook.id}`);
 	return newNotebook;
 }
 
-// (This function is unchanged)
+/**
+ * Retrieves a notebook by its ID.
+ * @param id The UUID of the notebook.
+ * @returns The notebook object or null if not found.
+ */
 export async function getNotebook(id: string): Promise<Notebook | null> {
 	await ensureDir();
 	const filePath = path.join(sessionsDir, `${id}.json`);
@@ -43,28 +73,20 @@ export async function getNotebook(id: string): Promise<Notebook | null> {
 	} catch (error: any) {
 		if (error.code === 'ENOENT') {
 			console.log(`[FS Adapter] Notebook not found: ${id}`);
-			return null; // Not found
+			return null;
 		}
 		console.error(`[FS Adapter] Error reading notebook ${id}:`, error);
 		throw error; // Other errors
 	}
 }
 
-// (This function is unchanged)
-export async function saveNotebook(notebook: Notebook): Promise<void> {
-	await ensureDir();
-	const filePath = path.join(sessionsDir, `${notebook.id}.json`);
-	try {
-		await fs.writeFile(filePath, JSON.stringify(notebook, null, 2));
-		console.log(`[FS Adapter] Saved notebook: ${notebook.id}`);
-	} catch (error) {
-		console.error(`[FS Adapter] Error saving notebook ${notebook.id}:`, error);
-		throw error;
-	}
-}
-
-// --- NEW FUNCTION ---
-// Updates title AND sections. This replaces updateNotebookSections
+/**
+ * Updates the title and sections of an existing notebook.
+ * @param id The ID of the notebook to update.
+ * @param title The new title.
+ * @param sections The new array of sections.
+ * @returns The updated notebook object or null if not found.
+ */
 export async function updateNotebook(
 	id: string,
 	title: string,
@@ -72,33 +94,24 @@ export async function updateNotebook(
 ): Promise<Notebook | null> {
 	const notebook = await getNotebook(id);
 	if (!notebook) {
+		console.log(`[FS Adapter] Update failed: Notebook not found: ${id}`);
 		return null;
 	}
-	
+
 	// Update properties
 	notebook.title = title;
 	notebook.sections = sections;
-	
+
 	// Save the entire notebook
 	await saveNotebook(notebook);
 	console.log(`[FS Adapter] Updated notebook (title & sections): ${id}`);
 	return notebook;
 }
 
-// --- DEPRECATED (but keep for now if other things use it) ---
-// We should eventually remove this and only use updateNotebook
-export async function updateNotebookSections(id: string, sections: Section[]): Promise<Notebook | null> {
-	const notebook = await getNotebook(id);
-	if (!notebook) {
-		return null;
-	}
-	notebook.sections = sections;
-	await saveNotebook(notebook);
-	console.log(`[FS Adapter] Updated sections for notebook: ${id}`);
-	return notebook;
-}
-
-// (This function is unchanged)
+/**
+ * Retrieves a summary list of all notebooks.
+ * @returns An array of notebook summaries.
+ */
 export async function getAllNotebooks(): Promise<Array<Pick<Notebook, 'id' | 'title' | 'createdAt'>>> {
 	await ensureDir();
 	try {
