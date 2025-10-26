@@ -1,11 +1,6 @@
 // src/lib/server/auth.ts
 import { PUBLIC_EDITOR_SECRET } from '$env/static/public';
 export function isEditor(request: Request): boolean {
-	// In a real app, verify a JWT or session cookie
-	// For skeleton, just check a simple header or rely on PUBLIC_EDITOR_SECRET check
-	// This function isn't strictly needed if we check PUBLIC_EDITOR_SECRET directly in endpoints
-	// but provides a hook for future expansion.
-	// For now, let's assume endpoints check PUBLIC_EDITOR_SECRET directly.
 	console.warn('Using placeholder isEditor check. Implement real auth!');
 	return true; // Placeholder
 }
