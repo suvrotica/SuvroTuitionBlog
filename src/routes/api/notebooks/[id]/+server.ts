@@ -1,7 +1,7 @@
 // src/routes/api/notebooks/[id]/+server.ts
 import { json, error as svelteKitError } from '@sveltejs/kit';
 // --- IMPORT THE NEW FUNCTION ---
-import { getNotebook, updateNotebook } from '$lib/server/storage/filesystem';
+import { getNotebook, updateNotebook } from '$lib/server/storage/kv';
 import { checkEditorSecret } from '$lib/server/auth';
 import type { RequestHandler } from './$types';
 import type { Section } from '$lib/types/notebook';

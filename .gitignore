@@ -35,3 +35,4 @@ vite.config.ts.timestamp-*
 .svelte-kit
 .vite
 node_modules/.vite
+.vercel

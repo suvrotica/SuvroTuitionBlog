@@ -1,6 +1,6 @@
 // src/routes/api/notebooks/+server.ts
 import { json } from '@sveltejs/kit';
-import { createNotebook } from '$lib/server/storage/filesystem';
+import { createNotebook } from '$lib/server/storage/kv';
 import { getEditToken } from '$lib/server/auth';
 import type { RequestHandler } from './$types';
 

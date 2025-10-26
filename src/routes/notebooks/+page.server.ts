@@ -1,6 +1,6 @@
 // src/routes/notebooks/+page.server.ts
 import { error } from '@sveltejs/kit';
-import { getAllNotebooks } from '$lib/server/storage/filesystem';
+import { getAllNotebooks } from '$lib/server/storage/kv';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async () => {

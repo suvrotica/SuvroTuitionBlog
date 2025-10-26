@@ -1,10 +1,11 @@
-# Context file generated on: Sunday, October 26, 2025 at 2:40:00 PM GMT+5:30
+# Context file generated on: Sunday, October 26, 2025 at 4:18:52 PM GMT+5:30
 ---
 
 # Project File Layout
 
 .
 
+├── .env.local
 ├── .gitignore
 ├── .npmrc
 ├── .prettierignore
@@ -383,7 +384,8 @@
 │   │   │       │   ├── IMG-20251021-WA0003.jpg
 │   │   │       │   ├── IMG-20251023-WA0006.jpg
 │   │   │       │   ├── IMG-20251023-WA0011.jpg
-│   │   │       │   └── IMG-20251023-WA0012.jpg
+│   │   │       │   ├── IMG-20251023-WA0012.jpg
+│   │   │       │   └── IMG-20251025-WA0002.jpg
 │   │   │       ├── portrait
 │   │   │       │   ├── 24fb85b4-ec6e-4033-8c3d-c8844279dffa.png
 │   │   │       │   ├── 3741d4c3-269c-431f-a2db-21e28fc94941.png
@@ -636,6 +638,8 @@
 │   │   │       │   ├── IMG-20251024-WA0003.jpg
 │   │   │       │   ├── IMG-20251025-WA0000.jpg
 │   │   │       │   ├── IMG-20251025-WA0001.jpg
+│   │   │       │   ├── IMG-20251025-WA0003.jpg
+│   │   │       │   ├── IMG-20251025-WA0005.jpg
 │   │   │       │   ├── IMG-PHOTO-ART--1510172753.jpg
 │   │   │       │   ├── IMG-PHOTO-ART--1513010449.jpg
 │   │   │       │   └── lonely_rapist.jpg
@@ -796,7 +800,8 @@
 │   │   │   ├── posts.ts
 │   │   │   └── storage
 │   │   │       ├── filesystem.test.ts
-│   │   │       └── filesystem.ts
+│   │   │       ├── filesystem.ts
+│   │   │       └── kv.ts
 │   │   ├── types
 │   │   │   └── notebook.ts
 │   │   ├── types.ts
@@ -1201,6 +1206,7 @@
 	},
 	"dependencies": {
 		"@types/uuid": "^10.0.0",
+		"@upstash/redis": "^1.35.6",
 		"@vercel/analytics": "^1.5.0",
 		"@vercel/speed-insights": "^1.2.0",
 		"d3": "^7.9.0",
@@ -6787,175 +6793,6 @@ To learn how to set all those knobs correctly, the model needs to read a mind-bo
 
 Finally, all this learning—adjusting billions of parameters based on trillions of words—requires an incredible amount of computer power. This is the **computational cost**. Training a big model is like having thousands of powerful computers working non-stop for months, a process that can cost crores of rupees. So, an LLM is large in three ways: **parameters** (the knobs), **data** (the books it reads), and **computation** (the energy it takes to learn).
 
------
-
-**Math behind this**
-
-Let's peek inside one of the simplest "thinkers" in the model, called a neuron. It's just doing some very basic school maths. Imagine this neuron is trying to decide the next word in the sentence "Hot tea with..." Should it be "milk" or "rain"? It takes in information and spits out a number.
-
-The core math is a simple multiplication and addition, called a **weighted sum**.
-
-The equation looks like this:
-$y = (w_1 \cdot x_1 + w_2 \cdot x_2) + b$
-
-Let’s break that down:
-
-  * $x_1, x_2$ : These are numbers representing the input words, like "Hot" and "tea".
-  * $w_1, w_2$ : These are the **weights**, which are the all-important **parameters**. They're the "knobs". They tell the neuron how much importance to give to each input word. A high weight means "pay close attention\!"
-  * $b$ : This is the **bias**. It's another parameter, like a little nudge that pushes the final result up or down, regardless of the input.
-  * $y$ : This is the final output number from our one tiny neuron.
-
-A real LLM has billions of these weights and biases, all connected in a giant, complicated web. The "large" part means the numbers of `w`'s and `b`'s are gigantic.
-
-**A Tiny Numerical Example**
-
-Let's pretend our neuron only has 3 parameters ($w_1$, $w_2$, and $b$). A big model like GPT-3 has about 175,000,000,000 of them\!
-
-Let's say our inputs are:
-
-  * $x_1 = 3.0$ (representing the word "Hot")
-  * $x_2 = 4.0$ (representing the word "tea")
-
-And our model has these parameter values (the knobs are already set):
-
-  * $w_1 = 2.0$
-  * $w_2 = 5.0$
-  * $b = -1.0$
-
-Let's calculate the output $y$ step-by-step, just like you would in your exercise book.
-
-**Step 1: Calculate the first weighted input ($w_1 \cdot x_1$)**
-We need to multiply $2.0$ by $3.0$.
-
-```
-   2.0
-×  3.0
-------
-   0.0  (0 × 2.0)
-+ 6.00  (3 × 2.0)
-------
-   6.00
-```
-
-So, $w_1 \cdot x_1 = 6.0$.
-
-**Step 2: Calculate the second weighted input ($w_2 \cdot x_2$)**
-We need to multiply $5.0$ by $4.0$.
-
-```
-   5.0
-×  4.0
-------
-   0.0   (0 × 5.0)
-+ 20.00  (4 × 5.0)
-------
-  20.00
-```
-
-So, $w_2 \cdot x_2 = 20.0$.
-
-**Step 3: Add the weighted inputs together**
-Now we add $6.0$ and $20.0$.
-
-```
-   6.0
-+ 20.0
-------
-  26.0
-```
-
-**Step 4: Add the bias ($b$)**
-Finally, we add our bias, which is $-1.0$.
-
-```
-  26.0
-+ (-1.0)
-------
-  25.0
-```
-
-Our neuron's output is $y = 25.0$. This number would then be passed to other neurons, which would do their own calculations, until the model finally produces a probability for the next word.
-
-**My Sketch**
-
-```
-                  ┌──────────┐
-Input x₁ (Hot) O───(w₁=2.0)───►│          │
-                  │          │
-                  │ Neuron y ├───> Output (25.0)
-                  │          │
-Input x₂ (tea) O───(w₂=5.0)───►│          │
-                  └──────────┘
-                      ▲
-                      │
-                   (b=-1.0)
-```
-
-"Large" means your drawing would have billions of these circles and lines, all interconnected. It's too big to draw, but it's all made of this very simple math, repeated over and over.
-
------
-
-**Deep Dive: The Scaling Hypothesis**
-
-Formally, a Large Language Model is a neural network, typically based on the **Transformer architecture**, whose performance and capabilities are a direct consequence of its scale. The term "large" is operationalized by three interconnected quantities: the number of model parameters ($N$), the size of the training dataset ($D$), and the total computational budget for training ($C$).
-
-**Parameters ($N$)**
-
-The parameters are the tunable elements $\theta$ of the model $p_\theta(x)$. For a standard decoder-only Transformer (like GPT-3), the majority of parameters are in the self-attention and feed-forward network (FFN) layers.
-
-A reasonable approximation for the parameter count is:
-$N \approx n_{layers} \times (N_{attn} + N_{ffn}) + N_{embed}$
-
-Where:
-
-  * $n_{layers}$: Number of Transformer blocks.
-  * $d_{model}$: The model's hidden dimension (width).
-  * $n_{heads}$: Number of attention heads.
-  * $d_{head}$: Dimension of each attention head ($d_{model} = n_{heads} \cdot d_{head}$).
-  * $d_{ff}$: Inner dimension of the FFN, typically $4 \cdot d_{model}$.
-  * $V$: Vocabulary size.
-
-The parameter counts for the key sub-components per layer are:
-
-  * **Self-Attention ($N_{attn}$):** The weight matrices for query, key, value, and output projections ($W_q, W_k, W_v, W_o$) are each of size $d_{model} \times d_{model}$.
-    $N_{attn} = 4 \cdot d_{model}^2$ (ignoring biases).
-  * **Feed-Forward Network ($N_{ffn}$):** Two linear layers, one from $d_{model} \to d_{ff}$ and the other from $d_{ff} \to d_{model}$.
-    $N_{ffn} = (d_{model} \cdot d_{ff}) + (d_{ff} \cdot d_{model}) = 2 \cdot d_{model} \cdot d_{ff}$. With $d_{ff} = 4d_{model}$, this becomes $8 \cdot d_{model}^2$.
-  * **Total per Layer (approx):** $N_{layer} \approx 12 \cdot d_{model}^2$.
-  * **Embedding Matrix ($N_{embed}$):** The token embedding and final unembedding matrices contribute $2 \cdot V \cdot d_{model}$ parameters (often weights are shared, so $V \cdot d_{model}$).
-
-**Proof-sketch of quadratic dependence:** The parameter count scales quadratically with the model width ($d_{model}$). This is a key reason why making models "wider" is a parameter-expensive way to scale. For example, doubling $d_{model}$ quadruples the number of parameters in the core layers.
-
-**Scaling Laws**
-
-The justification for creating "large" models is empirical, formalized by **scaling laws**. Research by Kaplan et al. (OpenAI, 2020) demonstrated that the test loss ($L$) of an autoregressive language model scales as a power-law function of $N$, $D$, and $C$.
-
-A simplified form of the scaling law for model size $N$ is:
-$L(N) = \left(\frac{N_c}{N}\right)^{\alpha_N} + L_\infty$
-
-Where $L(N)$ is the achievable cross-entropy loss for a model with $N$ parameters, and $N_c$, $\alpha_N$, and $L_\infty$ are constants fitted from empirical data. This predictable relationship implies that simply increasing the parameter count (as long as the model is trained to convergence on sufficient data) will predictably decrease the loss and improve performance.
-
-The **Chinchilla scaling laws** (Hoffmann et al., DeepMind, 2022) refined this, suggesting that for optimal performance under a fixed FLOPs budget, both model size and training data size should be scaled in equal measure. They found that most existing LLMs were "over-parameterized and under-trained." For optimal training of a model of size $N$, one should use $D \approx 20 \cdot N$ tokens. This insight has guided the development of newer models.
-
-**Computational Cost ($C$)**
-
-The training compute is typically measured in Petaflop-days or total FLOPs. A rule-of-thumb for estimating the training FLOPs for a dense Transformer is:
-$C \approx 6 \cdot N \cdot D_{tokens}$
-
-This formula arises because for each token processed, the model performs approximately $2N$ FLOPs (one matrix-vector product for the forward pass and two for the backward pass, simplified). Thus, for a dataset of $D_{tokens}$, the total computation is $\approx 2N \cdot D_{tokens} \cdot 3$ (where the 3 accounts for forward+backward pass). This simplifies to $6ND$.
-
-**Failure Modes & Research Frontiers:**
-
-  * **Emergent Abilities:** Scale appears to be not just quantitative but qualitative. Abilities like multi-step reasoning are not present in smaller models but "emerge" at certain scale thresholds. The mechanisms behind this are not fully understood.
-  * **Data Scarcity:** We are approaching the limits of high-quality text data available on the public internet. Future scaling may rely on synthetic data or multi-modal data.
-  * **Alignment Tax:** Controlling large models and aligning them with human values is a major open problem. Techniques like Reinforcement Learning from Human Feedback (RLHF) have a "performance tax" and their own scaling challenges.
-  * **Sparsity & Efficiency:** The $O(N^2)$ scaling of dense Transformers is a bottleneck. Research into architectures like Mixture-of-Experts (MoE) attempts to increase parameter count ($N$) while keeping the number of active parameters per token ($N_{active}$) constant, thus decoupling model size from computational cost per forward pass.
-
-**Disclaimer:** Training and deploying large-scale models require significant expertise in distributed systems and AI safety. The results and behaviors of these models can be unpredictable. For safety-critical applications, reliance on LLMs without rigorous testing and human oversight is strongly discouraged.
-
------
-
-So, after all that, the giant magical book with a billion knobs isn't just a bigger recipe book. It’s a completely different kind of cook—one that learned so much it can now invent dishes no one has ever dreamed of.
 
 # File: src/lib/posts/LAvids.md
 
@@ -8987,7 +8824,7 @@ I saw a lot of bad things in the Indian business community, so my brain easily r
 
 If you’re a white man in a suit, Indians—including the local thugs—will salute you. It’s the colonial hangover, still alive and bowing. But the moment you’re Indian, everything changes. The reverence vanishes, replaced by suspicion, rivalry, and an almost instinctive impulse to pull you down. You can’t really grasp this ruthlessness until you try to do something big—something that involves serious money and Indian people. Then you see how fast admiration turns into sabotage.
 
-There was also a traumatic experience I never recovered from, after I was beaten with hockey sticks in Assam and left bleeding from one eye, a taxi driver rescued me. I never received medical treatment for the head injury, and since then I’ve experienced increased irritability and difficulty regulating my emotions. The trauma likely affected regions of the prefrontal cortex that normally modulate impulsive or emotional responses generated by the limbic system, particularly the amygdala. As a result, I sometimes overreact or misjudge others’ intentions because the neural circuits responsible for inhibition and emotional control are compromised or have not fully recovered. I also have vision issues in one eye, and have crippling migraine like headaches when I am stressed. 
+There was also a traumatic experience I never recovered from, after I was beaten with hockey sticks in Assam and left bleeding from one eye, a taxi driver rescued me. I never received medical treatment for the head injury, and since then I’ve experienced increased irritability and difficulty regulating my emotions. The trauma likely affected regions of the prefrontal cortex that normally modulate impulsive or emotional responses generated by the limbic system, particularly the amygdala. As a result, I sometimes overreact or misjudge others’ intentions because the neural circuits responsible for inhibition and emotional control are compromised or have not fully recovered. I also have vision issues in one eye, and have crippling migraine like headaches when I am stressed. I wasted the best part of a man’s life—his youth, the energetic part in India—profligately waiting for promissory this or promissory that, running from one fraud only to get caught by another cheat. That’s been the whole story. And I’m fifty now. I’m old, and I lose my temper often because that hockey stick injury probably damaged the only executive control of amygdilian anger I had. I already had faulty wiring—a sort of privileged case that, had it found good soil, might have germinated into something good. But I had to come back to India. Well, too late. The script is written, and I’m fucked. It’s just a matter of how painfully and how miserably I will die—that remains the only blank. There are no dreams, no unfulfilled wishes, nothing I wish to do or can do. I can’t do, in fact, because if I try, there’ll be a thousand claws clawing me back into the abyss of darkness—the pit that India has dug itself into. The only thing I can do is write about the books I like reading that might be of some help, or my experiences, so that someone else might not have to travel the same unfortunate backward backwaters. 
 
 **Halo effect**: Because one trait looks impressive (Harvard MBA), people assume everything else about you is equally impressive. Your résumé, your decision-making, your judgment—they get an unearned shine. If you see someone in a clean, smart school uniform, you might think they are also a good student, even before they speak. One good thing (the suit) makes people think everything else about you is good. It's a mental shortcut. The suit acts like a signal, telling people you're important without you saying anything. 
 
@@ -9535,6 +9372,8 @@ But in the end, what I'm trying to say in a long, winding way is that I did a lo
         Visit the Blog
     </a>
 </div>
+
+People want to be infinitely entertained. They don’t want to go back to school or be informed about how you were molested—well, maybe only if you’re an attractive woman who can describe your bodily massacre in a way that gives the reader’s animal region the requisite blood flow. I know my blog posts are never going to be read, but I write them because I’m alive, and this is the only vent I have.
 
 
 # File: src/lib/posts/Rezala.md
@@ -10983,15 +10822,8 @@ export async function getPostsByCategory(category: string) {
 # File: src/lib/server/auth.ts
 
 // src/lib/server/auth.ts
-// VERY basic auth check for skeleton - replace with proper auth later
-import { PUBLIC_EDITOR_SECRET } from '$env/static/private'; // <-- This is the fix
-
+import { PUBLIC_EDITOR_SECRET } from '$env/static/public';
 export function isEditor(request: Request): boolean {
-	// In a real app, verify a JWT or session cookie
-	// For skeleton, just check a simple header or rely on PUBLIC_EDITOR_SECRET check
-	// This function isn't strictly needed if we check PUBLIC_EDITOR_SECRET directly in endpoints
-	// but provides a hook for future expansion.
-	// For now, let's assume endpoints check PUBLIC_EDITOR_SECRET directly.
 	console.warn('Using placeholder isEditor check. Implement real auth!');
 	return true; // Placeholder
 }
@@ -11083,61 +10915,39 @@ export async function getPosts() {
 import { describe, it, expect, beforeAll, afterAll, beforeEach } from 'vitest';
 import fs from 'fs/promises';
 import path from 'path';
-import { createNotebook, getNotebook, saveNotebook, updateNotebookSections } from './filesystem';
-import type { Notebook } from '$lib/types/notebook';
+import { createNotebook, getNotebook, updateNotebook, getAllNotebooks } from './filesystem';
+import type { Notebook, Section } from '$lib/types/notebook';
 
 // Use a temporary directory for tests
-const testSessionsDir = path.join(process.cwd(), 'data', 'test-sessions');
-
-// Mock process.cwd() to point to test dir or adjust adapter path logic
-// For simplicity, let's assume the adapter correctly uses testSessionsDir if base path is manipulated
-// Or, more robustly, modify the adapter temporarily for tests (less ideal)
-// Easiest: clear the dir before/after tests.
+// This logic works because the filesystem.ts module itself checks process.env.VERCEL
+// and will use '/tmp/sessions' if it's '1'. We'll set that env var for our tests.
+process.env.VERCEL = '1';
+const testSessionsDir = path.join('/tmp', 'sessions');
 
 beforeAll(async () => {
 	try {
 		await fs.mkdir(testSessionsDir, { recursive: true });
-	} catch {}
+	} catch (e) {
+		console.log('Test session dir already exists, cleaning...');
+	}
 });
 
 afterAll(async () => {
 	try {
 		// Clean up test directory
 		await fs.rm(testSessionsDir, { recursive: true, force: true });
-	} catch {}
+	} catch (e) {
+		console.error('Could not clean up test session dir:', e);
+	}
 });
 
 beforeEach(async () => {
-    // Clear directory before each test
-    const files = await fs.readdir(testSessionsDir);
-    for (const file of files) {
-        await fs.unlink(path.join(testSessionsDir, file));
-    }
-     // Hacky: Temporarily override the sessionsDir path for testing
-    // This is not ideal, dependency injection would be better
-    (createNotebook as any).__TEST_SESSION_DIR = testSessionsDir;
-    (getNotebook as any).__TEST_SESSION_DIR = testSessionsDir;
-    (saveNotebook as any).__TEST_SESSION_DIR = testSessionsDir;
-     (updateNotebookSections as any).__TEST_SESSION_DIR = testSessionsDir; // Need to adjust adapter code slightly for this
+	// Clear directory before each test
+	const files = await fs.readdir(testSessionsDir).catch(() => []);
+	for (const file of files) {
+		await fs.unlink(path.join(testSessionsDir, file));
+	}
 });
-
-
-// --- Helper in filesystem.ts needed for the hack above ---
-/*
-Add this near the top of filesystem.ts:
-let sessionsDir = path.join(process.cwd(), 'data', 'sessions');
-// Allow overriding for tests (ugly, but simple for now)
-if ((createNotebook as any)?.__TEST_SESSION_DIR) {
-    sessionsDir = (createNotebook as any).__TEST_SESSION_DIR;
-}
-// Repeat for getNotebook, saveNotebook, updateNotebookSections if needed or make sessionsDir exportable and mutable
-export function __setTestSessionDir(dir: string) { // A slightly cleaner way
-    sessionsDir = dir;
-}
-// Then call __setTestSessionDir(testSessionsDir) in beforeEach
-*/
-// --- End Helper ---
-
 
 describe('Filesystem Storage Adapter', () => {
 	it('should create a new notebook file', async () => {
@@ -11164,32 +10974,56 @@ describe('Filesystem Storage Adapter', () => {
 		expect(fetched).toBeNull();
 	});
 
-    it('should save updates to a notebook', async () => {
-        const notebook = await createNotebook('Test Save');
-        notebook.title = 'Updated Title';
-        await saveNotebook(notebook);
+	it('should save updates to a notebook title and sections', async () => {
+		const notebook = await createNotebook('Test Save');
+		const newTitle = 'Updated Title';
+		const newSections: Section[] = [
+			{
+				id: 'sec1',
+				type: 'ink',
+				orderIndex: 1000,
+				createdAt: new Date().toISOString(),
+				versions: [
+					{
+						versionId: 'v1',
+						changedAt: new Date().toISOString(),
+						changeType: 'create',
+						content: { strokes: [] }
+					}
+				]
+			}
+		];
 
-        const fetched = await getNotebook(notebook.id);
-        expect(fetched?.title).toBe('Updated Title');
-    });
+		const updated = await updateNotebook(notebook.id, newTitle, newSections);
+		expect(updated).not.toBeNull();
+		expect(updated?.title).toBe(newTitle);
+		expect(updated?.sections).toHaveLength(1);
+		expect(updated?.sections[0].id).toBe('sec1');
 
-     it('should update notebook sections', async () => {
-        const notebook = await createNotebook('Test Update Sections');
-        const newSections: any[] = [{ id: 'sec1', type: 'ink', orderIndex: 1000, versions: [{ versionId: 'v1', changedAt: '', changeType: 'create', content: { strokes: []}}] }];
+		const fetched = await getNotebook(notebook.id);
+		expect(fetched?.title).toBe(newTitle);
+		expect(fetched?.sections).toHaveLength(1);
+		expect(fetched?.sections[0].id).toBe('sec1');
+	});
 
-        const updated = await updateNotebookSections(notebook.id, newSections);
-        expect(updated?.sections).toHaveLength(1);
-        expect(updated?.sections[0].id).toBe('sec1');
+	it('should return null when updating a non-existent notebook', async () => {
+		const updated = await updateNotebook('non-existent-id', 'No Title', []);
+		expect(updated).toBeNull();
+	});
 
-         const fetched = await getNotebook(notebook.id);
-         expect(fetched?.sections).toHaveLength(1);
-         expect(fetched?.sections[0].id).toBe('sec1');
-     });
+	it('should get all notebook summaries', async () => {
+		await createNotebook('Notebook A');
+		// Wait a moment to ensure different createdAt times for sorting
+		await new Promise((res) => setTimeout(res, 10));
+		await createNotebook('Notebook B');
 
-     it('should return null when updating sections of non-existent notebook', async () => {
-        const updated = await updateNotebookSections('non-existent-id', []);
-        expect(updated).toBeNull();
-     });
+		const summaries = await getAllNotebooks();
+		expect(summaries).toHaveLength(2);
+		expect(summaries[0].title).toBe('Notebook B'); // Most recent first
+		expect(summaries[1].title).toBe('Notebook A');
+		expect(summaries[0].id).toBeDefined();
+		expect(summaries[0].createdAt).toBeDefined();
+	});
 });
 
 # File: src/lib/server/storage/filesystem.ts
@@ -11200,9 +11034,17 @@ import path from 'path';
 import type { Notebook, Section } from '$lib/types/notebook';
 import { generateUUID } from '$lib/utils/uuid';
 
-const sessionsDir = path.join(process.cwd(), 'data', 'sessions');
+// Vercel's serverless functions have a read-only filesystem, *except* for the /tmp directory.
+// We check for the VERCEL environment variable (which is '1' on Vercel)
+// to decide which directory to use.
+const sessionsDir =
+	process.env.VERCEL === '1'
+		? path.join('/tmp', 'sessions')
+		: path.join(process.cwd(), 'data', 'sessions');
 
-// (This function is unchanged)
+/**
+ * Ensures that the sessions directory exists.
+ */
 async function ensureDir() {
 	try {
 		await fs.access(sessionsDir);
@@ -11211,9 +11053,28 @@ async function ensureDir() {
 	}
 }
 
-// (This function is unchanged)
-export async function createNotebook(title: string = 'Untitled Notebook'): Promise<Notebook> {
+/**
+ * Writes a notebook object to a JSON file.
+ * @param notebook The notebook object to save.
+ */
+async function saveNotebook(notebook: Notebook): Promise<void> {
 	await ensureDir();
+	const filePath = path.join(sessionsDir, `${notebook.id}.json`);
+	try {
+		await fs.writeFile(filePath, JSON.stringify(notebook, null, 2));
+		console.log(`[FS Adapter] Saved notebook: ${notebook.id} to ${sessionsDir}`);
+	} catch (error) {
+		console.error(`[FS Adapter] Error saving notebook ${notebook.id}:`, error);
+		throw error;
+	}
+}
+
+/**
+ * Creates a new, empty notebook and saves it.
+ * @param title The title for the new notebook.
+ * @returns The newly created notebook object.
+ */
+export async function createNotebook(title: string = 'Untitled Notebook'): Promise<Notebook> {
 	const newNotebook: Notebook = {
 		id: generateUUID(),
 		title: title,
@@ -11222,13 +11083,16 @@ export async function createNotebook(title: string = 'Untitled Notebook'): Promi
 		sections: [],
 		meta: { tool: 'whiteboard-v1-dev' }
 	};
-	const filePath = path.join(sessionsDir, `${newNotebook.id}.json`);
-	await fs.writeFile(filePath, JSON.stringify(newNotebook, null, 2));
+	await saveNotebook(newNotebook);
 	console.log(`[FS Adapter] Created notebook: ${newNotebook.id}`);
 	return newNotebook;
 }
 
-// (This function is unchanged)
+/**
+ * Retrieves a notebook by its ID.
+ * @param id The UUID of the notebook.
+ * @returns The notebook object or null if not found.
+ */
 export async function getNotebook(id: string): Promise<Notebook | null> {
 	await ensureDir();
 	const filePath = path.join(sessionsDir, `${id}.json`);
@@ -11239,28 +11103,20 @@ export async function getNotebook(id: string): Promise<Notebook | null> {
 	} catch (error: any) {
 		if (error.code === 'ENOENT') {
 			console.log(`[FS Adapter] Notebook not found: ${id}`);
-			return null; // Not found
+			return null;
 		}
 		console.error(`[FS Adapter] Error reading notebook ${id}:`, error);
 		throw error; // Other errors
 	}
 }
 
-// (This function is unchanged)
-export async function saveNotebook(notebook: Notebook): Promise<void> {
-	await ensureDir();
-	const filePath = path.join(sessionsDir, `${notebook.id}.json`);
-	try {
-		await fs.writeFile(filePath, JSON.stringify(notebook, null, 2));
-		console.log(`[FS Adapter] Saved notebook: ${notebook.id}`);
-	} catch (error) {
-		console.error(`[FS Adapter] Error saving notebook ${notebook.id}:`, error);
-		throw error;
-	}
-}
-
-// --- NEW FUNCTION ---
-// Updates title AND sections. This replaces updateNotebookSections
+/**
+ * Updates the title and sections of an existing notebook.
+ * @param id The ID of the notebook to update.
+ * @param title The new title.
+ * @param sections The new array of sections.
+ * @returns The updated notebook object or null if not found.
+ */
 export async function updateNotebook(
 	id: string,
 	title: string,
@@ -11268,33 +11124,24 @@ export async function updateNotebook(
 ): Promise<Notebook | null> {
 	const notebook = await getNotebook(id);
 	if (!notebook) {
+		console.log(`[FS Adapter] Update failed: Notebook not found: ${id}`);
 		return null;
 	}
-	
+
 	// Update properties
 	notebook.title = title;
 	notebook.sections = sections;
-	
+
 	// Save the entire notebook
 	await saveNotebook(notebook);
 	console.log(`[FS Adapter] Updated notebook (title & sections): ${id}`);
 	return notebook;
 }
 
-// --- DEPRECATED (but keep for now if other things use it) ---
-// We should eventually remove this and only use updateNotebook
-export async function updateNotebookSections(id: string, sections: Section[]): Promise<Notebook | null> {
-	const notebook = await getNotebook(id);
-	if (!notebook) {
-		return null;
-	}
-	notebook.sections = sections;
-	await saveNotebook(notebook);
-	console.log(`[FS Adapter] Updated sections for notebook: ${id}`);
-	return notebook;
-}
-
-// (This function is unchanged)
+/**
+ * Retrieves a summary list of all notebooks.
+ * @returns An array of notebook summaries.
+ */
 export async function getAllNotebooks(): Promise<Array<Pick<Notebook, 'id' | 'title' | 'createdAt'>>> {
 	await ensureDir();
 	try {
@@ -11325,6 +11172,140 @@ export async function getAllNotebooks(): Promise<Array<Pick<Notebook, 'id' | 'ti
 		return notebooks;
 	} catch (error: any) {
 		console.error(`[FS Adapter] Error reading sessions directory:`, error);
+		throw new Error('Failed to fetch notebook list');
+	}
+}
+
+# File: src/lib/server/storage/kv.ts
+
+// src/lib/server/storage/kv.ts
+import { Redis } from '@upstash/redis';
+import { KV_REST_API_URL, KV_REST_API_TOKEN } from '$env/static/private';
+import type { Notebook, Section } from '$lib/types/notebook';
+import { generateUUID } from '$lib/utils/uuid';
+
+// Initialize Redis client using the exact pattern from the Vercel guide
+// This prevents errors if the variables are undefined during build
+const kv = new Redis({
+	url: KV_REST_API_URL || '',
+	token: KV_REST_API_TOKEN || ''
+});
+
+const ALL_NOTEBOOKS_KEY = 'notebooks:all';
+
+/**
+ * Retrieves a notebook by its ID from Upstash Redis.
+ * @param id The UUID of the notebook.
+ * @returns The notebook object or null if not found.
+ */
+export async function getNotebook(id: string): Promise<Notebook | null> {
+	try {
+		const notebook = await kv.get<Notebook>(`notebook:${id}`);
+		if (!notebook) {
+			console.log(`[KV Adapter] Notebook not found: ${id}`);
+			return null;
+		}
+		console.log(`[KV Adapter] Read notebook: ${id}`);
+		return notebook;
+	} catch (error) {
+		console.error(`[KV Adapter] Error reading notebook ${id}:`, error);
+		throw error;
+	}
+}
+
+/**
+ * Creates a new, empty notebook and saves it to Upstash Redis.
+ * @param title The title for the new notebook.
+ * @returns The newly created notebook object.
+ */
+export async function createNotebook(title: string = 'Untitled Notebook'): Promise<Notebook> {
+	const newNotebook: Notebook = {
+		id: generateUUID(),
+		title: title,
+		createdAt: new Date().toISOString(),
+		publishedAt: null,
+		sections: [],
+		meta: { tool: 'whiteboard-v1-dev' }
+	};
+
+	try {
+		await kv.set(`notebook:${newNotebook.id}`, newNotebook);
+		await kv.hset(ALL_NOTEBOOKS_KEY, {
+			[newNotebook.id]: {
+				id: newNotebook.id,
+				title: newNotebook.title,
+				createdAt: newNotebook.createdAt
+			}
+		});
+
+		console.log(`[KV Adapter] Created notebook: ${newNotebook.id}`);
+		return newNotebook;
+	} catch (error) {
+		console.error(`[KV Adapter] Error creating notebook ${newNotebook.id}:`, error);
+		throw error;
+	}
+}
+
+/**
+ * Updates the title and sections of an existing notebook in Upstash Redis.
+ * @param id The ID of the notebook to update.
+ * @param title The new title.
+ * @param sections The new array of sections.
+ * @returns The updated notebook object or null if not found.
+ */
+export async function updateNotebook(
+	id: string,
+	title: string,
+	sections: Section[]
+): Promise<Notebook | null> {
+	const notebook = await getNotebook(id);
+	if (!notebook) {
+		console.log(`[KV Adapter] Update failed: Notebook not found: ${id}`);
+		return null;
+	}
+
+	notebook.title = title;
+	notebook.sections = sections;
+
+	try {
+		await kv.set(`notebook:${id}`, notebook);
+		await kv.hset(ALL_NOTEBOOKS_KEY, {
+			[id]: {
+				id: notebook.id,
+				title: notebook.title,
+				createdAt: notebook.createdAt
+			}
+		});
+
+		console.log(`[KV Adapter] Updated notebook: ${id}`);
+		return notebook;
+	} catch (error) {
+		console.error(`[KV Adapter] Error updating notebook ${id}:`, error);
+		throw error;
+	}
+}
+
+/**
+ * Retrieves a summary list of all notebooks from Upstash Redis.
+ * @returns An array of notebook summaries.
+ */
+export async function getAllNotebooks(): Promise<Array<Pick<Notebook, 'id' | 'title' | 'createdAt'>>> {
+	try {
+		const summaries = await kv.hgetall(ALL_NOTEBOOKS_KEY);
+		if (!summaries) {
+			return [];
+		}
+
+		const notebookList = Object.values(summaries) as Array<
+			Pick<Notebook, 'id' | 'title' | 'createdAt'>
+		>;
+
+		notebookList.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+
+		console.log(`[KV Adapter] Fetched ${notebookList.length} notebook summaries.`);
+		return notebookList;
+	} catch (error: any) {
+		console.error(`[KV Adapter] Error fetching notebook list:`, error);
 		throw new Error('Failed to fetch notebook list');
 	}
 }
