@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Stroke, Point, InkContent } from '$lib/types/notebook';
 	import { generateUUID } from '$lib/utils/uuid';
+	import { untrack } from 'svelte'; // [!code ++]
 
 	let {
 		content,
@@ -26,22 +27,27 @@
 	let selectedWidth = $state(2);
 	let tool = $state<'pen' | 'eraser'>('pen');
 
-	// This is the local source of truth for strokes.
-	// It's initialized from the prop one time.
 	let strokes = $state<Stroke[]>(content?.strokes || []);
 
 	// --- THIS IS THE FIX ---
-	// This effect runs when the component mounts AND when the `content` prop
-	// changes (e.g., after a successful save).
-	// It resynchronizes the local state with the prop,
-	// but *only* if the user is not in the middle of drawing.
+	// This effect now ONLY depends on the `content` prop.
 	$effect(() => {
-		if (!isDrawing) {
-			// If the prop changes, reset local state to match the prop.
-			// This ensures that after a save, the local state
-			// reflects the newly saved data.
-			strokes = content?.strokes || [];
+		// Read `content` to establish it as the *only* dependency.
+		const propStrokes = content?.strokes || [];
+
+		// We check `isDrawing` but `untrack` it. This means
+		// changes to `isDrawing` will *not* cause this effect to re-run.
+		if (untrack(() => isDrawing)) {
+			// The user is actively drawing. Do not overwrite their
+			// local changes. The sync will happen after their
+			// save completes and the `content` prop updates again.
+			return;
 		}
+
+		// The `content` prop changed (e.g., from a save) and the
+		// user is not drawing, so we can safely sync the prop
+		// to our local state.
+		strokes = propStrokes;
 	});
 	// --- END FIX ---
 
@@ -120,6 +126,8 @@
 	}
 
 	export function getCurrentContent(): InkContent {
+		// This now correctly returns the local `strokes` array,
+		// which is no longer being prematurely cleared.
 		return { strokes: strokes };
 	}
 </script>
