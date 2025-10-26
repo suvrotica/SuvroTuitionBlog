@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Stroke, Point, InkContent } from '$lib/types/notebook';
 	import { generateUUID } from '$lib/utils/uuid';
-	import { untrack, tick } from 'svelte'; // [!code ++] Make sure tick is imported
+	import { tick } from 'svelte';
 
 	let {
 		content,
@@ -27,24 +27,15 @@
 	let selectedWidth = $state(2);
 	let tool = $state<'pen' | 'eraser'>('pen');
 
+	// This is the local source of truth for strokes.
+	// It's initialized from the `content` prop *only when the component is first created*.
 	let strokes = $state<Stroke[]>(content?.strokes || []);
 
-	// This effect syncs incoming prop changes (like after a save)
-	// to the local state. It correctly untracks local state
-	// to only run when the `content` prop changes.
-	$effect(() => {
-		const propStrokes = content?.strokes || [];
-		
-		// Don't update local state if we are actively drawing
-		if (untrack(() => isDrawing)) {
-			return;
-		}
-		
-		// Only update if the prop is *actually different* from our local state
-		if (untrack(() => JSON.stringify(propStrokes) !== JSON.stringify(strokes))) {
-			strokes = propStrokes;
-		}
-	});
+	// --- FIX: The problematic $effect has been removed. ---
+	// The `content` prop is only used for initialization.
+	// After that, this component is the "owner" of the strokes state
+	// and only reports changes up to the parent via `onchange`.
+	// This prevents the parent from overwriting the local state after a save.
 
 	function getPathData(stroke: Stroke): string {
 		if (!stroke || stroke.points.length === 0) return '';
@@ -90,7 +81,6 @@
 		currentStroke = currentStroke; // Trigger reactivity
 	}
 
-	// --- THIS FUNCTION IS NOW ASYNC ---
 	async function handlePointerUp(event: PointerEvent) {
 		if (!isDrawing || !currentStroke) return;
 		isDrawing = false;
@@ -101,18 +91,17 @@
 		}
 		currentStroke = null;
 		
-		// --- FIX: Wait for Svelte to apply the state change ---
+		// Wait for Svelte to apply the state change
 		await tick();
 		// NOW fire onchange, so the parent reads the *new* state
 		onchange();
 	}
 
-	// --- THIS FUNCTION IS NOW ASYNC ---
 	async function undo() {
 		if (strokes.length === 0) return;
 		strokes = strokes.slice(0, -1);
 		
-		// --- FIX: Wait for Svelte to apply the state change ---
+		// Wait for Svelte to apply the state change
 		await tick();
 		// NOW fire onchange
 		onchange();
@@ -185,7 +174,8 @@
 			onpointermove={handlePointerMove}
 			onpointerup={handlePointerUp}
 			onpointerleave={handlePointerUp}
-			onpointercancel={handlePointerUp} style="touch-action: none; background-color: {backgroundColor}; height: 1500px;"
+			onpointercancel={handlePointerUp}
+			style="touch-action: none; background-color: {backgroundColor}; height: 1500px;"
 		>
 			{#each strokes as stroke (stroke.id)}
 				<path
