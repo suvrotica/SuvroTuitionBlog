@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Stroke, Point, InkContent } from '$lib/types/notebook';
 	import { generateUUID } from '$lib/utils/uuid';
-	import { untrack, tick } from 'svelte'; // [!code ++]
+	import { untrack, tick } from 'svelte'; // [!code ++] Import tick
 
 	let {
 		content,
@@ -29,18 +29,22 @@
 
 	let strokes = $state<Stroke[]>(content?.strokes || []);
 
+	// --- FIX 1: This effect now correctly untracks local state ---
+	// It only runs when the `content` prop changes.
 	$effect(() => {
 		const propStrokes = content?.strokes || [];
+		
+		// Don't update local state if we are drawing
 		if (untrack(() => isDrawing)) {
 			return;
 		}
 		
-		// This check prevents an infinite loop by only updating if
-		// the prop is truly different from the local state.
-		if (JSON.stringify(propStrokes) !== JSON.stringify(strokes)) {
+		// Only update if the prop is *actually different* from our local state
+		if (untrack(() => JSON.stringify(propStrokes) !== JSON.stringify(strokes))) {
 			strokes = propStrokes;
 		}
 	});
+	// --- END FIX 1 ---
 
 	function getPathData(stroke: Stroke): string {
 		if (!stroke || stroke.points.length === 0) return '';
@@ -86,7 +90,8 @@
 		currentStroke = currentStroke;
 	}
 
-	async function handlePointerUp(event: PointerEvent) { // [!code ++]
+	// --- FIX 2: Made this function async to await tick() ---
+	async function handlePointerUp(event: PointerEvent) {
 		if (!isDrawing || !currentStroke) return;
 		isDrawing = false;
 		svgElement?.releasePointerCapture(event.pointerId);
@@ -95,16 +100,24 @@
 			strokes = [...strokes, currentStroke];
 		}
 		currentStroke = null;
+		
+		// Wait for Svelte to apply the state change
 		await tick(); // [!code ++]
-		onchange(); // [!code ++]
+		// NOW fire onchange, so the parent reads the *new* state
+		onchange();
 	}
 
-	async function undo() { // [!code ++]
+	// --- FIX 3: Also applied tick() to undo() ---
+	async function undo() {
 		if (strokes.length === 0) return;
 		strokes = strokes.slice(0, -1);
+		
+		// Wait for Svelte to apply the state change
 		await tick(); // [!code ++]
-		onchange(); // [!code ++]
+		// NOW fire onchange
+		onchange();
 	}
+	// --- END FIX 3 ---
 
 	function selectColor(color: string) {
 		tool = 'pen';
