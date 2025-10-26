@@ -1,5 +1,4 @@
 // src/lib/server/auth.ts
-// VERY basic auth check for skeleton - replace with proper auth later
 import { EDITOR_SECRET } from '$env/static/private';
 export function isEditor(request: Request): boolean {
 	// In a real app, verify a JWT or session cookie
