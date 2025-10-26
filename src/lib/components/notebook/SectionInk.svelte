@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Stroke, Point, InkContent } from '$lib/types/notebook';
 	import { generateUUID } from '$lib/utils/uuid';
-	import { untrack, tick } from 'svelte';
+	import { untrack, tick } from 'svelte'; // [!code ++] Make sure tick is imported
 
 	let {
 		content,
@@ -29,7 +29,9 @@
 
 	let strokes = $state<Stroke[]>(content?.strokes || []);
 
-	// This effect syncs incoming prop changes to the local state
+	// This effect syncs incoming prop changes (like after a save)
+	// to the local state. It correctly untracks local state
+	// to only run when the `content` prop changes.
 	$effect(() => {
 		const propStrokes = content?.strokes || [];
 		
@@ -39,7 +41,6 @@
 		}
 		
 		// Only update if the prop is *actually different* from our local state
-		// to prevent unnecessary re-renders or infinite loops.
 		if (untrack(() => JSON.stringify(propStrokes) !== JSON.stringify(strokes))) {
 			strokes = propStrokes;
 		}
@@ -89,6 +90,7 @@
 		currentStroke = currentStroke; // Trigger reactivity
 	}
 
+	// --- THIS FUNCTION IS NOW ASYNC ---
 	async function handlePointerUp(event: PointerEvent) {
 		if (!isDrawing || !currentStroke) return;
 		isDrawing = false;
@@ -99,17 +101,18 @@
 		}
 		currentStroke = null;
 		
-		// Wait for Svelte to apply the state change
+		// --- FIX: Wait for Svelte to apply the state change ---
 		await tick();
 		// NOW fire onchange, so the parent reads the *new* state
 		onchange();
 	}
 
+	// --- THIS FUNCTION IS NOW ASYNC ---
 	async function undo() {
 		if (strokes.length === 0) return;
 		strokes = strokes.slice(0, -1);
 		
-		// Wait for Svelte to apply the state change
+		// --- FIX: Wait for Svelte to apply the state change ---
 		await tick();
 		// NOW fire onchange
 		onchange();
@@ -127,6 +130,7 @@
 	}
 
 	export function getCurrentContent(): InkContent {
+		// This will now correctly return the updated strokes
 		return { strokes: strokes };
 	}
 </script>
@@ -181,8 +185,7 @@
 			onpointermove={handlePointerMove}
 			onpointerup={handlePointerUp}
 			onpointerleave={handlePointerUp}
-			onpointercancel={handlePointerUp}
-			style="touch-action: none; background-color: {backgroundColor}; height: 1500px;"
+			onpointercancel={handlePointerUp} style="touch-action: none; background-color: {backgroundColor}; height: 1500px;"
 		>
 			{#each strokes as stroke (stroke.id)}
 				<path
