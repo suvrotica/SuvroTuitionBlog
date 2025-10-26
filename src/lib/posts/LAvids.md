@@ -28,6 +28,8 @@ tags: ["Linear Algebra"]
 
 **Single Videos**
 
+<Ytp src="https://youtu.be/QL4_4GAWvPs?si=kZ0Sz4xRX1hb9dnm" />
+
 <Ytp src="https://youtu.be/KbyYTjfgZJI?si=4lZjk5OJhsUpU_hq" />
 
 
