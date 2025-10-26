@@ -15,11 +15,9 @@
 	// Refs for section components to call methods like getCurrentContent
 	let sectionRefs = $state<Record<string, any>>({});
 
-	// --- NEW: Local state for throttling saves ---
 	let saveTimeout: ReturnType<typeof setTimeout> | null = null;
 	let saveStatus = $state<'idle' | 'saving' | 'saved' | 'error'>('idle');
 
-	// --- NEW: Debounced save function ---
 	function scheduleSave(immediate = false) {
 		saveStatus = 'saving';
 		if (saveTimeout) {
@@ -29,13 +27,10 @@
 		const saveAction = async () => {
 			if (!editorSecret) {
 				console.warn('Editor secret not set. Cannot save.');
-				// Try to get token again
 				const secretFromStorage = localStorage.getItem(`notebook_${notebook.id}_secret`);
 				if (secretFromStorage) {
 					editorSecret = secretFromStorage;
 				} else {
-					// In a real app, you might show a modal here
-					// For now, we'll just fail silently
 					saveStatus = 'error';
 					return;
 				}
@@ -48,8 +43,6 @@
 				if (ref && typeof ref.getCurrentContent === 'function') {
 					const currentContent = ref.getCurrentContent();
 
-					// Only add a new version if content actually changed (basic check)
-					// A real implementation would be more robust
 					const latestVersion = section.versions[section.versions.length - 1];
 					if (JSON.stringify(latestVersion.content) !== JSON.stringify(currentContent)) {
 						const newVersion = {
@@ -111,24 +104,22 @@
 		}
 	}
 
-	// --- NEW: Trigger autosave when title or sections change ---
+	// --- THIS IS THE FIX ---
+	// This $effect will now ONLY auto-save the title.
+	// Changes to sections are handled by the `onchange` prop in the template.
 	$effect(() => {
 		// This effect tracks notebook.title
 		const title = notebook.title;
-		// This effect tracks notebook.sections (and deep changes)
-		const sections = notebook.sections;
 
 		// This check is important to prevent saving on the initial load
-		if (
-			notebookData &&
-			(title !== notebookData.title || sections !== notebookData.sections)
-		) {
+		if (notebookData && title !== notebookData.title) {
 			// Don't autosave in dev, only on explicit save button click
 			if (!dev) {
 				scheduleSave();
 			}
 		}
 	});
+	// --- END FIX ---
 
 	// Check local storage for secret on mount
 	onMount(() => {
@@ -136,7 +127,6 @@
 		if (secretFromStorage) {
 			editorSecret = secretFromStorage;
 		} else {
-			// If no secret, try to prompt (only useful for dev)
 			if (dev) {
 				const promptedSecret = prompt('Enter editor secret to save/edit:');
 				if (promptedSecret) {
@@ -164,10 +154,6 @@
 		};
 		notebook.sections = [...notebook.sections, newSection];
 	}
-
-	// --- DELETED ---
-	// The broken $effect block that was here has been removed.
-	// `bind:this` in the template is all you need.
 
 	function getSaveStatusText() {
 		switch (saveStatus) {
