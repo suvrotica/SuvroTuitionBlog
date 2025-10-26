@@ -15,10 +15,10 @@ This document outlines the setup and usage for the whiteboard notebook feature w
     ```
 3.  **Environment Variables:**
     * Create a `.env` file in the project root.
-    * Add the `EDITOR_SECRET` variable. This is a **required** secret string used for basic authentication during development to allow saving notebooks. Choose a strong, random string.
+    * Add the `PUBLIC_EDITOR_SECRET` variable. This is a **required** secret string used for basic authentication during development to allow saving notebooks. Choose a strong, random string.
       ```dotenv
       # .env
-      EDITOR_SECRET="your_very_strong_random_secret_here_12345"
+      PUBLIC_EDITOR_SECRET="your_very_strong_random_secret_here_12345"
       ```
     * **DO NOT** commit your `.env` file to Git.
 4.  **Run Development Server:**
@@ -34,7 +34,7 @@ This document outlines the setup and usage for the whiteboard notebook feature w
 * Click the "New Notebook" button. You will be redirected to the editor page for the new notebook.
 * Use the "Add Ink Section" button to create drawing areas.
 * Draw within the ink sections.
-* Click "Save Notebook" to persist changes to the local filesystem (`./data/sessions`). You might be prompted for the `EDITOR_SECRET` if it wasn't found in local storage.
+* Click "Save Notebook" to persist changes to the local filesystem (`./data/sessions`). You might be prompted for the `PUBLIC_EDITOR_SECRET` if it wasn't found in local storage.
 
 ## Vercel Deployment Notes
 
@@ -45,7 +45,7 @@ This document outlines the setup and usage for the whiteboard notebook feature w
     * Cloudflare R2
     * Other S3-compatible services (e.g., Minio self-hosted)
 * **Adapter Implementation:** An adapter (like the stub `s3.ts` - to be implemented) needs to be created and configured using environment variables (e.g., `S3_BUCKET`, `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION`).
-* **Environment Variables:** Ensure all necessary environment variables (including `EDITOR_SECRET` if using basic auth, or keys for your chosen storage and proper auth provider) are set in your Vercel project settings. **Never commit secrets to Git.**
+* **Environment Variables:** Ensure all necessary environment variables (including `PUBLIC_EDITOR_SECRET` if using basic auth, or keys for your chosen storage and proper auth provider) are set in your Vercel project settings. **Never commit secrets to Git.**
 * **Authentication:** The skeleton uses a basic, insecure secret check suitable only for local development. **For production, implement proper authentication** (e.g., OAuth via GitHub/Google, Supabase Auth, Lucia Auth) and associate notebooks with user IDs. Update the API endpoints (`isEditor`, `checkEditorSecret`) accordingly.
 
 ## Next Steps (Post-Skeleton)

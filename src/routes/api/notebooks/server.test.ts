@@ -13,7 +13,7 @@ vi.mock('$lib/server/auth', () => ({
 }));
  // Mock env
  vi.mock('$env/dynamic/private', () => ({
-    EDITOR_SECRET: 'test-secret-from-mock'
+    PUBLIC_EDITOR_SECRET: 'test-secret-from-mock'
 }));
 
 import { createNotebook } from '$lib/server/storage/filesystem';
