@@ -1,324 +1,327 @@
-# Context file generated on: Sunday, October 26, 2025 at 4:18:52 PM GMT+5:30
+# Context file generated on: Sunday, October 26, 2025 at 4:50:33 PM GMT+5:30
 ---
 
 # Project File Layout
 
 .
 
+├── .env.development.local
 ├── .env.local
 ├── .gitignore
 ├── .npmrc
 ├── .prettierignore
 ├── .prettierrc
 ├── .vercel
-│   └── output
-│       ├── functions
-│       │   ├── ![-]
-│       │   │   └── catchall.func
-│       │   │       ├── .vc-config.json
-│       │   │       ├── package.json
-│       │   │       └── _app
-│       │   │           └── immutable
-│       │   │               └── assets
-│       │   │                   ├── 00b4e1c4-42d9-4b02-9f46-9d46f2a6d9d7.BUKcnVir.webp
-│       │   │                   ├── 3d095f14-d2b3-4abd-868e-f69096a655d3.CKfMUh0Y.webp
-│       │   │                   ├── 5dd325b4-2a23-49ab-88af-dd3fa83fd632.BfjoONBf.webp
-│       │   │                   ├── 8b1b52a9-fa9a-4f03-8686-d863f5dff48f.Bp3yOsxm.png
-│       │   │                   ├── ad8bc555-8af1-412f-aa19-90f10b19efec.D7zlxWE5.webp
-│       │   │                   ├── b7748a5c-99dd-4337-8dbc-6344c2e944b4.BHoaFfik.png
-│       │   │                   ├── ChatGPT Image Aug 10_ 2025_ 02_04_17 AM.D9KGOyeo.png
-│       │   │                   ├── ChatGPT Image Aug 10_ 2025_ 02_21_38 AM.6OVUT9Hh.png
-│       │   │                   ├── ChatGPT Image Aug 10_ 2025_ 02_29_56 AM.BYkLtWPk.png
-│       │   │                   ├── ChatGPT Image Aug 10_ 2025_ 10_55_49 AM.CPr0ZM8v.png
-│       │   │                   ├── ChatGPT Image Aug 8_ 2025_ 05_48_13 AM.Dp4_V867.png
-│       │   │                   ├── ChatGPT Image Aug 8_ 2025_ 06_09_56 AM.B0hRximO.png
-│       │   │                   ├── ChatGPT Image Aug 8_ 2025_ 06_17_13 AM.CLt_q-mK.png
-│       │   │                   ├── ChatGPT Image Aug 8_ 2025_ 06_29_15 AM.BVmaVDfV.png
-│       │   │                   ├── ChatGPT Image Aug 8_ 2025_ 06_36_16 AM.DIVRyU08.png
-│       │   │                   ├── ChatGPT Image Aug 8_ 2025_ 06_58_29 AM.DOoI0xOC.png
-│       │   │                   ├── ChatGPT Image Aug 8_ 2025_ 06_58_40 AM.D_EfZ1uG.png
-│       │   │                   ├── Gemini_Generated_Image_kg5fw7kg5fw7kg5f.M_04h03J.png
-│       │   │                   ├── Gemini_Generated_Image_ovbsqxovbsqxovbs.DIFymDAf.png
-│       │   │                   ├── IMG-20250812-WA0001.Bt00s3_o.jpeg
-│       │   │                   ├── IMG-PHOTO-ART--1510172753.BB-nFGXE.jpeg
-│       │   │                   ├── IMG-PHOTO-ART--1513010449.CnJvw4M9.jpeg
-│       │   │                   └── lonely_rapist.BodqF4Vq.jpeg
-│       │   └── index
-│       └── static
-│           ├── favicon.png
-│           ├── images
-│           │   └── placeholders
-│           │       ├── 24fb85b4-ec6e-4033-8c3d-c8844279dffa.png
-│           │       ├── 723ccc8e-1bcd-4c1e-b678-219bce8504ee.png
-│           │       ├── 757fbd57-9053-4e12-95a3-b17bc2008cef.png
-│           │       ├── 91d2477e-63e4-45a3-9c5c-0532df45fe0d.png
-│           │       ├── a5nWmIXQTneuGRFUT5fQvg.webp
-│           │       ├── Ambition.png
-│           │       ├── ChatGPT Image Aug 8, 2025, 06_58_29 AM.png
-│           │       ├── ChatGPT Image Aug 8, 2025, 06_58_40 AM.png
-│           │       ├── d3-placeholder.jpeg
-│           │       ├── erg.png
-│           │       ├── Fs6YTO0GQ_-nHWut1NkdVA.webp
-│           │       ├── gDpjDHSHS72jcAoV6n7VEg.webp
-│           │       ├── IMG-20240417-WA0003.jpg
-│           │       ├── IMG-20240517-WA0030.jpg
-│           │       ├── IMG-20240723-WA0028.jpg
-│           │       ├── IMG-20250313-WA0010.jpg
-│           │       ├── IMG-20250322-WA0000.jpg
-│           │       ├── IMG-20250715-WA0001.jpg
-│           │       ├── IMG-20250717-WA0006.jpg
-│           │       ├── IMG-20250718-WA0001.jpg
-│           │       ├── IMG-20250718-WA0010.jpg
-│           │       ├── IMG-20250719-WA0000.jpg
-│           │       ├── IMG-20250721-WA0001.jpg
-│           │       ├── IMG-20250721-WA0003.jpg
-│           │       ├── IMG-20250723-WA0003.jpg
-│           │       ├── IMG-20250724-WA0003.jpg
-│           │       ├── IMG-20250724-WA0004.jpg
-│           │       ├── IMG-20250724-WA0007.jpg
-│           │       ├── IMG-20250724-WA0009.jpg
-│           │       ├── IMG-20250725-WA0000.jpg
-│           │       ├── IMG-20250725-WA0003.jpg
-│           │       ├── IMG-20250725-WA0006.jpg
-│           │       ├── IMG-20250726-WA0000.jpg
-│           │       ├── IMG-20250726-WA0001.jpg
-│           │       ├── IMG-20250726-WA0007.jpg
-│           │       ├── IMG-20250726-WA0010.jpg
-│           │       ├── IMG-20250726-WA0011.jpg
-│           │       ├── IMG-20250727-WA0000.jpg
-│           │       ├── IMG-20250727-WA0002.jpg
-│           │       ├── IMG-20250727-WA0004.jpg
-│           │       ├── IMG-20250727-WA0015.jpg
-│           │       ├── IMG-20250728-WA0000.jpg
-│           │       ├── IMG-20250728-WA0001.jpg
-│           │       ├── IMG-20250728-WA0002.jpg
-│           │       ├── IMG-20250728-WA0003.jpg
-│           │       ├── IMG-20250728-WA0004.jpg
-│           │       ├── IMG-20250728-WA0007.jpg
-│           │       ├── IMG-20250728-WA0010.jpg
-│           │       ├── IMG-20250728-WA0011.jpg
-│           │       ├── IMG-20250729-WA0000.jpg
-│           │       ├── IMG-20250729-WA0004.jpg
-│           │       ├── IMG-20250730-WA0005.jpg
-│           │       ├── IMG-20250730-WA0010.jpg
-│           │       ├── IMG-20250731-WA0004.jpg
-│           │       ├── IMG-20250731-WA0009.jpg
-│           │       ├── IMG-20250801-WA0029.jpg
-│           │       ├── IMG-20250803-WA0001.jpg
-│           │       ├── IMG-20250803-WA0002.jpg
-│           │       ├── IMG-20250803-WA0003.jpg
-│           │       ├── IMG-20250803-WA0006.jpg
-│           │       ├── IMG-20250804-WA0001.jpg
-│           │       ├── IMG-20250804-WA0002.jpg
-│           │       ├── IMG-20250805-WA0001.jpg
-│           │       ├── IMG-20250805-WA0002.jpg
-│           │       ├── IMG-20250806-WA0004.jpg
-│           │       ├── IMG-20250806-WA0010.jpg
-│           │       ├── IMG-20250807-WA0003.jpg
-│           │       ├── monk-fruit.png
-│           │       ├── p5js-placeholder.jpeg
-│           │       ├── plantuml-placeholder.jpeg
-│           │       ├── svelte-intro-thumbnail.png
-│           │       ├── svelte-runes-thumbnail.jpeg
-│           │       ├── threejs-placeholder.jpeg
-│           │       ├── tts-placeholder.jpeg
-│           │       └── YGEiXDBfQq2kVwzN7vUNIw.jpeg
-│           └── _app
-│               ├── immutable
-│               │   ├── assets
-│               │   │   ├── 0.BMUe3Uu8.css
-│               │   │   ├── 00b4e1c4-42d9-4b02-9f46-9d46f2a6d9d7.BUKcnVir.webp
-│               │   │   ├── 3d095f14-d2b3-4abd-868e-f69096a655d3.CKfMUh0Y.webp
-│               │   │   ├── 5dd325b4-2a23-49ab-88af-dd3fa83fd632.BfjoONBf.webp
-│               │   │   ├── 8b1b52a9-fa9a-4f03-8686-d863f5dff48f.Bp3yOsxm.png
-│               │   │   ├── ad8bc555-8af1-412f-aa19-90f10b19efec.D7zlxWE5.webp
-│               │   │   ├── b7748a5c-99dd-4337-8dbc-6344c2e944b4.BHoaFfik.png
-│               │   │   ├── ChatGPT Image Aug 10_ 2025_ 02_04_17 AM.D9KGOyeo.png
-│               │   │   ├── ChatGPT Image Aug 10_ 2025_ 02_21_38 AM.6OVUT9Hh.png
-│               │   │   ├── ChatGPT Image Aug 10_ 2025_ 02_29_56 AM.BYkLtWPk.png
-│               │   │   ├── ChatGPT Image Aug 10_ 2025_ 10_55_49 AM.CPr0ZM8v.png
-│               │   │   ├── ChatGPT Image Aug 8_ 2025_ 05_48_13 AM.Dp4_V867.png
-│               │   │   ├── ChatGPT Image Aug 8_ 2025_ 06_09_56 AM.B0hRximO.png
-│               │   │   ├── ChatGPT Image Aug 8_ 2025_ 06_17_13 AM.CLt_q-mK.png
-│               │   │   ├── ChatGPT Image Aug 8_ 2025_ 06_29_15 AM.BVmaVDfV.png
-│               │   │   ├── ChatGPT Image Aug 8_ 2025_ 06_36_16 AM.DIVRyU08.png
-│               │   │   ├── ChatGPT Image Aug 8_ 2025_ 06_58_29 AM.DOoI0xOC.png
-│               │   │   ├── ChatGPT Image Aug 8_ 2025_ 06_58_40 AM.D_EfZ1uG.png
-│               │   │   ├── Gemini_Generated_Image_kg5fw7kg5fw7kg5f.M_04h03J.png
-│               │   │   ├── Gemini_Generated_Image_ovbsqxovbsqxovbs.DIFymDAf.png
-│               │   │   ├── IMG-20250812-WA0001.Bt00s3_o.jpeg
-│               │   │   ├── IMG-PHOTO-ART--1510172753.BB-nFGXE.jpeg
-│               │   │   ├── IMG-PHOTO-ART--1513010449.CnJvw4M9.jpeg
-│               │   │   ├── lonely_rapist.BodqF4Vq.jpeg
-│               │   │   ├── Mermaid.BSobfmkw.css
-│               │   │   ├── PostImage.rCAgM-kM.css
-│               │   │   └── _layout.kBVKYpB4.css
-│               │   ├── chunks
-│               │   │   ├── 0sqJA89l.js
-│               │   │   ├── 1HIPwODh.js
-│               │   │   ├── 6hoMZzlc.js
-│               │   │   ├── 7bkrjWbd.js
-│               │   │   ├── 7MdEguQb.js
-│               │   │   ├── 8VBsFAg_.js
-│               │   │   ├── aAgNsMK6.js
-│               │   │   ├── B-M2HoMm.js
-│               │   │   ├── B1HIQ836.js
-│               │   │   ├── B67r8JJy.js
-│               │   │   ├── B7eOsNnk.js
-│               │   │   ├── B7q5do5O.js
-│               │   │   ├── B7U7ntqt.js
-│               │   │   ├── B98duHuM.js
-│               │   │   ├── B9Rcbslc.js
-│               │   │   ├── BBNg9iYB.js
-│               │   │   ├── bbRNuxDx.js
-│               │   │   ├── BD0-ozn1.js
-│               │   │   ├── BEGrMDf0.js
-│               │   │   ├── BHGYVWsw.js
-│               │   │   ├── BhhzL_Rs.js
-│               │   │   ├── BhRiImqY.js
-│               │   │   ├── BigU4G0v.js
-│               │   │   ├── BJkW__CW.js
-│               │   │   ├── BKlbN5_C.js
-│               │   │   ├── BLhut_Lh.js
-│               │   │   ├── BLXQkcV9.js
-│               │   │   ├── BMntJPq6.js
-│               │   │   ├── BoEjjG6c.js
-│               │   │   ├── Boh1U3Qg.js
-│               │   │   ├── BOXsJ-Wg.js
-│               │   │   ├── BQny6CiI.js
-│               │   │   ├── BRzKQYUk.js
-│               │   │   ├── BT5TNs7N.js
-│               │   │   ├── BTZ4AmOF.js
-│               │   │   ├── BUfK96sl.js
-│               │   │   ├── BusnRh6a.js
-│               │   │   ├── BV3kNP9n.js
-│               │   │   ├── Bv6LV3Zo.js
-│               │   │   ├── BXQP4eJ3.js
-│               │   │   ├── BxxdrBfN.js
-│               │   │   ├── BZxkPoG1.js
-│               │   │   ├── B_gqSsDw.js
-│               │   │   ├── C-qnAkIB.js
-│               │   │   ├── C1XQ_F2Z.js
-│               │   │   ├── C4ZpZx-c.js
-│               │   │   ├── C9dXWd7t.js
-│               │   │   ├── C9fa6FTx.js
-│               │   │   ├── CAIzPROC.js
-│               │   │   ├── Cbddpe32.js
-│               │   │   ├── CBkPjoyn.js
-│               │   │   ├── CBomGvzY.js
-│               │   │   ├── CebAjozz.js
-│               │   │   ├── CFXYksbc.js
-│               │   │   ├── CGAIoIH0.js
-│               │   │   ├── CgnPuLyE.js
-│               │   │   ├── Chq1RCTN.js
-│               │   │   ├── ChWnQ-fc.js
-│               │   │   ├── CIC7HTD-.js
-│               │   │   ├── Ck9NbWmf.js
-│               │   │   ├── Ckhb3Pis.js
-│               │   │   ├── CllbmYjy.js
-│               │   │   ├── CLLiXKgX.js
-│               │   │   ├── Cm00zof6.js
-│               │   │   ├── CmKTTxBW.js
-│               │   │   ├── CmM0_1ZH.js
-│               │   │   ├── Cn7pUZJM.js
-│               │   │   ├── CnFHSmm8.js
-│               │   │   ├── ComRBmdH.js
-│               │   │   ├── Copgxxlq.js
-│               │   │   ├── Cpj98o6Y.js
-│               │   │   ├── cQosKXol.js
-│               │   │   ├── Crt1M_1Z.js
-│               │   │   ├── CS4soQnI.js
-│               │   │   ├── CsM5MeUo.js
-│               │   │   ├── CTn_lXSu.js
-│               │   │   ├── CTvZPxDA.js
-│               │   │   ├── CV7U2zMi.js
-│               │   │   ├── CWFi2X9i.js
-│               │   │   ├── CWv5yync.js
-│               │   │   ├── CX4dvTGN.js
-│               │   │   ├── CYgJF_JY.js
-│               │   │   ├── CYn7FLA_.js
-│               │   │   ├── D19ejMZX.js
-│               │   │   ├── D1JFKnl2.js
-│               │   │   ├── D2CAelsQ.js
-│               │   │   ├── D2HdbQpZ.js
-│               │   │   ├── D2hXuPN_.js
-│               │   │   ├── D2nGpDRe.js
-│               │   │   ├── D34Oz-0n.js
-│               │   │   ├── D3dvHfut.js
-│               │   │   ├── D4L63P9L.js
-│               │   │   ├── D5mT9ifS.js
-│               │   │   ├── D6nap29M.js
-│               │   │   ├── D9cd6A7y.js
-│               │   │   ├── Dak7ETBX.js
-│               │   │   ├── DbbhC6Bu.js
-│               │   │   ├── DbcjhZVq.js
-│               │   │   ├── DBN__-9d.js
-│               │   │   ├── DC9cPDzQ.js
-│               │   │   ├── DCaW092A.js
-│               │   │   ├── DCdPujGt.js
-│               │   │   ├── DDguwrKm.js
-│               │   │   ├── DdiNJE69.js
-│               │   │   ├── DdO6nIRp.js
-│               │   │   ├── DeCviTVi.js
-│               │   │   ├── DEc_AiZy.js
-│               │   │   ├── DEhJ8Cvc.js
-│               │   │   ├── DerIWmdt.js
-│               │   │   ├── Df8j4Te6.js
-│               │   │   ├── DfGvvSf_.js
-│               │   │   ├── DfpquHRF.js
-│               │   │   ├── DHt_Dyv1.js
-│               │   │   ├── DilRMIGP.js
-│               │   │   ├── DJbVHNfK.js
-│               │   │   ├── DJFHasOP.js
-│               │   │   ├── DkfTB5eA.js
-│               │   │   ├── DlGdT3zd.js
-│               │   │   ├── Dlj-gYD3.js
-│               │   │   ├── DOUyyEYg.js
-│               │   │   ├── Dp1pzeXC.js
-│               │   │   ├── DqLAgHPk.js
-│               │   │   ├── DsbOcu5s.js
-│               │   │   ├── Dsj90W40.js
-│               │   │   ├── Dtok67W-.js
-│               │   │   ├── DTrqypnp.js
-│               │   │   ├── Du2k24Tr.js
-│               │   │   ├── Dw9jXFWV.js
-│               │   │   ├── DXbBRQOI.js
-│               │   │   ├── Dz6Dkifu.js
-│               │   │   ├── D_NTWwlA.js
-│               │   │   ├── Ge9ZwYOb.js
-│               │   │   ├── Gi6I4Gst.js
-│               │   │   ├── gSV3BJRb.js
-│               │   │   ├── iWhfB5J9.js
-│               │   │   ├── Jmivwhbr.js
-│               │   │   ├── jTSdGKH1.js
-│               │   │   ├── knXFgaB2.js
-│               │   │   ├── LIMLrSHF.js
-│               │   │   ├── Nkad4ktK.js
-│               │   │   ├── RqJXVaZi.js
-│               │   │   ├── T-3AqF4S.js
-│               │   │   ├── tH8wzWac.js
-│               │   │   ├── u5pD4i1i.js
-│               │   │   ├── uNB1YaFO.js
-│               │   │   ├── UVp3au-r.js
-│               │   │   ├── W8DXMFtx.js
-│               │   │   ├── wNF3k8ao.js
-│               │   │   ├── XOxRMBkf.js
-│               │   │   ├── Y-_6yP0L.js
-│               │   │   ├── YRoeYNSX.js
-│               │   │   ├── ZctOTu47.js
-│               │   │   └── ZtWUeOA6.js
-│               │   ├── entry
-│               │   │   ├── app.DTCUSaDl.js
-│               │   │   └── start.CIMhD-W7.js
-│               │   └── nodes
-│               │       ├── 0.D7ZSrh1P.js
-│               │       ├── 1.CwtWLUfX.js
-│               │       ├── 2.CLLz5imG.js
-│               │       ├── 3.DbAVMbfb.js
-│               │       ├── 4.C7HM94DS.js
-│               │       ├── 5.D19IrsGT.js
-│               │       └── 6.B5DWOClY.js
-│               └── version.json
+│   ├── output
+│   │   ├── functions
+│   │   │   ├── ![-]
+│   │   │   │   └── catchall.func
+│   │   │   │       ├── .vc-config.json
+│   │   │   │       ├── package.json
+│   │   │   │       └── _app
+│   │   │   │           └── immutable
+│   │   │   │               └── assets
+│   │   │   │                   ├── 00b4e1c4-42d9-4b02-9f46-9d46f2a6d9d7.BUKcnVir.webp
+│   │   │   │                   ├── 3d095f14-d2b3-4abd-868e-f69096a655d3.CKfMUh0Y.webp
+│   │   │   │                   ├── 5dd325b4-2a23-49ab-88af-dd3fa83fd632.BfjoONBf.webp
+│   │   │   │                   ├── 8b1b52a9-fa9a-4f03-8686-d863f5dff48f.Bp3yOsxm.png
+│   │   │   │                   ├── ad8bc555-8af1-412f-aa19-90f10b19efec.D7zlxWE5.webp
+│   │   │   │                   ├── b7748a5c-99dd-4337-8dbc-6344c2e944b4.BHoaFfik.png
+│   │   │   │                   ├── ChatGPT Image Aug 10_ 2025_ 02_04_17 AM.D9KGOyeo.png
+│   │   │   │                   ├── ChatGPT Image Aug 10_ 2025_ 02_21_38 AM.6OVUT9Hh.png
+│   │   │   │                   ├── ChatGPT Image Aug 10_ 2025_ 02_29_56 AM.BYkLtWPk.png
+│   │   │   │                   ├── ChatGPT Image Aug 10_ 2025_ 10_55_49 AM.CPr0ZM8v.png
+│   │   │   │                   ├── ChatGPT Image Aug 8_ 2025_ 05_48_13 AM.Dp4_V867.png
+│   │   │   │                   ├── ChatGPT Image Aug 8_ 2025_ 06_09_56 AM.B0hRximO.png
+│   │   │   │                   ├── ChatGPT Image Aug 8_ 2025_ 06_17_13 AM.CLt_q-mK.png
+│   │   │   │                   ├── ChatGPT Image Aug 8_ 2025_ 06_29_15 AM.BVmaVDfV.png
+│   │   │   │                   ├── ChatGPT Image Aug 8_ 2025_ 06_36_16 AM.DIVRyU08.png
+│   │   │   │                   ├── ChatGPT Image Aug 8_ 2025_ 06_58_29 AM.DOoI0xOC.png
+│   │   │   │                   ├── ChatGPT Image Aug 8_ 2025_ 06_58_40 AM.D_EfZ1uG.png
+│   │   │   │                   ├── Gemini_Generated_Image_kg5fw7kg5fw7kg5f.M_04h03J.png
+│   │   │   │                   ├── Gemini_Generated_Image_ovbsqxovbsqxovbs.DIFymDAf.png
+│   │   │   │                   ├── IMG-20250812-WA0001.Bt00s3_o.jpeg
+│   │   │   │                   ├── IMG-PHOTO-ART--1510172753.BB-nFGXE.jpeg
+│   │   │   │                   ├── IMG-PHOTO-ART--1513010449.CnJvw4M9.jpeg
+│   │   │   │                   └── lonely_rapist.BodqF4Vq.jpeg
+│   │   │   └── index
+│   │   └── static
+│   │       ├── favicon.png
+│   │       ├── images
+│   │       │   └── placeholders
+│   │       │       ├── 24fb85b4-ec6e-4033-8c3d-c8844279dffa.png
+│   │       │       ├── 723ccc8e-1bcd-4c1e-b678-219bce8504ee.png
+│   │       │       ├── 757fbd57-9053-4e12-95a3-b17bc2008cef.png
+│   │       │       ├── 91d2477e-63e4-45a3-9c5c-0532df45fe0d.png
+│   │       │       ├── a5nWmIXQTneuGRFUT5fQvg.webp
+│   │       │       ├── Ambition.png
+│   │       │       ├── ChatGPT Image Aug 8, 2025, 06_58_29 AM.png
+│   │       │       ├── ChatGPT Image Aug 8, 2025, 06_58_40 AM.png
+│   │       │       ├── d3-placeholder.jpeg
+│   │       │       ├── erg.png
+│   │       │       ├── Fs6YTO0GQ_-nHWut1NkdVA.webp
+│   │       │       ├── gDpjDHSHS72jcAoV6n7VEg.webp
+│   │       │       ├── IMG-20240417-WA0003.jpg
+│   │       │       ├── IMG-20240517-WA0030.jpg
+│   │       │       ├── IMG-20240723-WA0028.jpg
+│   │       │       ├── IMG-20250313-WA0010.jpg
+│   │       │       ├── IMG-20250322-WA0000.jpg
+│   │       │       ├── IMG-20250715-WA0001.jpg
+│   │       │       ├── IMG-20250717-WA0006.jpg
+│   │       │       ├── IMG-20250718-WA0001.jpg
+│   │       │       ├── IMG-20250718-WA0010.jpg
+│   │       │       ├── IMG-20250719-WA0000.jpg
+│   │       │       ├── IMG-20250721-WA0001.jpg
+│   │       │       ├── IMG-20250721-WA0003.jpg
+│   │       │       ├── IMG-20250723-WA0003.jpg
+│   │       │       ├── IMG-20250724-WA0003.jpg
+│   │       │       ├── IMG-20250724-WA0004.jpg
+│   │       │       ├── IMG-20250724-WA0007.jpg
+│   │       │       ├── IMG-20250724-WA0009.jpg
+│   │       │       ├── IMG-20250725-WA0000.jpg
+│   │       │       ├── IMG-20250725-WA0003.jpg
+│   │       │       ├── IMG-20250725-WA0006.jpg
+│   │       │       ├── IMG-20250726-WA0000.jpg
+│   │       │       ├── IMG-20250726-WA0001.jpg
+│   │       │       ├── IMG-20250726-WA0007.jpg
+│   │       │       ├── IMG-20250726-WA0010.jpg
+│   │       │       ├── IMG-20250726-WA0011.jpg
+│   │       │       ├── IMG-20250727-WA0000.jpg
+│   │       │       ├── IMG-20250727-WA0002.jpg
+│   │       │       ├── IMG-20250727-WA0004.jpg
+│   │       │       ├── IMG-20250727-WA0015.jpg
+│   │       │       ├── IMG-20250728-WA0000.jpg
+│   │       │       ├── IMG-20250728-WA0001.jpg
+│   │       │       ├── IMG-20250728-WA0002.jpg
+│   │       │       ├── IMG-20250728-WA0003.jpg
+│   │       │       ├── IMG-20250728-WA0004.jpg
+│   │       │       ├── IMG-20250728-WA0007.jpg
+│   │       │       ├── IMG-20250728-WA0010.jpg
+│   │       │       ├── IMG-20250728-WA0011.jpg
+│   │       │       ├── IMG-20250729-WA0000.jpg
+│   │       │       ├── IMG-20250729-WA0004.jpg
+│   │       │       ├── IMG-20250730-WA0005.jpg
+│   │       │       ├── IMG-20250730-WA0010.jpg
+│   │       │       ├── IMG-20250731-WA0004.jpg
+│   │       │       ├── IMG-20250731-WA0009.jpg
+│   │       │       ├── IMG-20250801-WA0029.jpg
+│   │       │       ├── IMG-20250803-WA0001.jpg
+│   │       │       ├── IMG-20250803-WA0002.jpg
+│   │       │       ├── IMG-20250803-WA0003.jpg
+│   │       │       ├── IMG-20250803-WA0006.jpg
+│   │       │       ├── IMG-20250804-WA0001.jpg
+│   │       │       ├── IMG-20250804-WA0002.jpg
+│   │       │       ├── IMG-20250805-WA0001.jpg
+│   │       │       ├── IMG-20250805-WA0002.jpg
+│   │       │       ├── IMG-20250806-WA0004.jpg
+│   │       │       ├── IMG-20250806-WA0010.jpg
+│   │       │       ├── IMG-20250807-WA0003.jpg
+│   │       │       ├── monk-fruit.png
+│   │       │       ├── p5js-placeholder.jpeg
+│   │       │       ├── plantuml-placeholder.jpeg
+│   │       │       ├── svelte-intro-thumbnail.png
+│   │       │       ├── svelte-runes-thumbnail.jpeg
+│   │       │       ├── threejs-placeholder.jpeg
+│   │       │       ├── tts-placeholder.jpeg
+│   │       │       └── YGEiXDBfQq2kVwzN7vUNIw.jpeg
+│   │       └── _app
+│   │           ├── immutable
+│   │           │   ├── assets
+│   │           │   │   ├── 0.BMUe3Uu8.css
+│   │           │   │   ├── 00b4e1c4-42d9-4b02-9f46-9d46f2a6d9d7.BUKcnVir.webp
+│   │           │   │   ├── 3d095f14-d2b3-4abd-868e-f69096a655d3.CKfMUh0Y.webp
+│   │           │   │   ├── 5dd325b4-2a23-49ab-88af-dd3fa83fd632.BfjoONBf.webp
+│   │           │   │   ├── 8b1b52a9-fa9a-4f03-8686-d863f5dff48f.Bp3yOsxm.png
+│   │           │   │   ├── ad8bc555-8af1-412f-aa19-90f10b19efec.D7zlxWE5.webp
+│   │           │   │   ├── b7748a5c-99dd-4337-8dbc-6344c2e944b4.BHoaFfik.png
+│   │           │   │   ├── ChatGPT Image Aug 10_ 2025_ 02_04_17 AM.D9KGOyeo.png
+│   │           │   │   ├── ChatGPT Image Aug 10_ 2025_ 02_21_38 AM.6OVUT9Hh.png
+│   │           │   │   ├── ChatGPT Image Aug 10_ 2025_ 02_29_56 AM.BYkLtWPk.png
+│   │           │   │   ├── ChatGPT Image Aug 10_ 2025_ 10_55_49 AM.CPr0ZM8v.png
+│   │           │   │   ├── ChatGPT Image Aug 8_ 2025_ 05_48_13 AM.Dp4_V867.png
+│   │           │   │   ├── ChatGPT Image Aug 8_ 2025_ 06_09_56 AM.B0hRximO.png
+│   │           │   │   ├── ChatGPT Image Aug 8_ 2025_ 06_17_13 AM.CLt_q-mK.png
+│   │           │   │   ├── ChatGPT Image Aug 8_ 2025_ 06_29_15 AM.BVmaVDfV.png
+│   │           │   │   ├── ChatGPT Image Aug 8_ 2025_ 06_36_16 AM.DIVRyU08.png
+│   │           │   │   ├── ChatGPT Image Aug 8_ 2025_ 06_58_29 AM.DOoI0xOC.png
+│   │           │   │   ├── ChatGPT Image Aug 8_ 2025_ 06_58_40 AM.D_EfZ1uG.png
+│   │           │   │   ├── Gemini_Generated_Image_kg5fw7kg5fw7kg5f.M_04h03J.png
+│   │           │   │   ├── Gemini_Generated_Image_ovbsqxovbsqxovbs.DIFymDAf.png
+│   │           │   │   ├── IMG-20250812-WA0001.Bt00s3_o.jpeg
+│   │           │   │   ├── IMG-PHOTO-ART--1510172753.BB-nFGXE.jpeg
+│   │           │   │   ├── IMG-PHOTO-ART--1513010449.CnJvw4M9.jpeg
+│   │           │   │   ├── lonely_rapist.BodqF4Vq.jpeg
+│   │           │   │   ├── Mermaid.BSobfmkw.css
+│   │           │   │   ├── PostImage.rCAgM-kM.css
+│   │           │   │   └── _layout.kBVKYpB4.css
+│   │           │   ├── chunks
+│   │           │   │   ├── 0sqJA89l.js
+│   │           │   │   ├── 1HIPwODh.js
+│   │           │   │   ├── 6hoMZzlc.js
+│   │           │   │   ├── 7bkrjWbd.js
+│   │           │   │   ├── 7MdEguQb.js
+│   │           │   │   ├── 8VBsFAg_.js
+│   │           │   │   ├── aAgNsMK6.js
+│   │           │   │   ├── B-M2HoMm.js
+│   │           │   │   ├── B1HIQ836.js
+│   │           │   │   ├── B67r8JJy.js
+│   │           │   │   ├── B7eOsNnk.js
+│   │           │   │   ├── B7q5do5O.js
+│   │           │   │   ├── B7U7ntqt.js
+│   │           │   │   ├── B98duHuM.js
+│   │           │   │   ├── B9Rcbslc.js
+│   │           │   │   ├── BBNg9iYB.js
+│   │           │   │   ├── bbRNuxDx.js
+│   │           │   │   ├── BD0-ozn1.js
+│   │           │   │   ├── BEGrMDf0.js
+│   │           │   │   ├── BHGYVWsw.js
+│   │           │   │   ├── BhhzL_Rs.js
+│   │           │   │   ├── BhRiImqY.js
+│   │           │   │   ├── BigU4G0v.js
+│   │           │   │   ├── BJkW__CW.js
+│   │           │   │   ├── BKlbN5_C.js
+│   │           │   │   ├── BLhut_Lh.js
+│   │           │   │   ├── BLXQkcV9.js
+│   │           │   │   ├── BMntJPq6.js
+│   │           │   │   ├── BoEjjG6c.js
+│   │           │   │   ├── Boh1U3Qg.js
+│   │           │   │   ├── BOXsJ-Wg.js
+│   │           │   │   ├── BQny6CiI.js
+│   │           │   │   ├── BRzKQYUk.js
+│   │           │   │   ├── BT5TNs7N.js
+│   │           │   │   ├── BTZ4AmOF.js
+│   │           │   │   ├── BUfK96sl.js
+│   │           │   │   ├── BusnRh6a.js
+│   │           │   │   ├── BV3kNP9n.js
+│   │           │   │   ├── Bv6LV3Zo.js
+│   │           │   │   ├── BXQP4eJ3.js
+│   │           │   │   ├── BxxdrBfN.js
+│   │           │   │   ├── BZxkPoG1.js
+│   │           │   │   ├── B_gqSsDw.js
+│   │           │   │   ├── C-qnAkIB.js
+│   │           │   │   ├── C1XQ_F2Z.js
+│   │           │   │   ├── C4ZpZx-c.js
+│   │           │   │   ├── C9dXWd7t.js
+│   │           │   │   ├── C9fa6FTx.js
+│   │           │   │   ├── CAIzPROC.js
+│   │           │   │   ├── Cbddpe32.js
+│   │           │   │   ├── CBkPjoyn.js
+│   │           │   │   ├── CBomGvzY.js
+│   │           │   │   ├── CebAjozz.js
+│   │           │   │   ├── CFXYksbc.js
+│   │           │   │   ├── CGAIoIH0.js
+│   │           │   │   ├── CgnPuLyE.js
+│   │           │   │   ├── Chq1RCTN.js
+│   │           │   │   ├── ChWnQ-fc.js
+│   │           │   │   ├── CIC7HTD-.js
+│   │           │   │   ├── Ck9NbWmf.js
+│   │           │   │   ├── Ckhb3Pis.js
+│   │           │   │   ├── CllbmYjy.js
+│   │           │   │   ├── CLLiXKgX.js
+│   │           │   │   ├── Cm00zof6.js
+│   │           │   │   ├── CmKTTxBW.js
+│   │           │   │   ├── CmM0_1ZH.js
+│   │           │   │   ├── Cn7pUZJM.js
+│   │           │   │   ├── CnFHSmm8.js
+│   │           │   │   ├── ComRBmdH.js
+│   │           │   │   ├── Copgxxlq.js
+│   │           │   │   ├── Cpj98o6Y.js
+│   │           │   │   ├── cQosKXol.js
+│   │           │   │   ├── Crt1M_1Z.js
+│   │           │   │   ├── CS4soQnI.js
+│   │           │   │   ├── CsM5MeUo.js
+│   │           │   │   ├── CTn_lXSu.js
+│   │           │   │   ├── CTvZPxDA.js
+│   │           │   │   ├── CV7U2zMi.js
+│   │           │   │   ├── CWFi2X9i.js
+│   │           │   │   ├── CWv5yync.js
+│   │           │   │   ├── CX4dvTGN.js
+│   │           │   │   ├── CYgJF_JY.js
+│   │           │   │   ├── CYn7FLA_.js
+│   │           │   │   ├── D19ejMZX.js
+│   │           │   │   ├── D1JFKnl2.js
+│   │           │   │   ├── D2CAelsQ.js
+│   │           │   │   ├── D2HdbQpZ.js
+│   │           │   │   ├── D2hXuPN_.js
+│   │           │   │   ├── D2nGpDRe.js
+│   │           │   │   ├── D34Oz-0n.js
+│   │           │   │   ├── D3dvHfut.js
+│   │           │   │   ├── D4L63P9L.js
+│   │           │   │   ├── D5mT9ifS.js
+│   │           │   │   ├── D6nap29M.js
+│   │           │   │   ├── D9cd6A7y.js
+│   │           │   │   ├── Dak7ETBX.js
+│   │           │   │   ├── DbbhC6Bu.js
+│   │           │   │   ├── DbcjhZVq.js
+│   │           │   │   ├── DBN__-9d.js
+│   │           │   │   ├── DC9cPDzQ.js
+│   │           │   │   ├── DCaW092A.js
+│   │           │   │   ├── DCdPujGt.js
+│   │           │   │   ├── DDguwrKm.js
+│   │           │   │   ├── DdiNJE69.js
+│   │           │   │   ├── DdO6nIRp.js
+│   │           │   │   ├── DeCviTVi.js
+│   │           │   │   ├── DEc_AiZy.js
+│   │           │   │   ├── DEhJ8Cvc.js
+│   │           │   │   ├── DerIWmdt.js
+│   │           │   │   ├── Df8j4Te6.js
+│   │           │   │   ├── DfGvvSf_.js
+│   │           │   │   ├── DfpquHRF.js
+│   │           │   │   ├── DHt_Dyv1.js
+│   │           │   │   ├── DilRMIGP.js
+│   │           │   │   ├── DJbVHNfK.js
+│   │           │   │   ├── DJFHasOP.js
+│   │           │   │   ├── DkfTB5eA.js
+│   │           │   │   ├── DlGdT3zd.js
+│   │           │   │   ├── Dlj-gYD3.js
+│   │           │   │   ├── DOUyyEYg.js
+│   │           │   │   ├── Dp1pzeXC.js
+│   │           │   │   ├── DqLAgHPk.js
+│   │           │   │   ├── DsbOcu5s.js
+│   │           │   │   ├── Dsj90W40.js
+│   │           │   │   ├── Dtok67W-.js
+│   │           │   │   ├── DTrqypnp.js
+│   │           │   │   ├── Du2k24Tr.js
+│   │           │   │   ├── Dw9jXFWV.js
+│   │           │   │   ├── DXbBRQOI.js
+│   │           │   │   ├── Dz6Dkifu.js
+│   │           │   │   ├── D_NTWwlA.js
+│   │           │   │   ├── Ge9ZwYOb.js
+│   │           │   │   ├── Gi6I4Gst.js
+│   │           │   │   ├── gSV3BJRb.js
+│   │           │   │   ├── iWhfB5J9.js
+│   │           │   │   ├── Jmivwhbr.js
+│   │           │   │   ├── jTSdGKH1.js
+│   │           │   │   ├── knXFgaB2.js
+│   │           │   │   ├── LIMLrSHF.js
+│   │           │   │   ├── Nkad4ktK.js
+│   │           │   │   ├── RqJXVaZi.js
+│   │           │   │   ├── T-3AqF4S.js
+│   │           │   │   ├── tH8wzWac.js
+│   │           │   │   ├── u5pD4i1i.js
+│   │           │   │   ├── uNB1YaFO.js
+│   │           │   │   ├── UVp3au-r.js
+│   │           │   │   ├── W8DXMFtx.js
+│   │           │   │   ├── wNF3k8ao.js
+│   │           │   │   ├── XOxRMBkf.js
+│   │           │   │   ├── Y-_6yP0L.js
+│   │           │   │   ├── YRoeYNSX.js
+│   │           │   │   ├── ZctOTu47.js
+│   │           │   │   └── ZtWUeOA6.js
+│   │           │   ├── entry
+│   │           │   │   ├── app.DTCUSaDl.js
+│   │           │   │   └── start.CIMhD-W7.js
+│   │           │   └── nodes
+│   │           │       ├── 0.D7ZSrh1P.js
+│   │           │       ├── 1.CwtWLUfX.js
+│   │           │       ├── 2.CLLz5imG.js
+│   │           │       ├── 3.DbAVMbfb.js
+│   │           │       ├── 4.C7HM94DS.js
+│   │           │       ├── 5.D19IrsGT.js
+│   │           │       └── 6.B5DWOClY.js
+│   │           └── version.json
+│   ├── project.json
+│   └── README.txt
 ├── data
 │   ├── .gitkeep
 │   └── sessions
@@ -3013,7 +3016,6 @@ export {};
 				setTimeout(() => {
 					if (saveStatus === 'saved') saveStatus = 'idle';
 				}, 2000);
-
 				console.log('Save successful!');
 			} catch (error: any) {
 				console.error('Save failed:', error);
@@ -3082,15 +3084,9 @@ export {};
 		notebook.sections = [...notebook.sections, newSection];
 	}
 
-	// Effect to update refs when sections change
-	$effect(() => {
-		const newRefs: Record<string, any> = {};
-		tick().then(() => {
-			notebook.sections.forEach((section) => {
-				// This relies on having bind:this={sectionRefs[section.id]}
-			});
-		});
-	});
+	// --- DELETED ---
+	// The broken $effect block that was here has been removed.
+	// `bind:this` in the template is all you need.
 
 	function getSaveStatusText() {
 		switch (saveStatus) {
@@ -11677,7 +11673,7 @@ export const load: PageServerLoad = async () => {
 
 // src/routes/api/notebooks/+server.ts
 import { json } from '@sveltejs/kit';
-import { createNotebook } from '$lib/server/storage/filesystem';
+import { createNotebook } from '$lib/server/storage/kv';
 import { getEditToken } from '$lib/server/auth';
 import type { RequestHandler } from './$types';
 
@@ -11792,7 +11788,7 @@ describe('POST /api/notebooks', () => {
 // src/routes/api/notebooks/[id]/+server.ts
 import { json, error as svelteKitError } from '@sveltejs/kit';
 // --- IMPORT THE NEW FUNCTION ---
-import { getNotebook, updateNotebook } from '$lib/server/storage/filesystem';
+import { getNotebook, updateNotebook } from '$lib/server/storage/kv';
 import { checkEditorSecret } from '$lib/server/auth';
 import type { RequestHandler } from './$types';
 import type { Section } from '$lib/types/notebook';
@@ -12166,7 +12162,7 @@ export const load: PageLoad = async ({ params, data }) => {
 
 // src/routes/notebook/[id]/+page.server.ts
 import { error } from '@sveltejs/kit';
-import { getNotebook } from '$lib/server/storage/filesystem';
+import { getNotebook } from '$lib/server/storage/kv';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ params }) => {
@@ -12202,7 +12198,7 @@ export const load: PageServerLoad = async ({ params }) => {
 
 // src/routes/notebooks/+page.server.ts
 import { error } from '@sveltejs/kit';
-import { getAllNotebooks } from '$lib/server/storage/filesystem';
+import { getAllNotebooks } from '$lib/server/storage/kv';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async () => {
