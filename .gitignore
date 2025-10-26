@@ -21,3 +21,17 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Notebook session data (local dev)
+/data/sessions/*
+!/data/.gitkeep
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Cache files (if not already ignored)
+.svelte-kit
+.vite
+node_modules/.vite

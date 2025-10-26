@@ -14,7 +14,7 @@ const TOP_LEVEL_FILES_TO_INCLUDE_IN_CONTENT = [
 	'tailwind.config.cjs',
 	'tsconfig.json'
 ];
-const IGNORE_PATTERNS = new Set(['.git', 'node_modules', '.svelte-kit', 'build', 'dist']);
+const IGNORE_PATTERNS = new Set(['.git', 'node_modules', '.svelte-kit', 'build', 'dist', '.env']);
 const IGNORE_EXTENSIONS_IN_CONTENT = new Set(['.log', '.ico', '.png', '.jpg', '.jpeg', '.gif','.webp']);
 
 // --- SCRIPT LOGIC ---

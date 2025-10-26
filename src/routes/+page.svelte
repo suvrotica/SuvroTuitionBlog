@@ -5,7 +5,7 @@
 
 <svelte:head>
 	<title>Blog - SuvroGhosh.Blog</title>
-	<meta name="description" content="A collection of articles on engineering and personal reflections." />
+	<meta name="description" content="A collection of articles on web engineering." />
 </svelte:head>
 
 <section>

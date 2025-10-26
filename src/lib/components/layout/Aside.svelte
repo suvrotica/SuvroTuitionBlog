@@ -4,22 +4,43 @@
 	let categories = $derived(page.data.categories || []);
 </script>
 
-<aside >
+<aside>
 	<nav>
 		<div class="sidebar-group">
-			<a href="/blog" class="sidebar-topic hover:underline">All Posts</a>
+			<a
+				href="/blog"
+				class="sidebar-topic hover:underline"
+				class:sidebar-link-active={page.url.pathname === '/blog'}
+			>
+				All Posts
+			</a>
+			<a
+				href="/notebooks"
+				class="sidebar-topic hover:underline"
+				class:sidebar-link-active={page.url.pathname.startsWith('/notebook')}
+			>
+				Notebooks
+			</a>
 		</div>
-		
+
 		{#each categories as category (category.name)}
 			<div class="sidebar-group">
-				<a href="/blog/{category.name}" class="sidebar-topic hover:underline">
+				<a
+					href="/blog/{category.name}"
+					class="sidebar-topic hover:underline"
+					class:sidebar-link-active={page.params.category === category.name}
+				>
 					{category.name}
 				</a>
 				<ul>
 					{#each category.articles as article (article.slug)}
 						{@const href = `/blog/${article.category}/${article.slug}`}
 						<li>
-							<a {href} class:sidebar-link={true} class:sidebar-link-active={page.url.pathname === href}>
+							<a
+								{href}
+								class:sidebar-link={true}
+								class:sidebar-link-active={page.url.pathname === href}
+							>
 								{article.title}
 							</a>
 						</li>

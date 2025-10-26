@@ -1,4 +1,4 @@
-# Context file generated on: Saturday, October 25, 2025 at 6:57:28 PM GMT+5:30
+# Context file generated on: Sunday, October 26, 2025 at 2:40:00 PM GMT+5:30
 ---
 
 # Project File Layout
@@ -318,6 +318,13 @@
 │               │       ├── 5.D19IrsGT.js
 │               │       └── 6.B5DWOClY.js
 │               └── version.json
+├── data
+│   ├── .gitkeep
+│   └── sessions
+│       ├── 4183f8a5-b550-4f43-aba7-95bd47a730a0.json
+│       └── dc7cae3c-7f93-41d4-881e-211c5ea01a61.json
+├── docs
+│   └── notebook-feature.md
 ├── drafts
 │   ├── d3-axis-integration.md
 │   ├── d3-integration.md
@@ -660,6 +667,9 @@
 │   │   │   │   ├── DrillDown.svelte
 │   │   │   │   ├── Footer.svelte
 │   │   │   │   └── Header.svelte
+│   │   │   ├── notebook
+│   │   │   │   ├── Notebook.svelte
+│   │   │   │   └── SectionInk.svelte
 │   │   │   ├── OnThisPage.svelte
 │   │   │   ├── P5
 │   │   │   │   └── P5AbstractArt.svelte
@@ -782,10 +792,18 @@
 │   │   │   └── Zero.md
 │   │   ├── posts.ts
 │   │   ├── server
-│   │   │   └── posts.ts
+│   │   │   ├── auth.ts
+│   │   │   ├── posts.ts
+│   │   │   └── storage
+│   │   │       ├── filesystem.test.ts
+│   │   │       └── filesystem.ts
+│   │   ├── types
+│   │   │   └── notebook.ts
 │   │   ├── types.ts
 │   │   ├── utils
-│   │   │   └── readingTime.ts
+│   │   │   ├── readingTime.ts
+│   │   │   ├── uuid.test.ts
+│   │   │   └── uuid.ts
 │   │   └── utils.ts
 │   ├── routes
 │   │   ├── +layout.server.ts
@@ -793,17 +811,30 @@
 │   │   ├── +layout.ts
 │   │   ├── +page.server.ts
 │   │   ├── +page.svelte
-│   │   └── blog
+│   │   ├── api
+│   │   │   └── notebooks
+│   │   │       ├── +server.ts
+│   │   │       ├── server.test.ts
+│   │   │       └── [id]
+│   │   │           └── +server.ts
+│   │   ├── blog
+│   │   │   ├── +page.server.ts
+│   │   │   ├── +page.svelte
+│   │   │   └── [category]
+│   │   │       ├── +page.server.ts
+│   │   │       ├── +page.svelte
+│   │   │       └── [slug]
+│   │   │           ├── +layout.svelte
+│   │   │           ├── +page.server.ts
+│   │   │           ├── +page.svelte
+│   │   │           └── +page.ts
+│   │   ├── notebook
+│   │   │   └── [id]
+│   │   │       ├── +page.server.ts
+│   │   │       └── +page.svelte
+│   │   └── notebooks
 │   │       ├── +page.server.ts
-│   │       ├── +page.svelte
-│   │       └── [category]
-│   │           ├── +page.server.ts
-│   │           ├── +page.svelte
-│   │           └── [slug]
-│   │               ├── +layout.svelte
-│   │               ├── +page.server.ts
-│   │               ├── +page.svelte
-│   │               └── +page.ts
+│   │       └── +page.svelte
 │   └── types
 │       └── mdsvex.d.ts
 ├── static
@@ -1165,9 +1196,11 @@
 		"typescript": "^5.0.0",
 		"typescript-eslint": "^8.20.0",
 		"vite": "^6.2.6",
-		"vite-plugin-devtools-json": "^0.2.0"
+		"vite-plugin-devtools-json": "^0.2.0",
+		"vitest": "^4.0.3"
 	},
 	"dependencies": {
+		"@types/uuid": "^10.0.0",
 		"@vercel/analytics": "^1.5.0",
 		"@vercel/speed-insights": "^1.2.0",
 		"d3": "^7.9.0",
@@ -1177,7 +1210,8 @@
 		"rehype-autolink-headings": "^7.1.0",
 		"remark-frontmatter": "^5.0.0",
 		"remark-gfm": "^4.0.1",
-		"three": "^0.165.0"
+		"three": "^0.165.0",
+		"uuid": "^13.0.0"
 	}
 }
 
@@ -2617,22 +2651,43 @@ export {};
 	let categories = $derived(page.data.categories || []);
 </script>
 
-<aside >
+<aside>
 	<nav>
 		<div class="sidebar-group">
-			<a href="/blog" class="sidebar-topic hover:underline">All Posts</a>
+			<a
+				href="/blog"
+				class="sidebar-topic hover:underline"
+				class:sidebar-link-active={page.url.pathname === '/blog'}
+			>
+				All Posts
+			</a>
+			<a
+				href="/notebooks"
+				class="sidebar-topic hover:underline"
+				class:sidebar-link-active={page.url.pathname.startsWith('/notebook')}
+			>
+				Notebooks
+			</a>
 		</div>
-		
+
 		{#each categories as category (category.name)}
 			<div class="sidebar-group">
-				<a href="/blog/{category.name}" class="sidebar-topic hover:underline">
+				<a
+					href="/blog/{category.name}"
+					class="sidebar-topic hover:underline"
+					class:sidebar-link-active={page.params.category === category.name}
+				>
 					{category.name}
 				</a>
 				<ul>
 					{#each category.articles as article (article.slug)}
 						{@const href = `/blog/${article.category}/${article.slug}`}
 						<li>
-							<a {href} class:sidebar-link={true} class:sidebar-link-active={page.url.pathname === href}>
+							<a
+								{href}
+								class:sidebar-link={true}
+								class:sidebar-link-active={page.url.pathname === href}
+							>
 								{article.title}
 							</a>
 						</li>
@@ -2808,6 +2863,7 @@ export {};
 			<a href="/" class="site-title"> SuvroGhosh.Blog </a>
 			<div class="hidden md:flex items-center space-x-4">
 				<a href="/blog" class="sidebar-link">Blog</a>
+				<a href="/notebooks" class="sidebar-link">Notebooks</a>
 				<a href="/about" class="sidebar-link">About</a>
 				<a href="/contact" class="sidebar-link">Contact</a>
 			</div>
@@ -2849,6 +2905,445 @@ export {};
 		</nav>
 	</div>
 </header>
+
+# File: src/lib/components/notebook/Notebook.svelte
+
+<script lang="ts">
+	import type { Notebook, Section } from '$lib/types/notebook';
+	import SectionInk from './SectionInk.svelte';
+	import { generateUUID } from '$lib/utils/uuid';
+	import { tick } from 'svelte';
+	import { dev } from '$app/environment';
+	import { onMount } from 'svelte';
+
+	let { notebookData }: { notebookData: Notebook } = $props();
+	let editorSecret = $state<string | null>(null); // Store secret locally for API calls
+
+	// Create reactive state from the initial prop data
+	let notebook = $state<Notebook>({ ...notebookData });
+
+	// Refs for section components to call methods like getCurrentContent
+	let sectionRefs = $state<Record<string, any>>({});
+
+	// --- NEW: Local state for throttling saves ---
+	let saveTimeout: ReturnType<typeof setTimeout> | null = null;
+	let saveStatus = $state<'idle' | 'saving' | 'saved' | 'error'>('idle');
+
+	// --- NEW: Debounced save function ---
+	function scheduleSave(immediate = false) {
+		saveStatus = 'saving';
+		if (saveTimeout) {
+			clearTimeout(saveTimeout);
+		}
+
+		const saveAction = async () => {
+			if (!editorSecret) {
+				console.warn('Editor secret not set. Cannot save.');
+				// Try to get token again
+				const secretFromStorage = localStorage.getItem(`notebook_${notebook.id}_secret`);
+				if (secretFromStorage) {
+					editorSecret = secretFromStorage;
+				} else {
+					// In a real app, you might show a modal here
+					// For now, we'll just fail silently
+					saveStatus = 'error';
+					return;
+				}
+			}
+
+			console.log('Saving changes...');
+			// Collect current content from all sections
+			const updatedSections = notebook.sections.map((section) => {
+				const ref = sectionRefs[section.id];
+				if (ref && typeof ref.getCurrentContent === 'function') {
+					const currentContent = ref.getCurrentContent();
+
+					// Only add a new version if content actually changed (basic check)
+					// A real implementation would be more robust
+					const latestVersion = section.versions[section.versions.length - 1];
+					if (JSON.stringify(latestVersion.content) !== JSON.stringify(currentContent)) {
+						const newVersion = {
+							versionId: generateUUID(),
+							changedAt: new Date().toISOString(),
+							changeType: 'edit' as const,
+							content: currentContent
+						};
+						return {
+							...section,
+							versions: [...section.versions, newVersion]
+						};
+					}
+				}
+				return section;
+			});
+
+			const payload = {
+				title: notebook.title,
+				sections: updatedSections
+			};
+
+			try {
+				const response = await fetch(`/api/notebooks/${notebook.id}`, {
+					method: 'PATCH',
+					headers: {
+						'Content-Type': 'application/json',
+						Authorization: `Bearer ${editorSecret}`
+					},
+					body: JSON.stringify(payload)
+				});
+
+				if (!response.ok) {
+					const errorData = await response.json();
+					throw new Error(errorData.message || `HTTP error! status: ${response.status}`);
+				}
+
+				const savedNotebook: Notebook = await response.json();
+				// Sync state from server response
+				notebook.sections = savedNotebook.sections;
+				notebook.title = savedNotebook.title;
+
+				saveStatus = 'saved';
+				// Reset status after a short delay
+				setTimeout(() => {
+					if (saveStatus === 'saved') saveStatus = 'idle';
+				}, 2000);
+
+				console.log('Save successful!');
+			} catch (error: any) {
+				console.error('Save failed:', error);
+				saveStatus = 'error';
+			}
+		};
+
+		if (immediate) {
+			saveAction();
+		} else {
+			saveTimeout = setTimeout(saveAction, 2000); // 2 second debounce
+		}
+	}
+
+	// --- NEW: Trigger autosave when title or sections change ---
+	$effect(() => {
+		// This effect tracks notebook.title
+		const title = notebook.title;
+		// This effect tracks notebook.sections (and deep changes)
+		const sections = notebook.sections;
+
+		// This check is important to prevent saving on the initial load
+		if (
+			notebookData &&
+			(title !== notebookData.title || sections !== notebookData.sections)
+		) {
+			// Don't autosave in dev, only on explicit save button click
+			if (!dev) {
+				scheduleSave();
+			}
+		}
+	});
+
+	// Check local storage for secret on mount
+	onMount(() => {
+		const secretFromStorage = localStorage.getItem(`notebook_${notebook.id}_secret`);
+		if (secretFromStorage) {
+			editorSecret = secretFromStorage;
+		} else {
+			// If no secret, try to prompt (only useful for dev)
+			if (dev) {
+				const promptedSecret = prompt('Enter editor secret to save/edit:');
+				if (promptedSecret) {
+					editorSecret = promptedSecret;
+					localStorage.setItem(`notebook_${notebook.id}_secret`, promptedSecret);
+				}
+			}
+		}
+	});
+
+	function addInkSection() {
+		const newSection: Section = {
+			id: generateUUID(),
+			type: 'ink',
+			orderIndex: (notebook.sections.length + 1) * 1000,
+			createdAt: new Date().toISOString(),
+			versions: [
+				{
+					versionId: generateUUID(),
+					changedAt: new Date().toISOString(),
+					changeType: 'create',
+					content: { strokes: [] }
+				}
+			]
+		};
+		notebook.sections = [...notebook.sections, newSection];
+	}
+
+	// Effect to update refs when sections change
+	$effect(() => {
+		const newRefs: Record<string, any> = {};
+		tick().then(() => {
+			notebook.sections.forEach((section) => {
+				// This relies on having bind:this={sectionRefs[section.id]}
+			});
+		});
+	});
+
+	function getSaveStatusText() {
+		switch (saveStatus) {
+			case 'saving':
+				return 'Saving...';
+			case 'saved':
+				return 'Saved!';
+			case 'error':
+				return 'Save Failed';
+			default:
+				return 'Save Notebook';
+		}
+	}
+</script>
+
+<div class="notebook p-4 space-y-4">
+	<input
+		type="text"
+		bind:value={notebook.title}
+		class="text-3xl font-bold bg-transparent border-b border-neutral-300 dark:border-neutral-700 p-2 w-full focus:ring-0 focus:outline-none focus:border-gold text-neutral-800 dark:text-neutral-300 placeholder-neutral-500"
+		placeholder="Untitled Notebook"
+	/>
+
+	<div class="controls space-x-2 flex items-center">
+		<button onclick={addInkSection} class="">Add Ink Section</button>
+		<button onclick={() => scheduleSave(true)} disabled={saveStatus === 'saving'} class="">
+			{getSaveStatusText()}
+		</button>
+		{#if saveStatus === 'error'}
+			<span class="text-red-500 text-sm">Error saving. Check console.</span>
+		{/if}
+	</div>
+
+	{#each notebook.sections as section (section.id)}
+		<div class="section-container border-t pt-4">
+			<h2 class="text-xs uppercase text-neutral-500 mb-2">
+				Section: {section.type} (ID: {section.id.substring(0, 4)})
+			</h2>
+			{#if section.type === 'ink'}
+				<SectionInk
+					bind:this={sectionRefs[section.id]}
+					content={section.versions[section.versions.length - 1]
+						.content as import('$lib/types/notebook').InkContent}
+					onchange={() => scheduleSave(false)}
+				/>
+			{:else if section.type === 'markdown'}
+				<p class="text-neutral-400 italic">(Markdown section stub)</p>
+			{:else if section.type === 'code'}
+				<p class="text-neutral-400 italic">(Code section stub)</p>
+			{:else if section.type === 'title'}
+				<p class="text-neutral-400 italic">(Title section stub)</p>
+			{/if}
+		</div>
+	{/each}
+
+	{#if !editorSecret}
+		<div class="mt-4 p-3 bg-yellow-100 border border-yellow-300 rounded text-yellow-800 text-sm">
+			No editor secret found. Saving is disabled.
+		</div>
+	{/if}
+</div>
+
+# File: src/lib/components/notebook/SectionInk.svelte
+
+<script lang="ts">
+	import type { Stroke, Point, InkContent } from '$lib/types/notebook';
+	import { generateUUID } from '$lib/utils/uuid';
+
+	let {
+		content,
+		onchange = () => {}
+	}: {
+		content: InkContent;
+		onchange?: () => void;
+	} = $props();
+
+	let svgElement: SVGSVGElement | undefined = $state();
+	let currentStroke: Stroke | null = $state(null);
+	let isDrawing = $state(false);
+
+	const backgroundColor = '#000000';
+	const colors = [
+		{ name: 'White', value: '#FFFFFF' },
+		{ name: 'Blue', value: '#0000FF' },
+		{ name: 'Orange', value: '#FFA500' },
+		{ name: 'Green', value: '#008000' },
+		{ name: 'Yellow', value: '#FFFF00' }
+	];
+	let selectedColor = $state(colors[0].value);
+	let selectedWidth = $state(2);
+	let tool = $state<'pen' | 'eraser'>('pen');
+
+	// This is the only state declaration needed.
+	// It initializes from the prop and then becomes the local source of truth.
+	let strokes = $state<Stroke[]>(content?.strokes || []);
+
+	// --- FIX 1: This entire $effect block was the cause of the bug ---
+	// $effect(() => {
+	// 	if (content.strokes !== strokes) {
+	// 		strokes = content.strokes || [];
+	// 	}
+	// });
+	// --- END FIX 1 ---
+
+	function getPathData(stroke: Stroke): string {
+		if (!stroke || stroke.points.length === 0) return '';
+		let d = `M ${stroke.points[0].x} ${stroke.points[0].y}`;
+		for (let i = 1; i < stroke.points.length; i++) {
+			d += ` L ${stroke.points[i].x} ${stroke.points[i].y}`;
+		}
+		return d;
+	}
+
+	function getPointerPosition(event: PointerEvent): { x: number; y: number } {
+		if (!svgElement) return { x: 0, y: 0 };
+		const rect = svgElement.getBoundingClientRect();
+		const container = svgElement.parentElement;
+		const scrollTop = container?.scrollTop || 0;
+		return {
+			x: event.clientX - rect.left,
+			y: event.clientY - rect.top + scrollTop
+		};
+	}
+
+	function handlePointerDown(event: PointerEvent) {
+		if (!svgElement || event.button !== 0) return;
+		isDrawing = true;
+		svgElement.setPointerCapture(event.pointerId);
+
+		const { x, y } = getPointerPosition(event);
+		const newPoint: Point = { x, y, t: Date.now(), p: event.pressure };
+
+		currentStroke = {
+			id: generateUUID(),
+			points: [newPoint],
+			color: tool === 'eraser' ? backgroundColor : selectedColor, // Use selected color
+			width: tool === 'eraser' ? 20 : selectedWidth // Use selected width
+		};
+	}
+
+	function handlePointerMove(event: PointerEvent) {
+		if (!isDrawing || !currentStroke) return;
+		const { x, y } = getPointerPosition(event);
+		const newPoint: Point = { x, y, t: Date.now(), p: event.pressure };
+		currentStroke.points.push(newPoint);
+		// This line is crucial for Svelte 5 to see the mutation
+		currentStroke = currentStroke;
+	}
+
+	function handlePointerUp(event: PointerEvent) {
+		if (!isDrawing || !currentStroke) return;
+		isDrawing = false;
+		svgElement?.releasePointerCapture(event.pointerId);
+
+		if (currentStroke.points.length > 1) {
+			strokes = [...strokes, currentStroke];
+		}
+		currentStroke = null;
+		onchange();
+	}
+
+	function undo() {
+		if (strokes.length === 0) return;
+		strokes = strokes.slice(0, -1);
+		onchange();
+	}
+
+	function selectColor(color: string) {
+		tool = 'pen';
+		selectedColor = color;
+		selectedWidth = color === '#FFFF00' ? 4 : 2;
+	}
+
+	function selectEraser() {
+		tool = 'eraser';
+		// selectedColor = backgroundColor; // No need to set, handlePointerDown does it
+		selectedWidth = 20;
+	}
+
+	export function getCurrentContent(): InkContent {
+		return { strokes: strokes };
+	}
+</script>
+
+<div
+	class="ink-section-container border border-neutral-300 dark:border-neutral-700 rounded bg-neutral-900 overflow-y-auto"
+	style="height: 75vh;"
+>
+	<div
+		class="toolbar sticky top-0 z-10 p-2 flex gap-2 border-b border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800"
+	>
+		{#each colors as color (color.value)}
+			<button
+				title={color.name}
+				onclick={() => selectColor(color.value)}
+				class="w-6 h-6 rounded-full border-2"
+				class:border-blue-500={tool === 'pen' && selectedColor === color.value}
+				class:border-neutral-300={tool !== 'pen' || selectedColor !== color.value}
+				style="background-color: {color.value};"
+				aria-label="Select {color.name} ink"
+			></button>
+		{/each}
+
+		<div class="border-l border-neutral-300 dark:border-neutral-600 mx-1"></div>
+
+		<button
+			title="Eraser"
+			onclick={selectEraser}
+			class:border-blue-500={tool === 'eraser'}
+			class:border-neutral-300={tool !== 'eraser'}
+			class="px-2 py-0 h-6 text-sm text-neutral-700 dark:text-neutral-200 bg-neutral-100 dark:bg-neutral-700 rounded border flex items-center justify-center"
+			aria-label="Select Eraser"
+		>
+			Eraser
+		</button>
+
+		<button
+			title="Undo"
+			onclick={undo}
+			class="px-2 py-0 h-6 text-sm text-neutral-700 dark:text-neutral-200 bg-neutral-100 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 flex items-center justify-center"
+			aria-label="Undo last stroke"
+		>
+			Undo
+		</button>
+	</div>
+
+	<svg
+		bind:this={svgElement}
+		class="w-full"
+		onpointerdown={handlePointerDown}
+		onpointermove={handlePointerMove}
+		onpointerup={handlePointerUp}
+		onpointerleave={handlePointerUp}
+		style="touch-action: none; background-color: {backgroundColor}; height: 1500px;"
+	>
+		{#each strokes as stroke (stroke.id)}
+			<path
+				d={getPathData(stroke)}
+				stroke={stroke.color}
+				stroke-width={stroke.width}
+				fill="none"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+			/>
+		{/each}
+
+		{#if currentStroke && currentStroke.points.length > 0}
+			<path
+				d={getPathData(currentStroke)}
+				stroke={tool === 'eraser' ? backgroundColor : currentStroke.color}
+				stroke-width={currentStroke.width}
+				fill="none"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				opacity="0.8"
+			/>
+		{/if}
+	</svg>
+</div>
 
 # File: src/lib/components/OnThisPage.svelte
 
@@ -10485,6 +10980,43 @@ export async function getPostsByCategory(category: string) {
 	};
 }
 
+# File: src/lib/server/auth.ts
+
+// src/lib/server/auth.ts
+// VERY basic auth check for skeleton - replace with proper auth later
+import { EDITOR_SECRET } from '$env/static/private'; // <-- This is the fix
+
+export function isEditor(request: Request): boolean {
+	// In a real app, verify a JWT or session cookie
+	// For skeleton, just check a simple header or rely on EDITOR_SECRET check
+	// This function isn't strictly needed if we check EDITOR_SECRET directly in endpoints
+	// but provides a hook for future expansion.
+	// For now, let's assume endpoints check EDITOR_SECRET directly.
+	console.warn('Using placeholder isEditor check. Implement real auth!');
+	return true; // Placeholder
+}
+
+// Helper to check the EDITOR_SECRET - USE THIS IN ENDPOINTS
+export function checkEditorSecret(secret?: string): boolean {
+	if (!EDITOR_SECRET) {
+		console.error('EDITOR_SECRET environment variable is not set!');
+		return false;
+	}
+	// Allow requests in dev without a secret for easier testing? Optional.
+	// if (dev && !secret) return true;
+	return secret === EDITOR_SECRET;
+}
+
+// Simple function to simulate getting an edit token (in real app, use JWT)
+export function getEditToken(): string | null {
+	if (!EDITOR_SECRET) {
+		console.error('Cannot generate edit token: EDITOR_SECRET is not set.');
+		return null;
+	}
+	// For skeleton, the "token" is just the secret itself. NOT SECURE FOR PROD.
+	return EDITOR_SECRET;
+}
+
 # File: src/lib/server/posts.ts
 
 import { dev } from '$app/environment';
@@ -10545,6 +11077,310 @@ export async function getPosts() {
 	};
 }
 
+# File: src/lib/server/storage/filesystem.test.ts
+
+// src/lib/server/storage/filesystem.test.ts
+import { describe, it, expect, beforeAll, afterAll, beforeEach } from 'vitest';
+import fs from 'fs/promises';
+import path from 'path';
+import { createNotebook, getNotebook, saveNotebook, updateNotebookSections } from './filesystem';
+import type { Notebook } from '$lib/types/notebook';
+
+// Use a temporary directory for tests
+const testSessionsDir = path.join(process.cwd(), 'data', 'test-sessions');
+
+// Mock process.cwd() to point to test dir or adjust adapter path logic
+// For simplicity, let's assume the adapter correctly uses testSessionsDir if base path is manipulated
+// Or, more robustly, modify the adapter temporarily for tests (less ideal)
+// Easiest: clear the dir before/after tests.
+
+beforeAll(async () => {
+	try {
+		await fs.mkdir(testSessionsDir, { recursive: true });
+	} catch {}
+});
+
+afterAll(async () => {
+	try {
+		// Clean up test directory
+		await fs.rm(testSessionsDir, { recursive: true, force: true });
+	} catch {}
+});
+
+beforeEach(async () => {
+    // Clear directory before each test
+    const files = await fs.readdir(testSessionsDir);
+    for (const file of files) {
+        await fs.unlink(path.join(testSessionsDir, file));
+    }
+     // Hacky: Temporarily override the sessionsDir path for testing
+    // This is not ideal, dependency injection would be better
+    (createNotebook as any).__TEST_SESSION_DIR = testSessionsDir;
+    (getNotebook as any).__TEST_SESSION_DIR = testSessionsDir;
+    (saveNotebook as any).__TEST_SESSION_DIR = testSessionsDir;
+     (updateNotebookSections as any).__TEST_SESSION_DIR = testSessionsDir; // Need to adjust adapter code slightly for this
+});
+
+
+// --- Helper in filesystem.ts needed for the hack above ---
+/*
+Add this near the top of filesystem.ts:
+let sessionsDir = path.join(process.cwd(), 'data', 'sessions');
+// Allow overriding for tests (ugly, but simple for now)
+if ((createNotebook as any)?.__TEST_SESSION_DIR) {
+    sessionsDir = (createNotebook as any).__TEST_SESSION_DIR;
+}
+// Repeat for getNotebook, saveNotebook, updateNotebookSections if needed or make sessionsDir exportable and mutable
+export function __setTestSessionDir(dir: string) { // A slightly cleaner way
+    sessionsDir = dir;
+}
+// Then call __setTestSessionDir(testSessionsDir) in beforeEach
+*/
+// --- End Helper ---
+
+
+describe('Filesystem Storage Adapter', () => {
+	it('should create a new notebook file', async () => {
+		const notebook = await createNotebook('Test Create');
+		expect(notebook.id).toBeDefined();
+		expect(notebook.title).toBe('Test Create');
+		expect(notebook.sections).toEqual([]);
+
+		// Check if file exists
+		const filePath = path.join(testSessionsDir, `${notebook.id}.json`);
+		await expect(fs.access(filePath)).resolves.toBeUndefined();
+	});
+
+	it('should get an existing notebook', async () => {
+		const created = await createNotebook('Test Get');
+		const fetched = await getNotebook(created.id);
+		expect(fetched).not.toBeNull();
+		expect(fetched?.id).toBe(created.id);
+		expect(fetched?.title).toBe('Test Get');
+	});
+
+	it('should return null for a non-existent notebook', async () => {
+		const fetched = await getNotebook('non-existent-id');
+		expect(fetched).toBeNull();
+	});
+
+    it('should save updates to a notebook', async () => {
+        const notebook = await createNotebook('Test Save');
+        notebook.title = 'Updated Title';
+        await saveNotebook(notebook);
+
+        const fetched = await getNotebook(notebook.id);
+        expect(fetched?.title).toBe('Updated Title');
+    });
+
+     it('should update notebook sections', async () => {
+        const notebook = await createNotebook('Test Update Sections');
+        const newSections: any[] = [{ id: 'sec1', type: 'ink', orderIndex: 1000, versions: [{ versionId: 'v1', changedAt: '', changeType: 'create', content: { strokes: []}}] }];
+
+        const updated = await updateNotebookSections(notebook.id, newSections);
+        expect(updated?.sections).toHaveLength(1);
+        expect(updated?.sections[0].id).toBe('sec1');
+
+         const fetched = await getNotebook(notebook.id);
+         expect(fetched?.sections).toHaveLength(1);
+         expect(fetched?.sections[0].id).toBe('sec1');
+     });
+
+     it('should return null when updating sections of non-existent notebook', async () => {
+        const updated = await updateNotebookSections('non-existent-id', []);
+        expect(updated).toBeNull();
+     });
+});
+
+# File: src/lib/server/storage/filesystem.ts
+
+// src/lib/server/storage/filesystem.ts
+import fs from 'fs/promises';
+import path from 'path';
+import type { Notebook, Section } from '$lib/types/notebook';
+import { generateUUID } from '$lib/utils/uuid';
+
+const sessionsDir = path.join(process.cwd(), 'data', 'sessions');
+
+// (This function is unchanged)
+async function ensureDir() {
+	try {
+		await fs.access(sessionsDir);
+	} catch {
+		await fs.mkdir(sessionsDir, { recursive: true });
+	}
+}
+
+// (This function is unchanged)
+export async function createNotebook(title: string = 'Untitled Notebook'): Promise<Notebook> {
+	await ensureDir();
+	const newNotebook: Notebook = {
+		id: generateUUID(),
+		title: title,
+		createdAt: new Date().toISOString(),
+		publishedAt: null,
+		sections: [],
+		meta: { tool: 'whiteboard-v1-dev' }
+	};
+	const filePath = path.join(sessionsDir, `${newNotebook.id}.json`);
+	await fs.writeFile(filePath, JSON.stringify(newNotebook, null, 2));
+	console.log(`[FS Adapter] Created notebook: ${newNotebook.id}`);
+	return newNotebook;
+}
+
+// (This function is unchanged)
+export async function getNotebook(id: string): Promise<Notebook | null> {
+	await ensureDir();
+	const filePath = path.join(sessionsDir, `${id}.json`);
+	try {
+		const data = await fs.readFile(filePath, 'utf-8');
+		console.log(`[FS Adapter] Read notebook: ${id}`);
+		return JSON.parse(data) as Notebook;
+	} catch (error: any) {
+		if (error.code === 'ENOENT') {
+			console.log(`[FS Adapter] Notebook not found: ${id}`);
+			return null; // Not found
+		}
+		console.error(`[FS Adapter] Error reading notebook ${id}:`, error);
+		throw error; // Other errors
+	}
+}
+
+// (This function is unchanged)
+export async function saveNotebook(notebook: Notebook): Promise<void> {
+	await ensureDir();
+	const filePath = path.join(sessionsDir, `${notebook.id}.json`);
+	try {
+		await fs.writeFile(filePath, JSON.stringify(notebook, null, 2));
+		console.log(`[FS Adapter] Saved notebook: ${notebook.id}`);
+	} catch (error) {
+		console.error(`[FS Adapter] Error saving notebook ${notebook.id}:`, error);
+		throw error;
+	}
+}
+
+// --- NEW FUNCTION ---
+// Updates title AND sections. This replaces updateNotebookSections
+export async function updateNotebook(
+	id: string,
+	title: string,
+	sections: Section[]
+): Promise<Notebook | null> {
+	const notebook = await getNotebook(id);
+	if (!notebook) {
+		return null;
+	}
+	
+	// Update properties
+	notebook.title = title;
+	notebook.sections = sections;
+	
+	// Save the entire notebook
+	await saveNotebook(notebook);
+	console.log(`[FS Adapter] Updated notebook (title & sections): ${id}`);
+	return notebook;
+}
+
+// --- DEPRECATED (but keep for now if other things use it) ---
+// We should eventually remove this and only use updateNotebook
+export async function updateNotebookSections(id: string, sections: Section[]): Promise<Notebook | null> {
+	const notebook = await getNotebook(id);
+	if (!notebook) {
+		return null;
+	}
+	notebook.sections = sections;
+	await saveNotebook(notebook);
+	console.log(`[FS Adapter] Updated sections for notebook: ${id}`);
+	return notebook;
+}
+
+// (This function is unchanged)
+export async function getAllNotebooks(): Promise<Array<Pick<Notebook, 'id' | 'title' | 'createdAt'>>> {
+	await ensureDir();
+	try {
+		const files = await fs.readdir(sessionsDir);
+		const notebookPromises = files
+			.filter((file) => file.endsWith('.json'))
+			.map(async (file) => {
+				const filePath = path.join(sessionsDir, file);
+				try {
+					const data = await fs.readFile(filePath, 'utf-8');
+					const notebook = JSON.parse(data) as Notebook;
+					return {
+						id: notebook.id,
+						title: notebook.title,
+						createdAt: notebook.createdAt
+					};
+				} catch (readErr) {
+					console.error(`[FS Adapter] Failed to read or parse notebook file: ${file}`, readErr);
+					return null;
+				}
+			});
+
+		const notebooks = (await Promise.all(notebookPromises))
+			.filter((nb): nb is Pick<Notebook, 'id' | 'title' | 'createdAt'> => nb !== null)
+			.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+
+		console.log(`[FS Adapter] Fetched ${notebooks.length} notebook summaries.`);
+		return notebooks;
+	} catch (error: any) {
+		console.error(`[FS Adapter] Error reading sessions directory:`, error);
+		throw new Error('Failed to fetch notebook list');
+	}
+}
+
+# File: src/lib/types/notebook.ts
+
+// src/lib/types/notebook.ts
+export interface Point {
+	x: number;
+	y: number;
+	t: number; // timestamp
+	p?: number; // pressure (optional)
+}
+
+export interface Stroke {
+	id: string; // UUID for the stroke
+	points: Point[];
+	color: string;
+	width: number;
+}
+
+export interface InkContent {
+	strokes: Stroke[];
+	// Optional: Bounding box can be calculated on render or save
+	// bbox?: { x: number; y: number; w: number; h: number };
+}
+
+export type SectionType = 'ink' | 'markdown' | 'code' | 'title'; // | 'image' omitted for skeleton
+
+export interface SectionVersion {
+	versionId: string; // UUID
+	changedAt: string; // ISO8601 timestamp
+	changeType: 'create' | 'edit'; // | 'reorder' | 'meta' omitted for skeleton
+	content: InkContent | { text: string } | { title: string }; // Simplified content types
+}
+
+export interface Section {
+	id: string; // UUID
+	type: SectionType;
+	orderIndex: number; // For ordering
+	createdAt: string; // ISO8601 timestamp
+	// createdBy: string; // Simplified for skeleton - add later with auth
+	versions: SectionVersion[]; // History of content, latest is current
+}
+
+export interface Notebook {
+	id: string; // UUID
+	title: string;
+	createdAt: string; // ISO8601 timestamp
+	// createdBy: string; // Simplified for skeleton - add later with auth
+	publishedAt: string | null; // ISO8601 timestamp or null
+	sections: Section[];
+	// history: any[]; // Full notebook change history - omit for skeleton
+	meta?: Record<string, any>; // Optional metadata
+}
+
 # File: src/lib/types.ts
 
 // This file defines the shape of your data structures.
@@ -10577,6 +11413,36 @@ export function calculateReadingTime(text: string): number {
 	const wordsPerMinute = 200;
 	const numberOfWords = text.split(/\s/g).length;
 	return Math.ceil(numberOfWords / wordsPerMinute);
+}
+
+# File: src/lib/utils/uuid.test.ts
+
+// src/lib/utils/uuid.test.ts
+import { describe, it, expect } from 'vitest';
+import { generateUUID } from './uuid';
+
+describe('generateUUID', () => {
+	it('should generate a valid v4 UUID', () => {
+		const uuid = generateUUID();
+		// Basic regex check for v4 UUID format
+		const uuidV4Regex = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+		expect(uuid).toMatch(uuidV4Regex);
+	});
+
+	it('should generate unique UUIDs', () => {
+		const uuid1 = generateUUID();
+		const uuid2 = generateUUID();
+		expect(uuid1).not.toEqual(uuid2);
+	});
+});
+
+# File: src/lib/utils/uuid.ts
+
+// src/lib/utils/uuid.ts
+import { v4 as uuidv4 } from 'uuid';
+
+export function generateUUID(): string {
+	return uuidv4();
 }
 
 # File: src/lib/utils.ts
@@ -10818,13 +11684,189 @@ export const load: PageServerLoad = async () => {
 
 <svelte:head>
 	<title>Blog - SuvroGhosh.Blog</title>
-	<meta name="description" content="A collection of articles on engineering and personal reflections." />
+	<meta name="description" content="A collection of articles on web engineering." />
 </svelte:head>
 
 <section>
 	<h1 class="text-center mb-8">All Posts</h1>
 	<PostGallery posts={data.posts} />
 </section>
+
+# File: src/routes/api/notebooks/+server.ts
+
+// src/routes/api/notebooks/+server.ts
+import { json } from '@sveltejs/kit';
+import { createNotebook } from '$lib/server/storage/filesystem';
+import { getEditToken } from '$lib/server/auth';
+import type { RequestHandler } from './$types';
+
+export const POST: RequestHandler = async ({ request }) => {
+	try {
+		// Optional: Get title from request body later
+		const notebook = await createNotebook('Untitled Notebook');
+		const editToken = getEditToken(); // For skeleton, just sends the secret
+
+		if (!editToken) {
+			return json({ error: 'Server configuration error (missing secret)' }, { status: 500 });
+		}
+
+		return json({ id: notebook.id, editToken: editToken, notebook }, { status: 201 });
+	} catch (error) {
+		console.error('Error creating notebook:', error);
+		return json({ error: 'Failed to create notebook' }, { status: 500 });
+	}
+};
+
+# File: src/routes/api/notebooks/server.test.ts
+
+// src/routes/api/notebooks/+server.test.ts
+import { describe, it, expect, vi } from 'vitest';
+import { POST } from './+server'; // Import your handler
+import { json } from '@sveltejs/kit';
+
+// Mock the storage adapter
+vi.mock('$lib/server/storage/filesystem', () => ({
+	createNotebook: vi.fn(),
+}));
+// Mock auth helper
+vi.mock('$lib/server/auth', () => ({
+    getEditToken: vi.fn()
+}));
+ // Mock env
+ vi.mock('$env/dynamic/private', () => ({
+    EDITOR_SECRET: 'test-secret-from-mock'
+}));
+
+import { createNotebook } from '$lib/server/storage/filesystem';
+import { getEditToken } from '$lib/server/auth';
+
+
+describe('POST /api/notebooks', () => {
+	it('should create a notebook and return its ID and token', async () => {
+		const mockNotebook = { id: 'test-uuid', title: 'Untitled Notebook', sections: [], createdAt: '', publishedAt: null };
+        const mockToken = 'mock-edit-token';
+
+		vi.mocked(createNotebook).mockResolvedValue(mockNotebook as any);
+        vi.mocked(getEditToken).mockReturnValue(mockToken);
+
+		// Simulate a SvelteKit RequestEvent (only needs `request` for this endpoint)
+		const mockRequest = new Request('http://localhost/api/notebooks', { method: 'POST' });
+		const event = {
+			request: mockRequest,
+             url: new URL('http://localhost/api/notebooks'),
+            // Add other required event properties if your actual code uses them
+             cookies: {} as any,
+             fetch: {} as any,
+             getClientAddress: () => '',
+             locals: {} as any,
+             params: {},
+             platform: undefined,
+             route: { id: '/api/notebooks' } as any,
+             setHeaders: () => {},
+             isDataRequest: false,
+             isSubRequest: false
+		};
+
+		const response = await POST(event as any); // Use 'as any' for brevity in test
+
+		expect(response.status).toBe(201);
+		const body = await response.json();
+		expect(body.id).toBe('test-uuid');
+		expect(body.editToken).toBe(mockToken);
+        expect(body.notebook.id).toBe('test-uuid');
+		expect(createNotebook).toHaveBeenCalledWith('Untitled Notebook');
+         expect(getEditToken).toHaveBeenCalled();
+	});
+
+     it('should return 500 if token generation fails', async () => {
+        const mockNotebook = { id: 'test-uuid-2', title: 'Untitled Notebook', sections: [], createdAt: '', publishedAt: null };
+        vi.mocked(createNotebook).mockResolvedValue(mockNotebook as any);
+        vi.mocked(getEditToken).mockReturnValue(null); // Simulate missing secret
+
+        const mockRequest = new Request('http://localhost/api/notebooks', { method: 'POST' });
+        const event = { request: mockRequest, url: new URL('http://localhost/api/notebooks') }; // Simplified event
+
+        const response = await POST(event as any);
+        expect(response.status).toBe(500);
+        const body = await response.json();
+        expect(body.error).toContain('Server configuration error');
+    });
+
+     it('should return 500 if storage fails', async () => {
+         vi.mocked(createNotebook).mockRejectedValue(new Error('Disk full'));
+         vi.mocked(getEditToken).mockReturnValue('token');
+
+         const mockRequest = new Request('http://localhost/api/notebooks', { method: 'POST' });
+         const event = { request: mockRequest, url: new URL('http://localhost/api/notebooks') }; // Simplified event
+
+         const response = await POST(event as any);
+         expect(response.status).toBe(500);
+         const body = await response.json();
+         expect(body.error).toContain('Failed to create notebook');
+     });
+});
+
+# File: src/routes/api/notebooks/[id]/+server.ts
+
+// src/routes/api/notebooks/[id]/+server.ts
+import { json, error as svelteKitError } from '@sveltejs/kit';
+// --- IMPORT THE NEW FUNCTION ---
+import { getNotebook, updateNotebook } from '$lib/server/storage/filesystem';
+import { checkEditorSecret } from '$lib/server/auth';
+import type { RequestHandler } from './$types';
+import type { Section } from '$lib/types/notebook';
+
+// (GET handler is unchanged)
+export const GET: RequestHandler = async ({ params }) => {
+	try {
+		const notebook = await getNotebook(params.id);
+		if (!notebook) {
+			throw svelteKitError(404, 'Notebook not found');
+		}
+		return json(notebook);
+	} catch (err: any) {
+		console.error(`Error fetching notebook ${params.id}:`, err);
+		if (err.status === 404) throw err;
+		throw svelteKitError(500, 'Failed to fetch notebook');
+	}
+};
+
+export const PATCH: RequestHandler = async ({ params, request }) => {
+	// (Auth check is unchanged)
+	const authHeader = request.headers.get('Authorization');
+	const token = authHeader?.split(' ')[1];
+	const providedSecret = (token || request.headers.get('X-Editor-Secret')) ?? undefined;
+
+	if (!checkEditorSecret(providedSecret)) {
+		throw svelteKitError(403, 'Forbidden: Invalid or missing secret');
+	}
+	// --- End Auth Check ---
+
+	try {
+		const payload = await request.json();
+
+		// --- UPDATE VALIDATION ---
+		if (!payload || !Array.isArray(payload.sections) || typeof payload.title !== 'string') {
+			throw svelteKitError(400, 'Invalid payload: title (string) and sections (array) are required');
+		}
+
+		const sections = payload.sections as Section[];
+		const title = payload.title as string;
+
+		// --- USE THE NEW FUNCTION ---
+		const updatedNotebook = await updateNotebook(params.id, title, sections);
+
+		if (!updatedNotebook) {
+			throw svelteKitError(404, 'Notebook not found');
+		}
+
+		return json(updatedNotebook, { status: 200 });
+	} catch (err: any) {
+		console.error(`Error updating notebook ${params.id}:`, err);
+		if (err.status) throw err; // Re-throw SvelteKit errors
+		throw svelteKitError(500, 'Failed to update notebook');
+	}
+};
 
 # File: src/routes/blog/+page.server.ts
 
@@ -11138,6 +12180,129 @@ export const load: PageLoad = async ({ params, data }) => {
 		error(404, { message: `Could not find post: ${params.slug}` });
 	}
 };
+
+# File: src/routes/notebook/[id]/+page.server.ts
+
+// src/routes/notebook/[id]/+page.server.ts
+import { error } from '@sveltejs/kit';
+import { getNotebook } from '$lib/server/storage/filesystem';
+import type { PageServerLoad } from './$types';
+
+export const load: PageServerLoad = async ({ params }) => {
+	try {
+		const notebook = await getNotebook(params.id);
+		if (!notebook) {
+			throw error(404, 'Notebook not found');
+		}
+		return {
+			notebook
+		};
+	} catch (err: any) {
+		console.error(`Error loading notebook ${params.id} for page:`, err);
+		if (err.status === 404) throw err;
+		throw error(500, 'Failed to load notebook');
+	}
+};
+
+# File: src/routes/notebook/[id]/+page.svelte
+
+<script lang="ts">
+	import Notebook from '$lib/components/notebook/Notebook.svelte';
+	let { data } = $props();
+</script>
+
+<svelte:head>
+	<title>{data.notebook.title} - Notebook</title>
+</svelte:head>
+
+<Notebook notebookData={data.notebook} />
+
+# File: src/routes/notebooks/+page.server.ts
+
+// src/routes/notebooks/+page.server.ts
+import { error } from '@sveltejs/kit';
+import { getAllNotebooks } from '$lib/server/storage/filesystem';
+import type { PageServerLoad } from './$types';
+
+export const load: PageServerLoad = async () => {
+	try {
+		const notebooks = await getAllNotebooks();
+		return {
+			notebooks // This will be Array<{id, title, createdAt}>
+		};
+	} catch (err: any) {
+		console.error(`Error loading notebook list for page:`, err);
+		throw error(500, 'Failed to load notebooks');
+	}
+};
+
+# File: src/routes/notebooks/+page.svelte
+
+<script lang="ts">
+	import { goto } from '$app/navigation';
+
+	let { data } = $props();
+	let isCreating = $state(false);
+
+	async function createNewNotebook() {
+		if (isCreating) return;
+		isCreating = true;
+		try {
+			const response = await fetch('/api/notebooks', { method: 'POST' });
+			if (!response.ok) {
+				throw new Error(`Failed to create notebook: ${response.statusText}`);
+			}
+			const { id, editToken } = await response.json();
+
+			// Store the secret (token) in local storage for the editor
+			localStorage.setItem(`notebook_${id}_secret`, editToken);
+
+			// Navigate to the new notebook's edit page
+			await goto(`/notebook/${id}`);
+		} catch (error: any) {
+			console.error('Error creating notebook:', error);
+			alert(`Could not create notebook: ${error.message}`);
+		} finally {
+			isCreating = false;
+		}
+	}
+</script>
+
+<svelte:head>
+	<title>My Notebooks - SuvroGhosh.Blog</title>
+</svelte:head>
+
+<section>
+	<div class="flex justify-between items-center mb-6">
+		<h1 class="text-4xl md:text-5xl">My Notebooks</h1>
+		<button onclick={createNewNotebook} disabled={isCreating} class="whitespace-nowrap">
+			{isCreating ? 'Creating...' : 'New Notebook'}
+		</button>
+	</div>
+
+	{#if data.notebooks.length > 0}
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+			{#each data.notebooks as notebook (notebook.id)}
+				<a
+					href={`/notebook/${notebook.id}`}
+					class="card post-link no-underline block"
+				>
+					<h2 class="mt-0 mb-2 post-link">{notebook.title}</h2>
+					<p class="text-sm text-tertiary">
+						Created: {new Date(notebook.createdAt).toLocaleString()}
+					</p>
+				</a>
+			{/each}
+		</div>
+	{:else}
+		<div class="text-center py-12 border border-dashed border-neutral-300 dark:border-neutral-700 rounded-lg">
+			<p class="text-lg text-neutral-500">You haven't created any notebooks yet.</p>
+			<button onclick={createNewNotebook} disabled={isCreating} class="mt-4">
+				{isCreating ? 'Creating...' : 'Create your first notebook'}
+			</button>
+		</div>
+	{/if}
+</section>
 
 # File: src/types/mdsvex.d.ts
 
