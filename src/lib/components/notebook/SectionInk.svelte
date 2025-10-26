@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Stroke, Point, InkContent } from '$lib/types/notebook';
 	import { generateUUID } from '$lib/utils/uuid';
-	import { untrack, tick } from 'svelte'; // [!code ++] Import tick
+	import { untrack, tick } from 'svelte';
 
 	let {
 		content,
@@ -29,22 +29,21 @@
 
 	let strokes = $state<Stroke[]>(content?.strokes || []);
 
-	// --- FIX 1: This effect now correctly untracks local state ---
-	// It only runs when the `content` prop changes.
+	// This effect syncs incoming prop changes to the local state
 	$effect(() => {
 		const propStrokes = content?.strokes || [];
 		
-		// Don't update local state if we are drawing
+		// Don't update local state if we are actively drawing
 		if (untrack(() => isDrawing)) {
 			return;
 		}
 		
 		// Only update if the prop is *actually different* from our local state
+		// to prevent unnecessary re-renders or infinite loops.
 		if (untrack(() => JSON.stringify(propStrokes) !== JSON.stringify(strokes))) {
 			strokes = propStrokes;
 		}
 	});
-	// --- END FIX 1 ---
 
 	function getPathData(stroke: Stroke): string {
 		if (!stroke || stroke.points.length === 0) return '';
@@ -87,10 +86,9 @@
 		const { x, y } = getPointerPosition(event);
 		const newPoint: Point = { x, y, t: Date.now(), p: event.pressure };
 		currentStroke.points.push(newPoint);
-		currentStroke = currentStroke;
+		currentStroke = currentStroke; // Trigger reactivity
 	}
 
-	// --- FIX 2: Made this function async to await tick() ---
 	async function handlePointerUp(event: PointerEvent) {
 		if (!isDrawing || !currentStroke) return;
 		isDrawing = false;
@@ -102,22 +100,20 @@
 		currentStroke = null;
 		
 		// Wait for Svelte to apply the state change
-		await tick(); // [!code ++]
+		await tick();
 		// NOW fire onchange, so the parent reads the *new* state
 		onchange();
 	}
 
-	// --- FIX 3: Also applied tick() to undo() ---
 	async function undo() {
 		if (strokes.length === 0) return;
 		strokes = strokes.slice(0, -1);
 		
 		// Wait for Svelte to apply the state change
-		await tick(); // [!code ++]
+		await tick();
 		// NOW fire onchange
 		onchange();
 	}
-	// --- END FIX 3 ---
 
 	function selectColor(color: string) {
 		tool = 'pen';
@@ -185,6 +181,7 @@
 			onpointermove={handlePointerMove}
 			onpointerup={handlePointerUp}
 			onpointerleave={handlePointerUp}
+			onpointercancel={handlePointerUp}
 			style="touch-action: none; background-color: {backgroundColor}; height: 1500px;"
 		>
 			{#each strokes as stroke (stroke.id)}

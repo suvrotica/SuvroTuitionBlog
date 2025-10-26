@@ -1,4 +1,4 @@
-# Context file generated on: Sunday, October 26, 2025 at 4:50:33 PM GMT+5:30
+# Context file generated on: Sunday, October 26, 2025 at 5:23:37 PM GMT+5:30
 ---
 
 # Project File Layout
@@ -3154,6 +3154,7 @@ export {};
 <script lang="ts">
 	import type { Stroke, Point, InkContent } from '$lib/types/notebook';
 	import { generateUUID } from '$lib/utils/uuid';
+	import { untrack, tick } from 'svelte'; // [!code ++] Import tick
 
 	let {
 		content,
@@ -3179,16 +3180,23 @@ export {};
 	let selectedWidth = $state(2);
 	let tool = $state<'pen' | 'eraser'>('pen');
 
-	// This is the only state declaration needed.
-	// It initializes from the prop and then becomes the local source of truth.
 	let strokes = $state<Stroke[]>(content?.strokes || []);
 
-	// --- FIX 1: This entire $effect block was the cause of the bug ---
-	// $effect(() => {
-	// 	if (content.strokes !== strokes) {
-	// 		strokes = content.strokes || [];
-	// 	}
-	// });
+	// --- FIX 1: This effect now correctly untracks local state ---
+	// It only runs when the `content` prop changes.
+	$effect(() => {
+		const propStrokes = content?.strokes || [];
+		
+		// Don't update local state if we are drawing
+		if (untrack(() => isDrawing)) {
+			return;
+		}
+		
+		// Only update if the prop is *actually different* from our local state
+		if (untrack(() => JSON.stringify(propStrokes) !== JSON.stringify(strokes))) {
+			strokes = propStrokes;
+		}
+	});
 	// --- END FIX 1 ---
 
 	function getPathData(stroke: Stroke): string {
@@ -3222,8 +3230,8 @@ export {};
 		currentStroke = {
 			id: generateUUID(),
 			points: [newPoint],
-			color: tool === 'eraser' ? backgroundColor : selectedColor, // Use selected color
-			width: tool === 'eraser' ? 20 : selectedWidth // Use selected width
+			color: tool === 'eraser' ? backgroundColor : selectedColor,
+			width: tool === 'eraser' ? 20 : selectedWidth
 		};
 	}
 
@@ -3232,11 +3240,11 @@ export {};
 		const { x, y } = getPointerPosition(event);
 		const newPoint: Point = { x, y, t: Date.now(), p: event.pressure };
 		currentStroke.points.push(newPoint);
-		// This line is crucial for Svelte 5 to see the mutation
 		currentStroke = currentStroke;
 	}
 
-	function handlePointerUp(event: PointerEvent) {
+	// --- FIX 2: Made this function async to await tick() ---
+	async function handlePointerUp(event: PointerEvent) {
 		if (!isDrawing || !currentStroke) return;
 		isDrawing = false;
 		svgElement?.releasePointerCapture(event.pointerId);
@@ -3245,14 +3253,24 @@ export {};
 			strokes = [...strokes, currentStroke];
 		}
 		currentStroke = null;
+		
+		// Wait for Svelte to apply the state change
+		await tick(); // [!code ++]
+		// NOW fire onchange, so the parent reads the *new* state
 		onchange();
 	}
 
-	function undo() {
+	// --- FIX 3: Also applied tick() to undo() ---
+	async function undo() {
 		if (strokes.length === 0) return;
 		strokes = strokes.slice(0, -1);
+		
+		// Wait for Svelte to apply the state change
+		await tick(); // [!code ++]
+		// NOW fire onchange
 		onchange();
 	}
+	// --- END FIX 3 ---
 
 	function selectColor(color: string) {
 		tool = 'pen';
@@ -3262,7 +3280,6 @@ export {};
 
 	function selectEraser() {
 		tool = 'eraser';
-		// selectedColor = backgroundColor; // No need to set, handlePointerDown does it
 		selectedWidth = 20;
 	}
 
@@ -3272,11 +3289,11 @@ export {};
 </script>
 
 <div
-	class="ink-section-container border border-neutral-300 dark:border-neutral-700 rounded bg-neutral-900 overflow-y-auto"
+	class="ink-section-container border border-neutral-300 dark:border-neutral-700 rounded bg-neutral-900 flex flex-col"
 	style="height: 75vh;"
 >
 	<div
-		class="toolbar sticky top-0 z-10 p-2 flex gap-2 border-b border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800"
+		class="toolbar sticky top-0 z-10 p-2 flex gap-2 border-b border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 flex-shrink-0"
 	>
 		{#each colors as color (color.value)}
 			<button
@@ -3313,38 +3330,40 @@ export {};
 		</button>
 	</div>
 
-	<svg
-		bind:this={svgElement}
-		class="w-full"
-		onpointerdown={handlePointerDown}
-		onpointermove={handlePointerMove}
-		onpointerup={handlePointerUp}
-		onpointerleave={handlePointerUp}
-		style="touch-action: none; background-color: {backgroundColor}; height: 1500px;"
-	>
-		{#each strokes as stroke (stroke.id)}
-			<path
-				d={getPathData(stroke)}
-				stroke={stroke.color}
-				stroke-width={stroke.width}
-				fill="none"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-			/>
-		{/each}
+	<div class="overflow-y-auto w-full flex-grow">
+		<svg
+			bind:this={svgElement}
+			class="w-full"
+			onpointerdown={handlePointerDown}
+			onpointermove={handlePointerMove}
+			onpointerup={handlePointerUp}
+			onpointerleave={handlePointerUp}
+			style="touch-action: none; background-color: {backgroundColor}; height: 1500px;"
+		>
+			{#each strokes as stroke (stroke.id)}
+				<path
+					d={getPathData(stroke)}
+					stroke={stroke.color}
+					stroke-width={stroke.width}
+					fill="none"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				/>
+			{/each}
 
-		{#if currentStroke && currentStroke.points.length > 0}
-			<path
-				d={getPathData(currentStroke)}
-				stroke={tool === 'eraser' ? backgroundColor : currentStroke.color}
-				stroke-width={currentStroke.width}
-				fill="none"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				opacity="0.8"
-			/>
-		{/if}
-	</svg>
+			{#if currentStroke && currentStroke.points.length > 0}
+				<path
+					d={getPathData(currentStroke)}
+					stroke={tool === 'eraser' ? backgroundColor : currentStroke.color}
+					stroke-width={currentStroke.width}
+					fill="none"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					opacity="0.8"
+				/>
+			{/if}
+		</svg>
+	</div>
 </div>
 
 # File: src/lib/components/OnThisPage.svelte
