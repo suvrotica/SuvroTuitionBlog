@@ -12,8 +12,8 @@ vi.mock('$lib/server/auth', () => ({
     getEditToken: vi.fn()
 }));
  // Mock env
- vi.mock('$env/dynamic/private', () => ({
-    PUBLIC_EDITOR_SECRET: 'test-secret-from-mock'
+ vi.mock('$env/static/private', () => ({
+    EDITOR_SECRET: 'test-secret-from-mock'
 }));
 
 import { createNotebook } from '$lib/server/storage/filesystem';
