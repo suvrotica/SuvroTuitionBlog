@@ -26,6 +26,7 @@ I lived through the transition from film photography to digital, I remember bein
 
 And this, silently, is what’s happening to intelligence. It’s becoming a commodity—an artificial one. It will be small, micro, mini, invisible, ubiquitous, almost everywhere, and almost free. And therefore impossible for puny, scalable humans to even comprehend, let alone compete with. The ordinary man, who suffered dimensionless dreams, knew the angst of dimensions of one, two, three, and vaguely of four in the physical reality, will have to live with an entity that lives in vector spaces of infinite abstraction, where axes twist beyond intuition, magnitudes have no bounds, and directions fold upon themselves like Möbius nightmares, an intelligence so unmoored from the tactile world that his own lived geometry seems laughably primitive, almost quaint.
  
+<Ytp src="https://youtu.be/lm4KssWbNz0?si=6ddnvaQ9PZkXKKnu" />
 
 This is the compulsory one-way street I see as I try to close another window to drown the sounds of firecrackers and keep the smog from suffocating me. Now there will be thousands of people like me, stranded in shanty placeholders, barely eking out shadows of their former existences—livelihoods evaporated suddenly, leaving behind a permanent, disquieting loneliness to wrestle with for the rest of their lives.
 
