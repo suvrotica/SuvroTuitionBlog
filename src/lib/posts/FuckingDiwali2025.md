@@ -2,7 +2,7 @@
 title: "Happy fucking Diwali 2025"
 
 category: "Calcutta"
-thumbnail: "/images/placeholders/IMG-20251014-WA0012.jpg"
+thumbnail: "/images/placeholders/IMG-20251029-WA0014.jpg"
 date: "2025-10-20"
 tags: ["dark humor", "Bengali", "hypocrisy"]
 published: true
@@ -16,7 +16,7 @@ published: true
 
 <Ytp src="https://youtu.be/B1SdFjna7zQ?si=g4fA5S5nOP0gKRgP" />
 
-![happy Diwali](/images/placeholders/IMG-20251014-WA0012.jpg) 
+![happy Diwali](/images/placeholders/IMG-20251014-WA0012.jpg)
 
 It's during these festival days, when the sounds from outside impinge on the silent forlorn half-extinguished self of my shattered existence, that I become even more lonely and depressed—the contrast with the normal, the contrast with the happy people of the world, is starkly juxtaposed.
 
@@ -37,6 +37,8 @@ Happy fucking Diwali everyone may the light fuck you always. Indians have blinke
 <Ytp src="https://youtu.be/hV3bQecCYRM?si=cvOu7SET5N7WCq4Z" />
 
 The Bengali baji—a word that once meant delight, when I was a kid with better lungs, now roughly translates to “airborne chemical assault.” From a toxicological standpoint, Diwali fireworks are an unholy cocktail of metallic salts, oxidizers, and stabilizers, each with its own charming way of making your lungs regret existing.
+
+![happy kali](/images/placeholders/IMG-20251029-WA0014.jpg)
 
 At the core are oxidizers—mostly potassium nitrate, perchlorate, or chlorate. These compounds release oxygen violently when ignited, producing the bright flare but also nitrogen oxides (NOₓ) and particulate matter (PM₂.₅ and PM₁₀), both of which slice into the respiratory tract like microscopic razors.
 
