@@ -35,7 +35,7 @@ Character stitched from inveterate rage.<br>
 <br>
 A fucked race on all fucking fours, <br>
 Ass punctured like a bitch-ass whore's,<br>
-Jaunty sails who would wag if they had tails,<br>
+Flaunty fails who would wag if they had tails,<br>
 Bengalis are dog cunts with genital sores.<br>
 <br>
 Gratuitous fights very common sights,<br>
