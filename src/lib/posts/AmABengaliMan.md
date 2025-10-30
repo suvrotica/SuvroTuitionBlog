@@ -23,7 +23,11 @@ But the rules I let the flow flout.<br>
 As the piss hits the dust, it must,<br>
 Do a "game changer" on the cloggy clout.<br>
 <br>
-Or not, but the day is hot,<br>
+A deep-fried breed nightmare pest seed,<br>
+My piss flows, bubbly froth freely float. <br>
+I am also passing gas I always goodly do,<br>
+To ensure an unencumbered mean moat.<br><br>
+Or not some like farts, but the day is hot,<br>
 I a pissing bengali man stand corrupt.<br>
 I am poor, I am jealous, and depraved,<br>
 And trust me, morally bankrupt.<br>
