@@ -34,7 +34,7 @@ Hunched back race, a grimaced face,<br>
 Character stitched from inveterate rage.<br>
 <br>
 A fucked race on all fucking fours, <br>
-Ass punctured like a bitch-ass whore's,<br>
+Ass punctured like a bitch-ass whore's. <br>
 Flaunty fails who would wag if they had tails,<br>
 Bengalis are dog cunts with genital sores.<br>
 <br>
