@@ -33,10 +33,10 @@ Droopy my eyes like a sage.<br>
 Hunched back race, a grimaced face,<br>
 Character stitched from inveterate rage.<br>
 <br>
-A fucked race on all fucking fours, <br>
-Ass punctured like a bitch-ass whore's. <br>
-Flaunty fails who would wag if they had tails,<br>
-Bengalis are dog cunts with genital sores.<br>
+I'm part of a fucked race on all fucking fours, <br>
+My ass punctured like a bitch-ass whore's. <br>
+A flaunty fail I would wag if I had a tail,<br>
+I'm a Bengali dog cunt with genital sores.<br>
 <br>
 Gratuitous fights very common sights,<br>
 I really have nothing better to do.<br>
