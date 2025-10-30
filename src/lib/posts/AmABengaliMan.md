@@ -33,6 +33,11 @@ Droopy my eyes like a sage.<br>
 Hunched back race, a grimaced face,<br>
 Character stitched from inveterate rage.<br>
 <br>
+A fucked race on all fucking fours, <br>
+Ass punctured like a bitch-ass whore's,<br>
+It would sorely wag if it had a tail,<br>
+Bengalis are dog cunts that always fail.<br>
+<br>
 Gratuitous fights very common sights,<br>
 I really have nothing better to do.<br>
 Plastic and shit in rice, high-fives,<br>
