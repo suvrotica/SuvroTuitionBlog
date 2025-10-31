@@ -20,7 +20,9 @@ published: true
 
 It's during these festival days, when the sounds from outside impinge on the silent forlorn half-extinguished self of my shattered existence, that I become even more lonely and depressed—the contrast with the normal, the contrast with the happy people of the world, is starkly juxtaposed.
 
-It’s the festival of lights, but all the lights inside me are permanently turned off. Yet I know that this Diwali, despite the outward appearances—which are usually deceiving—many people are traveling in similar boats, on this one-way trip to oblivion, swept under the AI avalanche, never to be seen or heard from again.
+It’s the festival of lights, but all the lights inside me are permanently turned off. Yet I know that this Diwali, despite the outward appearances—which are usually deceiving—many people are traveling in similar boats, on this one-way trip to oblivion, swept under the AI avalanche, never to be seen or heard from again, like our Calcutta stock exchange. 
+
+<Ytp src="https://youtu.be/ag29h-dB0P4?si=jy6-Npndyf6JX02c" />
 
 I lived through the transition from film photography to digital, I remember being in the US when the first practical, consumer-grade digital cameras began appearing. I bought mine from an Austin, Texas, Best Buy store, proud and slightly awed to hold what felt like the future in my hands, and if I remember carefully, I realized at that very moment what had been once a rewarding and valuable experience, film photography—treasured because it was expensive and laborious, needing both money and concerted effort—lost its scarcity-value the moment digital arrived. We entered ubiquity. Now we have hard drives, flash drives, pen drives, you name it, and smartphones chock full of photographs we don’t even look at twice. We’re the generation of abundance, of omnipotence, of infinite photos—and we take them for granted.
 
