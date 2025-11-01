@@ -38,8 +38,7 @@ tags: ["asimov", "bill bryson" ]
 
 <Ytp src="https://youtu.be/9U8OMq9mXPE?si=RV3ze3EUrqN8MTq_" />
 
-<Ytp src="https://youtu.be/J3OqgtDZ7gk?si=2q7VTtQ9_4hHLZ_g" />
-
+<Ytp src="https://youtu.be/fQFaTjG7XIY?si=hZcU1wH7AkyTQFq8" />
 
 <Ytp src="https://youtu.be/bTyHIR8YBLc?si=mfNFLE7OQvMMJfuq" />
 
