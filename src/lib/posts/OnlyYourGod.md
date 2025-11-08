@@ -42,3 +42,18 @@ Snail face moves at pace slow,<br>
 India a mollusk gastropod land.<br>
 Holy hollow, sleepy, fallow, shallow,<br>
 Leaders with commode in grandstand.<br>
+<br>
+Fuck it's holy, come suck cock,<br>
+Next life I promise I give you a job.<br>
+Cheer up and vote, gape that ass,<br>
+This life—sorry, just corn on the cob.<br>
+<br>
+Or not, you might just have to starve,<br>
+But no hospitals, so you're toast.<br>
+But because no schools, you're dumb,<br>
+Won't realize that you are compost.<br>
+<br>
+Everything will be screwed by,<br>
+A gassy geriatric government gastropod.<br>
+He's my son-in-law, I really love him,<br>
+But I send you to your fucking god.<br>
