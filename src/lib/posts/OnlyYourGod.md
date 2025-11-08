@@ -37,6 +37,7 @@ Gotta find, shit, fuck, and kill.<br>
 
 ![snail](/images/IMG-20251109-WA0005.jpg) 
 
+<br>
 Snail face moves at pace slow,<br>
 India a mollusk gastropod land.<br>
 Holy hollow, sleepy, fallow, shallow,<br>
