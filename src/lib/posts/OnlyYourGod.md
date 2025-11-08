@@ -9,12 +9,13 @@ published: true
     import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
 </script> 
 
-![holy hindoo](/images/IMG-20251108-WA0001.jpg) 
+![holy hindloo](/images/IMG-20251108-WA0001.jpg) 
 <br>
 You know what's in your head,<br>
 But you don't want to scream all hell.<br>
 The sissy system of Sisyphus moves,<br>
 Ball cadavers after their heads all fell.<br>
+![mostlame](/images/IMG-20251109-WA0002.jpg) 
 <br>
 You know it's only your god,<br>
 And ain't his beard lice the same.<br>
