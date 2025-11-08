@@ -43,7 +43,12 @@ India a mollusk gastropod land.<br>
 Holy hollow, sleepy, fallow, shallow,<br>
 Leaders with commode in grandstand.<br>
 <br>
-Fuck it's holy, come suck cock,<br>
+Voting trucks full, delusion best tool,<br>
+Unholy opposition parties must be stoned.<br>
+Once democracy hilariously subverted,<br>
+Tell the holy fucks promise postponed.<br>
+<br>
+Fuck look it's holy, now come suck cock,<br>
 Next life I promise I give you a job.<br>
 Cheer up and vote, gape that ass,<br>
 This life—sorry, just corn on the cob.<br>
