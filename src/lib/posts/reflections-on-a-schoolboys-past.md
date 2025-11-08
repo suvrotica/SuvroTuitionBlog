@@ -11,26 +11,6 @@ published: true
     
 **Old picture when I used to drive 260 km between Austin San Antonio 3 times a week, I did this for years.**
 ![Old picture when I used to drive 260 km between Austin San Antonio 3 times a week, I did this for years.](/images/IMG-20251012-WA0004.jpg) 
----
-
-
-Here is the fully ®Swiftedit-compliant version with all spelling, grammar, and punctuation corrections made **without** altering tone, voice, or any irreverent, profane, or stylistically wild content. No sanitization, no rephrasing. Just cleaned and sharpened:
-
----
-
-title: "Reflections on a Schoolboy's Past"
-thumbnail: "/images/IMG-20251012-WA0004.jpg"
-description: "A complicated palimpsest of ambition, triumph, misadventures, romance, then—shame, regrets—most now like old luggage tags, expired or useless."
-category: 'personal'
-published: true
----------------
-
-<script>  
-    import Ytp from '$lib/components/blog/YouTubePlayer.svelte';  
-</script>  
-
-**Old picture when I used to drive 260 km between Austin San Antonio 3 times a week, I did this for years.**
-![Old picture when I used to drive 260 km between Austin San Antonio 3 times a week, I did this for years.](/images/IMG-20251012-WA0004.jpg)
 
 Like many, I remember school through a veil of years of indifference to childhood memories that grownups, at a certain point, must admit to, and I do unhesitatingly, but mine are a complicated palimpsest of ambition, triumph, misadventures, romance, then—shame, regrets—most now like old luggage tags, expired or useless to recount. I confess, as useless as perhaps the utility for, or the importance of, the places and characters and several linked trivia that I sometimes wake up to, wade, and wallow in, now that I am fifty.
 
