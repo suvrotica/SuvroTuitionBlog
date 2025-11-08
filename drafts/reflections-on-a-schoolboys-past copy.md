@@ -1,18 +1,74 @@
 ---
 title: "Reflections on a Schoolboy's Past"
-thumbnail: "/images/IMG-20251012-WA0004.jpg"
+thumbnail: "/images/placeholders/IMG-20251012-WA0004.jpg"
+
 description: "A complicated palimpsest of ambition, triumph, misadventures, romance, then—shame, regrets—most now like old luggage tags, expired or useless."
 category: 'personal'
+date: '2025-05-12'
 published: true
 ---
-<script>
-    import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
-</script> 
+
+<script lang="ts">
+    import ImageSlideshow from '$lib/components/blog/ImageSlideshow.svelte';
+
+        const imageModulesOld: Record<string, string> = import.meta.glob(
+        '$lib/assets/op/*.{jpg,jpeg,png,webp}',
+        {
+            eager: true,
+            query: '?url',
+            import: 'default'
+        }
+    );
+
     
-**Old picture when I used to drive 260 km between Austin San Antonio 3 times a week, I did this for years.**
-![Old picture when I used to drive 260 km between Austin San Antonio 3 times a week, I did this for years.](/images/IMG-20251012-WA0004.jpg) 
+
+    
+    const imageModulesSquare: Record<string, string> = import.meta.glob(
+        '$lib/assets/slideshow-images/square/*.{jpg,jpeg,png,webp}',
+        {
+            eager: true,
+            query: '?url',
+            import: 'default'
+        }
+    );
+    
+    const imageModulesLandscape: Record<string, string> = import.meta.glob(
+        '$lib/assets/slideshow-images/landscape/*.{jpg,jpeg,png,webp}',
+        {
+            eager: true,
+            query: '?url',
+            import: 'default'
+        }
+    );
+
+    const imageModulesPortrait: Record<string, string> = import.meta.glob(
+        '$lib/assets/slideshow-images/portrait/*.{jpg,jpeg,png,webp}',
+        {
+            eager: true,
+            query: '?url',
+            import: 'default'
+        }
+    );
+
+    // Extract the URLs into simple arrays to pass to the component
+    const imageUrlsOld = Object.values(imageModulesOld);
+    const imageUrlsLandscape = Object.values(imageModulesLandscape);
+    const imageUrlsPortrait = Object.values(imageModulesPortrait);
+    const imageUrlsSquare = Object.values(imageModulesSquare);
+</script>
+
+<div class="prose max-w-none">
+
+**Old Photographs**
+<div class="my-8">
+    <ImageSlideshow images={imageUrlsOld} />
+</div>
 
 Like many, I remember school through a veil of years of indifference to childhood memories that grownups, at a certain point, must admit to, and I do unhesitatingly, but mine are a complicated palimpsest of ambition, triumph, misadventures, romance, then—shame, regrets—most now like old luggage tags, expired or useless to recount. I confess, as useless as perhaps the utility for, or the importance of, the places and characters and several linked trivia that I sometimes wake up to, wade, and wallow in, now that I am fifty.
+
+<div class="my-8">
+    <ImageSlideshow images={imageUrlsSquare} />
+</div>
 
 My past is ancient and present is a mystery speeding past; I live now mostly to <em>live</em>, really—to barely escape frequent and routine annihilation, survive to remember and recollect the person I am, I was, I once wanted to be—inadvertently became, on the way to be—a leery litany of metamorphosis of a self that mostly started and remained unchanged at the core—which was a fledgling when I became a schoolboy to begin with and started to think, first feel, of course—mainly, in my case, see through thick myopia-correcting glasses—a visual person, and in my particular case, overthink the still-uncorrected blurry—cerebrally—the world through the senses, through the then immature prefrontal and amygdalian theaters of rehearsed endorsements. It happened in a shockingly short span, then weirdly in a longish sort of lifetime after—that I’m only now able to reconstruct into the surreal absurdity I had managed to bungle myself into being.
 
@@ -36,14 +92,30 @@ So all the parochial supremacy of the Indian stock is false—anyone who puts in
 
 Those who prefer the opposite, longer-haired illusions of us for these cosmetic and meretricious patina of gloss—us cretins also misjudge melanin deficiency for superiority or experiments with holiness. We believe if white man George Harrison had condescended in his lyrics the coexistence of the dark-skinned mythological creation Krishna with the Christian mythology of white man Jesus, then they are both really real and there's a cowherd with methemoglobinemia and an antique flute and a schizophrenic carpenter stuck on a cross who live somewhere in Attapara in North Calcutta under some Bengali pseudonym.
 
+<div class="my-8">
+    <ImageSlideshow images={imageUrlsPortrait} />
+</div>
+
 Thus our ability to get muddled works hand in hand with a corrupted framework of basic data, information, or knowledge, and we grow up on a pyramid of crumbling make-believe fiction and frequently conflate it with facts. Of course, no one wants to wake up next to a hag with no teeth, but even this logic is specious because—give enough time to Aishwarya Rai Bachchan to age and I promise you she'll be a hag with no teeth. The only way out is a stuffed doll or a girl robot, but that is not how your brain would like to accept it—your brain would know it's a thing, and because of its lack of consciousness, its participation as a partner is void. Wait a few more years until a girl robot can dump you; at that point, it won't be a thing anymore.
 
 I had also noticed adults insisted on covering up inconsistencies in their fictions with weaker tapestries of lies, and the separation of the ruling and the ruled was inherent in being party to this willed obfuscation or willing obeisance. This was fractally how society was structured at various levels—a distributed system of arranged or imposed parents and willing or subjugated children, at whatever level of fictional abstraction I looked: parent–child, of course, country leaders–citizen, company corporate vs. workers, religious elite priests and worshippers or the faithful, extending all the way to authors, artists, sportspersons and their consumers, teachers and students. The game was mainly lying and manipulation, with manicured gaslighting tweaked as per the needs of the specialty.
 
 The prevalence of mythology—emphasised and encouraged bias, or the absence of nuanced understanding of the operating models versus the indoctrinated and forced fictions—I saw created a hierarchy of flimflammery, superstitious jibber-jabber, pseudoscience, and an inflated sense of supercilious religious affirmation in Bengali society, which at that time was partly Marxist in Calcutta and wanted to hold on to atheism. And in spite of their efforts, most had too little reading in them to make up their mind and sociatal dialectics stood on the shoulders of glib non-sequiturs, ugly shrunken dwarfish ghouls that have multiplied since that time—a misunderstood disinformation of history mythology and fibs that my people feel foolishly obligated to be hypothecated to and fritter their lives away wallowing in the tragic smelly feces of what isn't true. I could never understand why being enamored with the softer sensibilities in music or even the illogical nostalgia for an unseen pristine superior Indian past needed to be so unmoored in reality—marinated in the garam-masala of useless local aphorisms, idioms and idiosyncrasies. I remember Darwin’s evolution was an optional chapter in my higher secondary biology contending with a subject as trivial as pisciculture—cosmology never entered the lexicon, and astronomy was synonymous with horoscopes, palmistry, and astrology. The Bengal I grew up in was in the eighties still really pre-Victorian, and now India, under the new religious right, has slid a few centuries back into an equivalent dark middle age—so much for moving forward. It’s all atavistic growth; appearances of gentrification, or any sophisticated sheen is patina, imported from outside the country.
 
+<div class="my-8">
+    <ImageSlideshow images={imageUrlsLandscape} />
+</div>
+
 The thing about childhood is, in modern parlance, a song playlist impressed upon you that you are suddenly very fond of, or certain parts of which, based on what we can think at the time, grow seeds of nuanced distance or distaste. It’s only later, layer upon impressed layer again, year by year, that we gradually graduate into the terribly opinionated personality that we are. I admit not everyone is inflexible burnt toast—I wasn’t—but a few bitter experiences straightened me out. It was, in fact, in trying to get real close to reality as an entrepreneur that this rind-hardening was effected. I guess the quality of wood and shellac needed was already there; just some vigorous rubbing-in was all it took to give me that anti-reflective patina of shine-reflecting hard coating that is me. Can I go back from this hardened reticence to the loquacious milquetoast I once was? It would take illegal psychedelics, total amnesia, or a different rebirth—or all three, really.
 
-But in the end, what I'm trying to say in a long, winding way is that I did a lot of reading—and still read, to my mother's chagrin—that no, none of the readings I did do me any good as far as carrying out the original intention—I haven't accumulated any wealth or curvaceous mate, just books. Meritocracy is like a hoax you force on blind and disabled elderly in a care home—they can't ask for a refund. But I read, and this blog is where I share it. And not just books that I read—I travel, and work on interesting ideas or at least think about them, and want to share my personal life and work experiences and knowledge. And if my exposure can help someone like me back when I was little—a boy or girl growing up without a compass in Calcutta or elsewhere—I’d feel I did something right, for a change. Most human beings come incarcerated in their minds, their stories are therefore left untold, their imagination stay hidden—but I am articulate and I can draw droll caricatures, so I can bring my mind to you, and that's what this blog or some of its contents are about. It varies from exploratory non-fiction, formal prosaic posts, loose squibs, looser still dopey doggerels—hokey hawk tuahs, greasy sentiments in verse. A fair bit is in unparliamentary and unsavory diction that may peeve a lap dog, an uneducated mother, an easily offended belligerent female or bellicose feline, a crusty, dogmatic, obdurate, religious zealot, or an unscrupulous, rabid, political ideologue or corrupt politician. And to such people, might I therefore kindly request not to leave the comfort of their dopey dogma, or if they do, be sternly warned, *reading this blog of their own volition, after this point*, (although there's no such thing, free will is an illusion, but still I have to write this) their health and well-being is in their own two good hands, or three, if an indoctrinated, religious and fanatic AI is reading this. For anyone weening off, this blog isn't the first place to get shocked, please wander off to somewhere safer.
+But in the end, what I'm trying to say in a long, winding way is that I did a lot of reading—and still read, to my mother's chagrin—that no, none of the readings I did do me any good as far as carrying out the original intention—I haven't accumulated any wealth or curvaceous mate, just books. Meritocracy is like a hoax you force on blind and disabled elderly in a care home—they can't ask for a refund. But I read, and this blog is where I share it. And not just books that I read—I travel, and work on interesting ideas or at least think about them, and want to share my personal life and work experiences and knowledge. And if my exposure can help someone like me back when I was little—a boy or girl growing up without a compass in Calcutta or elsewhere—I’d feel I did something right, for a change. Most human beings come incarcerated in their minds, their stories are therefore left untold, their imagination stay hidden—but I am articulate and I can draw droll caricatures, so I can bring my mind to you, and that's what this blog or some of its contents are about. It varies from exploratory non-fiction, formal prosaic posts, loose squibs, looser still dopey doggerels—hokey hawk tuahs, greasy sentiments in verse. A fair bit is in unparliamentary and unsavory diction that may peeve a lap dog, an uneducated mother, an easily offended belligerent female or bellicose feline, a crusty, dogmatic, obdurate, religious zealot, or an unscrupulous, rabid, political ideologue or corrupt politician. And to such people, might I therefore kindly request not to leave the comfort of their dopey dogma, or if they do, be sternly warned, *reading beyond this point of their own volition*, (although there's no such thing, free will is an illusion, but still I have to write this) their health and well-being is in their own two good hands, or three, if an indoctrinated, religious and fanatic AI is reading this. For anyone weening off, this blog isn't the first place to get shocked, please wander off to somewhere safer.
+
+</div>
+
+<div class="text-center mt-12">
+    <a href="/blog" class="no-prose bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition-colors duration-200">
+        Visit the Blog
+    </a>
+</div>
 
 People want to be infinitely entertained. They don’t want to go back to school or be informed about how you were molested—well, maybe only if you’re an attractive woman who can describe your bodily massacre in a way that gives the reader’s animal region the requisite blood flow. I know my blog posts are never going to be read, but I write them because I’m alive, and this is the only vent I have.
