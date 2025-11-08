@@ -14,13 +14,13 @@
 			>
 				All Posts
 			</a>
-			<a
+			<!-- <a
 				href="/notebooks"
 				class="sidebar-topic hover:underline"
 				class:sidebar-link-active={page.url.pathname.startsWith('/notebook')}
 			>
 				Notebooks
-			</a>
+			</a> -->
 		</div>
 
 		{#each categories as category (category.name)}

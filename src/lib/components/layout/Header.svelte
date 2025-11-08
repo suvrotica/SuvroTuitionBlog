@@ -15,9 +15,6 @@
 			<a href="/" class="site-title"> SuvroGhosh.Blog </a>
 			<div class="hidden md:flex items-center space-x-4">
 				<a href="/blog" class="sidebar-link">Blog</a>
-				<a href="/notebooks" class="sidebar-link">Notebooks</a>
-				<a href="/about" class="sidebar-link">About</a>
-				<a href="/contact" class="sidebar-link">Contact</a>
 			</div>
 			<button
 				class="hamburger lg:hidden"
