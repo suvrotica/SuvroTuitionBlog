@@ -33,3 +33,8 @@ A drizzle of pee—and wasn't that good,<br>
 Shit shot shut up her trap shrill.<br>
 So many lives, holy is why you live,<br>
 Gotta find, shit, fuck, and kill.<br>
+<br>
+Snail face moves at pace slow,<br>
+India a mollusk gastropod land.<br>
+Holy hollow, sleepy, fallow, shallow,<br>
+Leaders with commode in grandstand.<br>
