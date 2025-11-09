@@ -19,7 +19,7 @@ Ball cadavers after their heads all fell.<br><br>
 When you're too holy just shit your pants,<br>
 Know it's god's grace and goodly glory.<br>
 Politically the whores and parliament pimps,<br>
-Ensure by shiva anything honest ends gory.<br>
+Ensure by Shiva anything honest ends gory.<br>
 <br>
 
 ![mostlame](/images/IMG-20251109-WA0002.jpg) 
