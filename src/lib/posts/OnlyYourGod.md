@@ -81,4 +81,4 @@ But I send you to your fucking god.<br>
 Old dick calm still his tall cunt shrill,<br>
 These and other pests India infested full.<br>
 This is why the government of the fucks,<br>
-For the fucks by the fucks, banned all school.<br>
+For the fucks by the fucks, fucked school.<br>
