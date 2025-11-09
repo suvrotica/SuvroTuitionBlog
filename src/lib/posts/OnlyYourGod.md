@@ -86,3 +86,13 @@ Old dick calm still his tall cunt shrill,<br>
 These and other pests India infested full.<br>
 This is why the government of the fucks,<br>
 For the fucks by the fucks, fucked school.<br>
+<br>
+Hope is the new shitty shit we shit on,<br>
+Hopeful are the stupid citizen fucks.<br>
+Choose between one turd or another,<br>
+Quick, get on the BJP bandwagon truck.<br>
+<br>
+We'll at least shit solid log-shaped turds,<br>
+The Congress a diarrhea stew.<br>
+The Marxist and other fucks will fart,<br>
+We promise we'll really shit on you.<br>
