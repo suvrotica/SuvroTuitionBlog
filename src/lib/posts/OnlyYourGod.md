@@ -16,6 +16,11 @@ You know what's in your head,<br>
 But you don't want to scream all hell.<br>
 The sissy system of Sisyphus moves,<br>
 Ball cadavers after their heads all fell.<br>
+When you're too holy just shit your pants,<br>
+Know it's god's grace and goodly glory.<br>
+Politically the whores and parliament pimps,<br>
+Ensure by shiva anything honest ends gory.<br>
+<br>
 
 ![mostlame](/images/IMG-20251109-WA0002.jpg) 
 
