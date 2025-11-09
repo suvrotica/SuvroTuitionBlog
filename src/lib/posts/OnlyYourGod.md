@@ -10,6 +10,7 @@ published: true
 </script> 
 
 ![holy hindloo](/images/IMG-20251108-WA0001.jpg) 
+
 <br>
 You know what's in your head,<br>
 But you don't want to scream all hell.<br>
