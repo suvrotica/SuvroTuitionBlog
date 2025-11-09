@@ -1,5 +1,5 @@
 ---
-title: "Only your god"
+title: "BJP"
 thumbnail: "/images/IMG-20251108-WA0001.jpg"
 
 category: 'Doggerel Religion'
@@ -42,6 +42,15 @@ Snail face moves at pace slow,<br>
 India a mollusk gastropod land.<br>
 Holy hollow, sleepy, fallow, shallow,<br>
 Leaders with commode in grandstand.<br>
+<br>
+
+![bjp](/images/IMG-20251109-WA0007.jpg) 
+
+<br>
+It's a bee like a "J", it pees, it's BJP,<br>
+Or Vishnu's avatar fish market from.<br>
+Whatever it is, for centuries India fucked,<br>
+Goodly god as BJP in ass-fucking form.<br>
 <br>
 Voting trucks full, delusion best tool,<br>
 Unholy opposition parties must be stoned.<br>
