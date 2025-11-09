@@ -44,10 +44,10 @@ Gotta find, shit-on, fuck, and most-lame kill.<br>
 ![snail](/images/IMG-20251109-WA0005.jpg) 
 
 <br>
-Snail face moves at pace slow,<br>
-India a mollusk gastropod land.<br>
-Holy hollow, sleepy, fallow, shallow,<br>
-Leaders with commode in grandstand.<br>
+Snail face moves at pace silently slow,<br>
+India a mollusk gastropod gassy land.<br>
+Holy hollow shell, sleepy fellow, shallow,<br>
+Blowing smoke through ass you understand? <br>
 <br>
 
 ![bjp](/images/IMG-20251109-WA0007.jpg) 
