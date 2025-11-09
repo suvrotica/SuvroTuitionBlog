@@ -36,9 +36,9 @@ Hell yeah, you grunt hard, turds plop,<br>
 In the Indian Ocean of them stupid's mouth.<br>
 <br>
 A drizzle of pee—and wasn't that good,<br>
-Shit shot shut up her trap shrill.<br>
-So many lives, holy is why you live,<br>
-Gotta find, shit-on, fuck, and most-lame kill.<br>
+Shit shot shut up their trap shrill.<br>
+So many hated lives, holy is why you live,<br>
+Gotta find, shit-on, fuck, must most-lame kill.<br>
 <br>
 
 ![snail](/images/IMG-20251109-WA0005.jpg) 
