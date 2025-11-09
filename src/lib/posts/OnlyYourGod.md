@@ -77,3 +77,8 @@ Everything will be screwed by,<br>
 A gassy geriatric government gastropod.<br>
 He's my son-in-law, I really love him,<br>
 But I send you to your fucking god.<br>
+<br>
+Old dick calm still his tall cunt shrill,<br>
+These and other pests India infested full.<br>
+This is why the government of the fucks,<br>
+For the fucks by the fucks, banned all school.<br>
