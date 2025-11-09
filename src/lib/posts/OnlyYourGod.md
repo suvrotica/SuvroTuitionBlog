@@ -32,7 +32,7 @@ Into the darkness of a stupid's mouth.<br>
 A drizzle of pee—and wasn't that good,<br>
 Shit shot shut up her trap shrill.<br>
 So many lives, holy is why you live,<br>
-Gotta find, shit, fuck, and kill.<br>
+Gotta find, shit-on, fuck, and most-lame kill.<br>
 <br>
 
 ![snail](/images/IMG-20251109-WA0005.jpg) 
