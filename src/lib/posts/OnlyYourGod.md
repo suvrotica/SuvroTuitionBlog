@@ -60,7 +60,7 @@ Tell the holy fucks promise postponed.<br>
 <br>
 Fuck look it's holy, now come suck cock,<br>
 Next life I promise I give you a job.<br>
-Cheer up and vote, gape that ass,<br>
+Cheer up and vote, or gape that Congress ass,<br>
 This life—sorry, just corn on the cob.<br>
 <br>
 Or not, you might just have to starve,<br>
