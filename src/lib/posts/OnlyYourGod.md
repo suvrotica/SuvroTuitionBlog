@@ -25,9 +25,9 @@ Ensure by Shiva anything honest ends gory.<br>
 ![mostlame](/images/IMG-20251109-WA0002.jpg) 
 
 <br>
-You know it's only your god,<br>
-And ain't his beard lice the same.<br>
-You want to cry, you well up with pee,<br>
+You know it's only your fucking God,<br>
+And ain't his bullshit beard lice the same.<br>
+You want to cry, but you well up with pee,<br>
 You shit, spit, vomit—a zero-sum game.<br>
 <br>
 Holy spirit, it's all holy Christ and all,<br>
