@@ -30,10 +30,10 @@ And ain't his beard lice the same.<br>
 You want to cry, you well up with pee,<br>
 You shit, spit, vomit—a zero-sum game.<br>
 <br>
-Holy spirit, it's all holy and all,<br>
-Say the brown turds that see the south.<br>
-Hell yeah, you grunt, they plop,<br>
-Into the darkness of a stupid's mouth.<br>
+Holy spirit, it's all holy Christ and all,<br>
+Say the brown turds of the Christian south.<br>
+Hell yeah, you grunt hard, turds plop,<br>
+In the Indian Ocean of them stupid's mouth.<br>
 <br>
 A drizzle of pee—and wasn't that good,<br>
 Shit shot shut up her trap shrill.<br>
