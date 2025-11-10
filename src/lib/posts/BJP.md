@@ -43,30 +43,26 @@ Ensure by Shiva anything honest ends gory.<br>
 		that’s autobiographical spite. I’ve been that neutered creature, swaggering
 		around with my teenage testosterone and a head emptier than the promises
 		pasted on political posters. I have loved holy excuses too: I’ve seen my
-		father’s colleagues call god to explain why the bank vault jammed and why
-		their own fingers smelled surprisingly of bribery ink.
+		kith and kin call god to explain away every human nefariousness.
 	</p>
 	<p>
 		When I wrote “shit your pants” I remembered my own two catastrophic
-		Calcutta school-hospital rickshaw rides when my digestive system announced
-		it was sovereign and immune to school schedules. Tenderness hides in that
-		memory: the small boy trying to keep dignity while everything warm and
-		unspeakable spread inside his half-pants. Tenderness because I now see the
+		Calcutta rickshaw rides when my digestive system announced
+		it was sovereign and immune to school schedules. The small boy trying to keep dignity while everything warm and
+		unspeakable spread inside his half-pants. I now see the
 		same helplessness in grown-up India—millions shitting their political
 		futures but calling it divine will, millions too frightened or tired to
 		scream when the country wipes its sins with our silence.
 	</p>
 	<p>
-		So yes, this stanza is venomous, but beneath it is an old, gentle fear:
+		So yes, beneath this stanza is an old, gentle fear:
 		that if I actually scream, the whole mythology-sanitized nation will turn
 		and tell me to shut up and pray. The same way the shopkeeper at College
 		Street told me to lug a filthy balti myself and solve the problem quietly.
 		India has always demanded that we disinfect its mess with our private
-		shame. I’m just refusing to do that anymore.
+		shame. I’m just refusing to do that anymore, at my own peril. 
 	</p>
 </Tbx>
-
-
 
 ![mostlame](/images/IMG-20251109-WA0002.jpg) 
 
@@ -93,7 +89,7 @@ Gotta find, shit-on, fuck, must most-lame kill.<br>
 		holy certitudes that compete like bad biryani stalls—each insisting its
 		spices are divine while giving you the same dysentery. I grew up in a
 		Bengali household where gods were mostly decorative, something my mother
-		kept around like fragile porcelain that could scold me for not studying
+		kept around like cheap, fragile clay toys that could scold me for not studying
 		enough. But even then, I noticed the pattern: every community loudly
 		insisting that their god’s beard lice were medicinal and the other god’s
 		lice were toxic. As a child who barely understood why my own genitalia
@@ -101,11 +97,10 @@ Gotta find, shit-on, fuck, must most-lame kill.<br>
 		version of the same insecurity—holy pissing contests, literally.
 	</p>
 	<p>
-		The “Christian south” line is not theology; it’s my memory of traveling in
-		India and realizing that holiness everywhere is the same fragrance layered
+		The “Christian south” line is not theology; it’s my memory of traveling to South India and realizing that holiness everywhere is the same fragrance layered
 		over decay—like Dettol poured into an overflowing drain. You can hear
 		the accents change, but the logic stays the same: blame god for everything,
-		weaponize god for everything, sterilize your hatreds with a hymn.
+		weaponize god for everything, sterilize your hatreds with a hymn. That trip to South India was the only trip with my family that I can hold on to. 
 	</p>
 	<p>
 		When I say “you want to cry but you well up with pee,” it’s because most of
@@ -118,7 +113,7 @@ Gotta find, shit-on, fuck, must most-lame kill.<br>
 		deodorized duty.
 	</p>
 	<p>
-		There’s a disturbing tenderness in that last line, “holy is why you live,”
+		There’s a disturbing line, “holy is why you live,”
 		because I’ve known people whose entire purpose—people I’ve loved—became
 		finding someone weaker to shame or someone different to despise. That’s
 		the tragedy: the rotten holiness that promises transcendence but delivers
@@ -128,8 +123,6 @@ Gotta find, shit-on, fuck, must most-lame kill.<br>
 		is just the handrail we all grab so we don’t slip.
 	</p>
 </Tbx>
-
-
 
 ![snail](/images/IMG-20251109-WA0005.jpg) 
 
@@ -154,11 +147,11 @@ Blowing smoke through ass you understand? <br>
 	<p>
 		“Holy hollow shell” isn't just mockery; it’s autobiographical longing. I
 		grew up in a home where books were stacked high but the world outside was
-		an empty shell pretending to contain meaning—Durga Puja lights covering
+		an empty shell pretending to contain meaning—Durga Puja lights trying to make up for
 		gaping potholes, political processions covering policy decay, the smell of
 		ghee masking the stench of nearby drains. As a kid, when I’d sit on the
 		terrace with my myopic eyes squinting at the city’s chaotic horizon, I
-		already knew something was hollow here. Something fundamental.
+		already knew something was hollow here. Something astonishingly fundamental—introspective honesty.
 	</p>
 	<p>
 		The smoke-through-ass line is pure George Carlin filtered through
@@ -166,13 +159,11 @@ Blowing smoke through ass you understand? <br>
 		seeping into my shoes during monsoon. Together they create this strange
 		hybrid humor that tries to survive the absurdity of a country that
 		choreographs incompetence and calls it culture. I don’t hate India—I hate
-		that India refuses to evolve while claiming to have been evolved since the
+		that India refuses to evolve while claiming to have evolved since the
 		Vedas. You can’t have both, but India demands both, the way a child demands
 		love for a drawing that’s mostly scribbles.
 	</p>
 </Tbx>
-
-
 
 ![holy hindloo](/images/IMG-20251108-WA0001.jpg) 
 
@@ -236,21 +227,16 @@ But I send you to your fucking god.<br>
 		Every teacher promised enlightenment next class, every politician promised
 		a better city next term, every god promised justice next life. My life has
 		been a queue of delayed deliveries—Amazon Prime, but for disappointment.
-		So yes, there’s venom, but also tenderness towards that bewildered boy who
-		once believed promises could be kept.
 	</p>
 	<p>
 		And the “son-in-law” line—believe me, I wrote that with the memory of
 		watching uncles, godmen, businessmen, netas, journalists all exchanging
 		wink-wink alliances at weddings, funerals, pujas. India is run like a
 		giant extended family where you’re the malnourished kid sent to fetch
-		sugar while the adults drink themselves into hypocrisy. Tenderness here
-		is not affection; it’s grief for the millions who don’t even know they’re
-		being fed to their “god” in installments.
+		sugar while the adults drink themselves into hypocrisy. Nepotism here may be a minister's affection; but it’s corruption for the millions who don’t even know they’re
+		being fed to their “god” in installments as "prasad". 
 	</p>
 </Tbx>
-
-
 
 ![dick and cunt](/images/IMG-20251109-WA0008.jpg) 
 
@@ -273,8 +259,8 @@ We promise we'll really shit on you.<br>
 
 <Tbx>
 	<p>
-		By the time I reached this final stanza, something snapped. All the
-		lingering politeness, the years of academic restraint, the American-style
+		I lose it here—All the
+		lingering politeness is gone, the years of academic restraint, the American-style
 		critical thinking I tried to graft onto my Bengali bones—everything gave
 		way to a kind of obscene honesty that felt truer than any editorial
 		column I ever read. India is full of loud, self-important pests—anchors,
@@ -290,10 +276,10 @@ We promise we'll really shit on you.<br>
 		thought Darwin was optional and astronomy was identical to astrology.
 		That’s the betrayal: not that politicians lie but that they sabotage the
 		very tools—the schools, the libraries, the science labs—that could have
-		saved someone like me.
+		saved someone like me growing up in this country. 
 	</p>
 	<p>
-		The hope stanza is the tenderness-dipped-in-acid part. I want to believe
+		The hope is dipped-in-acid. I want to believe
 		in hope; I really do. I believed in it when I left India for the US, when
 		I returned, when I tried to build something new, when I wrote this blog.
 		But hope here is weaponized, sold like expired biscuits at a kirana store,
