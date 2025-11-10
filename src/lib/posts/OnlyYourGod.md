@@ -92,7 +92,7 @@ Hopeful are the stupid citizen fucks.<br>
 Choose between one turd or another,<br>
 Quick, get on the BJP bandwagon truck.<br>
 <br>
-We'll at least shit solid log-shaped turds,<br>
-The Congress a diarrhea stew.<br>
-The Marxist and other fucks will fart,<br>
+We'll at least shit hard hateful turds,<br>
+The Congress a secular diarrhea stew.<br>
+The Marxist gaslight an egalitarian fart,<br>
 We promise we'll really shit on you.<br>
