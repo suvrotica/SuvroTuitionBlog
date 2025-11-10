@@ -52,7 +52,7 @@ Ensure by Shiva anything honest ends gory.<br>
 		unspeakable spread inside his half-pants. I now see the
 		same helplessness in grown-up India—millions shitting their political
 		futures but calling it divine will, millions too frightened or tired to
-		scream when the country wipes its sins with our silence.
+		scream when the country wipes its sins with silence.
 	</p>
 	<p>
 		So yes, beneath this stanza is an old, gentle fear:
