@@ -120,7 +120,7 @@ Gotta find, shit-on, fuck, must most-lame kill.<br>
 		only inherited cruelty. And I wrote it with the same grief I had when I
 		watched my classmates giggle at the kid whose lunch smelled too humble or
 		whose shirt was always half-untucked. Shame is contagious here; holiness
-		is just the handrail we all grab so we don’t slip.
+		is just the handrail we all grab mindlessly so we can stay in the mindless middle.
 	</p>
 </Tbx>
 
@@ -287,10 +287,9 @@ We promise we'll really shit on you.<br>
 		truth is that each party offers a different flavor of the same sewage.
 	</p>
 	<p>
-		The sexual metaphors here—turd, fart, diarrhea—they are childish on the
+		The scatological metaphors here—turd, fart, diarrhea—they are childish on the
 		surface but philosophically appropriate. Every society has a sewage system;
-		ours just speaks the loudest and thinks it’s poetry. My tenderness lies in
-		the fact that I know most people don’t choose the sewage—they’re born into
+		ours just speaks the loudest and thinks it’s poetry. I know most people don’t choose the sewage—they’re born into
 		it, marinated in it, told it’s holy water. I’ve been that person. I still
 		am, sometimes.
 	</p>
