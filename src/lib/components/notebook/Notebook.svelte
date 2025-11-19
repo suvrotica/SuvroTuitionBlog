@@ -9,24 +9,23 @@
 	
 	let editorSecret = $state<string | null>(null);
 	let notebook = $state<Notebook>({ ...notebookData });
-	let sectionRefs = $state<Record<string, any>>({}); // To access getCurrentContent
+	let sectionRefs = $state<Record<string, any>>({});
 	let saveStatus = $state<'idle' | 'saving' | 'saved' | 'error'>('idle');
 	let saveTimeout: ReturnType<typeof setTimeout> | null = null;
 
 	// Drag & Drop State
 	let draggingSectionId = $state<string | null>(null);
 
-	// Derived read-only state: If we don't have a secret, we can't edit.
+	// Derived read-only state
 	let isReadOnly = $derived(!editorSecret);
 
 	onMount(() => {
-		// 1. Check for the Global Admin Secret (The Master Key)
+		// 1. Check for the Global Admin Secret (Master Key set via /admin page)
 		const globalSecret = localStorage.getItem('site_editor_secret');
 		
-		// 2. Check for notebook specific secret (Legacy/Fallback)
+		// 2. Check for notebook specific secret (Legacy behavior)
 		const specificSecret = localStorage.getItem(`notebook_${notebook.id}_secret`);
 
-		// Prefer global, fallback to specific
 		if (globalSecret) {
 			editorSecret = globalSecret;
 		} else if (specificSecret) {
@@ -41,16 +40,12 @@
 		if (saveTimeout) clearTimeout(saveTimeout);
 
 		const saveAction = async () => {
-			// Gather content from child components
+			// Gather content logic remains the same
 			const updatedSections = notebook.sections.map((section) => {
-				// If it's an ink section, ask the component for latest strokes
 				if (section.type === 'ink' && sectionRefs[section.id]) {
 					const currentContent = sectionRefs[section.id].getCurrentContent();
-					
-					// Get the latest version to compare
 					const latestVer = section.versions[section.versions.length - 1];
 					
-					// Very basic dirty check to avoid spamming versions if nothing changed
 					if (JSON.stringify(latestVer.content) !== JSON.stringify(currentContent)) {
 						return {
 							...section,
@@ -69,10 +64,9 @@
 				return section;
 			});
 
-			// Update local state with the gathered changes before sending
+			// Update local state
 			notebook.sections = updatedSections;
 
-			// API Call
 			try {
 				const res = await fetch(`/api/notebooks/${notebook.id}`, {
 					method: 'PATCH',
@@ -86,6 +80,21 @@
 					})
 				});
 				
+				// --- SECURITY FIX STARTS HERE ---
+				if (res.status === 401 || res.status === 403) {
+					console.warn("Unauthorized access. Clearing invalid credentials.");
+					// 1. Wipe invalid secret from state
+					editorSecret = null;
+					// 2. Wipe invalid secret from storage
+					localStorage.removeItem('site_editor_secret');
+					localStorage.removeItem(`notebook_${notebook.id}_secret`);
+					// 3. Update UI status
+					saveStatus = 'error';
+					alert("Session invalid. Switched to Read-Only mode.");
+					return;
+				}
+				// --- SECURITY FIX ENDS HERE ---
+
 				if (!res.ok) throw new Error('Failed');
 				
 				saveStatus = 'saved';
@@ -104,16 +113,15 @@
 	function handleDragStart(e: DragEvent, id: string) {
 		if (isReadOnly) return;
 		draggingSectionId = id;
-		if (e.dataTransfer) {
-			e.dataTransfer.effectAllowed = 'move';
-		}
+		// Accessibility: expose drag data
+		e.dataTransfer?.setData('text/plain', id);
+		if (e.dataTransfer) e.dataTransfer.effectAllowed = 'move';
 	}
 
 	function handleDragOver(e: DragEvent, targetId: string) {
 		if (isReadOnly || !draggingSectionId || draggingSectionId === targetId) return;
-		e.preventDefault(); // Essential to allow dropping
+		e.preventDefault();
 
-		// Reorder state immediately for visual feedback
 		const fromIdx = notebook.sections.findIndex(s => s.id === draggingSectionId);
 		const toIdx = notebook.sections.findIndex(s => s.id === targetId);
 
@@ -121,8 +129,6 @@
 			const sections = [...notebook.sections];
 			const [moved] = sections.splice(fromIdx, 1);
 			sections.splice(toIdx, 0, moved);
-			
-			// Update order indexes
 			notebook.sections = sections.map((s, i) => ({ ...s, orderIndex: i }));
 		}
 	}
@@ -130,7 +136,7 @@
 	function handleDrop(e: DragEvent) {
 		e.preventDefault();
 		draggingSectionId = null;
-		scheduleSave(true); // Save new order immediately
+		scheduleSave(true);
 	}
 
 	function addSection(type: 'ink' | 'markdown') {
@@ -163,7 +169,7 @@
 			/>
 			<div class="flex gap-2 mt-2 text-sm">
 				<span class="text-xs uppercase tracking-wider text-neutral-500 self-center">
-					{saveStatus === 'saving' ? 'Saving...' : saveStatus === 'saved' ? 'All changes saved' : saveStatus === 'error' ? 'Error saving' : ''}
+					{saveStatus === 'saving' ? 'Saving...' : saveStatus === 'saved' ? 'All changes saved' : saveStatus === 'error' ? 'Read Only / Save Error' : ''}
 				</span>
 			</div>
 		{:else}
@@ -186,7 +192,7 @@
 				ondrop={handleDrop}
 			>
 				{#if !isReadOnly}
-					<div class="absolute -left-8 top-4 p-2 cursor-move opacity-0 group-hover:opacity-100 text-neutral-400 hover:text-neutral-600 transition-opacity">
+					<div class="absolute -left-8 top-4 p-2 cursor-move opacity-0 group-hover:opacity-100 text-neutral-400 hover:text-neutral-600 transition-opacity" aria-hidden="true">
 						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="12" r="1"/><circle cx="9" cy="5" r="1"/><circle cx="9" cy="19" r="1"/><circle cx="15" cy="12" r="1"/><circle cx="15" cy="5" r="1"/><circle cx="15" cy="19" r="1"/></svg>
 					</div>
 				{/if}

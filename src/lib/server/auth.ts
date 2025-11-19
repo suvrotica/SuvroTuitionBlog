@@ -1,21 +1,23 @@
-// src/lib/server/auth.ts
-import { EDITOR_SECRET } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 
-// Helper to check the secret against the Environment Variable
+// We use dynamic private env to ensure it picks up changes without full rebuilds in some contexts,
+// but static private is also fine. Dynamic is safer for runtime config changes.
+const SECRET = env.EDITOR_SECRET;
+
 export function checkEditorSecret(secret?: string): boolean {
-	if (!EDITOR_SECRET) {
-		console.error('EDITOR_SECRET environment variable is not set!');
+	if (!SECRET) {
+		// Log error on server side so you can debug in Vercel logs
+		console.error('EDITOR_SECRET environment variable is not set on server!');
 		return false;
 	}
-	// Compare the provided secret (from client) with the server-side secret
-	return secret === EDITOR_SECRET;
+	// Strict equality check
+	return secret === SECRET;
 }
 
-// Used when creating a new notebook to send the key back to the client initially
 export function getEditToken(): string | null {
-	if (!EDITOR_SECRET) {
+	if (!SECRET) {
 		console.error('Cannot generate edit token: EDITOR_SECRET is not set.');
 		return null;
 	}
-	return EDITOR_SECRET;
+	return SECRET;
 }
