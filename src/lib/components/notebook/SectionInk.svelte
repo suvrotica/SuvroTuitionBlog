@@ -20,18 +20,18 @@
 
 	let strokes = $state<Stroke[]>(content?.strokes || []);
 
-	// Default Tool Settings
+	// New Default: Graphite (#373737) - A soft, dark charcoal color
+	let selectedColor = $state('#373737'); 
 	let tool = $state<'pen' | 'highlighter' | 'eraser'>('pen');
-	let selectedColor = $state('#FFFFFF'); 
 	
-	// New: Stroke Width State
+	// Stroke Width State
 	let strokeWidth = $state(4); 
 
 	const colors = [
-		{ name: 'White', value: '#FFFFFF' },
+		{ name: 'Graphite', value: '#373737' }, // Default "Pencil" look
 		{ name: 'Black', value: '#000000' },
-		{ name: 'Blue', value: '#3b82f6' },
-		{ name: 'Red', value: '#ef4444' },
+		{ name: 'Blue', value: '#2563eb' },    // Slightly deeper blue for ink look
+		{ name: 'Red', value: '#dc2626' },
 		{ name: 'Gold', value: '#D4AF47' }
 	];
 
@@ -40,6 +40,13 @@
 		{ name: 'Green', value: '#4ade80' },
 		{ name: 'Pink', value: '#f472b6' }
 	];
+
+	// Tool config
+	const tools = {
+		pen: { size: 8, thinning: 0.5, smoothing: 0.5, streamline: 0.5 },
+		highlighter: { size: 25, thinning: 0, smoothing: 0.5, streamline: 0.5 },
+		eraser: { size: 30 }
+	};
 
 	function getPointerPosition(event: PointerEvent): Point {
 		if (!svgElement) return { x: 0, y: 0, p: 0.5, t: Date.now() };
@@ -68,7 +75,6 @@
 			id: generateUUID(),
 			points: [point],
 			color: tool === 'highlighter' ? selectedColor : selectedColor,
-			// Use the dynamic stroke width
 			width: tool === 'highlighter' ? 25 : strokeWidth, 
 			type: tool 
 		};
@@ -87,6 +93,7 @@
 			for (const e of events) {
 				currentStroke.points.push(getPointerPosition(e));
 			}
+			// Trigger reactivity
 			currentStroke = currentStroke; 
 		}
 	}
@@ -130,10 +137,13 @@
 	function setTool(t: 'pen' | 'highlighter' | 'eraser', color?: string) {
 		tool = t;
 		if (color) selectedColor = color;
+		
+		// Ensure we defaults if switching tools without a color
 		if (t === 'highlighter' && !highlighterColors.find(c => c.value === selectedColor)) {
 			selectedColor = highlighterColors[0].value;
 		}
 		if (t === 'pen' && !colors.find(c => c.value === selectedColor)) {
+			// Default back to Graphite if current color isn't in pen palette
 			selectedColor = colors[0].value;
 		}
 	}
@@ -148,34 +158,32 @@
 		return { strokes };
 	}
 
-	// Helper for perfect-freehand options
 	function getStrokeOptions(stroke: Stroke) {
-		// Highlighters are chunky and constant
 		if (stroke.type === 'highlighter') {
 			return { size: stroke.width, thinning: 0, smoothing: 0.5, streamline: 0.5 };
 		}
-		// Pens use pressure sensitivity (thinning)
 		return { size: stroke.width, thinning: 0.5, smoothing: 0.5, streamline: 0.5 };
 	}
 </script>
 
-<div class="ink-wrapper relative w-full bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-lg overflow-hidden">
+<div class="ink-wrapper relative w-full bg-white border border-neutral-200 rounded-lg overflow-hidden shadow-sm">
 	
 	{#if !readOnly}
-		<div class="toolbar absolute top-4 left-1/2 -translate-x-1/2 flex flex-col gap-2 p-2 bg-white/90 dark:bg-neutral-800/90 backdrop-blur shadow-lg rounded-2xl border border-neutral-200 dark:border-neutral-700 z-20">
+		<div class="toolbar absolute top-4 left-1/2 -translate-x-1/2 flex flex-col gap-2 p-2 bg-white/95 dark:bg-neutral-800/95 backdrop-blur shadow-xl rounded-2xl border border-neutral-200 dark:border-neutral-700 z-20">
 			
 			<div class="flex items-center gap-2">
 				<div class="flex gap-1 pr-2 border-r border-neutral-300 dark:border-neutral-600">
 					{#each colors as color}
 						<button
 							onclick={() => setTool('pen', color.value)}
-							class="w-6 h-6 rounded-full border transition-transform hover:scale-110 focus:outline-none"
+							class="w-6 h-6 rounded-full border transition-transform hover:scale-110 focus:outline-none relative"
 							class:scale-110={tool === 'pen' && selectedColor === color.value}
 							class:ring-2={tool === 'pen' && selectedColor === color.value}
 							class:ring-neutral-400={tool === 'pen' && selectedColor === color.value}
 							style="background-color: {color.value}; border-color: {color.value === '#FFFFFF' ? '#ccc' : 'transparent'}"
 							aria-label="Pen {color.name}"
-						></button>
+						>
+						</button>
 					{/each}
 				</div>
 
@@ -213,12 +221,12 @@
 			</div>
 
 			{#if tool === 'pen'}
-				<div class="flex items-center gap-2 px-1">
+				<div class="flex items-center gap-2 px-1 pt-1 border-t border-neutral-200 dark:border-neutral-700">
 					<span class="text-[10px] text-neutral-500 uppercase tracking-wide">Size</span>
 					<input 
 						type="range" 
 						min="2" 
-						max="30" 
+						max="20" 
 						bind:value={strokeWidth}
 						class="w-full h-1 bg-neutral-200 rounded-lg appearance-none cursor-pointer dark:bg-neutral-700 accent-neutral-600 dark:accent-neutral-400"
 					/>
