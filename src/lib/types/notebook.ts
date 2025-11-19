@@ -1,49 +1,49 @@
 // src/lib/types/notebook.ts
+
+// REPLACE the existing Point and Stroke interfaces with these:
 export interface Point {
 	x: number;
 	y: number;
-	t: number; // timestamp
-	p?: number; // pressure (optional)
+	t: number;      // Keep 't' required (timestamp) as per original code
+	p?: number;     // Pressure (0 to 1) - Optional
 }
 
 export interface Stroke {
-	id: string; // UUID for the stroke
+	id: string;
 	points: Point[];
 	color: string;
 	width: number;
+	type?: 'pen' | 'highlighter' | 'eraser'; // Add this new optional field
 }
 
+// Keep the rest of your file (InkContent, SectionType, etc.) exactly as is below...
 export interface InkContent {
 	strokes: Stroke[];
-	// Optional: Bounding box can be calculated on render or save
 	// bbox?: { x: number; y: number; w: number; h: number };
 }
 
-export type SectionType = 'ink' | 'markdown' | 'code' | 'title'; // | 'image' omitted for skeleton
+export type SectionType = 'ink' | 'markdown' | 'code' | 'title';
 
 export interface SectionVersion {
-	versionId: string; // UUID
-	changedAt: string; // ISO8601 timestamp
-	changeType: 'create' | 'edit'; // | 'reorder' | 'meta' omitted for skeleton
-	content: InkContent | { text: string } | { title: string }; // Simplified content types
+	versionId: string;
+	changedAt: string;
+	changeType: 'create' | 'edit';
+	content: InkContent | { text: string } | { title: string };
 }
 
 export interface Section {
-	id: string; // UUID
+	id: string;
 	type: SectionType;
-	orderIndex: number; // For ordering
-	createdAt: string; // ISO8601 timestamp
-	// createdBy: string; // Simplified for skeleton - add later with auth
-	versions: SectionVersion[]; // History of content, latest is current
+	orderIndex: number;
+	createdAt: string;
+	versions: SectionVersion[];
 }
 
 export interface Notebook {
-	id: string; // UUID
+	id: string;
 	title: string;
-	createdAt: string; // ISO8601 timestamp
-	// createdBy: string; // Simplified for skeleton - add later with auth
-	publishedAt: string | null; // ISO8601 timestamp or null
+	createdAt: string;
+	publishedAt: string | null;
 	sections: Section[];
-	// history: any[]; // Full notebook change history - omit for skeleton
-	meta?: Record<string, any>; // Optional metadata
+	meta?: Record<string, any>;
 }

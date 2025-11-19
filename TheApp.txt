@@ -1,4 +1,4 @@
-# Context file generated on: Saturday, November 8, 2025 at 8:25:30 PM GMT+5:30
+# Context file generated on: Wednesday, November 19, 2025 at 6:58:47 AM GMT+5:30
 ---
 
 # Project File Layout
@@ -489,14 +489,15 @@
 │   │   │   └── ui
 │   │   │       ├── InfoBox.md
 │   │   │       ├── PostBadge.svelte
-│   │   │       └── SanskritVerse.svelte
+│   │   │       ├── SanskritVerse.svelte
+│   │   │       └── TranslucentBox.svelte
 │   │   ├── config.ts
 │   │   ├── data
 │   │   │   ├── city-populations.ts
 │   │   │   └── posts.ts
 │   │   ├── index.ts
 │   │   ├── posts
-│   │   │   └── reflections-on-a-schoolboys-past.md
+│   │   │   └── Reflections.md
 │   │   ├── posts.ts
 │   │   ├── server
 │   │   │   ├── auth.ts
@@ -510,6 +511,7 @@
 │   │   ├── types.ts
 │   │   ├── utils
 │   │   │   ├── readingTime.ts
+│   │   │   ├── stroke.ts
 │   │   │   ├── uuid.test.ts
 │   │   │   └── uuid.ts
 │   │   └── utils.ts
@@ -548,7 +550,12 @@
 ├── static
 │   ├── favicon.png
 │   └── images
-│       └── IMG-20251012-WA0004.jpg
+│       ├── IMG-20251012-WA0004.jpg
+│       ├── IMG-20251108-WA0001.jpg
+│       ├── IMG-20251109-WA0002.jpg
+│       ├── IMG-20251109-WA0005.jpg
+│       ├── IMG-20251109-WA0007.jpg
+│       └── IMG-20251109-WA0008.jpg
 ├── svelte.config.js
 ├── tailwind.config.cjs
 ├── TheApp.txt
@@ -627,6 +634,7 @@
 		"gray-matter": "^4.0.3",
 		"mermaid": "^11.9.0",
 		"p5": "^2.0.3",
+		"perfect-freehand": "^1.2.2",
 		"rehype-autolink-headings": "^7.1.0",
 		"remark-frontmatter": "^5.0.0",
 		"remark-gfm": "^4.0.1",
@@ -1076,6 +1084,18 @@ pre.shiki { @apply p-4 rounded-lg overflow-x-auto; }
 	@apply fixed inset-0 z-30 w-full h-full bg-black/60 cursor-default;
 	@apply transition-opacity duration-300 ease-in-out;
 }
+
+
+.translucent-box {
+	@apply my-6 p-6 rounded-lg border border-neutral-300 dark:border-neutral-700 
+		bg-gradient-to-br from-neutral-200/70 to-neutral-100/70 
+		dark:from-neutral-900/80 dark:to-neutral-800/80 
+		backdrop-blur-sm shadow-md
+		text-justify text-base leading-relaxed text-neutral-800 subpixel-antialiased dark:text-neutral-300; 
+}
+
+.cursor-crosshair { cursor: crosshair; }
+.touch-none { touch-action: none; }
 
 # File: src/app.d.ts
 
@@ -2283,6 +2303,7 @@ export {};
 			<a href="/" class="site-title"> SuvroGhosh.Blog </a>
 			<div class="hidden md:flex items-center space-x-4">
 				<a href="/blog" class="sidebar-link">Blog</a>
+				<a href="/notebooks" class="sidebar-link">Notebooks</a>
 			</div>
 			<button
 				class="hamburger lg:hidden"
@@ -2329,216 +2350,196 @@ export {};
 	import type { Notebook, Section } from '$lib/types/notebook';
 	import SectionInk from './SectionInk.svelte';
 	import { generateUUID } from '$lib/utils/uuid';
-	import { tick } from 'svelte';
 	import { dev } from '$app/environment';
 	import { onMount } from 'svelte';
+	import { flip } from 'svelte/animate'; // For smooth reordering animation
 
 	let { notebookData }: { notebookData: Notebook } = $props();
-	let editorSecret = $state<string | null>(null); // Store secret locally for API calls
-
-	// Create reactive state from the initial prop data
+	
+	let editorSecret = $state<string | null>(null);
 	let notebook = $state<Notebook>({ ...notebookData });
-
-	// Refs for section components to call methods like getCurrentContent
-	let sectionRefs = $state<Record<string, any>>({});
-
-	let saveTimeout: ReturnType<typeof setTimeout> | null = null;
+	let sectionRefs = $state<Record<string, any>>({}); // To access getCurrentContent
 	let saveStatus = $state<'idle' | 'saving' | 'saved' | 'error'>('idle');
+	let saveTimeout: ReturnType<typeof setTimeout> | null = null;
 
+	// Drag & Drop State
+	let draggingSectionId = $state<string | null>(null);
+
+	// Derived read-only state
+	let isReadOnly = $derived(!editorSecret);
+
+	onMount(() => {
+		const secret = localStorage.getItem(`notebook_${notebook.id}_secret`);
+		if (secret) editorSecret = secret;
+	});
+
+	// --- Save Logic (Simplified for brevity, keep existing logic largely) ---
 	function scheduleSave(immediate = false) {
+		if (isReadOnly) return; 
 		saveStatus = 'saving';
-		if (saveTimeout) {
-			clearTimeout(saveTimeout);
-		}
+		if (saveTimeout) clearTimeout(saveTimeout);
 
 		const saveAction = async () => {
-			if (!editorSecret) {
-				console.warn('Editor secret not set. Cannot save.');
-				const secretFromStorage = localStorage.getItem(`notebook_${notebook.id}_secret`);
-				if (secretFromStorage) {
-					editorSecret = secretFromStorage;
-				} else {
-					saveStatus = 'error';
-					return;
-				}
-			}
-
-			console.log('Saving changes...');
-			// Collect current content from all sections
+			// Gather content from child components
 			const updatedSections = notebook.sections.map((section) => {
-				const ref = sectionRefs[section.id];
-				if (ref && typeof ref.getCurrentContent === 'function') {
-					const currentContent = ref.getCurrentContent();
-
-					const latestVersion = section.versions[section.versions.length - 1];
-					if (JSON.stringify(latestVersion.content) !== JSON.stringify(currentContent)) {
-						const newVersion = {
-							versionId: generateUUID(),
-							changedAt: new Date().toISOString(),
-							changeType: 'edit' as const,
-							content: currentContent
-						};
+				// If it's an ink section, ask the component for latest strokes
+				if (section.type === 'ink' && sectionRefs[section.id]) {
+					const currentContent = sectionRefs[section.id].getCurrentContent();
+					// Only update version if content changed (deep comparison needed in real app)
+					// For now, we assume if we are saving, we update the version
+					const latestVer = section.versions[section.versions.length - 1];
+					
+					// Very basic dirty check to avoid spamming versions
+					if (JSON.stringify(latestVer.content) !== JSON.stringify(currentContent)) {
 						return {
 							...section,
-							versions: [...section.versions, newVersion]
+							versions: [
+								...section.versions,
+								{
+									versionId: generateUUID(),
+									changedAt: new Date().toISOString(),
+									changeType: 'edit' as const,
+									content: currentContent
+								}
+							]
 						};
 					}
 				}
 				return section;
 			});
 
-			const payload = {
-				title: notebook.title,
-				sections: updatedSections
-			};
-
+			// API Call
 			try {
-				const response = await fetch(`/api/notebooks/${notebook.id}`, {
+				const res = await fetch(`/api/notebooks/${notebook.id}`, {
 					method: 'PATCH',
-					headers: {
+					headers: { 
 						'Content-Type': 'application/json',
-						Authorization: `Bearer ${editorSecret}`
+						'Authorization': `Bearer ${editorSecret}`
 					},
-					body: JSON.stringify(payload)
+					body: JSON.stringify({ title: notebook.title, sections: updatedSections })
 				});
-
-				if (!response.ok) {
-					const errorData = await response.json();
-					throw new Error(errorData.message || `HTTP error! status: ${response.status}`);
-				}
-
-				const savedNotebook: Notebook = await response.json();
-				// Sync state from server response
-				notebook.sections = savedNotebook.sections;
-				notebook.title = savedNotebook.title;
-
+				if (!res.ok) throw new Error('Failed');
 				saveStatus = 'saved';
-				// Reset status after a short delay
-				setTimeout(() => {
-					if (saveStatus === 'saved') saveStatus = 'idle';
-				}, 2000);
-				console.log('Save successful!');
-			} catch (error: any) {
-				console.error('Save failed:', error);
+				setTimeout(() => saveStatus = 'idle', 2000);
+			} catch (e) {
 				saveStatus = 'error';
 			}
 		};
 
-		if (immediate) {
-			saveAction();
-		} else {
-			saveTimeout = setTimeout(saveAction, 2000); // 2 second debounce
+		if (immediate) saveAction();
+		else saveTimeout = setTimeout(saveAction, 2000);
+	}
+
+	// --- Drag & Drop Handlers ---
+	function handleDragStart(e: DragEvent, id: string) {
+		if (isReadOnly) return;
+		draggingSectionId = id;
+		if (e.dataTransfer) {
+			e.dataTransfer.effectAllowed = 'move';
+			// Invisible drag image or custom one? Default is usually fine.
 		}
 	}
 
-	// --- THIS IS THE FIX ---
-	// This $effect will now ONLY auto-save the title.
-	// Changes to sections are handled by the `onchange` prop in the template.
-	$effect(() => {
-		// This effect tracks notebook.title
-		const title = notebook.title;
+	function handleDragOver(e: DragEvent, targetId: string) {
+		if (isReadOnly || !draggingSectionId || draggingSectionId === targetId) return;
+		e.preventDefault(); // Essential to allow dropping
 
-		// This check is important to prevent saving on the initial load
-		if (notebookData && title !== notebookData.title) {
-			// Don't autosave in dev, only on explicit save button click
-			if (!dev) {
-				scheduleSave();
-			}
+		// Reorder state immediately for visual feedback
+		const fromIdx = notebook.sections.findIndex(s => s.id === draggingSectionId);
+		const toIdx = notebook.sections.findIndex(s => s.id === targetId);
+
+		if (fromIdx !== -1 && toIdx !== -1) {
+			const sections = [...notebook.sections];
+			const [moved] = sections.splice(fromIdx, 1);
+			sections.splice(toIdx, 0, moved);
+			notebook.sections = sections;
 		}
-	});
-	// --- END FIX ---
+	}
 
-	// Check local storage for secret on mount
-	onMount(() => {
-		const secretFromStorage = localStorage.getItem(`notebook_${notebook.id}_secret`);
-		if (secretFromStorage) {
-			editorSecret = secretFromStorage;
-		} else {
-			if (dev) {
-				const promptedSecret = prompt('Enter editor secret to save/edit:');
-				if (promptedSecret) {
-					editorSecret = promptedSecret;
-					localStorage.setItem(`notebook_${notebook.id}_secret`, promptedSecret);
-				}
-			}
-		}
-	});
+	function handleDrop(e: DragEvent) {
+		e.preventDefault();
+		draggingSectionId = null;
+		scheduleSave(true); // Save new order
+	}
 
-	function addInkSection() {
+	function addSection(type: 'ink' | 'markdown') {
 		const newSection: Section = {
 			id: generateUUID(),
-			type: 'ink',
-			orderIndex: (notebook.sections.length + 1) * 1000,
+			type,
+			orderIndex: notebook.sections.length,
 			createdAt: new Date().toISOString(),
-			versions: [
-				{
-					versionId: generateUUID(),
-					changedAt: new Date().toISOString(),
-					changeType: 'create',
-					content: { strokes: [] }
-				}
-			]
+			versions: [{
+				versionId: generateUUID(),
+				changedAt: new Date().toISOString(),
+				changeType: 'create',
+				content: type === 'ink' ? { strokes: [] } : { text: '' }
+			}]
 		};
 		notebook.sections = [...notebook.sections, newSection];
-	}
-
-	function getSaveStatusText() {
-		switch (saveStatus) {
-			case 'saving':
-				return 'Saving...';
-			case 'saved':
-				return 'Saved!';
-			case 'error':
-				return 'Save Failed';
-			default:
-				return 'Save Notebook';
-		}
+		scheduleSave();
 	}
 </script>
 
-<div class="notebook p-4 space-y-4">
-	<input
-		type="text"
-		bind:value={notebook.title}
-		class="text-3xl font-bold bg-transparent border-b border-neutral-300 dark:border-neutral-700 p-2 w-full focus:ring-0 focus:outline-none focus:border-gold text-neutral-800 dark:text-neutral-300 placeholder-neutral-500"
-		placeholder="Untitled Notebook"
-	/>
-
-	<div class="controls space-x-2 flex items-center">
-		<button onclick={addInkSection} class="">Add Ink Section</button>
-		<button onclick={() => scheduleSave(true)} disabled={saveStatus === 'saving'} class="">
-			{getSaveStatusText()}
-		</button>
-		{#if saveStatus === 'error'}
-			<span class="text-red-500 text-sm">Error saving. Check console.</span>
+<div class="notebook max-w-4xl mx-auto p-4 pb-20">
+	<div class="mb-8 border-b border-neutral-200 dark:border-neutral-700 pb-4">
+		{#if !isReadOnly}
+			<input
+				type="text"
+				bind:value={notebook.title}
+				oninput={() => scheduleSave(false)}
+				class="text-4xl font-serif font-bold bg-transparent w-full focus:outline-none placeholder-neutral-400 text-neutral-900 dark:text-neutral-100"
+				placeholder="Notebook Title"
+			/>
+			<div class="flex gap-2 mt-2 text-sm">
+				<span class="text-xs uppercase tracking-wider text-neutral-500 self-center">
+					{saveStatus === 'saving' ? 'Saving...' : saveStatus === 'saved' ? 'All changes saved' : ''}
+				</span>
+			</div>
+		{:else}
+			<h1 class="text-4xl font-serif font-bold text-neutral-900 dark:text-neutral-100">
+				{notebook.title}
+			</h1>
+			<p class="text-sm text-neutral-500 mt-1">Read-only View</p>
 		{/if}
 	</div>
 
-	{#each notebook.sections as section (section.id)}
-		<div class="section-container border-t pt-4">
-			<h2 class="text-xs uppercase text-neutral-500 mb-2">
-				Section: {section.type} (ID: {section.id.substring(0, 4)})
-			</h2>
-			{#if section.type === 'ink'}
-				<SectionInk
-					bind:this={sectionRefs[section.id]}
-					content={section.versions[section.versions.length - 1]
-						.content as import('$lib/types/notebook').InkContent}
-					onchange={() => scheduleSave(false)}
-				/>
-			{:else if section.type === 'markdown'}
-				<p class="text-neutral-400 italic">(Markdown section stub)</p>
-			{:else if section.type === 'code'}
-				<p class="text-neutral-400 italic">(Code section stub)</p>
-			{:else if section.type === 'title'}
-				<p class="text-neutral-400 italic">(Title section stub)</p>
-			{/if}
-		</div>
-	{/each}
+	<div class="space-y-8">
+		{#each notebook.sections as section (section.id)}
+			<div
+				animate:flip={{ duration: 300 }}
+				class="section-wrapper relative group"
+				draggable={!isReadOnly}
+				role="listitem" 
+				ondragstart={(e) => handleDragStart(e, section.id)}
+				ondragover={(e) => handleDragOver(e, section.id)}
+				ondrop={handleDrop}
+			>
+				{#if !isReadOnly}
+					<div class="absolute -left-8 top-4 p-2 cursor-move opacity-0 group-hover:opacity-100 text-neutral-400 hover:text-neutral-600 transition-opacity">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="12" r="1"/><circle cx="9" cy="5" r="1"/><circle cx="9" cy="19" r="1"/><circle cx="15" cy="12" r="1"/><circle cx="15" cy="5" r="1"/><circle cx="15" cy="19" r="1"/></svg>
+					</div>
+				{/if}
 
-	{#if !editorSecret}
-		<div class="mt-4 p-3 bg-yellow-100 border border-yellow-300 rounded text-yellow-800 text-sm">
-			No editor secret found. Saving is disabled.
+				{#if section.type === 'ink'}
+					<SectionInk
+						bind:this={sectionRefs[section.id]}
+						content={section.versions[section.versions.length - 1].content as import('$lib/types/notebook').InkContent}
+						readOnly={isReadOnly}
+						onchange={() => scheduleSave(false)}
+					/>
+				{:else if section.type === 'markdown'}
+					<div class="p-4 border border-dashed rounded text-neutral-500">Markdown Section (Coming Soon)</div>
+				{/if}
+			</div>
+		{/each}
+	</div>
+
+	{#if !isReadOnly}
+		<div class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-neutral-900 text-white px-4 py-2 rounded-full shadow-xl flex gap-4 z-50">
+			<button onclick={() => addSection('ink')} class="hover:text-gold font-medium flex items-center gap-2">
+				<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+				Add Page
+			</button>
 		</div>
 	{/if}
 </div>
@@ -2548,206 +2549,258 @@ export {};
 <script lang="ts">
 	import type { Stroke, Point, InkContent } from '$lib/types/notebook';
 	import { generateUUID } from '$lib/utils/uuid';
+	import { getSvgPathFromStroke } from '$lib/utils/stroke';
 	import { tick } from 'svelte';
 
 	let {
 		content,
+		readOnly = false,
 		onchange = () => {}
 	}: {
 		content: InkContent;
+		readOnly?: boolean;
 		onchange?: () => void;
 	} = $props();
 
-	let svgElement: SVGSVGElement | undefined = $state();
-	let currentStroke: Stroke | null = $state(null);
+	let svgElement = $state<SVGSVGElement>();
+	let currentStroke = $state<Stroke | null>(null);
 	let isDrawing = $state(false);
 
-	const backgroundColor = '#000000';
-	const colors = [
-		{ name: 'White', value: '#FFFFFF' },
-		{ name: 'Blue', value: '#0000FF' },
-		{ name: 'Orange', value: '#FFA500' },
-		{ name: 'Green', value: '#008000' },
-		{ name: 'Yellow', value: '#FFFF00' }
-	];
-	let selectedColor = $state(colors[0].value);
-	let selectedWidth = $state(2);
-	let tool = $state<'pen' | 'eraser'>('pen');
-
-	// This is the local source of truth for strokes.
-	// It's initialized from the `content` prop *only when the component is first created*.
+	// Local state initialized from props
 	let strokes = $state<Stroke[]>(content?.strokes || []);
 
-	// --- FIX: The problematic $effect has been removed. ---
-	// The `content` prop is only used for initialization.
-	// After that, this component is the "owner" of the strokes state
-	// and only reports changes up to the parent via `onchange`.
-	// This prevents the parent from overwriting the local state after a save.
+	// Tools configuration
+	const tools = {
+		pen: { size: 8, thinning: 0.5, smoothing: 0.5, streamline: 0.5 },
+		highlighter: { size: 25, thinning: 0, smoothing: 0.5, streamline: 0.5 }, // Thicker, constant width
+		eraser: { size: 30 } // Eraser logic handled differently
+	};
 
-	function getPathData(stroke: Stroke): string {
-		if (!stroke || stroke.points.length === 0) return '';
-		let d = `M ${stroke.points[0].x} ${stroke.points[0].y}`;
-		for (let i = 1; i < stroke.points.length; i++) {
-			d += ` L ${stroke.points[i].x} ${stroke.points[i].y}`;
-		}
-		return d;
-	}
+	let tool = $state<'pen' | 'highlighter' | 'eraser'>('pen');
+	let selectedColor = $state('#FFFFFF'); // Default White for dark mode
 
-	function getPointerPosition(event: PointerEvent): { x: number; y: number } {
-		if (!svgElement) return { x: 0, y: 0 };
+	const colors = [
+		{ name: 'White', value: '#FFFFFF' }, // Good for dark mode
+		{ name: 'Black', value: '#000000' }, // Good for light mode
+		{ name: 'Blue', value: '#3b82f6' },
+		{ name: 'Red', value: '#ef4444' },
+		{ name: 'Gold', value: '#D4AF47' }
+	];
+
+	const highlighterColors = [
+		{ name: 'Yellow', value: '#facc15' },
+		{ name: 'Green', value: '#4ade80' },
+		{ name: 'Pink', value: '#f472b6' }
+	];
+
+	function getPointerPosition(event: PointerEvent): Point {
+		if (!svgElement) return { x: 0, y: 0, p: 0.5, t: Date.now() }; // Add t here
 		const rect = svgElement.getBoundingClientRect();
-		const container = svgElement.parentElement;
-		const scrollTop = container?.scrollTop || 0;
 		return {
 			x: event.clientX - rect.left,
-			y: event.clientY - rect.top + scrollTop
+			y: event.clientY - rect.top,
+			p: event.pressure,
+			t: Date.now() 
 		};
 	}
 
 	function handlePointerDown(event: PointerEvent) {
-		if (!svgElement || event.button !== 0) return;
+		if (readOnly || event.button !== 0 || !svgElement) return;
+		
 		isDrawing = true;
 		svgElement.setPointerCapture(event.pointerId);
+		const point = getPointerPosition(event);
 
-		const { x, y } = getPointerPosition(event);
-		const newPoint: Point = { x, y, t: Date.now(), p: event.pressure };
+		// Eraser Logic: Click to erase
+		if (tool === 'eraser') {
+			eraseAt(point);
+			return;
+		}
 
+		// Pen/Highlighter Logic
 		currentStroke = {
 			id: generateUUID(),
-			points: [newPoint],
-			color: tool === 'eraser' ? backgroundColor : selectedColor,
-			width: tool === 'eraser' ? 20 : selectedWidth
+			points: [point],
+			color: tool === 'highlighter' ? selectedColor : selectedColor,
+			width: tools[tool].size,
+			// We store the type to know how to render it later
+			type: tool 
 		};
 	}
 
 	function handlePointerMove(event: PointerEvent) {
-		if (!isDrawing || !currentStroke) return;
-		const { x, y } = getPointerPosition(event);
-		const newPoint: Point = { x, y, t: Date.now(), p: event.pressure };
-		currentStroke.points.push(newPoint);
-		currentStroke = currentStroke; // Trigger reactivity
+		if (!isDrawing || !svgElement) return;
+		
+		// Coalesced events for smoother curves on high-refresh tablets (Tab S9)
+		const events = event.getCoalescedEvents();
+		
+		if (tool === 'eraser') {
+			eraseAt(getPointerPosition(event));
+			return;
+		}
+
+		if (currentStroke) {
+			// Add all coalesced points for higher fidelity
+			for (const e of events) {
+				currentStroke.points.push(getPointerPosition(e));
+			}
+			// Trigger reactivity
+			currentStroke = currentStroke; 
+		}
 	}
 
 	async function handlePointerUp(event: PointerEvent) {
-		if (!isDrawing || !currentStroke) return;
+		if (!isDrawing) return;
 		isDrawing = false;
 		svgElement?.releasePointerCapture(event.pointerId);
 
-		if (currentStroke.points.length > 1) {
+		if (currentStroke && tool !== 'eraser') {
 			strokes = [...strokes, currentStroke];
 		}
-		currentStroke = null;
 		
-		// Wait for Svelte to apply the state change
+		currentStroke = null;
 		await tick();
-		// NOW fire onchange, so the parent reads the *new* state
 		onchange();
 	}
 
-	async function undo() {
+	function eraseAt(point: Point) {
+		// Simple eraser: remove stroke if the point is close to any point in the stroke
+		// Optimization: This is O(N*M) which is heavy. Ideally use a spatial index (Quadtree) later.
+		const threshold = 20; 
+		const initialLength = strokes.length;
+
+		strokes = strokes.filter(stroke => {
+			// Bounding box check first (optimization)
+			const minX = Math.min(...stroke.points.map(p => p.x));
+			const maxX = Math.max(...stroke.points.map(p => p.x));
+			const minY = Math.min(...stroke.points.map(p => p.y));
+			const maxY = Math.max(...stroke.points.map(p => p.y));
+
+			if (point.x < minX - threshold || point.x > maxX + threshold || 
+				point.y < minY - threshold || point.y > maxY + threshold) {
+				return true; // Keep stroke
+			}
+
+			// Detailed check
+			return !stroke.points.some(p => Math.hypot(p.x - point.x, p.y - point.y) < threshold);
+		});
+
+		if (strokes.length !== initialLength) {
+			onchange();
+		}
+	}
+
+	function setTool(t: 'pen' | 'highlighter' | 'eraser', color?: string) {
+		tool = t;
+		if (color) selectedColor = color;
+		// Set default highlighter color if switching to it without specific color
+		if (t === 'highlighter' && !highlighterColors.find(c => c.value === selectedColor)) {
+			selectedColor = highlighterColors[0].value;
+		}
+		// Set default pen color if switching back
+		if (t === 'pen' && !colors.find(c => c.value === selectedColor)) {
+			selectedColor = colors[0].value;
+		}
+	}
+
+	function undo() {
 		if (strokes.length === 0) return;
 		strokes = strokes.slice(0, -1);
-		
-		// Wait for Svelte to apply the state change
-		await tick();
-		// NOW fire onchange
 		onchange();
 	}
 
-	function selectColor(color: string) {
-		tool = 'pen';
-		selectedColor = color;
-		selectedWidth = color === '#FFFF00' ? 4 : 2;
-	}
-
-	function selectEraser() {
-		tool = 'eraser';
-		selectedWidth = 20;
-	}
-
+	// Export for parent to save
 	export function getCurrentContent(): InkContent {
-		// This will now correctly return the updated strokes
-		return { strokes: strokes };
+		return { strokes };
 	}
 </script>
 
-<div
-	class="ink-section-container border border-neutral-300 dark:border-neutral-700 rounded bg-neutral-900 flex flex-col"
-	style="height: 75vh;"
->
-	<div
-		class="toolbar sticky top-0 z-10 p-2 flex gap-2 border-b border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 flex-shrink-0"
+<div class="ink-wrapper relative w-full bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-lg overflow-hidden">
+	
+	{#if !readOnly}
+		<div class="toolbar absolute top-4 left-1/2 -translate-x-1/2 flex items-center gap-2 p-2 bg-white/90 dark:bg-neutral-800/90 backdrop-blur shadow-lg rounded-full border border-neutral-200 dark:border-neutral-700 z-20">
+			
+			<div class="flex gap-1 pr-2 border-r border-neutral-300 dark:border-neutral-600">
+				{#each colors as color}
+					<button
+						onclick={() => setTool('pen', color.value)}
+						class="w-6 h-6 rounded-full border transition-transform hover:scale-110 focus:outline-none"
+						class:scale-110={tool === 'pen' && selectedColor === color.value}
+						class:ring-2={tool === 'pen' && selectedColor === color.value}
+						class:ring-neutral-400={tool === 'pen' && selectedColor === color.value}
+						style="background-color: {color.value}; border-color: {color.value === '#FFFFFF' ? '#ccc' : 'transparent'}"
+						aria-label="Pen {color.name}"
+					></button>
+				{/each}
+			</div>
+
+			<div class="flex gap-1 pr-2 border-r border-neutral-300 dark:border-neutral-600">
+				{#each highlighterColors as color}
+					<button
+						onclick={() => setTool('highlighter', color.value)}
+						class="w-6 h-6 rounded-sm opacity-80 transition-transform hover:scale-110 focus:outline-none"
+						class:scale-110={tool === 'highlighter' && selectedColor === color.value}
+						class:ring-2={tool === 'highlighter' && selectedColor === color.value}
+						class:ring-neutral-400={tool === 'highlighter' && selectedColor === color.value}
+						style="background-color: {color.value};"
+						aria-label="Highlighter {color.name}"
+					></button>
+				{/each}
+			</div>
+
+			<button 
+				onclick={() => setTool('eraser')}
+				class="p-1.5 rounded-full hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors"
+				class:bg-neutral-200={tool === 'eraser'}
+				class:dark:bg-neutral-700={tool === 'eraser'}
+				aria-label="Eraser"
+			>
+				<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 21-4.3-4.3c-1-1-1-2.5 0-3.4l9.6-9.6c1-1 2.5-1 3.4 0l5.6 5.6c1 1 1 2.5 0 3.4L13 21"/><path d="M22 21H7"/><path d="m5 11 9 9"/></svg>
+			</button>
+
+			<button 
+				onclick={undo}
+				class="p-1.5 rounded-full hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors"
+				aria-label="Undo"
+			>
+				<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v6h6"/><path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"/></svg>
+			</button>
+		</div>
+	{/if}
+
+	<svg
+		bind:this={svgElement}
+		class="w-full h-[800px] cursor-crosshair touch-none"
+		onpointerdown={handlePointerDown}
+		onpointermove={handlePointerMove}
+		onpointerup={handlePointerUp}
+		onpointerleave={handlePointerUp}
+		onpointercancel={handlePointerUp}
 	>
-		{#each colors as color (color.value)}
-			<button
-				title={color.name}
-				onclick={() => selectColor(color.value)}
-				class="w-6 h-6 rounded-full border-2"
-				class:border-blue-500={tool === 'pen' && selectedColor === color.value}
-				class:border-neutral-300={tool !== 'pen' || selectedColor !== color.value}
-				style="background-color: {color.value};"
-				aria-label="Select {color.name} ink"
-			></button>
+		{#each strokes.filter(s => s.type === 'highlighter' || (s.width > 10 && !s.type)) as stroke (stroke.id)}
+			<path
+				d={getSvgPathFromStroke(stroke.points, tools.highlighter)}
+				fill={stroke.color}
+				opacity="0.4"
+				style="mix-blend-mode: multiply;" 
+			/>
 		{/each}
 
-		<div class="border-l border-neutral-300 dark:border-neutral-600 mx-1"></div>
+		{#each strokes.filter(s => s.type !== 'highlighter' && (!s.width || s.width <= 10)) as stroke (stroke.id)}
+			<path
+				d={getSvgPathFromStroke(stroke.points, tools.pen)}
+				fill={stroke.color}
+			/>
+		{/each}
 
-		<button
-			title="Eraser"
-			onclick={selectEraser}
-			class:border-blue-500={tool === 'eraser'}
-			class:border-neutral-300={tool !== 'eraser'}
-			class="px-2 py-0 h-6 text-sm text-neutral-700 dark:text-neutral-200 bg-neutral-100 dark:bg-neutral-700 rounded border flex items-center justify-center"
-			aria-label="Select Eraser"
-		>
-			Eraser
-		</button>
-
-		<button
-			title="Undo"
-			onclick={undo}
-			class="px-2 py-0 h-6 text-sm text-neutral-700 dark:text-neutral-200 bg-neutral-100 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 flex items-center justify-center"
-			aria-label="Undo last stroke"
-		>
-			Undo
-		</button>
-	</div>
-
-	<div class="overflow-y-auto w-full flex-grow">
-		<svg
-			bind:this={svgElement}
-			class="w-full"
-			onpointerdown={handlePointerDown}
-			onpointermove={handlePointerMove}
-			onpointerup={handlePointerUp}
-			onpointerleave={handlePointerUp}
-			onpointercancel={handlePointerUp}
-			style="touch-action: none; background-color: {backgroundColor}; height: 1500px;"
-		>
-			{#each strokes as stroke (stroke.id)}
-				<path
-					d={getPathData(stroke)}
-					stroke={stroke.color}
-					stroke-width={stroke.width}
-					fill="none"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-				/>
-			{/each}
-
-			{#if currentStroke && currentStroke.points.length > 0}
-				<path
-					d={getPathData(currentStroke)}
-					stroke={tool === 'eraser' ? backgroundColor : currentStroke.color}
-					stroke-width={currentStroke.width}
-					fill="none"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					opacity="0.8"
-				/>
-			{/if}
-		</svg>
-	</div>
+		{#if currentStroke}
+			<path
+				d={getSvgPathFromStroke(currentStroke.points, tools[tool])}
+				fill={currentStroke.color}
+				opacity={tool === 'highlighter' ? 0.4 : 1}
+			/>
+		{/if}
+	</svg>
 </div>
 
 # File: src/lib/components/OnThisPage.svelte
@@ -3311,6 +3364,18 @@ layout: false
 	{/if}
 </div>
 
+# File: src/lib/components/ui/TranslucentBox.svelte
+
+<script lang="ts">
+	import type { Snippet } from 'svelte'; 
+
+	let { children }: { children: Snippet } = $props();
+</script>
+
+<div class="translucent-box">
+	{@render children()} 
+</div>
+
 # File: src/lib/config.ts
 
 export const SITE_URL = 'https://suvroghosh.blog';
@@ -3395,10 +3460,10 @@ export const topics: Topic[] = [
 // place files you want to import through the `$lib` alias in this folder.
 
 
-# File: src/lib/posts/reflections-on-a-schoolboys-past.md
+# File: src/lib/posts/Reflections.md
 
 ---
-title: "Reflections on a Schoolboy's Past"
+title: "Reflections"
 thumbnail: "/images/IMG-20251012-WA0004.jpg"
 description: "A complicated palimpsest of ambition, triumph, misadventures, romance, then—shame, regrets—most now like old luggage tags, expired or useless."
 category: 'personal'
@@ -3408,44 +3473,8 @@ published: true
     import Ytp from '$lib/components/blog/YouTubePlayer.svelte';
 </script> 
     
-**Old picture when I used to drive 260 km between Austin San Antonio 3 times a week, I did this for years.**
-![Old picture when I used to drive 260 km between Austin San Antonio 3 times a week, I did this for years.](/images/IMG-20251012-WA0004.jpg) 
 
-Like many, I remember school through a veil of years of indifference to childhood memories that grownups, at a certain point, must admit to, and I do unhesitatingly, but mine are a complicated palimpsest of ambition, triumph, misadventures, romance, then—shame, regrets—most now like old luggage tags, expired or useless to recount. I confess, as useless as perhaps the utility for, or the importance of, the places and characters and several linked trivia that I sometimes wake up to, wade, and wallow in, now that I am fifty.
 
-My past is ancient and present is a mystery speeding past; I live now mostly to <em>live</em>, really—to barely escape frequent and routine annihilation, survive to remember and recollect the person I am, I was, I once wanted to be—inadvertently became, on the way to be—a leery litany of metamorphosis of a self that mostly started and remained unchanged at the core—which was a fledgling when I became a schoolboy to begin with and started to think, first feel, of course—mainly, in my case, see through thick myopia-correcting glasses—a visual person, and in my particular case, overthink the still-uncorrected blurry—cerebrally—the world through the senses, through the then immature prefrontal and amygdalian theaters of rehearsed endorsements. It happened in a shockingly short span, then weirdly in a longish sort of lifetime after—that I’m only now able to reconstruct into the surreal absurdity I had managed to bungle myself into being.
-
-And although the seeds of this blog are repressively buried in my depressive, ruminative reading and manic book purchases at several *Half-Price Books*, *Barnes and Nobles* or *Borders* in San Antonio and Austin where I justified my existential merit *only* as an obsessed bibliophile and tsundoku, I want to start with what ordinarily is the start—my first memories of growing up in Calcutta. I have an embarrassing memory of a very early male size comparison shame, while playing with my sprinkler on the nursery kindergarten back drain wall—the competition was a boy who was quite a bit big-boned and larger than several jiggling animated adipose protuberance exhibitions—nursery nuisances that litter such pigsties. But what had also caught my attention and had stayed to this day was—his sprinkler was not only endowed with <em>bigger</em> plumbing with ginormous dark velvety spheres, the resulting stream from the hydrology that came out unthrottled was thicker, more unbidden, forceful, and painted the wall with such yellow ferocity that the reflected spray made me notice his assets with awe. I have no way of going back and sifting through that particular memory's soaked sodden soil, a kid's private memory <em>this</em>—I didn't share with even my mother—who at the time was my only confidante. But toilet, or rather the anathema of an always overflowing unkempt school loo, forced me to teach myself to hold my bowels. On two occasions I couldn't, and I defecated in my school half-pants, unable to hold it, as far as I can recollect, trying to keep composure on a waddling dilapidated hand-pulled rickshaw—these my mother can submit affidavits if required. Poor woman, this is back in the day when the washing machine wasn't even in the impoverished imagination of the north calcutta middle class, and we weren't that affluent to have maids to do any cleaning up after us.
-
-There was one more occasion when it could have ended well, except it didn't—that a city of joy rarely has its college street english bookstores' makeshift shanty loos equipped to flush fresh fetid feces—aggravating a nervous and nerve-racked boy without a way to clean his gentle bottom. When I reported this inadequacy of the establishment to the ungrateful shop clerk, he demanded I lug a heavy, leaky balti, descriptive of poverty, half across the street in my english medium school dress, so I fled as fast as my unwashed bottom would allow. I went as part of a group of kids who, although were all my age (Section B), did not seem to have the same digestive or excretory system that, from time to time, in my case, asserted that matter came in three states, and all the states were in fact coming out of some portion of my rear, all the time!
-
-So that's what sort of started me—startled with the disequilibrium with looks, size, shape, velocity, and power in the gossipy, everyday, ordinary of this, what I eventually understood to be an extraordinary world, and this inconvenient discovery has stuck as I found out I am, in man's limited prowess over the middling distances, an extremely lilliputian man in every way, shape, and form, and to this day—especially as a redundant and reduced bengali, that is where I am. It's neither an avowal of guilt nor of defeat—there are no adversaries to speak of except an individual's own inhibition in most circumstances. But I like to recognize the dismal parts for what they are, not for what I wish them to be—and therefore, in introspections, I've found the weaknesses in me are my strength, because that's what's authentic.
-
-People in the world—tragically, in the holy land I dwell especially—who have lower melanin or somewhat symmetrical distribution of skin and adipose around elevated cheekbones, standing a few inches above the median statistical height or fitting within a few inches smaller than the width of the median dress size—are propitiated by the population that lack these characteristics. This asymmetrical distribution in coveting is what causes the lifespan of some of us to get affected destructively by a devoted and toxic societal perusal of compensatory activities to match the deficiency with wealth, power, education, and other biologically inaccessible accouterments. I was like the majority in this common herd, trying hard to make up for all the deficiencies in the only way I knew how—by reading books. You reach heights in civilization or find mates with luscious curves only if you have, say, the torso of a Greco-Roman statue or like Tarzan the Ape Man, while if you're short-statured, melanin-rich, sans the golden ratios in appointed parts, and mumble inaudibly constantly a jumbled plaintive monotone in effeminate whispers—you're destined to die of undiscovery and ignominy, blatant racism—or put a star before the -ism, for in these matters, placeholders are your friend.
-
-This compensatory curriculum I started very early. My mother started me at age two—first, I gather, by reading the books to me, which service was quickly unnecessary as my neurons were quick to pick up the linguistic abilities. As far as I can tell, from very early on, I was thinking—a skill till today not at all a human requirement of any importance—and given to asking and not giving up if the answers didn't satisfy me—I was irritatingly insistent. I wouldn't call it either curiosity or pursuit of excellence, as at that age I had no clear scientific intimation of, say, which side was in and which was out, except that there was a pattern of in and out and accompanying smell—good and bad—and specific rooms in which these activities were encouraged.
-
-This is how, as a child, I slowly started to grasp reality, and occasionally, by being obtrusive and arrogantly inquisitive through chains of whys which adults find irksome, I tried to dredge the benthic dregs lying neglected. They therefore avoided me and my inconvenient questions at all costs. I was given the terrace and a room in the attic. This garret is where I spent most of my time. It wasn't impossible to notice, even with a meristematic brain system, that cognitive ability of the deficient and dud subtypes were everywhere at play and I was expected to rote learn this systemic and constitutional anemic insufficiency to please the prevailing dogmatic adult supervisory overlords.
-
-Given how elementary the level of education in the Indian system is, in spite of the incredible amount of marketing disinformation willingly spread to glorify some form of Indian supremacy in the West—this is comical, if not farcical, in its irony, given that the English medium system I was enslaved in, or any denomination of modern education in India, is a British colonial legacy of efforts to squeeze local and cheaper clerks instead of the more expensive and often temporary ones of forcing Europeans in a hostile tropical climate. Even the British system came from a German system of indentured training programs.
-
-Conversely, this doesn't imply the Occident is superior in any subject—it's not, either. Homo sapiens is an ape which looks slightly different superficially and is found with various doses of self-esteem issues and delusions over various regions, and as you can expect, every region hypes its own abilities without any evidence. Historically, we sit on a biased landscape of exploitation and racism which has created generations of impoverished citizenry, which contrast when juxtaposed with those descended from the affluent and ruling generations. This asymmetrical skew will now get even more topsy-turvy, even tipsy, given synthetic intelligence will get added to the more affluent and already educated enough to reap its advantages first.
-
-So all the parochial supremacy of the Indian stock is false—anyone who puts in the hours can master a subject. I could too, and I did easily, and profligated most of the remaining time daydreaming or fornicating with my hand and endlessly worrying when touching the sphincter felt incredible or wondering cluelessly if the ejaculated fluid was a foreboding of cancer. Since all matter of excretion were bad, how could *this* feel so good, and *why* did it come about while cognitive diversions were guided carnally to the opposite side of the species? I couldn't figure this out, of course, till much later. I was, after all, at the age when you are desirous of base sixty mathematical systems, for the illicit illegitimate love attraction to the word part formed by the first three alphabets in its name engraved in my palpitating lover-boy libidinous lust-crazed heart.
-
-Those who prefer the opposite, longer-haired illusions of us for these cosmetic and meretricious patina of gloss—us cretins also misjudge melanin deficiency for superiority or experiments with holiness. We believe if white man George Harrison had condescended in his lyrics the coexistence of the dark-skinned mythological creation Krishna with the Christian mythology of white man Jesus, then they are both really real and there's a cowherd with methemoglobinemia and an antique flute and a schizophrenic carpenter stuck on a cross who live somewhere in Attapara in North Calcutta under some Bengali pseudonym.
-
-Thus our ability to get muddled works hand in hand with a corrupted framework of basic data, information, or knowledge, and we grow up on a pyramid of crumbling make-believe fiction and frequently conflate it with facts. Of course, no one wants to wake up next to a hag with no teeth, but even this logic is specious because—give enough time to Aishwarya Rai Bachchan to age and I promise you she'll be a hag with no teeth. The only way out is a stuffed doll or a girl robot, but that is not how your brain would like to accept it—your brain would know it's a thing, and because of its lack of consciousness, its participation as a partner is void. Wait a few more years until a girl robot can dump you; at that point, it won't be a thing anymore.
-
-I had also noticed adults insisted on covering up inconsistencies in their fictions with weaker tapestries of lies, and the separation of the ruling and the ruled was inherent in being party to this willed obfuscation or willing obeisance. This was fractally how society was structured at various levels—a distributed system of arranged or imposed parents and willing or subjugated children, at whatever level of fictional abstraction I looked: parent–child, of course, country leaders–citizen, company corporate vs. workers, religious elite priests and worshippers or the faithful, extending all the way to authors, artists, sportspersons and their consumers, teachers and students. The game was mainly lying and manipulation, with manicured gaslighting tweaked as per the needs of the specialty.
-
-The prevalence of mythology—emphasised and encouraged bias, or the absence of nuanced understanding of the operating models versus the indoctrinated and forced fictions—I saw created a hierarchy of flimflammery, superstitious jibber-jabber, pseudoscience, and an inflated sense of supercilious religious affirmation in Bengali society, which at that time was partly Marxist in Calcutta and wanted to hold on to atheism. And in spite of their efforts, most had too little reading in them to make up their mind and sociatal dialectics stood on the shoulders of glib non-sequiturs, ugly shrunken dwarfish ghouls that have multiplied since that time—a misunderstood disinformation of history mythology and fibs that my people feel foolishly obligated to be hypothecated to and fritter their lives away wallowing in the tragic smelly feces of what isn't true. I could never understand why being enamored with the softer sensibilities in music or even the illogical nostalgia for an unseen pristine superior Indian past needed to be so unmoored in reality—marinated in the garam-masala of useless local aphorisms, idioms and idiosyncrasies. I remember Darwin’s evolution was an optional chapter in my higher secondary biology contending with a subject as trivial as pisciculture—cosmology never entered the lexicon, and astronomy was synonymous with horoscopes, palmistry, and astrology. The Bengal I grew up in was in the eighties still really pre-Victorian, and now India, under the new religious right, has slid a few centuries back into an equivalent dark middle age—so much for moving forward. It’s all atavistic growth; appearances of gentrification, or any sophisticated sheen is patina, imported from outside the country.
-
-The thing about childhood is, in modern parlance, a song playlist impressed upon you that you are suddenly very fond of, or certain parts of which, based on what we can think at the time, grow seeds of nuanced distance or distaste. It’s only later, layer upon impressed layer again, year by year, that we gradually graduate into the terribly opinionated personality that we are. I admit not everyone is inflexible burnt toast—I wasn’t—but a few bitter experiences straightened me out. It was, in fact, in trying to get real close to reality as an entrepreneur that this rind-hardening was effected. I guess the quality of wood and shellac needed was already there; just some vigorous rubbing-in was all it took to give me that anti-reflective patina of shine-reflecting hard coating that is me. Can I go back from this hardened reticence to the loquacious milquetoast I once was? It would take illegal psychedelics, total amnesia, or a different rebirth—or all three, really.
-
-But in the end, what I'm trying to say in a long, winding way is that I did a lot of reading—and still read, to my mother's chagrin—that no, none of the readings I did do me any good as far as carrying out the original intention—I haven't accumulated any wealth or curvaceous mate, just books. Meritocracy is like a hoax you force on blind and disabled elderly in a care home—they can't ask for a refund. But I read, and this blog is where I share it. And not just books that I read—I travel, and work on interesting ideas or at least think about them, and want to share my personal life and work experiences and knowledge. And if my exposure can help someone like me back when I was little—a boy or girl growing up without a compass in Calcutta or elsewhere—I’d feel I did something right, for a change. Most human beings come incarcerated in their minds, their stories are therefore left untold, their imagination stay hidden—but I am articulate and I can draw droll caricatures, so I can bring my mind to you, and that's what this blog or some of its contents are about. It varies from exploratory non-fiction, formal prosaic posts, loose squibs, looser still dopey doggerels—hokey hawk tuahs, greasy sentiments in verse. A fair bit is in unparliamentary and unsavory diction that may peeve a lap dog, an uneducated mother, an easily offended belligerent female or bellicose feline, a crusty, dogmatic, obdurate, religious zealot, or an unscrupulous, rabid, political ideologue or corrupt politician. And to such people, might I therefore kindly request not to leave the comfort of their dopey dogma, or if they do, be sternly warned, *reading this blog of their own volition, after this point*, (although there's no such thing, free will is an illusion, but still I have to write this) their health and well-being is in their own two good hands, or three, if an indoctrinated, religious and fanatic AI is reading this. For anyone weening off, this blog isn't the first place to get shocked, please wander off to somewhere safer.
-
-People want to be infinitely entertained. They don’t want to go back to school or be informed about how you were molested—well, maybe only if you’re an attractive woman who can describe your bodily massacre in a way that gives the reader’s animal region the requisite blood flow. I know my blog posts are never going to be read, but I write them because I’m alive, and this is the only vent I have.
 
 
 # File: src/lib/posts.ts
@@ -4021,53 +4050,53 @@ export async function getAllNotebooks(): Promise<Array<Pick<Notebook, 'id' | 'ti
 # File: src/lib/types/notebook.ts
 
 // src/lib/types/notebook.ts
+
+// REPLACE the existing Point and Stroke interfaces with these:
 export interface Point {
 	x: number;
 	y: number;
-	t: number; // timestamp
-	p?: number; // pressure (optional)
+	t: number;      // Keep 't' required (timestamp) as per original code
+	p?: number;     // Pressure (0 to 1) - Optional
 }
 
 export interface Stroke {
-	id: string; // UUID for the stroke
+	id: string;
 	points: Point[];
 	color: string;
 	width: number;
+	type?: 'pen' | 'highlighter' | 'eraser'; // Add this new optional field
 }
 
+// Keep the rest of your file (InkContent, SectionType, etc.) exactly as is below...
 export interface InkContent {
 	strokes: Stroke[];
-	// Optional: Bounding box can be calculated on render or save
 	// bbox?: { x: number; y: number; w: number; h: number };
 }
 
-export type SectionType = 'ink' | 'markdown' | 'code' | 'title'; // | 'image' omitted for skeleton
+export type SectionType = 'ink' | 'markdown' | 'code' | 'title';
 
 export interface SectionVersion {
-	versionId: string; // UUID
-	changedAt: string; // ISO8601 timestamp
-	changeType: 'create' | 'edit'; // | 'reorder' | 'meta' omitted for skeleton
-	content: InkContent | { text: string } | { title: string }; // Simplified content types
+	versionId: string;
+	changedAt: string;
+	changeType: 'create' | 'edit';
+	content: InkContent | { text: string } | { title: string };
 }
 
 export interface Section {
-	id: string; // UUID
+	id: string;
 	type: SectionType;
-	orderIndex: number; // For ordering
-	createdAt: string; // ISO8601 timestamp
-	// createdBy: string; // Simplified for skeleton - add later with auth
-	versions: SectionVersion[]; // History of content, latest is current
+	orderIndex: number;
+	createdAt: string;
+	versions: SectionVersion[];
 }
 
 export interface Notebook {
-	id: string; // UUID
+	id: string;
 	title: string;
-	createdAt: string; // ISO8601 timestamp
-	// createdBy: string; // Simplified for skeleton - add later with auth
-	publishedAt: string | null; // ISO8601 timestamp or null
+	createdAt: string;
+	publishedAt: string | null;
 	sections: Section[];
-	// history: any[]; // Full notebook change history - omit for skeleton
-	meta?: Record<string, any>; // Optional metadata
+	meta?: Record<string, any>;
 }
 
 # File: src/lib/types.ts
@@ -4102,6 +4131,33 @@ export function calculateReadingTime(text: string): number {
 	const wordsPerMinute = 200;
 	const numberOfWords = text.split(/\s/g).length;
 	return Math.ceil(numberOfWords / wordsPerMinute);
+}
+
+# File: src/lib/utils/stroke.ts
+
+import { getStroke } from 'perfect-freehand';
+
+export interface Point {
+	x: number;
+	y: number;
+	p?: number; // Pressure
+}
+
+export function getSvgPathFromStroke(points: Point[], options: any = {}): string {
+	const stroke = getStroke(points, options);
+	if (!stroke.length) return '';
+
+	const d = stroke.reduce(
+		(acc, [x0, y0], i, arr) => {
+			const [x1, y1] = arr[(i + 1) % arr.length];
+			acc.push(x0, y0, (x0 + x1) / 2, (y1 + y0) / 2);
+			return acc;
+		},
+		['M', ...stroke[0], 'Q']
+	);
+
+	d.push('Z');
+	return d.join(' ');
 }
 
 # File: src/lib/utils/uuid.test.ts

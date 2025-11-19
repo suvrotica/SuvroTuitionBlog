@@ -64,6 +64,7 @@
 		"gray-matter": "^4.0.3",
 		"mermaid": "^11.9.0",
 		"p5": "^2.0.3",
+		"perfect-freehand": "^1.2.2",
 		"rehype-autolink-headings": "^7.1.0",
 		"remark-frontmatter": "^5.0.0",
 		"remark-gfm": "^4.0.1",

@@ -309,3 +309,6 @@ pre.shiki { @apply p-4 rounded-lg overflow-x-auto; }
 		backdrop-blur-sm shadow-md
 		text-justify text-base leading-relaxed text-neutral-800 subpixel-antialiased dark:text-neutral-300; 
 }
+
+.cursor-crosshair { cursor: crosshair; }
+.touch-none { touch-action: none; }

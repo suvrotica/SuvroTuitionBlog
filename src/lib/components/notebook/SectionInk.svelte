@@ -1,204 +1,256 @@
 <script lang="ts">
 	import type { Stroke, Point, InkContent } from '$lib/types/notebook';
 	import { generateUUID } from '$lib/utils/uuid';
+	import { getSvgPathFromStroke } from '$lib/utils/stroke';
 	import { tick } from 'svelte';
 
 	let {
 		content,
+		readOnly = false,
 		onchange = () => {}
 	}: {
 		content: InkContent;
+		readOnly?: boolean;
 		onchange?: () => void;
 	} = $props();
 
-	let svgElement: SVGSVGElement | undefined = $state();
-	let currentStroke: Stroke | null = $state(null);
+	let svgElement = $state<SVGSVGElement>();
+	let currentStroke = $state<Stroke | null>(null);
 	let isDrawing = $state(false);
 
-	const backgroundColor = '#000000';
-	const colors = [
-		{ name: 'White', value: '#FFFFFF' },
-		{ name: 'Blue', value: '#0000FF' },
-		{ name: 'Orange', value: '#FFA500' },
-		{ name: 'Green', value: '#008000' },
-		{ name: 'Yellow', value: '#FFFF00' }
-	];
-	let selectedColor = $state(colors[0].value);
-	let selectedWidth = $state(2);
-	let tool = $state<'pen' | 'eraser'>('pen');
-
-	// This is the local source of truth for strokes.
-	// It's initialized from the `content` prop *only when the component is first created*.
+	// Local state initialized from props
 	let strokes = $state<Stroke[]>(content?.strokes || []);
 
-	// --- FIX: The problematic $effect has been removed. ---
-	// The `content` prop is only used for initialization.
-	// After that, this component is the "owner" of the strokes state
-	// and only reports changes up to the parent via `onchange`.
-	// This prevents the parent from overwriting the local state after a save.
+	// Tools configuration
+	const tools = {
+		pen: { size: 8, thinning: 0.5, smoothing: 0.5, streamline: 0.5 },
+		highlighter: { size: 25, thinning: 0, smoothing: 0.5, streamline: 0.5 }, // Thicker, constant width
+		eraser: { size: 30 } // Eraser logic handled differently
+	};
 
-	function getPathData(stroke: Stroke): string {
-		if (!stroke || stroke.points.length === 0) return '';
-		let d = `M ${stroke.points[0].x} ${stroke.points[0].y}`;
-		for (let i = 1; i < stroke.points.length; i++) {
-			d += ` L ${stroke.points[i].x} ${stroke.points[i].y}`;
-		}
-		return d;
-	}
+	let tool = $state<'pen' | 'highlighter' | 'eraser'>('pen');
+	let selectedColor = $state('#FFFFFF'); // Default White for dark mode
 
-	function getPointerPosition(event: PointerEvent): { x: number; y: number } {
-		if (!svgElement) return { x: 0, y: 0 };
+	const colors = [
+		{ name: 'White', value: '#FFFFFF' }, // Good for dark mode
+		{ name: 'Black', value: '#000000' }, // Good for light mode
+		{ name: 'Blue', value: '#3b82f6' },
+		{ name: 'Red', value: '#ef4444' },
+		{ name: 'Gold', value: '#D4AF47' }
+	];
+
+	const highlighterColors = [
+		{ name: 'Yellow', value: '#facc15' },
+		{ name: 'Green', value: '#4ade80' },
+		{ name: 'Pink', value: '#f472b6' }
+	];
+
+	function getPointerPosition(event: PointerEvent): Point {
+		if (!svgElement) return { x: 0, y: 0, p: 0.5, t: Date.now() }; // Add t here
 		const rect = svgElement.getBoundingClientRect();
-		const container = svgElement.parentElement;
-		const scrollTop = container?.scrollTop || 0;
 		return {
 			x: event.clientX - rect.left,
-			y: event.clientY - rect.top + scrollTop
+			y: event.clientY - rect.top,
+			p: event.pressure,
+			t: Date.now() 
 		};
 	}
 
 	function handlePointerDown(event: PointerEvent) {
-		if (!svgElement || event.button !== 0) return;
+		if (readOnly || event.button !== 0 || !svgElement) return;
+		
 		isDrawing = true;
 		svgElement.setPointerCapture(event.pointerId);
+		const point = getPointerPosition(event);
 
-		const { x, y } = getPointerPosition(event);
-		const newPoint: Point = { x, y, t: Date.now(), p: event.pressure };
+		// Eraser Logic: Click to erase
+		if (tool === 'eraser') {
+			eraseAt(point);
+			return;
+		}
 
+		// Pen/Highlighter Logic
 		currentStroke = {
 			id: generateUUID(),
-			points: [newPoint],
-			color: tool === 'eraser' ? backgroundColor : selectedColor,
-			width: tool === 'eraser' ? 20 : selectedWidth
+			points: [point],
+			color: tool === 'highlighter' ? selectedColor : selectedColor,
+			width: tools[tool].size,
+			// We store the type to know how to render it later
+			type: tool 
 		};
 	}
 
 	function handlePointerMove(event: PointerEvent) {
-		if (!isDrawing || !currentStroke) return;
-		const { x, y } = getPointerPosition(event);
-		const newPoint: Point = { x, y, t: Date.now(), p: event.pressure };
-		currentStroke.points.push(newPoint);
-		currentStroke = currentStroke; // Trigger reactivity
+		if (!isDrawing || !svgElement) return;
+		
+		// Coalesced events for smoother curves on high-refresh tablets (Tab S9)
+		const events = event.getCoalescedEvents();
+		
+		if (tool === 'eraser') {
+			eraseAt(getPointerPosition(event));
+			return;
+		}
+
+		if (currentStroke) {
+			// Add all coalesced points for higher fidelity
+			for (const e of events) {
+				currentStroke.points.push(getPointerPosition(e));
+			}
+			// Trigger reactivity
+			currentStroke = currentStroke; 
+		}
 	}
 
 	async function handlePointerUp(event: PointerEvent) {
-		if (!isDrawing || !currentStroke) return;
+		if (!isDrawing) return;
 		isDrawing = false;
 		svgElement?.releasePointerCapture(event.pointerId);
 
-		if (currentStroke.points.length > 1) {
+		if (currentStroke && tool !== 'eraser') {
 			strokes = [...strokes, currentStroke];
 		}
-		currentStroke = null;
 		
-		// Wait for Svelte to apply the state change
+		currentStroke = null;
 		await tick();
-		// NOW fire onchange, so the parent reads the *new* state
 		onchange();
 	}
 
-	async function undo() {
+	function eraseAt(point: Point) {
+		// Simple eraser: remove stroke if the point is close to any point in the stroke
+		// Optimization: This is O(N*M) which is heavy. Ideally use a spatial index (Quadtree) later.
+		const threshold = 20; 
+		const initialLength = strokes.length;
+
+		strokes = strokes.filter(stroke => {
+			// Bounding box check first (optimization)
+			const minX = Math.min(...stroke.points.map(p => p.x));
+			const maxX = Math.max(...stroke.points.map(p => p.x));
+			const minY = Math.min(...stroke.points.map(p => p.y));
+			const maxY = Math.max(...stroke.points.map(p => p.y));
+
+			if (point.x < minX - threshold || point.x > maxX + threshold || 
+				point.y < minY - threshold || point.y > maxY + threshold) {
+				return true; // Keep stroke
+			}
+
+			// Detailed check
+			return !stroke.points.some(p => Math.hypot(p.x - point.x, p.y - point.y) < threshold);
+		});
+
+		if (strokes.length !== initialLength) {
+			onchange();
+		}
+	}
+
+	function setTool(t: 'pen' | 'highlighter' | 'eraser', color?: string) {
+		tool = t;
+		if (color) selectedColor = color;
+		// Set default highlighter color if switching to it without specific color
+		if (t === 'highlighter' && !highlighterColors.find(c => c.value === selectedColor)) {
+			selectedColor = highlighterColors[0].value;
+		}
+		// Set default pen color if switching back
+		if (t === 'pen' && !colors.find(c => c.value === selectedColor)) {
+			selectedColor = colors[0].value;
+		}
+	}
+
+	function undo() {
 		if (strokes.length === 0) return;
 		strokes = strokes.slice(0, -1);
-		
-		// Wait for Svelte to apply the state change
-		await tick();
-		// NOW fire onchange
 		onchange();
 	}
 
-	function selectColor(color: string) {
-		tool = 'pen';
-		selectedColor = color;
-		selectedWidth = color === '#FFFF00' ? 4 : 2;
-	}
-
-	function selectEraser() {
-		tool = 'eraser';
-		selectedWidth = 20;
-	}
-
+	// Export for parent to save
 	export function getCurrentContent(): InkContent {
-		// This will now correctly return the updated strokes
-		return { strokes: strokes };
+		return { strokes };
 	}
 </script>
 
-<div
-	class="ink-section-container border border-neutral-300 dark:border-neutral-700 rounded bg-neutral-900 flex flex-col"
-	style="height: 75vh;"
->
-	<div
-		class="toolbar sticky top-0 z-10 p-2 flex gap-2 border-b border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 flex-shrink-0"
+<div class="ink-wrapper relative w-full bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-lg overflow-hidden">
+	
+	{#if !readOnly}
+		<div class="toolbar absolute top-4 left-1/2 -translate-x-1/2 flex items-center gap-2 p-2 bg-white/90 dark:bg-neutral-800/90 backdrop-blur shadow-lg rounded-full border border-neutral-200 dark:border-neutral-700 z-20">
+			
+			<div class="flex gap-1 pr-2 border-r border-neutral-300 dark:border-neutral-600">
+				{#each colors as color}
+					<button
+						onclick={() => setTool('pen', color.value)}
+						class="w-6 h-6 rounded-full border transition-transform hover:scale-110 focus:outline-none"
+						class:scale-110={tool === 'pen' && selectedColor === color.value}
+						class:ring-2={tool === 'pen' && selectedColor === color.value}
+						class:ring-neutral-400={tool === 'pen' && selectedColor === color.value}
+						style="background-color: {color.value}; border-color: {color.value === '#FFFFFF' ? '#ccc' : 'transparent'}"
+						aria-label="Pen {color.name}"
+					></button>
+				{/each}
+			</div>
+
+			<div class="flex gap-1 pr-2 border-r border-neutral-300 dark:border-neutral-600">
+				{#each highlighterColors as color}
+					<button
+						onclick={() => setTool('highlighter', color.value)}
+						class="w-6 h-6 rounded-sm opacity-80 transition-transform hover:scale-110 focus:outline-none"
+						class:scale-110={tool === 'highlighter' && selectedColor === color.value}
+						class:ring-2={tool === 'highlighter' && selectedColor === color.value}
+						class:ring-neutral-400={tool === 'highlighter' && selectedColor === color.value}
+						style="background-color: {color.value};"
+						aria-label="Highlighter {color.name}"
+					></button>
+				{/each}
+			</div>
+
+			<button 
+				onclick={() => setTool('eraser')}
+				class="p-1.5 rounded-full hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors"
+				class:bg-neutral-200={tool === 'eraser'}
+				class:dark:bg-neutral-700={tool === 'eraser'}
+				aria-label="Eraser"
+			>
+				<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 21-4.3-4.3c-1-1-1-2.5 0-3.4l9.6-9.6c1-1 2.5-1 3.4 0l5.6 5.6c1 1 1 2.5 0 3.4L13 21"/><path d="M22 21H7"/><path d="m5 11 9 9"/></svg>
+			</button>
+
+			<button 
+				onclick={undo}
+				class="p-1.5 rounded-full hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors"
+				aria-label="Undo"
+			>
+				<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v6h6"/><path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"/></svg>
+			</button>
+		</div>
+	{/if}
+
+	<svg
+		bind:this={svgElement}
+		class="w-full h-[800px] cursor-crosshair touch-none"
+		onpointerdown={handlePointerDown}
+		onpointermove={handlePointerMove}
+		onpointerup={handlePointerUp}
+		onpointerleave={handlePointerUp}
+		onpointercancel={handlePointerUp}
 	>
-		{#each colors as color (color.value)}
-			<button
-				title={color.name}
-				onclick={() => selectColor(color.value)}
-				class="w-6 h-6 rounded-full border-2"
-				class:border-blue-500={tool === 'pen' && selectedColor === color.value}
-				class:border-neutral-300={tool !== 'pen' || selectedColor !== color.value}
-				style="background-color: {color.value};"
-				aria-label="Select {color.name} ink"
-			></button>
+		{#each strokes.filter(s => s.type === 'highlighter' || (s.width > 10 && !s.type)) as stroke (stroke.id)}
+			<path
+				d={getSvgPathFromStroke(stroke.points, tools.highlighter)}
+				fill={stroke.color}
+				opacity="0.4"
+				style="mix-blend-mode: multiply;" 
+			/>
 		{/each}
 
-		<div class="border-l border-neutral-300 dark:border-neutral-600 mx-1"></div>
+		{#each strokes.filter(s => s.type !== 'highlighter' && (!s.width || s.width <= 10)) as stroke (stroke.id)}
+			<path
+				d={getSvgPathFromStroke(stroke.points, tools.pen)}
+				fill={stroke.color}
+			/>
+		{/each}
 
-		<button
-			title="Eraser"
-			onclick={selectEraser}
-			class:border-blue-500={tool === 'eraser'}
-			class:border-neutral-300={tool !== 'eraser'}
-			class="px-2 py-0 h-6 text-sm text-neutral-700 dark:text-neutral-200 bg-neutral-100 dark:bg-neutral-700 rounded border flex items-center justify-center"
-			aria-label="Select Eraser"
-		>
-			Eraser
-		</button>
-
-		<button
-			title="Undo"
-			onclick={undo}
-			class="px-2 py-0 h-6 text-sm text-neutral-700 dark:text-neutral-200 bg-neutral-100 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 flex items-center justify-center"
-			aria-label="Undo last stroke"
-		>
-			Undo
-		</button>
-	</div>
-
-	<div class="overflow-y-auto w-full flex-grow">
-		<svg
-			bind:this={svgElement}
-			class="w-full"
-			onpointerdown={handlePointerDown}
-			onpointermove={handlePointerMove}
-			onpointerup={handlePointerUp}
-			onpointerleave={handlePointerUp}
-			onpointercancel={handlePointerUp}
-			style="touch-action: none; background-color: {backgroundColor}; height: 1500px;"
-		>
-			{#each strokes as stroke (stroke.id)}
-				<path
-					d={getPathData(stroke)}
-					stroke={stroke.color}
-					stroke-width={stroke.width}
-					fill="none"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-				/>
-			{/each}
-
-			{#if currentStroke && currentStroke.points.length > 0}
-				<path
-					d={getPathData(currentStroke)}
-					stroke={tool === 'eraser' ? backgroundColor : currentStroke.color}
-					stroke-width={currentStroke.width}
-					fill="none"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					opacity="0.8"
-				/>
-			{/if}
-		</svg>
-	</div>
+		{#if currentStroke}
+			<path
+				d={getSvgPathFromStroke(currentStroke.points, tools[tool])}
+				fill={currentStroke.color}
+				opacity={tool === 'highlighter' ? 0.4 : 1}
+			/>
+		{/if}
+	</svg>
 </div>

@@ -1,27 +1,21 @@
 // src/lib/server/auth.ts
-import { PUBLIC_EDITOR_SECRET } from '$env/static/public';
-export function isEditor(request: Request): boolean {
-	console.warn('Using placeholder isEditor check. Implement real auth!');
-	return true; // Placeholder
-}
+import { EDITOR_SECRET } from '$env/static/private';
 
-// Helper to check the PUBLIC_EDITOR_SECRET - USE THIS IN ENDPOINTS
+// Helper to check the secret against the Environment Variable
 export function checkEditorSecret(secret?: string): boolean {
-	if (!PUBLIC_EDITOR_SECRET) {
-		console.error('PUBLIC_EDITOR_SECRET environment variable is not set!');
+	if (!EDITOR_SECRET) {
+		console.error('EDITOR_SECRET environment variable is not set!');
 		return false;
 	}
-	// Allow requests in dev without a secret for easier testing? Optional.
-	// if (dev && !secret) return true;
-	return secret === PUBLIC_EDITOR_SECRET;
+	// Compare the provided secret (from client) with the server-side secret
+	return secret === EDITOR_SECRET;
 }
 
-// Simple function to simulate getting an edit token (in real app, use JWT)
+// Used when creating a new notebook to send the key back to the client initially
 export function getEditToken(): string | null {
-	if (!PUBLIC_EDITOR_SECRET) {
-		console.error('Cannot generate edit token: PUBLIC_EDITOR_SECRET is not set.');
+	if (!EDITOR_SECRET) {
+		console.error('Cannot generate edit token: EDITOR_SECRET is not set.');
 		return null;
 	}
-	// For skeleton, the "token" is just the secret itself. NOT SECURE FOR PROD.
-	return PUBLIC_EDITOR_SECRET;
+	return EDITOR_SECRET;
 }
