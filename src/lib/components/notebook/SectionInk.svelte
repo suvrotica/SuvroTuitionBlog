@@ -91,10 +91,6 @@
 			for (const e of events) {
 				currentStroke.points.push(getPointerPosition(e));
 			}
-			// In Svelte 5 with arrays, we don't strictly need self-assignment if we use push, 
-			// but for deep proxies, sometimes it helps ensure reactivity triggers downstream deriveds immediately.
-			// However, since we modify the object *inside* the array (if it was there), 
-			// currently we are modifying a local state object `currentStroke`.
 		}
 	}
 
@@ -155,7 +151,6 @@
 
 	export function getCurrentContent(): InkContent {
 		// --- FIX: Use snapshot to return a plain JS object, detaching from the reactive proxy ---
-		// This prevents race conditions where the array changes while being serialized by the parent.
 		return $state.snapshot({ strokes });
 	}
 
