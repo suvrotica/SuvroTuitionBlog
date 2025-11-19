@@ -6,12 +6,18 @@
 	import { flip } from 'svelte/animate';
 
 	let { notebookData }: { notebookData: Notebook } = $props();
-	
+
 	let editorSecret = $state<string | null>(null);
 	let notebook = $state<Notebook>({ ...notebookData });
 	let sectionRefs = $state<Record<string, any>>({});
+	
+	// --- FIX: Save Queue Logic ---
 	let saveStatus = $state<'idle' | 'saving' | 'saved' | 'error'>('idle');
-	let saveTimeout: ReturnType<typeof setTimeout> | null = null;
+	let isSaving = $state(false);
+	let hasPendingChanges = $state(false);
+	let saveTimer: ReturnType<typeof setTimeout> | null = null;
+	// -----------------------------
+
 	let draggingSectionId = $state<string | null>(null);
 
 	let isReadOnly = $derived(!editorSecret);
@@ -23,84 +29,115 @@
 		else if (specificSecret) editorSecret = specificSecret;
 	});
 
+	// This function just signals that data has changed and starts the queue if idle
 	function scheduleSave(immediate = false) {
-		if (isReadOnly) return; 
+		if (isReadOnly) return;
 		
-		saveStatus = 'saving';
-		if (saveTimeout) clearTimeout(saveTimeout);
+		hasPendingChanges = true;
+		saveStatus = 'saving'; // UI feedback immediately
 
-		const saveAction = async () => {
-			// Gather content from child components
-			const updatedSections = notebook.sections.map((section) => {
-				if (section.type === 'ink' && sectionRefs[section.id]) {
-					const currentContent = sectionRefs[section.id].getCurrentContent();
-					
-					// FIX: UPDATE IN PLACE instead of appending new versions
-					// This prevents the JSON from exploding in size with every autosave
-					const versions = [...section.versions];
-					if (versions.length > 0) {
-						// Update the latest version
-						versions[versions.length - 1] = {
-							...versions[versions.length - 1],
-							content: currentContent,
-							changedAt: new Date().toISOString()
-						};
-					} else {
-						// Should not happen, but safety first
-						versions.push({
-							versionId: generateUUID(),
-							changedAt: new Date().toISOString(),
-							changeType: 'create',
-							content: currentContent
-						});
-					}
-
-					return {
-						...section,
-						versions
-					};
-				}
-				return section;
-			});
-
-			notebook.sections = updatedSections;
-
-			try {
-				const res = await fetch(`/api/notebooks/${notebook.id}`, {
-					method: 'PATCH',
-					headers: { 
-						'Content-Type': 'application/json',
-						'Authorization': `Bearer ${editorSecret}`
-					},
-					body: JSON.stringify({ 
-						title: notebook.title, 
-						sections: updatedSections 
-					})
-				});
-				
-				if (res.status === 401 || res.status === 403) {
-					editorSecret = null;
-					localStorage.removeItem('site_editor_secret');
-					saveStatus = 'error';
-					alert("Session invalid. Switched to Read-Only mode.");
-					return;
-				}
-
-				if (!res.ok) throw new Error('Failed');
-				
-				saveStatus = 'saved';
-				setTimeout(() => saveStatus = 'idle', 2000);
-			} catch (e) {
-				console.error('Save failed', e);
-				saveStatus = 'error';
-			}
-		};
-
-		if (immediate) saveAction();
-		else saveTimeout = setTimeout(saveAction, 2000);
+		if (immediate) {
+			if (saveTimer) clearTimeout(saveTimer);
+			processSaveQueue();
+		} else if (!saveTimer && !isSaving) {
+			// Only start a timer if one isn't running and we aren't currently saving
+			saveTimer = setTimeout(processSaveQueue, 1000); 
+		}
 	}
 
-	// ... (Drag handlers remain the same)
+	async function processSaveQueue() {
+		if (saveTimer) {
+			clearTimeout(saveTimer);
+			saveTimer = null;
+		}
+
+		if (isSaving) {
+			// If already saving, do nothing. The loop in the 'finally' block will catch the pending changes.
+			return;
+		}
+
+		if (!hasPendingChanges) {
+			saveStatus = 'saved';
+			setTimeout(() => { if (saveStatus === 'saved') saveStatus = 'idle'; }, 2000);
+			return;
+		}
+
+		isSaving = true;
+		hasPendingChanges = false; // Reset flag, capturing current state
+
+		// 1. Gather content from child components
+		// We do this INSIDE the async queue to ensure we get the absolute latest state 
+		// right before the network request starts.
+		const updatedSections = notebook.sections.map((section) => {
+			if (section.type === 'ink' && sectionRefs[section.id]) {
+				const currentContent = sectionRefs[section.id].getCurrentContent();
+				
+				const versions = [...section.versions];
+				if (versions.length > 0) {
+					versions[versions.length - 1] = {
+						...versions[versions.length - 1],
+						content: currentContent,
+						changedAt: new Date().toISOString()
+					};
+				} else {
+					versions.push({
+						versionId: generateUUID(),
+						changedAt: new Date().toISOString(),
+						changeType: 'create',
+						content: currentContent
+					});
+				}
+
+				return { ...section, versions };
+			}
+			return section;
+		});
+
+		// Update local state reference
+		notebook.sections = updatedSections;
+
+		try {
+			const res = await fetch(`/api/notebooks/${notebook.id}`, {
+				method: 'PATCH',
+				headers: { 
+					'Content-Type': 'application/json',
+					'Authorization': `Bearer ${editorSecret}`
+				},
+				body: JSON.stringify({ 
+					title: notebook.title, 
+					sections: updatedSections 
+				})
+			});
+
+			if (res.status === 401 || res.status === 403) {
+				editorSecret = null;
+				localStorage.removeItem('site_editor_secret');
+				saveStatus = 'error';
+				alert("Session invalid. Switched to Read-Only mode.");
+				return; // Stop queue
+			}
+
+			if (!res.ok) throw new Error('Failed');
+			
+			// We don't set 'saved' here yet, we wait for the queue to empty
+		} catch (e) {
+			console.error('Save failed', e);
+			saveStatus = 'error';
+			// If it failed, we might want to keep hasPendingChanges true to retry? 
+			// For now, let's leave it, user will trigger another save by editing.
+		} finally {
+			isSaving = false;
+			
+			// If changes happened while we were awaiting fetch, process them immediately
+			if (hasPendingChanges) {
+				processSaveQueue();
+			} else if (saveStatus !== 'error') {
+				saveStatus = 'saved';
+				setTimeout(() => { if (saveStatus === 'saved') saveStatus = 'idle'; }, 2000);
+			}
+		}
+	}
+
 	function handleDragStart(e: DragEvent, id: string) {
 		if (isReadOnly) return;
 		draggingSectionId = id;
@@ -113,6 +150,7 @@
 		e.preventDefault();
 		const fromIdx = notebook.sections.findIndex(s => s.id === draggingSectionId);
 		const toIdx = notebook.sections.findIndex(s => s.id === targetId);
+
 		if (fromIdx !== -1 && toIdx !== -1) {
 			const sections = [...notebook.sections];
 			const [moved] = sections.splice(fromIdx, 1);
@@ -124,7 +162,7 @@
 	function handleDrop(e: DragEvent) {
 		e.preventDefault();
 		draggingSectionId = null;
-		scheduleSave(true);
+		scheduleSave(true); // Immediate save on reorder
 	}
 
 	function addSection(type: 'ink' | 'markdown') {
@@ -157,7 +195,13 @@
 			/>
 			<div class="flex gap-2 mt-2 text-sm">
 				<span class="text-xs uppercase tracking-wider text-neutral-500 self-center">
-					{saveStatus === 'saving' ? 'Saving...' : saveStatus === 'saved' ? 'All changes saved' : saveStatus === 'error' ? 'Error saving' : ''}
+					{#if saveStatus === 'saving'}
+						Saving...
+					{:else if saveStatus === 'saved'}
+						All changes saved
+					{:else if saveStatus === 'error'}
+						<span class="text-red-500">Error saving</span>
+					{/if}
 				</span>
 			</div>
 		{:else}
@@ -200,8 +244,9 @@
 	</div>
 
 	{#if !isReadOnly}
-		<div class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-neutral-900 text-white px-4 py-2 rounded-full shadow-xl flex gap-4 z-50">
-			<button onclick={() => addSection('ink')} class="hover:text-gold font-medium flex items-center gap-2">
+		<div class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-neutral-900 text-white 
+px-4 py-2 rounded-full shadow-xl flex gap-4 z-50">
+			<button onclick={() => addSection('ink')} class="hover:text-[var(--color-gold)] font-medium flex items-center gap-2">
 				<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
 				Add Page
 			</button>

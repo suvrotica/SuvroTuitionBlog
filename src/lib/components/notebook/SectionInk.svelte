@@ -19,11 +19,11 @@
 	let isDrawing = $state(false);
 
 	let strokes = $state<Stroke[]>(content?.strokes || []);
-
+	
 	// Default: Graphite (#373737)
 	let selectedColor = $state('#373737'); 
 	let tool = $state<'pen' | 'highlighter' | 'eraser'>('pen');
-	let strokeWidth = $state(4); 
+	let strokeWidth = $state(4);
 
 	const colors = [
 		{ name: 'Graphite', value: '#373737' },
@@ -47,6 +47,7 @@
 
 	function getPointerPosition(event: PointerEvent): Point {
 		if (!svgElement) return { x: 0, y: 0, p: 0.5, t: Date.now() };
+
 		const rect = svgElement.getBoundingClientRect();
 		return {
 			x: event.clientX - rect.left,
@@ -90,7 +91,10 @@
 			for (const e of events) {
 				currentStroke.points.push(getPointerPosition(e));
 			}
-			currentStroke = currentStroke; 
+			// In Svelte 5 with arrays, we don't strictly need self-assignment if we use push, 
+			// but for deep proxies, sometimes it helps ensure reactivity triggers downstream deriveds immediately.
+			// However, since we modify the object *inside* the array (if it was there), 
+			// currently we are modifying a local state object `currentStroke`.
 		}
 	}
 
@@ -100,6 +104,7 @@
 		svgElement?.releasePointerCapture(event.pointerId);
 
 		if (currentStroke && tool !== 'eraser') {
+			// Reassignment triggers reactivity for the array
 			strokes = [...strokes, currentStroke];
 		}
 		
@@ -149,7 +154,9 @@
 	}
 
 	export function getCurrentContent(): InkContent {
-		return { strokes };
+		// --- FIX: Use snapshot to return a plain JS object, detaching from the reactive proxy ---
+		// This prevents race conditions where the array changes while being serialized by the parent.
+		return $state.snapshot({ strokes });
 	}
 
 	function getStrokeOptions(stroke: Stroke) {
@@ -161,7 +168,6 @@
 </script>
 
 <div class="flex flex-col md:flex-row gap-4 items-start w-full">
-	
 	{#if !readOnly}
 		<div class="toolbar sticky top-4 z-10 flex md:flex-col items-center gap-4 p-3 bg-neutral-100 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 rounded-2xl shadow-sm mx-auto md:mx-0 overflow-x-auto md:overflow-visible max-w-full">
 			
@@ -249,7 +255,7 @@
 					d={getSvgPathFromStroke(stroke.points, getStrokeOptions(stroke))}
 					fill={stroke.color}
 					opacity="0.4"
-					style="mix-blend-mode: multiply;" 
+					style="mix-blend-mode: multiply;"
 				/>
 			{/each}
 

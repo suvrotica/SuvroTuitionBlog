@@ -1,4 +1,4 @@
-# Context file generated on: Wednesday, November 19, 2025 at 6:58:47 AM GMT+5:30
+# Context file generated on: Wednesday, November 19, 2025 at 7:57:07 AM GMT+5:30
 ---
 
 # Project File Layout
@@ -521,6 +521,8 @@
 │   │   ├── +layout.ts
 │   │   ├── +page.server.ts
 │   │   ├── +page.svelte
+│   │   ├── admin
+│   │   │   └── +page.svelte
 │   │   ├── api
 │   │   │   └── notebooks
 │   │   │       ├── +server.ts
@@ -2350,65 +2352,69 @@ export {};
 	import type { Notebook, Section } from '$lib/types/notebook';
 	import SectionInk from './SectionInk.svelte';
 	import { generateUUID } from '$lib/utils/uuid';
-	import { dev } from '$app/environment';
 	import { onMount } from 'svelte';
-	import { flip } from 'svelte/animate'; // For smooth reordering animation
+	import { flip } from 'svelte/animate';
 
 	let { notebookData }: { notebookData: Notebook } = $props();
 	
 	let editorSecret = $state<string | null>(null);
 	let notebook = $state<Notebook>({ ...notebookData });
-	let sectionRefs = $state<Record<string, any>>({}); // To access getCurrentContent
+	let sectionRefs = $state<Record<string, any>>({});
 	let saveStatus = $state<'idle' | 'saving' | 'saved' | 'error'>('idle');
 	let saveTimeout: ReturnType<typeof setTimeout> | null = null;
-
-	// Drag & Drop State
 	let draggingSectionId = $state<string | null>(null);
 
-	// Derived read-only state
 	let isReadOnly = $derived(!editorSecret);
 
 	onMount(() => {
-		const secret = localStorage.getItem(`notebook_${notebook.id}_secret`);
-		if (secret) editorSecret = secret;
+		const globalSecret = localStorage.getItem('site_editor_secret');
+		const specificSecret = localStorage.getItem(`notebook_${notebook.id}_secret`);
+		if (globalSecret) editorSecret = globalSecret;
+		else if (specificSecret) editorSecret = specificSecret;
 	});
 
-	// --- Save Logic (Simplified for brevity, keep existing logic largely) ---
 	function scheduleSave(immediate = false) {
 		if (isReadOnly) return; 
+		
 		saveStatus = 'saving';
 		if (saveTimeout) clearTimeout(saveTimeout);
 
 		const saveAction = async () => {
 			// Gather content from child components
 			const updatedSections = notebook.sections.map((section) => {
-				// If it's an ink section, ask the component for latest strokes
 				if (section.type === 'ink' && sectionRefs[section.id]) {
 					const currentContent = sectionRefs[section.id].getCurrentContent();
-					// Only update version if content changed (deep comparison needed in real app)
-					// For now, we assume if we are saving, we update the version
-					const latestVer = section.versions[section.versions.length - 1];
 					
-					// Very basic dirty check to avoid spamming versions
-					if (JSON.stringify(latestVer.content) !== JSON.stringify(currentContent)) {
-						return {
-							...section,
-							versions: [
-								...section.versions,
-								{
-									versionId: generateUUID(),
-									changedAt: new Date().toISOString(),
-									changeType: 'edit' as const,
-									content: currentContent
-								}
-							]
+					// FIX: UPDATE IN PLACE instead of appending new versions
+					// This prevents the JSON from exploding in size with every autosave
+					const versions = [...section.versions];
+					if (versions.length > 0) {
+						// Update the latest version
+						versions[versions.length - 1] = {
+							...versions[versions.length - 1],
+							content: currentContent,
+							changedAt: new Date().toISOString()
 						};
+					} else {
+						// Should not happen, but safety first
+						versions.push({
+							versionId: generateUUID(),
+							changedAt: new Date().toISOString(),
+							changeType: 'create',
+							content: currentContent
+						});
 					}
+
+					return {
+						...section,
+						versions
+					};
 				}
 				return section;
 			});
 
-			// API Call
+			notebook.sections = updatedSections;
+
 			try {
 				const res = await fetch(`/api/notebooks/${notebook.id}`, {
 					method: 'PATCH',
@@ -2416,12 +2422,26 @@ export {};
 						'Content-Type': 'application/json',
 						'Authorization': `Bearer ${editorSecret}`
 					},
-					body: JSON.stringify({ title: notebook.title, sections: updatedSections })
+					body: JSON.stringify({ 
+						title: notebook.title, 
+						sections: updatedSections 
+					})
 				});
+				
+				if (res.status === 401 || res.status === 403) {
+					editorSecret = null;
+					localStorage.removeItem('site_editor_secret');
+					saveStatus = 'error';
+					alert("Session invalid. Switched to Read-Only mode.");
+					return;
+				}
+
 				if (!res.ok) throw new Error('Failed');
+				
 				saveStatus = 'saved';
 				setTimeout(() => saveStatus = 'idle', 2000);
 			} catch (e) {
+				console.error('Save failed', e);
 				saveStatus = 'error';
 			}
 		};
@@ -2430,36 +2450,31 @@ export {};
 		else saveTimeout = setTimeout(saveAction, 2000);
 	}
 
-	// --- Drag & Drop Handlers ---
+	// ... (Drag handlers remain the same)
 	function handleDragStart(e: DragEvent, id: string) {
 		if (isReadOnly) return;
 		draggingSectionId = id;
-		if (e.dataTransfer) {
-			e.dataTransfer.effectAllowed = 'move';
-			// Invisible drag image or custom one? Default is usually fine.
-		}
+		e.dataTransfer?.setData('text/plain', id);
+		if (e.dataTransfer) e.dataTransfer.effectAllowed = 'move';
 	}
 
 	function handleDragOver(e: DragEvent, targetId: string) {
 		if (isReadOnly || !draggingSectionId || draggingSectionId === targetId) return;
-		e.preventDefault(); // Essential to allow dropping
-
-		// Reorder state immediately for visual feedback
+		e.preventDefault();
 		const fromIdx = notebook.sections.findIndex(s => s.id === draggingSectionId);
 		const toIdx = notebook.sections.findIndex(s => s.id === targetId);
-
 		if (fromIdx !== -1 && toIdx !== -1) {
 			const sections = [...notebook.sections];
 			const [moved] = sections.splice(fromIdx, 1);
 			sections.splice(toIdx, 0, moved);
-			notebook.sections = sections;
+			notebook.sections = sections.map((s, i) => ({ ...s, orderIndex: i }));
 		}
 	}
 
 	function handleDrop(e: DragEvent) {
 		e.preventDefault();
 		draggingSectionId = null;
-		scheduleSave(true); // Save new order
+		scheduleSave(true);
 	}
 
 	function addSection(type: 'ink' | 'markdown') {
@@ -2492,7 +2507,7 @@ export {};
 			/>
 			<div class="flex gap-2 mt-2 text-sm">
 				<span class="text-xs uppercase tracking-wider text-neutral-500 self-center">
-					{saveStatus === 'saving' ? 'Saving...' : saveStatus === 'saved' ? 'All changes saved' : ''}
+					{saveStatus === 'saving' ? 'Saving...' : saveStatus === 'saved' ? 'All changes saved' : saveStatus === 'error' ? 'Error saving' : ''}
 				</span>
 			</div>
 		{:else}
@@ -2515,7 +2530,7 @@ export {};
 				ondrop={handleDrop}
 			>
 				{#if !isReadOnly}
-					<div class="absolute -left-8 top-4 p-2 cursor-move opacity-0 group-hover:opacity-100 text-neutral-400 hover:text-neutral-600 transition-opacity">
+					<div class="absolute -left-8 top-4 p-2 cursor-move opacity-0 group-hover:opacity-100 text-neutral-400 hover:text-neutral-600 transition-opacity" aria-hidden="true">
 						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="12" r="1"/><circle cx="9" cy="5" r="1"/><circle cx="9" cy="19" r="1"/><circle cx="15" cy="12" r="1"/><circle cx="15" cy="5" r="1"/><circle cx="15" cy="19" r="1"/></svg>
 					</div>
 				{/if}
@@ -2566,24 +2581,18 @@ export {};
 	let currentStroke = $state<Stroke | null>(null);
 	let isDrawing = $state(false);
 
-	// Local state initialized from props
 	let strokes = $state<Stroke[]>(content?.strokes || []);
 
-	// Tools configuration
-	const tools = {
-		pen: { size: 8, thinning: 0.5, smoothing: 0.5, streamline: 0.5 },
-		highlighter: { size: 25, thinning: 0, smoothing: 0.5, streamline: 0.5 }, // Thicker, constant width
-		eraser: { size: 30 } // Eraser logic handled differently
-	};
-
+	// Default: Graphite (#373737)
+	let selectedColor = $state('#373737'); 
 	let tool = $state<'pen' | 'highlighter' | 'eraser'>('pen');
-	let selectedColor = $state('#FFFFFF'); // Default White for dark mode
+	let strokeWidth = $state(4); 
 
 	const colors = [
-		{ name: 'White', value: '#FFFFFF' }, // Good for dark mode
-		{ name: 'Black', value: '#000000' }, // Good for light mode
-		{ name: 'Blue', value: '#3b82f6' },
-		{ name: 'Red', value: '#ef4444' },
+		{ name: 'Graphite', value: '#373737' },
+		{ name: 'Black', value: '#000000' },
+		{ name: 'Blue', value: '#2563eb' },
+		{ name: 'Red', value: '#dc2626' },
 		{ name: 'Gold', value: '#D4AF47' }
 	];
 
@@ -2593,14 +2602,20 @@ export {};
 		{ name: 'Pink', value: '#f472b6' }
 	];
 
+	const tools = {
+		pen: { size: 8, thinning: 0.5, smoothing: 0.5, streamline: 0.5 },
+		highlighter: { size: 25, thinning: 0, smoothing: 0.5, streamline: 0.5 },
+		eraser: { size: 30 }
+	};
+
 	function getPointerPosition(event: PointerEvent): Point {
-		if (!svgElement) return { x: 0, y: 0, p: 0.5, t: Date.now() }; // Add t here
+		if (!svgElement) return { x: 0, y: 0, p: 0.5, t: Date.now() };
 		const rect = svgElement.getBoundingClientRect();
 		return {
 			x: event.clientX - rect.left,
 			y: event.clientY - rect.top,
 			p: event.pressure,
-			t: Date.now() 
+			t: Date.now()
 		};
 	}
 
@@ -2611,27 +2626,22 @@ export {};
 		svgElement.setPointerCapture(event.pointerId);
 		const point = getPointerPosition(event);
 
-		// Eraser Logic: Click to erase
 		if (tool === 'eraser') {
 			eraseAt(point);
 			return;
 		}
 
-		// Pen/Highlighter Logic
 		currentStroke = {
 			id: generateUUID(),
 			points: [point],
 			color: tool === 'highlighter' ? selectedColor : selectedColor,
-			width: tools[tool].size,
-			// We store the type to know how to render it later
+			width: tool === 'highlighter' ? 25 : strokeWidth, 
 			type: tool 
 		};
 	}
 
 	function handlePointerMove(event: PointerEvent) {
 		if (!isDrawing || !svgElement) return;
-		
-		// Coalesced events for smoother curves on high-refresh tablets (Tab S9)
 		const events = event.getCoalescedEvents();
 		
 		if (tool === 'eraser') {
@@ -2640,11 +2650,9 @@ export {};
 		}
 
 		if (currentStroke) {
-			// Add all coalesced points for higher fidelity
 			for (const e of events) {
 				currentStroke.points.push(getPointerPosition(e));
 			}
-			// Trigger reactivity
 			currentStroke = currentStroke; 
 		}
 	}
@@ -2664,13 +2672,10 @@ export {};
 	}
 
 	function eraseAt(point: Point) {
-		// Simple eraser: remove stroke if the point is close to any point in the stroke
-		// Optimization: This is O(N*M) which is heavy. Ideally use a spatial index (Quadtree) later.
 		const threshold = 20; 
 		const initialLength = strokes.length;
 
 		strokes = strokes.filter(stroke => {
-			// Bounding box check first (optimization)
 			const minX = Math.min(...stroke.points.map(p => p.x));
 			const maxX = Math.max(...stroke.points.map(p => p.x));
 			const minY = Math.min(...stroke.points.map(p => p.y));
@@ -2678,10 +2683,8 @@ export {};
 
 			if (point.x < minX - threshold || point.x > maxX + threshold || 
 				point.y < minY - threshold || point.y > maxY + threshold) {
-				return true; // Keep stroke
+				return true;
 			}
-
-			// Detailed check
 			return !stroke.points.some(p => Math.hypot(p.x - point.x, p.y - point.y) < threshold);
 		});
 
@@ -2693,11 +2696,10 @@ export {};
 	function setTool(t: 'pen' | 'highlighter' | 'eraser', color?: string) {
 		tool = t;
 		if (color) selectedColor = color;
-		// Set default highlighter color if switching to it without specific color
+		
 		if (t === 'highlighter' && !highlighterColors.find(c => c.value === selectedColor)) {
 			selectedColor = highlighterColors[0].value;
 		}
-		// Set default pen color if switching back
 		if (t === 'pen' && !colors.find(c => c.value === selectedColor)) {
 			selectedColor = colors[0].value;
 		}
@@ -2709,98 +2711,127 @@ export {};
 		onchange();
 	}
 
-	// Export for parent to save
 	export function getCurrentContent(): InkContent {
 		return { strokes };
 	}
+
+	function getStrokeOptions(stroke: Stroke) {
+		if (stroke.type === 'highlighter') {
+			return { size: stroke.width, thinning: 0, smoothing: 0.5, streamline: 0.5 };
+		}
+		return { size: stroke.width, thinning: 0.5, smoothing: 0.5, streamline: 0.5 };
+	}
 </script>
 
-<div class="ink-wrapper relative w-full bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-lg overflow-hidden">
+<div class="flex flex-col md:flex-row gap-4 items-start w-full">
 	
 	{#if !readOnly}
-		<div class="toolbar absolute top-4 left-1/2 -translate-x-1/2 flex items-center gap-2 p-2 bg-white/90 dark:bg-neutral-800/90 backdrop-blur shadow-lg rounded-full border border-neutral-200 dark:border-neutral-700 z-20">
+		<div class="toolbar sticky top-4 z-10 flex md:flex-col items-center gap-4 p-3 bg-neutral-100 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 rounded-2xl shadow-sm mx-auto md:mx-0 overflow-x-auto md:overflow-visible max-w-full">
 			
-			<div class="flex gap-1 pr-2 border-r border-neutral-300 dark:border-neutral-600">
+			<div class="flex md:flex-col gap-2 pb-0 md:pb-2 md:border-b border-r md:border-r-0 border-neutral-300 dark:border-neutral-600 pr-2 md:pr-0">
 				{#each colors as color}
 					<button
 						onclick={() => setTool('pen', color.value)}
-						class="w-6 h-6 rounded-full border transition-transform hover:scale-110 focus:outline-none"
+						class="w-8 h-8 rounded-full border-2 transition-transform hover:scale-110 focus:outline-none"
 						class:scale-110={tool === 'pen' && selectedColor === color.value}
-						class:ring-2={tool === 'pen' && selectedColor === color.value}
-						class:ring-neutral-400={tool === 'pen' && selectedColor === color.value}
-						style="background-color: {color.value}; border-color: {color.value === '#FFFFFF' ? '#ccc' : 'transparent'}"
+						class:border-neutral-900={tool === 'pen' && selectedColor === color.value}
+						class:dark:border-white={tool === 'pen' && selectedColor === color.value}
+						class:border-transparent={tool !== 'pen' || selectedColor !== color.value}
+						style="background-color: {color.value};"
 						aria-label="Pen {color.name}"
 					></button>
 				{/each}
 			</div>
 
-			<div class="flex gap-1 pr-2 border-r border-neutral-300 dark:border-neutral-600">
+			<div class="flex md:flex-col gap-2 pb-0 md:pb-2 md:border-b border-r md:border-r-0 border-neutral-300 dark:border-neutral-600 pr-2 md:pr-0">
 				{#each highlighterColors as color}
 					<button
 						onclick={() => setTool('highlighter', color.value)}
-						class="w-6 h-6 rounded-sm opacity-80 transition-transform hover:scale-110 focus:outline-none"
+						class="w-8 h-8 rounded-sm opacity-80 transition-transform hover:scale-110 focus:outline-none border-2"
 						class:scale-110={tool === 'highlighter' && selectedColor === color.value}
-						class:ring-2={tool === 'highlighter' && selectedColor === color.value}
-						class:ring-neutral-400={tool === 'highlighter' && selectedColor === color.value}
+						class:border-neutral-900={tool === 'highlighter' && selectedColor === color.value}
+						class:dark:border-white={tool === 'highlighter' && selectedColor === color.value}
+						class:border-transparent={tool !== 'highlighter' || selectedColor !== color.value}
 						style="background-color: {color.value};"
 						aria-label="Highlighter {color.name}"
 					></button>
 				{/each}
 			</div>
 
-			<button 
-				onclick={() => setTool('eraser')}
-				class="p-1.5 rounded-full hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors"
-				class:bg-neutral-200={tool === 'eraser'}
-				class:dark:bg-neutral-700={tool === 'eraser'}
-				aria-label="Eraser"
-			>
-				<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 21-4.3-4.3c-1-1-1-2.5 0-3.4l9.6-9.6c1-1 2.5-1 3.4 0l5.6 5.6c1 1 1 2.5 0 3.4L13 21"/><path d="M22 21H7"/><path d="m5 11 9 9"/></svg>
-			</button>
+			<div class="flex md:flex-col gap-2 items-center">
+				<button 
+					onclick={() => setTool('eraser')}
+					class="p-2 rounded-lg hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors border-2"
+					class:bg-neutral-200={tool === 'eraser'}
+					class:dark:bg-neutral-700={tool === 'eraser'}
+					class:border-neutral-900={tool === 'eraser'}
+					class:dark:border-white={tool === 'eraser'}
+					class:border-transparent={tool !== 'eraser'}
+					aria-label="Eraser"
+				>
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 21-4.3-4.3c-1-1-1-2.5 0-3.4l9.6-9.6c1-1 2.5-1 3.4 0l5.6 5.6c1 1 1 2.5 0 3.4L13 21"/><path d="M22 21H7"/><path d="m5 11 9 9"/></svg>
+				</button>
 
-			<button 
-				onclick={undo}
-				class="p-1.5 rounded-full hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors"
-				aria-label="Undo"
-			>
-				<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v6h6"/><path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"/></svg>
-			</button>
+				<button 
+					onclick={undo}
+					class="p-2 rounded-lg hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors border-2 border-transparent"
+					aria-label="Undo"
+				>
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v6h6"/><path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"/></svg>
+				</button>
+			</div>
+
+			{#if tool === 'pen'}
+				<div class="flex flex-col items-center gap-1 pt-2 border-t border-neutral-300 dark:border-neutral-600 w-full">
+					<span class="text-[10px] text-neutral-500 uppercase font-bold">Size</span>
+					<input 
+						type="range" 
+						min="2" 
+						max="20" 
+						bind:value={strokeWidth}
+						class="w-24 h-2 bg-neutral-200 rounded-lg appearance-none cursor-pointer dark:bg-neutral-700 accent-neutral-600 dark:accent-neutral-400 md:-rotate-90 md:w-20 md:mt-8 md:mb-8"
+						aria-label="Brush Size"
+					/>
+				</div>
+			{/if}
 		</div>
 	{/if}
 
-	<svg
-		bind:this={svgElement}
-		class="w-full h-[800px] cursor-crosshair touch-none"
-		onpointerdown={handlePointerDown}
-		onpointermove={handlePointerMove}
-		onpointerup={handlePointerUp}
-		onpointerleave={handlePointerUp}
-		onpointercancel={handlePointerUp}
-	>
-		{#each strokes.filter(s => s.type === 'highlighter' || (s.width > 10 && !s.type)) as stroke (stroke.id)}
-			<path
-				d={getSvgPathFromStroke(stroke.points, tools.highlighter)}
-				fill={stroke.color}
-				opacity="0.4"
-				style="mix-blend-mode: multiply;" 
-			/>
-		{/each}
+    <div class="ink-wrapper relative flex-1 bg-white border border-neutral-200 rounded-lg overflow-hidden shadow-sm">
+		<svg
+			bind:this={svgElement}
+			class="w-full h-[800px] cursor-crosshair touch-none"
+			onpointerdown={handlePointerDown}
+			onpointermove={handlePointerMove}
+			onpointerup={handlePointerUp}
+			onpointerleave={handlePointerUp}
+			onpointercancel={handlePointerUp}
+		>
+			{#each strokes.filter(s => s.type === 'highlighter' || (s.width > 10 && !s.type)) as stroke (stroke.id)}
+				<path
+					d={getSvgPathFromStroke(stroke.points, getStrokeOptions(stroke))}
+					fill={stroke.color}
+					opacity="0.4"
+					style="mix-blend-mode: multiply;" 
+				/>
+			{/each}
 
-		{#each strokes.filter(s => s.type !== 'highlighter' && (!s.width || s.width <= 10)) as stroke (stroke.id)}
-			<path
-				d={getSvgPathFromStroke(stroke.points, tools.pen)}
-				fill={stroke.color}
-			/>
-		{/each}
+			{#each strokes.filter(s => s.type !== 'highlighter' && (!s.width || s.width <= 10)) as stroke (stroke.id)}
+				<path
+					d={getSvgPathFromStroke(stroke.points, getStrokeOptions(stroke))}
+					fill={stroke.color}
+				/>
+			{/each}
 
-		{#if currentStroke}
-			<path
-				d={getSvgPathFromStroke(currentStroke.points, tools[tool])}
-				fill={currentStroke.color}
-				opacity={tool === 'highlighter' ? 0.4 : 1}
-			/>
-		{/if}
-	</svg>
+			{#if currentStroke}
+				<path
+					d={getSvgPathFromStroke(currentStroke.points, getStrokeOptions(currentStroke))}
+					fill={currentStroke.color}
+					opacity={tool === 'highlighter' ? 0.4 : 1}
+				/>
+			{/if}
+		</svg>
+	</div>
 </div>
 
 # File: src/lib/components/OnThisPage.svelte
@@ -3558,32 +3589,28 @@ export async function getPostsByCategory(category: string) {
 
 # File: src/lib/server/auth.ts
 
-// src/lib/server/auth.ts
-import { PUBLIC_EDITOR_SECRET } from '$env/static/public';
-export function isEditor(request: Request): boolean {
-	console.warn('Using placeholder isEditor check. Implement real auth!');
-	return true; // Placeholder
-}
+import { env } from '$env/dynamic/private';
 
-// Helper to check the PUBLIC_EDITOR_SECRET - USE THIS IN ENDPOINTS
+// We use dynamic private env to ensure it picks up changes without full rebuilds in some contexts,
+// but static private is also fine. Dynamic is safer for runtime config changes.
+const SECRET = env.EDITOR_SECRET;
+
 export function checkEditorSecret(secret?: string): boolean {
-	if (!PUBLIC_EDITOR_SECRET) {
-		console.error('PUBLIC_EDITOR_SECRET environment variable is not set!');
+	if (!SECRET) {
+		// Log error on server side so you can debug in Vercel logs
+		console.error('EDITOR_SECRET environment variable is not set on server!');
 		return false;
 	}
-	// Allow requests in dev without a secret for easier testing? Optional.
-	// if (dev && !secret) return true;
-	return secret === PUBLIC_EDITOR_SECRET;
+	// Strict equality check
+	return secret === SECRET;
 }
 
-// Simple function to simulate getting an edit token (in real app, use JWT)
 export function getEditToken(): string | null {
-	if (!PUBLIC_EDITOR_SECRET) {
-		console.error('Cannot generate edit token: PUBLIC_EDITOR_SECRET is not set.');
+	if (!SECRET) {
+		console.error('Cannot generate edit token: EDITOR_SECRET is not set.');
 		return null;
 	}
-	// For skeleton, the "token" is just the secret itself. NOT SECURE FOR PROD.
-	return PUBLIC_EDITOR_SECRET;
+	return SECRET;
 }
 
 # File: src/lib/server/posts.ts
@@ -4436,6 +4463,55 @@ export const load: PageServerLoad = async () => {
 	<h1 class="text-center mb-8">All Posts</h1>
 	<PostGallery posts={data.posts} />
 </section>
+
+# File: src/routes/admin/+page.svelte
+
+<script lang="ts">
+	import { onMount } from 'svelte';
+	
+	let secret = $state('');
+	let status = $state('');
+
+	onMount(() => {
+		// Check if we are already logged in
+		const existing = localStorage.getItem('site_editor_secret');
+		if (existing) secret = existing;
+	});
+
+	function save() {
+		localStorage.setItem('site_editor_secret', secret);
+		status = 'Saved! You can now edit notebooks.';
+	}
+
+	function clear() {
+		localStorage.removeItem('site_editor_secret');
+		secret = '';
+		status = 'Cleared. You are now in read-only mode.';
+	}
+</script>
+
+<div class="container mx-auto max-w-md py-20">
+	<h1 class="text-2xl font-bold mb-4">Editor Access</h1>
+	<div class="flex flex-col gap-4">
+		<input 
+			type="password" 
+			bind:value={secret} 
+			placeholder="Enter Editor Secret"
+			class="p-2 border border-neutral-300 rounded dark:bg-neutral-800 dark:border-neutral-700"
+		/>
+		<div class="flex gap-2">
+			<button onclick={save} class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+				Save Credentials
+			</button>
+			<button onclick={clear} class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
+				Logout
+			</button>
+		</div>
+		{#if status}
+			<p class="text-sm text-green-600 dark:text-green-400">{status}</p>
+		{/if}
+	</div>
+</div>
 
 # File: src/routes/api/notebooks/+server.ts
 
