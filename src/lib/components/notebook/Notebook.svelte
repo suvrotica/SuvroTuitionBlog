@@ -252,4 +252,5 @@ px-4 py-2 rounded-full shadow-xl flex gap-4 z-50">
 			</button>
 		</div>
 	{/if}
+	
 </div>
