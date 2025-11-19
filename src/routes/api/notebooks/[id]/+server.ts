@@ -5,7 +5,6 @@ import { checkEditorSecret } from '$lib/server/auth';
 import type { RequestHandler } from './$types';
 import type { Section } from '$lib/types/notebook';
 
-// --- FIX: Increase body size limit to prevent truncating large drawings ---
 export const config = {
 	bodySizeLimit: '4.5mb'
 };

@@ -11,13 +11,10 @@
 	let notebook = $state<Notebook>({ ...notebookData });
 	let sectionRefs = $state<Record<string, any>>({});
 	
-	// --- FIX: Save Queue Logic ---
-	let saveStatus = $state<'idle' | 'saving' | 'saved' | 'error'>('idle');
+	// --- Explicit Save State ---
 	let isSaving = $state(false);
-	let hasPendingChanges = $state(false);
-	let saveTimer: ReturnType<typeof setTimeout> | null = null;
-	// -----------------------------
-
+	let hasUnsavedChanges = $state(false);
+	let lastSavedAt = $state<Date | null>(null);
 	let draggingSectionId = $state<string | null>(null);
 
 	let isReadOnly = $derived(!editorSecret);
@@ -29,47 +26,23 @@
 		else if (specificSecret) editorSecret = specificSecret;
 	});
 
-	// This function just signals that data has changed and starts the queue if idle
-	function scheduleSave(immediate = false) {
+	function onContentChange() {
 		if (isReadOnly) return;
-		
-		hasPendingChanges = true;
-		saveStatus = 'saving'; // UI feedback immediately
-
-		if (immediate) {
-			if (saveTimer) clearTimeout(saveTimer);
-			processSaveQueue();
-		} else if (!saveTimer && !isSaving) {
-			// Only start a timer if one isn't running and we aren't currently saving
-			saveTimer = setTimeout(processSaveQueue, 1000); 
-		}
+		hasUnsavedChanges = true;
 	}
 
-	async function processSaveQueue() {
-		if (saveTimer) {
-			clearTimeout(saveTimer);
-			saveTimer = null;
-		}
-
-		if (isSaving) {
-			// If already saving, do nothing. The loop in the 'finally' block will catch the pending changes.
-			return;
-		}
-
-		if (!hasPendingChanges) {
-			saveStatus = 'saved';
-			setTimeout(() => { if (saveStatus === 'saved') saveStatus = 'idle'; }, 2000);
-			return;
-		}
-
+	async function saveNotebook() {
+		if (isReadOnly || isSaving) return;
+		
 		isSaving = true;
-		hasPendingChanges = false; // Reset flag, capturing current state
+		// Temporarily set to false. If the user draws *while* saving, 
+		// onContentChange will flip it back to true, letting them save again.
+		hasUnsavedChanges = false; 
 
-		// 1. Gather content from child components
-		// We do this INSIDE the async queue to ensure we get the absolute latest state 
-		// right before the network request starts.
+		// 1. Capture the current state of all sections
 		const updatedSections = notebook.sections.map((section) => {
 			if (section.type === 'ink' && sectionRefs[section.id]) {
+				// Get the snapshot of the current strokes
 				const currentContent = sectionRefs[section.id].getCurrentContent();
 				
 				const versions = [...section.versions];
@@ -93,7 +66,7 @@
 			return section;
 		});
 
-		// Update local state reference
+		// Update local state wrapper
 		notebook.sections = updatedSections;
 
 		try {
@@ -112,29 +85,19 @@
 			if (res.status === 401 || res.status === 403) {
 				editorSecret = null;
 				localStorage.removeItem('site_editor_secret');
-				saveStatus = 'error';
 				alert("Session invalid. Switched to Read-Only mode.");
-				return; // Stop queue
+				return;
 			}
 
 			if (!res.ok) throw new Error('Failed');
 			
-			// We don't set 'saved' here yet, we wait for the queue to empty
+			lastSavedAt = new Date();
 		} catch (e) {
 			console.error('Save failed', e);
-			saveStatus = 'error';
-			// If it failed, we might want to keep hasPendingChanges true to retry? 
-			// For now, let's leave it, user will trigger another save by editing.
+			alert("Error saving notebook. Please try again.");
+			hasUnsavedChanges = true; // Re-enable button so user can retry
 		} finally {
 			isSaving = false;
-			
-			// If changes happened while we were awaiting fetch, process them immediately
-			if (hasPendingChanges) {
-				processSaveQueue();
-			} else if (saveStatus !== 'error') {
-				saveStatus = 'saved';
-				setTimeout(() => { if (saveStatus === 'saved') saveStatus = 'idle'; }, 2000);
-			}
 		}
 	}
 
@@ -156,13 +119,13 @@
 			const [moved] = sections.splice(fromIdx, 1);
 			sections.splice(toIdx, 0, moved);
 			notebook.sections = sections.map((s, i) => ({ ...s, orderIndex: i }));
+			onContentChange(); // Mark as unsaved on reorder
 		}
 	}
 
 	function handleDrop(e: DragEvent) {
 		e.preventDefault();
 		draggingSectionId = null;
-		scheduleSave(true); // Immediate save on reorder
 	}
 
 	function addSection(type: 'ink' | 'markdown') {
@@ -179,30 +142,49 @@
 			}]
 		};
 		notebook.sections = [...notebook.sections, newSection];
-		scheduleSave();
+		onContentChange();
 	}
 </script>
 
 <div class="notebook max-w-4xl mx-auto p-4 pb-20">
-	<div class="mb-8 border-b border-neutral-200 dark:border-neutral-700 pb-4">
+	<div class="mb-8 border-b border-neutral-200 dark:border-neutral-700 pb-4 flex flex-col gap-4 md:flex-row md:justify-between md:items-center">
 		{#if !isReadOnly}
-			<input
-				type="text"
-				bind:value={notebook.title}
-				oninput={() => scheduleSave(false)}
-				class="text-4xl font-serif font-bold bg-transparent w-full focus:outline-none placeholder-neutral-400 text-neutral-900 dark:text-neutral-100"
-				placeholder="Notebook Title"
-			/>
-			<div class="flex gap-2 mt-2 text-sm">
-				<span class="text-xs uppercase tracking-wider text-neutral-500 self-center">
-					{#if saveStatus === 'saving'}
+			<div class="flex-1">
+				<input
+					type="text"
+					bind:value={notebook.title}
+					oninput={onContentChange}
+					class="text-4xl font-serif font-bold bg-transparent w-full focus:outline-none placeholder-neutral-400 text-neutral-900 dark:text-neutral-100"
+					placeholder="Notebook Title"
+				/>
+			</div>
+			
+			<div class="flex items-center gap-4">
+				{#if lastSavedAt}
+					<span class="text-xs text-neutral-400">
+						Saved {lastSavedAt.toLocaleTimeString()}
+					</span>
+				{/if}
+				
+				<button 
+					onclick={saveNotebook} 
+					disabled={!hasUnsavedChanges || isSaving}
+					class="flex items-center gap-2 px-6 py-2 rounded-lg font-semibold transition-all
+						{hasUnsavedChanges 
+							? 'bg-[var(--color-gold)] text-white hover:brightness-110 shadow-md cursor-pointer' 
+							: 'bg-neutral-200 dark:bg-neutral-800 text-neutral-400 cursor-not-allowed'}"
+				>
+					{#if isSaving}
+						<svg class="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+							<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+							<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+						</svg>
 						Saving...
-					{:else if saveStatus === 'saved'}
-						All changes saved
-					{:else if saveStatus === 'error'}
-						<span class="text-red-500">Error saving</span>
+					{:else}
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+						Save
 					{/if}
-				</span>
+				</button>
 			</div>
 		{:else}
 			<h1 class="text-4xl font-serif font-bold text-neutral-900 dark:text-neutral-100">
@@ -234,7 +216,7 @@
 						bind:this={sectionRefs[section.id]}
 						content={section.versions[section.versions.length - 1].content as import('$lib/types/notebook').InkContent}
 						readOnly={isReadOnly}
-						onchange={() => scheduleSave(false)}
+						onchange={onContentChange}
 					/>
 				{:else if section.type === 'markdown'}
 					<div class="p-4 border border-dashed rounded text-neutral-500">Markdown Section (Coming Soon)</div>
@@ -252,5 +234,4 @@ px-4 py-2 rounded-full shadow-xl flex gap-4 z-50">
 			</button>
 		</div>
 	{/if}
-	
 </div>

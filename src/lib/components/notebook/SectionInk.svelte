@@ -39,12 +39,6 @@
 		{ name: 'Pink', value: '#f472b6' }
 	];
 
-	const tools = {
-		pen: { size: 8, thinning: 0.5, smoothing: 0.5, streamline: 0.5 },
-		highlighter: { size: 25, thinning: 0, smoothing: 0.5, streamline: 0.5 },
-		eraser: { size: 30 }
-	};
-
 	function getPointerPosition(event: PointerEvent): Point {
 		if (!svgElement) return { x: 0, y: 0, p: 0.5, t: Date.now() };
 
@@ -100,7 +94,6 @@
 		svgElement?.releasePointerCapture(event.pointerId);
 
 		if (currentStroke && tool !== 'eraser') {
-			// Reassignment triggers reactivity for the array
 			strokes = [...strokes, currentStroke];
 		}
 		
@@ -150,7 +143,7 @@
 	}
 
 	export function getCurrentContent(): InkContent {
-		// --- FIX: Use snapshot to return a plain JS object, detaching from the reactive proxy ---
+		// --- CRITICAL FIX: Return snapshot to avoid serialization issues during save ---
 		return $state.snapshot({ strokes });
 	}
 
