@@ -12,25 +12,15 @@
 	let sectionRefs = $state<Record<string, any>>({});
 	let saveStatus = $state<'idle' | 'saving' | 'saved' | 'error'>('idle');
 	let saveTimeout: ReturnType<typeof setTimeout> | null = null;
-
-	// Drag & Drop State
 	let draggingSectionId = $state<string | null>(null);
 
-	// Derived read-only state
 	let isReadOnly = $derived(!editorSecret);
 
 	onMount(() => {
-		// 1. Check for the Global Admin Secret (Master Key set via /admin page)
 		const globalSecret = localStorage.getItem('site_editor_secret');
-		
-		// 2. Check for notebook specific secret (Legacy behavior)
 		const specificSecret = localStorage.getItem(`notebook_${notebook.id}_secret`);
-
-		if (globalSecret) {
-			editorSecret = globalSecret;
-		} else if (specificSecret) {
-			editorSecret = specificSecret;
-		}
+		if (globalSecret) editorSecret = globalSecret;
+		else if (specificSecret) editorSecret = specificSecret;
 	});
 
 	function scheduleSave(immediate = false) {
@@ -40,31 +30,39 @@
 		if (saveTimeout) clearTimeout(saveTimeout);
 
 		const saveAction = async () => {
-			// Gather content logic remains the same
+			// Gather content from child components
 			const updatedSections = notebook.sections.map((section) => {
 				if (section.type === 'ink' && sectionRefs[section.id]) {
 					const currentContent = sectionRefs[section.id].getCurrentContent();
-					const latestVer = section.versions[section.versions.length - 1];
 					
-					if (JSON.stringify(latestVer.content) !== JSON.stringify(currentContent)) {
-						return {
-							...section,
-							versions: [
-								...section.versions,
-								{
-									versionId: generateUUID(),
-									changedAt: new Date().toISOString(),
-									changeType: 'edit' as const,
-									content: currentContent
-								}
-							]
+					// FIX: UPDATE IN PLACE instead of appending new versions
+					// This prevents the JSON from exploding in size with every autosave
+					const versions = [...section.versions];
+					if (versions.length > 0) {
+						// Update the latest version
+						versions[versions.length - 1] = {
+							...versions[versions.length - 1],
+							content: currentContent,
+							changedAt: new Date().toISOString()
 						};
+					} else {
+						// Should not happen, but safety first
+						versions.push({
+							versionId: generateUUID(),
+							changedAt: new Date().toISOString(),
+							changeType: 'create',
+							content: currentContent
+						});
 					}
+
+					return {
+						...section,
+						versions
+					};
 				}
 				return section;
 			});
 
-			// Update local state
 			notebook.sections = updatedSections;
 
 			try {
@@ -80,20 +78,13 @@
 					})
 				});
 				
-				// --- SECURITY FIX STARTS HERE ---
 				if (res.status === 401 || res.status === 403) {
-					console.warn("Unauthorized access. Clearing invalid credentials.");
-					// 1. Wipe invalid secret from state
 					editorSecret = null;
-					// 2. Wipe invalid secret from storage
 					localStorage.removeItem('site_editor_secret');
-					localStorage.removeItem(`notebook_${notebook.id}_secret`);
-					// 3. Update UI status
 					saveStatus = 'error';
 					alert("Session invalid. Switched to Read-Only mode.");
 					return;
 				}
-				// --- SECURITY FIX ENDS HERE ---
 
 				if (!res.ok) throw new Error('Failed');
 				
@@ -109,11 +100,10 @@
 		else saveTimeout = setTimeout(saveAction, 2000);
 	}
 
-	// --- Drag & Drop Handlers ---
+	// ... (Drag handlers remain the same)
 	function handleDragStart(e: DragEvent, id: string) {
 		if (isReadOnly) return;
 		draggingSectionId = id;
-		// Accessibility: expose drag data
 		e.dataTransfer?.setData('text/plain', id);
 		if (e.dataTransfer) e.dataTransfer.effectAllowed = 'move';
 	}
@@ -121,10 +111,8 @@
 	function handleDragOver(e: DragEvent, targetId: string) {
 		if (isReadOnly || !draggingSectionId || draggingSectionId === targetId) return;
 		e.preventDefault();
-
 		const fromIdx = notebook.sections.findIndex(s => s.id === draggingSectionId);
 		const toIdx = notebook.sections.findIndex(s => s.id === targetId);
-
 		if (fromIdx !== -1 && toIdx !== -1) {
 			const sections = [...notebook.sections];
 			const [moved] = sections.splice(fromIdx, 1);
@@ -169,7 +157,7 @@
 			/>
 			<div class="flex gap-2 mt-2 text-sm">
 				<span class="text-xs uppercase tracking-wider text-neutral-500 self-center">
-					{saveStatus === 'saving' ? 'Saving...' : saveStatus === 'saved' ? 'All changes saved' : saveStatus === 'error' ? 'Read Only / Save Error' : ''}
+					{saveStatus === 'saving' ? 'Saving...' : saveStatus === 'saved' ? 'All changes saved' : saveStatus === 'error' ? 'Error saving' : ''}
 				</span>
 			</div>
 		{:else}
