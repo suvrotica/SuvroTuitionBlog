@@ -1,23 +1,37 @@
-import { env } from '$env/dynamic/private';
+import { Lucia } from 'lucia';
+import { dev } from '$app/environment';
+import { DrizzleSQLiteAdapter } from '@lucia-auth/adapter-drizzle';
+import { db } from './db';
+import { user, session } from './db/schema';
 
-// We use dynamic private env to ensure it picks up changes without full rebuilds in some contexts,
-// but static private is also fine. Dynamic is safer for runtime config changes.
-const SECRET = env.EDITOR_SECRET;
+const adapter = new DrizzleSQLiteAdapter(db, session, user);
 
-export function checkEditorSecret(secret?: string): boolean {
-	if (!SECRET) {
-		// Log error on server side so you can debug in Vercel logs
-		console.error('EDITOR_SECRET environment variable is not set on server!');
-		return false;
+export const lucia = new Lucia(adapter, {
+	sessionCookie: {
+		attributes: {
+			// set to `true` when using HTTPS
+			secure: !dev
+		}
+	},
+	getUserAttributes: (attributes) => {
+		return {
+			// attributes has the type of DatabaseUserAttributes
+			googleId: attributes.googleId,
+			username: attributes.username,
+			avatarUrl: attributes.avatarUrl
+		};
 	}
-	// Strict equality check
-	return secret === SECRET;
+});
+
+declare module 'lucia' {
+	interface Register {
+		Lucia: typeof lucia;
+		DatabaseUserAttributes: DatabaseUserAttributes;
+	}
 }
 
-export function getEditToken(): string | null {
-	if (!SECRET) {
-		console.error('Cannot generate edit token: EDITOR_SECRET is not set.');
-		return null;
-	}
-	return SECRET;
+interface DatabaseUserAttributes {
+	googleId: string;
+	username: string;
+	avatarUrl: string;
 }

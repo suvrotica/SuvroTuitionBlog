@@ -1,7 +1,7 @@
 // src/routes/+layout.server.ts
 
 import type { ServerLoad } from '@sveltejs/kit';
-import { siteSEO, websiteSchema } from '$lib/components/seo/SEO'; 
+import { siteSEO, websiteSchema } from '$lib/components/seo/SEO';
 
 // Types from the previous setup
 export type Article = {
@@ -15,7 +15,7 @@ export type Category = {
 	articles: Article[];
 };
 
-export const load: ServerLoad = async () => {
+export const load: ServerLoad = async ({ locals }) => {
 	const modules = import.meta.glob('/src/lib/posts/*.md', { eager: true });
 	const posts: Article[] = [];
 	for (const path in modules) {
@@ -44,8 +44,8 @@ export const load: ServerLoad = async () => {
 		}
 		categoriesMap.get(category)?.push(post);
 	});
-	
-    const categories: Category[] = Array.from(categoriesMap.entries()).map(([name, articles]) => ({
+
+	const categories: Category[] = Array.from(categoriesMap.entries()).map(([name, articles]) => ({
 		name,
 		articles: articles.sort((a, b) => a.title.localeCompare(b.title))
 	}));
@@ -54,7 +54,9 @@ export const load: ServerLoad = async () => {
 
 	return {
 		categories,
-		seo: siteSEO,       // <-- ADD site SEO to the return object
-		schema: websiteSchema // <-- ADD site schema to the return object
+		seo: siteSEO,
+		schema: websiteSchema,
+		user: locals.user,
+		session: locals.session
 	};
 };

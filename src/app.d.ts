@@ -3,6 +3,10 @@ import type { Category } from './routes/+layout.server'; // Import the new type
 
 declare global {
 	namespace App {
+		interface Locals {
+			user: import('lucia').User | null;
+			session: import('lucia').Session | null;
+		}
 		// ...
 		interface LayoutData {
 			categories: Category[]; // Change 'topics' to 'categories'
@@ -25,4 +29,4 @@ declare global {
 	}
 }
 
-export {};
+export { };

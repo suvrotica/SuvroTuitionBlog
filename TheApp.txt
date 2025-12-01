@@ -1,4 +1,4 @@
-# Context file generated on: Wednesday, November 19, 2025 at 7:57:07 AM GMT+5:30
+# Context file generated on: Sunday, November 23, 2025 at 8:36:21 AM GMT+5:30
 ---
 
 # Project File Layout
@@ -2356,12 +2356,15 @@ export {};
 	import { flip } from 'svelte/animate';
 
 	let { notebookData }: { notebookData: Notebook } = $props();
-	
+
 	let editorSecret = $state<string | null>(null);
 	let notebook = $state<Notebook>({ ...notebookData });
 	let sectionRefs = $state<Record<string, any>>({});
-	let saveStatus = $state<'idle' | 'saving' | 'saved' | 'error'>('idle');
-	let saveTimeout: ReturnType<typeof setTimeout> | null = null;
+	
+	// --- Explicit Save State ---
+	let isSaving = $state(false);
+	let hasUnsavedChanges = $state(false);
+	let lastSavedAt = $state<Date | null>(null);
 	let draggingSectionId = $state<string | null>(null);
 
 	let isReadOnly = $derived(!editorSecret);
@@ -2373,84 +2376,81 @@ export {};
 		else if (specificSecret) editorSecret = specificSecret;
 	});
 
-	function scheduleSave(immediate = false) {
-		if (isReadOnly) return; 
-		
-		saveStatus = 'saving';
-		if (saveTimeout) clearTimeout(saveTimeout);
-
-		const saveAction = async () => {
-			// Gather content from child components
-			const updatedSections = notebook.sections.map((section) => {
-				if (section.type === 'ink' && sectionRefs[section.id]) {
-					const currentContent = sectionRefs[section.id].getCurrentContent();
-					
-					// FIX: UPDATE IN PLACE instead of appending new versions
-					// This prevents the JSON from exploding in size with every autosave
-					const versions = [...section.versions];
-					if (versions.length > 0) {
-						// Update the latest version
-						versions[versions.length - 1] = {
-							...versions[versions.length - 1],
-							content: currentContent,
-							changedAt: new Date().toISOString()
-						};
-					} else {
-						// Should not happen, but safety first
-						versions.push({
-							versionId: generateUUID(),
-							changedAt: new Date().toISOString(),
-							changeType: 'create',
-							content: currentContent
-						});
-					}
-
-					return {
-						...section,
-						versions
-					};
-				}
-				return section;
-			});
-
-			notebook.sections = updatedSections;
-
-			try {
-				const res = await fetch(`/api/notebooks/${notebook.id}`, {
-					method: 'PATCH',
-					headers: { 
-						'Content-Type': 'application/json',
-						'Authorization': `Bearer ${editorSecret}`
-					},
-					body: JSON.stringify({ 
-						title: notebook.title, 
-						sections: updatedSections 
-					})
-				});
-				
-				if (res.status === 401 || res.status === 403) {
-					editorSecret = null;
-					localStorage.removeItem('site_editor_secret');
-					saveStatus = 'error';
-					alert("Session invalid. Switched to Read-Only mode.");
-					return;
-				}
-
-				if (!res.ok) throw new Error('Failed');
-				
-				saveStatus = 'saved';
-				setTimeout(() => saveStatus = 'idle', 2000);
-			} catch (e) {
-				console.error('Save failed', e);
-				saveStatus = 'error';
-			}
-		};
-
-		if (immediate) saveAction();
-		else saveTimeout = setTimeout(saveAction, 2000);
+	function onContentChange() {
+		if (isReadOnly) return;
+		hasUnsavedChanges = true;
 	}
 
-	// ... (Drag handlers remain the same)
+	async function saveNotebook() {
+		if (isReadOnly || isSaving) return;
+		
+		isSaving = true;
+		// Temporarily set to false. If the user draws *while* saving, 
+		// onContentChange will flip it back to true, letting them save again.
+		hasUnsavedChanges = false; 
+
+		// 1. Capture the current state of all sections
+		const updatedSections = notebook.sections.map((section) => {
+			if (section.type === 'ink' && sectionRefs[section.id]) {
+				// Get the snapshot of the current strokes
+				const currentContent = sectionRefs[section.id].getCurrentContent();
+				
+				const versions = [...section.versions];
+				if (versions.length > 0) {
+					versions[versions.length - 1] = {
+						...versions[versions.length - 1],
+						content: currentContent,
+						changedAt: new Date().toISOString()
+					};
+				} else {
+					versions.push({
+						versionId: generateUUID(),
+						changedAt: new Date().toISOString(),
+						changeType: 'create',
+						content: currentContent
+					});
+				}
+
+				return { ...section, versions };
+			}
+			return section;
+		});
+
+		// Update local state wrapper
+		notebook.sections = updatedSections;
+
+		try {
+			const res = await fetch(`/api/notebooks/${notebook.id}`, {
+				method: 'PATCH',
+				headers: { 
+					'Content-Type': 'application/json',
+					'Authorization': `Bearer ${editorSecret}`
+				},
+				body: JSON.stringify({ 
+					title: notebook.title, 
+					sections: updatedSections 
+				})
+			});
+
+			if (res.status === 401 || res.status === 403) {
+				editorSecret = null;
+				localStorage.removeItem('site_editor_secret');
+				alert("Session invalid. Switched to Read-Only mode.");
+				return;
+			}
+
+			if (!res.ok) throw new Error('Failed');
+			
+			lastSavedAt = new Date();
+		} catch (e) {
+			console.error('Save failed', e);
+			alert("Error saving notebook. Please try again.");
+			hasUnsavedChanges = true; // Re-enable button so user can retry
+		} finally {
+			isSaving = false;
+		}
+	}
+
 	function handleDragStart(e: DragEvent, id: string) {
 		if (isReadOnly) return;
 		draggingSectionId = id;
@@ -2463,18 +2463,19 @@ export {};
 		e.preventDefault();
 		const fromIdx = notebook.sections.findIndex(s => s.id === draggingSectionId);
 		const toIdx = notebook.sections.findIndex(s => s.id === targetId);
+
 		if (fromIdx !== -1 && toIdx !== -1) {
 			const sections = [...notebook.sections];
 			const [moved] = sections.splice(fromIdx, 1);
 			sections.splice(toIdx, 0, moved);
 			notebook.sections = sections.map((s, i) => ({ ...s, orderIndex: i }));
+			onContentChange(); // Mark as unsaved on reorder
 		}
 	}
 
 	function handleDrop(e: DragEvent) {
 		e.preventDefault();
 		draggingSectionId = null;
-		scheduleSave(true);
 	}
 
 	function addSection(type: 'ink' | 'markdown') {
@@ -2491,24 +2492,49 @@ export {};
 			}]
 		};
 		notebook.sections = [...notebook.sections, newSection];
-		scheduleSave();
+		onContentChange();
 	}
 </script>
 
 <div class="notebook max-w-4xl mx-auto p-4 pb-20">
-	<div class="mb-8 border-b border-neutral-200 dark:border-neutral-700 pb-4">
+	<div class="mb-8 border-b border-neutral-200 dark:border-neutral-700 pb-4 flex flex-col gap-4 md:flex-row md:justify-between md:items-center">
 		{#if !isReadOnly}
-			<input
-				type="text"
-				bind:value={notebook.title}
-				oninput={() => scheduleSave(false)}
-				class="text-4xl font-serif font-bold bg-transparent w-full focus:outline-none placeholder-neutral-400 text-neutral-900 dark:text-neutral-100"
-				placeholder="Notebook Title"
-			/>
-			<div class="flex gap-2 mt-2 text-sm">
-				<span class="text-xs uppercase tracking-wider text-neutral-500 self-center">
-					{saveStatus === 'saving' ? 'Saving...' : saveStatus === 'saved' ? 'All changes saved' : saveStatus === 'error' ? 'Error saving' : ''}
-				</span>
+			<div class="flex-1">
+				<input
+					type="text"
+					bind:value={notebook.title}
+					oninput={onContentChange}
+					class="text-4xl font-serif font-bold bg-transparent w-full focus:outline-none placeholder-neutral-400 text-neutral-900 dark:text-neutral-100"
+					placeholder="Notebook Title"
+				/>
+			</div>
+			
+			<div class="flex items-center gap-4">
+				{#if lastSavedAt}
+					<span class="text-xs text-neutral-400">
+						Saved {lastSavedAt.toLocaleTimeString()}
+					</span>
+				{/if}
+				
+				<button 
+					onclick={saveNotebook} 
+					disabled={!hasUnsavedChanges || isSaving}
+					class="flex items-center gap-2 px-6 py-2 rounded-lg font-semibold transition-all
+						{hasUnsavedChanges 
+							? 'bg-[var(--color-gold)] text-white hover:brightness-110 shadow-md cursor-pointer' 
+							: 'bg-neutral-200 dark:bg-neutral-800 text-neutral-400 cursor-not-allowed'}"
+				>
+					{#if isSaving}
+						<svg class="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+							<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+							<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+						</svg>
+						Saving...
+					{:else}
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+						Save
+					{/if}
+				</button>
 			</div>
 		{:else}
 			<h1 class="text-4xl font-serif font-bold text-neutral-900 dark:text-neutral-100">
@@ -2540,7 +2566,7 @@ export {};
 						bind:this={sectionRefs[section.id]}
 						content={section.versions[section.versions.length - 1].content as import('$lib/types/notebook').InkContent}
 						readOnly={isReadOnly}
-						onchange={() => scheduleSave(false)}
+						onchange={onContentChange}
 					/>
 				{:else if section.type === 'markdown'}
 					<div class="p-4 border border-dashed rounded text-neutral-500">Markdown Section (Coming Soon)</div>
@@ -2550,8 +2576,9 @@ export {};
 	</div>
 
 	{#if !isReadOnly}
-		<div class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-neutral-900 text-white px-4 py-2 rounded-full shadow-xl flex gap-4 z-50">
-			<button onclick={() => addSection('ink')} class="hover:text-gold font-medium flex items-center gap-2">
+		<div class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-neutral-900 text-white 
+px-4 py-2 rounded-full shadow-xl flex gap-4 z-50">
+			<button onclick={() => addSection('ink')} class="hover:text-[var(--color-gold)] font-medium flex items-center gap-2">
 				<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
 				Add Page
 			</button>
@@ -2582,11 +2609,11 @@ export {};
 	let isDrawing = $state(false);
 
 	let strokes = $state<Stroke[]>(content?.strokes || []);
-
+	
 	// Default: Graphite (#373737)
 	let selectedColor = $state('#373737'); 
 	let tool = $state<'pen' | 'highlighter' | 'eraser'>('pen');
-	let strokeWidth = $state(4); 
+	let strokeWidth = $state(4);
 
 	const colors = [
 		{ name: 'Graphite', value: '#373737' },
@@ -2602,14 +2629,9 @@ export {};
 		{ name: 'Pink', value: '#f472b6' }
 	];
 
-	const tools = {
-		pen: { size: 8, thinning: 0.5, smoothing: 0.5, streamline: 0.5 },
-		highlighter: { size: 25, thinning: 0, smoothing: 0.5, streamline: 0.5 },
-		eraser: { size: 30 }
-	};
-
 	function getPointerPosition(event: PointerEvent): Point {
 		if (!svgElement) return { x: 0, y: 0, p: 0.5, t: Date.now() };
+
 		const rect = svgElement.getBoundingClientRect();
 		return {
 			x: event.clientX - rect.left,
@@ -2653,7 +2675,6 @@ export {};
 			for (const e of events) {
 				currentStroke.points.push(getPointerPosition(e));
 			}
-			currentStroke = currentStroke; 
 		}
 	}
 
@@ -2712,7 +2733,8 @@ export {};
 	}
 
 	export function getCurrentContent(): InkContent {
-		return { strokes };
+		// --- CRITICAL FIX: Return snapshot to avoid serialization issues during save ---
+		return $state.snapshot({ strokes });
 	}
 
 	function getStrokeOptions(stroke: Stroke) {
@@ -2724,7 +2746,6 @@ export {};
 </script>
 
 <div class="flex flex-col md:flex-row gap-4 items-start w-full">
-	
 	{#if !readOnly}
 		<div class="toolbar sticky top-4 z-10 flex md:flex-col items-center gap-4 p-3 bg-neutral-100 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 rounded-2xl shadow-sm mx-auto md:mx-0 overflow-x-auto md:overflow-visible max-w-full">
 			
@@ -2812,7 +2833,7 @@ export {};
 					d={getSvgPathFromStroke(stroke.points, getStrokeOptions(stroke))}
 					fill={stroke.color}
 					opacity="0.4"
-					style="mix-blend-mode: multiply;" 
+					style="mix-blend-mode: multiply;"
 				/>
 			{/each}
 
@@ -4631,13 +4652,15 @@ describe('POST /api/notebooks', () => {
 
 // src/routes/api/notebooks/[id]/+server.ts
 import { json, error as svelteKitError } from '@sveltejs/kit';
-// --- IMPORT THE NEW FUNCTION ---
 import { getNotebook, updateNotebook } from '$lib/server/storage/kv';
 import { checkEditorSecret } from '$lib/server/auth';
 import type { RequestHandler } from './$types';
 import type { Section } from '$lib/types/notebook';
 
-// (GET handler is unchanged)
+export const config = {
+	bodySizeLimit: '4.5mb'
+};
+
 export const GET: RequestHandler = async ({ params }) => {
 	try {
 		const notebook = await getNotebook(params.id);
@@ -4653,7 +4676,6 @@ export const GET: RequestHandler = async ({ params }) => {
 };
 
 export const PATCH: RequestHandler = async ({ params, request }) => {
-	// (Auth check is unchanged)
 	const authHeader = request.headers.get('Authorization');
 	const token = authHeader?.split(' ')[1];
 	const providedSecret = (token || request.headers.get('X-Editor-Secret')) ?? undefined;
@@ -4661,12 +4683,10 @@ export const PATCH: RequestHandler = async ({ params, request }) => {
 	if (!checkEditorSecret(providedSecret)) {
 		throw svelteKitError(403, 'Forbidden: Invalid or missing secret');
 	}
-	// --- End Auth Check ---
 
 	try {
 		const payload = await request.json();
 
-		// --- UPDATE VALIDATION ---
 		if (!payload || !Array.isArray(payload.sections) || typeof payload.title !== 'string') {
 			throw svelteKitError(400, 'Invalid payload: title (string) and sections (array) are required');
 		}
@@ -4674,7 +4694,6 @@ export const PATCH: RequestHandler = async ({ params, request }) => {
 		const sections = payload.sections as Section[];
 		const title = payload.title as string;
 
-		// --- USE THE NEW FUNCTION ---
 		const updatedNotebook = await updateNotebook(params.id, title, sections);
 
 		if (!updatedNotebook) {
@@ -4684,7 +4703,7 @@ export const PATCH: RequestHandler = async ({ params, request }) => {
 		return json(updatedNotebook, { status: 200 });
 	} catch (err: any) {
 		console.error(`Error updating notebook ${params.id}:`, err);
-		if (err.status) throw err; // Re-throw SvelteKit errors
+		if (err.status) throw err;
 		throw svelteKitError(500, 'Failed to update notebook');
 	}
 };
